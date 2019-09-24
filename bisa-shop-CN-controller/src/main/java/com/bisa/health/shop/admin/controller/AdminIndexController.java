@@ -113,6 +113,7 @@ public class AdminIndexController {
 		}
     	HtmlInfo mHtmlInfo=adminHtmlInfoService.selectHtmlInfoById(htmlInfo.getId());
     	if(mHtmlInfo==null){
+    		htmlInfo.setUpdate_time(new Date());
     	  	adminHtmlInfoService.addHtmlInfo(htmlInfo);
     	}else{
     		mHtmlInfo.toHtmlInfo(htmlInfo);

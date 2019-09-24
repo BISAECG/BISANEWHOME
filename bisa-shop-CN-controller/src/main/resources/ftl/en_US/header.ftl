@@ -84,13 +84,13 @@
 						<#if emp_index = empList?size-1>
 							  <li class='col-309DE2  text-center head_list pull-left ml-20'>
                         		<a class='navlist' href='${emp.name!}.html'>
-                        			${emp.html_keyWord_CN!}
+                        			${emp.column_name_US!}
                         		</a>
                     		  </li>
 						<#else>
 							 <li class='col-309DE2 pull-left ml-20'>
 		                        <a class='navlist' href='${emp.name!}.html'>
-		                        	${emp.html_keyWord_CN!}
+		                        	${emp.column_name_US!}
 		                        </a>
                        		</li>
 						</#if>

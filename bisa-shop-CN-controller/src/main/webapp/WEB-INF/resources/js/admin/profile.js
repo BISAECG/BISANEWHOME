@@ -117,11 +117,6 @@ $(document).ready(function () {
             });
        	 
        	 
-         $("#addPage").click(function(){
-         	openDialog(null);
-         });
-         
-       	 
        	 if(data!=null){
        		 form.val("formServer", {
                     "html_description_CN": data.html_description_CN,
@@ -145,6 +140,11 @@ $(document).ready(function () {
             form.render();
        }
         
+     	 
+        $("#addPage").click(function(){
+        	openDialog(null);
+        });
+        
     });
     
 
@@ -153,7 +153,7 @@ $(document).ready(function () {
         $.ajax({
             type: "post",
             dataType: "json",
-            url: "admin/CreateAllPages",
+            url: "admin/generateAllHTML",
             success: function (data) {
                     alert("创建成功");
 
@@ -165,7 +165,7 @@ $(document).ready(function () {
         $.ajax({
             type: "post",
             dataType: "json",
-            url: "admin/GenerateFooterHTML",
+            url: "admin/generateFooterHTML",
             success: function (data) {
                     alert("创建成功")
             }
@@ -177,7 +177,7 @@ $(document).ready(function () {
         $.ajax({
             type: "post",
             dataType: "json",
-            url: "admin/GenerateHeaderHTML",
+            url: "admin/generateHeaderHTML",
             success: function (data) {
                     alert("创建成功")
             }

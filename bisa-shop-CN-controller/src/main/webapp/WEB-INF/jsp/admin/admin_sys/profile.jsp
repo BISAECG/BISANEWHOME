@@ -101,7 +101,7 @@
         <%--弹框html js调用--%>
         <div class="formsetting dis-n">
             <form class="layui-form"  id="serverForm" lay-filter="formServer"  method="post">
-                <input name="id" type="hidden" />
+                <input name="id" type="hidden" value="0" />
                 <div class="layui-form-item ">
                     <label class="layui-form-label" style="width: 110px;">地址</label>
                     <div class="layui-input-block">

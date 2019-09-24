@@ -96,7 +96,6 @@ public class AdminHtmlInfoController {
     public JsonResult addHtmlInfoById(Integer id){
         JsonResult jsonResult = new JsonResult();
         HtmlInfo htmlInfo = adminHtmlInfoService.selectHtmlInfoById(id);
-        //生成首页
         Map<String,Object> root =new HashMap<String,Object>();
         root.put("html_keyWord", htmlInfo.getHtml_keyWord_CN());
         root.put("html_description",htmlInfo.getHtml_description_CN());
@@ -109,7 +108,7 @@ public class AdminHtmlInfoController {
      * 创建首页页面
      * @return
      */
-    @RequestMapping(value = "/CreateAllPages", method = RequestMethod.POST)
+    @RequestMapping(value = "/generateAllHTML", method = RequestMethod.POST)
     @ResponseBody
     public void CreateAllPages(){
         List<HtmlInfo> list = adminHtmlInfoService.selectHtmlInfo();
@@ -129,7 +128,7 @@ public class AdminHtmlInfoController {
      * 创建头部页面
      * @return
      */
-    @RequestMapping(value = "/GenerateHeaderHTML", method = RequestMethod.POST)
+    @RequestMapping(value = "/generateHeaderHTML", method = RequestMethod.POST)
     @ResponseBody
     public void GenerateHeaderHTML(HttpServletRequest request){
         List<HtmlInfo> list = adminHtmlInfoService.selectHtmlInfo();
@@ -141,7 +140,7 @@ public class AdminHtmlInfoController {
      * 创建尾部页面
      * @return
      */
-    @RequestMapping(value = "/GenerateFooterHTML", method = RequestMethod.POST)
+    @RequestMapping(value = "/generateFooterHTML", method = RequestMethod.POST)
     @ResponseBody
     public void GenerateFooterHTML(){
         CompanyInfo companyInfo =  companyInfoService.selectCompanyInfo();
