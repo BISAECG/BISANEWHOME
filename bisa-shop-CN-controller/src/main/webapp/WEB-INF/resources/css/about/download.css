@@ -1,0 +1,45 @@
+.download-title{
+
+    font-size:70px;
+    font-weight:400;
+    color:rgba(255,255,255,1);
+}
+.download-descrip{
+
+    font-size:28px;
+    font-weight:400;
+    color:rgba(255,255,255,1);
+}
+
+.download-ios{
+    width:200px;
+    height:46px;
+    border:1px solid rgba(255,255,255,1);
+    border-radius:10px;
+}
+.download-ios span{
+    width:102px;
+    height:23px;
+    font-size:22px;
+    font-weight:400;
+    color:rgba(255,255,255,1);
+}
+.download-android{
+    width:200px;
+    height:46px;
+    border:1px solid rgba(255,255,255,1);
+    border-radius:10px;
+}
+
+.download-android span{
+    width:164px;
+    height:23px;
+    font-size:22px;
+    font-weight:400;
+    color:rgba(255,255,255,1);
+}
+
+
+
+
+
