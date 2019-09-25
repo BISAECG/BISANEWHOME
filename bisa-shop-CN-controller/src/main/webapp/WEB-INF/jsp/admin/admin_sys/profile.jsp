@@ -104,86 +104,86 @@
                 <input name="id" type="hidden" value="0" />
                 <div class="layui-form-item ">
                     <label class="layui-form-label" style="width: 110px;">地址</label>
-                    <div class="layui-input-block">
-                        <input type="text" name="name"  lay-verify="required" placeholder="请输入页面简体名称"  class="layui-input">
+                    <div class="layui-input-inline">
+                        <input type="text" name="name"  lay-verify="required" placeholder="请输入跳转地址"  class="layui-input">
                     </div>
-                </div>
-                  <div class="layui-form-item ">
                     <label class="layui-form-label" style="width: 110px;">排序</label>
-                    <div class="layui-input-block">
-                        <input type="text" name="order_id"  lay-verify="required" placeholder="请输入页面简体名称"  class="layui-input">
+                    <div class="layui-input-inline">
+                            <select name="order_id" lay-verify="">
+                                <option value="">请选择排序数字</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                            </select>
                     </div>
                 </div>
                 <div class="layui-form-item ">
-                    <label class="layui-form-label" style="width: 110px;">页面简体标题</label>
-                    <div class="layui-input-block">
+                    <label class="layui-form-label" style="width: 110px;padding-left:0px;">页面简体标题</label>
+                    <div class="layui-input-inline">
                         <input type="text" name="html_title_CN"  lay-verify="required" placeholder="请输入页面简体名称"  class="layui-input">
                     </div>
+                    <label class="layui-form-label " style="width: 110px;padding-left: 0px;">页面栏目简体</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="column_name_CN"  placeholder="请输入页面栏目简体"  class="layui-input">
+                    </div>
                 </div>
                 <div class="layui-form-item">
-                    <label class="layui-form-label " style="width: 110px;">页面繁体标题</label>
-                    <div class="layui-input-block">
+                    <label class="layui-form-label " style="width: 110px;padding-left:0px;">页面繁体标题</label>
+                    <div class="layui-input-inline">
                         <input type="text" name="html_title_HK"  lay-verify="required"  placeholder="请输入页面繁体名称"  class="layui-input">
                     </div>
+                    <label class="layui-form-label " style="width: 110px;padding-left: 0px;">页面栏目繁体</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="column_name_HK"  lay-verify="required"  placeholder="请输入页面栏目繁体"  class="layui-input">
+                    </div>
                 </div>
                 <div class="layui-form-item">
-                    <label class="layui-form-label " style="width: 110px;">页面英文标题</label>
-                    <div class="layui-input-block">
+                    <label class="layui-form-label " style="width: 110px;padding-left:0px;">页面英文标题</label>
+                    <div class="layui-input-inline">
                         <input type="text" name="html_title_US"  lay-verify="required"  placeholder="请输入页面英文名称"  class="layui-input">
                     </div>
-                </div>
-                <div class="layui-form-item">
-                    <label class="layui-form-label " style="width: 110px;">页面简体描述</label>
-                    <div class="layui-input-block">
-                        <input type="text" name="html_description_CN"   lay-verify="required" placeholder="请输入页面简体名称"  class="layui-input">
+                    <label class="layui-form-label " style="width: 110px;padding-left: 0px;">页面栏目英文</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="column_name_US"  lay-verify="required"  placeholder="请输入页面栏目英文"  class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
-                    <label class="layui-form-label " style="width: 110px;">页面繁体描述</label>
-                    <div class="layui-input-block">
-                        <input type="text" name="html_description_HK"  lay-verify="required"  placeholder="请输入页面繁体名称"  class="layui-input">
-                    </div>
-                </div>
-                <div class="layui-form-item">
-                    <label class="layui-form-label " style="width: 110px;">页面英文描述</label>
-                    <div class="layui-input-block">
-                        <input type="text" name="html_description_US"  lay-verify="required"  placeholder="请输入页面英文名称"  class="layui-input">
-                    </div>
-                </div>
-                <div class="layui-form-item">
-                    <label class="layui-form-label " style="width: 110px;">页面简体关键词</label>
+                    <label class="layui-form-label " style="width: 110px;padding-left:0px;padding-right: 0px;">页面简体关键词</label>
                     <div class="layui-input-block">
                         <input type="text" name="html_keyWord_CN"  placeholder="请输入页面简体名称"  class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
-                    <label class="layui-form-label " style="width: 110px;">页面繁体关键词</label>
+                    <label class="layui-form-label " style="width: 110px;padding-left: 0px;padding-right: 0px;">页面繁体关键词</label>
                     <div class="layui-input-block">
                         <input type="text" name="html_keyWord_HK"  lay-verify="required"  placeholder="请输入页面繁体名称"  class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
-                    <label class="layui-form-label " style="width: 110px;">页面英文关键词</label>
+                    <label class="layui-form-label " style="width: 110px;padding-left: 0px;padding-right: 0px;">页面英文关键词</label>
                     <div class="layui-input-block">
                         <input type="text" name="html_keyWord_US"  lay-verify="required"  placeholder="请输入页面英文名称"  class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
-                    <label class="layui-form-label " style="width: 110px;">页面栏目简体</label>
+                    <label class="layui-form-label " style="width: 110px;padding-left: 0px;">页面简体描述</label>
                     <div class="layui-input-block">
-                        <input type="text" name="column_name_CN"  placeholder="请输入页面栏目简体"  class="layui-input">
+                        <input type="text" name="html_description_CN"   lay-verify="required" placeholder="请输入页面简体名称"  class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
-                    <label class="layui-form-label " style="width: 110px;">页面栏目繁体</label>
+                    <label class="layui-form-label " style="width: 110px;padding-left: 0px;">页面繁体描述</label>
                     <div class="layui-input-block">
-                        <input type="text" name="column_name_HK"  lay-verify="required"  placeholder="请输入页面栏目繁体"  class="layui-input">
+                        <input type="text" name="html_description_HK"  lay-verify="required"  placeholder="请输入页面繁体名称"  class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
-                    <label class="layui-form-label " style="width: 110px;">页面栏目英文</label>
+                    <label class="layui-form-label " style="width: 110px;padding-left: 0px;">页面英文描述</label>
                     <div class="layui-input-block">
-                        <input type="text" name="column_name_US"  lay-verify="required"  placeholder="请输入页面栏目英文"  class="layui-input">
+                        <input type="text" name="html_description_US"  lay-verify="required"  placeholder="请输入页面英文名称"  class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">

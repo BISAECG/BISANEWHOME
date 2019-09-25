@@ -78,8 +78,6 @@
             <div class='row'>
                 <ul class='nav bisa-nav text-center head pull-left'>
                     <#list empList! as emp>
-					 
-					 
 						<#if emp_index = empList?size-1>
 							  <li class='col-309DE2  text-center head_list pull-left ml-20'>
                         		<a class='navlist' href='${emp.name!}.html'>

@@ -23,20 +23,20 @@ $(document).ready(function() {
     // 侧边栏改变图片
     function barSort(){
         $("#bar-sort1").hover(function () {
-            $("#bar-sort1").attr("src","/health-shop/resources/img/index/Sidebar1-hover.png");
+            $("#bar-sort1").attr("src","../resources/img/index/Sidebar1-hover.png");
         },function () {
-            $("#bar-sort1").attr("src","/health-shop/resources/img/index/Sidebar1.png");
+            $("#bar-sort1").attr("src","../resources/img/index/Sidebar1.png");
         })
         $("#bar-sort2").hover(function () {
-            $("#bar-sort2").attr("src","/health-shop/resources/img/index/Sidebar2-hover.png");
+            $("#bar-sort2").attr("src","../resources/img/index/Sidebar2-hover.png");
         },function () {
-            $("#bar-sort2").attr("src","/health-shop/resources/img/index/Sidebar2.png");
+            $("#bar-sort2").attr("src","../resources/img/index/Sidebar2.png");
         })
         $("#bar-sort4").hover(function () {
-            $("#bar-sort4").attr("src","/health-shop/resources/img/index/Sidebar4-hover.png");
+            $("#bar-sort4").attr("src","../resources/img/index/Sidebar4-hover.png");
         },function () {
-            $("#bar-sort4").attr("src","/health-shop/resources/img/index/Sidebar4.png");
+            $("#bar-sort4").attr("src","../resources/img/index/Sidebar4.png");
         })
     }
     barSort();
-})
+});

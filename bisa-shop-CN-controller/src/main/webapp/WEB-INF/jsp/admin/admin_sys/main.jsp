@@ -28,10 +28,10 @@
     <link href="resources/ctrl/layui/css/layui.css" rel="stylesheet">
     <link href="resources/css/comm/base.css" rel="stylesheet">
     <link href="resources/css/admin/HK_Admin.css" rel="stylesheet">
-    <!--[if lt IE 9]>
+
     <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+
 </head>
 
 <body class="layui-layout-body">
@@ -49,21 +49,21 @@
                 <div class="clear pd-15 bg-fafafa bor bor-col-e8ebf2">
                     <div class="layui-form-item">
                         <label class="layui-form-label pt-10 pb-10 pl-0 pr-0 col-black" style="width: 150px;">公司简体地址：</label>
-                        <div class="layui-input-inline">
+                        <div class="layui-input-inline" style="width: 450PX;">
                             <input type="text" name="company_address_CN"  lay-verify="required" autocomplete="off"
                                    placeholder="请输入公司地址" class="layui-input">
                         </div>
                     </div>
                     <div class="layui-form-item">
                         <label class="layui-form-label pt-10 pb-10 pl-0 pr-0 col-black" style="width: 150px;">公司繁体地址：</label>
-                        <div class="layui-input-inline">
+                        <div class="layui-input-inline" style="width: 450PX;">
                             <input type="text" name="company_address_HK"  lay-verify="required" autocomplete="off"
                                    placeholder="请输入公司地址" class="layui-input">
                         </div>
                     </div>
                     <div class="layui-form-item">
                         <label class="layui-form-label pt-10 pb-10 pl-0 pr-0 col-black" style="width: 150px;">公司英文地址：</label>
-                        <div class="layui-input-inline">
+                        <div class="layui-input-inline" style="width:70%;">
                             <input type="text" name="company_address_US"  lay-verify="required" autocomplete="off"
                                    placeholder="请输入公司地址" class="layui-input">
                         </div>
@@ -72,49 +72,42 @@
                         <label class="layui-form-label pt-10 pb-10 pl-0 pr-0 col-black" style="width: 150px;">公司域名：</label>
                         <div class="layui-input-inline">
                             <input type="text" name="company_domain"  lay-verify="required"
-                                   placeholder="请输入公司域名"
-                                   autocomplete="off"
-                                   class="layui-input">
+                                   placeholder="请输入公司域名" autocomplete="off" class="layui-input">
                         </div>
                     </div>
                     <div class="layui-form-item">
                         <label class="layui-form-label pt-10 pb-10 pl-0 pr-0 col-black" style="width: 150px;">公司logo：</label>
                         <div class="layui-input-inline">
                             <input type="text" name="company_logo_url"  lay-verify="required" placeholder="请输入公司logo"
-                                   autocomplete="off"
-                                   class="layui-input">
+                                   autocomplete="off" class="layui-input">
                         </div>
                     </div>
                     <div class="layui-form-item">
                         <label class="layui-form-label pt-10 pb-10 pl-0 pr-0 col-black" style="width: 150px;">公司电话：</label>
                         <div class="layui-input-inline">
                             <input type="text" name="company_phone"  lay-verify="required" placeholder="请输入公司电话"
-                                   autocomplete="off"
-                                   class="layui-input">
+                                   autocomplete="off" class="layui-input">
                         </div>
                     </div>
                     <div class="layui-form-item">
                         <label class="layui-form-label pt-10 pb-10 pl-0 pr-0 col-black" style="width: 150px;">公司简体名字：</label>
-                        <div class="layui-input-inline">
+                        <div class="layui-input-inline" style="width: 450PX;">
                             <input type="text" name="company_name_CN"  lay-verify="required" placeholder="请输入公司名称"
-                                   autocomplete="off"
-                                   class="layui-input">
+                                   autocomplete="off" class="layui-input">
                         </div>
                     </div>
                     <div class="layui-form-item">
                         <label class="layui-form-label pt-10 pb-10 pl-0 pr-0 col-black" style="width: 150px;">公司繁体名字：</label>
-                        <div class="layui-input-inline">
+                        <div class="layui-input-inline" style="width: 450PX;">
                             <input type="text" name="company_name_HK"  lay-verify="required" placeholder="请输入公司名称"
-                                   autocomplete="off"
-                                   class="layui-input">
+                                   autocomplete="off" class="layui-input">
                         </div>
                     </div>
                     <div class="layui-form-item">
                         <label class="layui-form-label pt-10 pb-10 pl-0 pr-0 col-black" style="width: 150px;">公司英文名字：</label>
-                        <div class="layui-input-inline">
+                        <div class="layui-input-inline" style="width: 450PX;">
                             <input type="text" name="company_name_US"  lay-verify="required" placeholder="请输入公司名称"
-                                   autocomplete="off"
-                                   class="layui-input">
+                                   autocomplete="off" class="layui-input">
                         </div>
                     </div>
 
