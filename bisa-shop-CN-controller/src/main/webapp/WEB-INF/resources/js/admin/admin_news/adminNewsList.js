@@ -88,13 +88,7 @@ $(document).ready(function () {
                         $(this).text(getMyDate(data));
                     }
                 })
-                //
-                // $("[data-field = 'news_classify_id']").children().each(function (index) {
-                //     if (index != 0) {
-                //         var data = $(this).text();
-                //         $(this).text(getNewType(data));
-                //     }
-                // })
+       
             }
             /*在这里使用的是静态数据，参考layui文档，使用服务器上的数据进行更替*/
             /*data: [

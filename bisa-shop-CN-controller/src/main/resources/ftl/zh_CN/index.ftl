@@ -168,7 +168,7 @@
             $.ajax({
                 type: "GET",
                 dataType: "json",
-                url: "/web/call/loadPlacementNews",
+                url: "/new/tops",
                 success: function (data) {
                     console.log(data);
                     $.each(data, function(i, item) {
@@ -219,7 +219,7 @@
         //点击图片跳转
         $(".main_div").on("click", ".new-div", function () {
             var news_id = $(this).find(".zd-id").val();
-            window.location.href = "/web/call/newsContent?news_id=" + news_id;
+             window.open('/news/body?news_id='+news_id,'_blank')
         });
     });
 

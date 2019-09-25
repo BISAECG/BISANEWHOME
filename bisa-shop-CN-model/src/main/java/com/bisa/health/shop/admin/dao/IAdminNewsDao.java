@@ -58,7 +58,7 @@ public interface IAdminNewsDao {
      * @param news
      * @return
      */
-    public boolean updateNews(News news);
+    public News updateNews(News news);
 
     /**
      * 删除新闻信息

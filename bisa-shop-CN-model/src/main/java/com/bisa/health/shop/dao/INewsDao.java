@@ -15,7 +15,7 @@ public interface INewsDao {
      * 新闻列表的新闻分页
      * @return
      */
-    Pager<News> getPagerNews();
+    Pager<News> getPagerNews(int lang);
 
     /**
      * 获取所有的新闻
@@ -27,24 +27,24 @@ public interface INewsDao {
      * @param news
      * @return
      */
-    boolean updateNews(News news);
+    News updateNews(News news);
 
     /**
      * 上一篇，本文，下一篇文章
      * @return
      */
-    List<News> getTop4ListNews();
+    List<News> getTop4ListNews(int lang);
 
     /**
      * 获取所有的新闻
      * @return
      */
-    List<News> getListNews();
+    List<News> getListNews(int lang);
 
     /**
      * 获取置顶新闻
      * @return
      */
-    List<News> getPlacementNews();
+    List<News> getPlacementNews(int lang);
 
 }

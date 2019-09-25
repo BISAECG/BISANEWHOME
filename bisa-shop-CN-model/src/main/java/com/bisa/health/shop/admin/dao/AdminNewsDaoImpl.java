@@ -23,20 +23,13 @@ public class AdminNewsDaoImpl extends BaseDao<News> implements IAdminNewsDao {
     }
     @Override
     public News addNews(News news) {
-        String sql = "INSERT INTO h_news(NEWS_ID,NEWS_TITLE,NEWS_SUBHEAD,READ_QUANTITY,NEWS_CONTENT,IMG_URL,RELEASE_TIME,AUTHOR," +
-                "news_classify_id,news_describe,news_keyWord,news_roofPlacement,html_description,html_title) VALUES(?,?,?,?,?,?,?,?,?,?," +
-                "?,?,?,?)";
-        int result = super.addBySql(sql, new Object[]{news.getNews_id(), news.getNews_title(), news.getNews_subhead(),
-                 news.getRead_quantity(), news.getNews_content(), news.getImg_url(), news.getRelease_time(), news.getAuthor(),news.getNews_classify_id(),news.getNews_describe(),news.getNews_keyWord(),news.getNews_roofPlacement(),news.getHtml_description(),news.getHtml_title()});
-        return result >= 1 ? news : null;
+        return super.add(news);
     }
 
     @Override
-    public boolean updateNews(News news) {
-        String sql = "UPDATE h_news SET NEWS_ID=?,NEWS_TITLE=?,NEWS_SUBHEAD=?,READ_QUANTITY=?,NEWS_CONTENT=?,IMG_URL=?,RELEASE_TIME=?,AUTHOR=?,news_classify_id=?,news_keyWord=?,news_describe=?,news_roofPlacement=? WHERE ID=?";
-        int result = super.updateBySql(sql, new Object[]{news.getNews_id(), news.getNews_title(), news.getNews_subhead(), news.getRead_quantity(),
-                news.getNews_content(), news.getImg_url(), news.getRelease_time(), news.getAuthor(),news.getNews_classify_id(),news.getNews_keyWord(),news.getNews_describe(),news.getNews_roofPlacement(),news.getId()});
-        return result >= 1 ? true : false;
+    public News updateNews(News news) {
+    	super.update(news); 
+        return news;
     }
     @Override
     public boolean deleteNews(int id) {

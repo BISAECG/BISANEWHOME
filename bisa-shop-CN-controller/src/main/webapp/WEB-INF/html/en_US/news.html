@@ -9,9 +9,9 @@
     <meta http-equiv="Content-Type" content="text/html;" />
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <!-- necessary -->
-    <meta name="keywords" content="${html_keyWord}">
-    <meta name="description" content="${html_description}">
-    <title>${html_title}</title>
+    <meta name="keywords" content="中文key">
+    <meta name="description" content="中文描述">
+    <title>中文标题</title>
     <!-- description -->
     <meta name="renderer" content="webkit">
     <!-- base -->
@@ -45,24 +45,24 @@
     <div class="container-full pos-r center-block">
         <img class="img-responsive center-block" src="../resources/img/news/HK_HowToShop/banner.png" >
         <p class="f-40" style="color: #FFFFFF;position: absolute;left:45%;top: 15%; ">
-            健康资讯
+            健康資訊
         </p>
         <p style="position: absolute;left:40%;top: 34%;">
-            <span class="f-30 pr-40"  style="color: #FFFFFF;">关注健康</span>
-            <span class="f-30" style="background: #3592D0;color: #FFFFFF;">关注碧沙健康</span>
+            <span class="f-30 pr-40"  style="color: #FFFFFF;">關注健康</span>
+            <span class="f-30" style="background: #3592D0;color: #FFFFFF;">關注碧沙健康</span>
         </p>
-        <p class="f-30"  style="color: #FFFFFF;position: absolute;left:42%;top: 50%;">给家人一个悉心的呵护</p>
+        <p class="f-30"  style="color: #FFFFFF;position: absolute;left:42%;top: 50%;">給家人一個悉心的呵護</p>
         <img style="position: absolute;left:48%;top: 75%;"
              src="../resources/img/news/HK_HowToShop/downlogo.png">
     </div>
     <div class="container pt-20 pb-20">
         <div class="row">
             <div class="col-md-6 seach">
-                <span style="color: #010101;">关键词:</span>
-                <span><a>心电仪</a></span>
+                <span style="color: #010101;">關鍵詞:</span>
+                <span><a>心電儀</a></span>
                 <span><a>碧沙</a></span>
                 <span><a>心肌梗塞</a></span>
-                <span><a>心电图</a></span>
+                <span><a>心電圖</a></span>
             </div>
             <div class="col-md-3 col-md-offset-3 seach">
                 <form class="pos-r">
@@ -84,7 +84,7 @@
             <div class="row">
                 <div class="col-md-2 pt-10 pb-10">
                 <span style="font-size: 18px;font-weight: bold;">
-                    新闻资讯
+                    新聞資訊
                 </span>
                 </div>
                 <div class="col-md-1 col-md-offset-9">
@@ -116,12 +116,12 @@
 <script src="../resources/ctrl/layui/layui.js"></script>
 <script>
     $(document).ready(function() {
-        //新闻内容获取
+        //新聞內容獲取
         function indexNew() {
             $.ajax({
                 type: "GET",
                 dataType: "json",
-                url: "web/call/loadPlacementNews",
+                url: "/web/call/loadPlacementNews",
                 success: function (data) {
                     console.log(data);
                     $.each(data, function(i, item) {
@@ -137,7 +137,7 @@
                                 '</p>'+
                                 '<p class="f-12 col-888 mtb-10-0-ipad line-h-20 text-line-2-1-ipad cur-d">'+
                                 '<span>日期:</span><span class="col-888 news-time">'+time+'</span>'+
-                                '<span  style="margin-left: 40px;">阅读量:</span><span class="col-888 news-quantity">'+item.read_quantity+'</span>'+
+                                '<span  style="margin-left: 40px;">閱讀量:</span><span class="col-888 news-quantity">'+item.read_quantity+'</span>'+
                                 '</p>'+
                                 '</div>'+
                                 '</div>'
@@ -147,18 +147,18 @@
             });
         }
         indexNew();
-        //点击图片跳转
+        //點擊圖片跳轉
         $(".main_div").on("click", ".new-div", function () {
             var news_id = $(this).find(".zd-id").val();
-            window.location.href = "web/call/newsContent_cn?news_id=" + news_id.html;
-            // window.location.href = "newsContent?news_id=" + news_id;
+            window.location.href = "/web/call/newsContent_cn?news_id=" + news_id.html;
+            // window.location.href = "/health-shop/newsContent?news_id=" + news_id;
         });
         function getMyDate(data) {
             if (data == "" || data == null) {
                 return "- - - - - -";
             }
             data = parseInt(data);
-            //var oldTime = (new Date(data)).getTime(); //得到毫秒数
+            //var oldTime = (new Date(data)).getTime(); //得到毫秒數
             var oDate = new Date(data);
             oYear = oDate.getFullYear(),
                     oMonth = oDate.getMonth() + 1,
@@ -166,7 +166,7 @@
                     oHour = oDate.getHours(),
                     oMin = oDate.getMinutes(),
                     oSen = oDate.getSeconds(),
-                    oTime = oYear + '年' + getzf(oMonth) + '月' + getzf(oDay) + '日';//最后拼接时间
+                    oTime = oYear + '年' + getzf(oMonth) + '月' + getzf(oDay) + '日';//最後拼接時間
             return oTime;
         };
         function getzf(num) {
@@ -178,14 +178,14 @@
         layui.use('flow', function () {
             var flow = layui.flow;
             flow.load({
-                elem: '#LAY_demo2' //流加载容器
+                elem: '#LAY_demo2' //流加載容器
                 , isAuto: false
                 , isLazyimg: true
-                , done: function (page, next) { //加载下一页
-                    $.get("web/call/loadNewsDatas?page=" + page + "&limit=" + 3 , function (data) {
+                , done: function (page, next) { //加載下一頁
+                    $.get("/web/call/loadNewsDatas?page=" + page + "&limit=" + 3 , function (data) {
                         console.log(data)
                         var lis = [];
-                        layui.each(data.datas, function (index,item) {  //遍历后台传过来的数据
+                        layui.each(data.datas, function (index,item) {  //遍曆後台傳過來的數據
                             var release_time = getMyDate(item.release_time);
                             lis.push(
                                     '<li class="news-div cur-p">'+
@@ -199,11 +199,11 @@
                                     '<span class="col-888" style="color: #101010;">'+item.news_title+'</span>'+
                                     '</div>'+
                                     '<div class="col-md-1">'+
-                                    '<span class="cur-p pull-right">详情></span>'+
+                                    '<span class="cur-p pull-right">詳情></span>'+
                                     '</div>'+
                                     '</div>'+
                                     '</div>'+
-                                    '</li>'//作为元素塞进数组lis中
+                                    '</li>'//作爲元素塞進數組lis中
                             )
                         });
                         var pageres =  Math.ceil(data.total/3);
@@ -213,10 +213,10 @@
             })
         })
 
-        //点击图片跳转
+        //點擊圖片跳轉
         $(".pt-div").on("click", ".news-div", function () {
             var news_id = $(this).find(".news-id").val();
-            window.location.href = "web/call/newsContent_cn?news_id=" + news_id.html;
+            window.location.href = "/web/call/newsContent_cn?news_id=" + news_id.html;
         });
         $('#seach').click(function(){
             var  keywordtext = $('input[name="seachtext"]').val();
@@ -228,14 +228,14 @@
             layui.use('flow', function () {
                 var flow = layui.flow;
                 flow.load({
-                    elem: '#LAY_demo1' //流加载容器
+                    elem: '#LAY_demo1' //流加載容器
                     , isAuto: false
                     , isLazyimg: true
-                    , done: function (page, next) { //加载下一页
-                        $.get("web/call/loadNewsDatas?page=" + page + "&limit=" + 6 +"&keyWord=" + keywordtext, function (data) {
+                    , done: function (page, next) { //加載下一頁
+                        $.get("/web/call/loadNewsDatas?page=" + page + "&limit=" + 6 +"&keyWord=" + keywordtext, function (data) {
                             var lis = [];
                             console.log(data)
-                            layui.each(data.datas, function (index, item) {  //遍历后台传过来的数据
+                            layui.each(data.datas, function (index, item) {  //遍曆後台傳過來的數據
                                 lis.push(
                                         '<li>'+
                                         '<div class="container">'+
@@ -260,7 +260,7 @@
                                         '</div>'+
                                         '</div>'+
                                         '</div>'+
-                                        '</li>'//作为元素塞进数组lis中
+                                        '</li>'//作爲元素塞進數組lis中
                                 )
                             });
                             var pageres = Math.ceil(data.total / 6);

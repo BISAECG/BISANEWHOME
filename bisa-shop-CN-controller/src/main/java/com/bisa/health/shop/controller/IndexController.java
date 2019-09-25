@@ -36,42 +36,12 @@ public class IndexController {
      */
     @RequestMapping(value = "/index", method = RequestMethod.GET)
         public String index(HttpServletRequest request,Model model,Locale locale) {
-    	String lang=locale.toString();
-        Locale mlocale = null; 
-    	if(lang.equals("zh_CN")){
-    		mlocale = new Locale("zh", "CN"); 
-    	}else if(lang.equals("zh_TW")||lang.equals("zh_HK")){
-    		mlocale = new Locale("zh", "HK"); 
-    	}else{
-    		mlocale = new Locale("en", "US"); 
-    	}
-    	request.getSession().setAttribute(SessionLocaleResolver.LOCALE_SESSION_ATTRIBUTE_NAME,mlocale);
+
+    	Locale mlocale=(Locale) request.getSession().getAttribute(SessionLocaleResolver.LOCALE_SESSION_ATTRIBUTE_NAME);
     	model.addAttribute("lang",mlocale.toString());
         return "/index";
     }
-    
-    
-    
-    
-    
-
-    @RequestMapping(value = "/index_new", method = RequestMethod.GET)
-    public String index() {
-        return "/index";
-    }
  
-    /**
-     * 获取首页图片的轮播图，图片集合
-     * @param session
-     */
-    @RequestMapping(value = "web/call/getIndexImg", method = RequestMethod.GET)
-    @ResponseBody
-    public List<GoodsImg> getIndexImg(HttpSession session) {
-
-        String lang = InternationalizationUtil.getLang(session);
-        List<GoodsImg> indexImgs = goodsImgService.getIndexImg(lang);
-        return indexImgs;
-    }
 
     /**
      *手机版

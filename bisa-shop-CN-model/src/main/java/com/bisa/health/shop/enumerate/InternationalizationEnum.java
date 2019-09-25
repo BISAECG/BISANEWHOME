@@ -62,5 +62,14 @@ public enum InternationalizationEnum {
         }
         return null;
     }
+    
+    public static int getByName(String name) {
+        for (InternationalizationEnum status : values()) {
+            if (status.getName().equals(name)) {
+                return status.getValue();
+            }
+        }
+        return -1;
+    }
 
 }

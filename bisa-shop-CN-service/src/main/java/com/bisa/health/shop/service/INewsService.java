@@ -35,7 +35,7 @@ public interface INewsService {
      * @param news
      * @return
      */
-    boolean updateNews(News news);
+    News updateNews(News news);
 
     /**
      * 获取所有的新闻
@@ -53,7 +53,7 @@ public interface INewsService {
      * @param keyWord
      * @return
      */
-    Pager<News> getPagerNews1(Integer page, Integer limit, String lang,String keyWord);
+    Pager<News> getPagerNews(Integer page, Integer limit, String lang,String keyWord);
 
     /**
      * 获取置顶新闻

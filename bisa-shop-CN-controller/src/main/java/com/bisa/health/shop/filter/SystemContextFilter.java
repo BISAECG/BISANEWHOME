@@ -3,16 +3,20 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 
 import java.io.IOException;
+import java.util.Locale;
 
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.apache.shiro.web.filter.PathMatchingFilter;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
+import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 
 import com.bisa.health.basic.entity.SystemContext;
 
@@ -29,6 +33,22 @@ public class SystemContextFilter implements Filter  {
 	@Override
 	public void doFilter(ServletRequest req, ServletResponse resp,
 			FilterChain chain) throws IOException, ServletException {
+		
+		HttpSession session = ((HttpServletRequest) req).getSession();
+		Locale mlocale=(Locale) session.getAttribute(SessionLocaleResolver.LOCALE_SESSION_ATTRIBUTE_NAME);
+		
+		if(mlocale==null){
+			String lang=req.getLocale().toString();
+	    	if(lang.equals("zh_CN")){
+	    		mlocale = new Locale("zh", "CN"); 
+	    	}else if(lang.equals("zh_TW")||lang.equals("zh_HK")){
+	    		mlocale = new Locale("zh", "HK"); 
+	    	}else{
+	    		mlocale = new Locale("en", "US"); 
+	    	}
+	    	session.setAttribute(SessionLocaleResolver.LOCALE_SESSION_ATTRIBUTE_NAME,mlocale);
+		}
+		
 		Integer offset = 0;
 		try {
 			offset = Integer.parseInt(req.getParameter("pager.offset"));
