@@ -111,7 +111,7 @@
     <div class='home-right-bar J_homeRightBar'>
         <div class='bar-l '>
             <div id='J_rightbar_l' style='margin-bottom: 15px;'>
-                <ul class='bar-top'>
+                <ul class='bar-top' style="list-style: none;">
                     <li class='bar-sortS'>
                         <a href='Instructions' class='bar-link pos-r'>
                             <img id='bar-sort1' src='../resources/img/index/Sidebar1.png' alt="下载APP">

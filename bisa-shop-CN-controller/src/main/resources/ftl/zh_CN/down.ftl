@@ -48,7 +48,6 @@
                         <span><i class="fa fa-android" aria-hidden="true"></i>android版下载</span>
                     </div>
                 </div>
-
                 </p>
             </div>
         </div>

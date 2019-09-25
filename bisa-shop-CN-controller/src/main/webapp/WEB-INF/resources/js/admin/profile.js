@@ -107,7 +107,7 @@ $(document).ready(function () {
        	 layer.open({
                 title: '页面设置'//弹框标题
                 , content: $(".formsetting").html()//也可以是一个html
-                , area: ['680', '600']
+                , area: ['750', '600']
                 , btn: ['关闭']
                 , yes: function (index, layero) {
                     //按钮【按钮知道了】的回调
