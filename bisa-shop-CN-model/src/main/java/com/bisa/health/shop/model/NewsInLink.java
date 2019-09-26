@@ -5,8 +5,8 @@ import java.io.Serializable;
 import java.util.Date;
 
 @Entity
-@Table(name="h_new_innerChain")
-public class NewsInnerChain implements Serializable {
+@Table(name="h_news_inlink")
+public class NewsInLink implements Serializable {
     private static final long serialVersionUID = -3392514471944951046L;
     private int id;
 
@@ -70,10 +70,10 @@ public class NewsInnerChain implements Serializable {
         this.inner_chain_text_HK = inner_chain_text_HK;
     }
 
-    public NewsInnerChain() {
+    public NewsInLink() {
     }
 
-    public NewsInnerChain(int id, String inner_chain_text_CN, String inner_chain_text_EN, String inner_chain_text_HK, String inner_chain_url, Date creation_time) {
+    public NewsInLink(int id, String inner_chain_text_CN, String inner_chain_text_EN, String inner_chain_text_HK, String inner_chain_url, Date creation_time) {
         this.id = id;
         this.inner_chain_text_CN = inner_chain_text_CN;
         this.inner_chain_text_EN = inner_chain_text_EN;

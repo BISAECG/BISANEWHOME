@@ -4,29 +4,28 @@ $(document).ready(function () {
         window.location.reload();
     });
 
-    $(".btn-generate").click(function () {
-        $.ajax({
-            type: "post",
-            dataType: "json",
-            url: "admin/news/GenerateHTML",
-            success: function (data) {
-                //显示新闻数据，填充页面元素
-                if(data.flag){
-                    alert("创建成功")
-                }else{
-                    alert("创建失败")
-                }
-            }
-        });
-    });
 
 
     /*layui方面js*/
-    layui.use(['form', 'table', 'element'], function () {
+    layui.use(['form', 'table', 'element','layer'], function () {
         var form = layui.form,
             layer = layui.layer,
             element = layui.element,
             table = layui.table;
+        
+        
+        $(".btn-generate").click(function () {
+        	layer.load();
+            $.ajax({
+                type: "post",
+                dataType: "json",
+                url: "admin/news/generateall",
+                success: function (data) {
+                    //显示新闻数据，填充页面元素
+                	  layer.closeAll('loading');
+                }
+            });
+        });
 
         //监听提交
         form.on('submit(search1)', function (data) {
@@ -64,13 +63,13 @@ $(document).ready(function () {
                     {field: 'news_subhead', title: '新闻副标题', width: 200, align: 'center', event: 'news_subhead'},
                     {field: 'read_quantity', title: '阅读量', width: 100, sort: true, align: 'center'},
                     {field: 'news_id', title: '新闻id', width: 100, sort: true, align: 'center'},
-                    {field: 'news_keyWord', title: '新闻关键词', width: 200, align: 'center'},
+                    {field: 'html_keyWord', title: '新闻关键词', width: 200, align: 'center'},
                     {field: 'news_describe', title: '新闻描述', width: 200, align: 'center'},
                     {field: 'html_description', title: '新闻meat描述', width: 200, align: 'center'},
                     {field: 'html_title', title: '新闻meat标题', width: 200, align: 'center'},
                     {field: 'news_roofPlacement', title: '是否置顶', width: 100, sort: true, align: 'center'},
                     {field: 'release_time', title: '发布时间', width: 200, sort: true, align: 'center'},
-                    {fixed: 'right', title: '操作', width: 250, align: 'center', toolbar: '#barDemo'}
+                    {fixed: 'right', title: '操作', width: 180, align: 'center', toolbar: '#barDemo'}
                 ]
             ],
             done: function (res, curr, count) {
@@ -101,40 +100,16 @@ $(document).ready(function () {
             var layEvent = obj.event; //获得 lay-event 对应的值
             var tr = obj.tr; //获得当前行 tr 的DOM对象
             if (layEvent === 'detail') { //预览
-                window.open(shopUrl + "/admin/news/newsInfo?news_id=" + data.id);
+                window.open(shopUrl + "/news/body?id=" + data.id);
             } else if (layEvent === 'delarticle') { //删除
-                var id = data.id;
                 layer.confirm('需要要删除此文章么？', function (index) {
-                    $.ajax({
-                        url: 'admin/news/delectNews',
-                        data: {
-                            id: id
-                        },
-                        type: "POST",
-                        success: function (data) {
-                            if (data.flag == true) {
-                                layer.msg('删除 成功!', {icon: 6, time: 1000}, function () {
-                                    obj.del();
-                                    layer.close(index);
-                                });
-                                if (data.flag == false) {
-                                    layer.msg('系统故障!', {icon: 5, time: 1000}, function () {
-                                        window.location.reload();
-                                    });
-                                }
-                            }
-                        }
-                    });
+                	window.location="admin/news/delectNews/"+ data.news_id;
                 });
             }
             if (layEvent === 'edit') { //编辑
-                window.location.href = "admin/news/newsContent?id=" + data.id;
+                window.location = "admin/news/newsContent/" + data.news_id+"/"+data.lang_id;
             }
-            if (obj.event === 'news_subhead') {
-                layer.alert(data.news_subhead, {
-                    title: '新闻ID 为 &nbsp;' + data.id + '&nbsp; 的副标题',
-                });
-            }
+           
         });
     });
 });

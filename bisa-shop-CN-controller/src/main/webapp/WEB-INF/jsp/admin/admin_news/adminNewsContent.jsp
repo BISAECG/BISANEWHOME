@@ -25,7 +25,6 @@
     <meta name="renderer" content="webkit">
     <title>碧沙康健_新闻内容</title>
     <!-- base -->
-    <link href="resources/ctrl/Font-Awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="resources/ctrl/layui/css/layui.css" rel="stylesheet">
     <link href="resources/css/comm/base.css" rel="stylesheet">
     <link href="resources/css/admin/HK_Admin.css" rel="stylesheet">
@@ -47,13 +46,15 @@
                 </p>
                 <div class="layui-form-item">
                      <div class="lang_btn">
-                          <button class="layui-btn layui-btn-radius" data-num="1" lay-submit="" lay-filter="hk"  id="hk" >繁体</button>
-                          <button class="layui-btn layui-btn-radius layui-btn-primary" data-num="2" lay-submit="" lay-filter="china" id="china" >简体</button>
-                          <button class="layui-btn layui-btn-radius layui-btn-primary" data-num="3" lay-submit="" lay-filter="english" id="english">英文</button>
+                          <button class="layui-btn layui-btn-radius layui-btn-primary" data-num="1" lay-submit="" lay-filter="china" id="zh_CN" >简体</button>
+                          <button class="layui-btn layui-btn-radius" data-num="2" lay-submit="" lay-filter="hk"  id="hk" >繁体</button>
+                          <button class="layui-btn layui-btn-radius layui-btn-primary" data-num="3" lay-submit="" lay-filter="english" id="en_US">英文</button>
                       </div>
                  </div>
-                <form class="layui-form" action="">
+                <form class="layui-form">
                 	<input type="hidden" name="id" value="">
+                	<input type="hidden" name="news_id" id="news_id" value="${news.news_id}">
+                	<input type="hidden" name="lang_id" id="lang_id" value="${news.lang_id}">
                     <div class="clear pd-15 bg-fafafa bor bor-col-e8ebf2">
                         <div class="layui-form-item">
                             <label class="layui-form-label pt-10 pb-10 pl-0 pr-0 col-black">新闻标题：</label>
@@ -76,19 +77,26 @@
                         <div class="layui-form-item" id="readings">
                             <label class="layui-form-label pt-10 pb-10 pl-0 pr-0 col-black">阅读量：</label>
                             <div class="layui-input-block">
-                                <input type="text" name="readings"  id="readings1" lay-verify="required" placeholder="请输入阅读量" autocomplete="off" class="layui-input">
+                                <input type="text" name="readings"  id="readings1" lay-verify="required|number" placeholder="请输入阅读量" autocomplete="off" class="layui-input">
                             </div>
                         </div>
                         <div class="layui-form-item">
-                            <label class="layui-form-label pt-10 pb-10 pl-0 pr-0 col-black">主图地址：</label>
-                            <div class="layui-input-block">
-                                <input type="text" name="photo_address" id="photo_address" lay-verify="required" placeholder="请输入新闻主图地址" autocomplete="off" class="layui-input">
+                             <label class="layui-form-label pt-10 pb-10 pl-0 pr-0 col-black">主图地址：</label>
+                            <div class="layui-inline layui-col-xs6 pl-30">
+                            		<input type="text" name="photo_address" id="photo_address" lay-verify="required" placeholder="请输入新闻主图地址" autocomplete="off" class="layui-input">
+                            </div>
+                            <div class="layui-inline">
+                            	<div class="layui-input-inline">
+                            		<div class="layui-upload">
+								  		<button type="button" class="layui-btn" id="test1">上传图片</button>
+									</div> 
+      							</div>
                             </div>
                         </div>
                         <div class="layui-form-item">
                             <label class="layui-form-label pt-10 pb-10 pl-0 pr-0 col-black">关键词：</label>
                             <div class="layui-input-block">
-                                <input type="text" name="keyWord" id="keyWord" lay-verify="required" placeholder="请输入新闻关键词"
+                                <input type="text" name="html_keyWord" id="html_keyWord" lay-verify="required" placeholder="请输入新闻关键词"
                                        autocomplete="off"
                                        class="layui-input">
                             </div>
@@ -141,13 +149,16 @@
                     <div class="clear pd-15 bg-fafafa bor bor-col-e8ebf2">
                          <textarea name="newseditor" id="newseditor"></textarea>
                     </div>
-                </form>
-                <div class="clear pd-15 bg-fafafa bor bor-col-e8ebf2">
+                    
+                    <div class="clear pd-15 bg-fafafa bor bor-col-e8ebf2">
                    <div class="mt-20 mb-20">
                     <div class="pull-right mr-40">
                         <button type="button" class="layui-btn" lay-submit=""  lay-filter="updateCN" id="updateCN">立即提交</button>
                     </div>
                 </div>
+                    
+                </form>
+                
             </div>
         </div>
     </div>

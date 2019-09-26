@@ -26,7 +26,6 @@
     <meta name="renderer" content="webkit">
     <title>碧沙康健_新闻列表</title>
     <!-- base -->
-    <link href="resources/ctrl/Font-Awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="resources/ctrl/layui/css/layui.css" rel="stylesheet">
     <link href="resources/css/comm/base.css" rel="stylesheet">
     <link href="resources/css/admin/HK_Admin.css" rel="stylesheet">
@@ -40,7 +39,6 @@
     <script type="text/html" id="barDemo">
         <a class="layui-btn layui-btn-xs layui-btn-normal" lay-event="detail">预览</a>
         <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
-        <a class="layui-btn layui-btn-xs" lay-event="newInternationalization" href="admin/news//adminNewsInternationalization?id={{ d.id }}">添加语言版本</a>
         <a class="layui-btn layui-btn-xs layui-btn-danger" lay-event="delarticle">删除</a>
     </script>
     <script type="text/html" id="imgTpl">

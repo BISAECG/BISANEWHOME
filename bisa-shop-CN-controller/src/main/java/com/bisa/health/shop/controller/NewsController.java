@@ -38,12 +38,12 @@ public class NewsController {
      * @return
      */
     @RequestMapping(value = "/news/body", method = RequestMethod.GET)
-    public String newsDetail(HttpSession session, int news_id) {
+    public String view(HttpSession session,int id) {
         String lang = InternationalizationUtil.getLang(session);
-        News news = adminNewsService.getNewsById(news_id);
+        News news = adminNewsService.getNewsById(id);
         news.setRead_quantity(news.getRead_quantity() + 1);
         newsService.updateNews(news);
-        return "redirect:"+outPath+"/"+lang+"/news/"+news_id+".html";
+        return "redirect:"+outPath+"/"+lang+"/news/"+news.getNews_id()+".html";
     }
     /**
             * 健康A&Q

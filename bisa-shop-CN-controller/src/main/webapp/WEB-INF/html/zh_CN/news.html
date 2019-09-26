@@ -149,8 +149,8 @@
         indexNew();
         //点击图片跳转
         $(".main_div").on("click", ".new-div", function () {
-            var news_id = $(this).find(".zd-id").val();
-            window.open('/news/body?news_id='+news_id,'_blank')
+            var id = $(this).find(".zd-id").val();
+            window.open('/news/body?id='+id,'_blank')
         });
         function getMyDate(data) {
             if (data == "" || data == null) {
@@ -190,7 +190,7 @@
                                     '<li class="news-div cur-p">'+
                                     '<div class="row">'+
                                     '<div class="col-md-12 pt-15 pb-20" style="border-bottom: 1px solid #E5E5E4;padding-left: 0px;">'+
-                                    '<input type="hidden" class="news-id" value="'+item.id+'"/>'+
+                                    '<input type="hidden" class="id" value="'+item.id+'"/>'+
                                     '<div class="col-md-2" style="padding:0px;">'+
                                     '<span class="col-888" style="background:linear-gradient(0deg,rgba(44,106,206,1) 0%,rgba(47,232,230,1) 100%);box-shadow:0px 1px 5px 0px rgba(53,143,238,1);color: #fff;">'+release_time+'</span>'+
                                     '</div>'+
@@ -214,8 +214,8 @@
 
         //点击图片跳转
         $(".pt-div").on("click", ".news-div", function () {
-            var news_id = $(this).find(".news-id").val();
-            window.open('/news/body?news_id='+news_id,'_blank')
+            var news_id = $(this).find(".id").val();
+            window.open('/news/body?id='+id,'_blank')
         });
         $('#seach').click(function(){
             var  keywordtext = $('input[name="seachtext"]').val();

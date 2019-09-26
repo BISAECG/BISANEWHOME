@@ -76,7 +76,6 @@ $(document).ready(function () {
                     });
                 });
             }else if(layEvent == 'generate'){
-            	// 删除
                 var id = data.id;
                 layer.confirm('需要要生成静态页面？', function (index) {
                     $.ajax({
@@ -88,7 +87,6 @@ $(document).ready(function () {
                         success: function (data) {
                             if (data.flag == true) {
                                 layer.msg('生成 成功!', {icon: 6, time: 1000}, function () {
-                                    obj.del();
                                     layer.close(index);
                                 });
                                 if (data.flag == false) {

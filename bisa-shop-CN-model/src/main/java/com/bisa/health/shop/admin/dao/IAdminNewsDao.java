@@ -2,7 +2,7 @@ package com.bisa.health.shop.admin.dao;
 
 import com.bisa.health.basic.entity.Pager;
 import com.bisa.health.shop.model.News;
-import com.bisa.health.shop.model.NewsInnerChain;
+import com.bisa.health.shop.model.NewsInLink;
 
 import java.util.List;
 
@@ -19,12 +19,15 @@ public interface IAdminNewsDao {
      * @return
      */
     public News getNewsById(int id);
+    
+    
     /**
-     * 新闻表的news_id,加载新闻数据
+     *  新闻ID和语言ID
      * @param news_id
+     * @param lang_id
      * @return
      */
-    public News getNewsByNewsId(int news_id);
+    public News getNewsByNewsidAndLang(long news_id,int lang_id);
 
     /**
      * 新闻列表的新闻分页
@@ -45,6 +48,21 @@ public interface IAdminNewsDao {
      * @return
      */
     public Pager<News> selectNewsByArticleID(String incontent);
+    
+    
+    /**
+     * 查询3个语言版本
+     * @param new_id
+     * @return
+     */
+    public List<News> listNewsByNewsid(long news_id);
+    
+    /**
+     * 查询所有
+     * @param new_id
+     * @return
+     */
+    public List<News> listNews();
 
     /**
      * 添加新闻
@@ -59,29 +77,43 @@ public interface IAdminNewsDao {
      * @return
      */
     public News updateNews(News news);
+    
+    /**
+     * 更新分类
+     * @param news
+     * @return
+     */
+    void updateNewsByClassify(long news_id,int classify_id);
 
     /**
      * 删除新闻信息
      * @param id
      * @return
      */
-    public boolean deleteNews(int id);
+    public boolean deleteNewsById(int id);
+    
+    /**
+     * 删除新闻信息
+     * @param new_id
+     * @return
+     */
+    public boolean deleteNewsByNewid(long new_id);
     /**
      * 分页查询内链接
      * @return
      */
-    public Pager<NewsInnerChain> selectInnerChainList();
+    public Pager<NewsInLink> selectInnerChainList();
     /**
      * 查询所有内链接
      * @return
      */
-    List<NewsInnerChain> selectAllInnerChainList();
+    List<NewsInLink> selectAllInnerChainList();
     /**
      * 添加内链接
      * @param newsInnerChain
      * @return
      */
-    boolean addInnerChain(NewsInnerChain newsInnerChain);
+    boolean addInnerChain(NewsInLink newsInnerChain);
     /**
      * 删除内链接
      * @param id

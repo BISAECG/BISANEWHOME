@@ -8,7 +8,7 @@ $(document).ready(function () {
         //普通图片上传
         var uploadInst = upload.render({
             elem: '#test1'
-            , url: 'admin/news/newsPictureUpload'
+            , url: 'admin/common/uppic'
             , before: function (obj) {
                 //预读本地文件示例，不支持ie8
                 obj.preview(function (index, file, result) {

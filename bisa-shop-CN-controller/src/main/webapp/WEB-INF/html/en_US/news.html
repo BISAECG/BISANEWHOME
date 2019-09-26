@@ -45,24 +45,24 @@
     <div class="container-full pos-r center-block">
         <img class="img-responsive center-block" src="../resources/img/news/HK_HowToShop/banner.png" >
         <p class="f-40" style="color: #FFFFFF;position: absolute;left:45%;top: 15%; ">
-            健康資訊
+            Health information
         </p>
         <p style="position: absolute;left:40%;top: 34%;">
-            <span class="f-30 pr-40"  style="color: #FFFFFF;">關注健康</span>
-            <span class="f-30" style="background: #3592D0;color: #FFFFFF;">關注碧沙健康</span>
+            <span class="f-30 pr-40"  style="color: #FFFFFF;">ECG</span>
+            <span class="f-30" style="background: #3592D0;color: #FFFFFF;">Follow Bisahealth</span>
         </p>
-        <p class="f-30"  style="color: #FFFFFF;position: absolute;left:42%;top: 50%;">給家人一個悉心的呵護</p>
+        <p class="f-30"  style="color: #FFFFFF;position: absolute;left:42%;top: 50%;">Give your family a heart-to-heart care</p>
         <img style="position: absolute;left:48%;top: 75%;"
              src="../resources/img/news/HK_HowToShop/downlogo.png">
     </div>
     <div class="container pt-20 pb-20">
         <div class="row">
             <div class="col-md-6 seach">
-                <span style="color: #010101;">關鍵詞:</span>
-                <span><a>心電儀</a></span>
-                <span><a>碧沙</a></span>
-                <span><a>心肌梗塞</a></span>
-                <span><a>心電圖</a></span>
+                <span style="color: #010101;">Health information:</span>
+                <span><a>PECG</a></span>
+                <span><a>Bisa</a></span>
+                <span><a>Myocardial infarction</a></span>
+                <span><a>ECG</a></span>
             </div>
             <div class="col-md-3 col-md-offset-3 seach">
                 <form class="pos-r">
@@ -74,7 +74,7 @@
                     <input id="seach" type="button"
                            style="width:55px;height:36px;background:rgba(43,132,198,1);color: #fff;border: 0;position: absolute;left:
                            180px;top: 0%;"
-                           value="搜索">
+                           value="seach">
                 </form>
             </div>
         </div>
@@ -84,7 +84,7 @@
             <div class="row">
                 <div class="col-md-2 pt-10 pb-10">
                 <span style="font-size: 18px;font-weight: bold;">
-                    新聞資訊
+                    News and information
                 </span>
                 </div>
                 <div class="col-md-1 col-md-offset-9">
@@ -136,8 +136,9 @@
                                 '<p class="f-12 col-888 mtb-10-0-ipad h-40 overflow-h line-h-20 text-line-2-1-ipad cur-p hovecol-999 news-describe">'+item.news_describe+''+
                                 '</p>'+
                                 '<p class="f-12 col-888 mtb-10-0-ipad line-h-20 text-line-2-1-ipad cur-d">'+
-                                '<span>日期:</span><span class="col-888 news-time">'+time+'</span>'+
-                                '<span  style="margin-left: 40px;">閱讀量:</span><span class="col-888 news-quantity">'+item.read_quantity+'</span>'+
+                                '<span>time:</span><span class="col-888 news-time">'+time+'</span>'+
+                                '<span  style="margin-left: 40px;">read:</span><span class="col-888 news-quantity">'+item
+                                        .read_quantity+'</span>'+
                                 '</p>'+
                                 '</div>'+
                                 '</div>'
@@ -191,7 +192,7 @@
                                     '<li class="news-div cur-p">'+
                                     '<div class="row">'+
                                     '<div class="col-md-12 pt-15 pb-20" style="border-bottom: 1px solid #E5E5E4;padding-left: 0px;">'+
-                                    '<input type="hidden" class="news-id" value="'+item.id+'"/>'+
+                                    '<input type="hidden" class="id" value="'+item.id+'"/>'+
                                     '<div class="col-md-2" style="padding:0px;">'+
                                     '<span class="col-888" style="background:linear-gradient(0deg,rgba(44,106,206,1) 0%,rgba(47,232,230,1) 100%);box-shadow:0px 1px 5px 0px rgba(53,143,238,1);color: #fff;">'+release_time+'</span>'+
                                     '</div>'+
@@ -199,7 +200,7 @@
                                     '<span class="col-888" style="color: #101010;">'+item.news_title+'</span>'+
                                     '</div>'+
                                     '<div class="col-md-1">'+
-                                    '<span class="cur-p pull-right">詳情></span>'+
+                                    '<span class="cur-p pull-right">more></span>'+
                                     '</div>'+
                                     '</div>'+
                                     '</div>'+

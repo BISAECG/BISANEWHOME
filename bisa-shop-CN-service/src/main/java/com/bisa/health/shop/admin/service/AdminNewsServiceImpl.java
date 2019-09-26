@@ -5,7 +5,7 @@ import com.bisa.health.basic.entity.SystemContext;
 import com.bisa.health.shop.admin.dao.IAdminNewsDao;
 import com.bisa.health.shop.admin.dto.OrderListPageDto;
 import com.bisa.health.shop.model.News;
-import com.bisa.health.shop.model.NewsInnerChain;
+import com.bisa.health.shop.model.NewsInLink;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.CacheEvict;
@@ -28,9 +28,9 @@ public class AdminNewsServiceImpl implements IAdminNewsService {
     }
     @Override
     @Cacheable(key = "targetClass.name+methodName+#news_id")
-    public News getNewsByNewsId(int news_id) {
-        return iNewsDao.getNewsByNewsId(news_id);
-    }
+	public List<News> listNewsByNewsid(long news_id) {
+		return iNewsDao.listNewsByNewsid(news_id);
+	}
 
     @Override
     @CacheEvict(value = "NewsServiceImpl", allEntries = true)
@@ -47,8 +47,14 @@ public class AdminNewsServiceImpl implements IAdminNewsService {
 
     @Override
     @CacheEvict(value = "NewsServiceImpl", allEntries = true)
-    public boolean deleteNews(int id) {
-        return iNewsDao.deleteNews(id);
+    public boolean deleteNewsById(int id) {
+        return iNewsDao.deleteNewsById(id);
+    }
+    
+    @Override
+    @CacheEvict(value = "NewsServiceImpl", allEntries = true)
+    public boolean deleteNewsByNewid(long new_id) {
+        return iNewsDao.deleteNewsByNewid(new_id);
     }
 
     @Override
@@ -81,7 +87,7 @@ public class AdminNewsServiceImpl implements IAdminNewsService {
     }
 
     @Override
-    public OrderListPageDto<NewsInnerChain> selectInnerChainList(Integer page, Integer limit){
+    public OrderListPageDto<NewsInLink> selectInnerChainList(Integer page, Integer limit){
         // * @param incontent input输入的内容 和下面对应
         // * @param searchabout option选择 1 文章标题 2 文章ID
         SystemContext.setPageOffset((page - 1) * limit);
@@ -90,10 +96,10 @@ public class AdminNewsServiceImpl implements IAdminNewsService {
         SystemContext.setOrder("desc");
 
         // 高级查询
-        Pager<NewsInnerChain> pagerOrder = iNewsDao.selectInnerChainList();;
+        Pager<NewsInLink> pagerOrder = iNewsDao.selectInnerChainList();;
 
         // 封装layui要的数据结构
-        OrderListPageDto<NewsInnerChain> listPageDto = new OrderListPageDto<>();
+        OrderListPageDto<NewsInLink> listPageDto = new OrderListPageDto<>();
         listPageDto.setCode(0);
         listPageDto.setMsg("''");
         listPageDto.setCount(pagerOrder.getTotal());
@@ -102,7 +108,7 @@ public class AdminNewsServiceImpl implements IAdminNewsService {
     }
 
     @Override
-    public List<NewsInnerChain> selectAllInnerChainList() {
+    public List<NewsInLink> selectAllInnerChainList() {
         return iNewsDao.selectAllInnerChainList();
     }
 
@@ -112,8 +118,20 @@ public class AdminNewsServiceImpl implements IAdminNewsService {
     }
 
     @Override
-    public boolean addInnerChain(NewsInnerChain newsInnerChain) {
-
+    public boolean addInnerChain(NewsInLink newsInnerChain) {
         return iNewsDao.addInnerChain(newsInnerChain);
     }
+	@Override
+	public News getNewsByNewsidAndLang(long news_id, int lang_id) {
+		return iNewsDao.getNewsByNewsidAndLang(news_id, lang_id);
+	}
+	@Override
+	public void updateNewsByClassify(long news_id, int classify_id) {
+		iNewsDao.updateNewsByClassify(news_id, classify_id);
+	}
+	@Override
+	public List<News> listNews() {
+		return iNewsDao.listNews();
+	}
+	
 }

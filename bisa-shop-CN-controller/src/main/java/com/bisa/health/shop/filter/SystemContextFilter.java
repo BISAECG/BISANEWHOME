@@ -12,6 +12,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.web.filter.PathMatchingFilter;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
@@ -35,19 +36,33 @@ public class SystemContextFilter implements Filter  {
 			FilterChain chain) throws IOException, ServletException {
 		
 		HttpSession session = ((HttpServletRequest) req).getSession();
-		Locale mlocale=(Locale) session.getAttribute(SessionLocaleResolver.LOCALE_SESSION_ATTRIBUTE_NAME);
-		
-		if(mlocale==null){
-			String lang=req.getLocale().toString();
-	    	if(lang.equals("zh_CN")){
+		Locale mlocale=null;
+		if(!StringUtils.isEmpty(req.getParameter("lang"))){
+			String language=req.getParameter("lang");
+        	if(language.equals("zh_CN")){
 	    		mlocale = new Locale("zh", "CN"); 
-	    	}else if(lang.equals("zh_TW")||lang.equals("zh_HK")){
+	    	}else if(language.equals("zh_TW")||language.equals("zh_HK")){
 	    		mlocale = new Locale("zh", "HK"); 
 	    	}else{
 	    		mlocale = new Locale("en", "US"); 
 	    	}
-	    	session.setAttribute(SessionLocaleResolver.LOCALE_SESSION_ATTRIBUTE_NAME,mlocale);
-		}
+        	session.setAttribute(SessionLocaleResolver.LOCALE_SESSION_ATTRIBUTE_NAME,mlocale);
+    	}else{
+    		mlocale=(Locale) session.getAttribute(SessionLocaleResolver.LOCALE_SESSION_ATTRIBUTE_NAME);
+    		if(mlocale==null){
+    			String lang=req.getLocale().toString();
+    	    	if(lang.equals("zh_CN")){
+    	    		mlocale = new Locale("zh", "CN"); 
+    	    	}else if(lang.equals("zh_TW")||lang.equals("zh_HK")){
+    	    		mlocale = new Locale("zh", "HK"); 
+    	    	}else{
+    	    		mlocale = new Locale("en", "US"); 
+    	    	}
+    	    	session.setAttribute(SessionLocaleResolver.LOCALE_SESSION_ATTRIBUTE_NAME,mlocale);
+    		}
+    	}
+		
+		
 		
 		Integer offset = 0;
 		try {

@@ -7,23 +7,35 @@
     <!--[if lt IE 9支持html5代碼]-->
     <script src='https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js'></script>
     <script src='https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js'></script>
+    <script type="text/javascript">
+	    $.ajax({
+	        url: '/isLogin',
+	        type: "GET",
+	        async: false,
+	        success: function (data) {
+	          if(data.flag==true){
+	        	  $('#username').text(data.obj.username);
+	          }
+	        }
+	    });
+    </script>
     <nav class='navbar' style='background: #F1F1F1;'>
         <div class='container'>
             <div class='row'>
                 <div class='col-md-6'>
                     <span style='color: #b0b0b0;'>
-                    Hello, welcome to Bisa health!
+           <a id="username"></a>&nbsp;Hello, welcome to Bisa health!
                     </span>
                     <span class='sep'>|</span>
                     <span style='color: #b0b0b0;'>
                         語言:</span>
-                    <a id='lang-hk' href='?lang=zh_HK'>
+                    <a id='lang-hk' href='/index?lang=zh_HK'>
                         繁體
                     </a> |
-                    <a id='lang-cn' href='?lang=zh_CN'>
+                    <a id='lang-cn' href='/index?lang=zh_CN'>
                         簡體
                     </a> |
-                    <a id='lang-us' href='?lang=en_US'>
+                    <a id='lang-us' href='/index?lang=en_US'>
                         英文
                     </a>
                     <span><img src='../resources/img/HK_About/hk.png'></span>
@@ -87,7 +99,7 @@
 					 
 					 
 							 <li class='col-309DE2 pull-left ml-20'>
-		                        <a class='navlist' href='newsIndex.html'>
+		                        <a class='navlist' href='news.html'>
 		                        	新闻资讯
 		                        </a>
                        		</li>

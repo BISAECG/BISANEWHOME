@@ -235,44 +235,6 @@ public class AdminIndexController {
         return list;
     }
 
-    /**
-     * 上传首页图片 (单张上传)
-     * @param file                 接收图片的对象
-     * @param internationalization 国际化语言
-     * @param position             图片的位置
-     */
-    @RequestMapping(value = "/uploadIndexImg", method = RequestMethod.POST)
-    @ResponseBody
-    public JsonResult uploadIndexImg( MultipartFile file,Integer internationalization, Integer position) {
-
-        JsonResult jsonResult = null;
-
-        //后台判断一下这个值，前台判断不了
-        if (internationalization == null) {
-            return new JsonResult("300", false, "语言版本为null，不符合要求");
-        }
-
-        String filename = UUID.randomUUID().toString() + ".jpg";
-        try {
-            // 上传图片到服务器返回一个图片的地址
-            String url = fastDFSClient.uploadFile(filename,file.getBytes());
-            //String url = FastDFSKit.getInstance().uploadPicToFastDFS(file.getBytes(), filename);
-            // 上传图片的时候,根据语言和位置 去判断下远程有没有图片
-            GoodsImg goodImg = goodsImgService.getImgByPosition(String.valueOf(IndexImgEnum.index_img.getValue()), position, internationalization);
-
-            if (goodImg == null) {
-                goodsImgService.addGoodsImg(new GoodsImg(null, String.valueOf(IndexImgEnum.index_img.getValue()), url, position, internationalization));
-            } else {
-                goodsImgService.updateGoodsImg(url, String.valueOf(IndexImgEnum.index_img.getValue()), position, internationalization);
-               // FastDFSKit.getInstance().deleteFromFastDfs(goodImg.getImgUrl());
-                fastDFSClient.delete_file(goodImg.getImgUrl());
-            }
-            jsonResult = new JsonResult("200", true);
-        } catch (Exception e) {
-            e.printStackTrace();
-            jsonResult = new JsonResult("500", false, "添加图片错误");
-        }
-        return jsonResult;
-    }
+   
 
 }

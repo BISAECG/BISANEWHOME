@@ -1,10 +1,35 @@
 $(document).ready(function () {
     /*layui方面js*/
-    layui.use(['form', 'table', 'element'], function () {
+    layui.use(['form', 'table', 'element','upload'], function () {
         var form = layui.form,
             layer = layui.layer,
             element = layui.element,
-            table = layui.table;
+            table = layui.table,
+        	upload = layui.upload;
+        
+        
+
+        //普通图片上传
+        var uploadInst = upload.render({
+            elem: '#test1'
+            , url: 'admin/common/uppic'
+            ,done: function (data) {
+                //如果上传失败
+                if (data.flag == false) {
+                    return layer.msg('上传失败');
+                }
+                //上传成功
+                if (data.flag == true) {
+                	$('#photo_address').val(data.msg);
+                    layer.msg('图片上传成功!', {icon: 6, time: 1000}, function () {
+                    });
+                }
+            }
+            , error: function () {
+                layer.msg('图片上传失败！', {icon: 5, time: 1000}, function () {
+                });
+            }
+        });
 
     /*定义ckeditor*/
     var editor = CKEDITOR.replace('newseditor', {
@@ -61,11 +86,12 @@ $(document).ready(function () {
                     id: data.field.id,
                     img_url: data.field.photo_address,
                     author: data.field.author,
+                    lang_id: data.field.lang_id,
                     news_title: data.field.main_title,
                     news_subhead: data.field.subheading,
                     news_content: data.field.newseditor,
                     read_quantity: data.field.readings,
-                    news_keyWord: data.field.keyWord,
+                    html_keyWord: data.field.html_keyWord,
                     html_description:data.field.html_description,
                     html_title:data.field.html_title,
                     news_describe: data.field.describe,

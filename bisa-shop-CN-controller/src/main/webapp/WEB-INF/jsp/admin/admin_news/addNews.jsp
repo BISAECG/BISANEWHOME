@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ page import="com.bisa.health.shop.enumerate.InternationalizationEnum"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%
 	String path = request.getContextPath();
@@ -25,7 +26,6 @@
     <meta name="renderer" content="webkit">
     <title>碧沙康健_新闻内容</title>
     <!-- base -->
-    <link href="resources/ctrl/Font-Awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="resources/ctrl/layui/css/layui.css" rel="stylesheet">
     <link href="resources/css/comm/base.css" rel="stylesheet">
     <link href="resources/css/admin/HK_Admin.css" rel="stylesheet">
@@ -43,11 +43,20 @@
         <div class="layui-body">
             <div style="padding: 30px 50px;">
                 <p class="f-18 pt-15 pb-15 col-8d969d">
-                    填写新闻基本资料：默认添加繁体新闻
+                    	填写新闻基本资料：
                 </p>
                 <form class="layui-form" action="">
                 	<input type="hidden" name="id" value="">
                     <div class="clear pd-15 bg-fafafa bor bor-col-e8ebf2">
+                    	<div class="layui-form-item">
+						    <label class="layui-form-label">语言:</label>
+						    <div class="layui-input-block">
+						      <input type="radio" name="lang_id" value="${InternationalizationEnum.zh_CN.getValue()}" title="简体" >
+						      <input type="radio" name="lang_id" value="${InternationalizationEnum.zh_HK.getValue()}" title="繁体" checked>
+						      <input type="radio" name="lang_id" value="${InternationalizationEnum.en_US.getValue()}" title="英文" >
+						    </div>
+						  </div>
+                    	
                         <div class="layui-form-item">
                             <label class="layui-form-label pt-10 pb-10 pl-0 pr-0 col-black">新闻标题：</label>
                             <div class="layui-input-block">
@@ -60,6 +69,7 @@
                                 <input type="text" name="subheading" id="subheading" lay-verify="required" placeholder="请输入新闻副标题" autocomplete="off" class="layui-input">
                             </div>
                         </div>
+                         
                         <div class="layui-form-item">
                             <label class="layui-form-label pt-10 pb-10 pl-0 pr-0 col-black">作者：</label>
                             <div class="layui-input-block">
@@ -74,14 +84,22 @@
                         </div>
                         <div class="layui-form-item">
                             <label class="layui-form-label pt-10 pb-10 pl-0 pr-0 col-black">主图地址：</label>
-                            <div class="layui-input-block">
-                                <input type="text" name="photo_address" id="photo_address" lay-verify="required" placeholder="请输入新闻主图地址" autocomplete="off" class="layui-input">
+                            <div class="layui-inline layui-col-xs6 pl-30">
+                            		<input type="text" name="photo_address" id="photo_address" lay-verify="required" placeholder="请输入新闻主图地址" autocomplete="off" class="layui-input">
                             </div>
+                            <div class="layui-inline">
+                            	<div class="layui-input-inline">
+                            		<div class="layui-upload">
+								  		<button type="button" class="layui-btn" id="test1">上传图片</button>
+									</div> 
+      							</div>
+                            </div>
+                             
                         </div>
                         <div class="layui-form-item">
                             <label class="layui-form-label pt-10 pb-10 pl-0 pr-0 col-black">关键词：</label>
                             <div class="layui-input-block">
-                                <input type="text" name="keyWord" id="keyWord" lay-verify="required" placeholder="请输入新闻meat的关键词"
+                                <input type="text" name="html_keyWord" id="keyWord" lay-verify="required" placeholder="请输入新闻meat的关键词"
                                        autocomplete="off"
                                        class="layui-input">
                             </div>

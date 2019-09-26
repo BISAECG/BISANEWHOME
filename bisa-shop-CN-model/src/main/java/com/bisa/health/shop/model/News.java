@@ -1,6 +1,8 @@
 package com.bisa.health.shop.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -13,19 +15,37 @@ public class News  implements Serializable{
 
     private static final long serialVersionUID = 8489060357520626852L;
     private int id;
-    private int news_id; //新闻编码
+    private long news_id; //新闻编码
+    
+	@NotNull(message="news_title cannot be empty")
     private String news_title;  //新闻标题
+	
+	@NotNull(message="news_subhead cannot be empty")
     private String news_subhead;    //副标题
+	
     private int read_quantity;    //阅读量
+	
+	@NotNull(message="news_content cannot be empty")
     private String news_content;//新闻内容
+	
     private String img_url;//新闻封面图
     private Date release_time; //发布日期
     private String author;  //作者
+    
     private int news_classify_id;//新闻类型
+	
+	@NotNull(message="html_keyWord cannot be empty")
     private String html_keyWord;//关键词
+	
+	@NotNull(message="news_describe cannot be empty")
     private String news_describe;//新闻描述
+	
     private int news_roofPlacement;//新闻置顶，0不置顶，1置顶
+    
+	@NotNull(message="html_description cannot be empty")
     private String html_description;//网站描述
+	
+	@NotNull(message="html_title cannot be empty")
     private String html_title;//网站标题
     private int lang_id;
     @Id
@@ -94,11 +114,11 @@ public class News  implements Serializable{
         this.news_subhead = news_subhead;
     }
     @Column(name = "news_id")
-    public int getNews_id() {
+    public long getNews_id() {
         return news_id;
     }
 
-    public void setNews_id(int news_id) {
+    public void setNews_id(long news_id) {
         this.news_id = news_id;
     }
     @Column(name = "news_classify_id")
@@ -192,6 +212,23 @@ public class News  implements Serializable{
 				+ news_classify_id + ", html_keyWord=" + html_keyWord + ", news_describe=" + news_describe
 				+ ", news_roofPlacement=" + news_roofPlacement + ", html_description=" + html_description
 				+ ", html_title=" + html_title + ", lang_id=" + lang_id + "]";
+	}
+	
+	public void toNews(News news){
+		this.setAuthor(news.getAuthor());
+		this.setHtml_description(news.getHtml_description());
+		this.setHtml_keyWord(news.getHtml_keyWord());
+		this.setHtml_title(news.getHtml_title());
+		this.setImg_url(news.getImg_url());
+		this.setLang_id(news.getLang_id());
+		this.setNews_classify_id(news.getNews_classify_id());
+		this.setNews_content(news.getNews_content());
+		this.setNews_describe(news.getNews_describe());
+		this.setNews_id(news.getNews_id());
+		this.setNews_roofPlacement(news.getNews_roofPlacement());
+		this.setNews_subhead(news.getNews_subhead());
+		this.setNews_title(news.getHtml_title());
+		this.setRead_quantity(news.getRead_quantity());
 	}
 
    

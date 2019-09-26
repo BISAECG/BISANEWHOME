@@ -1,5 +1,6 @@
 package com.bisa.health.shop.admin.controller;
 
+import com.bisa.fastdfs.FastDFSClient;
 import com.bisa.health.client.entity.User;
 import com.bisa.health.shiro.web.bind.CurrentUser;
 import com.bisa.health.shop.admin.dto.OrderListPageDto;
@@ -21,10 +22,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.UUID;
 
 /**
  * 评价管理
@@ -44,6 +47,8 @@ public class AdminCommentController {
     private IAdminGuestBookService guestBookService;
     @Autowired
     private IAdminGuestBookRemarkService guestBookRemarkService;
+    
+    
 
     /**
      * 进去 bisa  评价列表 页面
@@ -233,4 +238,8 @@ public class AdminCommentController {
         Goods goods = goodsService.selectGoodsByGoodsNumber(goodsNumberId);
         return goods;
     }
+    
+    
+   
+    
 }
