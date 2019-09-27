@@ -32,23 +32,22 @@
     <div class="row">
         <div class="col-md-12" style="background: url('../resources/img/download/banner.png');height: 889px;padding-top: 100px;">
             <div class="col-md-offset-3 pull-left">
-                <img class="img-responsive center-block" src="../resources/img/download/banner-left.png" alt="碧沙健康APP下載">
+                <img class="img-responsive center-block" src="../resources/img/download/banner-left.png" alt="碧沙健康APP下载">
             </div>
             <div class=" pull-left" style="margin-left: 64px;">
                 <p class="download-title"> 碧沙康健APP</p>
-                <p class="download-descrip"> 讓你足不出戶測心電</p>
+                <p class="download-descrip"> 让你足不出户测心电</p>
                 <p style="font-size:20px;color:rgba(254,254,254,1);">Keep you indoors for ECG measurements</p>
                 <img width="212" src="../resources/img/download/banner-right.png">
                 <p class="pt-15">
                 <div class="row">
                     <div class="download-ios  pull-left text-center" style=" width:200px;height:35px;">
-                        <span><i class="fa fa-apple" aria-hidden="true"></i>ios版下載</span>
+                        <span><i class="fa fa-apple" aria-hidden="true" style="margin: 0 10PX; "></i>ios版下载</span>
                     </div>
                     <div class="download-android pull-left col-md-offset-1 text-center" style=" width:200px;height:35px;">
-                        <span><i class="fa fa-android" aria-hidden="true"></i>android版下載</span>
+                        <span><i class="fa fa-android" aria-hidden="true" style="margin: 0 10PX; "></i>android版下载</span>
                     </div>
                 </div>
-
                 </p>
             </div>
         </div>

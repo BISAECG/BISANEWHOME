@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" href="Images/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon" />
+    <link rel="bookmark" href="Images/favicon.ico" type="image/x-icon" />
+    <base href="<%=basePath%>">
+    <meta http-equiv="Content-Type" content="text/html;" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <!-- necessary -->
+    <meta name="keywords" content="国际订购">
+    <meta name="description" content="国际订购">
+    <!-- description -->
+    <meta name="renderer" content="webkit">
+    <title>国际订购</title>
+    <!-- base -->
+    <script src="../resources/js/comm/jquery.min.js"></script>
+    <style>
+        .spantitle{
+            color:rgba(153,153,153,1);
+            font-size:20px;
+            line-height:40px;
+            font-weight: 400;
+        }
+        .spanprice{
+            margin-left: 20px;
+            color:rgba(207,21,24,1);
+            line-height:40px;
+            font-size:28px;
+        }
+    </style>
+</head>
+
+<body>
+<div id="header"></div>
+<script>
+    $("#header").load("header.html");
+</script>
+
+
+<div class="con">
+    <div class="container" style="background:rgba(255,255,255,1);box-shadow:0px 3px 48px 9px rgba(239,239,239,1);">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-1" style="margin-top: 28px;margin-bottom: 41px;">
+                <img class="img-responsive" src="../resources/img/shop/chanpin.png">
+            </div>
+            <div class="col-md-6 col-md-offset-1" style="margin-top: 41px;">
+                <p style="font-size:24px;font-weight:400;color:rgba(51,51,51,1);">碧沙家用医用动态心电监测仪</p>
+                <p>
+                    <span class="spantitle">价格:</span>
+                    <span class="spanprice">¥ 1280</span>
+                </p>
+                <p>
+                <div class="goods_num clearfix">
+                    <div class="num_name fl spantitle">数 量：</div>
+                    <div class="num_add fl">
+                        <a href="javascript:;" class="minus fr">-</a>
+                        <input type="text" name="num" class="num_show fl" value="1">
+                        <a href="javascript:;" class="add fr">+</a>
+                    </div>
+                </div>
+
+                </p>
+                <p>
+                    <span class="spantitle">地区:</span>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" style="background:rgba(252,223,227,1);"> 香港
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 澳门
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 台湾
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option3"> 新加坡
+                    </label>
+                </p>
+                <p style="font-size:12px;color:rgba(208,18,17,1);">（因快递邮费问题其他地区请电话咨询我司销售人员或在下方留言）</p>
+                <form class="form-horizontal" >
+                    <div class="form-group" style="margin-bottom: 0px;">
+                        <label for="Address" class="col-sm-3 control-label spantitle" style="text-align: left;">详细地址:</label>
+                        <div class="col-sm-5" style="margin-top: 5px;">
+                            <input type="email" class="form-control" id="Address" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 0px;">
+                        <label for="name" class="col-sm-2 control-label spantitle" style="text-align: left;">姓名:</label>
+                        <div class="col-sm-5" style="margin-top: 5px;">
+                            <input type="password" class="form-control" id="name" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 0px;">
+                        <label for="phone" class="col-sm-2 control-label spantitle" style="text-align: left;">电话:</label>
+                        <div class="col-sm-5" style="margin-top: 5px;">
+                            <input type="password" class="form-control" id="phone" placeholder="">
+                        </div>
+                    </div>
+                </form>
+                    <span class="spantitle">邮费:</span>
+                    <span class="spanprice">¥ 999</span>
+                </p>
+                <p>
+                    <span class="spantitle">商品总价:</span>
+                    <span class="spanprice total" id="totalPrice"><em id="price">1280</em>元</span>
+                </p>
+                <button style="width:170px;height:34px;background:rgba(207,21,24,1);border-radius:5px;color: #fff;border: 0;">Submit
+                    Order</button>
+                <button style="width:170px;height:34px;background:rgba(91,209,161,1);border-radius:5px;color: #fff;border: 0;">Consult now</button>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<div id="footer"></div>
+<script>
+    $("#footer").load("footer.html");
+</script>
+
+</body>
+<script>
+    //根据选择的数量计算总价，并显示出来
+    $(function () {
+        //加号
+        var price1 = 1280;
+        var num = parseInt($('input[name="num"]').attr('value'));
+        $('.add').click(function(){
+            num++;
+            $('input[name="num"]').attr('text',num);
+            var total = num * 1280;
+            $('#price').html(total.toFixed(2));
+        });
+        //减号
+        $('.minus').click(function () {
+            if(num>1){
+                num--;
+                $('input[name="num"]').attr('value',num);
+                console.log(num)
+                var total = num * 1280;
+                $('#price').text(total.toFixed(2));
+            }
+
+
+        });
+    });
+</script>
+</html>

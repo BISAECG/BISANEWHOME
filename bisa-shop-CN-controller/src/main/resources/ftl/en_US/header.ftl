@@ -7,36 +7,24 @@
     <!--[if lt IE 9支持html5代碼]-->
     <script src='https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js'></script>
     <script src='https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js'></script>
-    <script type="text/javascript">
-	    $.ajax({
-	        url: '/isLogin',
-	        type: "GET",
-	        async: false,
-	        success: function (data) {
-	          if(data.flag==true){
-	        	  $('#username').text(data.obj.username);
-	          }
-	        }
-	    });
-    </script>
     <nav class='navbar' style='background: #F1F1F1;'>
         <div class='container'>
             <div class='row'>
                 <div class='col-md-6'>
                     <span style='color: #b0b0b0;'>
-           <a id="username"></a>&nbsp;Hello, welcome to Bisa health!
+                    Hello, welcome to Bisa health!
                     </span>
                     <span class='sep'>|</span>
                     <span style='color: #b0b0b0;'>
-                        語言:</span>
-                    <a id='lang-hk' href='/index?lang=zh_HK'>
-                        繁體
+                        Language:</span>
+                    <a id='lang-hk' href='?lang=zh_HK'>
+                        Traditional
                     </a> |
-                    <a id='lang-cn' href='/index?lang=zh_CN'>
-                        簡體
+                    <a id='lang-cn' href='?lang=zh_CN'>
+                        Simplified
                     </a> |
-                    <a id='lang-us' href='/index?lang=en_US'>
-                        英文
+                    <a id='lang-us' href='?lang=en_US'>
+                        English
                     </a>
                     <span><img src='../resources/img/HK_About/hk.png'></span>
                 </div>
@@ -78,7 +66,7 @@
                 <span class='inline-block pull-left' style='height:78px;border-left: 2px solid #F1F1F1;'></span>
                 <div class='pull-left  text-center' style='margin: 0 20px;'>
                     <img style='margin-bottom: 7px;' src='../resources/img/index/logo4.png' alt="Bisha Kangjian Health Hotline">
-                    <p style='font-size: 12px;'>CFDA</p>
+                    <p style='font-size: 12px;'>Health Hotline</p>
                 <#--公司地址-->
                     <p class='phone' style='font-size: 16px;font-weight: bold;'>${company_phone}</p>
                 </div>
@@ -130,16 +118,16 @@
                     <li class='bar-sortS'>
                         <a href='Instructions' class='bar-link pos-r'>
                             <img id='bar-sort1' src='../resources/img/index/Sidebar1.png' alt="Download app">
-                            <span class='pos-a' style='top: 64%;left: 10%;color: #fff;' >
-                                Download app
+                            <span class='pos-a' style='top: 64%;left: 5%;color: #fff;' >
+                                Download
                             </span>
                         </a>
                     </li>
                     <li class='bar-sort' >
                         <a href='#;' title='Message board is still under construction' styele='cursor:not-allowed;' class='bar-link pos-r'>
-                            <img id='bar-sort2' src='../resources/img/index/Sidebar2.png'  alt="message board" '>
-                            <span class='pos-a' style='top: 56%;left: 20%;color: #fff;'>
-                                message board
+                            <img id='bar-sort2' src='../resources/img/index/Sidebar2.png'  alt="message board">
+                            <span class='pos-a' style='top: 56%;left: 25%;color: #fff;'>
+                                board
                             </span>
                         </a>
                     </li>
@@ -147,8 +135,8 @@
                         <a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=3299503761&site=qq&menu=yes' class='pos-r'>
                             <img id='bar-sort4' border='0' src='../resources/img/index/Sidebar4.png'  alt="QQ Service"
                                  title='Click here to send me a message'/>
-                            <span class='pos-a' style='top: 210%;left: 10%;color: #fff;'>
-                                QQ Service
+                            <span class='pos-a' style='top: 225%;left: 35%;color: #fff;'>
+                                QQ
                             </span>
                         </a>
                     </li>
@@ -156,7 +144,7 @@
             </div>
             <a class='bar-totop bar-sort J_barToTop J_barToTopL  pos-r' href='javascript:;'>
                 <img class='original-img' src='../resources/img/index/Sidebar5.png'  alt="Top">
-                <span class='pos-a' style='top: 90%;left: 20%;color: #fff;'>
+                <span class='pos-a' style='top: 90%;left: 32%;color: #fff;'>
                     Top
                 </span>
             </a>

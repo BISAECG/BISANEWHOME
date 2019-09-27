@@ -18,7 +18,7 @@ header,footer,section,aside,details,menu,article,section,nav,address,hgroup,figu
 address,caption,cite,code,dfn,em,th,var,i{font-style:normal;font-weight:400}
 input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit}
 input,button{overflow: visible;vertical-align:middle;outline-width:0}
-input[type="submit"],input[type="reset"],input[type="button"],input[type="text"],input[type="password"]{-webkit-appearance:none;outline-width:0}
+/*input[type="submit"],input[type="reset"],input[type="button"],input[type="text"],input[type="password"]{-webkit-appearance:none;outline-width:0}*/
 body,th,td,button,input,select,textarea{font-family:"Microsoft Yahei","Hiragino Sans GB","Helvetica Neue",Helvetica,tahoma,arial,"WenQuanYi Micro Hei",Verdana,sans-serif,"\5B8B\4F53";font-size:12px;color: #333;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing:grayscale}
 legend small{font-size:15px;color:#999}
 svg:not(:root) {overflow: hidden}

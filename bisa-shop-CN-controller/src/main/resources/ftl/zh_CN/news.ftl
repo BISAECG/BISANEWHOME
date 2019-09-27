@@ -150,6 +150,7 @@
         //点击图片跳转
         $(".main_div").on("click", ".new-div", function () {
             var id = $(this).find(".zd-id").val();
+
             window.open('/news/body?id='+id,'_blank')
         });
         function getMyDate(data) {
@@ -214,7 +215,7 @@
 
         //点击图片跳转
         $(".pt-div").on("click", ".news-div", function () {
-            var news_id = $(this).find(".id").val();
+            var id = $(this).find(".id").val();
             window.open('/news/body?id='+id,'_blank')
         });
         $('#seach').click(function(){

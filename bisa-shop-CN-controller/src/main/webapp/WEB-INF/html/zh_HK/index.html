@@ -24,7 +24,6 @@
     <div class="container-fluid">
         <div class="row ">
             <img  class="img-responsive center-block" src="../resources/img/solution/banner6.png" alt="碧沙心電儀合作夥伴">
-            <!--<img class="img-responsive center-block" src="/health-shop/../resources/img/index/banner6.png" alt="碧沙心電儀合作夥伴">-->
         </div>
     </div>
     <p class="title-p">爲什麽選擇悉心動態心電記錄儀?</p>
@@ -49,33 +48,33 @@
             <img src="../resources/img/index/banner7-6.png" width="18%" alt="專科認證醫師在線答疑" class="pos-a  ecg-6"
                  style="right: 25%;top: 85%;">
             <div class=" ecg-7"
-                 style="border:2px solid #02D1E3;font-size:14px;font-weight:400;color:rgba(255,255,255,1);width: 16%;position:
+                 style="border:2px solid #02D1E3;font-size:14px;font-weight:400;color:rgba(255,255,255,1);width: 17%;position:
                     absolute;left: 7%;top: 43%;display: none;">
                 當碧沙心電儀監測到用戶出現無脈搏情況，心電儀會自動持續發出“哔哔”的警鳴聲，並自動發出短信通知至3個緊急聯系人手機上，爲有效搶救贏得時間。
             </div>
             <div class=" ecg-8"
-                 style="border:2px solid #02D1E3;font-size:14px;font-weight:400;color:rgba(255,255,255,1);width: 16%;position:
-                    absolute;left: 2%;top: 65%;display: none;">
+                 style="border:2px solid #02D1E3;font-size:14px;font-weight:400;color:rgba(255,255,255,1);width: 17%;position:
+                    absolute;left: 2%;top: 64%;display: none;">
                 碧沙康健APP上備有緊急求救功能鍵，用戶發病時，可雙擊按鈕兩次，心電儀會持續發出“哔哔”的警鳴聲，並自動發出短信通知至3個緊急聯系人手機上，爲有效搶救贏得時間
             </div>
             <div class=" ecg-9"
-                 style="border:2px solid #02D1E3;font-size:14px;font-weight:400;color:rgba(255,255,255,1);width: 16%;position:
-                    absolute;left: 7%;top: 86%;display: none;">
+                 style="border:2px solid #02D1E3;font-size:14px;font-weight:400;color:rgba(255,255,255,1);width: 17%;position:
+                    absolute;left: 7%;top: 85%;display: none;">
                 碧沙心電儀上備有緊急求救按鈕，用戶發病時，可連按操作鍵兩次，心電儀會持續發出“哔哔”的警鳴聲，並自動發出短信通知至3個緊急聯系人手機上，爲有效搶救贏得時間
             </div>
             <div class=" ecg-10"
-                 style="border:2px solid #02D1E3;font-size:14px;font-weight:400;color:rgba(255,255,255,1);width: 16%;position:
-                    absolute;right: 8%;top: 44%;display: none;">
+                 style="border:2px solid #02D1E3;font-size:14px;font-weight:400;color:rgba(255,255,255,1);width: 17%;position:
+                    absolute;right: 8%;top: 43%;display: none;">
                 用戶查看心電監測報告後，可以在APP上點擊選擇“在線問診”服務，與碧沙康健合作的專科認證醫師會在服務時間內與用戶在線答疑。
             </div>
             <div class=" ecg-11"
-                 style="border:2px solid #02D1E3;font-size:14px;font-weight:400;color:rgba(255,255,255,1);width: 16%;position:
-                    absolute;right: 2%;top: 65%;display: none;">
+                 style="border:2px solid #02D1E3;font-size:14px;font-weight:400;color:rgba(255,255,255,1);width: 17%;position:
+                    absolute;right: 2%;top: 64%;display: none;">
                 用戶可每天使用15分鍾永久免費監測服務，監測結束後，碧沙智慧心電監測分析系統根據心電圖數據進行心率變異分析（HRV），形成AI智能監測報告。
             </div>
             <div class=" ecg-12"
-                 style="border:2px solid #02D1E3;font-size:14px;font-weight:400;color:rgba(255,255,255,1);width: 16%;position:
-                    absolute;right: 7%;top: 87%;display: none;">
+                 style="border:2px solid #02D1E3;font-size:14px;font-weight:400;color:rgba(255,255,255,1);width: 17%;position:
+                    absolute;right: 7%;top: 86%;display: none;">
                 用戶查看心電監測報告後，可以在APP上點擊選擇“電話問診”服務，在服務時間內與專科認證醫師進行一對一電話問診，讓醫師進一步了解病情。
             </div>
         </div>
@@ -171,7 +170,7 @@
         <div class="row pos-r">
             <img  class="img-responsive center-block" src="../resources/img/index/banner8-cn.gif" alt="碧沙康健心電儀限時活動">
             <a class="text-center taobao">淘寶</a>
-            <a class="text-center jingdong">京東</a>
+            <a class="text-center jingdong" style="margin-left: 20PX;">京東</a>
         </div>
     </div>
 </div>
@@ -237,10 +236,10 @@
             }
             return num;
         }
-        //點擊圖片跳轉
+        //点击图片跳转
         $(".main_div").on("click", ".new-div", function () {
-            var news_id = $(this).find(".zd-id").val();
-            window.location.href = "/web/call/newsContent?news_id=" + news_id;
+            var id = $(this).find(".zd-id").val();
+            window.open('/news/body?id='+id,'_blank')
         });
         function ecg() {
             $(".ecg-1").hover(function () {

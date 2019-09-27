@@ -48,8 +48,7 @@
                             <p>
                                 <span class="t-nonehove" style="color: #FFF;">購物指南</span>
                             </p>
-                            <li class="pt-20" style="border-top: 2px solid #323137;box-shadow:0px 1px 0px 0px rgba(40,39,45,1);"><a
-                                    class="col-8c8c8c t-nonehove hovecol-309DE2 f-12" href="HowToShop.html">
+                            <li class="pt-20" style="border-top: 2px solid #323137;box-shadow:0px 1px 0px 0px rgba(40,39,45,1);"><a class="col-8c8c8c t-nonehove hovecol-309DE2 f-12" href="HowToShop_CN.html">
                                 發貨時效</a></li>
                             <li class="pt-10"><a class="col-8c8c8c t-nonehove hovecol-309DE2 f-12" href="HowToShop.html">
                                 售後政策</a></li>
@@ -114,12 +113,10 @@
                                 <span class="t-nonehove" style="color: #FFF;">使用說明</span>
                             </p>
                             <li class="pt-20" style="border-top: 2px solid #323137;box-shadow:0px 1px 0px 0px rgba(40,39,45,1);">
-                                <a class="col-8c8c8c t-nonehove hovecol-309DE2 f-12"
-                                   href="Instructions.html">
-                                    悉心心電儀App</a>
-                            </li>
+                                <a class="col-8c8c8c t-nonehove hovecol-309DE2 f-12" href="instructions.html">
+                                    悉心心電儀App</a></li>
                             <li class="pt-20">
-                                <a class="col-8c8c8c t-nonehove hovecol-309DE2 f-12"  href="newQA.html">
+                                <a class="col-8c8c8c t-nonehove hovecol-309DE2 f-12"  href="../../../webapp/WEB-INF/html/zh_CN/newQA.html">
                                     健康問答
                                 </a>
                             </li>

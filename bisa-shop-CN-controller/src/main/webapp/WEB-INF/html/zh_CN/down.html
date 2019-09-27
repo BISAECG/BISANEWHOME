@@ -42,10 +42,10 @@
                 <p class="pt-15">
                 <div class="row">
                     <div class="download-ios  pull-left text-center" style=" width:200px;height:35px;">
-                        <span><i class="fa fa-apple" aria-hidden="true"></i>ios版下载</span>
+                        <span><i class="fa fa-apple" aria-hidden="true" style="margin: 0 10PX; "></i>ios版下载</span>
                     </div>
                     <div class="download-android pull-left col-md-offset-1 text-center" style=" width:200px;height:35px;">
-                        <span><i class="fa fa-android" aria-hidden="true"></i>android版下载</span>
+                        <span><i class="fa fa-android" aria-hidden="true" style="margin: 0 10PX; "></i>android版下载</span>
                     </div>
                 </div>
                 </p>

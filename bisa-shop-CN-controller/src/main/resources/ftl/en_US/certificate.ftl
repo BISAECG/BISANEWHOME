@@ -33,7 +33,7 @@
 <div class="pos-r">
     <div class="container-full">
         <div class="row center-block" >
-            <img class="img-responsive center-block"  src="../resources/img/menuList/mListBgImg.png" alt="ECG product certificate">
+            <img class="img-responsive center-block"  src="../resources/img/menuList/mListBgImg-us.png" alt="ECG product certificate">
         </div>
     </div>
     <div class="container mt-40">

@@ -86,16 +86,18 @@
     <div class="row mb-40 pos-r">
         <img class="img-responsive center-block" src="../resources/img/solution/banner3.png" alt="碧沙心電儀四大優勢">
         <div
-                style="position: absolute;left: 12%;top: 54%;width:15%;font-size:14px;font-weight:400;color:rgba(255,255,255,1);text-shadow:0px 1px 1px rgba(8,76,75,1);">（碧沙心電儀使用簡單，無需導聯線，方便佩戴。除劇烈運動外，患者正常的日常活動不會影響心電監測。患者可自助使用或摘除心電儀，因此醫師可以根據患者制定長時段監測方案。）
+                style="position: absolute;left: 12%;top: 54%;width:15%;
+                font-size:0.8rem;font-weight:400;color:rgba(255,255,255,1);text-shadow:0px
+                 1px 1px rgba(8,76,75,1);">（碧沙心電儀使用簡單，無需導聯線，方便佩戴。除劇烈運動外，患者正常的日常活動不會影響心電監測。患者可自助使用或摘除心電儀，因此醫師可以根據患者制定長時段監測方案。）
         </div>
         <div
-                style="position: absolute;left: 32%;top: 54%;width:15%;font-size:14px;font-weight:400;color:rgba(255,255,255,1);text-shadow:0px 1px 1px rgba(8,76,75,1);">（傳統的12導聯Holter價格昂貴，單個Holter的價格約10~20萬，在存放和租借給患者使用過程中産生的設備損耗非常大。而碧沙心電儀價格實惠，大大減少醫院器材成本。）
+                style="position: absolute;left: 32%;top: 54%;width:15%;font-size:0.8rem;font-weight:400;color:rgba(255,255,255,1);text-shadow:0px 1px 1px rgba(8,76,75,1);">（傳統的12導聯Holter價格昂貴，單個Holter的價格約10~20萬，在存放和租借給患者使用過程中産生的設備損耗非常大。而碧沙心電儀價格實惠，大大減少醫院器材成本。）
         </div>
         <div
-                style="position: absolute;left: 52%;top: 54%;width:15%;font-size:14px;font-weight:400;color:rgba(255,255,255,1);text-shadow:0px 1px 1px rgba(8,76,75,1);">（利用碧沙智慧心電監測分析系統在雲端進行心電大數據處理並進行自動分析，無需人工分析，減少醫師大工作量勞動。即提高醫師工作效率，又提升診斷的准確性。）
+                style="position: absolute;left: 52%;top: 54%;width:15%;font-size:0.8rem;font-weight:400;color:rgba(255,255,255,1);text-shadow:0px 1px 1px rgba(8,76,75,1);">（利用碧沙智慧心電監測分析系統在雲端進行心電大數據處理並進行自動分析，無需人工分析，減少醫師大工作量勞動。即提高醫師工作效率，又提升診斷的准確性。）
         </div>
         <div
-                style="position: absolute;left: 72%;top: 54%;width:15%;font-size:14px;font-weight:400;color:rgba(255,255,255,1);text-shadow:0px 1px 1px rgba(8,76,75,1);">（碧沙康健爲醫療機構提供1年免費培訓服務，可進行3次上門技術個性培訓。培訓內容包括産品使用與保養、系統軟件使用與維護、專業電腦使用等相關培訓。）
+                style="position: absolute;left: 72%;top: 54%;width:15%;font-size:0.8rem;font-weight:400;color:rgba(255,255,255,1);text-shadow:0px 1px 1px rgba(8,76,75,1);">（碧沙康健爲醫療機構提供1年免費培訓服務，可進行3次上門技術個性培訓。培訓內容包括産品使用與保養、系統軟件使用與維護、專業電腦使用等相關培訓。）
         </div>
     </div>
     <p class="title-p">方案流程</p>
@@ -130,7 +132,10 @@
                 <p style="font-size:12px;font-weight:400;color:rgba(153,153,153,1);line-height:12px;">Five Bisa Electrocar Diographs</p>
                 <p style="width:34px;height:8px;background:rgba(132,132,132,1);"></p>
                 <p
-                        style="font-size:14px;font-weight:400;color:rgba(102,102,102,1);line-height:24px;padding-bottom: 10px;">碧沙心電儀是3導聯動態心電儀，使用簡便，一學就會。具有超長工作時間（一次充電可連續采集120小時ECG數據）和超大容量（可存儲878小時ECG數據）。産品已獲得醫療器械許可證、CFDA注冊證、FCC認證、FCC藍牙QBQ認證。
+                        style="font-size:14px;font-weight:400;color:rgba(102,102,102,1);line-height:24px;
+                        padding-bottom: 12px;">碧沙心電儀是3導聯動態心電儀，使用簡便，一學就會。具有超長工作時間（一次充電可連續采集120小時ECG數據）和超大容量（可存儲878小時ECG數據）。産品已獲得醫療器械許可證、CFDA
+                    注冊證、FCC認證、FCC
+                    藍牙QBQ認證。
                 </p>
             </div>
         </div>
@@ -142,7 +147,8 @@
                     Service</p>
                 <p style="width:34px;height:8px;background:rgba(132,132,132,1);"></p>
                 <p
-                        style="font-size:14px;font-weight:400;color:rgba(102,102,102,1);line-height:24px;padding-bottom: 50px;">碧沙康健提供將碧沙心電儀數據格式轉換成符合歐洲標准的EDF格式或符合美國標准的MIF格式的服務。碧沙心電儀監測的心電圖數據具有通用性。
+                        style="font-size:14px;font-weight:400;color:rgba(102,102,102,1);line-height:24px;padding-bottom: 56px;
+">碧沙康健提供將碧沙心電儀數據格式轉換成符合歐洲標准的EDF格式或符合美國標准的MIF格式的服務。碧沙心電儀監測的心電圖數據具有通用性。
                 </p>
             </div>
         </div>
@@ -152,7 +158,8 @@
                 <p style="margin-bottom:4px;font-size:18px;font-weight:bold;color:rgba(51,51,51,1);line-height:40px;">一台專業電腦</p>
                 <p style="font-size:12px;font-weight:400;color:rgba(153,153,153,1);line-height:12px;">A Professional Computer</p>
                 <p style="width:34px;height:8px;background:rgba(132,132,132,1);"></p>
-                <p style="font-size:14px;font-weight:400;color:rgba(102,102,102,1);line-height:24px;padding-bottom: 50px;">碧沙康健提供適用于心電監測分析系統的專業電腦。專業電腦的使用環境不同于一般商用電腦，因此對于專業電腦配置的要求更爲嚴格。
+                <p style="font-size:14px;font-weight:400;color:rgba(102,102,102,1);line-height:24px;padding-bottom: 56px;
+">碧沙康健提供適用于心電監測分析系統的專業電腦。專業電腦的使用環境不同于一般商用電腦，因此對于專業電腦配置的要求更爲嚴格。
                 </p>
             </div>
         </div>
@@ -162,7 +169,8 @@
                 <p style="margin-bottom:4px;font-size:18px;font-weight:bold;color:rgba(51,51,51,1);line-height:40px;">一年免費培訓</p>
                 <p style="font-size:12px;font-weight:400;color:rgba(153,153,153,1);line-height:12px;">One Year Free Training</p>
                 <p style="width:34px;height:8px;background:rgba(132,132,132,1);"></p>
-                <p style="font-size:14px;font-weight:400;color:rgba(102,102,102,1);line-height:24px;padding-bottom: 50px;">碧沙康健爲醫療機構提供3次免費線下培訓、1年免費線上培訓，包括産品使用與保養、系統軟件使用與維護、專業電腦使用等相關培訓。
+                <p style="font-size:14px;font-weight:400;color:rgba(102,102,102,1);line-height:24px;padding-bottom: 56px;
+">碧沙康健爲醫療機構提供3次免費線下培訓、1年免費線上培訓，包括産品使用與保養、系統軟件使用與維護、專業電腦使用等相關培訓。
                 </p>
             </div>
         </div>
