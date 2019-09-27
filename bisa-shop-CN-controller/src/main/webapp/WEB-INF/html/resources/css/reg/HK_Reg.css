@@ -81,7 +81,7 @@
 	width: 100%;
 	min-width: 600px; 
 	height: 600px;
-    background:linear-gradient(90deg,rgba(254,172,94,1) 0%,rgba(199,121,208,1) 53%,rgba(75,192,200,1) 100%);
+    background:url('../../../resources/img/reg/banner.jpg');
 	overflow: hidden;
 	background-size: cover;
 	position: relative;
@@ -197,7 +197,7 @@
     from {top: -300;opacity:0;}
     to {top: 0;opacity:1;}
 }
- 
+
 @-webkit-keyframes weixinlogin
 {
     from {top: -300;opacity:0;}
