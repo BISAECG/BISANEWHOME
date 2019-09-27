@@ -21,16 +21,16 @@ $(document).ready(function () {
                 container: '.userphonemsg',
                 validators: {
                     notEmpty: {
-                        message: name653 	//'手机号码不能为空值.'
+                        message: '手机号码不能为空值.' 	//'手机号码不能为空值.'
                     },
                     stringLength: {
                         min: 6,
                         max: 15,
-                        message: name654 	//'手机号码不能小于6或者大于15.'
+                        message: '手机号码不能小于6或者大于15.' 	//'手机号码不能小于6或者大于15.'
                     },
                     regexp: {
                         regexp: /^[0-9-]+$/,
-                        message: name655 	//'手机号码只能包含数字和连接符.'
+                        message: '手机号码只能包含数字和连接符.' 	//'手机号码只能包含数字和连接符.'
                     },
                 }
             },
@@ -38,15 +38,15 @@ $(document).ready(function () {
                 container: '.usercodemsg',
                 validators: {
                     notEmpty: {
-                        message: name656 	//'动态密码不能为空值.'
+                        message: '动态密码不能为空值.' 	//'动态密码不能为空值.'
                     },
                     digits: {
-                        message: name657	//'只能是数字！'
+                        message: '只能是数字！'	//'只能是数字！'
                     },
                     stringLength: {
                         min: 4,
                         max: 4,
-                        message: name658	//'必须是4位数字!'
+                        message: '必须是4位数字!'	//'必须是4位数字!'
                     }
                 }
             },
@@ -54,20 +54,20 @@ $(document).ready(function () {
                 container: '.user-pwd-msg',
                 validators: {
                     notEmpty: {
-                        message: name662	//'密码不能为空值.'
+                        message: '密码不能为空值.'	//'密码不能为空值.'
                     },
                     different: {
                         field: 'userphone',
-                        message: name663	//'密码和手机号不能一样'
+                        message: '密码和手机号不能一样'	//'密码和手机号不能一样'
                     },
                     regexp: {
                         regexp: /^[a-zA-Z0-9_]+$/,
-                        message: name664	//'密码只能包含大写、小写、数字或下划线.'
+                        message: '密码只能包含大写、小写、数字或下划线.'	//'密码只能包含大写、小写、数字或下划线.'
                     },
                     stringLength: {
                         min: 8,
                         max: 16,
-                        message: name690	//'密码长度不能小于8位,不能大于16位.'
+                        message: '密码长度不能小于8位,不能大于16位.'	//'密码长度不能小于8位,不能大于16位.'
                     },
                 }
             },
@@ -75,15 +75,15 @@ $(document).ready(function () {
                 container: '.user-setpwd-msg',
                 validators: {
                     notEmpty: {
-                        message: name662	//'密码不能为空值.'
+                        message: '密码不能为空值.'	//'密码不能为空值.'
                     },
                     different: {
                         field: 'userphone',
-                        message: name663	//'密码和手机号不能一样.'
+                        message: '密码和手机号不能一样.'	//'密码和手机号不能一样.'
                     },
                     identical: {
                         field: 'password',
-                        message: name691	//'两次密码不一致.'
+                        message: '两次密码不一致.'	//'两次密码不一致.'
                     },
                 }
             },
@@ -118,7 +118,7 @@ $(document).ready(function () {
                         //设置button效果，开始计时
                         $(".sendMessagebtn").attr("disabled", "true");//禁用重新发送按钮
                         $(".sendMessagebtn").css("color", "#666");//修改按钮值颜色
-                        $(".sendMessagebtn").text(curCount + "s" + name666);//按钮值修改为 '倒计时' + '重新发送'
+                        $(".sendMessagebtn").text(curCount + "s" + '重新发送');//按钮值修改为 '倒计时' + '重新发送'
                         InterValObj = window.setInterval(SetRemainTime, 1000); //启动计时器，1秒执行一次
                     } else {
                         msg = getMessage(msg);
@@ -127,7 +127,7 @@ $(document).ready(function () {
                 }
             });
         } else {
-            $(".userphonemsg").find("small:visible").text(name667);		//请输入正确的手机号码！
+            $(".userphonemsg").find("small:visible").text('请输入正确的手机号码');		//请输入正确的手机号码！
             $(".userphoneinput").focus();//获取手机号输入框input焦点
             return false;
         }
@@ -145,7 +145,7 @@ $(document).ready(function () {
             }
             else {
                 curCount--;  //当倒计时不等于0时 
-                $(".sendMessagebtn").text(curCount + "s" + name666);//倒计时执行计数 
+                $(".sendMessagebtn").text(curCount + "s" + '重新发送');//倒计时执行计数
             }
         };
     };
@@ -171,18 +171,18 @@ function showMessage(msg) {
 /*根据消息代码显示异常信息*/
 function getMessage(msg) {
     if (msg == "1001") {
-        return name653;
+        return "手机号不能为空！";
     }	//"手机号不能为空！"
     if (msg == "200" || msg == "1003") {
-        return name692;
+        return "账号已注册，请登录！";
     }	//"账号已注册，请登录！"
     if (msg == "1004") {
-        return name537;
+        return "操作失败！";
     }		//"操作失败！"
     if (msg == "1005") {
-        return name671;
+        return '验证码错误！';
     }		//验证码错误！
     if (msg == "1007") {
-        return name672;
+        return '地区有误';
     }		//地区有误！
 }

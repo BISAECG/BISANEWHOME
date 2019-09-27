@@ -19,16 +19,16 @@ $(document).ready(function () {
                 container: '.userphonemsg',
                 validators: {
                     notEmpty: {
-                        message: name653	//'手机号码不能为空值.'
+                        message: '手机号码不能为空值'	//'手机号码不能为空值.'
                     },
                     stringLength: {
                         min: 6,
                         max: 15,
-                        message: name654	//'手机号码不能小于6或者大于15.'
+                        message: '手机号码不能小于6或者大于15'	//'手机号码不能小于6或者大于15.'
                     },
                     regexp: {
                         regexp: /^[0-9-]+$/,
-                        message: name655	//'手机号码只能包含数字和连接符.'
+                        message: '手机号码只能包含数字和连接符'	//'手机号码只能包含数字和连接符.'
                     },
                 }
             },
@@ -36,15 +36,15 @@ $(document).ready(function () {
                 container: '.usercodemsg',
                 validators: {
                     notEmpty: {
-                        message: name656	//'动态密码不能为空值.'
+                        message: '动态密码不能为空值'	//'动态密码不能为空值.'
                     },
                     digits: {
-                        message: name657	//'只能是数字！'
+                        message: '只能是数字'	//'只能是数字！'
                     },
                     stringLength: {
                         min: 4,
                         max: 4,
-                        message: name658	//'必须是4位数字!'
+                        message: '必须是4位数字'	//'必须是4位数字!'
                     }
                 }
             }
@@ -53,7 +53,7 @@ $(document).ready(function () {
 
     /*账号密码登录校验*/
     $(".login-main-formpwd").bootstrapValidator({
-        message: name659, 	//'请输入用户名/密码',
+        message: '请输入用户名/密码', 	//'请输入用户名/密码',
         submitHandler: function (valiadtor, loginForm, submitButton) {
             rememberMe($("input[name='rememberMe']").is(":checked"));
             valiadtor.defaultSubmit();
@@ -63,11 +63,11 @@ $(document).ready(function () {
                 container: '.usernamemsg',
                 validators: {
                     notEmpty: {
-                        message: name660	//'用户名不能为空值.'
+                        message: '用户名不能为空值'	//'用户名不能为空值.'
                     },
                     stringLength: {
                         max: 12,
-                        message: name661	//'用户名不能大于12位.'
+                        message: '用户名不能大于12位'	//'用户名不能大于12位.'
                     },
                 },
             },
@@ -75,19 +75,19 @@ $(document).ready(function () {
                 container: '.userpwdmsg',
                 validators: {
                     notEmpty: {
-                        message: name662 	//'密码不能为空值.'
+                        message: '密码不能为空值' 	//'密码不能为空值.'
                     },
                     different: {
                         field: 'username',
-                        message: name663	//'密码和用户名不能一样'
+                        message: '密码和用户名不能一样'	//'密码和用户名不能一样'
                     },
                     regexp: {
                         regexp: /^[a-zA-Z0-9_]+$/,
-                        message: name664	//'密码只能包含大写、小写、数字和下划线'
+                        message: '密码只能包含大写和小写数字和下划线'	//'密码只能包含大写、小写、数字和下划线'
                     },
                     stringLength: {
                         min: 8,
-                        message: name665	//'密码长度不能小于8位.'
+                        message: '密码长度不能小于8位'	//'密码长度不能小于8位.'
                     }
                 }
             },
@@ -107,11 +107,11 @@ $(document).ready(function () {
 
     /*微信登录 鼠标悬浮事件*/
     $(".login-tabcontrolv3").mouseenter(function () {
-        $(this).find("img").attr("src", http_request + "/resources/img/reg/tabcontrolv3h.png");
+        $(this).find("img").attr("src", http_request + "../resources/img/reg/tabcontrolv3h.png");
         $(this).find("span").css("color", "black");
     });
     $(".login-tabcontrolv3").mouseleave(function () {
-        $(this).find("img").attr("src", http_request + "/resources/img/reg/tabcontrolv3.png");
+        $(this).find("img").attr("src", http_request + "../resources/img/reg/tabcontrolv3.png");
         $(this).find("span").css("color", "#999");
     });
 
@@ -149,7 +149,7 @@ function sendMessage() {
                     //设置button效果，开始计时
                     $(".sendMessagebtn").attr("disabled", "true");//禁用重新发送按钮
                     $(".sendMessagebtn").css("color", "#666");//修改按钮值颜色
-                    $(".sendMessagebtn").text(curCount + "s" + name666);//按钮值修改为 '倒计时' + '重新发送'
+                    $(".sendMessagebtn").text(curCount + "s" + '重新发送');//按钮值修改为 '倒计时' + '重新发送'
                     InterValObj = window.setInterval(SetRemainTime, 1000); //启动计时器，1秒执行一次
                 } else {
                     msg = getMessage(msg);
@@ -158,7 +158,7 @@ function sendMessage() {
             }
         });
     } else {
-        $(".userphonemsg").find("small:visible").text(name667);		//"请输入正确的手机号码！"
+        $(".userphonemsg").find("small:visible").text('请输入正确的手机号码');		//"请输入正确的手机号码！"
         $(".userphoneinput").focus();//获取手机号输入框input焦点
         return false;
     }
@@ -171,12 +171,12 @@ function sendMessage() {
             $(".sendMessagebtn").css("background-color", "#D7DCDE");
             $(".sendMessagebtn").css("border-color", "#D7DCDE");
             $(".sendMessagebtn").css("color", "#868b8a");//修改按钮值颜色
-            $(".sendMessagebtn").text(name666);  //按钮值修改为	重新发送
+            $(".sendMessagebtn").text('重新发送');  //按钮值修改为	重新发送
             code = ""; //清除验证码。如果不清除，过时间后，输入收到的验证码依然有效      
         }
         else {
             curCount--;  //当倒计时不等于0时 
-            $(".sendMessagebtn").text(curCount + "s" + name666);//倒计时执行计数 
+            $(".sendMessagebtn").text(curCount + "s" + '重新发送');//倒计时执行计数
         }
     };
 }
@@ -253,39 +253,39 @@ function hideMessage() {
 /*根据消息代码显示异常信息*/
 function getMessage(msg) {
     if (msg == "200") {
-        return name668;
+        return '请登录';
     }		//请登录!
     if (msg == "1001") {
-        return name653;
+        return '手机号不能为空';
     }		//手机号不能为空！
     if (msg == "1002") {
-        return name669;
+        return '账号未注册,请注册新账号';
     }		//账号未注册，请注册新账号！
     if (msg == "1004") {
-        return name670;
+        return '操作失败';
     }		//操作失败！
     if (msg == "1005") {
-        return name671;
+        return '验证码错误';
     }		//验证码错误！
     if (msg == "1007") {
-        return name672;
+        return '地区有误';
     }		//地区有误！
     if (msg == "1008") {
-        return name673;
+        return '用户名或密码错误';
     }		//用户名或密码错误！
     if (msg == "1009") {
-        return name674;
+        return '账号锁定';
     }		//账号锁定！
     if (msg == "1010") {
         var pre_type = type;
         if (pre_type == 2) {
-            return name675;   //用户名或验证码错误！
+            return '用户名或验证码错误';   //用户名或验证码错误！
         } else {
-            return name673;  //用户名或密码错误！
+            return '用户名或密码错误';  //用户名或密码错误！
         }
     }
     if (msg == "1011") {
-        return name676;
+        return '尝试登录失败超过5次账号锁定8小时';
     }		//尝试登录失败超过5次，账号锁定8小时！
 }
 

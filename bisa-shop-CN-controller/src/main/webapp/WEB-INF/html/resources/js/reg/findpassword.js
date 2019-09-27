@@ -8,16 +8,16 @@ $(document).ready(function () {
                 container: '.phone-msg',
                 validators: {
                     notEmpty: {
-                        message: name653    /*'手机号码不能为空值.'*/
+                        message: '手机号码不能为空值.'    /*'手机号码不能为空值.'*/
                     },
                     stringLength: {
                         min: 6,
                         max: 15,
-                        message: name654    /*'手机号码不能小于6或者大于15.'*/
+                        message: '手机号码不能小于6或者大于15.'    /*'手机号码不能小于6或者大于15.'*/
                     },
                     regexp: {
                         regexp: /^[0-9-]+$/,
-                        message: name655	//'手机号码只能包含数字和连接符.'
+                        message: '手机号码只能包含数字和连接符.'	//'手机号码只能包含数字和连接符.'
                     },
                 }
             },
@@ -25,15 +25,15 @@ $(document).ready(function () {
                 container: '.phone-icode-msg',
                 validators: {
                     notEmpty: {
-                        message: name656	//'动态密码不能为空值.'
+                        message: '动态密码不能为空值.'	//'动态密码不能为空值.'
                     },
                     digits: {
-                        message: name657	//'只能是数字！'
+                        message: '只能是数字！'	//'只能是数字！'
                     },
                     stringLength: {
                         min: 4,
                         max: 4,
-                        message: name658	//'必须是4位数字!'
+                        message: '必须是4位数字!'	//'必须是4位数字!'
                     }
                 }
             },
@@ -41,20 +41,20 @@ $(document).ready(function () {
                 container: '.phone-pwd-msg',
                 validators: {
                     notEmpty: {
-                        message: name662	//'密码不能为空值.'
+                        message: '密码不能为空值.'	//'密码不能为空值.'
                     },
                     different: {
                         field: 'phone',
-                        message: name663	//'密码和手机号不能一样'
+                        message: '密码和手机号不能一样'	//'密码和手机号不能一样'
                     },
                     regexp: {
                         regexp: /^[a-zA-Z0-9_]+$/,
-                        message: name664	//'密码只能包含大写、小写、数字或下划线.'
+                        message: '密码只能包含大写、小写、数字或下划线.'	//'密码只能包含大写、小写、数字或下划线.'
                     },
                     stringLength: {
                         min: 8,
                         max: 16,
-                        message: name690	//'密码长度不能小于8位,不能大于12位.'
+                        message: '密码长度不能小于8位,不能大于12位.'	//'密码长度不能小于8位,不能大于12位.'
                     },
                 }
             },
@@ -62,11 +62,11 @@ $(document).ready(function () {
                 container: '.phone-setpwd-msg',
                 validators: {
                     notEmpty: {
-                        message: name709	//'确认密码不能为空值.'
+                        message: '确认密码不能为空值.'	//'确认密码不能为空值.'
                     },
                     identical: {
                         field: 'password',
-                        message: name691	//'两次密码不一致.'
+                        message: '两次密码不一致.'	//'两次密码不一致.'
                     },
                 }
             },
@@ -80,15 +80,15 @@ $(document).ready(function () {
                 container: '.email-msg',
                 validators: {
                     notEmpty: {
-                        message: name710	//'邮箱不能为空值.'
+                        message: '邮箱不能为空值.'	//'邮箱不能为空值.'
                     },
                     emailAddress: {
-                        message: name711	//'请输入正确的邮箱号码.'
+                        message: '请输入正确的邮箱号码.'	//'请输入正确的邮箱号码.'
                     },
                     stringLength: {
                         min: 4,
                         max: 320,
-                        message: name712	//'邮箱长度少于320.'
+                        message: '邮箱长度少于320.'	//'邮箱长度少于320.'
                     }
                 }
             },
@@ -96,15 +96,15 @@ $(document).ready(function () {
                 container: '.email-icode-msg',
                 validators: {
                     notEmpty: {
-                        message: name656	//'动态密码不能为空值.'
+                        message: '动态密码不能为空值.'	//'动态密码不能为空值.'
                     },
                     digits: {
-                        message: name657	//'只能是数字！'
+                        message: '只能是数字！'	//'只能是数字！'
                     },
                     stringLength: {
                         min: 4,
                         max: 4,
-                        message: name658	//'必须是4位数字!'
+                        message: '必须是4位数字!'	//'必须是4位数字!'
                     }
                 }
             },
@@ -112,20 +112,20 @@ $(document).ready(function () {
                 container: '.email-pwd-msg',
                 validators: {
                     notEmpty: {
-                        message: name662	//'密码不能为空值.'
+                        message: '密码不能为空值.'	//'密码不能为空值.'
                     },
                     different: {
                         field: 'email',
-                        message: name663	//'密码和手机号不能一样'
+                        message: '密码和手机号不能一样'	//'密码和手机号不能一样'
                     },
                     regexp: {
                         regexp: /^[a-zA-Z0-9_]+$/,
-                        message: name664	//'密码只能包含大写、小写、数字或下划线.'
+                        message: '密码只能包含大写、小写、数字或下划线.'	//'密码只能包含大写、小写、数字或下划线.'
                     },
                     stringLength: {
                         min: 8,
                         max: 16,
-                        message: name690	//'密码长度不能小于8位,不能大于16位.'
+                        message: '密码长度不能小于8位,不能大于16位.'	//'密码长度不能小于8位,不能大于16位.'
                     },
                 }
             },
@@ -133,11 +133,11 @@ $(document).ready(function () {
                 container: '.email-setpwd-msg',
                 validators: {
                     notEmpty: {
-                        message: name709	//'确认密码不能为空值.'
+                        message: '确认密码不能为空值.'	//'确认密码不能为空值.'
                     },
                     identical: {
                         field: 'password',
-                        message: name628	//'两次密码不一致.'
+                        message: '两次密码不一致.'	//'两次密码不一致.'
                     },
                 }
             },
@@ -176,7 +176,7 @@ function sendMessage() {
                     //设置button效果，开始计时
                     $(".sendMessagebtn").attr("disabled", "true");//禁用重新发送按钮
                     $(".sendMessagebtn").css("color", "#666");//修改按钮值颜色
-                    $(".sendMessagebtn").text(curCount + "s" + name666);//按钮值修改为 '倒计时' + '重新发送'
+                    $(".sendMessagebtn").text(curCount + "s" + '重新发送');//按钮值修改为 '倒计时' + '重新发送'
                     InterValObj = window.setInterval(SetRemainTime, 1000); //启动计时器，1秒执行一次
                 } else {
                     msg = getMessage(msg);
@@ -185,7 +185,7 @@ function sendMessage() {
             }
         });
     } else {
-        $(".userphonemsg").find("small:visible").text(name667); 	//"请输入正确的手机号码！"
+        $(".userphonemsg").find("small:visible").text("请输入正确的手机号码！"); 	//"请输入正确的手机号码！"
         $(".userphoneinput").focus();//获取手机号输入框input焦点
         $(".email-msg").text("");
         return false;
@@ -199,12 +199,12 @@ function sendMessage() {
             $(".sendMessagebtn").css("background-color", "#D7DCDE");
             $(".sendMessagebtn").css("border-color", "#D7DCDE");
             $(".sendMessagebtn").css("color", "#868b8a");//修改按钮值颜色
-            $(".sendMessagebtn").text(name666);  //按钮值修改为重新发送
+            $(".sendMessagebtn").text('重新发送');  //按钮值修改为重新发送
             code = ""; //清除验证码。如果不清除，过时间后，输入收到的验证码依然有效      
         }
         else {
             curCount--;  //当倒计时不等于0时 
-            $(".sendMessagebtn").text(curCount + "s" + name666);//倒计时执行计数 
+            $(".sendMessagebtn").text(curCount + "s" + '重新发送');//倒计时执行计数
         }
     };
 }
@@ -238,7 +238,7 @@ function sendVcodeEmail() {
                     //设置button效果，开始计时
                     $(".send-email-btn").attr("disabled", "true");//禁用重新发送按钮
                     $(".send-email-btn").css("color", "#666");//修改按钮值颜色
-                    $(".send-email-btn").text(curCount + "s" + name666);//按钮值修改为 '倒计时' + '重新发送'
+                    $(".send-email-btn").text(curCount + "s" + '重新发送');//按钮值修改为 '倒计时' + '重新发送'
                     InterValObj = window.setInterval(SetRemainTime, 1000); //启动计时器，1秒执行一次
                 } else {
                     msg = getMessage(msg);
@@ -247,7 +247,7 @@ function sendVcodeEmail() {
             }
         });
     } else {
-        $(".email-msg").find("small:visible").text(name711); 	//"请输入正确的邮箱账号！"
+        $(".email-msg").find("small:visible").text("请输入正确的邮箱账号！"); 	//"请输入正确的邮箱账号！"
         $(".email-input").focus();//获取手机号输入框input焦点
         $(".email-msg").text("");
         return false;
@@ -261,12 +261,12 @@ function sendVcodeEmail() {
             $(".send-email-btn").css("background-color", "#D7DCDE");
             $(".send-email-btn").css("border-color", "#D7DCDE");
             $(".send-email-btn").css("color", "#868b8a");//修改按钮值颜色
-            $(".send-email-btn").text(name666);  //按钮值修改为重新发送
+            $(".send-email-btn").text('重新发送');  //按钮值修改为重新发送
             code = ""; //清除验证码。如果不清除，过时间后，输入收到的验证码依然有效      
         }
         else {
             curCount--;  //当倒计时不等于0时 
-            $(".send-email-btn").text(curCount + "s" + name666);//倒计时执行计数 
+            $(".send-email-btn").text(curCount + "s" + '重新发送');//倒计时执行计数
         }
     };
 }
@@ -382,18 +382,18 @@ function hideMessage() {
 /*根据消息代码显示异常信息*/
 function getMessage(msg) {
     if (msg == "1001") {
-        return name714;
+        return '参数为空或参数有误';
     }	//参数为空或参数有误！
     if (msg == "1002") {
-        return name715;
+        return '账号未注册';
     }	//账号未注册！
     if (msg == "1004") {
-        return name537;
+        return '操作失败';
     }		//操作失败！
     if (msg == "1005") {
-        return name671;
+        return '验证码错误';
     }		//验证码错误！
     if (msg == "1007") {
-        return name672;
+        return '地区有误';
     }	//地区有误！
 }

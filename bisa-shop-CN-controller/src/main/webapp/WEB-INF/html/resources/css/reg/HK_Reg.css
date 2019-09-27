@@ -78,7 +78,6 @@
 
 /* 背景图 */
 .main {
-	margin-top: 5%;
 	width: 100%;
 	min-width: 600px; 
 	height: 600px;
@@ -87,11 +86,21 @@
 	background-size: cover;
 	position: relative;
 }
+/*.main1{*/
+    /*margin-top: 5%;*/
+    /*width: 100%;*/
+    /*min-width: 600px;*/
+    /*height: 600px;*/
+    /*background:url('../../../resources/img/menuList/mListBgImg.png');*/
+    /*overflow: hidden;*/
+    /*background-size: cover;*/
+    /*position: relative;*/
+/*}*/
 /* 登录框div */
 .login-div {
 	position: absolute;
-	top: 80px;
-	left: 50%;
+	top: 40px;
+	left: 60%;
 }
 
 .title-selected{font-weight:bold !important;}
