@@ -32,16 +32,17 @@
         </div>
     </nav>
     <div class='container head mb-10'>
-        <div class='row'>
-            <div class='col-md-2' style='border-right:2px solid #F1F1F1;height: 80px;width: 12%;'>
+        <div class='row pos-r'>
+            <div class='col-md-2 pos-a' style='height: 100px;left: 0;padding-right: 0px;'>
                 <a href='index.html' >
-                    <img class='img-responsive center-block' style='margin-top: 20px;' src='../../resources/img/index/logov1.png'  alt='碧沙康健logo'>
+                    <img class='img-responsive center-block'  src='../resources/img/index/logov1.png'  alt='bisa'>
                 </a>
             </div>
-            <div class='pull-left' style='margin-left: 15px;'>
-                <p style='color: #204792;font-size:20px;font-weight:bold;' >Health, starting from your "heart"</p>
-                <p style='font-size:18px;font-weight:400;color:rgba(14,48,115,1);'>Monitor ECG without leaving your home</p>
-                <p style='font-size:16px;font-weight:400;color:rgba(14,48,115,1);'>Keep you indoors for ECG measurements</p>
+            <span class="pull-left" style="display: inline-block;width: 2px;height: 80px;background:#F1F1F1;margin-right: 15px;"></span>
+            <div class='pull-left' style='margin-left: 5px;margin-top: 10px;'>
+                <p style='color: #204792;font-size:16px;font-weight:bold;' >Health, starting from your "heart"</p>
+                <p style='font-size:14px;font-weight:400;color:rgba(14,48,115,1);'>Monitor ECG without leaving your home</p>
+                <p style='font-size:14px;font-weight:400;color:rgba(14,48,115,1);'>Keep you indoors for ECG measurements</p>
             </div>
             <div class='pull-right'>
                 <div class='pull-left  text-center'  style='margin: 0 20px;'>

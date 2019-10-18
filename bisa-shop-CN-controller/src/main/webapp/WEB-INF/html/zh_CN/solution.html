@@ -46,6 +46,17 @@
         color: #FFFFFF;
         font-size: 22px;
     }
+    .Advantage{
+        color:rgba(255,255,255,1);
+        font-weight:400;
+        font-size:14px;
+        text-shadow:0px 1px 1px rgba(8,76,75,1);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+    }
 </style>
 
 <body>
@@ -53,23 +64,26 @@
 <script>
     $("#header").load("header.html");
 </script>
-
-<div class="container-fluid">
-    <div class="row mb-40 pos-r"  style="background: url('../resources/img/solution/banner.png') no-repeat;height:
-    400px;">
-        <div class="col-md-3 col-md-offset-2">
-            <div class="row" style="margin-left: 30px;">
-                <p class="" style="color:rgba(255,255,255,1);font-size:24px;font-weight:400;margin:40px auto;">医院智慧心电监测技术解决方案</p>
+<div style="width: 100%;background:linear-gradient(0deg,rgba(57,80,104,1) 0%,rgba(36,47,62,1) 100%);">
+    <div class="container">
+        <div class="row mb-40">
+            <div class="col-md-6 mt-40"  style="">
+                <p class="" style="color:rgba(255,255,255,1);font-size:24px;font-weight:400;margin-top: 5%;">医院智慧心电监测技术解决方案</p>
+                <p style="display: inline-block;width:32px;height:6px;background:rgba(108,99,255,1);"></p>
+                <p style="color:rgba(243,242,242,1);font-size:16px;">针对目前医疗机构动态心电监测使用的传统12导联Holter存在的产品价格昂贵、患者佩戴不便、监测易受干扰、仅能存储24
+                    小时数据、人工分析劳动量大、器材损耗大等问题，碧沙康健推出了智慧心电监测技术解决方案，实现长时段监测、AI智能分析、网上诊疗和紧急求助等应用，助力AI医用技术的快速发展。</p>
+                <p >
+                    <a  class="text-center taobao1">淘宝商城</a>
+                    <a class="text-center jingdong1" style="margin-left: 15px;">京东自营</a>
+                </p>
             </div>
-            <div class="row" style="margin-left: 30px;">
-                <span style="color:rgba(243,242,242,1);font-size:16px;">针对目前医疗机构动态心电监测使用的传统12导联Holter存在的产品价格昂贵、患者佩戴不便、监测易受干扰、仅能存储24小时数据、人工分析劳动量大、器材损耗大等问题，碧沙康健推出了智慧心电监测技术解决方案，实现长时段监测、AI智能分析、网上诊疗和紧急求助等应用，助力AI医用技术的快速发展。</span>
-            </div>
-            <div class="row pos-a" style="top: 110%;left: 10%;">
-                <a  class="text-center taobao1">淘宝商城</a>
-                <a class="text-center jingdong1" style="margin-left: 15px;">京东自营</a>
+            <div class="col-md-4 col-md-offset-2" >
+                <img class="img-responsive center-block mt-60" src="../resources/img/solution/banner.png">
             </div>
         </div>
     </div>
+</div>
+<div class="container-fluid">
     <p class="title-p">传统方式</p>
     <div class="line">
         <span class="line-top"></span>
@@ -85,19 +99,28 @@
     </div>
     <div class="row mb-40 pos-r">
         <img class="img-responsive center-block" src="../resources/img/solution/banner3.png" alt="碧沙心电仪四大优势">
-        <div
-                style="position: absolute;left: 12%;top: 54%;width:15%;
-                font-size:0.8rem;font-weight:400;color:rgba(255,255,255,1);text-shadow:0px
-                 1px 1px rgba(8,76,75,1);">（碧沙心电仪使用简单，无需导联线，方便佩戴。除剧烈运动外，患者正常的日常活动不会影响心电监测。患者可自助使用或摘除心电仪，因此医师可以根据患者制定长时段监测方案。）
+        <div style="position: absolute;left: 12%;top: 54%;width:15%;" class="Advantage">
+            碧沙心电仪使用简单，无需导联线，方便佩戴。除剧烈运动外，患者正常的日常活动不会影响心电监测。患者可自助使用或摘除心电仪，医师可以根据患者制定长时段监测方案。
         </div>
-        <div
-                style="position: absolute;left: 32%;top: 54%;width:15%;font-size:0.8rem;font-weight:400;color:rgba(255,255,255,1);text-shadow:0px 1px 1px rgba(8,76,75,1);">（传统的12导联Holter价格昂贵，单个Holter的价格约10~20万，在存放和租借给患者使用过程中产生的设备损耗非常大。而碧沙心电仪价格实惠，大大减少医院器材成本。）
+        <div style="position: absolute;left: 32%;top: 54%;width:15%;" class="Advantage">
+            传统的12导联Holter价格昂贵，单个Holter的价格约10~20万，在存放和租借给患者使用过程中产生的设备损耗非常大。而碧沙心电仪价格实惠，大大减少医院器材成本。
         </div>
-        <div
-                style="position: absolute;left: 52%;top: 54%;width:15%;font-size:0.8rem;font-weight:400;color:rgba(255,255,255,1);text-shadow:0px 1px 1px rgba(8,76,75,1);">（利用碧沙智慧心电监测分析系统在云端进行心电大数据处理并进行自动分析，无需人工分析，减少医师大工作量劳动。即提高医师工作效率，又提升诊断的准确性。）
+        <div style="position: absolute;left: 52%;top: 54%;width:15%;" class="Advantage">
+            利用碧沙智慧心电监测分析系统在云端进行心电大数据处理并进行自动分析，无需人工分析，减少医师大工作量劳动。即提高医师工作效率，又提升诊断的准确性。
         </div>
-        <div
-                style="position: absolute;left: 72%;top: 54%;width:15%;font-size:0.8rem;font-weight:400;color:rgba(255,255,255,1);text-shadow:0px 1px 1px rgba(8,76,75,1);">（碧沙康健为医疗机构提供1年免费培训服务，可进行3次上门技术个性培训。培训内容包括产品使用与保养、系统软件使用与维护、专业电脑使用等相关培训。）
+        <div style="position: absolute;left: 72%;top: 54%;width:15%;" class="Advantage">
+            碧沙康健为医疗机构提供1年免费培训服务，可进行3次上门技术个性培训。培训内容包括产品使用与保养、系统软件使用与维护、专业电脑使用等相关培训。
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="row-fluid">
+
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <p class="title-p">方案流程</p>
@@ -118,9 +141,9 @@
             <img src="../resources/img/solution/banner6-1.png">
             <div style="margin: 5px;">
                 <p style="margin-bottom:4px;font-size:18px;font-weight:bold;color:rgba(51,51,51,1);line-height:40px;">碧沙智慧心电监测分析系统</p>
-                <p style="font-size:12px;font-weight:400;color:rgba(153,153,153,1);line-height:12px;">Bisa Intelligent ECG Monitoring And Analysis System</p>
                 <p style="width:34px;height:8px;background:rgba(132,132,132,1);"></p>
-                <p style="font-size:14px;font-weight:400;color:rgba(102,102,102,1);line-height:24px;">碧沙智慧心电监测分析系统包括采集原始心电数据，存储大量心电数据，在云端进行心电大数据处理并进行自动分析，最后结合专业医师的总结建议形成最终的心电图报告。此系统大大提高心电图分析的准确率和实时性。
+                <p style="font-size:14px;font-weight:400;color:rgba(102,102,102,1);line-height:24px;">
+                    碧沙智慧心电监测分析系统包括采集原始心电数据，存储大量心电数据，在云端进行心电大数据处理并进行自动分析，最后结合专业医师的总结建议形成最终的心电图报告。此系统大大提高心电图分析的准确率和实时性。
                 </p>
             </div>
         </div>
@@ -129,13 +152,9 @@
             <div style="margin: 5px;">
                 <p style="margin-bottom:4px;font-size:18px;font-weight:bold;color:rgba(51,51,51,1);line-height:40px;">五台碧沙心电仪
                 </p>
-                <p style="font-size:12px;font-weight:400;color:rgba(153,153,153,1);line-height:12px;">Five Bisa Electrocar Diographs</p>
                 <p style="width:34px;height:8px;background:rgba(132,132,132,1);"></p>
-                <p
-                        style="font-size:14px;font-weight:400;color:rgba(102,102,102,1);line-height:24px;
-                        padding-bottom: 12px;">碧沙心电仪是3导联动态心电仪，使用简便，一学就会。具有超长工作时间（一次充电可连续采集120小时ECG数据）和超大容量（可存储878小时ECG数据）。产品已获得医疗器械许可证、CFDA
-                    注册证、FCC认证、FCC
-                    蓝牙QBQ认证。
+                <p style="font-size:14px;font-weight:400;color:rgba(102,102,102,1);line-height:24px;">
+                    碧沙心电仪是3导联动态心电仪，使用简便，一学就会。具有超长工作时间（一次充电可连续采集120小时ECG数据）和超大容量（可存储878小时ECG数据）。产品已获得医疗器械许可证、CFDA 注册证、FCC认证、FCC蓝牙QBQ认证。
                 </p>
             </div>
         </div>
@@ -143,12 +162,9 @@
             <img src="../resources/img/solution/banner6-3.png">
             <div style="margin: 5px;">
                 <p style="margin-bottom:4px;font-size:18px;font-weight:bold;color:rgba(51,51,51,1);line-height:40px;">一年免费数据转换服务</p>
-                <p style="font-size:12px;font-weight:400;color:rgba(153,153,153,1);line-height:12px;">One Year Free Data Conversion
-                    Service</p>
                 <p style="width:34px;height:8px;background:rgba(132,132,132,1);"></p>
-                <p
-                        style="font-size:14px;font-weight:400;color:rgba(102,102,102,1);line-height:24px;padding-bottom: 56px;
-">碧沙康健提供将碧沙心电仪数据格式转换成符合欧洲标准的EDF格式或符合美国标准的MIF格式的服务。碧沙心电仪监测的心电图数据具有通用性。
+                <p style="font-size:14px;font-weight:400;color:rgba(102,102,102,1);line-height:24px;min-height: 145px;">
+                    碧沙康健提供将碧沙心电仪数据格式转换成符合欧洲标准的EDF格式或符合美国标准的MIF格式的服务。碧沙心电仪监测的心电图数据具有通用性。
                 </p>
             </div>
         </div>
@@ -156,10 +172,9 @@
             <img src="../resources/img/solution/banner6-4.png">
             <div style="margin: 5px;">
                 <p style="margin-bottom:4px;font-size:18px;font-weight:bold;color:rgba(51,51,51,1);line-height:40px;">一台专业电脑</p>
-                <p style="font-size:12px;font-weight:400;color:rgba(153,153,153,1);line-height:12px;">A Professional Computer</p>
                 <p style="width:34px;height:8px;background:rgba(132,132,132,1);"></p>
-                <p style="font-size:14px;font-weight:400;color:rgba(102,102,102,1);line-height:24px;padding-bottom: 56px;
-">碧沙康健提供适用于心电监测分析系统的专业电脑。专业电脑的使用环境不同于一般商用电脑，因此对于专业电脑配置的要求更为严格。
+                <p style="font-size:14px;font-weight:400;color:rgba(102,102,102,1);line-height:24px;min-height: 145px;">
+                    碧沙康健提供适用于心电监测分析系统的专业电脑。专业电脑的使用环境不同于一般商用电脑，因此对于专业电脑配置的要求更为严格。
                 </p>
             </div>
         </div>
@@ -167,10 +182,9 @@
             <img src="../resources/img/solution/banner6-5.png">
             <div style="margin: 5px;">
                 <p style="margin-bottom:4px;font-size:18px;font-weight:bold;color:rgba(51,51,51,1);line-height:40px;">一年免费培训</p>
-                <p style="font-size:12px;font-weight:400;color:rgba(153,153,153,1);line-height:12px;">One Year Free Training</p>
                 <p style="width:34px;height:8px;background:rgba(132,132,132,1);"></p>
-                <p style="font-size:14px;font-weight:400;color:rgba(102,102,102,1);line-height:24px;padding-bottom: 56px;
-">碧沙康健为医疗机构提供3次免费线下培训、1年免费线上培训，包括产品使用与保养、系统软件使用与维护、专业电脑使用等相关培训。
+                <p style="font-size:14px;font-weight:400;color:rgba(102,102,102,1);line-height:24px;min-height: 145px;">
+                    碧沙康健为医疗机构提供3次免费线下培训、1年免费线上培训，包括产品使用与保养、系统软件使用与维护、专业电脑使用等相关培训。
                 </p>
             </div>
         </div>

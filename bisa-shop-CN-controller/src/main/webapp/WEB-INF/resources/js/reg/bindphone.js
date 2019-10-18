@@ -12,16 +12,16 @@ $(document).ready(function () {
                 container: '.exist-phone-msg',
                 validators: {
                     notEmpty: {
-                        message: '手机号码不能为空值'	//'手机号码不能为空值.'
+                        message: name653	//'手机号码不能为空值.'
                     },
                     stringLength: {
                         min: 6,
                         max: 15,
-                        message: '手机号码不能小于6或者大于15	'  //'手机号码不能小于6或者大于15.'
+                        message: name654	//'手机号码不能小于6或者大于15.'
                     },
                     regexp: {
                         regexp: /^[0-9-]+$/,
-                        message: '手机号码只能包含数字和连接符'	//'手机号码只能包含数字和连接符.'
+                        message: name655	//'手机号码只能包含数字和连接符.'
                     },
                 }
             },
@@ -29,15 +29,15 @@ $(document).ready(function () {
                 container: '.exist-code-msg',
                 validators: {
                     notEmpty: {
-                        message: '动态密码不能为空值.'	//'动态密码不能为空值.'
+                        message: name656	//'动态密码不能为空值.'
                     },
                     digits: {
-                        message: '只能是数字！'	//'只能是数字！'
+                        message: name657	//'只能是数字！'
                     },
                     stringLength: {
                         min: 4,
                         max: 4,
-                        message: '必须是4位数字!'	//'必须是4位数字!'
+                        message: name658	//'必须是4位数字!'
                     }
                 }
             }
@@ -50,16 +50,16 @@ $(document).ready(function () {
                 container: '.new-phone-msg',
                 validators: {
                     notEmpty: {
-                        message: '手机号码不能为空值.'	//'手机号码不能为空值.'
+                        message: name653	//'手机号码不能为空值.'
                     },
                     stringLength: {
                         min: 6,
                         max: 15,
-                        message: '手机号码不能小于6或者大于15.'	//'手机号码不能小于6或者大于15.'
+                        message: name654	//'手机号码不能小于6或者大于15.'
                     },
                     regexp: {
                         regexp: /^[0-9-]+$/,
-                        message: '手机号码只能包含数字和连接符.'	//'手机号码只能包含数字和连接符.'
+                        message: name655	//'手机号码只能包含数字和连接符.'
                     },
                 }
             },
@@ -67,15 +67,15 @@ $(document).ready(function () {
                 container: '.new-code-msg',
                 validators: {
                     notEmpty: {
-                        message: '动态密码不能为空值.'	//'动态密码不能为空值.'
+                        message: name656	//'动态密码不能为空值.'
                     },
                     digits: {
-                        message: '只能是数字！'	//'只能是数字！'
+                        message: name657	//'只能是数字！'
                     },
                     stringLength: {
                         min: 4,
                         max: 4,
-                        message: '必须是4位数字!'	//'必须是4位数字!'
+                        message: name658	//'必须是4位数字!'
                     }
                 }
             },
@@ -83,20 +83,20 @@ $(document).ready(function () {
                 container: '.userpasspwdmsg',
                 validators: {
                     notEmpty: {
-                        message: '密码不能为空值.'	//'密码不能为空值.'
+                        message: name662	//'密码不能为空值.'
                     },
                     different: {
                         field: 'userphone',
-                        message: '密码和手机号不能一样'	//'密码和手机号不能一样'
+                        message: name663	//'密码和手机号不能一样'
                     },
                     regexp: {
                         regexp: /^[a-zA-Z0-9_]+$/,
-                        message: '密码只能包含大写、小写、数字或下划线.'	//'密码只能包含大写、小写、数字或下划线.'
+                        message: name664	//'密码只能包含大写、小写、数字或下划线.'
                     },
                     stringLength: {
                         min: 8,
                         max: 16,
-                        message: '密码长度不能小于8位,不能大于16位.'	//'密码长度不能小于8位,不能大于16位.'
+                        message: name690	//'密码长度不能小于8位,不能大于16位.'
                     },
                 }
             },
@@ -104,11 +104,11 @@ $(document).ready(function () {
                 container: '.usersetpwdmsg',
                 validators: {
                     notEmpty: {
-                        message: '确认密码不能为空值.'	//'确认密码不能为空值.'
+                        message: name709	//'确认密码不能为空值.'
                     },
                     identical: {
                         field: 'usersetpwd',
-                        message: '两次密码不一致.'	//'两次密码不一致.'
+                        message: name628	//'两次密码不一致.'
                     },
                 }
             },
@@ -202,7 +202,7 @@ function sendExistCode(phoneNumber, phoneCode, bindType) {
                     //设置button效果，开始计时
                     $(".bind-exist-send-btn").attr("disabled", "true");//禁用重新发送按钮
                     $(".bind-exist-send-btn").css("color", "#666");//修改按钮值颜色
-                    $(".bind-exist-send-btn").text(curCount + "s" + '重新发送');//按钮值修改为 '倒计时' + '重新发送'
+                    $(".bind-exist-send-btn").text(curCount + "s" + name666);//按钮值修改为 '倒计时' + '重新发送'
                     InterValObj = window.setInterval(SetRemainTime, 1000); //启动计时器，1秒执行一次
                 } else {
                     console.log(msg);
@@ -211,11 +211,11 @@ function sendExistCode(phoneNumber, phoneCode, bindType) {
                 }
             },
             error: function () {
-                showMessage("页面过期！请重新操作！");	//"页面过期！请重新操作！"
+                showMessage(name730);	//"页面过期！请重新操作！"
             }
         });
     } else {
-        $(".exist-phone-msg").text("请输入正确的手机号码！");	//请输入正确的手机号码！
+        $(".exist-phone-msg").text(name667);	//请输入正确的手机号码！
         $(".bind-exist-phone").focus();//获取手机号输入框input焦点
         return false;
     }
@@ -228,11 +228,11 @@ function sendExistCode(phoneNumber, phoneCode, bindType) {
             $(".bind-exist-send-btn").css("background-color", "#D7DCDE");
             $(".bind-exist-send-btn").css("border-color", "#D7DCDE");
             $(".bind-exist-send-btn").css("color", "#868b8a");//修改按钮值颜色
-            $(".bind-exist-send-btn").text("按钮值修改为重新发送");  //按钮值修改为重新发送
+            $(".bind-exist-send-btn").text(name666);  //按钮值修改为重新发送
         }
         else {
             curCount--;  //当倒计时不等于0时 
-            $(".bind-exist-send-btn").text(curCount + "s" + "倒计时执行计数");//倒计时执行计数
+            $(".bind-exist-send-btn").text(curCount + "s" + name666);//倒计时执行计数 
         }
     };
 };
@@ -276,7 +276,7 @@ function sendNewCode(phoneNumber, phoneCode, bindType) {
                     //设置button效果，开始计时
                     $(".bind-new-send-btn").attr("disabled", "true");//禁用重新发送按钮
                     $(".bind-new-send-btn").css("color", "#666");//修改按钮值颜色
-                    $(".bind-new-send-btn").text(curCount + "s" + "重新发送");//按钮值修改为 '倒计时' + '重新发送'
+                    $(".bind-new-send-btn").text(curCount + "s" + name666);//按钮值修改为 '倒计时' + '重新发送'
                     InterValObj = window.setInterval(SetRemainTime, 1000); //启动计时器，1秒执行一次
                 } else {
                     msg = getMessage(msg);
@@ -284,11 +284,11 @@ function sendNewCode(phoneNumber, phoneCode, bindType) {
                 }
             },
             error: function () {
-                showMessage("页面过期！请重新操作！");	//"页面过期！请重新操作！"
+                showMessage(name730);	//"页面过期！请重新操作！"
             }
         });
     } else {
-        $(".new-phone-msg").find("small:visible").text("请输入正确的手机号码");		//请输入正确的手机号码！
+        $(".new-phone-msg").find("small:visible").text(name667);		//请输入正确的手机号码！
         $(".bind-new-phone").focus();//获取手机号输入框input焦点
         return false;
     }
@@ -301,12 +301,12 @@ function sendNewCode(phoneNumber, phoneCode, bindType) {
             $(".bind-new-send-btn").css("background-color", "#D7DCDE");
             $(".bind-new-send-btn").css("border-color", "#D7DCDE");
             $(".bind-new-send-btn").css("color", "#868b8a");//修改按钮值颜色
-            $(".bind-new-send-btn").text("按钮值修改为重新发送");  //按钮值修改为重新发送
+            $(".bind-new-send-btn").text(name666);  //按钮值修改为重新发送
             code = ""; //清除验证码。如果不清除，过时间后，输入收到的验证码依然有效
         }
         else {
             curCount--;  //当倒计时不等于0时
-            $(".bind-new-send-btn").text(curCount + "s" + "倒计时执行计数");//倒计时执行计数
+            $(".bind-new-send-btn").text(curCount + "s" + name666);//倒计时执行计数
         }
     };
 };
@@ -335,7 +335,7 @@ function show_msg() {
         msg = getMessage(msg);
         showMessage(msg);
     } else {
-        showMessage("本登录账号需要绑定手机号");	//"本登录账号需要绑定手机号"
+        showMessage(name721);	//"本登录账号需要绑定手机号"
     }
 }
 
@@ -355,39 +355,39 @@ function showMessage(msg) {
 
 function getMessage(msg) {
     if (msg == "200") {
-        return "绑定手机号成功！请重新登录!";	 //"绑定手机号成功！请重新登录!";
+        return name732;	//"绑定手机号成功！请重新登录!";
         setTimeout(function () {
             windows.location.href = http_request + "/logout";
         }, 2000);
     }
     if (msg == "1001") {
-        return "手机号不能为空！";
+        return name653;
     }	//"手机号不能为空！"
     if (msg == "1002") {
         clickBindNewTab();
         var curPhone = $(".bind-new-phone").val();
         $(".bind-exist-phone").val(curPhone);
-        return "手机号未注册，请注册新账号！"; 	//"手机号未注册，请注册新账号！";
+        return name669; 	//"手机号未注册，请注册新账号！";
     }
     if (msg == "1003") {
         clickBindExistTab();
-        return "手机号已存在，请直接绑定已有账号！";		//"手机号已存在，请直接绑定已有账号！";
+        return name733;		//"手机号已存在，请直接绑定已有账号！";
     }
     if (msg == "1004") {
-        return "操作失败！";
+        return name670;
     }		//"操作失败！"
     if (msg == "1005") {
-        return "验证码错误！";
+        return name671;
     }		//"验证码错误！"
     if (msg == "1006") {
         setTimeout(function () {
             window.location.href = "login";
         }, 2000);
         //定时跳转页面
-        return "页面已过期，三秒后回到登录页面。";	//"页面已过期，三秒后回到登录页面。";
+        return name734;	//"页面已过期，三秒后回到登录页面。";
     }
     if (msg == "1007") {
-        return "地区有误！";
+        return name672;
     }	//"地区有误！"
 }
 

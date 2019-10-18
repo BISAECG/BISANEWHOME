@@ -31,10 +31,10 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12" style="background: url('../resources/img/download/banner.png');height: 889px;padding-top: 100px;">
-            <div class="col-md-offset-3 pull-left">
+            <div class="col-md-offset-2 pull-left">
                 <img class="img-responsive center-block" src="../resources/img/download/banner-left.png" alt="Bisha Health APP download">
             </div>
-            <div class=" pull-left" style="margin-left: 64px;">
+            <div class=" pull-left" style="margin-left: 50px;">
                 <p class="download-title"> Bisa Kangjian APP</p>
                 <p class="download-descrip"> Monitor ECG without leaving your home</p>
                 <p style="font-size:20px;color:rgba(254,254,254,1);">Keep you indoors for ECG measurements</p>
@@ -42,10 +42,10 @@
                 <p class="pt-15">
                 <div class="row">
                     <div class="download-ios  pull-left text-center" style=" width:200px;height:35px;">
-                        <span><i class="fa fa-apple" aria-hidden="true"></i>Ios version download</span>
+                        <span><i class="fa fa-apple" aria-hidden="true"></i>Ios  download</span>
                     </div>
-                    <div class="download-android pull-left col-md-offset-1 text-center" style=" width:200px;height:35px;">
-                        <span><i class="fa fa-android" aria-hidden="true"></i>Android version download</span>
+                    <div class="download-android pull-left col-md-offset-1 text-center" style=" width:240px;height:35px;">
+                        <span><i class="fa fa-android" aria-hidden="true"></i>Android  download</span>
                     </div>
                 </div>
 

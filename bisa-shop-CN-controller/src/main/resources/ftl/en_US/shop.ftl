@@ -173,6 +173,7 @@
 </body>
 <script>
     //根据选择的数量计算总价，并显示出来
+
     $(function () {
         //加号
         var price1 = 1280;

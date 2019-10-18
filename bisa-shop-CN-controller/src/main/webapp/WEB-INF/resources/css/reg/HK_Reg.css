@@ -22,12 +22,8 @@
 .ml-0i{margin-left: 0px !important;}
 .mr-0i{margin-right: 0px !important;}
 .min-w-120{min-width: 120px;}
-.min-w-160{min-width: 160px;}
 .has-error .sel-telphone{background-color: #f2dede;border-color:#f2dede;box-shadow: none;}
-.has-success .sel-telphone{background-color: #fff;border-color:#ccc;box-shadow: none;}
-.has-success .form-control:focus{border-color:#ccc !important;box-shadow: none !important;}
-.has-success .form-control{border-color:#ccc !important;box-shadow: none !important; }
-.has-success .input-group-addon{border-color:#ccc !important;background-color:#fff !important;}
+.has-success .sel-telphone{background-color: #dff0d8;border-color:#dff0d8;box-shadow: none;}
 .min-h-250{min-height: 250px;}
 .min-h-335{min-height: 335px;}
 .min-h-350{min-height: 350px;}
@@ -36,9 +32,6 @@
 .min-h-560{min-height: 560px;}
 
 .w-40{width: 40px;}
-.w-60{width: 60px;}
-.w-70{width: 70px;}
-.w-80{width: 80px;}
 .w-100{width: 100px;}
 .w-120{width: 120px;}
 .w-180{width: 180px;}
@@ -46,9 +39,6 @@
 .w-235{width: 235px;}
 .w-250{width: 250px;}
 .w-296{width: 296px;}
-.w-300{width: 300px;}
-.w-325{width: 325px;}
-.w-370{width: 370px;}
 .w-335{width: 335px;}
 .w-374{width: 374px;}
 .w-396{width: 396px;}

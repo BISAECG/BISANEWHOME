@@ -32,10 +32,10 @@
         </div>
     </nav>
     <div class='container head mb-10'>
-        <div class='row'>
-            <div class='col-md-2' style='border-right:2px solid #F1F1F1;height: 80px;'>
-                <a href='../index/index_CN.html' >
-                    <img class='img-responsive center-block' style='margin-top: 20px;' src='../../resources/img/index/logov1.png'  alt='碧沙康健logo'>
+        <div class='row pos-r'>
+            <div class='col-md-2 pos-a' style='height: 100px;left: 0;padding-right: 0px;'>
+                <a href='index.html' >
+                    <img class='img-responsive center-block'  src='../resources/img/index/logov1.png'  alt='碧沙康健logo'>
                 </a>
             </div>
             <div class='pull-left' style='margin-left: 15px;'>

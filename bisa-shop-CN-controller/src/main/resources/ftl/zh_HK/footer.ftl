@@ -4,11 +4,11 @@
         <div class="container" style="margin-top: 20px;">
             <div class="row">
                 <div class="col-md-2 mt-20">
-                    <!--關于碧沙-->
+                    <!--關於碧沙-->
                     <div class="pull-left  text-center" id="7000B">
                         <ul style="color: #2556A7;">
                             <p class="f-14" >
-                                <span class="t-nonehove" style="color: #FFF;">關于碧沙</span>
+                                <span class="t-nonehove" style="color: #FFF;">關於碧沙</span>
                             </p>
                             <li class="pt-20" style="border-top: 2px solid #323137;box-shadow:0px 1px 0px 0px rgba(40,39,45,1);">
                                 <span style="width: 8px;height: 8px;border-radius: 50%;background: #2556A7;"></span>
@@ -17,8 +17,8 @@
                                 </a>
                             </li>
                             <li class="pt-10">
-                                <a class="col-8c8c8c t-nonehove hovecol-309DE2 f-12" href="About.html">
-                                    聯絡我們
+                                <a class="col-8c8c8c t-nonehove hovecol-309DE2 f-12" href="ContactUs.html">
+                                    公司地址
                                 </a>
                             </li>
                         </ul>
@@ -32,11 +32,11 @@
                                 <span class="t-nonehove" style="color: #FFF;">健康資訊</span>
                             </p>
                             <li class="pt-20" style="border-top: 2px solid #323137;box-shadow:0px 1px 0px 0px rgba(40,39,45,1);">
-                                <a class="col-8c8c8c t-nonehove hovecol-309DE2 f-12" href="newsIndex.html">
-                                    心髒資訊</a></li>
-                            <li class="pt-10"><a class="col-8c8c8c t-nonehove hovecol-309DE2 f-12" href="newsIndex.html">
+                                <a class="col-8c8c8c t-nonehove hovecol-309DE2 f-12" href="news.html">
+                                    心臟資訊</a></li>
+                            <li class="pt-10"><a class="col-8c8c8c t-nonehove hovecol-309DE2 f-12" href="news.html">
                                 血壓資訊</a></li>
-                            <li class="pt-10"><a class="col-8c8c8c t-nonehove hovecol-309DE2 f-12" href="newsIndex.html">
+                            <li class="pt-10"><a class="col-8c8c8c t-nonehove hovecol-309DE2 f-12" href="news.html">
                                 血氧資訊</a></li>
                         </ul>
                     </div>
@@ -48,7 +48,7 @@
                             <p>
                                 <span class="t-nonehove" style="color: #FFF;">購物指南</span>
                             </p>
-                            <li class="pt-20" style="border-top: 2px solid #323137;box-shadow:0px 1px 0px 0px rgba(40,39,45,1);"><a class="col-8c8c8c t-nonehove hovecol-309DE2 f-12" href="HowToShop_CN.html">
+                            <li class="pt-20" style="border-top: 2px solid #323137;box-shadow:0px 1px 0px 0px rgba(40,39,45,1);"><a class="col-8c8c8c t-nonehove hovecol-309DE2 f-12" href="HowToShop.html">
                                 發貨時效</a></li>
                             <li class="pt-10"><a class="col-8c8c8c t-nonehove hovecol-309DE2 f-12" href="HowToShop.html">
                                 售後政策</a></li>
@@ -116,7 +116,7 @@
                                 <a class="col-8c8c8c t-nonehove hovecol-309DE2 f-12" href="instructions.html">
                                     悉心心電儀App</a></li>
                             <li class="pt-20">
-                                <a class="col-8c8c8c t-nonehove hovecol-309DE2 f-12"  href="../../../webapp/WEB-INF/html/zh_CN/newQA.html">
+                                <a class="col-8c8c8c t-nonehove hovecol-309DE2 f-12"  href="newQA.html">
                                     健康問答
                                 </a>
                             </li>
