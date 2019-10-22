@@ -229,5 +229,9 @@ a.more-link {
 </section>
 
 
-
+<script type="text/javascript">
+	window.setTimeout(function(){
+		history.go(-1); 
+	},3000);
+</script>
 </body></html>

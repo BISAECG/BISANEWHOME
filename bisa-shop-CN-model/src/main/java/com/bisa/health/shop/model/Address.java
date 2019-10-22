@@ -12,10 +12,14 @@ import java.io.Serializable;
  */
 
 @Entity
-@Table(name = "h_address")
+@Table(name = "s_address")
 public class Address implements Serializable {
 
-    private Integer id;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private Integer id;
     private Integer user_id;        // 买家id
     private String consignee;         // 收货人名字
     private String phone;            // 收货人手机号码
@@ -29,8 +33,6 @@ public class Address implements Serializable {
 
     private String address_label;   // 标签(家，公司，其他)
     private String is_default;        // 是否是默认地址 0-不是默认； 1-默认
-    private  Integer country_id;    //国家下标
-
 
 
     @Id
@@ -130,20 +132,15 @@ public class Address implements Serializable {
     public void setIs_default(String is_default) {
         this.is_default = is_default;
     }
-    public Integer getCountry_id() {
-        return country_id;
-    }
 
-    public void setCountry_id(Integer country_id) {
-        this.country_id = country_id;
-    }
-    @Override
-    public String toString() {
-        return "Address [id=" + id + ", user_id=" + user_id + ", consignee=" + consignee + ", phone=" + phone
-                + ", country=" + country + ", province=" + province + ", city=" + city + ", county=" + county
-                + ", town=" + town + ", detail_address=" + detail_address + ", address_label=" + address_label
-                + ", is_default=" + is_default +",country_id="+country_id+ "]";
-    }
+	@Override
+	public String toString() {
+		return "Address [id=" + id + ", user_id=" + user_id + ", consignee=" + consignee + ", phone=" + phone
+				+ ", country=" + country + ", province=" + province + ", city=" + city + ", county=" + county
+				+ ", town=" + town + ", detail_address=" + detail_address + ", address_label=" + address_label
+				+ ", is_default=" + is_default + "]";
+	}
+    
 
 
 }

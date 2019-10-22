@@ -1,7 +1,8 @@
 package com.bisa.health.shop.admin.controller;
 
-import com.bisa.health.shop.admin.service.IAdminCompanyInfoService;
 import com.bisa.health.shop.model.CompanyInfo;
+import com.bisa.health.shop.service.ICompanyInfoService;
+
 import org.apache.shiro.authz.annotation.Logical;
 import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +19,7 @@ import java.util.Date;
 @RequiresRoles(value = {"ROLE_ADMIN", "ROLE_CUSTOMER", "ROLE_STORE"}, logical = Logical.OR)
 public class AdminCompanyInfoController {
     @Autowired
-    private IAdminCompanyInfoService companyInfoService;
+    private ICompanyInfoService companyInfoService;
 
     /**
      * 修改公司显示信息

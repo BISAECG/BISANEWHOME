@@ -15,10 +15,10 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.bisa.health.basic.entity.Pager;
 import com.bisa.health.basic.entity.SystemContext;
-import com.bisa.health.shop.admin.model.AppServer;
-import com.bisa.health.shop.admin.model.AppUpdate;
-import com.bisa.health.shop.admin.service.IAdminAppServerService;
-import com.bisa.health.shop.admin.service.IAdminAppUpdateService;
+import com.bisa.health.shop.model.AppServer;
+import com.bisa.health.shop.model.AppUpdate;
+import com.bisa.health.shop.service.IAppServerService;
+import com.bisa.health.shop.service.IAppUpdateService;
 
 import net.sf.json.JSONObject;
 
@@ -29,10 +29,10 @@ public class AppAjaxRestController {
 	
 	
     @Autowired
-    private IAdminAppUpdateService appUpdateService;
+    private IAppUpdateService appUpdateService;
 
     @Autowired
-    private IAdminAppServerService serverUpdateService;
+    private IAppServerService serverUpdateService;
 	@Autowired
 	private FastDFSClient fastDFSClient;
     @RequestMapping(value = "/app/list")

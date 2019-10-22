@@ -2,10 +2,8 @@ package com.bisa.health.shop.controller;
 
 import com.bisa.health.shop.model.Guestbook;
 
-import com.bisa.health.shop.service.IGuestbookService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -24,8 +22,6 @@ import java.text.SimpleDateFormat;
 @Controller
 public class ContactController {
 
-    @Autowired
-    private IGuestbookService iGuestbookService;
 
     private Logger logger = LogManager.getLogger(ContactController.class);
 
@@ -81,7 +77,7 @@ public class ContactController {
         guestbook.setMessage_time(sdf.format(System.currentTimeMillis()));
 
         try {
-            iGuestbookService.addGuestbook(guestbook);
+           // iGuestbookService.addGuestbook(guestbook);
         } catch (Exception e) {
             logger.debug("添加留言失败---", e);
             return false;

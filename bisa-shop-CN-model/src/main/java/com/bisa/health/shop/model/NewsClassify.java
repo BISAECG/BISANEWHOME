@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name="h_news_classify")
+@Table(name="s_news_classify")
 public class NewsClassify implements Serializable {
 
     private static final long serialVersionUID = -5146253085136253313L;

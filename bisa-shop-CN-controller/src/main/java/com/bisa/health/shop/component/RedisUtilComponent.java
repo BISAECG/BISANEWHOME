@@ -1,7 +1,6 @@
 package com.bisa.health.shop.component;
 
 
-import com.bisa.health.shop.dto.GoodsShopcar;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
@@ -392,24 +391,6 @@ public class RedisUtilComponent {
         }
     }
 
-    /**
-     * 将list放入缓存
-     *
-     * @param key   键
-     * @param value 值
-     * @param index 索引
-     * @return
-     */
-    public boolean lSetIndex(String key, GoodsShopcar goodsShopcar, long index) {
-        try {
-            redisTemplate.opsForList().set(key, index, goodsShopcar);
-            return true;
-        } catch (Exception e) {
-            e.printStackTrace();
-            return false;
-        }
-
-    }
 
     /**
      * 将list放入缓存

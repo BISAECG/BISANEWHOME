@@ -1,217 +1,162 @@
 package com.bisa.health.shop.model;
 
-import javax.persistence.*;
 import java.io.Serializable;
-import java.math.BigDecimal;
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import org.hibernate.validator.constraints.Length;
+
+import com.bisa.health.entity.bind.CustomDateSerializer;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+
 /**
- * 商品model
+ * 商品表
+ * @author Administrator
+ *
  */
-
 @Entity
-@Table(name = "h_goods")
+@Table(name = "s_goods")
 public class Goods implements Serializable {
-
-    private static final long serialVersionUID = -4256398755051915154L;
-
-    private Integer id;
-    private Integer classifyId;    //商品分类编号
-    private String goodsName;      //商品名字
-    private String goodsNumber;    //商品编号(uuid)
-
-    private String title;            //商品大标题
-    private String description;        //商品描述
-    private BigDecimal goodsPrice;        //单价
-    private Integer storeNumber;   //商品库存数量
-
-    private Integer needPost;        //0-不需要邮递；1-需要邮递
-    private Integer goodsStatus;   // 0售罄，1销售中，2下架
-
-    private Date putawayTime;        //上架时间
-    private Date soldoutTime;        //下架时间
-    private Integer salesNumber;    //销量
-    private Integer appraiseNumber;//评论数量
-
-    private String imgUrl;  //主图
-    private Integer parentId;  //商品父类id
-
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	/**
+	 * 自增ID
+	 */
+	private int id;
+	/**
+	 * 商品ID
+	 */
+	private String number;
+	/**
+	 * 商品名字
+	 */
+	private String name;
+	/**
+	 * 商品描述
+	 */
+	private String desc;
+	/**
+	 * 商品类型
+	 */
+	private int type;
+	/**
+	 * 商品价格
+	 */
+	private int price;
+	/**
+	 * 语言版本
+	 */
+	private String lang;
+	/**
+	 * 商品详情ID
+	 */
+	private int detail_id;
+	/**
+	 * 商品分类ID
+	 */
+	private int category_id;
+	/**
+	 * 商品详情名字
+	 */
+	private String category_name;
+	/**
+	 * 创建时间
+	 */
+	private Date c_time;
+	
     @Id
     @GeneratedValue
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    @Column(name = "classify_id")
-    public Integer getClassifyId() {
-        return classifyId;
-    }
-
-    public void setClassifyId(Integer classifyId) {
-        this.classifyId = classifyId;
-    }
-
-    @Column(name = "goods_name")
-    public String getGoodsName() {
-        return goodsName;
-    }
-
-    public void setGoodsName(String goodsName) {
-        this.goodsName = goodsName;
-    }
-
-    @Column(name = "goods_number")
-    public String getGoodsNumber() {
-        return goodsNumber;
-    }
-
-    public void setGoodsNumber(String goodsNumber) {
-        this.goodsNumber = goodsNumber;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    @Column(name = "goods_price")
-    public BigDecimal getGoodsPrice() {
-        return goodsPrice;
-    }
-
-    public void setGoodsPrice(BigDecimal goodsPrice) {
-        this.goodsPrice = goodsPrice;
-    }
-
-    @Column(name = "store_number")
-    public Integer getStoreNumber() {
-        return storeNumber;
-    }
-
-    public void setStoreNumber(Integer storeNumber) {
-        this.storeNumber = storeNumber;
-    }
-
-    @Column(name = "need_post")
-    public Integer getNeedPost() {
-        return needPost;
-    }
-
-    public void setNeedPost(Integer needPost) {
-        this.needPost = needPost;
-    }
-
-    @Column(name = "putaway_time")
-    public Date getPutawayTime() {
-        return putawayTime;
-    }
-
-    public void setPutawayTime(Date putawayTime) {
-        this.putawayTime = putawayTime;
-    }
-
-    @Column(name = "soldout_time")
-    public Date getSoldoutTime() {
-        return soldoutTime;
-    }
-
-    public void setSoldoutTime(Date soldoutTime) {
-        this.soldoutTime = soldoutTime;
-    }
-
-    @Column(name = "sales_number")
-    public Integer getSalesNumber() {
-        return salesNumber;
-    }
-
-    public void setSalesNumber(Integer salesNumber) {
-        this.salesNumber = salesNumber;
-    }
-
-    @Column(name = "appraise_number")
-    public Integer getAppraiseNumber() {
-        return appraiseNumber;
-    }
-
-    public void setAppraiseNumber(Integer appraiseNumber) {
-        this.appraiseNumber = appraiseNumber;
-    }
-
-    @Column(name = "img_url")
-    public String getImgUrl() {
-        return imgUrl;
-    }
-
-    public void setImgUrl(String imgUrl) {
-        this.imgUrl = imgUrl;
-    }
-
-    @Column(name = "goods_status")
-    public Integer getGoodsStatus() {
-        return goodsStatus;
-    }
-
-    public void setGoodsStatus(Integer goodsStatus) {
-        this.goodsStatus = goodsStatus;
-    }
-
-    @Column(name = "parent_id")
-    public Integer getParentId() {
-        return parentId;
-    }
-
-    public void setParentId(Integer parentId) {
-        this.parentId = parentId;
-    }
-
-    public Goods() {
-        super();
-    }
-
-    public Goods(Integer id, Integer classifyId, String goodsName, String goodsNumber, String title, String description,
-                 BigDecimal goodsPrice, Integer storeNumber, Integer needPost, Integer goodsStatus, Date putawayTime,
-                 Date soldoutTime, Integer salesNumber, Integer appraiseNumber, String imgUrl, Integer parentId) {
-        super();
-        this.id = id;
-        this.classifyId = classifyId;
-        this.goodsName = goodsName;
-        this.goodsNumber = goodsNumber;
-        this.title = title;
-        this.description = description;
-        this.goodsPrice = goodsPrice;
-        this.storeNumber = storeNumber;
-        this.needPost = needPost;
-        this.goodsStatus = goodsStatus;
-        this.putawayTime = putawayTime;
-        this.soldoutTime = soldoutTime;
-        this.salesNumber = salesNumber;
-        this.appraiseNumber = appraiseNumber;
-        this.imgUrl = imgUrl;
-        this.parentId = parentId;
-    }
-
-    @Override
-    public String toString() {
-        return "Goods [id=" + id + ", classifyId=" + classifyId + ", goodsName=" + goodsName + ", goodsNumber="
-                + goodsNumber + ", title=" + title + ", description=" + description + ", goodsPrice=" + goodsPrice
-                + ", storeNumber=" + storeNumber + ", needPost=" + needPost + ", goodsStatus=" + goodsStatus
-                + ", putawayTime=" + putawayTime + ", soldoutTime=" + soldoutTime + ", salesNumber=" + salesNumber
-                + ", appraiseNumber=" + appraiseNumber + ", imgUrl=" + imgUrl + ", parentId=" + parentId + "]";
-    }
-
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+	@Column(length=32)
+	public String getNumber() {
+		return number;
+	}
+	public void setNumber(String number) {
+		this.number = number;
+	}
+	@Column(length=50)
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getDesc() {
+		return desc;
+	}
+	public void setDesc(String desc) {
+		this.desc = desc;
+	}
+	
+	public int getType() {
+		return type;
+	}
+	public void setType(int type) {
+		this.type = type;
+	}
+	public int getPrice() {
+		return price;
+	}
+	public void setPrice(int price) {
+		this.price = price;
+	}
+	@Column(length=16)
+	public String getLang() {
+		return lang;
+	}
+	public void setLang(String lang) {
+		this.lang = lang;
+	}
+	public int getDetail_id() {
+		return detail_id;
+	}
+	public void setDetail_id(int detail_id) {
+		this.detail_id = detail_id;
+	}
+	public int getCategory_id() {
+		return category_id;
+	}
+	public void setCategory_id(int category_id) {
+		this.category_id = category_id;
+	}
+	
+	@Column(length=50)
+	public String getCategory_name() {
+		return category_name;
+	}
+	public void setCategory_name(String category_name) {
+		this.category_name = category_name;
+	}
+	
+	@JsonSerialize(using = CustomDateSerializer.class)
+	@Column(name="c_time",columnDefinition="timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP")
+	public Date getC_time() {
+		return c_time;
+	}
+	public void setC_time(Date c_time) {
+		this.c_time = c_time;
+	}
+	@Override
+	public String toString() {
+		return "Goods [id=" + id + ", number=" + number + ", name=" + name + ", desc=" + desc + ", type=" + type
+				+ ", price=" + price + ", lang=" + lang + ", detail_id=" + detail_id + ", category_id=" + category_id
+				+ ", category_name=" + category_name + ", c_time=" + c_time + "]";
+	}
+	
+	
+	
 }

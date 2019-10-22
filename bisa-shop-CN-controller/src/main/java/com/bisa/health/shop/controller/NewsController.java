@@ -1,9 +1,9 @@
 package com.bisa.health.shop.controller;
 
 import com.bisa.health.basic.entity.Pager;
-import com.bisa.health.shop.admin.service.IAdminNewsService;
 import com.bisa.health.shop.enumerate.InternationalizationEnum;
 import com.bisa.health.shop.model.News;
+import com.bisa.health.shop.service.INewsService;
 import com.bisa.health.shop.service.INewsService;
 import com.bisa.health.shop.utils.InternationalizationUtil;
 
@@ -29,7 +29,7 @@ public class NewsController {
     @Autowired
     private INewsService newsService;
     @Autowired
-    private IAdminNewsService adminNewsService;
+    private INewsService adminNewsService;
   
     @Autowired
     String outPath;

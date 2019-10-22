@@ -2,18 +2,15 @@ package com.bisa.health.shop.admin.controller;
 
 import com.bisa.fastdfs.FastDFSClient;
 import com.bisa.health.client.remote.RemoteInterface;
-import com.bisa.health.shop.admin.dto.SelectBean;
-import com.bisa.health.shop.admin.model.AppServer;
-import com.bisa.health.shop.admin.model.AppUpdate;
-import com.bisa.health.shop.admin.service.IAdminAppServerService;
-import com.bisa.health.shop.admin.service.IAdminAppUpdateService;
-import com.bisa.health.shop.admin.service.IAdminGoodsImgService;
-import com.bisa.health.shop.admin.service.IAdminHtmlInfoService;
 import com.bisa.health.shop.admin.util.JsonResult;
 import com.bisa.health.shop.enumerate.IndexImgEnum;
 import com.bisa.health.shop.enumerate.InternationalizationEnum;
-import com.bisa.health.shop.model.GoodsImg;
+import com.bisa.health.shop.model.AppServer;
+import com.bisa.health.shop.model.AppUpdate;
 import com.bisa.health.shop.model.HtmlInfo;
+import com.bisa.health.shop.service.IAppServerService;
+import com.bisa.health.shop.service.IAppUpdateService;
+import com.bisa.health.shop.service.IHtmlInfoService;
 import com.bisa.health.shop.validator.ValidAdminBean;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.LogManager;
@@ -28,13 +25,7 @@ import org.springframework.validation.ObjectError;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.multipart.MultipartFile;
-
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
-import java.util.UUID;
 
 /**
  * bisa管理系统后台   主页
@@ -46,20 +37,18 @@ import java.util.UUID;
 @RequiresRoles(value = {"ROLE_ADMIN", "ROLE_CUSTOMER", "ROLE_STORE"}, logical = Logical.OR)
 public class AdminIndexController {
 
-    @Autowired
-    private IAdminGoodsImgService goodsImgService;
     
     @Autowired
-    private IAdminAppUpdateService appUpdateService;
+    private IAppUpdateService appUpdateService;
 
     @Autowired
     private RemoteInterface remoteService;
     
     @Autowired
-    private IAdminAppServerService serverUpdateService;
+    private IAppServerService serverUpdateService;
     
     @Autowired
-    private IAdminHtmlInfoService adminHtmlInfoService;
+    private IHtmlInfoService adminHtmlInfoService;
 
     @Autowired
     private FastDFSClient fastDFSClient;
@@ -202,39 +191,7 @@ public class AdminIndexController {
     	}
         return "redirect:/admin/system";
     }
-    /**
-     * 加载首页的图片
-     * @param lang 语言版本
-     * @return
-     */
-    @RequestMapping(value = "/indexImgs")
-    @ResponseBody
-    public List<GoodsImg> getIndexImgs(Integer lang) {
-        List<GoodsImg> indexImgs = goodsImgService.getIndexImgsByLang(String.valueOf(IndexImgEnum.index_img.getValue()), lang);
-        return indexImgs;
-    }
-
-    /**
-     * 获取还没有国际化图片的版本
-     */
-    @RequestMapping(value = "/selectLanguage")
-    @ResponseBody
-    public List<SelectBean> addIndexImg() {
-
-        List<SelectBean> list = new ArrayList<>();
-        SelectBean bean;
-
-        //下拉框用的国际化数据
-        for (InternationalizationEnum e : InternationalizationEnum.values()) {
-            bean = new SelectBean();
-            bean.setKey(e.getValue());
-            bean.setValue(e.getMsg());
-            bean.setFlag(true);
-            list.add(bean);
-        }
-        return list;
-    }
-
+  
    
 
 }

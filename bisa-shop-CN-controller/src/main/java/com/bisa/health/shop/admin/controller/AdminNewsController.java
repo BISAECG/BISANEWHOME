@@ -12,11 +12,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.websocket.server.PathParam;
 
 import com.bisa.fastdfs.FastDFSClient;
-import com.bisa.health.shop.admin.service.IAdminClassifyService;
-import com.bisa.health.shop.admin.service.IAdminNewsClassifyService;
 import com.bisa.health.shop.enumerate.InternationalizationEnum;
 import com.bisa.health.shop.model.NewsClassify;
 import com.bisa.health.shop.model.NewsInLink;
+import com.bisa.health.shop.service.INewsClassifyService;
+import com.bisa.health.shop.service.INewsService;
 import com.bisa.health.shop.utils.InternationalizationUtil;
 import org.apache.shiro.authz.annotation.Logical;
 import org.apache.shiro.authz.annotation.RequiresRoles;
@@ -33,8 +33,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.bisa.health.common.utils.RandomUtils;
-import com.bisa.health.shop.admin.dto.OrderListPageDto;
-import com.bisa.health.shop.admin.service.IAdminNewsService;
+import com.bisa.health.shop.admin.dto.PageJsonDto;
 import com.bisa.health.shop.admin.util.JsonResult;
 import com.bisa.health.shop.component.FreemarkerComponent;
 import com.bisa.health.shop.model.News;
@@ -52,11 +51,11 @@ import com.bisa.health.shop.model.News;
 public class AdminNewsController {
 
     @Autowired
-    private IAdminNewsService newsService;
+    private INewsService newsService;
 
 
     @Autowired
-    private IAdminNewsClassifyService adminNewsClassifyService;
+    private INewsClassifyService adminNewsClassifyService;
     
     @Autowired
     FreemarkerComponent freemarkerComponent;
@@ -226,10 +225,10 @@ public class AdminNewsController {
      */
     @RequestMapping(value = "/selectNewsList", method = RequestMethod.GET)
     @ResponseBody
-    public OrderListPageDto<News> selectOrderList(Integer page,Integer limit, HttpServletRequest request) {
+    public PageJsonDto<News> selectOrderList(Integer page,Integer limit, HttpServletRequest request) {
         String incontent = request.getParameter("key[incontent]");
         String searchabout = request.getParameter("key[searchabout]");
-        OrderListPageDto<News> listPageDto = newsService.selectAllNews(page, limit, incontent, searchabout);
+        PageJsonDto<News> listPageDto = newsService.selectAllNews(page, limit, incontent, searchabout);
         return listPageDto;
     }
 
@@ -250,8 +249,8 @@ public class AdminNewsController {
      */
     @RequestMapping(value = "/selectInnerChainList", method = RequestMethod.GET)
     @ResponseBody
-    public OrderListPageDto<NewsInLink> selectInnerChainList(Integer page, Integer limit, HttpServletRequest request) {
-        OrderListPageDto<NewsInLink> listPageDto = newsService.selectInnerChainList(page, limit);
+    public PageJsonDto<NewsInLink> selectInnerChainList(Integer page, Integer limit, HttpServletRequest request) {
+    	PageJsonDto<NewsInLink> listPageDto = newsService.selectInnerChainList(page, limit);
         return listPageDto;
     }
     /**
@@ -268,7 +267,6 @@ public class AdminNewsController {
             if (newsInnerChain!=null){
                 newsInnerChain.setCreation_time(new Date());
                 newsService.addInnerChain(newsInnerChain);
-                // GenerateHTMLs();
                 jsonResult.setFlag(true);
             }else{
                 jsonResult.setFlag(false);
@@ -293,7 +291,6 @@ public class AdminNewsController {
         int new_id=id;
         try {
             newsService.delectInnerChain(id);
-           // GenerateHTMLs();
             jsonResult.setFlag(true);
         } catch (Exception e) {
             e.printStackTrace();

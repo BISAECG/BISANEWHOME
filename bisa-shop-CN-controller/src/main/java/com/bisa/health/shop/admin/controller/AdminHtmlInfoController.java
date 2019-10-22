@@ -1,13 +1,13 @@
 package com.bisa.health.shop.admin.controller;
 
-import com.bisa.health.shop.admin.dto.OrderListPageDto;
 import com.bisa.health.shop.admin.dto.PageJsonDto;
-import com.bisa.health.shop.admin.service.IAdminCompanyInfoService;
-import com.bisa.health.shop.admin.service.IAdminHtmlInfoService;
 import com.bisa.health.shop.admin.util.JsonResult;
 import com.bisa.health.shop.component.FreemarkerComponent;
 import com.bisa.health.shop.model.CompanyInfo;
 import com.bisa.health.shop.model.HtmlInfo;
+import com.bisa.health.shop.service.ICompanyInfoService;
+import com.bisa.health.shop.service.IHtmlInfoService;
+
 import org.apache.shiro.authz.annotation.Logical;
 import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,9 +33,9 @@ import java.util.Map;
 public class AdminHtmlInfoController {
 
     @Autowired
-    private IAdminHtmlInfoService adminHtmlInfoService;
+    private IHtmlInfoService adminHtmlInfoService;
     @Autowired
-    private IAdminCompanyInfoService companyInfoService;
+    private ICompanyInfoService companyInfoService;
     
     @Autowired
     FreemarkerComponent freemarkerComponent;

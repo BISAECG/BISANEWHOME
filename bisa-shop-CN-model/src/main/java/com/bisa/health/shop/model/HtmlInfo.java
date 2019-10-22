@@ -13,7 +13,7 @@ import java.util.Date;
  * 网页信息
  */
 @Entity
-@Table(name = "h_html_info")
+@Table(name = "s_html_info")
 public class HtmlInfo implements Serializable {
 
     /**

@@ -10,7 +10,7 @@ import java.util.Date;
  * 新闻model
  */
 @Entity
-@Table(name = "h_news")
+@Table(name = "s_news")
 public class News  implements Serializable{
 
     private static final long serialVersionUID = 8489060357520626852L;

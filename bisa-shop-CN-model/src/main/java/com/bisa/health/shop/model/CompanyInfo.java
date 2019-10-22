@@ -8,7 +8,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 @Entity
-@Table(name = "h_company_info")
+@Table(name = "s_company_info")
 public class CompanyInfo implements Serializable {
     private Integer id;
     private String company_address_CN; //公司中文地址

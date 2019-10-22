@@ -17,11 +17,13 @@
   display: inline-block;
   position: relative;
 }
-.error-container > span.four {
-  width: 136px;
+.error-container > span.five {
+  width: 100px;
   height: 43px;
+  right:20px;
   border-radius: 999px;
-  background: linear-gradient(
+   bottom: 85px;
+   background: linear-gradient(
       140deg,
       rgba(0, 0, 0, 0.1) 0%,
       rgba(0, 0, 0, 0.07) 43%,
@@ -37,20 +39,23 @@
       transparent 77%,
       transparent 100%
     ),
-    linear-gradient(to right, #d89ca4, #e27b7e);
+    linear-gradient(to right, #d89ca4, #e27b7e); 
 }
-.error-container > span.four:before,
-.error-container > span.four:after {
+.error-container > span.five:before,
+.error-container > span.five:after {
   content: "";
   display: block;
   position: absolute;
   border-radius: 999px;
 }
-.error-container > span.four:before {
-  width: 43px;
-  height: 156px;
-  left: 60px;
-  bottom: -43px;
+
+
+.error-container > span.five:before {
+  width: 100px;
+  height: 43px;
+   transform: rotate(-90deg);
+  left: -30px;
+  bottom: -29px;
   background: linear-gradient(
       128deg,
       rgba(0, 0, 0, 0.1) 0%,
@@ -67,20 +72,56 @@
     ),
     linear-gradient(to top, #99749d, #b895ab, #cc9aa6, #d7969e, #e0787f);
 }
-.error-container > span.four:after {
-  width: 137px;
-  height: 43px;
-  transform: rotate(-49.5deg);
-  left: -18px;
-  bottom: 36px;
+.error-container > span.five:after {
+  width: 130px;
+  height: 120px;
+  transform: rotate(-360deg);
+  left: -10px;
+  bottom: -140px;
   background: linear-gradient(
-    to right,
-    #99749d,
-    #b895ab,
-    #cc9aa6,
-    #d7969e,
-    #e0787f
-  );
+      -45deg,
+      transparent 0%,
+      rgba(0, 0, 0, 0.06) 50%,
+      transparent 51%,
+      transparent 100%
+    ),
+    linear-gradient(
+      to top right,
+      #99749d,
+      #99749d,
+      #b895ab,
+      #cc9aa6,
+      #d7969e,
+      #ed8687,
+      #ed8687
+    );
+}
+
+.error-container > span.five > .mzero {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 999px;
+  width: 150px;
+  height: 70px;
+  left: -65px;
+  bottom: -116px;
+  z-index:1;
+  background: #fdfaf5;
+
+}
+
+.error-container > span.zero:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 999px;
+  width: 70px;
+  height: 70px;
+  left: 43px;
+  bottom: 43px;
+  background: #fdfaf5;
+  box-shadow: -2px 2px 2px 0px rgba(0, 0, 0, 0.1);
 }
 
 .error-container > span.zero {
@@ -136,6 +177,7 @@
       transparent 100%
     );
 }
+
 .error-container > span.zero:after {
   content: "";
   display: block;
@@ -216,6 +258,7 @@ a.more-link {
   margin-top: 50px;
   letter-spacing: 1px;
 }
+	
 </style>
 </head>
 <body>
@@ -224,11 +267,14 @@ a.more-link {
 <h1>500 Error </h1>
 <p class="zoom-area"><%=ex!=null?ex.getMessage():""%></p>
 <section class="error-container">
-  <span class="four"><span class="screen-reader-text">5</span></span>
+  <span class="five"><div class="mzero"></div><span class="screen-reader-text">5</span></span>
   <span class="zero"><span class="screen-reader-text">0</span></span>
-  <span class="four"><span class="screen-reader-text">0</span></span>
+  <span class="zero"><span class="screen-reader-text">0</span></span>
 </section>
-
-
-
-</body></html>
+</body>
+<script type="text/javascript">
+	window.setTimeout(function(){
+		history.go(-1); 
+	},3000);
+</script>
+</html>

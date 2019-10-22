@@ -5,7 +5,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 @Entity
-@Table(name="h_news_inlink")
+@Table(name="s_news_inlink")
 public class NewsInLink implements Serializable {
     private static final long serialVersionUID = -3392514471944951046L;
     private int id;

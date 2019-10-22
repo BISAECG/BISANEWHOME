@@ -2,26 +2,15 @@ package com.bisa.health.shop.controller;
 
 import com.bisa.health.client.entity.User;
 import com.bisa.health.shop.admin.util.JsonResult;
-import com.bisa.health.shop.model.GoodsImg;
-import com.bisa.health.shop.service.IGoodsImgService;
-import com.bisa.health.shop.utils.InternationalizationUtil;
-
-import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.SecurityUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.i18n.SessionLocaleResolver;
-
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
-import java.util.List;
 import java.util.Locale;
-import java.util.Scanner;
 
 /**
  * 商城首页
@@ -31,9 +20,6 @@ import java.util.Scanner;
 @Controller
 public class IndexController {
 
-    @Autowired
-    private IGoodsImgService goodsImgService;
-    
 
     /**
      * 商城首页   http://localhost:8080/health-shop/index
