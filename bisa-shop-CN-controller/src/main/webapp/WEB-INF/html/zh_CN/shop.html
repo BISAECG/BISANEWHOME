@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" href="Images/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon" />
+    <link rel="bookmark" href="Images/favicon.ico" type="image/x-icon" />
+    <base href="<%=basePath%>">
+    <meta http-equiv="Content-Type" content="text/html;" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <!-- necessary -->
+    <meta name="keywords" content="${html_keyWord}">
+    <meta name="description" content="${html_description}">
+    <!-- description -->
+    <meta name="renderer" content="webkit">
+    <title>${html_title}</title>
+    <!-- base -->
+    <link href="../resources/css/comm/base.css" rel="stylesheet">
+    <link href="../resources/css/index/index.css" rel="stylesheet">
+    <script src="../resources/js/comm/jquery.min.js"></script>
+    <style>
+        .spantitle{
+            color:rgba(153,153,153,1);
+            font-size:20px;
+            line-height:40px;
+            font-weight: 400;
+        }
+        .spanprice{
+            color:rgba(207,21,24,1);
+            line-height:40px;
+            font-size:28px;
+        }
+    </style>
+</head>
+
+<body>
+<div id="header"></div>
+<script>
+    $("#header").load("header.html");
+</script>
+<!--心电仪购买页面-->
+<div class="content" style="display: none;">
+    <div class="container" style="background:rgba(255,255,255,1);box-shadow:3px 9px 9px rgba(239,239,239,1);">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-1" style="margin-top: 28px;margin-bottom: 41px;">
+                <img class="img-responsive" src="../resources/img/shop/xixin.png">
+            </div>
+            <div class="col-md-6 col-md-offset-1" style="margin-top: 41px;">
+                <p style="font-size:24px;font-weight:400;color:rgba(51,51,51,1);">碧沙家用医用动态心电监测仪</p>
+                <p>
+                    <span class="spantitle">价格:</span>
+                    <span class="spanprice">¥ 1280</span>
+                </p>
+                <p>
+                <div class="goods_num clearfix">
+                    <div class="num_name  spantitle pull-left ">数 量：</div>
+                    <div class="num_add pull-left" style="margin-top: 5px;">
+                        <a href="javascript:;" class="minus fr">-</a>
+                        <input readonly='true' type="text" name="num" class="num_show fl text-center" style="width: 80px;" value="1">
+                        <a href="javascript:;" class="add fr">+</a>
+                    </div>
+                </div>
+
+                </p>
+                <p>
+                    <span class="spantitle">地区:</span>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" style="background:rgba(252,223,227,1);"> 香港
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 澳门
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 台湾
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option3"> 新加坡
+                    </label>
+                </p>
+                <p style="font-size:12px;color:rgba(208,18,17,1);">（因快递邮费问题其他地区请电话咨询我司销售人员或在下方留言）</p>
+                <form class="form-horizontal" >
+                    <div class="form-group" style="margin-bottom: 0px;">
+                        <label for="Address" class="col-sm-3 control-label spantitle" style="text-align: left;">详细地址:</label>
+                        <div class="col-sm-5" style="margin-top: 5px;">
+                            <input type="email" class="form-control" id="Address" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 0px;">
+                        <label for="name" class="col-sm-3 control-label spantitle" style="text-align: left;">姓名:</label>
+                        <div class="col-sm-5" style="margin-top: 5px;">
+                            <input type="text" class="form-control" id="name" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 0px;">
+                        <label for="phone" class="col-sm-3 control-label spantitle" style="text-align: left;">电话:</label>
+                        <div class="col-sm-5" style="margin-top: 5px;">
+                            <input type="text" class="form-control" id="phone" placeholder="">
+                        </div>
+                    </div>
+                </form>
+                <span class="spantitle">邮费:</span>
+                <span class="spanprice">¥</span>
+                <span class="spanprice" id="spanprice">999</span>
+                </p>
+                <p>
+                    <span class="spantitle">商品总价:</span>
+                    <span class="spanprice total"><em id="price">1280</em>元</span>
+                </p>
+                <button style="width:170px;height:34px;background:rgba(207,21,24,1);border-radius:5px;color: #fff;border: 0;">Submit Order</button>
+                <button style="width:170px;height:34px;background:rgba(91,209,161,1);border-radius:5px;color: #fff;border: 0;">Consult now</button>
+            </div>
+        </div>
+    </div>
+    <div style="width: 100%;background:rgba(153,153,153,1);margin-top: 68px;">
+        <div class="container">
+            <div class="row">
+                <p style="font-size:24px;color:rgba(255,255,255,1);line-height: 44px;margin-bottom: 0px;">在线留言</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <p style="font-size:20px;color:rgba(229,72,30,1);font-weight:400;margin-top: 20px;">
+                温馨提示：如您对我们的产品或其他相关问题有疑问，均可在下方留言提交您的问题，我们的销售人员会回复您。
+            </p>
+            <p>
+                <span style="font-size:20px;color:rgba(229,72,30,1);font-weight:400;">服务热线：</span>
+                <span style="font-size:30px;font-weight:bold;color:rgba(207,21,24,1);">(852)2423  0600</span>
+            </p>
+        </div>
+        <div class="row" style="margin-top: 25px;">
+            <form class="form-inline">
+                <div class="form-group col-md-3" style="padding-left: 0px;">
+                    <label for="name1" class="control-label " style="color:rgba(102,102,102,1);font-size:20px;font-weight: 400;">姓名:</label>
+                    <input type="text" class="form-control" id="name1" placeholder="请输入姓名">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="phone1" class="control-label " style="color:rgba(102,102,102,1);font-size:20px;font-weight: 400;">电话:</label>
+                    <input type="text" class="form-control" id="phone1" placeholder="请输入电话">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="email" class="control-label " style="color:rgba(102,102,102,1);font-size:20px;font-weight: 400;">邮箱:</label>
+                    <input type="email" class="form-control" id="email" placeholder="请输入邮箱">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="category" class="control-label " style="color:rgba(102,102,102,1);font-size:20px;font-weight: 400;">类别:</label>
+                    <select class="form-control" id="category">
+                        <option>个人</option>
+                        <option>企业</option>
+                        <option>医院</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+        <div class="row" style="margin-top: 50px;">
+            <p style="color:rgba(102,102,102,1);font-size:20px;font-weight: 400;">留言:</p>
+            <textarea class="form-control" rows="5" placeholder="请输入留言" style="box-shadow:0px 2px 38px 2px rgba(231,229,229,1);"></textarea>
+            <button style="background:rgba(43,122,174,1);border-radius:10px;width:200px;height:50px;margin-top: 20px;border: 0;color:#FFFFFF;margin-left: 40%;">
+                提交留言
+            </button>
+        </div>
+    </div>
+</div>
+<!--ai报告购买页面-->
+<div class="container">
+    <div class="row mt-40" style="box-shadow:0px 3px 48px 9px rgba(239,239,239,1);">
+        <div class="col-md-4 col-md-offset-1">
+            <img src="../resources/img/shop/ai-1.png" class="img-responsive" style="margin-top: 100px;margin-bottom: 100px;">
+        </div>
+        <div class="col-md-6 col-md-offset-1" style="margin-top: 120px;">
+            <p style="font-size:24px;color:rgba(51,51,51,1);font-weight:500;">专业报告</p>
+            <p style="font-size:20px;color:rgba(102,102,102,1);margin-bottom: 0px;">AI智能监测报告</p>
+            <p style="font-size:16px;color:rgba(207,21,24,1);">提示：此报告现仅支持英文</p>
+            <p>
+                <span class="spantitle">价格:</span>
+                <span class="spanprice">¥120</span>
+            </p>
+            <div class="goods_num clearfix">
+                <div class="num_name  spantitle pull-left ">数 量：</div>
+                <div class="num_add pull-left" style="margin-top: 5px;">
+                    <a href="javascript:;" class="minus fr">-</a>
+                    <input readonly='true' type="text" name="num" class="num_show fl text-center" style="width: 80px;" value="1">
+                    <a href="javascript:;" class="add fr">+</a>
+                </div>
+            </div>
+            <div>
+                <span class="spantitle">tuijian:</span>
+            </div>
+            <button style="width:170px;height:34px;background:rgba(207,21,24,1);border-radius:5px;color: #fff;border: 0;">Submit Order</button>
+            <button style="width:170px;height:34px;background:rgba(91,209,161,1);border-radius:5px;color: #fff;border: 0;">Consult now</button>
+        </div>
+    </div>
+</div>
+<div class="container-fluid text-center" style="height: 40px;background:rgba(183,87,134,1);">
+    <span style="font-size:22px;color:rgba(255,255,255,1);line-height: 40px;">AI智能监测报告</span>
+</div>
+<div class="container">
+    <div class="row"  style="background:linear-gradient(0deg,rgba(229,230,240,1) 0%,rgba(254,254,255,1) 100%);box-shadow:0px 19px 8px 0px rgba(171,171,171,1);">
+        <div>
+                <div class="col-md-3 col-md-offset-2">
+                    <img src="../resources/img/shop/ai-2.png" class="img-responsive" style="margin-top: 40px;margin-bottom: 40px;">
+                </div>
+                <div class="col-md-5 col-md-offset-1" style="margin-top: 100px;">
+                    <span style="font-size:26px;color:rgba(27,146,154,1);">
+                            碧沙智慧心电监测分析系统利用AI智能技术将采集的原始心电数据在云端进行大数据处理，捕捉异常心电数据并自动分析，最后出具详细的心电异常分析报告！
+                    </span>
+                </div>
+        </div>
+    </div>
+    <div class="row">
+        <img src="../resources/img/shop/ai-3.png" class="img-responsive" style="margin-top: 27px;margin-bottom: 30px;">
+    </div>
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4 text-center" style="width:414px;height:104px;background:rgba(172,61,116,1);border-radius:50%;">
+            <span style="font-size:38px;color:rgba(255,255,255,1);line-height: 104px;">您有这样的烦恼吗？</span>
+        </div>
+    </div>
+    <div class="row mt-30">
+        <div class="col-md-6">
+            <div class="text-center mb-30" style="width:261px;height:55px;background:rgba(172,61,116,1);">
+                <span style="font-size:32px;color:rgba(255,255,255,1);line-height: 55px;">就医时无症状？</span>
+            </div>
+            <div style="width:366px;height:145px;font-size:32px;color:rgba(33,102,125,1);margin-bottom: 130px;">
+                心脏病具有一过性。在家觉得心脏不舒服，到了医院恢复正常，再检查做心电图时结果显示正常。
+            </div>
+            <div class="text-center mb-30" style="width:261px;height:55px;background:rgba(172,61,116,1);">
+                <span style="font-size:32px;color:rgba(255,255,255,1);line-height: 55px;">反复检查无法确诊?</span>
+            </div>
+            <div style="width:366px;height:145px;font-size:32px;color:rgba(33,102,125,1);">
+                心脏病具有隐匿性。经常感到胸闷心悸，到医院反复检查就是无法确诊。
+            </div>
+            <img src="../resources/img/shop/ai-5.png" class="img-responsive" style="margin-top: 380px;">
+        </div>
+        <div class="col-md-6">
+            <img src="../resources/img/shop/ai-4.png" class="img-responsive">
+            <div class="text-center mb-30" style="width:261px;height:55px;background:rgba(172,61,116,1);margin-top: 80px;">
+                <span style="font-size:32px;color:rgba(255,255,255,1);line-height: 55px;">总是担忧心脏病突发？</span>
+            </div>
+            <div style="width:366px;height:145px;font-size:32px;color:rgba(33,102,125,1);margin-bottom: 130px;">
+                心脏病具有突发性。心脏病往往会在院外突发，而有效的抢救时间只有几分钟。
+            </div>
+            <div class="text-center mb-30" style="width:261px;height:55px;background:rgba(172,61,116,1);">
+                <span style="font-size:32px;color:rgba(255,255,255,1);line-height: 55px;">不能马上评估治疗效果？</span>
+            </div>
+            <div style="width:366px;height:145px;font-size:32px;color:rgba(33,102,125,1);">
+                药物的疗效、术后的康复情况都需要定期到医院复查才能知道确切效果。
+            </div>
+        </div>
+    </div>
+    <div class="row mt-40 text-center" style="background:rgba(20,94,133,1);">
+        <span style="font-size:38px;color:rgba(255,255,255,1);line-height: 79px;">碧沙24小时动态心电监测</span>
+    </div>
+    <div class="row text-center mt-15 mb-30"  >
+        <p style="font-size:31px;color:rgba(227,78,53,1);line-height: 32px;margin-bottom: 60px;">
+            具有更多临床价值，悉心呵护您的心脏健康！
+        </p>
+        <div class="col-md-2 col-md-offset-5 text-center" style="background:rgba(227,78,53,1);border-radius:10px;height:47px;">
+            <span style="color:rgba(255,255,255,1);font-size:31px;line-height: 47px;">实际案例</span>
+        </div>
+    </div>
+    <div class="row">
+        <img src="../resources/img/shop/ai-6.png" class="img-responsive" >
+        <div class="col-md-2 col-md-offset-5 text-center mt-40" style="background:rgba(227,78,53,1);border-radius:10px;height:47px;">
+            <span style="color:rgba(255,255,255,1);font-size:31px;line-height: 47px;">详细功能</span>
+        </div>
+    </div>
+    <div class="row mt-40 text-center" style="background:rgba(20,94,133,1);">
+        <span style="font-size:38px;color:rgba(255,255,255,1);line-height: 79px;">
+            大数据分析+专业医师总结
+        </span>
+    </div>
+    <div class="row text-center mt-15 mb-30"  >
+        <p style="font-size:31px;color:rgba(227,78,53,1);line-height: 32px;margin-bottom: 60px;">
+            心电图报告更专业可靠！
+        </p>
+    </div>
+    <div class="row">
+        <img src="../resources/img/shop/ai-7.png" class="img-responsive" >
+        <div class="col-md-2 col-md-offset-5 text-center mt-40" style="background:rgba(227,78,53,1);border-radius:10px;height:47px;">
+            <span style="color:rgba(255,255,255,1);font-size:26px;line-height: 47px;">查看详细功能</span>
+        </div>
+    </div>
+</div>
+<!--悉心玲报告购买页面-->
+<!--解决方案购买页-->
+<!--报告购买页-->
+<div id="footer"></div>
+<script>
+    $("#footer").load("footer.html");
+</script>
+
+</body>
+<script>
+    //根据选择的数量计算总价，并显示出来
+    $(function () {
+        //加号
+        var price1 = 1280;
+        var num = parseInt($('input[name="num"]').attr('value'));
+        var text = parseInt($('input[name="num"]').attr('text'));
+        var yunfei = 999;
+        console.log(yunfei)
+        //当购物车数量增加的时候
+        $('.add').click(function(){
+            num++;
+            text++;
+            $('input[name="num"]').attr('value',num);
+            var total = num * 1280 + yunfei;
+            $('#price').html(total.toFixed(2));
+        });
+        //当购物车数量减少的时候
+        $('.minus').click(function () {
+            if(num>1){
+                num--;
+                $('input[name="num"]').attr('value',num);
+                var total = num * 1280 + yunfei;
+                $('#price').text(total.toFixed(2));
+            }else{
+                alert('购买数量不能少于一件')
+            }
+        });
+    });
+</script>
+</html>

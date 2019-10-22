@@ -23,7 +23,7 @@
 <div class="con">
     <div class="container-fluid">
         <div class="row ">
-            <img  class="img-responsive center-block" src="../resources/img/solution/banner6.png" alt="碧沙心電儀合作夥伴">
+            <img  class="img-responsive center-block" src="../resources/img/solution/banner6-us.png" alt="碧沙心電儀合作夥伴">
             <!--<img class="img-responsive center-block" src="/health-shop/../resources/img/index/banner6.png" alt="碧沙心電儀合作夥伴">-->
         </div>
     </div>
@@ -35,48 +35,49 @@
     <!--心電儀部分-->
     <div class="container-fluid mt-20 mb-20">
         <div class="row  pos-r ecg" >
-            <img  class="center-block" width="100%" src="../resources/img/index/banner7.png">
-            <img  src="../resources/img/index/banner7-1.png" width="18%" alt="Automatically notify the contact when cardiac arrest is detected" class="pos-a  ecg-1 "
-                  style="left: 25%;top: 42%;">
-            <img src="../resources/img/index/banner7-2.png" width="18%" alt="Double-click the APP button to notify the contact" class="pos-a  ecg-2"
-                 style="left: 20%;top: 63%;">
-            <img src="../resources/img/index/banner7-3.png" width="18%" alt="Double-click the operating button to notify the contact" class="pos-a  ecg-3"
-                 style="left: 25%;top: 85%;">
-            <img src="../resources/img/index/banner7-4.png" width="18%" alt="15-minute free monitoring report service" class="pos-a  ecg-4"
-                 style="right: 26%;top: 42%;">
-            <img src="../resources/img/index/banner7-5.png" width="18%" alt="15-minute free monitoring report service" class="pos-a  ecg-5"
-                 style="right: 20%;top: 63%;">
-            <img src="../resources/img/index/banner7-6.png" width="18%" alt="Specialist certified physician online Q&A" class="pos-a  ecg-6"
-                 style="right: 25%;top: 85%;">
+            <img  class="center-block" width="100%" src="../resources/img/index/banner7-us.png">
+            <img  src="../resources/img/index/banner7-1-us.png" width="25%"
+                  alt="Automatically notify the contact when cardiac arrest is detected" class="pos-a  ecg-1 "
+                  style="left: 18%;top: 44%;">
+            <img src="../resources/img/index/banner7-2-us.png" width="25%" alt="Double-click the APP button to notify the contact" class="pos-a  ecg-2"
+                 style="left: 13%;top: 63%;">
+            <img src="../resources/img/index/banner7-3-us.png" width="25%" alt="Double-click the operating button to notify the contact" class="pos-a  ecg-3"
+                 style="left: 18%;top: 85%;">
+            <img src="../resources/img/index/banner7-4-us.png" width="25%" alt="15-minute free monitoring report service" class="pos-a  ecg-4"
+                 style="right: 19%;top: 43%;">
+            <img src="../resources/img/index/banner7-5-us.png" width="25%" alt="15-minute free monitoring report service" class="pos-a  ecg-5"
+                 style="right: 15%;top: 63%;">
+            <img src="../resources/img/index/banner7-6-us.png" width="25%" alt="Specialist certified physician online Q&A" class="pos-a  ecg-6"
+                 style="right: 18%;top: 86%;">
             <div class=" ecg-7"
-                 style="border:2px solid #02D1E3;font-size:14px;font-weight:400;color:rgba(255,255,255,1);width: 16%;position:
-                    absolute;left: 7%;top: 43%;display: none;">
+                 style="border:2px solid #02D1E3;font-size:12px;font-weight:400;color:rgba(255,255,255,1);width: 30%;position:
+                    absolute;left: 1%;top: 54%;display:none;">
                 The emergency help function button is available on the BisaKangjian APP. When the user is sick, the button can be double-clicked. The ECG equipment will automatically emit a “beep” alarm and automatically send a text message to 3 emergency contacts to reduce time for effective rescue.
             </div>
             <div class=" ecg-8"
-                 style="border:2px solid #02D1E3;font-size:14px;font-weight:400;color:rgba(255,255,255,1);width: 16%;position:
-                    absolute;left: 2%;top: 65%;display: none;">
+                 style="border:2px solid #02D1E3;font-size:12px;font-weight:400;color:rgba(255,255,255,1);width: 30%;position:
+                    absolute;left:4%;top:76%;display:none;">
                 The emergency help function button is available on the BisaKangjian APP. When the user is sick, the button can be double-clicked. The ECG equipment will automatically emit a “beep” alarm and automatically send a text message to 3 emergency contacts to reduce time for effective rescue.
             </div>
             <div class=" ecg-9"
-                 style="border:2px solid #02D1E3;font-size:14px;font-weight:400;color:rgba(255,255,255,1);width: 16%;position:
-                    absolute;left: 7%;top: 86%;display: none;">
+                 style="border:2px solid #02D1E3;font-size:12px;font-weight:400;color:rgba(255,255,255,1);width: 30%;position:
+                    absolute;left: 1%;top: 79%;display:none;">
                 After viewing the ECG monitoring report, the user can click on the “Online Inquiry” service on the APP, and the specialist certified physician who cooperates with BisaKangjian will answer questions online with the user during the service time.
             </div>
             <div class=" ecg-10"
-                 style="border:2px solid #02D1E3;font-size:14px;font-weight:400;color:rgba(255,255,255,1);width: 16%;position:
-                    absolute;right: 8%;top: 44%;display: none;">
+                 style="border:2px solid #02D1E3;font-size:12px;font-weight:400;color:rgba(255,255,255,1);width: 30%;position:
+                    absolute;right: 1%;top: 54%;display:none;">
                 After viewing the ECG monitoring report, the user can click on the “Online Inquiry” service on the APP, and the specialist certified physician who cooperates with BisaKangjian will answer questions online with the user during the service time.
             </div>
             <div class=" ecg-11"
-                 style="border:2px solid #02D1E3;font-size:14px;font-weight:400;color:rgba(255,255,255,1);width: 16%;position:
-                    absolute;right: 2%;top: 65%;display: none;">
+                 style="border:2px solid #02D1E3;font-size:12px;font-weight:400;color:rgba(255,255,255,1);width: 30%;position:
+                    absolute;right: 4%;top: 76%;display:none;">
                 The user can use the free monitoring service for 15 minutes every day. After the monitoring, the Bisaintelligent ECG monitoring and analysis system will perform heart rate variability analysis (HRV) based on the ECG data to form an AI intelligent monitoring report.
             </div>
             <div class=" ecg-12"
-                 style="border:2px solid #02D1E3;font-size:14px;font-weight:400;color:rgba(255,255,255,1);width: 16%;position:
-                    absolute;right: 7%;top: 87%;display: none;">
-                After viewing the ECG monitoring report, the user can click on the “Telephone Inquiry” service on the APP to conduct a one-on-one telephone consultation with the specialist certified physician during the service period to let the physician know more about the status of an illness.
+                 style="border:2px solid #02D1E3;font-size:12px;font-weight:400;color:rgba(255,255,255,1);width: 35%;position:
+                    absolute;right: 3%;top: 78%;display:none;">
+                Users can use the 24-hour dynamic monitoring service, and the Bisha Wisdom ECG monitoring and analysis system intelligently analyzes the monitoring data to form a report. There are two types of reports: AI intelligent monitoring report and manual audit monitoring report. Users can choose the reporting mode independently.
             </div>
         </div>
     </div>
@@ -137,7 +138,7 @@
     <!--公司介紹部分-->
     <div class="container-fluid  mt-20" >
         <div class="row">
-            <img  class="img-responsive center-block" src="../resources/img/index/banner2-cn.png">
+            <img  class="img-responsive center-block" src="../resources/img/index/banner2-hk.png">
         </div>
     <#--<div class="row">-->
     <#--<div class="col-md-6 col-md-offset-3 text-center">-->
@@ -173,7 +174,7 @@
                 <a class="text-center cur-p"
                    style="width:85px;height:21px;background:rgba(34,67,150,1);margin-left: 30px;border-radius:10px;display:
                            inline-block;"
-                   href="healthInquiry">
+                   href="news.html">
                             <span style="color: #FFFFFF;">
                                  more>
                             </span>
@@ -184,9 +185,10 @@
     <!--活動優惠-->
     <div class="container-fluid mt-20">
         <div class="row pos-r">
-            <img  class="img-responsive center-block" src="../resources/img/index/banner8-cn.gif" alt="Bisha Kangjian Electrocardiograph Limited Time Activity">
-            <a class="text-center taobao">淘寶</a>
-            <a class="text-center jingdong">京東</a>
+            <img  class="img-responsive center-block" src="../resources/img/index/banner8-us.gif" alt="Bisha Kangjian Electrocardiograph
+            Limited Time Activity">
+            <a class="text-center taobao">Taobao</a>
+            <a class="text-center jingdong">Jingdong</a>
         </div>
     </div>
 </div>
@@ -253,10 +255,10 @@
             }
             return num;
         }
-        //點擊圖片跳轉
+        //点击图片跳转
         $(".main_div").on("click", ".new-div", function () {
-            var news_id = $(this).find(".zd-id").val();
-            window.location.href = "/web/call/newsContent?news_id=" + news_id;
+            var id = $(this).find(".zd-id").val();
+            window.open('/news/body?id='+id,'_blank')
         });
         function ecg() {
             $(".ecg-1").hover(function () {

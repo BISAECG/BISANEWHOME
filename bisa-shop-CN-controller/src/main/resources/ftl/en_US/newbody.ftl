@@ -15,14 +15,14 @@
     <!-- description -->
     <meta name="renderer" content="webkit">
     <title>${news_title}</title>
-    <link href="../resourcesctrl/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../resourcescss/index/head.css" rel="stylesheet">
-    <link href="../resourcesctrl/layui/css/layui.css" rel="stylesheet" >
-    <link href='../resourcesctrl/font-awesome-4.7.0/css/font-awesome.min.css' rel='stylesheet'>
-    <link href="../resourcescss/comm/base.css" rel="stylesheet">
-    <link href="../resourcescss/news/HK_News.css" rel="stylesheet">
-    <script src="../resourcesjs/comm/jquery.min.js"></script>
-    <script src="../resourcesjs/index/head.js"></script>
+    <link href="../../resources/ctrl/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../resources/css/index/head.css" rel="stylesheet">
+    <link href="../../resources/ctrl/layui/css/layui.css" rel="stylesheet" >
+    <link href='../../resources/ctrl/font-awesome-4.7.0/css/font-awesome.min.css' rel='stylesheet'>
+    <link href="../../resources/css/comm/base.css" rel="stylesheet">
+    <link href="../../resources/css/news/HK_News.css" rel="stylesheet">
+    <script src="../../resources/js/comm/jquery.min.js"></script>
+    <script src="../../resources/js/index/head.js"></script>
     <!--[if lt IE 9支持html5代碼]-->
     <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
@@ -46,7 +46,7 @@
 <body>
 <div id="header"></div>
 <script>
-    $("#header").load("header.html");
+    $("#header").load("../inheader.html");
 </script>
 <div class="wrap clear">
     <div class="row">
@@ -74,7 +74,7 @@
 </div>
 <div id="footer"></div>
 <script>
-    $("#footer").load("footer.html");
+    $("#footer").load("../infooter.html");
 </script>
 </body>
 </html>

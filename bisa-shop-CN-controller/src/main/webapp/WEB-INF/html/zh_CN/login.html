@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" href="Images/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon"/>
+    <link rel="bookmark" href="Images/favicon.ico" type="image/x-icon"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>碧沙康健_登录页</title>
+    <!-- base -->
+    <link href='../resources/ctrl/bootstrap-3.3.7-dist/css/bootstrap.min.css' rel='stylesheet'>
+    <link href="../resources/css/comm/bootstrapValidator.min.css" rel="stylesheet">
+    <link href="../resources/css/comm/base.css" rel="stylesheet">
+    <link href="../resources/css/reg/HK_Reg.css" rel="stylesheet">
+    <script src="../resources/js/comm/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+</head>
+<script type="text/javascript">
+    var http_request = "";
+    var type = "2";
+    var message = "1008";
+</script>
+<body>
+<div class="container" style="margin-top: 2%;margin-bottom:1%; ">
+    <div class="row">
+        <div class='col-md-2 col-md-5' >
+            <a href='../index/index_CN.html' >
+                <img class='img-responsive center-block' style='margin-top: 20px;' src='../resources/img/index/logov1.png'  alt='碧沙康健logo'>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="container-fluid" >
+    <div class="row" style="background:rgba(53,146,208,1);height:40px;"></div>
+</div>
+<div class="main">
+    <div class="login-div">
+
+        <div class="clear min-h-380 bg-white w-450 z-9 pos-r bor bor-col-white radius-5  pb-20">
+            <p class="pl-35 pt-10" style="font-size:30px;font-weight:bold;color:rgba(51,51,51,1);">登录</p>
+            <div class="login-title pt-20">
+                <div class="cur-p pl-35 pull-left  pr-5 login-tabcontrolv2" >
+                    <span class=" f-20" style="color:rgba(102,102,102,1);">账户登录</span>
+                </div>
+                <div class="pull-left" style="display: inline-block;width: 2px;height:20px; background:rgba(189,189,189,1);margin-top:5px;"></div>
+                <div class="cur-p pl-5  pull-left  login-tabcontrolv1" >
+                    <span class=" f-20" style="color:rgba(102,102,102,1);">免密登录</span>
+                </div>
+            </div>
+            <div class="clear pl-35 msg-wrap mt-40">
+                <div class="msg-error ">
+                    <b></b><span></span>
+                </div>
+            </div>
+
+            <!-- 账户登录 -->
+            <div class="pl-35 pr-30 min-h-250 login-tabcontentv2">
+                <form class="login-main-formpwd form-horizontal clear" method="post">
+                    <div class="clear h-50 form-group ml-0i mr-0i pt-10">
+                        <div class="clear input-group mb-20">
+                            <div class="clear h-50 text-center w-40 pull-left input-group-addon pd-0 bg-white bor-c radius-3">
+                                <span class="glyphicon glyphicon-user f-14 line-h-50"></span>
+                            </div>
+                            <div class="clear h-50 line-h-50 text-center w-335 pull-left mr-0 ml-0 radius-0 pos-r ">
+                                <input class="form-control pt-7 pb-7 pl-5 pr-5 full-wh radius-tf-0i f-14 usernemeinput"
+                                       type="text" name="username" maxlength="36"
+                                       placeholder="请输入您的手机号/邮箱">
+                                <span class="usernamemsg h-25 line-h-25 clear dis-b text-left pull-left"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h-50 form-group ml-0i mr-0i pt-10 mt-30">
+                        <div class="clear input-group mb-20">
+                            <div class="clear h-50 text-center w-40 pull-left input-group-addon pd-0 bg-white bor-c radius-3">
+                                <span class="glyphicon glyphicon-asterisk f-14 line-h-50"></span>
+                            </div>
+                            <div class="clear h-50 line-h-50 text-center w-335 pull-left mr-0 ml-0 radius-0 pos-r">
+                                <input class="form-control pt-7 pb-7 pl-5 pr-5 full-wh radius-tf-0i f-14 userpwdinput pull-left"
+                                       type="password" name="password" maxlength="12"
+                                       placeholder="请输入您的密码">
+                                <span class="userpwdmsg h-25 line-h-25 clear dis-b text-left pull-left"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="clear mt-20 h-30 line-h-30">
+                        <!-- 自动登录 值为0时候未选中，为一的时候为选中 -->
+                        <div class="ml-0 mr-10 clear pull-left pos-r i-check">
+                        <input name="rememberMe" id="rememberMe" type="checkbox" value="0">
+                        <label></label>
+                    </div>
+                        <label class="col-999 pull-left cur-p f-14 line-h-30">下次自动登录</label>
+                        <a class="ml-0 mr-10 clear pull-right pos-r t--2 col-999 f-14 t-nonehove hovecol-5cb85c-bold"
+                           href="findPassword.html">
+                            忘记密码
+                        </a>
+                    </div>
+                    <!--<%&#45;&#45;登入按钮&#45;&#45;%>-->
+                    <div class="clear mt-20 w-374 mb-20">
+                        <button type="submit" class="btn full-w text-center btn  h-50 f-18" id="pwd-btn"
+                                style="background: #3DB1FF;color: #FFFFFF;">
+                            登录
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!--  免密登录 -->
+            <div class="pl-35 pr-30 min-h-250 login-tabcontentv1 dis-n">
+                <form class="login-main-formphone form-horizontal" method="post">
+                    <div class="clear h-50 form-group ml-0i mr-0i phonecode-box">
+                        <div class="input-group mt-10 mb-20">
+                            <div class="clear h-50 text-center w-40 pull-left input-group-addon pd-0 bg-white bor-c radius-3">
+                                <span class="glyphicon glyphicon-phone f-14 line-h-50"></span>
+                            </div>
+                            <div class="clear h-50 line-h-50 text-center w-100 pull-left input-group-addon pt-7 pb-7 pl-5 pr-4 bg-white bor-c radius-3">
+                                <select class="form-control bor-col-white boxsha-none focu-bor-66afe9 pr-12i radius-3i sel-telphone selectpicker"
+                                        onchange="selectArea()" id="selectpicker" name="selectpicker">
+                                </select>
+                            </div>
+                            <div class="clear h-50 line-h-50 text-center w-235 pull-left mr-0 ml-0 radius-0 pos-r">
+                                <input class="form-control pt-7 pb-7 pl-5 pr-5 full-wh radius-tf-0i bor-l-none f-14 userphoneinput"
+                                       type="text" name="username" maxlength="15"
+                                       placeholder="请输入您的手机号码">
+                                <span class="userphonemsg h-25 line-h-25 clear dis-b text-left pull-left"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear h-50 form-group ml-0i mr-0i mb-50 mt-30">
+                        <div class="clear input-group mt-10 mb-20">
+                            <div class="clear h-50 text-center w-40 pull-left input-group-addon pd-0 bg-white bor-c radius-3">
+                                <span class="glyphicon glyphicon-link f-14 line-h-50"></span>
+                            </div>
+                            <div class="clear h-50 line-h-50 text-center w-335 pull-left mr-0 ml-0 radius-0 pos-r">
+                                <input class="form-control pt-7 pb-7 pl-5 pr-5 full-wh radius-tf-0i f-14" type="text"
+                                       name="icode" maxlength="4" placeholder="请输入您接收的动态密码">
+                                <button type="button"  style="background:rgba(53,146,208,1);color: #FFFFFF;"
+                                        class="pos-a t-10 r-20 z-99 pl-15 pr-15 pt-5 pb-5 h-30 line-h-20 btn  text-center min-w-120 sendMessagebtn">
+                                    获取动态密码
+                                </button>
+                                <span class="usercodemsg h-25 line-h-25 clear dis-b text-left"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<%&#45;&#45;登入按钮&#45;&#45;%>-->
+                    <div class="w-374">
+                        <button type="submit" class="full-w text-center btn  h-50 f-18" id="nopwd-btn"  style="background:rgba(53,146,208,1);color: #FFFFFF;">
+                            登录
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!--<%&#45;&#45;微信登录&#45;&#45;%>-->
+            <div class="clear min-h-50 pl-40 pr-40">
+                <div class="cur-p text-center login-tabcontrolv3">
+                    <a class="t-nonehove" target="_blank" href="">
+                    <img class="img-42" src="../resources/img/reg/tabcontrolv3.png" alt="">
+                    <span class="col-999 ml-10 f-16">微信登录</span></a>
+                </div>
+            </div>
+            <div class="clear h-20 line-h-20 f-14 col-666 pl-20 pr-40 text-right mt-5 mb-5">
+                <a class="hovecol-5cb85c-bold t-nonehove mr-5 dis-ib" href="reg.html">
+                    立即注册>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="../resources/ctrl/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script src="../resources/js/comm/bootstrapValidator.min.js"></script>
+<script src="../resources/js/reg/arealist.js"></script>
+<script src="../resources/js/reg/login.js"></script>
+</body>
+</html>

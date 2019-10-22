@@ -48,34 +48,34 @@
             <img src="../resources/img/index/banner7-6.png" width="18%" alt="专科认证医师在线答疑" class="pos-a  ecg-6"
                  style="right: 25%;top: 85%;">
             <div class=" ecg-7"
-                 style="border:2px solid #02D1E3;font-size:14px;font-weight:400;color:rgba(255,255,255,1);width: 16%;position:
-                    absolute;left: 7%;top: 43%;display: none;">
+                 style="border:2px solid #02D1E3;font-size:14px;font-weight:400;color:rgba(255,255,255,1);width: 20%;position:
+                    absolute;left:4%;top: 44%;display:none;">
                 当碧沙心电仪监测到用户出现无脉搏情况，心电仪会自动持续发出“哔哔”的警鸣声，并自动发出短信通知至3个紧急联系人手机上，为有效抢救赢得时间。
             </div>
             <div class=" ecg-8"
-                 style="border:2px solid #02D1E3;font-size:14px;font-weight:400;color:rgba(255,255,255,1);width: 16%;position:
-                    absolute;left: 2%;top: 65%;display: none;">
+                 style="border:2px solid #02D1E3;font-size:14px;font-weight:400;color:rgba(255,255,255,1);width: 20%;position:
+                    absolute;left: 0%;top: 65%;display: none;">
                 碧沙康健APP上备有紧急求救功能键，用户发病时，可双击按钮两次，心电仪会持续发出“哔哔”的警鸣声，并自动发出短信通知至3个紧急联系人手机上，为有效抢救赢得时间
             </div>
             <div class=" ecg-9"
-                 style="border:2px solid #02D1E3;font-size:14px;font-weight:400;color:rgba(255,255,255,1);width: 16%;position:
-                    absolute;left: 7%;top: 86%;display: none;">
+                 style="border:2px solid #02D1E3;font-size:14px;font-weight:400;color:rgba(255,255,255,1);width: 23%;position:
+                    absolute;left: 1%;top: 86%;display: none;">
                 碧沙心电仪上备有紧急求救按钮，用户发病时，可连按操作键两次，心电仪会持续发出“哔哔”的警鸣声，并自动发出短信通知至3个紧急联系人手机上，为有效抢救赢得时间
             </div>
             <div class=" ecg-10"
-                 style="border:2px solid #02D1E3;font-size:14px;font-weight:400;color:rgba(255,255,255,1);width: 16%;position:
-                    absolute;right: 8%;top: 44%;display: none;">
+                 style="border:2px solid #02D1E3;font-size:14px;font-weight:400;color:rgba(255,255,255,1);width: 20%;position:
+                    absolute;right: 5%;top: 44%;display: none;">
                 用户查看心电监测报告后，可以在APP上点击选择“在线问诊”服务，与碧沙康健合作的专科认证医师会在服务时间内与用户在线答疑。
             </div>
             <div class=" ecg-11"
-                 style="border:2px solid #02D1E3;font-size:14px;font-weight:400;color:rgba(255,255,255,1);width: 16%;position:
-                    absolute;right: 2%;top: 65%;display: none;">
+                 style="border:2px solid #02D1E3;font-size:14px;font-weight:400;color:rgba(255,255,255,1);width: 20%;position:
+                    absolute;right: 0%;top: 65%;display: none;">
                 用户可每天使用15分钟永久免费监测服务，监测结束后，碧沙智慧心电监测分析系统根据心电图数据进行心率变异分析（HRV），形成AI智能监测报告。
             </div>
             <div class=" ecg-12"
-                 style="border:2px solid #02D1E3;font-size:14px;font-weight:400;color:rgba(255,255,255,1);width: 16%;position:
-                    absolute;right: 7%;top: 87%;display: none;">
-                用户查看心电监测报告后，可以在APP上点击选择“电话问诊”服务，在服务时间内与专科认证医师进行一对一电话问诊，让医师进一步了解病情。
+                 style="border:2px solid #02D1E3;font-size:14px;font-weight:400;color:rgba(255,255,255,1);width: 20%;position:
+                    absolute;right: 4%;top: 86%;display: none;">
+                用户可使用24小时动态监测服务，碧沙智慧心电监测分析系统智能分析监测数据形成报告。报告分为两种：AI智能监测报告和人工审核监测报告，用户可自主选择报告模式。
             </div>
         </div>
     </div>
@@ -172,7 +172,7 @@
                 <a class="text-center cur-p"
                    style="width:85px;height:21px;background:rgba(34,67,150,1);margin-left: 30px;border-radius:10px;display:
                            inline-block;"
-                   href="healthInquiry">
+                   href="news.html">
                             <span style="color: #FFFFFF;">
                                  更多资讯>
                             </span>
@@ -185,7 +185,7 @@
         <div class="row pos-r">
             <img  class="img-responsive center-block" src="../resources/img/index/banner8-cn.gif" alt="碧沙康健心电仪限时活动">
             <a class="text-center taobao">淘宝</a>
-            <a class="text-center jingdong">京东</a>
+            <a class="text-center jingdong" style="margin-left: 20PX;">京东</a>
         </div>
     </div>
 </div>
@@ -253,8 +253,8 @@
         }
         //点击图片跳转
         $(".main_div").on("click", ".new-div", function () {
-            var news_id = $(this).find(".zd-id").val();
-             window.open('/news/body?news_id='+news_id,'_blank')
+            var id = $(this).find(".zd-id").val();
+            window.open('/news/body?id='+id,'_blank')
         });
         function ecg() {
             $(".ecg-1").hover(function () {

@@ -121,7 +121,7 @@
             $.ajax({
                 type: "GET",
                 dataType: "json",
-                url: "/web/call/loadPlacementNews",
+                url: "/new/tops",
                 success: function (data) {
                     console.log(data);
                     $.each(data, function(i, item) {
@@ -149,9 +149,8 @@
         indexNew();
         //點擊圖片跳轉
         $(".main_div").on("click", ".new-div", function () {
-            var news_id = $(this).find(".zd-id").val();
-            window.location.href = "/web/call/newsContent_cn?news_id=" + news_id.html;
-            // window.location.href = "/health-shop/newsContent?news_id=" + news_id;
+            var id = $(this).find(".zd-id").val();
+            window.open('/news/body?id='+id,'_blank')
         });
         function getMyDate(data) {
             if (data == "" || data == null) {
@@ -182,7 +181,7 @@
                 , isAuto: false
                 , isLazyimg: true
                 , done: function (page, next) { //加載下一頁
-                    $.get("/web/call/loadNewsDatas?page=" + page + "&limit=" + 3 , function (data) {
+                    $.get("/news/list?page=" + page + "&limit=" + 5 , function (data) {
                         console.log(data)
                         var lis = [];
                         layui.each(data.datas, function (index,item) {  //遍曆後台傳過來的數據
@@ -191,7 +190,7 @@
                                     '<li class="news-div cur-p">'+
                                     '<div class="row">'+
                                     '<div class="col-md-12 pt-15 pb-20" style="border-bottom: 1px solid #E5E5E4;padding-left: 0px;">'+
-                                    '<input type="hidden" class="id" value="'+item.id+'"/>'+
+                                    '<input type="hidden" class="news-id" value="'+item.id+'"/>'+
                                     '<div class="col-md-2" style="padding:0px;">'+
                                     '<span class="col-888" style="background:linear-gradient(0deg,rgba(44,106,206,1) 0%,rgba(47,232,230,1) 100%);box-shadow:0px 1px 5px 0px rgba(53,143,238,1);color: #fff;">'+release_time+'</span>'+
                                     '</div>'+
@@ -215,8 +214,8 @@
 
         //點擊圖片跳轉
         $(".pt-div").on("click", ".news-div", function () {
-            var news_id = $(this).find(".news-id").val();
-            window.location.href = "/web/call/newsContent_cn?news_id=" + news_id.html;
+            var id = $(this).find(".id").val();
+            window.open('/news/body?id='+id,'_blank')
         });
         $('#seach').click(function(){
             var  keywordtext = $('input[name="seachtext"]').val();
@@ -232,7 +231,7 @@
                     , isAuto: false
                     , isLazyimg: true
                     , done: function (page, next) { //加載下一頁
-                        $.get("/web/call/loadNewsDatas?page=" + page + "&limit=" + 6 +"&keyWord=" + keywordtext, function (data) {
+                        $.get("/news/list?page=" + page + "&limit=" + 6 +"&keyWord=" + keywordtext, function (data) {
                             var lis = [];
                             console.log(data)
                             layui.each(data.datas, function (index, item) {  //遍曆後台傳過來的數據
