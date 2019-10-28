@@ -18,20 +18,10 @@
     <!-- base -->
     <link href="../resources/css/comm/base.css" rel="stylesheet">
     <link href="../resources/css/index/index.css" rel="stylesheet">
+    <link href="../resources/css/shop/shop.css" rel="stylesheet">
     <script src="../resources/js/comm/jquery.min.js"></script>
     <style>
-        .spantitle{
-            color:rgba(153,153,153,1);
-            font-size:20px;
-            line-height:40px;
-            font-weight: 400;
-        }
-        .spanprice{
-            margin-left: 20px;
-            color:rgba(207,21,24,1);
-            line-height:40px;
-            font-size:28px;
-        }
+
     </style>
 </head>
 
@@ -40,137 +30,74 @@
 <script>
     $("#header").load("header.html");
 </script>
-
-
-<div class="con">
-    <div class="container" style="background:rgba(255,255,255,1);box-shadow:3px 9px 9px rgba(239,239,239,1);">
-        <div class="row">
-            <div class="col-md-4 col-md-offset-1" style="margin-top: 28px;margin-bottom: 41px;">
-                <img class="img-responsive" src="../resources/img/shop/chanpin.png">
-            </div>
-            <div class="col-md-6 col-md-offset-1" style="margin-top: 41px;">
-                <p style="font-size:24px;font-weight:400;color:rgba(51,51,51,1);">碧沙家用医用动态心电监测仪</p>
-                <p>
-                    <span class="spantitle">价格:</span>
-                    <span class="spanprice">¥ 1280</span>
-                </p>
-                <p>
-                <div class="goods_num clearfix">
-                    <div class="num_name  spantitle pull-left ">数 量：</div>
-                    <div class="num_add pull-left" style="margin-top: 5px;">
-                        <a href="javascript:;" class="minus fr">-</a>
-                        <input readonly='true' type="text" name="num" class="num_show fl text-center" style="width: 80px;" value="1">
-                        <a href="javascript:;" class="add fr">+</a>
-                    </div>
-                </div>
-
-                </p>
-                <p>
-                    <span class="spantitle">地区:</span>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" style="background:rgba(252,223,227,1);"> 香港
-                    </label>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 澳门
-                    </label>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 台湾
-                    </label>
-                    <label class="radio-inline">
-                        <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option3"> 新加坡
-                    </label>
-                </p>
-                <p style="font-size:12px;color:rgba(208,18,17,1);">（因快递邮费问题其他地区请电话咨询我司销售人员或在下方留言）</p>
-                <form class="form-horizontal" >
-                    <div class="form-group" style="margin-bottom: 0px;">
-                        <label for="Address" class="col-sm-3 control-label spantitle" style="text-align: left;">详细地址:</label>
-                        <div class="col-sm-5" style="margin-top: 5px;">
-                            <input type="email" class="form-control" id="Address" placeholder="">
-                        </div>
-                    </div>
-                    <div class="form-group" style="margin-bottom: 0px;">
-                        <label for="name" class="col-sm-3 control-label spantitle" style="text-align: left;">姓名:</label>
-                        <div class="col-sm-5" style="margin-top: 5px;">
-                            <input type="text" class="form-control" id="name" placeholder="">
-                        </div>
-                    </div>
-                    <div class="form-group" style="margin-bottom: 0px;">
-                        <label for="phone" class="col-sm-3 control-label spantitle" style="text-align: left;">电话:</label>
-                        <div class="col-sm-5" style="margin-top: 5px;">
-                            <input type="text" class="form-control" id="phone" placeholder="">
-                        </div>
-                    </div>
-                </form>
-                <span class="spantitle">邮费:</span>
-                <span class="spanprice">¥ 999</span>
-                </p>
-                <p>
-                    <span class="spantitle">商品总价:</span>
-                    <span class="spanprice total" id="totalPrice"><em id="price">1280</em>元</span>
-                </p>
-                <button style="width:170px;height:34px;background:rgba(207,21,24,1);border-radius:5px;color: #fff;border: 0;">Submit
-                    Order</button>
-                <button style="width:170px;height:34px;background:rgba(91,209,161,1);border-radius:5px;color: #fff;border: 0;">Consult now</button>
-            </div>
+<!--心电仪购买页面-->
+<div class="container ">
+    <div class="row mt-40 boxLeft">
+        <div class="col-md-4 col-md-offset-1 text-center">
+            <img class="img-responsive" src="../resources/img/shop/xixin.png">
         </div>
-    </div>
-    <!--<div class="container" style="margin-top: 14px;margin-bottom: 9px;">-->
-    <!--<div class="row">-->
-        <!--<p style="font-size:20px;color:rgba(229,72,30,1);">Tips: If you have any questions about our products or other related issues, you can submit your questions in the comments-->
-            <!--below, our sales staff will reply you.</p>-->
-    <!--</div>-->
-    <!--</div>-->
-    <div style="width: 100%;background:rgba(153,153,153,1);margin-top: 68px;">
-        <div class="container">
-            <div class="row">
-                <p style="font-size:24px;color:rgba(255,255,255,1);line-height: 44px;margin-bottom: 0px;">在线留言</p>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <p style="font-size:20px;color:rgba(229,72,30,1);font-weight:400;margin-top: 20px;">
-                温馨提示：如您对我们的产品或其他相关问题有疑问，均可在下方留言提交您的问题，我们的销售人员会回复您。
+        <div class="col-md-5 col-md-offset-1 boxRight">
+            <p class="title">悉心动态心电仪</p>
+            <p  style="margin-top: 30px;">
+                <span class="spantitle">价格:</span>
+                <span class="spanprice">¥1280</span>
             </p>
-            <p>
-                <span style="font-size:20px;color:rgba(229,72,30,1);font-weight:400;">服务热线：</span>
-                <span style="font-size:30px;font-weight:bold;color:rgba(207,21,24,1);">(852)2423  0600</span>
-            </p>
-        </div>
-        <div class="row" style="margin-top: 25px;">
-            <form class="form-inline">
-                <div class="form-group col-md-3" style="padding-left: 0px;">
-                    <label for="name1" class="control-label " style="color:rgba(102,102,102,1);font-size:20px;font-weight: 400;">姓名:</label>
-                    <input type="text" class="form-control" id="name1" placeholder="请输入姓名">
+            <div class="goods_num clearfix" >
+                <div class="num_name  spantitle pull-left ">数 量：</div>
+                <div class="num_add pull-left">
+                    <a href="javascript:;" class="minus fr">-</a>
+                    <input readonly='true' type="text" name="num" class="num_show fl text-center" value="1">
+                    <a href="javascript:;" class="add fr">+</a>
                 </div>
-                <div class="form-group col-md-3">
-                    <label for="phone1" class="control-label " style="color:rgba(102,102,102,1);font-size:20px;font-weight: 400;">电话:</label>
-                    <input type="text" class="form-control" id="phone1" placeholder="请输入电话">
+            </div>
+            <div class="recommend">
+                <span class="spantitle pull-left">推荐:</span>
+                <div class="pull-left cur-p" style="border: 1px solid #e3393c;background:rgba(252,223,227,1);">
+                    <a href="shop.html">
+                        心电仪
+                    </a>
                 </div>
-                <div class="form-group col-md-3">
-                    <label for="email" class="control-label " style="color:rgba(102,102,102,1);font-size:20px;font-weight: 400;">邮箱:</label>
-                    <input type="email" class="form-control" id="email" placeholder="请输入邮箱">
+                <div class="pull-left cur-p" style="border: 1px solid #ccc;">
+                    <a href="shopAi.html">
+                        AI智能检测报告
+                    </a>
                 </div>
-                <div class="form-group col-md-3">
-                    <label for="category" class="control-label " style="color:rgba(102,102,102,1);font-size:20px;font-weight: 400;">类别:</label>
-                    <select class="form-control" id="category">
-                        <option>个人</option>
-                        <option>企业</option>
-                        <option>医院</option>
-                    </select>
+                <div class="pull-left cur-p" style="border: 1px solid #ccc;">
+                    <a href="shopDoctor.html">
+                        医生审核检测报告
+                    </a>
                 </div>
-            </form>
-        </div>
-        <div class="row" style="margin-top: 50px;">
-            <p style="color:rgba(102,102,102,1);font-size:20px;font-weight: 400;">留言:</p>
-            <textarea class="form-control" rows="5" placeholder="请输入留言" style="box-shadow:0px 2px 38px 2px rgba(231,229,229,1);"></textarea>
-                <button
-                        style="background:rgba(43,122,174,1);border-radius:10px;width:200px;height:50px;margin-top: 20px;border: 0;color:#FFFFFF;margin-left: 40%;">
-                    提交留言
+                <div class="pull-left cur-p" style="border: 1px solid #ccc;">
+                    <a href="shopSolution.html">
+                        解决方案
+                    </a>
+                </div>
+                <div class="pull-left cur-p" style="border: 1px solid #ccc;">
+                    <a href="shopEcg.html">
+                        悉心玲报告
+                    </a>
+                </div>
+            </div>
+            <div style="clear: both;"></div>
+            <a href="payment.html">
+                <button class="Order" >
+                    Submit Order
                 </button>
+            </a>
+            <p></p>
+            <button class="now" >
+                <i class="fa fa-phone" style="font-size: 18px;"></i>
+                Consult now
+            </button>
         </div>
     </div>
 </div>
+<div class="container-fluid" style="padding:0px;margin-top: 68px;">
+    <div class="row center-block">
+        <img class="img-responsive" src="../resources/img/shop/ecg.png">
+    </div>
+</div>
+<!--结束-->
 <div id="footer"></div>
 <script>
     $("#footer").load("footer.html");
@@ -184,26 +111,26 @@
         var price1 = 1280;
         var num = parseInt($('input[name="num"]').attr('value'));
         var text = parseInt($('input[name="num"]').attr('text'));
+        var yunfei = 999;
+        console.log(yunfei)
+        //当购物车数量增加的时候
         $('.add').click(function(){
             num++;
             text++;
             $('input[name="num"]').attr('value',num);
-            var total = num * 1280;
+            var total = num * 1280 + yunfei;
             $('#price').html(total.toFixed(2));
         });
-        //减号
+        //当购物车数量减少的时候
         $('.minus').click(function () {
             if(num>1){
                 num--;
                 $('input[name="num"]').attr('value',num);
-                console.log(num)
-                var total = num * 1280;
+                var total = num * 1280 + yunfei;
                 $('#price').text(total.toFixed(2));
             }else{
                 alert('购买数量不能少于一件')
             }
-
-
         });
     });
 </script>

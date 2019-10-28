@@ -162,7 +162,6 @@
                                  更多资讯>
                             </span>
                 </a>
-
             </div>
         </div>
     </div>
@@ -191,7 +190,7 @@
                 dataType: "json",
                 url: "/new/tops",
                 success: function (data) {
-                    // console.log(data);
+                    console.log(data);
                     $.each(data, function(i, item) {
                         var time = getMyDate(item.release_time);
                         $(".main_div").append(
