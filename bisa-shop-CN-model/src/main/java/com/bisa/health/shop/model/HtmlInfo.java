@@ -5,7 +5,15 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Max;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.Range;
+
+import com.bisa.health.common.utils.RegexConstants;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -58,8 +66,11 @@ public class HtmlInfo implements Serializable {
 	@NotNull(message="column_name_US cannot be empty")
     private String column_name_US;//网页导航栏名称
 	
-	@NotNull(message="order_id cannot be empty")
-    private int order_id;//网页分类
+	@Max(value=10,message="order_id cannot be empty")
+    private int order_id;//网页排序
+	
+	@Range(min=0,max=1,message="type cannot be empty")
+	private int type;
 	
 	@NotNull(message="name cannot be empty")
     private String name;
@@ -180,7 +191,9 @@ public class HtmlInfo implements Serializable {
         this.column_name_US = column_name_US;
     }
     
-    public String getName() {
+  
+
+	public String getName() {
 		return name;
 	}
 
@@ -188,22 +201,33 @@ public class HtmlInfo implements Serializable {
 		this.name = name;
 	}
 
-	public int getOrder_id() {
+
+	public Integer getOrder_id() {
 		return order_id;
 	}
 
-	public void setOrder_id(int order_id) {
+	public void setOrder_id(Integer order_id) {
 		this.order_id = order_id;
+	}
+
+	public Integer getType() {
+		return type;
+	}
+
+	public void setType(Integer type) {
+		this.type = type;
 	}
 
 	public HtmlInfo() {
     }
 
-	public HtmlInfo(String html_keyWord_CN, String html_keyWord_HK, String html_keyWord_US, String html_description_CN,
-			String html_description_HK, String html_description_US, String html_title_CN, String html_title_HK,
-			String html_title_US, String column_name_CN, String column_name_HK, String column_name_US, int order_id,
-			String name, Date update_time) {
+
+	public HtmlInfo(Integer id, String html_keyWord_CN, String html_keyWord_HK, String html_keyWord_US,
+			String html_description_CN, String html_description_HK, String html_description_US, String html_title_CN,
+			String html_title_HK, String html_title_US, String column_name_CN, String column_name_HK,
+			String column_name_US, int order_id, int type, String name, Date update_time) {
 		super();
+		this.id = id;
 		this.html_keyWord_CN = html_keyWord_CN;
 		this.html_keyWord_HK = html_keyWord_HK;
 		this.html_keyWord_US = html_keyWord_US;
@@ -217,6 +241,7 @@ public class HtmlInfo implements Serializable {
 		this.column_name_HK = column_name_HK;
 		this.column_name_US = column_name_US;
 		this.order_id = order_id;
+		this.type = type;
 		this.name = name;
 		this.update_time = update_time;
 	}
@@ -247,6 +272,7 @@ public class HtmlInfo implements Serializable {
 		this.setHtml_title_US(info.getHtml_title_US());
 		this.setName(info.getName());
 		this.setOrder_id(info.getOrder_id());
+		this.setType(info.getType());
 		this.setUpdate_time(new Date());
 	}
 

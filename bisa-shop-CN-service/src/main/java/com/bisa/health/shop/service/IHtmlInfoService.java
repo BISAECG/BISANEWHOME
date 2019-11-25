@@ -1,5 +1,5 @@
 package com.bisa.health.shop.service;
-import com.bisa.health.shop.admin.dto.PageJsonDto;
+import com.bisa.health.basic.entity.Pager;
 import com.bisa.health.shop.model.HtmlInfo;
 
 import java.util.List;
@@ -22,7 +22,7 @@ public interface IHtmlInfoService {
      * 查询所有页面信息
      * @return
      */
-	PageJsonDto<HtmlInfo> selectHtmlInfoList(Integer page, Integer limit);
+	Pager<HtmlInfo> page(Integer offset);
     /**
      * 根据id查询网页信息
      * @param id

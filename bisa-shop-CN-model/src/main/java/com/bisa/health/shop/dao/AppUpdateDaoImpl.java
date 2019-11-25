@@ -1,9 +1,7 @@
 package com.bisa.health.shop.dao;
 
-import java.util.List;
 
 import org.springframework.stereotype.Repository;
-
 import com.bisa.health.basic.dao.BaseDao;
 import com.bisa.health.basic.entity.Pager;
 import com.bisa.health.shop.model.AppUpdate;
@@ -19,9 +17,9 @@ public class AppUpdateDaoImpl extends BaseDao<AppUpdate> implements IAppUpdateDa
 
 
 	@Override
-	public List<AppUpdate> listAll() {
-		String sql="SELECT * FROM s_app order by id desc LIMIT 0,10 ";
-		return this.listBySql(sql,null, AppUpdate.class);
+	public Pager<AppUpdate> page() {
+		String sql="SELECT * FROM s_app";
+		return this.findBySql(sql,null,AppUpdate.class,true);
 	}
 
 	@Override
@@ -31,24 +29,12 @@ public class AppUpdateDaoImpl extends BaseDao<AppUpdate> implements IAppUpdateDa
 	}
 
 	@Override
-	public Pager<AppUpdate> listLikeAll(String keyword) {
+	public Pager<AppUpdate> pageLikeAll(String keyword) {
 		String sql="SELECT * FROM s_app  LIKE '"+keyword+"%'";
-		return this.findBySql(sql, AppUpdate.class, true);
+		return this.findBySql(sql,null,AppUpdate.class,true);
 	}
 
 
-
-
-	@Override
-	public AppUpdate saveAppUpdate(AppUpdate appUpdate) {
-		return this.add(appUpdate);
-	}
-
-
-	@Override
-	public void updateAppUpdate(AppUpdate appUpdate) {
-		this.update(appUpdate);
-	}
 
 
 	@Override

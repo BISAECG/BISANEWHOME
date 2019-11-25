@@ -20,9 +20,9 @@ public class HtmlInfoDaoImpl extends BaseDao<HtmlInfo> implements IHtmlInfoDao {
     }
 
     @Override
-    public Pager<HtmlInfo> selectHtmlInfoList() {
+    public Pager<HtmlInfo> page() {
         String sql = "select * from s_html_info";
-        return super.findBySql(sql, null, HtmlInfo.class, true);
+        return super.findBySql(sql, null,HtmlInfo.class,true);
     }
 
     @Override

@@ -1,5 +1,8 @@
 package com.bisa.health.shop.dao;
 
+import com.bisa.health.basic.dao.IBaseDao;
+import com.bisa.health.basic.entity.Pager;
+import com.bisa.health.basic.entity.Pager;
 import com.bisa.health.basic.entity.Pager;
 import com.bisa.health.shop.model.News;
 import com.bisa.health.shop.model.NewsInLink;
@@ -11,19 +14,15 @@ import java.util.List;
  * @author Administrator
  */
 
-public interface INewsDao {
+public interface INewsDao extends IBaseDao<News>{
 	
-	/**
-     * 新闻列表的新闻分页
-     * @return
-     */
-    Pager<News> getPagerNews(int lang);
+	
 
     /**
      * 获取所有的新闻
      * @return
      */
-    Pager<News> getListNewsByKeyWord(String keyWord, int lang);
+    Pager<News> getListNewsByKeyWord(String keyWord, String language);
     /**
      * 更新新闻
      * @param news
@@ -35,19 +34,19 @@ public interface INewsDao {
      * 上一篇，本文，下一篇文章
      * @return
      */
-    List<News> getTop4ListNews(int lang);
+    List<News> getTop4ListNews(String language);
 
     /**
      * 获取所有的新闻
      * @return
      */
-    List<News> getListNews(int lang);
+    List<News> getListNews(String language);
 
     /**
      * 获取置顶新闻
      * @return
      */
-    List<News> getPlacementNews(int lang);
+    List<News> getPlacementNews(String language);
 
 	
 
@@ -62,16 +61,23 @@ public interface INewsDao {
     /**
      *  新闻ID和语言ID
      * @param news_id
-     * @param lang_id
+     * @param language
      * @return
      */
-    public News getNewsByNewsidAndLang(long news_id,int lang_id);
+    public News getNewsByNewsnumAndLanguage(String news_num, String language);
 
     /**
-     * 新闻列表的新闻分页
+     * 按新闻编号分页
      * @return
      */
-    public Pager<News> getPagerNews();
+    public Pager<News> getPageNewsGroupNum();
+    
+    /**
+     * 新闻分页
+     * @param language
+     * @return
+     */
+     public Pager<News> getPageNews(String language,String vKey,String vVal);
 
     /**
      * 文章标题
@@ -93,7 +99,7 @@ public interface INewsDao {
      * @param new_id
      * @return
      */
-    public List<News> listNewsByNewsid(long news_id);
+    public List<News> listNewsByNewsnum(String news_num);
     
     /**
      * 查询所有
@@ -101,35 +107,13 @@ public interface INewsDao {
      * @return
      */
     public List<News> listNews();
-
-    /**
-     * 添加新闻
-     * @param news
-     * @return
-     */
-    public News addNews(News news);
-
-    
-    /**
-     * 更新分类
-     * @param news
-     * @return
-     */
-    void updateNewsByClassify(long news_id,int classify_id);
-
-    /**
-     * 删除新闻信息
-     * @param id
-     * @return
-     */
-    public boolean deleteNewsById(int id);
     
     /**
      * 删除新闻信息
      * @param new_id
      * @return
      */
-    public boolean deleteNewsByNewid(long new_id);
+    public boolean deleteNewsByNewsnum(String news_num);
     /**
      * 分页查询内链接
      * @return

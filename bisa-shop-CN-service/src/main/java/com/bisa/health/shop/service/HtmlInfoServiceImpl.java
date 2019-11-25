@@ -2,7 +2,6 @@ package com.bisa.health.shop.service;
 
 import com.bisa.health.basic.entity.Pager;
 import com.bisa.health.basic.entity.SystemContext;
-import com.bisa.health.shop.admin.dto.PageJsonDto;
 import com.bisa.health.shop.dao.IHtmlInfoDao;
 import com.bisa.health.shop.model.HtmlInfo;
 
@@ -31,18 +30,9 @@ public class HtmlInfoServiceImpl implements IHtmlInfoService{
     }
 
     @Override
-    public PageJsonDto<HtmlInfo> selectHtmlInfoList(Integer page, Integer limit) {
-        SystemContext.setPageOffset((page - 1) * limit);
-        SystemContext.setPageSize(limit);
-        SystemContext.setSort("update_time"); // 默认按订单时间倒序
-        SystemContext.setOrder("desc");
-        Pager<HtmlInfo> pagerOrder=iAdminHtmlInfoDao.selectHtmlInfoList();
-        PageJsonDto<HtmlInfo> listPageDto = new PageJsonDto<>();
-        listPageDto.setCode(0);
-        listPageDto.setMsg("''");
-        listPageDto.setCount(pagerOrder.getTotal());
-        listPageDto.setData(pagerOrder.getDatas());
-        return listPageDto;
+    public Pager<HtmlInfo> page(Integer offset) {
+        Pager<HtmlInfo> pagerOrder=iAdminHtmlInfoDao.page();
+        return pagerOrder;
     }
     @Override
     public HtmlInfo selectHtmlInfoById(Integer id) {

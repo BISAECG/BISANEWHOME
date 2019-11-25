@@ -7,11 +7,11 @@ import com.bisa.health.shop.model.AppUpdate;
 
 public interface IAppUpdateService {
 	public AppUpdate saveAppUpdate(AppUpdate appUpdate);
-	public void updateAppUpdate(AppUpdate appUpdate);
+	public AppUpdate updateAppUpdate(AppUpdate appUpdate);
 	public void updateStatus(int id);
-	public List<AppUpdate> listAll();
+	public Pager<AppUpdate> page(Integer offset);
 	public AppUpdate loadByVersion(String version);
 	public AppUpdate loadByStatus(int status);
 	public AppUpdate load(int id);
-	public Pager<AppUpdate> listLikeAll(String keyword);
+	public Pager<AppUpdate> pageLikeAll(String keyword,Integer offset);
 }

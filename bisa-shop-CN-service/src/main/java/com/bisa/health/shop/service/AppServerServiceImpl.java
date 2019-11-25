@@ -20,8 +20,8 @@ public class AppServerServiceImpl implements IAppServerService{
 	private IAppServerDao appServerDao;
 	
 	@Override
-	@Cacheable(key="targetClass.name+methodName")
-	public Pager<AppServer> listPager(){
+	@Cacheable(key="targetClass.name+methodName+#offset")
+	public Pager<AppServer> listPager(Integer offset){
 		return appServerDao.listPager();
 	}
 

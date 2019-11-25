@@ -1,7 +1,14 @@
 package com.bisa.health.shop.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.NotBlank;
+import org.hibernate.validator.constraints.Range;
+
+import com.bisa.health.shop.entity.SysErrorCode;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -15,39 +22,49 @@ public class News  implements Serializable{
 
     private static final long serialVersionUID = 8489060357520626852L;
     private int id;
-    private long news_id; //新闻编码
     
-	@NotNull(message="news_title cannot be empty")
+    
+    private String news_num; //新闻编码
+    
+    @NotBlank(message=SysErrorCode.RequestFormat)
     private String news_title;  //新闻标题
 	
-	@NotNull(message="news_subhead cannot be empty")
+    @NotBlank(message=SysErrorCode.RequestFormat)
     private String news_subhead;    //副标题
 	
     private int read_quantity;    //阅读量
 	
-	@NotNull(message="news_content cannot be empty")
+    @NotBlank(message=SysErrorCode.RequestFormat)
     private String news_content;//新闻内容
 	
     private String img_url;//新闻封面图
+    
     private Date release_time; //发布日期
+    
     private String author;  //作者
     
-    private int news_classify_id;//新闻类型
+    private String news_classify_num;//新闻类型
 	
-	@NotNull(message="html_keyWord cannot be empty")
+    @NotBlank(message=SysErrorCode.RequestFormat)
     private String html_keyWord;//关键词
 	
-	@NotNull(message="news_describe cannot be empty")
+    @NotBlank(message=SysErrorCode.RequestFormat)
     private String news_describe;//新闻描述
-	
+    
+    @Range(max=2,message=SysErrorCode.RequestFormat)
     private int news_roofPlacement;//新闻置顶，0不置顶，1置顶
     
-	@NotNull(message="html_description cannot be empty")
+    @NotBlank(message=SysErrorCode.RequestFormat)
     private String html_description;//网站描述
 	
-	@NotNull(message="html_title cannot be empty")
+    @NotBlank(message=SysErrorCode.RequestFormat)
     private String html_title;//网站标题
-    private int lang_id;
+	
+    @NotBlank(message=SysErrorCode.RequestFormat)
+    private String language;
+    
+    
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public int getId() {
@@ -57,7 +74,7 @@ public class News  implements Serializable{
     public void setId(int id) {
         this.id = id;
     }
-    @Column(name = "release_time")
+    @Column(name="release_time",columnDefinition="timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP")
     public Date getRelease_time() {
         return release_time;
     }
@@ -65,7 +82,6 @@ public class News  implements Serializable{
     public void setRelease_time(Date release_time) {
         this.release_time = release_time;
     }
-    @Column(name = "author")
     public String getAuthor() {
         return author;
     }
@@ -73,7 +89,6 @@ public class News  implements Serializable{
     public void setAuthor(String author) {
         this.author = author;
     }
-    @Column(name = "img_url")
     public String getImg_url() {
         return img_url;
     }
@@ -81,7 +96,6 @@ public class News  implements Serializable{
     public void setImg_url(String img_url) {
         this.img_url = img_url;
     }
-    @Column(name = "news_title")
     public String getNews_title() {
         return news_title;
     }
@@ -89,7 +103,6 @@ public class News  implements Serializable{
     public void setNews_title(String news_title) {
         this.news_title = news_title;
     }
-    @Column(name = "read_quantity")
     public int getRead_quantity() {
         return read_quantity;
     }
@@ -97,7 +110,7 @@ public class News  implements Serializable{
     public void setRead_quantity(int read_quantity) {
         this.read_quantity = read_quantity;
     }
-    @Column(name = "news_content")
+	@Column(columnDefinition="text")
     public String getNews_content() {
         return news_content;
     }
@@ -113,30 +126,27 @@ public class News  implements Serializable{
     public void setNews_subhead(String news_subhead) {
         this.news_subhead = news_subhead;
     }
-    @Column(name = "news_id")
-    public long getNews_id() {
-        return news_id;
+    @Column(name = "news_num")
+    public String getNews_num() {
+        return news_num;
     }
 
-    public void setNews_id(long news_id) {
-        this.news_id = news_id;
+    public void setNews_num(String news_num) {
+        this.news_num = news_num;
     }
-    @Column(name = "news_classify_id")
-    public int getNews_classify_id() {
-        return news_classify_id;
+    public String getNews_classify_num() {
+        return news_classify_num;
     }
 
-    public void setNews_classify_id(int news_classify_id) {
-        this.news_classify_id = news_classify_id;
+    public void setNews_classify_num(String news_classify_num) {
+        this.news_classify_num = news_classify_num;
     }
-    @Column(name = "news_describe")
     public String getNews_describe() {
         return news_describe;
     }
 	public void setNews_describe(String news_describe) {
         this.news_describe = news_describe;
     }
-    @Column(name = "html_keyWord")
     public String getHtml_keyWord() {
 		return html_keyWord;
 	}
@@ -144,17 +154,15 @@ public class News  implements Serializable{
 	public void setHtml_keyWord(String html_keyWord) {
 		this.html_keyWord = html_keyWord;
 	}
-
-	public int getLang_id() {
-		return lang_id;
+	@Column(length=16)
+	public String getLanguage() {
+		return language;
 	}
 
-	public void setLang_id(int lang_id) {
-		this.lang_id = lang_id;
+	public void setLanguage(String language) {
+		this.language = language;
 	}
 
-
-    @Column(name = "news_roofPlacement")
     public int getNews_roofPlacement() {
         return news_roofPlacement;
     }
@@ -162,7 +170,6 @@ public class News  implements Serializable{
     public void setNews_roofPlacement(int news_roofPlacement) {
         this.news_roofPlacement = news_roofPlacement;
     }
-    @Column(name = "html_description")
     public String getHtml_description() {
         return html_description;
     }
@@ -170,7 +177,6 @@ public class News  implements Serializable{
     public void setHtml_description(String html_description) {
         this.html_description = html_description;
     }
-    @Column(name = "html_title")
     public String getHtml_title() {
         return html_title;
     }
@@ -183,11 +189,11 @@ public class News  implements Serializable{
         super();
     }
 
-	public News(int news_id, String news_title, String news_subhead, int read_quantity, String news_content,
-			String img_url, Date release_time, String author, int news_classify_id, String html_keyWord,
-			String news_describe, int news_roofPlacement, String html_description, String html_title, int lang_id) {
+	public News(String news_num, String news_title, String news_subhead, int read_quantity, String news_content,
+			String img_url, Date release_time, String author, String news_classify_num, String html_keyWord,
+			String news_describe, int news_roofPlacement, String html_description, String html_title, String language) {
 		super();
-		this.news_id = news_id;
+		this.news_num = news_num;
 		this.news_title = news_title;
 		this.news_subhead = news_subhead;
 		this.read_quantity = read_quantity;
@@ -195,36 +201,38 @@ public class News  implements Serializable{
 		this.img_url = img_url;
 		this.release_time = release_time;
 		this.author = author;
-		this.news_classify_id = news_classify_id;
+		this.news_classify_num = news_classify_num;
 		this.html_keyWord = html_keyWord;
 		this.news_describe = news_describe;
 		this.news_roofPlacement = news_roofPlacement;
 		this.html_description = html_description;
 		this.html_title = html_title;
-		this.lang_id = lang_id;
+		this.language = language;
 	}
 
+
+	
 	@Override
 	public String toString() {
-		return "News [id=" + id + ", news_id=" + news_id + ", news_title=" + news_title + ", news_subhead="
+		return "News [id=" + id + ", news_num=" + news_num + ", news_title=" + news_title + ", news_subhead="
 				+ news_subhead + ", read_quantity=" + read_quantity + ", news_content=" + news_content + ", img_url="
-				+ img_url + ", release_time=" + release_time + ", author=" + author + ", news_classify_id="
-				+ news_classify_id + ", html_keyWord=" + html_keyWord + ", news_describe=" + news_describe
+				+ img_url + ", release_time=" + release_time + ", author=" + author + ", news_classify_num="
+				+ news_classify_num + ", html_keyWord=" + html_keyWord + ", news_describe=" + news_describe
 				+ ", news_roofPlacement=" + news_roofPlacement + ", html_description=" + html_description
-				+ ", html_title=" + html_title + ", lang_id=" + lang_id + "]";
+				+ ", html_title=" + html_title + ", language=" + language + "]";
 	}
-	
+
 	public void toNews(News news){
 		this.setAuthor(news.getAuthor());
 		this.setHtml_description(news.getHtml_description());
 		this.setHtml_keyWord(news.getHtml_keyWord());
 		this.setHtml_title(news.getHtml_title());
 		this.setImg_url(news.getImg_url());
-		this.setLang_id(news.getLang_id());
-		this.setNews_classify_id(news.getNews_classify_id());
+		this.setLanguage(news.getLanguage());
+		this.setNews_classify_num(news.getNews_classify_num());
 		this.setNews_content(news.getNews_content());
 		this.setNews_describe(news.getNews_describe());
-		this.setNews_id(news.getNews_id());
+		this.setNews_num(news.getNews_num());
 		this.setNews_roofPlacement(news.getNews_roofPlacement());
 		this.setNews_subhead(news.getNews_subhead());
 		this.setNews_title(news.getHtml_title());

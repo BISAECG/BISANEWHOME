@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.bisa.health.basic.entity.SystemContext;
-import com.bisa.health.shop.enumerate.InternationalizationEnum;
+import com.bisa.health.shop.enumerate.LangEnum;
 import com.bisa.health.shop.model.CompanyInfo;
 import com.bisa.health.shop.model.HtmlInfo;
 import com.bisa.health.shop.model.News;
@@ -71,21 +71,13 @@ public class FreemarkerComponent {
 		util.fprint(root, "/en_US/infooter.ftl", SystemContext.getRealPath()+outPath+"/en_US/infooter.html");
 	}
 	
-	
-	public void generateBody(Map<String,Object> root,String ftlName,String htmlName) {
-		util.fprint(root, "/zh_CN/"+ftlName, SystemContext.getRealPath()+outPath+"/zh_CN/"+htmlName);
-		util.fprint(root, "/zh_HK/"+ftlName, SystemContext.getRealPath()+outPath+"/zh_HK/"+htmlName);
-		util.fprint(root, "/en_US/"+ftlName, SystemContext.getRealPath()+outPath+"/en_US/"+htmlName);
-	}
-	
-	public void generateBody(Map<String,Object> root,String lang,String ftlName,String htmlName) {
-		util.fprint(root, "/"+lang+"/"+ftlName, SystemContext.getRealPath()+outPath+"/"+lang+"/"+htmlName);
+	public void generateBody(Map<String,Object> root,String language,String ftlName,String htmlName) {
+		util.fprint(root, "/"+language+"/"+ftlName, SystemContext.getRealPath()+outPath+"/"+language+"/"+htmlName);
 	}
 	
 	public void generateNews(List<News> list) {
 		for(News nn:list){
 			
-			InternationalizationEnum langEnum=InternationalizationEnum.getByValue(nn.getLang_id());
         	Map<String,Object> root=new HashMap<String,Object>();
         	root.put("news_keyWord", nn.getHtml_keyWord());
         	root.put("news_description", nn.getHtml_description());
@@ -93,7 +85,7 @@ public class FreemarkerComponent {
         	root.put("release_time", nn.getRelease_time());
         	root.put("read_quantity", nn.getRead_quantity());
         	root.put("news_content", nn.getNews_content());
-        	util.fprint(root, "/"+langEnum.getName()+"/newbody.ftl", SystemContext.getRealPath()+outPath+"/"+langEnum.getName()+"/news/"+nn.getNews_id()+".html");
+        	util.fprint(root, "/"+nn.getLanguage()+"/newbody.ftl", SystemContext.getRealPath()+outPath+"/"+nn.getLanguage()+"/news/"+nn.getId()+".html");
         }
 		
 	}

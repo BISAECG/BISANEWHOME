@@ -1,11 +1,11 @@
 package com.bisa.health.shop.controller;
 
 import com.bisa.health.basic.entity.Pager;
-import com.bisa.health.shop.enumerate.InternationalizationEnum;
+import com.bisa.health.shop.component.InternationalizationUtil;
+import com.bisa.health.shop.enumerate.LangEnum;
 import com.bisa.health.shop.model.News;
 import com.bisa.health.shop.service.INewsService;
 import com.bisa.health.shop.service.INewsService;
-import com.bisa.health.shop.utils.InternationalizationUtil;
 
 import com.alibaba.fastjson.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +32,9 @@ public class NewsController {
     private INewsService adminNewsService;
   
     @Autowired
+	private InternationalizationUtil i18nUtil;
+    
+    @Autowired
     String outPath;
     /**
      * 跳转到新闻详情页
@@ -39,11 +42,10 @@ public class NewsController {
      */
     @RequestMapping(value = "/news/body", method = RequestMethod.GET)
     public String view(HttpSession session,int id) {
-        String lang = InternationalizationUtil.getLang(session);
         News news = adminNewsService.getNewsById(id);
         news.setRead_quantity(news.getRead_quantity() + 1);
         newsService.updateNews(news);
-        return "redirect:"+outPath+"/"+lang+"/news/"+news.getNews_id()+".html";
+        return "redirect:"+outPath+"/"+i18nUtil.lang()+"/news/"+news.getId()+".html";
     }
     /**
             * 健康A&Q
@@ -62,14 +64,13 @@ public class NewsController {
     @RequestMapping(value = "/news/list", method = RequestMethod.GET)
     @ResponseBody
     public Pager<News> loadNewsDatas(Integer page, Integer limit, HttpSession session,String keyWord ) {
-        String lang = InternationalizationUtil.getLang(session);
         Pager<News>  newsPager = null;
         if(keyWord==null||keyWord==""){
             //查询所有新闻
-            newsPager = newsService.getPagerNews(page, limit, lang);
+            newsPager = newsService.getPageNews(i18nUtil.lang(),null,null);
         }else{
             //根据关键字或者新闻标题模糊搜索新闻
-            newsPager =  newsService.getPagerNews(page,limit,lang,keyWord);
+            newsPager =  newsService.getPageNews(i18nUtil.lang(),null,null);
         }
         return newsPager;
     }
@@ -80,8 +81,7 @@ public class NewsController {
     @RequestMapping(value = "/new/tops", method = RequestMethod.GET)
     @ResponseBody
     public  List<News> loadPlacementNews(HttpSession session) {
-        String lang = InternationalizationUtil.getLang(session);
-        List<News>  newsPager = newsService.getPlacementNews(lang);
+        List<News>  newsPager = newsService.getPlacementNews(i18nUtil.lang());
         return newsPager;
     }
 }

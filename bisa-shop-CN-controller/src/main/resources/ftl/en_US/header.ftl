@@ -17,19 +17,19 @@
                     <span class='sep'>|</span>
                     <span style='color: #b0b0b0;'>
                         Language:</span>
-                    <a id='lang-hk' href='?lang=zh_HK'>
+                    <a id='lang-hk' href='/index.html?lang=zh_HK'>
                         Traditional
                     </a> |
-                    <a id='lang-cn' href='?lang=zh_CN'>
+                    <a id='lang-cn' href='/index.html?lang=zh_CN'>
                         Simplified
                     </a> |
-                    <a id='lang-us' href='?lang=en_US'>
+                    <a id='lang-us' href='/index.html?lang=en_US'>
                         English
                     </a>
                     <span><img src='../resources/img/HK_About/hk.png'></span>
                 </div>
                 <div class="col-md-3 col-md-offset-3">
-                    <a class="pull-left " href="login.html">
+                    <a class="pull-left " href="/login">
                         login
                     </a>
                     <sapn class="pull-left"

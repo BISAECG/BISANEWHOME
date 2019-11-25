@@ -8,11 +8,18 @@ public interface ICompanyInfoService {
      * @param companyInfo
      * @return
      */
-    CompanyInfo updateCompanyInfo(CompanyInfo companyInfo);
+    CompanyInfo add(CompanyInfo companyInfo);
 
+    /**
+     * 修改公司信息
+     * @param companyInfo
+     * @return
+     */
+    CompanyInfo update(CompanyInfo companyInfo);
+    
     /**
      * 查询公司信息
      * @return
      */
-    CompanyInfo selectCompanyInfo();
+    CompanyInfo loadByUnId(int uniqueid);
 }

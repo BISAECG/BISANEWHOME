@@ -10,15 +10,11 @@ public enum GoodsTypeEnum {
     /**
      * 单品
      */
-    single(0, "single"),
-    /**
-     * 套餐
-     */
-    combo(1, "combo"),
+	real(0, "real"),
     /**
      * 虚拟商品
      */
-    virtual(2, "virtual");
+    virtual(1, "virtual");
 
 
     private int value;

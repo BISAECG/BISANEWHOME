@@ -47,7 +47,7 @@
     <Loggers>
         
         <!-- 项目整体默认日志配置，此处最低级别为 debug -->
-        <Root level="debug">
+        <Root level="DEBUG">
             <AppenderRef ref="ConsoleDebugLog" />
             <AppenderRef ref="InfoRollingFileLog" />
             <AppenderRef ref="ErrorRollingFileLog" />
@@ -63,10 +63,6 @@
             <AppenderRef ref="ErrorRollingFileLog" />
         </logger> 
        
-    	 <logger name="org.springframework" level="ERROR" additivity="false">
-            <AppenderRef ref="ConsoleInfoLog" />
-            <AppenderRef ref="ErrorRollingFileLog" />
-        </logger> 
          <logger name="net.sf" level="ERROR" additivity="false">
             <AppenderRef ref="ConsoleErrorLog" />
             <AppenderRef ref="ErrorRollingFileLog" />
@@ -84,12 +80,15 @@
             <AppenderRef ref="ConsoleErrorLog" />
             <AppenderRef ref="ErrorRollingFileLog" />
         </logger>
-        
-      <logger name="org.apache.http" level="DEBUG" additivity="false">
+       	<logger name="org.springframework.amqp" level="ERROR" additivity="false">
             <AppenderRef ref="ConsoleInfoLog" />
             <AppenderRef ref="ErrorRollingFileLog" />
-        </logger> 
-        <logger name=" org.quartz" level="DEBUG" additivity="false">
+        </logger>
+		<logger name="org.apache.http" level="DEBUG" additivity="false">
+            <AppenderRef ref="ConsoleInfoLog" />
+            <AppenderRef ref="ErrorRollingFileLog" />
+        </logger>
+        <logger name=" org.quartz" level="ERROR" additivity="false">
             <AppenderRef ref="ConsoleInfoLog" />
             <AppenderRef ref="ErrorRollingFileLog" />
         </logger> 

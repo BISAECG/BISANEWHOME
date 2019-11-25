@@ -24,7 +24,7 @@ public interface IHtmlInfoDao {
      * 查询所有页面信息
      * @return
      */
-    Pager<HtmlInfo> selectHtmlInfoList();
+    Pager<HtmlInfo> page();
 
     /**
      * 根据id查询网页信息

@@ -17,19 +17,19 @@
                     <span class='sep'>|</span>
                     <span style='color: #b0b0b0;'>
                         语言:</span>
-                    <a id='lang-hk' href='?lang=zh_HK'>
+                    <a id='lang-hk' href='/index.html?lang=zh_HK'>
                         繁体
                     </a> |
-                    <a id='lang-cn' href='?lang=zh_CN'>
+                    <a id='lang-cn' href='/index.html?lang=zh_CN'>
                         简体
                     </a> |
-                    <a id='lang-us' href='?lang=en_US'>
+                    <a id='lang-us' href='/index.html?lang=en_US'>
                         英文
                     </a>
                     <span><img src='../resources/img/HK_About/hk.png'></span>
                 </div>
                 <div class="col-md-3 col-md-offset-3">
-                    <a class="pull-left " href="login.html">
+                    <a class="pull-left " href="/login">
                         登录
                     </a>
                     <sapn class="pull-left"

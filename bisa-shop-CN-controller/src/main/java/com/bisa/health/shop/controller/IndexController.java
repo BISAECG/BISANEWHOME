@@ -29,9 +29,19 @@ public class IndexController {
     public String index(HttpServletRequest request,Model model) {
     	
     	Locale mlocale=null;
-    	mlocale=(Locale) request.getSession().getAttribute(SessionLocaleResolver.LOCALE_SESSION_ATTRIBUTE_NAME);
+    	mlocale=(Locale) request.getAttribute(SessionLocaleResolver.LOCALE_SESSION_ATTRIBUTE_NAME);
     	model.addAttribute("lang",mlocale.toString());
+    	System.out.println(mlocale.toString());
         return "/index";
+    }
+    
+    /**
+     * 商城首页   http://localhost:8080/health-shop/index
+     * @return
+     */
+    @RequestMapping(value = "/index", method = RequestMethod.POST)
+    public String mIndex(HttpServletRequest request,Model model) {
+    	return index(request,model);
     }
     
     @RequestMapping(value = "/isLogin")

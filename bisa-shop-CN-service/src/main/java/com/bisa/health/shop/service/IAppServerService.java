@@ -7,7 +7,7 @@ import com.bisa.health.shop.model.AppServer;
 
 public interface IAppServerService{
 	public List<AppServer> list();
-	public Pager<AppServer> listPager();
+	public Pager<AppServer> listPager(Integer offset);
 	public AppServer loadByID(int id);
 	public AppServer loadByVersion();
 	public void updateStatus(String version);

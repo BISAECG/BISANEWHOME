@@ -1,19 +1,13 @@
 package com.bisa.health.shop.dao;
 
+import com.bisa.health.basic.dao.IBaseDao;
 import com.bisa.health.shop.model.CompanyInfo;
 
-public interface ICompanyInfoDao {
-
-    /**
-     * 修改公司信息
-     * @param companyInfo
-     * @return
-     */
-    CompanyInfo updateCompanyInfo(CompanyInfo companyInfo);
+public interface ICompanyInfoDao  extends IBaseDao<CompanyInfo>{
 
     /**
      * 查询公司信息
      * @return
      */
-    CompanyInfo selectCompanyInfo();
+    CompanyInfo loadByUnId(int uniqueid);
 }

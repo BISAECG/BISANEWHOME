@@ -1,7 +1,7 @@
 package com.bisa.health.shop.service;
 
 import com.bisa.health.basic.entity.Pager;
-import com.bisa.health.shop.admin.dto.PageJsonDto;
+import com.bisa.health.basic.entity.Pager;
 import com.bisa.health.shop.model.News;
 import com.bisa.health.shop.model.NewsInLink;
 
@@ -24,7 +24,7 @@ public interface INewsService {
      * @param new_id
      * @return
      */
-    public List<News> listNewsByNewsid(long news_id);
+    public List<News> listNewsByNewsnum(String news_num);
     
     
     /**
@@ -37,10 +37,10 @@ public interface INewsService {
     /**
      * 根据新闻ID和语言ID
      * @param news_id
-     * @param lang_id
+     * @param language_id
      * @return
      */
-    public News getNewsByNewsidAndLang(long news_id,int lang_id);
+    public News getNewsByNewsnumAndLanguage(String news_num,String language);
     /**
      * 添加新闻
      * @param news
@@ -56,26 +56,20 @@ public interface INewsService {
     News updateNews(News news);
     
     
-    /**
-     * 更新分类
-     * @param news
-     * @return
-     */
-    void updateNewsByClassify(long news_id,int classify_id);
 
     /**
      * 删除新闻信息
      * @param id
      * @return
      */
-    public boolean deleteNewsById(int id);
+    public void deleteNewsById(int id);
     
     /**
      * 删除新闻信息
      * @param new_id
      * @return
      */
-    public boolean deleteNewsByNewid(long new_id);
+    public boolean deleteNewsByNewsnum(String new_num);
 
     /**
      * 查询  (所有新闻)
@@ -85,7 +79,7 @@ public interface INewsService {
      * @param searchabout option选择   1 文章标题  2 文章ID
      * @return
      */
-    PageJsonDto<News> selectAllNews(Integer page, Integer limit, String incontent, String searchabout);
+    Pager<News> selectAllNews(Integer page, Integer limit, String incontent, String searchabout);
 
     /**
      * 查询所有的内链接文本
@@ -93,7 +87,7 @@ public interface INewsService {
      * @param limit
      * @return
      */
-    PageJsonDto<NewsInLink> selectInnerChainList(Integer page, Integer limit);
+    Pager<NewsInLink> selectInnerChainList(Integer page, Integer limit);
     /**
      * 查询所有的内链接文本
      * @return
@@ -116,42 +110,42 @@ public interface INewsService {
      * 上一篇，本文，下一篇文章
      *
      * @return
-     * @param lang
+     * @param language
      */
-    List<News> getTop4ListNews(String lang);
+    List<News> getTop4ListNews(String language);
 
+    
     /**
-     * 新闻分页
-     *
-     * @param page  分页页码0,10,20
-     * @param limit 每页显示数量
-     * @param lang 国际化语言
+     * 根据新闻news_num分类查询
+     * @param offset
      * @return
      */
-    Pager<News> getPagerNews(Integer page, Integer limit, String lang);
+    Pager<News> getPageNewsGroupNum(Integer offset);
+    
+    
+    /**
+     * 关键字和语言分页查询
+     * @param language
+     * @param vKey
+     * @param vVal
+     * @return
+     */
+    public Pager<News> getPageNews(String language, String vKey, String vVal);
 
 
     /**
      * 获取所有的新闻
      *
      * @return
-     * @param lang
+     * @param language
      */
-    List<News> getListNews(String lang);
+    List<News> getListNews(String language);
 
-    /**
-     * 根据关键字查询新闻
-     * @param page
-     * @param limit
-     * @param lang
-     * @param keyWord
-     * @return
-     */
-    Pager<News> getPagerNews(Integer page, Integer limit, String lang,String keyWord);
+    
 
     /**
      * 获取置顶新闻
      * @return
      */
-    List<News> getPlacementNews(String lang);
+    List<News> getPlacementNews(String language);
 }

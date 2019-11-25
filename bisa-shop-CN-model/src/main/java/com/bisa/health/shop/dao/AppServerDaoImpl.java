@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import com.bisa.health.basic.dao.BaseDao;
 import com.bisa.health.basic.entity.Pager;
+import com.bisa.health.basic.entity.Pager;
 import com.bisa.health.shop.model.AppServer;
 import com.bisa.health.shop.model.AppUpdate;
 
@@ -30,7 +31,7 @@ public class AppServerDaoImpl extends BaseDao<AppServer> implements IAppServerDa
 	@Override
 	public Pager<AppServer> listPager() {
 		String sql="SELECT * from s_server";
-		return this.findBySql(sql, AppServer.class, true);
+		return this.findBySql(sql,null,AppServer.class,true);
 	}
 	
 

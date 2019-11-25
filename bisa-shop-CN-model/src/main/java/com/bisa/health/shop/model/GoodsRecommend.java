@@ -23,13 +23,14 @@ public class GoodsRecommend implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private int id;
 	/**
-	 * 商品ID
-	 */
-	private int goods_id;
-	/**
 	 * 商品编号
 	 */
-	private String goods_num;
+	private String goods_number;
+	/**
+	 * 推荐编号
+	 */
+	private String recommend_num;
+	
 	
     @Id
     @GeneratedValue
@@ -39,23 +40,27 @@ public class GoodsRecommend implements Serializable {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public int getGoods_id() {
-		return goods_id;
+	
+	@Column(length=32)
+	public String getGoods_number() {
+		return goods_number;
 	}
-	public void setGoods_id(int goods_id) {
-		this.goods_id = goods_id;
+	public void setGoods_number(String goods_number) {
+		this.goods_number = goods_number;
 	}
 	
 	@Column(length=32)
-	public String getGoods_num() {
-		return goods_num;
+	public String getRecommend_num() {
+		return recommend_num;
 	}
-	public void setGoods_num(String goods_num) {
-		this.goods_num = goods_num;
+	public void setRecommend_num(String recommend_num) {
+		this.recommend_num = recommend_num;
 	}
+	
+
 	@Override
 	public String toString() {
-		return "GoodsRecommend [id=" + id + ", goods_id=" + goods_id + ", goods_num=" + goods_num + "]";
+		return "GoodsRecommend [id=" + id + ", goods_number=" + goods_number + ", recommend_num=" + recommend_num + "]";
 	}
 	
 	

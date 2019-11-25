@@ -9,7 +9,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.hibernate.validator.constraints.NotBlank;
+import org.hibernate.validator.constraints.Range;
+
 import com.bisa.health.entity.bind.CustomDateSerializer;
+import com.bisa.health.shop.entity.SysErrorCode;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 @Entity
@@ -21,11 +25,17 @@ public class AppUpdate implements Serializable{
 	 */
 	private static final long serialVersionUID = 1L;
 	
+	@NotBlank(message=SysErrorCode.RequestFormat)
 	private String version;
+	@NotBlank(message=SysErrorCode.RequestFormat)
 	private String appUrl;
+	
 	private int id;
+	@Range(min=0,max=1,message=SysErrorCode.RequestFormat)
 	private int status;
+	
 	private String fileName;
+	
 	private Date createTime;
 	
 	public String getVersion() {
@@ -77,6 +87,12 @@ public class AppUpdate implements Serializable{
 		this.createTime = createTime;
 	}
 	
-	
+	public AppUpdate toAppUpdate(AppUpdate appUpdate){
+		this.setAppUrl(appUpdate.getAppUrl());
+		this.setFileName(appUpdate.getFileName());
+		this.setStatus(appUpdate.getStatus());
+		this.setVersion(appUpdate.getVersion());
+		return this;
+	}
 	
 }

@@ -28,9 +28,9 @@ public class AppUpdateServiceImpl implements IAppUpdateService{
 	}
 
 	@Override
-	@Cacheable(key="targetClass.name+methodName")
-	public List<AppUpdate> listAll() {
-		return appUpdateDao.listAll();
+	@Cacheable(key="targetClass.name+methodName+#offset")
+	public Pager<AppUpdate> page(Integer offset) {
+		return appUpdateDao.page();
 	}
 
 	@Override
@@ -46,21 +46,22 @@ public class AppUpdateServiceImpl implements IAppUpdateService{
 	}
 
 	@Override
-	@Cacheable(key="targetClass.name+methodName+#keyword")
-	public Pager<AppUpdate> listLikeAll(String keyword) {
-		return appUpdateDao.listLikeAll(keyword);
+	@Cacheable(key="targetClass.name+methodName+#keyword+#offset")
+	public Pager<AppUpdate> pageLikeAll(String keyword,Integer offset) {
+		return appUpdateDao.pageLikeAll(keyword);
 	}
 
 	@Override
 	@CacheEvict(value="AdminAppUpdateServiceImpl",allEntries=true)
 	public AppUpdate saveAppUpdate(AppUpdate appUpdate) {
-		return appUpdateDao.saveAppUpdate(appUpdate);
+		return appUpdateDao.add(appUpdate);
 	}
 
 	@Override
 	@CacheEvict(value="AdminAppUpdateServiceImpl",allEntries=true)
-	public void updateAppUpdate(AppUpdate appUpdate) {
-		appUpdateDao.updateAppUpdate(appUpdate);
+	public AppUpdate updateAppUpdate(AppUpdate appUpdate) {
+		appUpdateDao.update(appUpdate);
+		return appUpdate;
 	}
 
 	@Override

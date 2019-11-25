@@ -7,9 +7,9 @@
     <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon" />
     <link rel="bookmark" href="Images/favicon.ico" type="image/x-icon" />
     <meta charset="UTF-8">
-    <meta name="keywords" content="大师">
-    <meta name="description" content="大师">
-    <title>碧沙康健</title>
+    <meta name="keywords" content="碧沙康健">
+    <meta name="description" content="碧沙康健">
+    <title>碧沙首页</title>
     <link href="../resources/css/comm/swiper.min.css" rel="stylesheet">
     <link href="../resources/css/comm/base.css" rel="stylesheet">
     <link href="../resources/css/index/index.css" rel="stylesheet">
@@ -162,7 +162,6 @@
                                  更多资讯>
                             </span>
                 </a>
-
             </div>
         </div>
     </div>
@@ -191,7 +190,7 @@
                 dataType: "json",
                 url: "/new/tops",
                 success: function (data) {
-                    // console.log(data);
+                    console.log(data);
                     $.each(data, function(i, item) {
                         var time = getMyDate(item.release_time);
                         $(".main_div").append(

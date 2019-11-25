@@ -8,10 +8,14 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Digits;
 
-import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.NotBlank;
+import org.hibernate.validator.constraints.Range;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import com.bisa.health.entity.bind.CustomDateSerializer;
+import com.bisa.health.shop.entity.SysErrorCode;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 /**
@@ -21,6 +25,7 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
  */
 @Entity
 @Table(name = "s_goods")
+@org.hibernate.annotations.Proxy(lazy = false)
 public class Goods implements Serializable {
 	
 	/**
@@ -42,7 +47,7 @@ public class Goods implements Serializable {
 	/**
 	 * 商品描述
 	 */
-	private String desc;
+	private String description;
 	/**
 	 * 商品类型
 	 */
@@ -50,26 +55,24 @@ public class Goods implements Serializable {
 	/**
 	 * 商品价格
 	 */
-	private int price;
+	private double price;
 	/**
 	 * 语言版本
 	 */
-	private String lang;
+	private String language;
 	/**
 	 * 商品详情ID
 	 */
-	private int detail_id;
+	private String detail_body;
 	/**
-	 * 商品分类ID
+	 * 商品分类名字
 	 */
-	private int category_id;
-	/**
-	 * 商品详情名字
-	 */
-	private String category_name;
+	private String category_num;
 	/**
 	 * 创建时间
 	 */
+
+	
 	private Date c_time;
 	
     @Id
@@ -81,6 +84,7 @@ public class Goods implements Serializable {
 		this.id = id;
 	}
 	
+	
 	@Column(length=32)
 	public String getNumber() {
 		return number;
@@ -88,6 +92,7 @@ public class Goods implements Serializable {
 	public void setNumber(String number) {
 		this.number = number;
 	}
+	@NotBlank(message=SysErrorCode.RequestFormat)
 	@Column(length=50)
 	public String getName() {
 		return name;
@@ -95,53 +100,56 @@ public class Goods implements Serializable {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getDesc() {
-		return desc;
+	@NotBlank(message=SysErrorCode.RequestFormat)
+	public String getDescription() {
+		return description;
 	}
-	public void setDesc(String desc) {
-		this.desc = desc;
+	public void setDescription(String description) {
+		this.description = description;
 	}
-	
+	@Range(min=0,max=1000,message=SysErrorCode.RequestFormat)
 	public int getType() {
 		return type;
 	}
 	public void setType(int type) {
 		this.type = type;
 	}
-	public int getPrice() {
+	
+	@Digits(integer = 13, fraction = 2,message=SysErrorCode.RequestFormat)
+	public double getPrice() {
 		return price;
 	}
-	public void setPrice(int price) {
+	public void setPrice(double price) {
 		this.price = price;
 	}
+	@NotBlank(message=SysErrorCode.RequestFormat)
 	@Column(length=16)
-	public String getLang() {
-		return lang;
+	public String getLanguage() {
+		return language;
 	}
-	public void setLang(String lang) {
-		this.lang = lang;
+	public void setLanguage(String language) {
+		this.language = language;
 	}
-	public int getDetail_id() {
-		return detail_id;
+	@NotBlank(message=SysErrorCode.RequestFormat)
+	@Column(columnDefinition="text")
+	public String getDetail_body() {
+		return detail_body;
 	}
-	public void setDetail_id(int detail_id) {
-		this.detail_id = detail_id;
-	}
-	public int getCategory_id() {
-		return category_id;
-	}
-	public void setCategory_id(int category_id) {
-		this.category_id = category_id;
+	public void setDetail_body(String detail_body) {
+		this.detail_body = detail_body;
 	}
 	
-	@Column(length=50)
-	public String getCategory_name() {
-		return category_name;
+	
+	@Column(length=32)
+	@NotBlank(message=SysErrorCode.RequestFormat)
+	public String getCategory_num() {
+		return category_num;
 	}
-	public void setCategory_name(String category_name) {
-		this.category_name = category_name;
+	public void setCategory_num(String category_num) {
+		this.category_num = category_num;
 	}
 	
+	@DateTimeFormat(pattern = "yyyy-MM-dd hh:MM:ss")
 	@JsonSerialize(using = CustomDateSerializer.class)
 	@Column(name="c_time",columnDefinition="timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP")
 	public Date getC_time() {
@@ -152,11 +160,14 @@ public class Goods implements Serializable {
 	}
 	@Override
 	public String toString() {
-		return "Goods [id=" + id + ", number=" + number + ", name=" + name + ", desc=" + desc + ", type=" + type
-				+ ", price=" + price + ", lang=" + lang + ", detail_id=" + detail_id + ", category_id=" + category_id
-				+ ", category_name=" + category_name + ", c_time=" + c_time + "]";
+		return "Goods [id=" + id + ", number=" + number + ", name=" + name + ", description=" + description + ", type="
+				+ type + ", price=" + price + ", language=" + language + ", detail_body=" + detail_body
+				+ ", category_num=" + category_num + ", c_time=" + c_time + "]";
 	}
+
 	
+	
+
 	
 	
 }

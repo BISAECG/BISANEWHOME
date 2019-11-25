@@ -12,12 +12,18 @@ public class CompanyInfoServiceImpl implements ICompanyInfoService {
     @Autowired
     private ICompanyInfoDao companyInfoDao;
     @Override
-    public CompanyInfo updateCompanyInfo(CompanyInfo companyInfo) {
-        return companyInfoDao.updateCompanyInfo(companyInfo);
+    public CompanyInfo add(CompanyInfo companyInfo) {
+        return companyInfoDao.add(companyInfo);
+    }
+    
+    @Override
+    public CompanyInfo update(CompanyInfo companyInfo) {
+         companyInfoDao.update(companyInfo);
+         return companyInfo;
     }
 
     @Override
-    public CompanyInfo selectCompanyInfo() {
-        return companyInfoDao.selectCompanyInfo();
+    public CompanyInfo loadByUnId(int uniqueid) {
+        return companyInfoDao.loadByUnId(uniqueid);
     }
 }

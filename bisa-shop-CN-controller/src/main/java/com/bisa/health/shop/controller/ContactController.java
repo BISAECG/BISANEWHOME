@@ -1,7 +1,6 @@
 package com.bisa.health.shop.controller;
 
 import com.bisa.health.shop.model.Guestbook;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Controller;

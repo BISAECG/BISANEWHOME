@@ -35,38 +35,45 @@ public class SystemContextFilter implements Filter  {
 	public void doFilter(ServletRequest req, ServletResponse resp,
 			FilterChain chain) throws IOException, ServletException {
 		
-		HttpSession session = ((HttpServletRequest) req).getSession();
-		Locale mlocale=null;
-		if(!StringUtils.isEmpty(req.getParameter("lang"))){
-			String language=req.getParameter("lang");
-        	if(language.equals("zh_CN")){
-	    		mlocale = new Locale("zh", "CN"); 
-	    	}else if(language.equals("zh_TW")||language.equals("zh_HK")){
-	    		mlocale = new Locale("zh", "HK"); 
-	    	}else{
-	    		mlocale = new Locale("en", "US"); 
-	    	}
-        	session.setAttribute(SessionLocaleResolver.LOCALE_SESSION_ATTRIBUTE_NAME,mlocale);
-    	}else{
-    		mlocale=(Locale) session.getAttribute(SessionLocaleResolver.LOCALE_SESSION_ATTRIBUTE_NAME);
-    		if(mlocale==null){
-    			String lang=req.getLocale().toString();
-    	    	if(lang.equals("zh_CN")){
-    	    		mlocale = new Locale("zh", "CN"); 
-    	    	}else if(lang.equals("zh_TW")||lang.equals("zh_HK")){
-    	    		mlocale = new Locale("zh", "HK"); 
-    	    	}else{
-    	    		mlocale = new Locale("en", "US"); 
-    	    	}
-    	    	session.setAttribute(SessionLocaleResolver.LOCALE_SESSION_ATTRIBUTE_NAME,mlocale);
-    		}
-    	}
+		Locale mlocale = null;
+		if (!StringUtils.isEmpty(req.getParameter("lang"))) {
+			String language = req.getParameter("lang");
+			if (language.equals("zh_CN")) {
+				mlocale = new Locale("zh", "CN");
+			} else if (language.equals("zh_TW") || language.equals("zh_HK")) {
+				mlocale = new Locale("zh", "HK");
+			} else {
+				mlocale = new Locale("en", "US");
+			}
+			req.setAttribute(SessionLocaleResolver.LOCALE_SESSION_ATTRIBUTE_NAME, mlocale);
+			req.setAttribute("lang", mlocale.toString());
+		} else {
+			mlocale = (Locale) req.getAttribute(SessionLocaleResolver.LOCALE_SESSION_ATTRIBUTE_NAME);
+			if (mlocale == null) {
+				String lang = req.getLocale().toString();
+				if (lang.equals("zh_CN")) {
+					mlocale = new Locale("zh", "CN");
+				} else if (lang.equals("zh_TW") || lang.equals("zh_HK")) {
+					mlocale = new Locale("zh", "HK");
+				} else {
+					mlocale = new Locale("en", "US");
+				}
+				req.setAttribute(SessionLocaleResolver.LOCALE_SESSION_ATTRIBUTE_NAME, mlocale);
+				
+			}
+			req.setAttribute("lang", mlocale.toString());
+		}
 		
-		
-		
+
 		Integer offset = 0;
 		try {
-			offset = Integer.parseInt(req.getParameter("pager.offset"));
+			offset = Integer.parseInt(req.getParameter("page"));
+			if(offset>0){
+				offset=offset-1;
+			}
+			if(offset>0){
+				offset=offset*pageSize;
+			}
 		} catch (NumberFormatException e) {}
 		try {
 			SystemContext.setOrder(req.getParameter("order"));
@@ -87,9 +94,9 @@ public class SystemContextFilter implements Filter  {
 	@Override
 	public void init(FilterConfig cfg) throws ServletException {
 		try {
-			pageSize = Integer.parseInt(cfg.getInitParameter("pageSize"));
+			pageSize = Integer.parseInt(cfg.getInitParameter("limit"));
 		} catch (NumberFormatException e) {
-			pageSize = 15;
+			pageSize = pageSizeDefalut;
 		}
 	}
 	

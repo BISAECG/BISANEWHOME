@@ -9,10 +9,14 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.hibernate.validator.constraints.NotBlank;
+
 import com.bisa.health.entity.bind.CustomDateSerializer;
+import com.bisa.health.shop.entity.SysErrorCode;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 @Entity
+@org.hibernate.annotations.Proxy(lazy = false)
 @Table(name = "s_server")
 public class AppServer implements Serializable{
 
@@ -22,16 +26,26 @@ public class AppServer implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	private int id;
+	@NotBlank(message=SysErrorCode.RequestFormat)
 	private String phoneCode;
+	@NotBlank(message=SysErrorCode.RequestFormat)
 	private String countryCode;
+	@NotBlank(message=SysErrorCode.RequestFormat)
 	private String domain;
-	private int status;
+	private int status=0;
+	@NotBlank(message=SysErrorCode.RequestFormat)
 	private String time_zone;
+	@NotBlank(message=SysErrorCode.RequestFormat)
 	private String en_country;
+	@NotBlank(message=SysErrorCode.RequestFormat)
 	private String hk_country;
+	@NotBlank(message=SysErrorCode.RequestFormat)
 	private String cn_country;
+	@NotBlank(message=SysErrorCode.RequestFormat)
 	private String datserver;
+	@NotBlank(message=SysErrorCode.RequestFormat)
 	private String shopserver;
+	@NotBlank(message=SysErrorCode.RequestFormat)
 	private String version;
 	private Date createTime;
 	
@@ -125,7 +139,19 @@ public class AppServer implements Serializable{
 		this.createTime = createTime;
 	}
 	
-	
+	public AppServer toAppServer(AppServer appServer){
+		this.setCn_country(appServer.getCn_country());
+		this.setCountryCode(appServer.getCountryCode());
+		this.setDatserver(appServer.getDatserver());
+		this.setDomain(appServer.getDomain());
+		this.setEn_country(appServer.getEn_country());
+		this.setHk_country(appServer.getHk_country());
+		this.setPhoneCode(appServer.getPhoneCode());
+		this.setShopserver(appServer.getShopserver());
+		this.setTime_zone(appServer.getTime_zone());
+		this.setVersion(appServer.getVersion());
+		return this;
+	}
 	
 	
 	
