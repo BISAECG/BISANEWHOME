@@ -187,6 +187,7 @@
                     $.ajax({
                         url: '/admin/goods/ajax/category/del/'+id,
                         type: "DELETE",
+                        dataType: "json",
                         success: function (data) {
                         	
                         	if(data.code=="${SysStatusCode.SUCCESS}"){
@@ -234,6 +235,7 @@
         	$.ajax({
 				url: "/admin/goods/ajax/category/list/"+where.language,
 				type: "GET",
+				dataType: "json",
 				success: function(obj) {
 					$("#super_id").empty();
 					if(obj.code=="${SysStatusCode.SUCCESS}"){

@@ -72,6 +72,11 @@ public class NewsDaoImpl extends BaseDao<News> implements INewsDao {
         return super.findBySql(sql, null,News.class, true);
     }
     
+    @Override
+    public Pager<News> getPageNewsGroupNum(String vKey, String vVal) {
+    	String sql = "SELECT a.*  FROM (SELECT * FROM s_news WHERE "+vKey+" Like '%"+vVal+"%' GROUP BY news_num ) AS a";
+        return super.findBySql(sql, null,News.class, true);
+    }
 
     @Override
 	public Pager<News> getPageNews(String language, String vKey, String vVal) {
@@ -89,8 +94,6 @@ public class NewsDaoImpl extends BaseDao<News> implements INewsDao {
 		return super.findBySql(sql, new Object[]{language},News.class, true);
 	}
 
-	
-
 	@Override
     public Pager<News> selectNewsByArticleTitle(String incontent) {
         String sql = "select * from s_news where news_title = ?";
@@ -102,37 +105,11 @@ public class NewsDaoImpl extends BaseDao<News> implements INewsDao {
         return super.findBySql(sql, new Object[]{incontent},News.class,true);
     }
 
-    @Override
-    public Pager<NewsInLink> selectInnerChainList() {
-        String sql = "select * from s_news_inlink";
-        return super.findBySql(sql, null,NewsInLink.class,true);
-    }
-
-    @Override
-    public List<NewsInLink> selectAllInnerChainList() {
-        String sql = "select * from s_news_inlink";
-        return super.listBySql(sql, null, NewsInLink.class, true);
-    }
-
-    @Override
-    public boolean addInnerChain(NewsInLink newsInnerChain) {
-        String sql = "INSERT INTO s_news_inlink (inner_chain_text_CN,inner_chain_text_EN,inner_chain_text_HK,inner_chain_url," +
-                "creation_time)  VALUES(?,?,?,?,?)";
-        int result = super.addBySql(sql, new Object[]{newsInnerChain.getInner_chain_text_CN(),newsInnerChain.getInner_chain_text_EN(),newsInnerChain.getInner_chain_text_HK(),newsInnerChain.getInner_chain_url(),newsInnerChain.getCreation_time()});
-        return result >= 1 ? true : false;
-    }
-
-    @Override
-    public boolean delectInnerChain(int id) {
-        String sql = "DELETE FROM s_news_inlink WHERE ID=?";
-        int result = super.deleteBySql(sql, new Object[]{id});
-        return result >= 1 ? true : false;
-    }
-
 	@Override
 	public List<News> listNews() {
 	       String sql = "SELECT * FROM s_news";
 	       return super.listBySql(sql, null,  News.class);
 	}
+	
 
 }

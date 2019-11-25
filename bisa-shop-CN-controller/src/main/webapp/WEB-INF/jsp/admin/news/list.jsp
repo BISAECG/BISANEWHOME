@@ -75,8 +75,8 @@
                                 <div class="layui-inline">
                                     <select name="searchabout" lay-verify="required" lay-search="">
                                         <option value="">请选择您要查询的内容</option>
-                                        <option value="1">新闻标题</option>
-                                        <option value="2">新闻ID</option>
+                                        <option value="news_title">新闻标题</option>
+                                        <option value="release_time">发布时间</option>
                                     </select>
                                 </div>
                                 <div class="layui-inline">
@@ -177,44 +177,42 @@
                 table = layui.table,
               	$=layui.jquery;
             
+            //一键生成所有静态网页
+            
+            
             $(".btn-refresh").click(function () {
-                window.location.reload();
+            	tableIns.reload({page:{curr:1},where:{vKey: ""}});
             });
            
             $(".btn-generate").click(function () {
             	layer.load();
                 $.ajax({
-                    type: "post",
+                    type: "GET",
                     dataType: "json",
-                    url: "/admin/generate/html",
+                    async:false,
+                    url: "/admin/news/ajax/generate/html",
                     success: function (data) {
                         //显示新闻数据，填充页面元素
                     	  layer.closeAll('loading');
+                    	  showMessage(data.msg);
                     }
                 });
             });
 
             //监听提交
             form.on('submit(search1)', function (data) {
+            	console.log(data);
                 var incontent = data.field.incontent;
                 var searchabout = data.field.searchabout;
 
-                //执行重载
-                table.reload('commentlist', {
-                    page: {
-                        curr: 1 //重新从第 1 页开始
-                    },
-                    where: {
-                        key: {
-                            incontent: incontent,
-                            searchabout: searchabout
-                        }
-                    }
-                });
+            	tableIns.reload({page:{curr:1},where: {
+                    	vKey: searchabout,
+                    	vVal: incontent
+                }});
                 return false;
             });
             //=================执行渲染==================
-            table.render({
+             var tableIns =table.render({
                 elem: '#commentlist', //指定原始表格元素选择器（推荐id选择器）
                 id: 'commentlist',
                 url: '/admin/news/ajax/list',
@@ -237,10 +235,7 @@
                 ],
                 done: function (res, curr, count) {
                 }
-                /*在这里使用的是静态数据，参考layui文档，使用服务器上的数据进行更替*/
-                /*data: [
-                    { "id": 10005, "title": "新的模块上线啦6", "subtitle": "悉心心电仪的新模块6", "author": "BIS-责任编辑师", "release_time": "2017/10/12 9:55:52", "modificationtime": "2017/10/12 9:58:52","weight": "10",},
-                ],*/
+     
             });
             //===============监听工具条===================
             table.on('tool(test)', function (obj) { //注：tool是工具条事件名，test是table原始容器的属性 lay-filter="对应的值"
@@ -251,7 +246,24 @@
                     window.open(shopUrl + "/news/body?id=" + data.id);
                 } else if (layEvent === 'delarticle') { //删除
                     layer.confirm("<spring:message code='submit.delete' />", function (index) {
-                    	window.location="/admin/news/delectNews/"+ data.id;
+                    	$.post("/admin/news/ajax/delect/"+ data.id, function(result){
+                    		showMessage(result.msg);
+                    		  //执行重载
+                    		tableIns.reload({page:{curr:1}});
+                    	 });
+                    });
+                }else if(layEvent ==='generate'){
+                	layer.load();
+                    $.ajax({
+                        type: "GET",
+                        dataType: "json",
+                        async:false,
+                        url: "/admin/news/ajax/generate/html/"+data.news_num,
+                        success: function (data) {
+                            //显示新闻数据，填充页面元素
+                        	  layer.closeAll('loading');
+                        	  showMessage(data.msg);
+                        }
                     });
                 }else{
                 	console.log(data);
@@ -259,34 +271,18 @@
                 }
                
             });
+            
+            
+            /*异常信息*/
+            function showMessage(msg) {
+            	if(msg!=''){
+            		layer.msg(msg);
+            	}
+            	
+            }
         });
 
-    //获得年月日      得到日期oTime  
-    function getMyDate(data) {
-        if (data == "") {
-            return "- - - - - -";
-        }
-        data = parseInt(data);
-
-        var oldTime = (new Date(data)).getTime(); //得到毫秒数
-        var oDate = new Date(oldTime);
-        oYear = oDate.getFullYear(),
-            oMonth = oDate.getMonth() + 1,
-            oDay = oDate.getDate(),
-            oHour = oDate.getHours(),
-            oMin = oDate.getMinutes(),
-            oSen = oDate.getSeconds(),
-            oTime = oYear + '年' + getzf(oMonth) + '月' + getzf(oDay) + '日     ' + getzf(oHour) + ':' + getzf(oMin) + ':' + getzf(oSen);//最后拼接时间
-        return oTime;
-    };
-
-    //补0操作  
-    function getzf(num) {
-        if (parseInt(num) < 10) {
-            num = '0' + num;
-        }
-        return num;
-    }
+  
     </script>
 </body>
 </html>

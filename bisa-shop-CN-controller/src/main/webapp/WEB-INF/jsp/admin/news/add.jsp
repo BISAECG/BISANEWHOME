@@ -93,7 +93,7 @@
                         <div class="layui-form-item">
                             <label class="layui-form-label ">主图地址：</label>
                             <div class="layui-inline layui-col-md6">
-                            		<input type="text" name="img_url" id="img_url" lay-verify="required" placeholder="请输入新闻主图地址" autocomplete="off" class="layui-input">
+                            		<input type="text" readonly="readonly"  name="img_url" id="img_url" lay-verify="required" placeholder="请输入新闻主图地址" autocomplete="off" class="layui-input">
                             </div>
                             <div class="layui-inline">
                             	<div class="layui-input-inline">

@@ -5,6 +5,7 @@ import com.bisa.health.basic.entity.Pager;
 import com.bisa.health.basic.entity.Pager;
 import com.bisa.health.basic.entity.SystemContext;
 import com.bisa.health.shop.dao.INewsDao;
+import com.bisa.health.shop.dao.INewsInLinkDao;
 import com.bisa.health.shop.model.News;
 import com.bisa.health.shop.model.NewsInLink;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +22,9 @@ public class NewsServiceImpl implements INewsService {
 
     @Autowired
     private INewsDao iNewsDao;
+    
+    @Autowired
+    private INewsInLinkDao iNewsInLinkDao;
 
     @Override
     @Cacheable(key = "targetClass.name+methodName+#id")
@@ -52,60 +56,13 @@ public class NewsServiceImpl implements INewsService {
         return iNewsDao.deleteNewsByNewsnum(news_num);
     }
 
-    @Override
-    @Cacheable(key = "targetClass.name+methodName+#page+# limit+#incontent+#searchabout")
-    public Pager<News> selectAllNews(Integer page, Integer limit, String incontent, String searchabout) {
-//        // * @param incontent input输入的内容 和下面对应
-//        // * @param searchabout option选择 1 文章标题 2 文章ID
-//        SystemContext.setPageOffset((page - 1) * limit);
-//        SystemContext.setPageSize(limit);
-//        SystemContext.setSort("release_time"); // 默认按订单时间倒序
-//        SystemContext.setOrder("desc");
-//
-//        // 高级查询
-//        Pager<News> pagerOrder = null;
-//        if (searchabout.equals("1")) {// 1 文章标题
-//            pagerOrder = iNewsDao.selectNewsByArticleTitle(incontent);
-//        } else if (searchabout.equals("2")) {// 2 文章ID
-//            pagerOrder = iNewsDao.selectNewsByArticleID(incontent);
-//        }
-//        return pagerOrder;
-    	return null;
-    }
-
-    @Override
-    public Pager<NewsInLink> selectInnerChainList(Integer page, Integer limit){
-        // * @param incontent input输入的内容 和下面对应
-        // * @param searchabout option选择 1 文章标题 2 文章ID
-        SystemContext.setPageOffset((page - 1) * limit);
-        SystemContext.setPageSize(limit);
-        SystemContext.setSort("creation_time"); // 默认按订单时间倒序
-        SystemContext.setOrder("desc");
-
-        // 高级查询
-        Pager<NewsInLink> pagerOrder = iNewsDao.selectInnerChainList();;
-        return pagerOrder;
-    }
-
-    @Override
-    public List<NewsInLink> selectAllInnerChainList() {
-        return iNewsDao.selectAllInnerChainList();
-    }
-
-    @Override
-    public boolean delectInnerChain(int id) {
-        return iNewsDao.delectInnerChain(id);
-    }
-
-    @Override
-    public boolean addInnerChain(NewsInLink newsInnerChain) {
-        return iNewsDao.addInnerChain(newsInnerChain);
-    }
+    
 	@Override
 	public News getNewsByNewsnumAndLanguage(String news_num, String language) {
 		return iNewsDao.getNewsByNewsnumAndLanguage(news_num, language);
 	}
 
+	
 	@Override
 	public List<News> listNews() {
 		return iNewsDao.listNews();
@@ -126,6 +83,12 @@ public class NewsServiceImpl implements INewsService {
         Pager<News> pagerNews = iNewsDao.getPageNewsGroupNum();
         return pagerNews;
     }
+    
+	@Override
+	public Pager<News> getPageNewsGroupNum(String vKey, String vVal) {
+		  Pager<News> pagerNews = iNewsDao.getPageNewsGroupNum(vKey,vVal);
+	      return pagerNews;
+	}
     @Override
     @Cacheable(key = "targetClass.name+methodName+#page+#limit+#language+#keyWord")
     public Pager<News> getPageNews(String language, String vKey, String vVal){
@@ -158,4 +121,39 @@ public class NewsServiceImpl implements INewsService {
         List<News> listNews = iNewsDao.getPlacementNews(language);
         return listNews;
     }
+
+    
+	@Override
+	public List<NewsInLink> listLink() {
+		return iNewsInLinkDao.listLink();
+	}
+	@Override
+	public Pager<NewsInLink> listPageLink(int offset) {
+		return iNewsInLinkDao.listPageLink();
+	}
+
+    @Override
+    public void delectInnerChain(int id) {
+    	iNewsInLinkDao.delete(id);
+    }
+
+    @Override
+    public NewsInLink addInnerChain(NewsInLink newsInnerChain) {
+        return iNewsInLinkDao.add(newsInnerChain);
+    }
+    
+	@Override
+	public NewsInLink getNewsInLink(int id) {
+		return iNewsInLinkDao.loadNewsInLink(id);
+	}
+	@Override
+	public NewsInLink updateInnerChain(NewsInLink newsInnerChain) {
+		 iNewsInLinkDao.update(newsInnerChain);
+		 return newsInnerChain;
+	}
+	@Override
+	public Pager<News> selectAllNews(Integer page, Integer limit, String incontent, String searchabout) {
+		return null;
+	}
+
 }

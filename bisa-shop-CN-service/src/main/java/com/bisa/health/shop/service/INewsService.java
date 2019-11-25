@@ -34,6 +34,9 @@ public interface INewsService {
      */
     public List<News> listNews();
     
+    
+    
+    
     /**
      * 根据新闻ID和语言ID
      * @param news_id
@@ -81,31 +84,7 @@ public interface INewsService {
      */
     Pager<News> selectAllNews(Integer page, Integer limit, String incontent, String searchabout);
 
-    /**
-     * 查询所有的内链接文本
-     * @param page
-     * @param limit
-     * @return
-     */
-    Pager<NewsInLink> selectInnerChainList(Integer page, Integer limit);
-    /**
-     * 查询所有的内链接文本
-     * @return
-     */
-    List<NewsInLink> selectAllInnerChainList();
-    /**
-     * 添加内链接
-     * @param newsInnerChain
-     * @return
-     */
-    boolean addInnerChain(NewsInLink newsInnerChain);
-    /**
-     * 删除内链接
-     * @param id
-     * @return
-     */
-    boolean delectInnerChain(int id);
-    
+   
     /**
      * 上一篇，本文，下一篇文章
      *
@@ -124,6 +103,12 @@ public interface INewsService {
     
     
     /**
+     * 新闻分页
+     * @param language
+     * @return
+     */
+    public Pager<News> getPageNewsGroupNum(String vKey, String vVal);
+    /**
      * 关键字和语言分页查询
      * @param language
      * @param vKey
@@ -131,6 +116,7 @@ public interface INewsService {
      * @return
      */
     public Pager<News> getPageNews(String language, String vKey, String vVal);
+
 
 
     /**
@@ -148,4 +134,44 @@ public interface INewsService {
      * @return
      */
     List<News> getPlacementNews(String language);
+    
+    
+    
+    /**
+     * 查询所有的内链接文本
+     * @return
+     */
+    List<NewsInLink> listLink();
+    
+    /**
+     * 查询所有的内链接文本
+     * @return
+     */
+    Pager<NewsInLink> listPageLink(int offset);
+    /**
+     * 添加内链接
+     * @param newsInnerChain
+     * @return
+     */
+    NewsInLink addInnerChain(NewsInLink newsInnerChain);
+    
+    /**
+     * ID查询内链接
+     * @param newsInnerChain
+     * @return
+     */
+    NewsInLink getNewsInLink(int id);
+    /**
+     * 更新内链接
+     * @param newsInnerChain
+     * @return
+     */
+    NewsInLink updateInnerChain(NewsInLink newsInnerChain);
+    /**
+     * 删除内链接
+     * @param id
+     * @return
+     */
+    void delectInnerChain(int id);
+    
 }

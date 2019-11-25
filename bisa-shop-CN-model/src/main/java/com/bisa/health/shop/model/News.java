@@ -8,7 +8,9 @@ import javax.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.NotBlank;
 import org.hibernate.validator.constraints.Range;
 
+import com.bisa.health.entity.bind.CustomDateSerializer;
 import com.bisa.health.shop.entity.SysErrorCode;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -74,6 +76,7 @@ public class News  implements Serializable{
     public void setId(int id) {
         this.id = id;
     }
+	@JsonSerialize(using = CustomDateSerializer.class)
     @Column(name="release_time",columnDefinition="timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP")
     public Date getRelease_time() {
         return release_time;

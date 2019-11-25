@@ -78,6 +78,13 @@ public interface INewsDao extends IBaseDao<News>{
      * @return
      */
      public Pager<News> getPageNews(String language,String vKey,String vVal);
+     
+     /**
+      * 新闻分页
+      * @param language
+      * @return
+      */
+     public Pager<News> getPageNewsGroupNum(String vKey, String vVal);
 
     /**
      * 文章标题
@@ -114,26 +121,6 @@ public interface INewsDao extends IBaseDao<News>{
      * @return
      */
     public boolean deleteNewsByNewsnum(String news_num);
-    /**
-     * 分页查询内链接
-     * @return
-     */
-    public Pager<NewsInLink> selectInnerChainList();
-    /**
-     * 查询所有内链接
-     * @return
-     */
-    List<NewsInLink> selectAllInnerChainList();
-    /**
-     * 添加内链接
-     * @param newsInnerChain
-     * @return
-     */
-    boolean addInnerChain(NewsInLink newsInnerChain);
-    /**
-     * 删除内链接
-     * @param id
-     * @return
-     */
-    boolean delectInnerChain(int id);
+    
+
 }

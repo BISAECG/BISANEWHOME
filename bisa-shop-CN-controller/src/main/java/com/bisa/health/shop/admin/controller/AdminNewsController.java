@@ -79,20 +79,17 @@ public class AdminNewsController {
     public String list() {
         return "admin/news/list";
     }
-
- 
+    
+    
     /**
-     * 进去 bisa 新闻列表 内容 页面
+     * 图片上传
+     * @return
      */
-    @RequestMapping(value = "/body/{news_num}/{language}", method = RequestMethod.GET)
-    public String body(@PathVariable(value = "news_num") String news_num,@PathVariable(value = "language") String language,Model model) {
-    	
-    	News news=newsService.getNewsByNewsnumAndLanguage(news_num, language);
-    	
-    	model.addAttribute("news", news);
-        return "admin/news/body";
-
+    @RequestMapping(value = "/uppic", method = RequestMethod.GET)
+    public String uppic() {
+        return "admin/news/uppic";
     }
+
  
     /**
      * 进去添加新闻页面
@@ -109,26 +106,14 @@ public class AdminNewsController {
     /**
      * 进去 bisa 新闻列表 关键词内联
      */
-    @RequestMapping(value = "/addkey", method = RequestMethod.GET)
+    @RequestMapping(value = "/inlink", method = RequestMethod.GET)
     public String addkey() {
-        return "admin/news/addkey";
+        return "admin/news/inlink";
     }
+    
+    
+    
 
-    /**
-     * 加载新闻数据
-     * @param id 新闻表的id
-     * @return
-     */
-    @RequestMapping(value = "/load", method = RequestMethod.GET)
-    @ResponseBody
-    public News loadById(Integer id) {
-
-        if (id == null) {
-            return null;
-        } else {
-            return newsService.getNewsById(id);
-        }
-    }
     
 
     /**
@@ -152,10 +137,17 @@ public class AdminNewsController {
      * 查询新闻页面
      */
     @RequestMapping(value = "/ajax/list",method = RequestMethod.GET, produces = "application/json; charset=utf-8")
-    public ResponseEntity<Pager<News>> listAjax() {
+	@ResponseBody
+    public ResponseEntity<Pager<News>> listAjax(@RequestParam(required=false)String vKey,@RequestParam(required=false) String vVal) {
     	  SystemContext.setSort("release_time");
           SystemContext.setOrder("desc");
-    	  Pager<News> page=newsService.getPageNewsGroupNum(SystemContext.getPageOffset());
+          Pager<News> page=null;
+          if(!StringUtils.isEmpty(vKey)){
+        	  page=newsService.getPageNewsGroupNum(vKey, vVal);
+          }else{
+        	  page=newsService.getPageNewsGroupNum(SystemContext.getPageOffset());
+          }
+    	  
     	  return new ResponseEntity<Pager<News>>(page, HttpStatus.OK);
     }
 
@@ -186,7 +178,7 @@ public class AdminNewsController {
      * @param id 新闻表  id
      * @return
              */
-    @RequestMapping(value = "/delect/{new_id}",produces = "application/json; charset=utf-8")
+    @RequestMapping(value = "/ajax/delect/{id}",method = RequestMethod.POST,produces = "application/json; charset=utf-8")
     @ResponseBody
     public ResponseEntity<ResultData> delectNews(@PathVariable(value = "id") int id) {
     	newsService.deleteNewsById(id);
@@ -222,7 +214,7 @@ public class AdminNewsController {
 			newsService.updateNews(news);
             
             List<News> listNews=new ArrayList<News>();
-            List<NewsInLink>  inLinkList = newsService.selectAllInnerChainList();
+            List<NewsInLink>  inLinkList = newsService.listLink();
             String inLinkStr="";
             for(NewsInLink m :inLinkList){
 	            	if(news.getLanguage().toLowerCase()==LangEnum.zh_CN.getName().toLowerCase()){
@@ -244,89 +236,78 @@ public class AdminNewsController {
 					ResultData.success(SysStatusCode.SUCCESS, i18nUtil.i18n(SysErrorCode.OptSuccess)), HttpStatus.OK);
     }
   
-    /**
-     * 查询所有新闻
-     *
-     * @param page  第几页
-     * @param limit 每页有多少数据
-     */
-    @RequestMapping(value = "/page", method = RequestMethod.GET)
-    @ResponseBody
-    public Pager<News> load(Integer page,Integer limit, HttpServletRequest request) {
-        String incontent = request.getParameter("key[incontent]");
-        String searchabout = request.getParameter("key[searchabout]");
-        Pager<News> listPageDto = newsService.selectAllNews(page, limit, incontent, searchabout);
-        return listPageDto;
-    }
+	@RequestMapping(value = "/inlink/ajax/load", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
+	@ResponseBody
+	public ResponseEntity<ResultData> loadAjaxInlink(@RequestParam(required = true) Integer id) {
+		NewsInLink mNewsInLink = newsService.getNewsInLink(id);
+		if (mNewsInLink != null) {
+			return new ResponseEntity<ResultData>(
+					ResultData.success(SysStatusCode.SUCCESS, i18nUtil.i18n(SysErrorCode.OptSuccess), mNewsInLink),
+					HttpStatus.OK);
+		}
+		return new ResponseEntity<ResultData>(
+				ResultData.success(SysStatusCode.FAIL, i18nUtil.i18n(SysErrorCode.OptFail)),
+				HttpStatus.OK);
+	}
 
    
     /**
      * 查询所有内链文本信息
      * @return
      */
-    @RequestMapping(value = "/pageInLink", method = RequestMethod.GET)
+    @RequestMapping(value = "/inlink/ajax/list", method = RequestMethod.GET,produces = "application/json; charset=utf-8")
     @ResponseBody
-    public Pager<NewsInLink> listLink(Integer page, Integer limit, HttpServletRequest request) {
-    	Pager<NewsInLink> listPageDto = newsService.selectInnerChainList(page, limit);
-        return listPageDto;
+    public ResponseEntity<Pager<NewsInLink>> listLink() {
+        SystemContext.setSort("create_time"); // 默认按订单时间倒序
+        SystemContext.setOrder("desc");
+    	Pager<NewsInLink> listPage = newsService.listPageLink(SystemContext.getPageOffset());
+    	return new ResponseEntity<Pager<NewsInLink>>(listPage, HttpStatus.OK);
     }
     /**
      * 新增内链文本
      *newsInnerChain 新闻内链文本对象
      * @return
      */
-    @RequestMapping(value = "/addInLink", method = RequestMethod.POST)
+    @RequestMapping(value = "/inlink/ajax/add", method = RequestMethod.POST,produces = "application/json; charset=utf-8")
     @ResponseBody
-    public JsonResult addInLink(NewsInLink newsInnerChain) {
+    public ResponseEntity<ResultData>  addInLink(Model model,@Validated NewsInLink newInlink,BindingResult br) {
+        
+		if (br.hasErrors()) {
+			model.addAttribute("message", i18nUtil.i18n(SysErrorCode.RequestFormat));
+		}
 
-        JsonResult jsonResult = new JsonResult();
-        try {
-            if (newsInnerChain!=null){
-                newsInnerChain.setCreation_time(new Date());
-                newsService.addInnerChain(newsInnerChain);
-                jsonResult.setFlag(true);
-            }else{
-                jsonResult.setFlag(false);
-            }
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            jsonResult.setFlag(false);
-        }
-        return jsonResult;
+		if (newInlink.getId() == 0)
+			newsService.addInnerChain(newInlink);
+		else
+			newsService.updateInnerChain(newInlink);
+		return new ResponseEntity<ResultData>(
+				ResultData.success(SysStatusCode.SUCCESS, i18nUtil.i18n(SysErrorCode.OptSuccess)), HttpStatus.OK);
     }
     /**
      * 删除内链文本
      * @param id 内链文本id
      * @return
      */
-    @RequestMapping(value = "/delectInLink", method = RequestMethod.POST)
+    @RequestMapping(value = "/inlink/ajax/delect/{mid}", method = RequestMethod.DELETE, produces = "application/json; charset=utf-8")
     @ResponseBody
-    public JsonResult delectInLink(Integer id) {
-
-        JsonResult jsonResult = new JsonResult();
-        int new_id=id;
-        try {
-            newsService.delectInnerChain(id);
-            jsonResult.setFlag(true);
-        } catch (Exception e) {
-            e.printStackTrace();
-            jsonResult.setFlag(false);
-        }
-        return jsonResult;
+    public ResponseEntity<ResultData> delectInLink(@PathVariable(value = "mid") int mid) {
+    	
+    	newsService.delectInnerChain(mid);
+    	return new ResponseEntity<ResultData>(
+				ResultData.success(SysStatusCode.SUCCESS, i18nUtil.i18n(SysErrorCode.OptSuccess)), HttpStatus.OK);
     }
-
+    
+    
     /**
-     * 创建所有新闻页面
+     * 创建单个新闻
      * @return
      */
-    @RequestMapping(value = "/generate/html", method = RequestMethod.POST)
+    @RequestMapping(value = "/ajax/generate/html/{news_num}", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
     @ResponseBody
-    public JsonResult generateall() {
-    	 JsonResult json=new JsonResult();
-    	 List<News> list=newsService.listNews();
+    public ResponseEntity<ResultData> generateHtml(@PathVariable String news_num) {
+    	 List<News> list=newsService.listNewsByNewsnum(news_num);
          List<News> listNews=new ArrayList<News>(list.size());
-         List<NewsInLink>  inLinkList = newsService.selectAllInnerChainList();
+         List<NewsInLink>  inLinkList = newsService.listLink();
          String inLinkStr="";
          for(NewsInLink m :inLinkList){
 	            for(News n:list){
@@ -345,8 +326,40 @@ public class AdminNewsController {
          }
          
          freemarkerComponent.generateNews(listNews);
-         json.setFlag(true);
-    	return json;
+     	return new ResponseEntity<ResultData>(
+				ResultData.success(SysStatusCode.SUCCESS, i18nUtil.i18n(SysErrorCode.OptSuccess)), HttpStatus.OK);
+    }
+
+    /**
+     * 创建所有新闻页面
+     * @return
+     */
+    @RequestMapping(value = "/ajax/generate/html", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
+    @ResponseBody
+    public ResponseEntity<ResultData> generateall() {
+    	 List<News> list=newsService.listNews();
+         List<News> listNews=new ArrayList<News>(list.size());
+         List<NewsInLink>  inLinkList = newsService.listLink();
+         String inLinkStr="";
+         for(NewsInLink m :inLinkList){
+	            for(News n:list){
+	            	if(n.getLanguage().toLowerCase()==LangEnum.zh_CN.getName().toLowerCase()){
+	            		inLinkStr= " <a  style=\"color: #3f3b3c;text-decoration:none;\" href=\""+m.getInner_chain_url()+"\">"+m.getInner_chain_text_CN()+"</a>";
+	            		n.setNews_content(n.getNews_content().replaceAll(m.getInner_chain_text_CN(),inLinkStr));
+	            	}else if(n.getLanguage().toLowerCase()==LangEnum.zh_HK.getName().toLowerCase()){
+	            		inLinkStr= " <a  style=\"color: #3f3b3c;text-decoration:none;\" href=\""+m.getInner_chain_url()+"\">"+m.getInner_chain_text_HK()+"</a>";
+	            		n.setNews_content(n.getNews_content().replaceAll(m.getInner_chain_text_HK(),inLinkStr));
+	            	}else{
+	            		inLinkStr= " <a  style=\"color: #3f3b3c;text-decoration:none;\" href=\""+m.getInner_chain_url()+"\">"+m.getInner_chain_text_EN()+"</a>";
+	            		n.setNews_content(n.getNews_content().replaceAll(m.getInner_chain_text_EN(),inLinkStr));
+	            	}
+	            	listNews.add(n);
+	            }
+         }
+         
+         freemarkerComponent.generateNews(listNews);
+     	return new ResponseEntity<ResultData>(
+				ResultData.success(SysStatusCode.SUCCESS, i18nUtil.i18n(SysErrorCode.OptSuccess)), HttpStatus.OK);
     }
 
 }

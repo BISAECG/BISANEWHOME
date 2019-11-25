@@ -30,9 +30,7 @@
     <![endif]-->
     
     <script type="text/html" id="barDemo">
-		<a class="layui-btn layui-btn-normal layui-btn-sm" lay-event="zh_CN"><spring:message code='language.cn' /></a>
-        <a class="layui-btn layui-btn-normal layui-btn-sm" lay-event="zh_HK"><spring:message code='language.hk' /></a>
-		<a class="layui-btn layui-btn-normal layui-btn-sm" lay-event="en_US"><spring:message code='language.us' /></a>   
+		<a class="layui-btn layui-btn-normal layui-btn-sm" lay-event="edit"><spring:message code='edit' /></a>   
         <a class="layui-btn layui-btn-danger layui-btn-sm" lay-event="delete"><spring:message code='delete' /></a>
     </script>
     
@@ -60,14 +58,14 @@
                 <div class="layui-form-item mb-0" pane="">
                     <div class="layui-input-block">
                         <div class="layui-inline">
-                        	<button type="button" id="addPage" class="layui-btn">新增新闻分类</button>
+                        	<button type="button" id="addPage" class="layui-btn">新增新闻内联</button>
                         </div>
                     </div>
                 </div>
         </div>
         <div style="padding:0px 30px 30px 30px;">
             <p class="f-18 pt-15 pb-15  col-8d969d">
-                	分类列表
+                	新闻内联列表
             </p>
             <div class="clear pd-15 bg-fafafa bor bor-col-e8ebf2 min-w-1200">
                  <table id="table" lay-filter="table"></table>
@@ -78,19 +76,30 @@
         	<div class="site-text site-block">
 	            <form class="layui-form"  id="serverForm" lay-filter="form"  method="post">
 	                <input name="id" type="hidden" value="0" />
-	                 <input name="number" id="number" type="hidden" value="0" />
 	                <div class="layui-form-item ">
-	                    <label class="layui-form-label" style="width: 110px;padding-left:0px;">新闻分类名</label>
-	                    <div class="layui-input-inline">
-	                        <input type="text" name="name"  lay-verify="required" placeholder="请输入商品分类名"  class="layui-input">
-	                    </div>
-	                    <label class="layui-form-label " style="width: 110px;padding-left: 0px;">语言</label>
-	                    <div class="layui-input-inline">
-	                            <select id="language" name="language" lay-filter="language"  lay-verify="required">
-	                            </select>
+	                    <label class="layui-form-label">内联中文</label>
+	                    <div class="layui-input-block">
+	                        <input type="text" name="inner_chain_text_CN"  lay-verify="required" placeholder="请输入内联中文"  class="layui-input">
 	                    </div>
 	                </div>
-	               
+	                 <div class="layui-form-item ">
+	                    <label class="layui-form-label">内联英文</label>
+	                    <div class="layui-input-block">
+	                        <input type="text" name="inner_chain_text_EN"  lay-verify="required" placeholder="请输入内联英文"  class="layui-input">
+	                    </div>
+	                </div>
+	                 <div class="layui-form-item ">
+	                    <label class="layui-form-label">内联繁体</label>
+	                    <div class="layui-input-block">
+	                        <input type="text" name="inner_chain_text_HK"  lay-verify="required" placeholder="请输入内联繁体"  class="layui-input">
+	                    </div>
+	                </div>
+	                  <div class="layui-form-item ">
+	                    <label class="layui-form-label">内联地址</label>
+	                    <div class="layui-input-block">
+	                        <input type="text" name="inner_chain_url"  lay-verify="required" placeholder="请输入要内联地址"  class="layui-input">
+	                    </div>
+	                </div>
 	                <div class="layui-form-item">
 	                    <div class="text-center pd-20">
 	                        <button class="layui-btn" lay-submit lay-filter="create" ><spring:message code='submit' /></button>
@@ -124,7 +133,7 @@
 				type : "POST",
 				dataType: "json",
 				//contentType: "application/json;charset=UTF-8",
-				url : '/admin/news/ajax/category/add',
+				url : '/admin/news/inlink/ajax/add',
 				data : data.field,
 				success : function(data) {
 					if(data.code=="${SysStatusCode.SUCCESS}"){
@@ -143,20 +152,19 @@
         //=================执行渲染==================
         var tableIns =table.render({
             elem: '#table', //指定原始表格元素选择器（推荐id选择器）
-            url: '/admin/news/ajax/category/list',
+            url: '/admin/news/inlink/ajax/list',
             method:'GET',
             totalRow:true,
             page:{layout:	['prev', 'page', 'next'],limit:10},
             cols: [
                 [ //标题栏
                     {type: 'numbers'},
-                    {field: 'id', title: 'id', width: '5%',sort: true, align: 'center'},
-                    {field: 'name', title: '新闻分类名字', width: '15%', align: 'center'},
-                    {field: 'language', title: '语言', width: '10%', align: 'center'},
-                    {field: 'super_id', title: '分类父ID',hide :true, align: 'center'},
-                    {field: 'c_time', title:"<spring:message code='create.time' />", width: '15%', align: 'center'},
-                    {fixed: 'right', title: "<spring:message code='lang' />", width: '30%', align: 'center', toolbar: '#barLang'},
-                    {fixed: 'right', title: "<spring:message code='opt' />", width: '20%', align: 'center', toolbar: '#barDemo'}
+                    {field: 'inner_chain_text_CN', title: '内链中文文本', width: '15%', align: 'center'},
+                    {field: 'inner_chain_text_EN', title: '内链英文文本', width: '15%', align: 'center'},
+                    {field: 'inner_chain_text_HK', title: '内链繁体文本', width: '15%', align: 'center'},
+                    {field: 'inner_chain_url', title: '内链路径', width: '27%',  align: 'center'},
+                    {field: 'create_time', title: "<spring:message code='create.time' />", width: '10%', sort: true, align: 'center'},
+                    {fixed: 'right', title: '操作', width: '15%', align: 'center', toolbar: '#barDemo'}
                 ]
             ],
             done: function (res, curr, count) {
@@ -174,10 +182,9 @@
             var where=null;
            if(layEvent == 'delete'){
                 // 删除这里有个BUG就是单页删除完后需要手动刷新
-                var id = data.id;
                 layer.confirm("<spring:message code='submit.delete' />", function (index) {
                     $.ajax({
-                        url: '/admin/news/ajax/category/del/'+id,
+                        url: '/admin/news/inlink/ajax/delect/'+data.id,
                         type: "DELETE",
                         success: function (data) {
                         	
@@ -190,7 +197,7 @@
                     });
                 });
             }else{
-            	where={number:data.number,language:layEvent,id:0};
+            	where={id:data.id};
             }
             if(where!=null){
             	fullData(where);
@@ -217,13 +224,13 @@
         
      	 
         $("#addPage").click(function(){
-        	openDialog('form','.formsetting',{id:0,number:''});
+        	openDialog('form','.formsetting',{id:0});
         });
         
         
         function fullData(where){
         	$.ajax({
-				url: "/admin/news/ajax/category/load",
+				url: "/admin/news/inlink/ajax/load",
 				type: "GET",
 				data:where,
 				success: function(data) {
