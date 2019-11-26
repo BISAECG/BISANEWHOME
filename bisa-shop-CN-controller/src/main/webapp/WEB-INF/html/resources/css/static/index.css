@@ -1,0 +1,35 @@
+.Offer {
+    margin-top: 15px;
+}
+.certificate{
+    background: url('../../img/index/banner2.jpg');
+    opacity:0.5;
+}
+.certificate img{
+    width: 172.5px;
+    height: 125px;
+    border-radius: 10px;
+    
+}
+.certificate p{
+    font-size: 10px;
+    color: #FFFFFF;
+}
+.certificate div:first-of-type img{
+    margin: 10px 10px;
+}
+.certificate div:last-of-type img{
+    margin:10px 10px 10px 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> 
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>订单详情页</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="../resources/ctrl/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../resources/css/comm/base.css" rel="stylesheet">
+    <link href="../resources/css/index/comm.css" rel="stylesheet">
+    <link href="../resources/ctrl/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet">
+    <script src="../resources/js/comm/jquery.min.js"></script>
+    <style>
+    .down{
+       margin: 0px 0px 3rem 0px ;
+    }
+    .down div p:nth-child(1){
+       color:rgba(51,51,51,1);font-size:1.9rem;
+    }
+    .down div p:nth-child(2){
+       color:rgba(102,102,102,1);font-size:1.1rem;
+    }
+    .down div p:nth-child(3){
+       color:rgba(153,153,153,1);font-size:0.8rem;margin-bottom: 1rem;
+    }
+    .downBtn button:first-of-type{
+        background: #2AA8E2;border: 0;border-radius:10px;height: 3rem;
+    }
+    .downBtn button:first-of-type span{
+       color:rgba(255,255,255,1);font-size:1.5rem;line-height: 3rem;
+    }
+    .downBtn button:last-of-type{
+       background: #2AA8E2;border: 0;border-radius:10px;height: 3rem;
+    }
+    .downBtn button:last-of-type span{
+        color:rgba(255,255,255,1);font-size:1.5rem;line-height: 3rem;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="header"></div>
+    <script>
+        $("#header").load("head.html");
+    </script>
+    <div class="content">
+        <div class="container-full">
+            <div class="row" style="margin: 0;">
+                <div class="col-xs-12"  style="height:10px;background:rgba(241,241,241,1);">
+
+                </div>
+            </div>            
+        </div>
+        <div class="container-full">
+                <div class="row down" >
+                        <div class="text-center col-xs-6 col-xs-offset-3">
+                                <p class="mt-15 mb-15" >碧沙康健APP</p>
+                                <p >让你足不出户测心电</p>
+                                <p>Keep you indoors for ECG measurements</p>
+                                <img  class="img-responsive center-block"  src="../resources/img/download/qr.png">
+                        </div>
+                    </div>
+        </div>
+        <div class="container-full">
+                <div class="row" style="margin: 0;">
+                    <div class="col-xs-12"  style="height:10px;background:rgba(241,241,241,1);">
+    
+                    </div>
+                </div>            
+            </div>
+            <div class="container" style="margin-bottom: 5rem;">
+                    <div class="row">
+                        <div class="col-xs-12 downBtn">
+                            <button class="col-xs-10 col-sm-8 col-sm-offset-2 col-xs-offset-1 mt-30" >
+                                <img class="mb-20 mr-15" src="../resources/img/download/图层 52.png">
+                                <span >ios版下载</span>
+                            </button>
+                            <button class="col-xs-10 col-sm-8 col-sm-offset-2 col-xs-offset-1 mt-30" >
+                                    <span>Android版下载</span>
+                                </button>
+                        </div>
+                    </div>            
+                </div>
+
+    </div>
+    <div id="footer"></div>
+    <script>
+        $("#footer").load("foot.html");
+    </script>
+</body>
+
+</html>
