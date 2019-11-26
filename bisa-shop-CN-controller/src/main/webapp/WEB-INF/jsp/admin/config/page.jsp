@@ -26,11 +26,18 @@
     <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script src="/resources/js/comm/jquery.min.js"></script>
+	<script src="/resources/ctrl/layui/layui.js"></script>
+	<script src="/resources/js/utils.js"></script>
     <script type="text/html" id="barDemo">
         <a class="layui-btn layui-btn-normal layui-btn-sm" lay-event="edit"><spring:message code='edit' /></a>
  		<a class="layui-btn layui-btn-normal layui-btn-sm" lay-event="generate"><spring:message code='1063' /></a>
   		<a class="layui-btn layui-btn-danger layui-btn-sm" lay-event="delete"><spring:message code='delete' /></a>
     </script>
+    
+   <script type="text/html" id="temp_time">
+ 		{{# return javaToJsDateTime(d.update_time); }} 
+	</script>
 
     <style type="text/css">
         .layui-table-cell{
@@ -87,15 +94,14 @@
         <%--弹框html js调用--%>
         <div class="formsetting dis-n">
         	<div class="site-text site-block">
-	            <form class="layui-form"  id="serverForm" action="/admin/page/save" lay-filter="formServer"  method="post">
+	            <form class="layui-form"  id="serverForm"  lay-filter="formServer"  method="post">
 	                <input name="id" type="hidden" value="0" />
 	                <div class="layui-form-item ">
 	                    <label class="layui-form-label" style="width: 110px;"><spring:message code='url' /></label>
 	                    <div class="layui-input-inline">
 	                    	 <select name="name" lay-verify="required">
-	                    	 		
 	   							<c:forEach items="${list}" var="p">
-	   							   <option value="${p}">${p}</option>
+	   							   <option value="/${p}">/${p}</option>
 	   							</c:forEach>
 	                          </select>
 	                    </div>
@@ -188,7 +194,7 @@
 	                </div>
 	                <div class="layui-form-item">
 	                    <div class="text-center">
-	                        <button class="layui-btn" lay-submit="" lay-filter="demo2" id="demo2"><spring:message code='submit' /></button>
+	                        <button class="layui-btn" lay-submit="" lay-filter="create" id="create"><spring:message code='submit' /></button>
 	                        <button type="reset" class="layui-btn layui-btn-primary"><spring:message code='reset' /></button>
 	                    </div>
 	                </div>
@@ -198,8 +204,7 @@
         <!-- 对话框结束 -->
     </div>
 </div>
-<script src="/resources/js/comm/jquery.min.js"></script>
-<script src="/resources/ctrl/layui/layui.js"></script>
+
 <script type="text/javascript">
 
 
@@ -214,43 +219,54 @@
         	$=layui.jquery;
 
         //=================执行渲染==================
-        table.render({
+        var tableIns =table.render({
             elem: '#keywordlist', //指定原始表格元素选择器（推荐id选择器）
             id: 'keywordlist',
             url: '/admin/page/ajax/list',
             limit: 10,
             method:'GET',
-            page: false,
+            page:{layout:	['prev', 'page', 'next'],limit:10},
             cols: [
                 [ //标题栏
                     {type: 'numbers'},
                     {field: 'id', title: 'id', width: 100,sort: true, align: 'center'},
-                    {field: 'name', title: "<spring:message code='1021' />", width: 200, align: 'center'},
+                    {field: 'name', title: "<spring:message code='url' />", width: 200, align: 'center'},
                     {field: 'column_name_CN', title: "<spring:message code='1041' />", width: 200, align: 'center'},
-                    {field: 'html_title_CN', title: "<spring:message code='1039' />", width: 200, align: 'center'},
-                    {field: 'html_title_HK', title: "<spring:message code='1043' />", width: 200, align: 'center'},
-                    {field: 'html_title_US', title: "<spring:message code='1047' />", width: 200, align: 'center'},
-                    {field: 'update_time', title: "<spring:message code='modify.time' />", width: 200, sort: true, align: 'center'},
-                    {field: 'order_id', title: "<spring:message code='create.time' />", width: 200,  align: 'center'},
+                    {field: 'column_name_HK', title: "<spring:message code='1039' />", width: 200, align: 'center'},
+                    {field: 'column_name_US', title: "<spring:message code='1043' />", width: 200, align: 'center'},
+                    {field: 'update_time', title: "<spring:message code='modify.time' />", width: 200, sort: true, align: 'center',templet:'#temp_time'},
+                    {field: 'order_id', title: "<spring:message code='sort' />", width: 200,  align: 'center'},
                     {fixed: 'right', title: "<spring:message code='opt' />", width: 250, align: 'center', toolbar: '#barDemo'}
                 ]
             ],
             done: function (res, curr, count) {
-            	
-           	 laypage.render({
-                 elem: 'layer-pager' //分页容器的id
-                 ,count: res.count //总页数
-                 ,skin: '#1E9FFF' //自定义选中色值
-                ,prev: '<em>←</em>'
-                ,next: '<em>→</em>'
-                ,curr:curr
-                ,limit:res.size
-               });           	
+                 	
             }
         });
         
+    	form.on('submit(create)', function(data){
+       		
+       		$.ajax({
+				type : "POST",
+				dataType: "json",
+				//contentType: "application/json;charset=UTF-8",
+				url : '/admin/page/ajax/save',
+				data : data.field,
+				success : function(data) {
+					if(data.code=="${SysStatusCode.SUCCESS}"){
+						layer.closeAll();
+						tableIns.reload();
+					}
+						showMessage(data.msg);
+					
+				}
+			});
+	
+       		return false;
+       	});
+        
         // ===============监听工具条===================
-        table.on('tool(test)', function (obj) { //注：tool是工具条事件名，test是table原始容器的属性 lay-filter="对应的值"
+          table.on('tool(test)', function (obj) { //注：tool是工具条事件名，test是table原始容器的属性 lay-filter="对应的值"
             var data = obj.data; // 获得当前行数据
             var layEvent = obj.event; // 获得 lay-event 对应的值
             var tr = obj.tr; // 获得当前行 tr 的DOM对象
@@ -272,11 +288,6 @@
                                     obj.del();
                                     layer.close(index);
                                 });
-                                if (data.flag == false) {
-                                    layer.msg("<spring:message code='wrong' />", {icon: 5, time: 1000}, function () {
-                                        window.location.reload();
-                                    });
-                                }
                             }
                         }
                     });
@@ -288,16 +299,7 @@
                         url: '/admin/page/ajax/'+id,
                         type: "POST",
                         success: function (data) {
-                            if (data.flag == true) {
-                                layer.msg("<spring:message code='success' />", {icon: 6, time: 1000}, function () {
-                                    layer.close(index);
-                                });
-                                if (data.flag == false) {
-                                    layer.msg("<spring:message code='wrong' />", {icon: 5, time: 1000}, function () {
-                                        window.location.reload();
-                                    });
-                                }
-                            }
+                        	layer.close(index);
                         }
                     });
                 });
@@ -313,74 +315,74 @@
 		    	,shadeClose:true
 		    	,type: 1
             });
-       	 
-       	 
        	 if(data!=null){
-       		 form.val("formServer", {
-                    "html_description_CN": data.html_description_CN,
-                    "html_description_HK": data.html_description_HK,
-                    "html_description_US": data.html_description_US,
-                    "html_keyWord_CN": data.html_keyWord_CN,
-                    "html_keyWord_HK": data.html_keyWord_HK,
-                    "html_keyWord_US": data.html_keyWord_US,
-                    "html_title_CN": data.html_title_CN,
-                    "html_title_HK": data.html_title_HK,
-                    "html_title_US": data.html_title_US,
-                    "column_name_CN": data.column_name_CN,
-                    "column_name_HK": data.column_name_HK,
-                    "column_name_US": data.column_name_US,
-                    "order_id": data.order_id,
-                    "name": data.name,
-                    "id":data.id
-                }); 
+       		 form.val("formServer", data); 
        	 }
-       	 
             form.render();
+            
        }
         
      	 
         $("#addPage").click(function(){
-        	openDialog(null);
+        	openDialog({id:0});
         });
+        
+        
+
+     // 一键生成全部静态文件
+         $("#allhtml").click(function () {
+        	 layer.load();
+             $.ajax({
+                 type: "post",
+                 dataType: "json",
+                 url: "/admin/page/ajax/generate/all",
+                 success: function (data) {
+                	 layer.closeAll('loading');
+                     layer.msg("<spring:message code='success' />");
+                 }
+             });
+         })
+         // 一键生成底部文件
+         $("#foothtml").click(function () {
+        	 layer.load();
+             $.ajax({
+                 type: "post",
+                 dataType: "json",
+                 url: "/admin/page/ajax/generate/footer",
+                 success: function (data) {
+                	 	layer.closeAll('loading');
+                         layer.msg("<spring:message code='success' />");
+                 }
+             });
+         })
+
+     // 一键生成头部文件
+         $("#headhtml").click(function () {
+        	 layer.load();
+             $.ajax({
+                 type: "post",
+                 dataType: "json",
+                 url: "/admin/page/ajax/generate/header",
+                 success: function (data) {
+                	 layer.closeAll('loading');
+                     layer.msg("<spring:message code='success' />");
+                         
+                 }
+          	});
+       	})
+       	
+       	   
+            /*异常信息*/
+      function showMessage(msg) {
+            if(msg!=''){
+            	layer.msg(msg);
+            }
+            	
+     }
         
     });
     
 
-// 一键生成全部静态文件
-    $("#allhtml").click(function () {
-        $.ajax({
-            type: "post",
-            dataType: "json",
-            url: "/admin/page/ajax/generate/all",
-            success: function (data) {
-                    layer.msg("<spring:message code='success' />");
-
-            }
-        });
-    })
-    // 一键生成底部文件
-    $("#foothtml").click(function () {
-        $.ajax({
-            type: "post",
-            dataType: "json",
-            url: "/admin/page/ajax/generate/footer",
-            success: function (data) {
-                    layer.msg("<spring:message code='success' />");
-            }
-        });
-    })
-
-// 一键生成头部文件
-    $("#headhtml").click(function () {
-        $.ajax({
-            type: "post",
-            dataType: "json",
-            url: "/admin/page/ajax/generate/header",
-            success: function (data) {
-                    layer.msg("<spring:message code='success' />");
-            }
-     });
-  })
 
 
 </script>

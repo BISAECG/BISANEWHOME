@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Version;
 
 import com.bisa.health.entity.bind.CustomDateSerializer;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
@@ -28,6 +29,11 @@ public class GoodsCoupon implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	private int id;
+	
+	/**
+	 * 使用者ID一般就是用户ID
+	 */
+	private int useId;
 	
 	/**
 	 * 优惠券编号
@@ -53,6 +59,11 @@ public class GoodsCoupon implements Serializable {
 	 * 优惠券减XX价格
 	 */
 	private int coupon_disprice;
+	
+	
+	@Version
+	private int version;
+	
 	/**
 	 * 创建时间
 	 */
@@ -113,12 +124,26 @@ public class GoodsCoupon implements Serializable {
 	public void setC_time(Date c_time) {
 		this.c_time = c_time;
 	}
+	public int getUseId() {
+		return useId;
+	}
+	public void setUseId(int useId) {
+		this.useId = useId;
+	}
+	public int getVersion() {
+		return version;
+	}
+	public void setVersion(int version) {
+		this.version = version;
+	}
 	@Override
 	public String toString() {
-		return "GoodsCoupon [id=" + id + ", coupon_num=" + coupon_num + ", coupon_type=" + coupon_type
-				+ ", coupon_status=" + coupon_status + ", coupon_disrate=" + coupon_disrate + ", coupon_total="
-				+ coupon_total + ", coupon_disprice=" + coupon_disprice + ", c_time=" + c_time + "]";
+		return "GoodsCoupon [id=" + id + ", useId=" + useId + ", coupon_num=" + coupon_num + ", coupon_type="
+				+ coupon_type + ", coupon_status=" + coupon_status + ", coupon_disrate=" + coupon_disrate
+				+ ", coupon_total=" + coupon_total + ", coupon_disprice=" + coupon_disprice + ", version=" + version
+				+ ", c_time=" + c_time + "]";
 	}
+	
 	
 	
 	

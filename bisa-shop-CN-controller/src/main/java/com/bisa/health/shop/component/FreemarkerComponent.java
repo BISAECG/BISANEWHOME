@@ -35,14 +35,14 @@ public class FreemarkerComponent {
 		Map<String,Object> root = new HashMap<String,Object>();
 		root.put("company_phone", companyInfo.getCompany_phone());
 		root.put("empList", list);
-		util.fprint(root, "/zh_CN/header.ftl", SystemContext.getRealPath()+outPath+"/zh_CN/header.html");
-		util.fprint(root, "/zh_HK/header.ftl", SystemContext.getRealPath()+outPath+"/zh_HK/header.html");
-		util.fprint(root, "/en_US/header.ftl", SystemContext.getRealPath()+outPath+"/en_US/header.html");
+		util.fprint(root, "/web/zh_CN/header.ftl", SystemContext.getRealPath()+outPath+"/zh_CN/header.html");
+		util.fprint(root, "/web/zh_HK/header.ftl", SystemContext.getRealPath()+outPath+"/zh_HK/header.html");
+		util.fprint(root, "/web/en_US/header.ftl", SystemContext.getRealPath()+outPath+"/en_US/header.html");
 		
 		//生成二级目录头部
-		util.fprint(root, "/zh_CN/inheader.ftl", SystemContext.getRealPath()+outPath+"/zh_CN/inheader.html");
-		util.fprint(root, "/zh_HK/inheader.ftl", SystemContext.getRealPath()+outPath+"/zh_HK/inheader.html");
-		util.fprint(root, "/en_US/inheader.ftl", SystemContext.getRealPath()+outPath+"/en_US/inheader.html");
+		util.fprint(root, "/web/zh_CN/inheader.ftl", SystemContext.getRealPath()+outPath+"/zh_CN/inheader.html");
+		util.fprint(root, "/web/zh_HK/inheader.ftl", SystemContext.getRealPath()+outPath+"/zh_HK/inheader.html");
+		util.fprint(root, "/web/en_US/inheader.ftl", SystemContext.getRealPath()+outPath+"/en_US/inheader.html");
 
 	}
 	
@@ -53,26 +53,26 @@ public class FreemarkerComponent {
 		root.put("company_name",companyInfo.getCompany_name_CN());
 		root.put("company_address",companyInfo.getCompany_address_CN());
 		root.put("company_phone",companyInfo.getCompany_phone());
-		util.fprint(root, "/zh_CN/footer.ftl", SystemContext.getRealPath()+outPath+"/zh_CN/footer.html");
-		util.fprint(root, "/zh_CN/infooter.ftl", SystemContext.getRealPath()+outPath+"/zh_CN/infooter.html");
+		util.fprint(root, "/web/zh_CN/footer.ftl", SystemContext.getRealPath()+outPath+"/zh_CN/footer.html");
+		util.fprint(root, "/web/zh_CN/infooter.ftl", SystemContext.getRealPath()+outPath+"/zh_CN/infooter.html");
 		//繁体
 		root = new HashMap<String,Object>();
 		root.put("company_name",companyInfo.getCompany_name_HK());
 		root.put("company_address",companyInfo.getCompany_name_HK());
 		root.put("company_phone",companyInfo.getCompany_phone());
-		util.fprint(root, "/zh_HK/infooter.ftl", SystemContext.getRealPath()+outPath+"/zh_HK/footer.html");
-		util.fprint(root, "/zh_HK/footer.ftl", SystemContext.getRealPath()+outPath+"/zh_HK/infooter.html");
+		util.fprint(root, "/web/zh_HK/infooter.ftl", SystemContext.getRealPath()+outPath+"/zh_HK/footer.html");
+		util.fprint(root, "/web/zh_HK/footer.ftl", SystemContext.getRealPath()+outPath+"/zh_HK/infooter.html");
 		//英文
 		root = new HashMap<String,Object>();
 		root.put("company_name",companyInfo.getCompany_name_US());
 		root.put("company_address",companyInfo.getCompany_address_US());
 		root.put("company_phone",companyInfo.getCompany_phone());
-		util.fprint(root, "/en_US/footer.ftl", SystemContext.getRealPath()+outPath+"/en_US/footer.html");
-		util.fprint(root, "/en_US/infooter.ftl", SystemContext.getRealPath()+outPath+"/en_US/infooter.html");
+		util.fprint(root, "/web/en_US/footer.ftl", SystemContext.getRealPath()+outPath+"/en_US/footer.html");
+		util.fprint(root, "/web/en_US/infooter.ftl", SystemContext.getRealPath()+outPath+"/en_US/infooter.html");
 	}
 	
 	public void generateBody(Map<String,Object> root,String language,String ftlName,String htmlName) {
-		util.fprint(root, "/"+language+"/"+ftlName, SystemContext.getRealPath()+outPath+"/"+language+"/"+htmlName);
+		util.fprint(root, "/web/"+language+"/"+ftlName, SystemContext.getRealPath()+outPath+"/"+language+"/"+htmlName);
 	}
 	
 	public void generateNews(List<News> list) {
@@ -85,7 +85,7 @@ public class FreemarkerComponent {
         	root.put("release_time", nn.getRelease_time());
         	root.put("read_quantity", nn.getRead_quantity());
         	root.put("news_content", nn.getNews_content());
-        	util.fprint(root, "/"+nn.getLanguage()+"/newbody.ftl", SystemContext.getRealPath()+outPath+"/"+nn.getLanguage()+"/news/"+nn.getId()+".html");
+        	util.fprint(root, "/web/"+nn.getLanguage()+"/newbody.ftl", SystemContext.getRealPath()+outPath+"/"+nn.getLanguage()+"/news/"+nn.getId()+".html");
         }
 		
 	}

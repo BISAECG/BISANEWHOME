@@ -158,6 +158,7 @@ public class HtmlInfo implements Serializable {
     public void setHtml_title_US(String html_title_US) {
         this.html_title_US = html_title_US;
     }
+    @Column(name="update_time",columnDefinition="timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP")
     public Date getUpdate_time() {
         return update_time;
     }

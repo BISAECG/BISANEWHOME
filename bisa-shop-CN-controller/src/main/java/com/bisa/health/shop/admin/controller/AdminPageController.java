@@ -2,20 +2,29 @@ package com.bisa.health.shop.admin.controller;
 
 import com.bisa.health.basic.entity.Pager;
 import com.bisa.health.basic.entity.SystemContext;
+import com.bisa.health.common.entity.ResultData;
 import com.bisa.health.shop.admin.util.JsonResult;
 import com.bisa.health.shop.component.FreemarkerComponent;
+import com.bisa.health.shop.component.InternationalizationUtil;
+import com.bisa.health.shop.entity.SysErrorCode;
+import com.bisa.health.shop.entity.SysStatusCode;
 import com.bisa.health.shop.enumerate.LangEnum;
 import com.bisa.health.shop.model.CompanyInfo;
 import com.bisa.health.shop.model.HtmlInfo;
 import com.bisa.health.shop.service.ICompanyInfoService;
 import com.bisa.health.shop.service.IHtmlInfoService;
+import com.bisa.health.shop.utils.TradeNoUtils;
+
 import org.apache.commons.httpclient.util.LangUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.shiro.authz.annotation.Logical;
 import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -53,6 +62,8 @@ public class AdminPageController {
     @Autowired
     FreemarkerComponent freemarkerComponent;
     
+	@Autowired
+	private InternationalizationUtil i18nUtil;
     
     private static Logger logger = LogManager.getFormatterLogger(AdminIndexController.class);
 
@@ -63,7 +74,8 @@ public class AdminPageController {
      */
     @RequestMapping(value = "/main", method = RequestMethod.GET)
     public String UpPageContent(Integer id,Model model) {
-    	String fileUrl = this.getClass().getClassLoader().getResource("/ftl/zh_CN").getPath();
+    	
+    	String fileUrl = this.getClass().getClassLoader().getResource("/ftl/web/zh_CN").getPath();
     	File file=new File(fileUrl);
     	File[] files=file.listFiles();
     	List<String> list=new ArrayList<String>();
@@ -77,23 +89,20 @@ public class AdminPageController {
 
     
     
-    @RequestMapping(value = "/save", method = RequestMethod.POST)
-    public String addPage(Model model,@Validated HtmlInfo htmlInfo,BindingResult bindingResult) {
+    @RequestMapping(value = "/ajax/save", method = RequestMethod.POST,produces = "application/json; charset=utf-8")
+	@ResponseBody
+    public  ResponseEntity<ResultData> addPage(Model model,@Validated HtmlInfo htmlInfo,BindingResult br) {
     	
-    	System.out.println(htmlInfo);
-    	if (bindingResult.hasErrors()) {
-    		logger.error(bindingResult.getFieldError().toString());
-    		model.addAttribute("ex", bindingResult.getFieldError().toString());
+        if (br.hasErrors()) {
+			return new ResponseEntity<ResultData>(
+					ResultData.success(SysStatusCode.FAIL, i18nUtil.i18n(SysErrorCode.RequestFormat)), HttpStatus.OK);
 		}
-    	HtmlInfo mHtmlInfo=adminHtmlInfoService.selectHtmlInfoById(htmlInfo.getId());
-    	if(mHtmlInfo==null){
-    		htmlInfo.setUpdate_time(new Date());
-    	  	adminHtmlInfoService.addHtmlInfo(htmlInfo);
-    	}else{
-    		mHtmlInfo.toHtmlInfo(htmlInfo);
-    	  	adminHtmlInfoService.updateHtmlInfo(mHtmlInfo);
-    	}
-        return "admin/config/page";
+		if (htmlInfo.getId()== 0)
+			adminHtmlInfoService.addHtmlInfo(htmlInfo);
+		else
+			adminHtmlInfoService.updateHtmlInfo(htmlInfo);
+		return new ResponseEntity<ResultData>(
+				ResultData.success(SysStatusCode.SUCCESS, i18nUtil.i18n(SysErrorCode.OptSuccess)), HttpStatus.OK);
     }
     
     
@@ -173,7 +182,7 @@ public class AdminPageController {
      */
     @RequestMapping(value = "/ajax/generate/all", method = RequestMethod.POST)
     @ResponseBody
-    public void CreateAllPages(){
+    public ResponseEntity<ResultData> CreateAllPages(){
         List<HtmlInfo> list = adminHtmlInfoService.selectHtmlInfo();
         Map<String,Object> root=null;
         for(HtmlInfo htmlInfo : list){
@@ -195,7 +204,8 @@ public class AdminPageController {
             freemarkerComponent.generateBody(root, LangEnum.en_US.getName(),htmlInfo.getName()+".ftl", htmlInfo.getName()+".html");
 
         }
-       
+        return new ResponseEntity<ResultData>(
+				ResultData.success(SysStatusCode.SUCCESS, i18nUtil.i18n(SysErrorCode.OptSuccess)), HttpStatus.OK);
        
     }
     /**
@@ -204,11 +214,12 @@ public class AdminPageController {
      */
     @RequestMapping(value = "/ajax/generate/header", method = RequestMethod.POST)
     @ResponseBody
-    public void GenerateHeaderHTML(HttpServletRequest request){
+    public ResponseEntity<ResultData> GenerateHeaderHTML(HttpServletRequest request){
         List<HtmlInfo> list = adminHtmlInfoService.selectHtmlInfo();
         CompanyInfo companyInfo =  companyInfoService.loadByUnId(1);
         freemarkerComponent.generateTop(list,companyInfo);
-
+        return new ResponseEntity<ResultData>(
+				ResultData.success(SysStatusCode.SUCCESS, i18nUtil.i18n(SysErrorCode.OptSuccess)), HttpStatus.OK);
     }
     /**
      * 创建尾部页面
@@ -216,9 +227,11 @@ public class AdminPageController {
      */
     @RequestMapping(value = "/ajax/generate/footer", method = RequestMethod.POST)
     @ResponseBody
-    public void GenerateFooterHTML(){
+    public ResponseEntity<ResultData> GenerateFooterHTML(){
         CompanyInfo companyInfo =  companyInfoService.loadByUnId(1);
         freemarkerComponent.generateBottom(companyInfo);
+        return new ResponseEntity<ResultData>(
+				ResultData.success(SysStatusCode.SUCCESS, i18nUtil.i18n(SysErrorCode.OptSuccess)), HttpStatus.OK);
     }
     
 }

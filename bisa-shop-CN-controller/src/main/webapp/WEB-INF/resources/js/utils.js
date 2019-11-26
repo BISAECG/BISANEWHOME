@@ -33,3 +33,17 @@ function jsonDateTimeFormat(jsonDate) {
     day=(day>9)?(""+day):("0"+day);
     return year + "-" + month + "-" + day +" "+hour+":"+minute+":"+second;
 }
+
+function javaToJsDateTime(cTime){
+	let date = new Date(cTime);
+    let year = date.getFullYear();
+    let month = date.getMonth()+1;
+    let day = date.getDate();
+    let hour =date.getHours();
+    let minute=date.getMinutes();
+    let second=date.getSeconds();
+    month = month < 10 ? "0"+month:month;
+    day = day < 10 ? "0"+day:day;
+    return  year+'-'+month+'-'+day+' '+hour+":"+minute+":"+second;
+   
+}

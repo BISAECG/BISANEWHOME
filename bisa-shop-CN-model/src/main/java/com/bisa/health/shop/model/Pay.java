@@ -78,7 +78,6 @@ public class Pay implements Serializable {
 	public void setPay_type(int pay_type) {
 		this.pay_type = pay_type;
 	}
-	
 	@JsonSerialize(using = CustomDateSerializer.class)
 	@Column(name="c_time",columnDefinition="timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP")
 	public Date getC_time() {
