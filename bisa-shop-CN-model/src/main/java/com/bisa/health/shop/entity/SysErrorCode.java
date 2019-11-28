@@ -36,5 +36,18 @@ public class SysErrorCode {
 	public final static String OptFail="670";
 	
 	
-
+	
+	//##########################特殊编码################################
+	/**
+	 * 实体商品不能含有虚拟服务
+	 */
+	public final static String REAL_NOT_SERVICE="2011";
+	/**
+	 * 虚拟商品需要包含虚拟服务
+	 */
+	public final static String VIRTUAL_SERVICE="2012";
+	/**
+	 * 发货商品不允许更改地址
+	 */
+	public final static String MODIFY_ADDRESS_UNSHIPPED="3004";
 }

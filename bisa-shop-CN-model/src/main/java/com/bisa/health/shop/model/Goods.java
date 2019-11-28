@@ -16,6 +16,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import com.bisa.health.entity.bind.CustomDateSerializer;
 import com.bisa.health.shop.entity.SysErrorCode;
+import com.bisa.health.shop.enumerate.GoodsTypeEnum;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 /**
@@ -40,6 +41,12 @@ public class Goods implements Serializable {
 	 * 商品ID
 	 */
 	private String number;
+	
+	/**
+	 * 商品状态
+	 */
+	private int status;
+	
 	/**
 	 * 商品名字
 	 */
@@ -68,6 +75,13 @@ public class Goods implements Serializable {
 	 * 商品分类名字
 	 */
 	private String category_num;
+	
+	
+	
+	/**
+	 * 虚拟服务的TOKEN
+	 */
+	private String service_token;
 	/**
 	 * 创建时间
 	 */
@@ -158,8 +172,24 @@ public class Goods implements Serializable {
 	public void setC_time(Date c_time) {
 		this.c_time = c_time;
 	}
+	
+	public int getStatus() {
+		return status;
+	}
+	public void setStatus(int status) {
+		this.status = status;
+	}
+	
+	@Column(length=32)
+	public String getService_token() {
+		return service_token;
+	}
+	public void setService_token(String service_token) {
+		this.service_token = service_token;
+	}
 	@Override
 	public String toString() {
+		
 		return "Goods [id=" + id + ", number=" + number + ", name=" + name + ", description=" + description + ", type="
 				+ type + ", price=" + price + ", language=" + language + ", detail_body=" + detail_body
 				+ ", category_num=" + category_num + ", c_time=" + c_time + "]";

@@ -1,6 +1,7 @@
 package com.bisa.health.shop.model;
 
 import java.io.Serializable;
+
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -13,8 +14,16 @@ import javax.persistence.Version;
 import com.bisa.health.entity.bind.CustomDateSerializer;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
+
+/**
+ * 充值卡
+ * @author Administrator
+ *
+ */
+
 @Entity
 @Table(name = "s_recharge_card")
+@org.hibernate.annotations.Proxy(lazy = false)
 public class RechargeCard implements Serializable{
 	
 	/**

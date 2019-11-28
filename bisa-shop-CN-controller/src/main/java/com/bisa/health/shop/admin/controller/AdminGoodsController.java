@@ -33,6 +33,7 @@ import com.bisa.health.shop.component.InternationalizationUtil;
 import com.bisa.health.shop.entity.SysErrorCode;
 import com.bisa.health.shop.entity.SysStatusCode;
 import com.bisa.health.shop.entity.TreeData;
+import com.bisa.health.shop.enumerate.GoodsTypeEnum;
 import com.bisa.health.shop.model.Goods;
 import com.bisa.health.shop.model.GoodsCategory;
 import com.bisa.health.shop.model.GoodsRecommend;
@@ -159,8 +160,16 @@ public class AdminGoodsController {
 			return new ResponseEntity<ResultData>(
 					ResultData.success(SysStatusCode.FAIL, i18nUtil.i18n(SysErrorCode.RequestFormat)), HttpStatus.OK);
 		}
+		
+		
+		//实体商品不需要服务TOKEN
+		if(goods.getType()==GoodsTypeEnum.REAL.getValue()){
+			goods.setService_token(null);
+		}
+		
 		if (StringUtils.isEmpty(goods.getNumber()))
 			goods.setNumber(TradeNoUtils.getGoodsNoByTime());
+		
 		if (goods.getId() == 0)
 			goodsService.save(goods);
 		else

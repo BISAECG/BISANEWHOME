@@ -9,8 +9,14 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Version;
+import javax.validation.constraints.Digits;
+import javax.validation.constraints.Max;
+
+import org.hibernate.validator.constraints.NotBlank;
+import org.hibernate.validator.constraints.Range;
 
 import com.bisa.health.entity.bind.CustomDateSerializer;
+import com.bisa.health.shop.entity.SysErrorCode;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 /**
@@ -33,31 +39,38 @@ public class GoodsCoupon implements Serializable {
 	/**
 	 * 使用者ID一般就是用户ID
 	 */
+	@Max(value=Integer.MAX_VALUE,message=SysErrorCode.RequestFormat)
 	private int useId;
 	
 	/**
 	 * 优惠券编号
 	 */
+	@NotBlank(message=SysErrorCode.RequestFormat)
 	private String coupon_num;
 	/**
 	 * 优惠券类型
 	 */
+	@Range(min = 0, max = 10,message=SysErrorCode.RequestFormat)
 	private int coupon_type;
 	/**
-	 * 优惠价状态
+	 * 状态
 	 */
+	@Range(min = 0, max = 10,message=SysErrorCode.RequestFormat)
 	private int coupon_status;
 	/**
 	 * 优惠券折扣率
 	 */
+	@Digits(integer = 13, fraction = 1,message=SysErrorCode.RequestFormat)
 	private double coupon_disrate;
 	/**
 	 * 优惠券满XX减
 	 */
+	@Digits(integer = 13, fraction = 2,message=SysErrorCode.RequestFormat)
 	private double coupon_total;
 	/**
 	 * 优惠券减XX价格
 	 */
+	@Digits(integer = 13, fraction = 2,message=SysErrorCode.RequestFormat)
 	private int coupon_disprice;
 	
 	

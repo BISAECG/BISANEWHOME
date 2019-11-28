@@ -19,11 +19,11 @@ public class FreemarkerComponent {
 	
 	
 	private String outPath;
-	
+	private String outPathH5;
 	private FreemarkerUtil util;
 	
 	@Autowired(required=true)
-	public FreemarkerComponent(String ftlPath, String outPath) {
+	public FreemarkerComponent(String ftlPath, String outPath,String outPathH5) {
 		super();
 		if(util==null) {
 			this.outPath = outPath;
@@ -31,6 +31,10 @@ public class FreemarkerComponent {
 		}
 	}
 	public void generateTop(List<HtmlInfo> list,CompanyInfo companyInfo) {
+		
+		/**
+		 * 生成PC端静态页面
+		 */
 		//生成简体
 		Map<String,Object> root = new HashMap<String,Object>();
 		root.put("company_phone", companyInfo.getCompany_phone());
@@ -43,7 +47,12 @@ public class FreemarkerComponent {
 		util.fprint(root, "/web/zh_CN/inheader.ftl", SystemContext.getRealPath()+outPath+"/zh_CN/inheader.html");
 		util.fprint(root, "/web/zh_HK/inheader.ftl", SystemContext.getRealPath()+outPath+"/zh_HK/inheader.html");
 		util.fprint(root, "/web/en_US/inheader.ftl", SystemContext.getRealPath()+outPath+"/en_US/inheader.html");
-
+		
+		/**
+		 * 生成H5端静态页面
+		 */
+		
+		
 	}
 	
 	public void generateBottom(CompanyInfo companyInfo) {

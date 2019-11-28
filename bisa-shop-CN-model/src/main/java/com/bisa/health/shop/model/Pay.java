@@ -20,6 +20,7 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 @Entity
 @Table(name = "s_pay")
+@org.hibernate.annotations.Proxy(lazy = false)
 public class Pay implements Serializable {
 
 	private static final long serialVersionUID = 1L;

@@ -44,16 +44,7 @@
             <span style="color: #F581B1;">置顶</span>
         {{#  } }}
      </script>
-    <style type="text/css">
-	.layui-table-cell{
-		height: 100%;
-    	max-width: 100%;
-	}
-	.laytable-cell-1-11{
-		height: 100%;
-    	max-width: 100%;
-	}
-	</style>
+
 </head>
 
 <body class="layui-layout-body">
@@ -103,64 +94,6 @@
             </div>
         </div>
         
-        <!-- (查看新闻基本信息)============================== 的弹出层的基本内容，供js调用======================= -->
-	    <div class="detailcontent dis-n">
-	        <div class="clear pd-20 f-16">
-	            <div class="clear mb-20 h-40 line-h-40 text-center">
-	                <div class="clear dis-ib">
-	                    <img src="/resources/img/admin/logo.png" class="h-35 mt-3 pull-left">
-	                    <span class="f-28 ml-10 f-w family-s pull-left h-40 line-h-40">新闻基本信息</span>
-	                </div>
-	            </div>
-	            <fieldset class="layui-elem-field">
-	                <legend>新闻基本信息</legend>
-	                <div class="layui-field-box">
-	                    <div class="layui-form-item mb-0">
-	                        <label class="layui-form-label pl-0 pr-0">封面图:</label>
-	                        <div class="layui-input-block line-h-35 f-16">
-	                        	<img alt="" src="" class="imgUrl">
-	                        </div>
-	                    </div>
-	                    <div class="layui-form-item mb-0">
-	                        <label class="layui-form-label pl-0 pr-0">作者:</label>
-	                        <div class="layui-input-block author line-h-35 f-16">
-	                        </div>
-	                    </div>
-	                    <div class="layui-form-item mb-0">
-	                        <label class="layui-form-label pl-0 pr-0">标题:</label>
-	                        <div class="layui-input-block newsTitle line-h-35 f-16">
-	                        </div>
-	                    </div>
-	                    <div class="layui-form-item mb-0">
-	                        <label class="layui-form-label pl-0 pr-0">副标题:</label>
-	                        <div class="layui-input-block newsSubhead line-h-35 f-16">
-	                        </div>
-	                    </div>
-	                    <div class="layui-form-item mb-0">
-	                        <label class="layui-form-label pl-0 pr-0">阅读量:</label>
-	                        <div class="layui-input-block readQuantity line-h-35 f-16">
-	                        </div>
-	                    </div>
-	                    <div class="layui-form-item mb-0">
-	                        <label class="layui-form-label pl-0 pr-0">新闻id:</label>
-	                        <div class="layui-input-block newsId line-h-35 f-16">
-	                        </div>
-	                    </div>
-	                    <div class="layui-form-item mb-0">
-	                        <label class="layui-form-label pl-0 pr-0">发布时间:</label>
-	                        <div class="layui-input-block releaseTime line-h-35 f-16">
-	                        </div>
-	                    </div>
-                        <div class="layui-form-item mb-0">
-                            <label class="layui-form-label pl-0 pr-0">是否置顶:</label>
-                            <div class="layui-input-block roofPlacement line-h-35 f-16">
-                            </div>
-                        </div>
-	                </div>
-	            </fieldset>
-	        </div>
-	    </div>
-        
     </div>
   <script src="/resources/ctrl/layui/layui.js"></script>
 	<script src="/resources/js/utils.js"></script>
@@ -201,7 +134,6 @@
 
             //监听提交
             form.on('submit(search1)', function (data) {
-            	console.log(data);
                 var incontent = data.field.incontent;
                 var searchabout = data.field.searchabout;
 

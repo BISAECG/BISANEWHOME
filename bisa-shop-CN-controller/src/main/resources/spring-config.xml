@@ -26,6 +26,11 @@
 		<constructor-arg value="/html"/>
 	</bean>
 	
+	<bean id="outPathH5" class="java.lang.String">
+		<constructor-arg value="/h5"/>
+	</bean>
+	
+	
 	<!-- 扫描注解Bean -->
 	<context:component-scan base-package="com.bisa.health.*">
 		<context:exclude-filter type="annotation"
