@@ -4,6 +4,8 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ page import="com.bisa.health.shop.entity.SysStatusCode" %>
+<%@ page import="com.bisa.health.shop.enumerate.GoodsTypeEnum" %>
+<%@ page import="com.bisa.health.shop.enumerate.GoodsStatusEnum" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="zh-CN">
 <head>
@@ -51,6 +53,16 @@
             <span style="color: #F581B1;"><spring:message code="2010" /></span>
         {{#  } }}
     </script>
+    <script type="text/html" id="goodStatus">
+        {{# if(d.status == "${GoodsStatusEnum.IN_SALE.getValue()}"){ }}
+       		<span style="color: #009688;">上架</span>
+        {{# }else if(d.status == "${GoodsStatusEnum.SALE_OUT.getValue()}"){ }}
+            <span style="color: #F581B1;">下架</span>
+        {{#  }else{ }}
+ 			<span style="color: #F581B1;">售罄</span>
+		 {{#  } }}
+
+    </script>
 </head>
 
 <body class="layui-layout-body">
@@ -78,16 +90,24 @@
              </div>
         </div>
         <%--弹框html js调用--%>
-        <div class="formsetting dis-n">
+        <div class="dis-n" id="open-box">
         	<div class="site-text site-block">
-	            <form class="layui-form serverForm"  id="serverForm" lay-filter="form" >
+	            <form class="layui-form"  id="mainForm" lay-filter="mainForm" >
 	                <input name="id" type="hidden" value="0" />
 	                 <input name="number" id="number" type="hidden" value="0" />
 	                 <input name="category_name" id="category_name" type="hidden" value="0" />
 	                <div class="layui-form-item">
 	                    <label class="layui-form-label">商品名</label>
-	                    <div class="layui-input-block">
+	                    <div class="layui-input-inline">
 	                    	<input type="text" name="name" required="" lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
+	                    </div>
+	                    <label class="layui-form-label">商品状态</label>
+	                    <div class="layui-input-inline">
+	                         <select id="status" name="status" lay-verify="required">
+	                         		<option value="${GoodsStatusEnum.IN_SALE.getValue()}">上架</option>
+	                         		<option value="${GoodsStatusEnum.SALE_OUT.getValue()}">下架</option>
+	                            	<option value="${GoodsStatusEnum.INVALID.getValue()}">售罄</option>
+	                         </select>
 	                    </div>
 	             
 	                </div>
@@ -103,17 +123,29 @@
 	                            </select>
 	                    </div>
 	                </div>
+	         
 	                <div class="layui-form-item ">
+	                    <label class="layui-form-label layui-col-md3">商品类型</label>
+	                    <div class="layui-input-inline">
+	                            <select id="goods_type" placeholder="请输入标题"  lay-filter="goods_type"  name="type" lay-verify="required">
+	                            	<option value="${GoodsTypeEnum.REAL.getValue()}">实体</option>
+	                            	<option value="${GoodsTypeEnum.VIRTUAL.getValue()}">虚拟</option>
+	                            </select>
+	                    </div>
+	                    <div class="div-service dis-n" >
+		                    <label class="layui-form-label layui-col-md3">虚拟服务</label>
+		                    <div class="layui-input-inline">
+		                            <select id="service_token" name="service_token" lay-verify="required">
+		                            </select>
+		                    </div>
+	                    </div>
+	                </div>
+	                 <div class="layui-form-item ">
 	                    <label class="layui-form-label layui-col-md3">商品价格</label>
 	                    <div class="layui-input-inline">
 	                        <input type="text" name="price"  lay-verify="required" placeholder="请输入商品价格"  class="layui-input">
 	                    </div>
-	                    <label class="layui-form-label layui-col-md3">商品类型</label>
-	                    <div class="layui-input-inline">
-	                            <select id="goods_type" name="type" lay-verify="required">
-	                            	
-	                            </select>
-	                    </div>
+	              
 	                </div>
 	                <div class="layui-form-item ">
 	                    <label class="layui-form-label">商品描述</label>
@@ -301,7 +333,8 @@
             cols: [
                 [ //标题栏
                         {field: 'id', title: 'ID', width: '5%', align: 'center'},
-                        {field: 'number', title: '商品编号', width: '20%', align: 'center'},
+                        {field: 'status', title: '状态',width: '10%',  align: 'center',templet:'#goodStatus'},
+                        {field: 'number', title: '商品编号', width: '10%', align: 'center'},
                         {field: 'type', title: '商品类型', width: '10%', align: 'center',templet:'#goodType'},
                         {field: 'language', title: '语言', width: '10%', align: 'center'},
                         {field: 'price', title: '商品价格', width: '10%', align: 'center'},
@@ -312,6 +345,16 @@
             done: function (res, curr, count) {
 
             }
+        });
+        
+        form.on('select(goods_type)',function(obj){
+        	
+        	if(obj.value=="${GoodsTypeEnum.REAL.getValue()}"){
+        		$(".div-service").addClass('dis-n');
+        	}else{
+        		$(".div-service").removeClass("dis-n");
+        	}
+        	
         });
         
         // ===============监听工具条===================
@@ -338,40 +381,48 @@
                     });
                 });
             }else if(layEvent == 'linked'){
-            	
             	linkOpen(data.number);
-            	 
             }else{
-            	where={number:data.number,language:layEvent,id:0,price:data.price,type:data.type};
+             	layer.load();
+             	$('.div-service').addClass('dis-n');
+            	where={number:data.number,language:layEvent,id:0,price:data.price,type:data.type,status:data.status,type:"${GoodsTypeEnum.REAL.getValue()}"};
+            	inidData(where);
+            	loadObject(where,true);
+           	  	layer.closeAll('loading');
             }
-            if(where!=null){
-            	fullData(where,true);
-            }
+     
           
         });
         
 
-        function openDialog(formName,formHtml,data){
-        	$('#serverForm')[0].reset();
+        function openDialog(formName,elem,data,isReset){
+        	if(isReset){
+        		$('#'+formName)[0].reset();
+        	}
           	 layer.open({
                    title: "<spring:message code='add' />"//弹框标题
-                   , content:$(formHtml)//也可以是一个html
+                   , content:elem//也可以是一个html
                    , area: ['700', '600']
    		         ,closeBtn: 1
    		         ,shadeClose:true
    		         ,type: 1
-   		      	,shade: 0 
+   		      	,shade: 0
    		     	,success:function(layero,index){
-	   		       	form.val(formName,data);
+   		     		if(data!=null){
+   		     			form.val(formName,data);
+   		     		}
 	   		 	    form.render(null,formName);
            		}
                });
        
           }
-        function fullData(where,isGoods){
-        	$.ajax({
+        
+        function inidData(where){
+        	$("#category_num").empty();
+         	$.ajax({
         		url: "/admin/goods/ajax/category/list/"+where.language,
 				type: "GET",
+				async: false,
 				success: function(obj) {
 					$("#category_num").empty();
 					
@@ -384,28 +435,52 @@
 						}
 						
                 	}
-					if(isGoods){
-						$.ajax({
-		                    url: '/admin/goods/ajax/load',
-		                    type: "GET",
-		                    data : where,
-		                    success: function (data) {
-		                    	if(data.code=="${SysStatusCode.SUCCESS}"){
-		                   		 	$('.imgView').attr('src', data.data.detail_body); //图片链接（base64）
-		                    		openDialog('form','.formsetting',data.data);
-		                    	}else{
-		                    		$('.imgView').attr('src',null); //图片链接（base64）
-		                    		openDialog('form','.formsetting',where);
-		                    		
-		                    	}
-		                    	
-		                    }
-		                });
-					}else{
-						openDialog('form','.formsetting',where);
-					}
 				}
 			})
+			$("#service_token").empty();
+			$.ajax({
+				type : "GET",
+				dataType: "json",
+				async: false,
+				//contentType: "application/json;charset=UTF-8",
+				url : '/admin/service/ajax/list',
+				success : function(obj) {
+					if(obj.code=="${SysStatusCode.SUCCESS}"){
+						for(var i = 0; i < obj.data.length; i++) {
+							//添加option元素
+							$("#service_token").append("<option value='" + obj.data[i].stoken + "'>" + obj.data[i].name + "</option>");
+						}
+					}
+				}
+			});
+        }
+    	 
+        
+        
+        function loadObject(where){
+			$.ajax({
+                    url: '/admin/goods/ajax/load',
+                    type: "GET",
+                    data : where,
+                    async: false,
+                    success: function (data) {
+                    	console.log(data);
+                    	if(data.code=="${SysStatusCode.SUCCESS}"){
+                   	
+                   		 	if(data.data.service_token!=""){
+                   		 		$('.div-service').removeClass('dis-n');
+                   		 	}
+                   		 	$('.imgView').attr('src', data.data.detail_body); //图片链接（base64）
+                   			openDialog("mainForm",$('#open-box'),data.data,true);
+                    	}else{
+                    		$('.imgView').attr('src',null); //图片链接（base64）
+                    		openDialog("mainForm",$('#open-box'),where,true);
+                    		
+                    	}
+                    	
+                    }
+             });
+			
         }
     	 
         //执行实例
@@ -439,7 +514,9 @@
     
      	 
         $("#addPage").click(function(){
-        	fullData({id:0,number:'',language:"${language}"},false);
+        	$('.div-service').addClass('dis-n');
+        	inidData({language:"${language}"});
+        	openDialog("mainForm",$('#open-box'),{number:'',id:0,type:"${GoodsTypeEnum.REAL.getValue()}"},true);
         });
         
         /*异常信息*/

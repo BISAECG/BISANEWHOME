@@ -2,7 +2,14 @@ package com.bisa.health.shop.enumerate;
 
 
 public enum ActivateEnum {
-	INACTIVATED(0),ACTIVATE(1);
+	/**
+	 * 禁用
+	 */
+	INACTIVATED(0),
+	/**
+	 * 激活
+	 */
+	ACTIVATE(1);
 	private int value;
 
 	private ActivateEnum(int value) {

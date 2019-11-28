@@ -14,17 +14,17 @@
 		<!-- 仅超级管理员可见 -->
 		<shiro:hasAnyRoles name="ROLE_ADMIN" >
 			<li class="layui-nav-item"><a href="admin/goods/list" target="mainFrame"><spring:message code="2000" /></a></li>
-			<li class="layui-nav-item"><a href="admin/adminProductService/queryProduct" target="mainFrame"><spring:message code="3000" /></a></li>
+			<li class="layui-nav-item"><a href="admin/order/list" target="mainFrame"><spring:message code="3000" /></a></li>
 		</shiro:hasAnyRoles>
 		
 		<shiro:hasAnyRoles name="ROLE_ADMIN, ROLE_CUSTOMER, ROLE_STORE">
-			<li class="layui-nav-item"><a href="admin/order/orderList" target="mainFrame"><spring:message code="4000" /></a></li>
+			<li class="layui-nav-item"><a href="admin/coupon/list" target="mainFrame"><spring:message code="4000" /></a></li>
 		</shiro:hasAnyRoles>
 
 		<!-- 仅超级管理员和客服可见 -->
 		<shiro:hasAnyRoles name="ROLE_ADMIN, ROLE_CUSTOMER" >
 			<li class="layui-nav-item"><a href="admin/news/list" target="mainFrame"><spring:message code="5000" /></a></li>
-			<li class="layui-nav-item"><a href="admin/commodity/commodityView" target="mainFrame"><spring:message code="6000" /></a></li>
+			<li class="layui-nav-item"><a href="admin/book/list" target="mainFrame"><spring:message code="6000" /></a></li>
 		</shiro:hasAnyRoles>
 		
 	</ul>

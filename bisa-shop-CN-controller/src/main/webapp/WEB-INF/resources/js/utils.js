@@ -6,13 +6,6 @@ if(selectLang!=null){
 	}
 }
 
-let goodsAarray={'0':'real','1':'virtual'};
-var selectGoods=document.getElementById("goods_type");
-if(selectGoods!=null){
-	for(let i in goodsAarray){		
-		selectGoods.options.add(new Option(goodsAarray[i],i));
-	}
-}
 function jsonDateFormat(jsonDate) {
 	var year = jsonDate.year+1900;
     var month = jsonDate.month+1;

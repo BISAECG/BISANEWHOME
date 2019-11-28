@@ -20,6 +20,7 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 @Entity
 @Table(name = "s_order")
+@org.hibernate.annotations.Proxy(lazy = false)
 public class Order implements Serializable {
 
 	/**
@@ -55,22 +56,34 @@ public class Order implements Serializable {
 	 * 订单总价
 	 */
 	private double order_total;
+	
+	/**
+	 * 订单实际金额
+	 */
+	private double order_price;
 	/**
 	 * 订单状态
 	 */
-	private int order_status;
+	private int order_status; //0 未支付 1已支付
 	/**
 	 * 订单地址ID
 	 */
 	private int address_id;
+	
 	/**
 	 * 订单地址
 	 */
 	private String order_address;
+	
+	/**
+	 * 订单电话
+	 */
+	private String order_phone;
+
 	/**
 	 * 是否支付
 	 */
-	private int is_pay;
+	private int is_pay; //0未支付 1已支付
 	/**
 	 * 是否优惠
 	 */
@@ -83,6 +96,12 @@ public class Order implements Serializable {
 	 * 优惠价格
 	 */
 	private double coupon_price;
+	
+	/**
+	 * 快递单号查询 暂时未用方便以后开发
+	 */
+	private String ems_num;
+	
 	private Date c_time;
 	
     @Id
@@ -152,12 +171,6 @@ public class Order implements Serializable {
 	public void setAddress_id(int address_id) {
 		this.address_id = address_id;
 	}
-	public String getOrder_address() {
-		return order_address;
-	}
-	public void setOrder_address(String order_address) {
-		this.order_address = order_address;
-	}
 	public int getIs_pay() {
 		return is_pay;
 	}
@@ -184,6 +197,13 @@ public class Order implements Serializable {
 		this.coupon_price = coupon_price;
 	}
 	
+	@Column(length=64)
+	public String getEms_num() {
+		return ems_num;
+	}
+	public void setEms_num(String ems_num) {
+		this.ems_num = ems_num;
+	}
 	@JsonSerialize(using = CustomDateSerializer.class)
 	@Column(name="c_time",columnDefinition="timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP")
 	public Date getC_time() {
@@ -192,15 +212,35 @@ public class Order implements Serializable {
 	public void setC_time(Date c_time) {
 		this.c_time = c_time;
 	}
+	
+	
+	public String getOrder_address() {
+		return order_address;
+	}
+	public void setOrder_address(String order_address) {
+		this.order_address = order_address;
+	}
+	public String getOrder_phone() {
+		return order_phone;
+	}
+	public void setOrder_phone(String order_phone) {
+		this.order_phone = order_phone;
+	}
+	public double getOrder_price() {
+		return order_price;
+	}
+	public void setOrder_price(double order_price) {
+		this.order_price = order_price;
+	}
 	@Override
 	public String toString() {
 		return "Order [id=" + id + ", user_id=" + user_id + ", goods_num=" + goods_num + ", goods_type=" + goods_type
 				+ ", goods_price=" + goods_price + ", goods_count=" + goods_count + ", order_num=" + order_num
-				+ ", order_total=" + order_total + ", order_status=" + order_status + ", address_id=" + address_id
-				+ ", order_address=" + order_address + ", is_pay=" + is_pay + ", is_coupon=" + is_coupon
-				+ ", coupon_num=" + coupon_num + ", coupon_price=" + coupon_price + ", c_time=" + c_time + "]";
+				+ ", order_total=" + order_total + ", order_price=" + order_price + ", order_status=" + order_status
+				+ ", address_id=" + address_id + ", order_address=" + order_address + ", order_phone=" + order_phone
+				+ ", is_pay=" + is_pay + ", is_coupon=" + is_coupon + ", coupon_num=" + coupon_num + ", coupon_price="
+				+ coupon_price + ", ems_num=" + ems_num + ", c_time=" + c_time + "]";
 	}
-
 	
 	
 	

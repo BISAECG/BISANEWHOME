@@ -7,7 +7,7 @@ import javax.persistence.Table;
 import java.io.Serializable;
 
 /**
- * 用户地址model
+ * 用户地址次标暂时没有用
  * @author Administrator
  */
 
@@ -15,15 +15,11 @@ import java.io.Serializable;
 @Table(name = "s_address")
 public class Address implements Serializable {
 
-    /**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	private Integer id;
     private Integer user_id;        // 买家id
     private String consignee;         // 收货人名字
     private String phone;            // 收货人手机号码
-
     private String country;        // 国家
     private String province;        // 省
     private String city;            // 城市

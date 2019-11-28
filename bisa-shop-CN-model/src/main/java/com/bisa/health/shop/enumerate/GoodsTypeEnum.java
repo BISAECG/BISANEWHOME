@@ -8,17 +8,16 @@ package com.bisa.health.shop.enumerate;
 public enum GoodsTypeEnum {
 
     /**
-     * 单品
+     * 实体
      */
-	real(0, "real"),
+	REAL(0),
     /**
-     * 虚拟商品
+     * 虚拟
      */
-    virtual(1, "virtual");
+    VIRTUAL(1);
 
 
     private int value;
-    private String name;
 
     public int getValue() {
         return value;
@@ -28,25 +27,8 @@ public enum GoodsTypeEnum {
         this.value = value;
     }
 
-    public String getName() {
-        return name;
-    }
+	private GoodsTypeEnum(int value) {
+		this.value = value;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    private GoodsTypeEnum(int value, String name) {
-        this.value = value;
-        this.name = name;
-    }
-
-    public static GoodsTypeEnum getByValue(int value) {
-        for (GoodsTypeEnum status : values()) {
-            if (status.getValue() == value) {
-                return status;
-            }
-        }
-        return null;
-    }
 }
