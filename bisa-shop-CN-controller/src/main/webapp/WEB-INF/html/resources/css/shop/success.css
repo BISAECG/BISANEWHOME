@@ -1,0 +1,78 @@
+
+.successInfo{
+    margin-top: 30px;
+    margin-bottom: 91px;
+}
+.successInfo div:first-of-type img{
+    width: 120px;
+}
+.successInfo div:last-of-type{
+    padding-top: 48px;
+}
+.successInfo p{
+    margin: 0;
+}
+.successInfo div:last-of-type p:first-of-type{
+    font-size:30px;
+    font-weight:bold;
+    color:rgba(30,152,61,1);
+}
+.successInfo div:last-of-type p:last-of-type{
+    font-size:26px;
+    font-weight:400;
+    color:rgba(51,51,51,1)
+}
+.successInfo div:last-of-type p:last-of-type span:last-of-type{
+    color: #C40103;
+}
+
+.recommend{
+margin-top: 61px;
+    text-align: center;
+    margin-bottom: 81px;
+}
+
+.recommend  p{
+    font-size:22px;
+    color:rgba(102,102,102,1);
+    font-weight:400;
+
+}
+.recommend div div{
+    border:1px solid rgba(231,231,231,1);
+    margin-bottom: 29px;
+    margin-top: 10px;
+}
+.recommend div img{
+    width: 233px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.recommend  a{
+    text-decoration: none;
+    background:rgba(255,255,255,1);
+    box-shadow:0px 0px 13px 0px rgba(207,21,24,0.3);
+    padding: 6px 16px;
+    font-size:22px;
+    color:rgba(51,51,51,1);
+}
+.return {
+    margin-bottom: 50px;
+}
+.return div a{
+    display: inline-block;
+    width:210px;
+    height:46px;
+    color:rgba(255,255,255,1);
+    border-radius:5px;
+    font-size:28px;
+}
+.return div:first-of-type a{
+    background:rgba(215,28,30,1);
+}
+.return div:last-of-type a{
+    background:#3592D0;
+}
+
+
+
