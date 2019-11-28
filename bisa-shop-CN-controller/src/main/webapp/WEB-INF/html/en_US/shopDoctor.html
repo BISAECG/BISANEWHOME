@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" href="Images/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon" />
+    <link rel="bookmark" href="Images/favicon.ico" type="image/x-icon" />
+    <base href="<%=basePath%>">
+    <meta http-equiv="Content-Type" content="text/html;" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <!-- necessary -->
+    <meta name="keywords" content="${html_keyWord}">
+    <meta name="description" content="${html_description}">
+    <!-- description -->
+    <meta name="renderer" content="webkit">
+    <title>${html_title}</title>
+    <!-- base -->
+    <link href="../resources/css/comm/base.css" rel="stylesheet">
+    <link href="../resources/css/index/index.css" rel="stylesheet">
+    <script src="../resources/js/comm/jquery.min.js"></script>
+    <style>
+        .spantitle{
+            color:rgba(153,153,153,1);
+            font-size:20px;
+            line-height:40px;
+            font-weight: 400;
+        }
+        .spanprice{
+            color:rgba(207,21,24,1);
+            line-height:40px;
+            font-size:28px;
+        }
+    </style>
+</head>
+
+<body>
+<div id="header"></div>
+<script>
+    $("#header").load("header.html");
+</script>
+<!--报告购买页-->
+<div class="container ">
+    <div class="row mt-40" style="box-shadow:0px 3px 48px 9px rgba(239,239,239,1);">
+        <div class="col-md-4 col-md-offset-1 text-center">
+            <img src="../resources/img/shop/profession-1.png" class="img-responsive" style="margin-top: 100px;margin-bottom: 100px;">
+        </div>
+        <div class="col-md-5 col-md-offset-1" style="margin-top: 120px;">
+            <p style="font-size:24px;color:rgba(51,51,51,1);font-weight:500;">专业报告</p>
+            <p style="font-size:20px;color:rgba(102,102,102,1);margin-bottom: 0px;">医生审核监测报告</p>
+            <p>
+                <span class="spantitle">价格:</span>
+                <span class="spanprice">¥100</span>
+            </p>
+            <div class="goods_num clearfix">
+                <div class="num_name  spantitle pull-left ">数 量：</div>
+                <div class="num_add pull-left" style="margin-top: 5px;">
+                    <a href="javascript:;" class="minus fr">-</a>
+                    <input readonly='true' type="text" name="num" class="num_show fl text-center" style="width: 80px;" value="1">
+                    <a href="javascript:;" class="add fr">+</a>
+                </div>
+            </div>
+            <div style="height: 80px;">
+                <span class="spantitle pull-left">推荐:</span>
+                <div class="pull-left cur-p" style="border: 1px solid #ccc;margin-left: 5px;margin-top: 5px;">
+                    <a href="shop.html" style="padding: 2px;font-size:18px;color:rgba(102,102,102,1);">
+                        心电仪
+                    </a>
+                </div>
+                <div class="pull-left cur-p" style="border: 1px solid #ccc;margin-left: 5px;margin-top: 5px;">
+                    <a href="shopAi.html" style="padding: 2px;font-size:18px;color:rgba(102,102,102,1);">
+                        AI智能检测报告
+                    </a>
+                </div>
+                <div class="pull-left cur-p" style="border: 1px solid #e3393c;margin-left: 5px;margin-top: 5px;background:rgba(252,223,227,1);">
+                    <a href="shopDoctor.html" style="padding: 2px;font-size:18px;color:rgba(102,102,102,1);">
+                        医生审核检测报告
+                    </a>
+                </div>
+                <div class="pull-left cur-p" style="border: 1px solid #ccc;margin-left: 5px;margin-top: 5px;">
+                    <a href="shopSolution.html" style="padding: 2px;font-size:18px;color:rgba(102,102,102,1);">
+                        解决方案
+                    </a>
+                </div>
+                <div class="pull-left cur-p" style="border: 1px solid #ccc;margin-left: 5px;margin-top: 5px;">
+                    <a href="shopEcg.html" style="padding: 2px;font-size:18px;color:rgba(102,102,102,1);">
+                        悉心玲报告
+                    </a>
+                </div>
+            </div>
+            <div style="clear: both;"></div>
+            <button style="width:170px;height:34px;background:rgba(207,21,24,1);border-radius:5px;color: #fff;border: 0;">Submit Order</button>
+            <p></p>
+            <button style="width:170px;height:34px;background:rgba(91,209,161,1);border-radius:5px;color: #fff;border: 0;">
+                <i class="fa fa-phone" style="font-size: 18px;"></i>
+                Consult now
+            </button>
+        </div>
+    </div>
+</div>
+<div class="container-fluid" style="padding: 0px;margin-top: 68px;">
+    <div class="row center-block">
+        <img class="img-responsive" src="../resources/img/shop/profession.png">
+    </div>
+</div>
+<!--<div CLASS="container">-->
+    <!--<div class="row">-->
+        <!--<div class="col-md-2 col-md-offset-5 text-center mt-40" style="background:rgba(227,78,53,1);border-radius:10px;height:47px;">-->
+            <!--<span style="color:rgba(255,255,255,1);font-size:26px;line-height: 47px;">查看详细功能</span>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
+<!--结束-->
+<div id="footer"></div>
+<script>
+    $("#footer").load("footer.html");
+</script>
+
+</body>
+<script>
+    //根据选择的数量计算总价，并显示出来
+    $(function () {
+        //加号
+        var price1 = 1280;
+        var num = parseInt($('input[name="num"]').attr('value'));
+        var text = parseInt($('input[name="num"]').attr('text'));
+        var yunfei = 999;
+        console.log(yunfei)
+        //当购物车数量增加的时候
+        $('.add').click(function(){
+            num++;
+            text++;
+            $('input[name="num"]').attr('value',num);
+            var total = num * 1280 + yunfei;
+            $('#price').html(total.toFixed(2));
+        });
+        //当购物车数量减少的时候
+        $('.minus').click(function () {
+            if(num>1){
+                num--;
+                $('input[name="num"]').attr('value',num);
+                var total = num * 1280 + yunfei;
+                $('#price').text(total.toFixed(2));
+            }else{
+                alert('购买数量不能少于一件')
+            }
+        });
+    });
+</script>
+</html>
