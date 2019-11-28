@@ -1,0 +1,36 @@
+
+.service{
+    border-bottom: 1px solid #F1F1F1;
+}
+.service p:first-of-type{
+    color: #333333;
+    font-size: 1.5rem;
+}
+.service p:last-of-type span:first-of-type{
+    color: #333333;
+    font-size: 1.5rem;
+}
+.service p:last-of-type span:last-of-type{
+    color: rgba(207, 21, 24, 1);
+    font-size: 1.5rem;
+    margin-left: 10px;
+}
+.success button{
+    border: 0 ;
+    height: 60px;
+    border-radius:5px;
+}
+.success button:first-of-type{
+    background: #3592D0;
+
+}
+.success button a{
+   color: #fff;
+   font-size: 1.6rem;
+   line-height: 60px;
+   text-decoration: none;
+}
+.success button:last-of-type{
+    background: #666666;
+    
+}
