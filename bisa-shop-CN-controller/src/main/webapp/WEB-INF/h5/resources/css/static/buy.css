@@ -1,3 +1,18 @@
+/*头部返回栏*/
+.return div:first-of-type a{
+    color:rgba(51,51,51,1);
+    font-size:1.5rem;
+}
+.return div:first-of-type a{
+    line-height:60px;
+}
+.return div:last-of-type{
+    font-size: 2rem;
+}
+.return div:last-of-type span{
+    line-height:60px;color:#333333;
+}
+
 .info {
     background: rgba(255, 255, 255, 1);
     box-shadow: 0px 3px 18px 0px rgba(222, 222, 222, 1);

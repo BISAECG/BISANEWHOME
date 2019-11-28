@@ -45,24 +45,24 @@
     <div class="container-full pos-r center-block">
         <img class="img-responsive center-block" src="../resources/img/news/HK_HowToShop/banner.png" >
         <p class="f-40" style="color: #FFFFFF;position: absolute;left:45%;top: 15%; ">
-            健康資訊
+            健康资讯
         </p>
         <p style="position: absolute;left:40%;top: 34%;">
-            <span class="f-30 pr-40"  style="color: #FFFFFF;">關注健康</span>
-            <span class="f-30" style="background: #3592D0;color: #FFFFFF;">關注碧沙健康</span>
+            <span class="f-30 pr-40"  style="color: #FFFFFF;">关注健康</span>
+            <span class="f-30" style="background: #3592D0;color: #FFFFFF;">关注碧沙健康</span>
         </p>
-        <p class="f-30"  style="color: #FFFFFF;position: absolute;left:42%;top: 50%;">給家人一個悉心的呵護</p>
+        <p class="f-30"  style="color: #FFFFFF;position: absolute;left:42%;top: 50%;">给家人一个悉心的呵护</p>
         <img style="position: absolute;left:48%;top: 75%;"
              src="../resources/img/news/HK_HowToShop/downlogo.png">
     </div>
     <div class="container pt-20 pb-20">
         <div class="row">
             <div class="col-md-6 seach">
-                <span style="color: #010101;">關鍵詞:</span>
-                <span><a>心電儀</a></span>
+                <span style="color: #010101;">关键词:</span>
+                <span><a>心电仪</a></span>
                 <span><a>碧沙</a></span>
                 <span><a>心肌梗塞</a></span>
-                <span><a>心電圖</a></span>
+                <span><a>心电图</a></span>
             </div>
             <div class="col-md-3 col-md-offset-3 seach">
                 <form class="pos-r">
@@ -84,7 +84,7 @@
             <div class="row">
                 <div class="col-md-2 pt-10 pb-10">
                 <span style="font-size: 18px;font-weight: bold;">
-                    新聞資訊
+                    新闻资讯
                 </span>
                 </div>
                 <div class="col-md-1 col-md-offset-9">
@@ -116,7 +116,7 @@
 <script src="../resources/ctrl/layui/layui.js"></script>
 <script>
     $(document).ready(function() {
-        //新聞內容獲取
+        //新闻内容获取
         function indexNew() {
             $.ajax({
                 type: "GET",
@@ -137,7 +137,7 @@
                                 '</p>'+
                                 '<p class="f-12 col-888 mtb-10-0-ipad line-h-20 text-line-2-1-ipad cur-d">'+
                                 '<span>日期:</span><span class="col-888 news-time">'+time+'</span>'+
-                                '<span  style="margin-left: 40px;">閱讀量:</span><span class="col-888 news-quantity">'+item.read_quantity+'</span>'+
+                                '<span  style="margin-left: 40px;">阅读量:</span><span class="col-888 news-quantity">'+item.read_quantity+'</span>'+
                                 '</p>'+
                                 '</div>'+
                                 '</div>'
@@ -147,9 +147,10 @@
             });
         }
         indexNew();
-        //點擊圖片跳轉
+        //点击图片跳转
         $(".main_div").on("click", ".new-div", function () {
             var id = $(this).find(".zd-id").val();
+
             window.open('/news/body?id='+id,'_blank')
         });
         function getMyDate(data) {
@@ -157,7 +158,7 @@
                 return "- - - - - -";
             }
             data = parseInt(data);
-            //var oldTime = (new Date(data)).getTime(); //得到毫秒數
+            //var oldTime = (new Date(data)).getTime(); //得到毫秒数
             var oDate = new Date(data);
             oYear = oDate.getFullYear(),
                     oMonth = oDate.getMonth() + 1,
@@ -165,7 +166,7 @@
                     oHour = oDate.getHours(),
                     oMin = oDate.getMinutes(),
                     oSen = oDate.getSeconds(),
-                    oTime = oYear + '年' + getzf(oMonth) + '月' + getzf(oDay) + '日';//最後拼接時間
+                    oTime = oYear + '年' + getzf(oMonth) + '月' + getzf(oDay) + '日';//最后拼接时间
             return oTime;
         };
         function getzf(num) {
@@ -177,20 +178,20 @@
         layui.use('flow', function () {
             var flow = layui.flow;
             flow.load({
-                elem: '#LAY_demo2' //流加載容器
+                elem: '#LAY_demo2' //流加载容器
                 , isAuto: false
                 , isLazyimg: true
-                , done: function (page, next) { //加載下一頁
+                , done: function (page, next) { //加载下一页
                     $.get("/news/list?page=" + page + "&limit=" + 5 , function (data) {
                         console.log(data)
                         var lis = [];
-                        layui.each(data.datas, function (index,item) {  //遍曆後台傳過來的數據
+                        layui.each(data.datas, function (index,item) {  //遍历后台传过来的数据
                             var release_time = getMyDate(item.release_time);
                             lis.push(
                                     '<li class="news-div cur-p">'+
                                     '<div class="row">'+
                                     '<div class="col-md-12 pt-15 pb-20" style="border-bottom: 1px solid #E5E5E4;padding-left: 0px;">'+
-                                    '<input type="hidden" class="news-id" value="'+item.id+'"/>'+
+                                    '<input type="hidden" class="id" value="'+item.id+'"/>'+
                                     '<div class="col-md-2" style="padding:0px;">'+
                                     '<span class="col-888" style="background:linear-gradient(0deg,rgba(44,106,206,1) 0%,rgba(47,232,230,1) 100%);box-shadow:0px 1px 5px 0px rgba(53,143,238,1);color: #fff;">'+release_time+'</span>'+
                                     '</div>'+
@@ -198,11 +199,11 @@
                                     '<span class="col-888" style="color: #101010;">'+item.news_title+'</span>'+
                                     '</div>'+
                                     '<div class="col-md-1">'+
-                                    '<span class="cur-p pull-right">詳情></span>'+
+                                    '<span class="cur-p pull-right">详情></span>'+
                                     '</div>'+
                                     '</div>'+
                                     '</div>'+
-                                    '</li>'//作爲元素塞進數組lis中
+                                    '</li>'//作为元素塞进数组lis中
                             )
                         });
                         var pageres =  Math.ceil(data.total/3);
@@ -212,7 +213,7 @@
             })
         })
 
-        //點擊圖片跳轉
+        //点击图片跳转
         $(".pt-div").on("click", ".news-div", function () {
             var id = $(this).find(".id").val();
             window.open('/news/body?id='+id,'_blank')
@@ -227,14 +228,14 @@
             layui.use('flow', function () {
                 var flow = layui.flow;
                 flow.load({
-                    elem: '#LAY_demo1' //流加載容器
+                    elem: '#LAY_demo1' //流加载容器
                     , isAuto: false
                     , isLazyimg: true
-                    , done: function (page, next) { //加載下一頁
+                    , done: function (page, next) { //加载下一页
                         $.get("/news/list?page=" + page + "&limit=" + 6 +"&keyWord=" + keywordtext, function (data) {
                             var lis = [];
                             console.log(data)
-                            layui.each(data.datas, function (index, item) {  //遍曆後台傳過來的數據
+                            layui.each(data.datas, function (index, item) {  //遍历后台传过来的数据
                                 lis.push(
                                         '<li>'+
                                         '<div class="container">'+
@@ -259,7 +260,7 @@
                                         '</div>'+
                                         '</div>'+
                                         '</div>'+
-                                        '</li>'//作爲元素塞進數組lis中
+                                        '</li>'//作为元素塞进数组lis中
                                 )
                             });
                             var pageres = Math.ceil(data.total / 6);
