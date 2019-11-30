@@ -12,7 +12,7 @@
 <meta name="revisit-after" content="1 days">
 <meta name="twcClient" content="false" id="twcClient">
 <script type="text/javascript">
-	window.location="../html/${lang}/index.html"  
+	window.location="..${lang}/index.html"  
 </script>
 </head>
 <body>

@@ -102,6 +102,16 @@ public class Order implements Serializable {
 	 */
 	private String ems_num;
 	
+	/**
+	 * 快递公司名字
+	 */
+	private String ems_name;
+	
+	/**
+	 * 邮费
+	 */
+	private double emd_postage;
+	
 	private Date c_time;
 	
     @Id
@@ -198,6 +208,13 @@ public class Order implements Serializable {
 	}
 	
 	@Column(length=64)
+	public String getEms_name() {
+		return ems_name;
+	}
+	public void setEms_name(String ems_name) {
+		this.ems_name = ems_name;
+	}
+	@Column(length=64)
 	public String getEms_num() {
 		return ems_num;
 	}
@@ -232,6 +249,12 @@ public class Order implements Serializable {
 	public void setOrder_price(double order_price) {
 		this.order_price = order_price;
 	}
+	public double getEmd_postage() {
+		return emd_postage;
+	}
+	public void setEmd_postage(double emd_postage) {
+		this.emd_postage = emd_postage;
+	}
 	@Override
 	public String toString() {
 		return "Order [id=" + id + ", user_id=" + user_id + ", goods_num=" + goods_num + ", goods_type=" + goods_type
@@ -239,8 +262,11 @@ public class Order implements Serializable {
 				+ ", order_total=" + order_total + ", order_price=" + order_price + ", order_status=" + order_status
 				+ ", address_id=" + address_id + ", order_address=" + order_address + ", order_phone=" + order_phone
 				+ ", is_pay=" + is_pay + ", is_coupon=" + is_coupon + ", coupon_num=" + coupon_num + ", coupon_price="
-				+ coupon_price + ", ems_num=" + ems_num + ", c_time=" + c_time + "]";
+				+ coupon_price + ", ems_num=" + ems_num + ", ems_name=" + ems_name + ", emd_postage=" + emd_postage
+				+ ", c_time=" + c_time + "]";
 	}
+
+	
 	
 	
 	
