@@ -7,78 +7,67 @@
     <!--[if lt IE 9支持html5代碼]-->
     <script src='https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js'></script>
     <script src='https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js'></script>
-    <nav class='navbar' style='background: #F1F1F1;'>
+    <nav class='navbar'>
         <div class='container'>
             <div class='row'>
                 <div class='col-md-6'>
-                    <span style='color: #b0b0b0;'>
-                    您好,歡迎訪問碧沙康健!
-                    </span>
-                    <span class='sep'>|</span>
-                    <span style='color: #b0b0b0;'>
-                        語言:</span>
-                    <a id='lang-hk' href='/index?lang=zh_HK'>
-                        繁體
-                    </a> |
-                    <a id='lang-cn' href='/index?lang=zh_CN'>
-                        簡體
-                    </a> |
-                    <a id='lang-us' href='/index?lang=en_US'>
-                        英文
-                    </a>
-                    <span><img src='../resources/img/HK_About/hk.png'></span>
+                    <span>您好,歡迎訪問碧沙康健!</span>
+                    <span class='sep navTitle'>|</span>
+                    <span>語言:</span>
+                    <a id='lang-hk' href='?lang=zh_HK'>繁體</a>
+                    <span class="navTitle">|</span>
+                    <a id='lang-cn' href='?lang=zh_CN'>簡體</a>
+                    <span class="navTitle">|</span>
+                    <a id='lang-us' href='?lang=en_US'>English</a>
+                    <img src='../resources/img/HK_About/hk.png'>
                 </div>
-                <div class="col-md-3 col-md-offset-3">
-                    <a class="pull-left " href="login.html">
-                        登錄
-                    </a>
-                    <sapn class="pull-left"
-                          style="display: inline-block;width:1px;height: 15px;margin:8px 8px 0px 8px;background:#666666;"></sapn>
-                    <a class="pull-left " style="color:red;" href="reg.html">
-                        註冊
-                    </a>
+                <div class="col-md-3 col-md-offset-3 loginDiv">
+                    <a class="pull-left " href="login.html">登錄</a>
+                    <sapn class="pull-left navDivision"></sapn>
+                    <a class="pull-left navReg" href="reg.html">註冊</a>
+                    <a class="pull-left navDown" href="down.html">App下载</a>
                 </div>
             </div>
         </div>
     </nav>
-    <div class='container head mb-10'>
-        <div class='row pos-r'>
-            <div class='col-md-2 pos-a' style='height: 100px;left: 0;padding-right: 0px;'>
-                <a href='index.html' >
-                    <img class='img-responsive center-block'  src='../resources/img/index/logov1.png'  alt='碧沙康健logo'>
+    <div class='container head mb-20'>
+        <div class='row pos-r navLogo'>
+            <div class='col-md-2 pos-a'>
+                <a href='index.html'>
+                    <img class='img-responsive center-block' src='../resources/img/index/logov1.png' alt='碧沙康健logo'>
                 </a>
             </div>
-            <span class="pull-left" style="display: inline-block;width: 2px;height: 80px;background:#F1F1F1;margin-right: 15px;"></span>
-            <div class='pull-left' style='margin-left: 15px;'>
-                <p style='color: #204792;font-size:20px;font-weight:bold;' >健康從'心'開始</p>
-                <p style='font-size:18px;font-weight:400;color:rgba(14,48,115,1);'>讓妳足不出戶測心電</p>
-                <p style='font-size:16px;font-weight:400;color:rgba(14,48,115,1);'>Keep you indoors for ECG measurements</p>
+            <span class="pull-left logoTop"></span>
+            <div class='pull-left logoTitle'>
+                <p>健康 從 “心” 開始</p>
+                <p>讓妳足不出戶測心電</p>
+                <p>Keep you indoors for ECG measurements</p>
             </div>
             <div class='pull-right'>
-                <div class='pull-left  text-center'  style='margin: 0 20px;'>
-                    <img style='margin-bottom: 11px;margin-top: 9px;'  src='../resources/img/index/logo1.png'
+                <div class='pull-left  text-center' style='margin: 0 20px;'>
+                    <img style='margin-bottom: 13px;margin-top: 9px;float:left;' src='../resources/img/index/logo1.png'
                          alt='CFDA認證'>
-                    <p style='font-size: 12px;margin-bottom: 5px;'>國家認證</p>
+                    <p style='font-size: 12px;margin-bottom: 7px;'>國家認證</p>
                     <p style='font-size: 12px;'>醫療器械</p>
                 </div>
-                <span class='inline-block pull-left' style='height:78px;border-left: 2px solid #F1F1F1;'></span>
+                <span class='inline-block pull-left' style='height:86px;border-left: 2px solid #F1F1F1;'></span>
                 <div class='pull-left  text-center' style='margin: 0 20px;'>
-                    <img style='margin-bottom: 11px' src='../resources/img/index/logo2.png'  alt="歐盟CE認證">
-                    <p  style='margin-bottom: 5px;font-size: 12px;'>歐盟CE</p>
+                    <img style='margin-bottom: 13px' src='../resources/img/index/logo2.png' alt="歐盟CE認證">
+                    <p style='margin-bottom: 7px;font-size: 12px;'>歐盟CE</p>
                     <p style='font-size: 12px;'>認證產品</p>
                 </div>
-                <span class='inline-block pull-left' style='height:78px;border-left: 2px solid #F1F1F1;'></span>
+                <span class='inline-block pull-left' style='height:86px;border-left: 2px solid #F1F1F1;'></span>
                 <div class='pull-left  text-center' style='margin: 0 20px;'>
-                    <img style='margin-bottom: 5px' src='../resources/img/index/logo3.png'  alt="知識產權專利作品">
+                    <img style='margin-bottom: 9px' src='../resources/img/index/logo3.png' alt="知識產權專利作品">
                     <p style='font-size: 12px;margin-bottom: 5px;'>知識產權局</p>
                     <p style='font-size: 12px;'>專利作品</p>
 
                 </div>
-                <span class='inline-block pull-left' style='height:78px;border-left: 2px solid #F1F1F1;'></span>
+                <span class='inline-block pull-left' style='height:86px;border-left: 2px solid #F1F1F1;'></span>
                 <div class='pull-left  text-center' style='margin: 0 20px;'>
                     <img style='margin-bottom: 7px;' src='../resources/img/index/logo4.png' alt="碧沙康健健康熱線">
-                    <p style='font-size: 12px;'>健康熱線</p>
-                    <p class='phone' style='font-size: 16px;font-weight: bold;'>0755-26880962</p>
+                    <p style='font-size: 12px;padding-bottom: 2px;'>健康熱線</p>
+                    <p class='phone' style='font-size: 20px;font-weight: bold;'>0755-26880962</p>
                 </div>
             </div>
         </div>
@@ -92,10 +81,15 @@
                             首頁
                         </a>
                     </li>
-                    <li class='col-309DE2 pull-left ml-20'>
-                        <a class='navlist' href='news.html'>
-                            新聞資訊
-                        </a>
+                    <li class='col-309DE2 pull-left ml-20 headList'>
+                        <a class='navlist pos-r ' href="javascript:void(0);">新聞資訊 </a>
+                        <ul class="pos-a">
+                            <li>
+                                <a class='navlist' href='news.html'>新聞資訊</a>
+                            </li>
+                            <li>
+                                <a class="navlist" href='newQA.html'>健康咨詢</a></li>
+                        </ul>
                     </li>
                     <li class='col-309DE2 pull-left ml-20'>
                         <a class='navlist' href='solution.html'>
@@ -112,12 +106,11 @@
                             下載中心
                         </a>
                     </li>
-                    <li class='col-309DE2  text-center head_list pull-left ml-20'>
-                        <a class='navlist' href='shop.html'>
+                    <li class=' pull-left ml-20' style='background: #225185;'>
+                        <a class='buy' href='shop.html'>
                             國際購買
                         </a>
                     </li>
-
                     <li class=' pull-left ml-20' style='background: #f40;'>
                         <a class='tb'>
                             淘寶商城
@@ -141,22 +134,22 @@
                     <li class='bar-sortS'>
                         <a href='Instructions' class='bar-link pos-r'>
                             <img id='bar-sort1' src='../resources/img/index/Sidebar1.png' alt="下載APP">
-                            <span class='pos-a' style='top: 64%;left: 10%;color: #fff;' >
+                            <span class='pos-a' style='top: 64%;left: 10%;color: #fff;'>
                                 下載APP
                             </span>
                         </a>
                     </li>
-                    <li class='bar-sort' >
+                    <li class='bar-sort'>
                         <a href='#;' title='留言板還在建設中' styele='cursor:not-allowed;' class='bar-link pos-r'>
-                            <img id='bar-sort2' src='../resources/img/index/Sidebar2.png'  alt="留言板" '>
+                            <img id='bar-sort2' src='../resources/img/index/Sidebar2.png' alt="留言板" '>
                             <span class='pos-a' style='top: 56%;left: 20%;color: #fff;'>
                                 留言板
                             </span>
                         </a>
                     </li>
-                    <li class='bar-sort' >
+                    <li class='bar-sort'>
                         <a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=3299503761&site=qq&menu=yes' class='pos-r'>
-                            <img id='bar-sort4' border='0' src='../resources/img/index/Sidebar4.png'  alt="QQ客服"
+                            <img id='bar-sort4' border='0' src='../resources/img/index/Sidebar4.png' alt="QQ客服"
                                  title='點擊這裏給我發消息'/>
                             <span class='pos-a' style='top: 210%;left: 10%;color: #fff;'>
                                 QQ客服
@@ -166,7 +159,7 @@
                 </ul>
             </div>
             <a class='bar-totop bar-sort J_barToTop J_barToTopL  pos-r' href='javascript:;'>
-                <img class='original-img' src='../resources/img/index/Sidebar5.png'  alt="回頂部">
+                <img class='original-img' src='../resources/img/index/Sidebar5.png' alt="回頂部">
                 <span class='pos-a' style='top: 90%;left: 20%;color: #fff;'>
                     回頂部
                 </span>

@@ -18,6 +18,7 @@
     <!-- base -->
     <link href="../resources/css/comm/base.css" rel="stylesheet">
     <link href="../resources/css/index/index.css" rel="stylesheet">
+    <link href="../resources/css/shop/shop.css" rel="stylesheet">
     <script src="../resources/js/comm/jquery.min.js"></script>
     <style>
         .spantitle{
@@ -42,28 +43,30 @@
 
 <!--ai報告購買頁面-->
 <div class="container">
-    <div class="row mt-40" style="box-shadow:0px 3px 48px 9px rgba(239,239,239,1);">
-        <div class="col-md-4 col-md-offset-1 text-center">
-            <img src="../resources/img/shop/ai-1.png" class="img-responsive" style="margin-top: 100px;margin-bottom: 100px;">
+    <div class="row mt-40 shopBox">
+        <div class="col-md-4 col-md-offset-1 boxLeft">
+            <img src="../resources/img/shop/ai-1.png" class="img-responsive">
         </div>
-        <div class="col-md-5 col-md-offset-1" style="margin-top: 120px;">
-            <p style="font-size:24px;color:rgba(51,51,51,1);font-weight:500;">專業報告</p>
+        <div class="col-md-5 col-md-offset-1 boxRight">
+            <p class="shopTitle" style="margin-bottom: 12px">專業報告</p>
             <p style="font-size:20px;color:rgba(102,102,102,1);margin-bottom: 0px;">AI智能監測報告</p>
             <p style="font-size:16px;color:rgba(207,21,24,1);">提示：此報告現僅支持英文</p>
-            <p>
-                <span class="spantitle">價格:</span>
-                <span class="spanprice">¥120</span>
+            <p class="shopPrice">
+                <span >價格:</span>
+                <span>¥120</span>
             </p>
-            <div class="goods_num clearfix">
-                <div class="num_name  spantitle pull-left ">數 量：</div>
-                <div class="num_add pull-left" style="margin-top: 5px;">
-                    <a href="javascript:;" class="minus fr">-</a>
-                    <input readonly='true' type="text" name="num" class="num_show fl text-center" style="width: 80px;" value="1">
-                    <a href="javascript:;" class="add fr">+</a>
+            <div class="row">
+                <div class="goods_num  col-md-12">
+                    <span class="num_name  pull-left ">數量:</span>
+                    <div class="num_add pull-left pos-r text-center">
+                        <a href="javascript:;" class="minus fr pos-a">-</a>
+                        <input readonly='true' type="text" name="num" class="num_show fl text-center" value="1">
+                        <a href="javascript:;" class="add fr pos-a">+</a>
+                    </div>
                 </div>
             </div>
-            <div style="height: 80px;">
-                <span class="spantitle pull-left">推薦:</span>
+            <div class="recommend">
+                <span class=" pull-left">推薦:</span>
                 <div class="pull-left cur-p" style="border: 1px solid #ccc;margin-left: 5px;margin-top: 5px;">
                     <a href="shop.html" style="padding: 2px;font-size:18px;color:rgba(102,102,102,1);">
                         心電儀
@@ -75,25 +78,29 @@
                     </a>
                 </div>
                 <div class="pull-left cur-p" style="border: 1px solid #ccc;margin-left: 5px;margin-top: 5px;">
-                    <a href="shopDoctor.html" style="padding: 2px;font-size:18px;color:rgba(102,102,102,1);">
+                    <a href="" style="padding: 2px;font-size:18px;color:rgba(102,102,102,1);">
                         醫生審核檢測報告
                     </a>
                 </div>
                 <div class="pull-left cur-p" style="border: 1px solid #ccc;margin-left: 5px;margin-top: 5px;">
-                    <a href="shopSolution.html" style="padding: 2px;font-size:18px;color:rgba(102,102,102,1);">
+                    <a href="" style="padding: 2px;font-size:18px;color:rgba(102,102,102,1);">
                         解決方案
                     </a>
                 </div>
                 <div class="pull-left cur-p" style="border: 1px solid #ccc;margin-left: 5px;margin-top: 5px;">
-                    <a href="shopEcg.html" style="padding: 2px;font-size:18px;color:rgba(102,102,102,1);">
+                    <a href="" style="padding: 2px;font-size:18px;color:rgba(102,102,102,1);">
                         悉心玲報告
                     </a>
                 </div>
             </div>
-            <button style="width:170px;height:34px;background:rgba(207,21,24,1);border-radius:5px;color: #fff;border: 0;">Submit Order</button>
+            <div style="clear: both;"></div>
+            <button class="Order" style="margin-top: 15px">
+                <a href="payment.html"> Submit Order </a>
+            </button>
             <p></p>
-            <button style="width:170px;height:34px;background:rgba(91,209,161,1);border-radius:5px;color: #fff;border: 0;">
-                <i class="fa fa-phone" style="font-size: 18px;"></i>Consult now
+            <button class="now">
+                <i class="fa fa-phone" style="font-size: 18px;"></i>
+                <a href="payment.html"> Consult now </a>
             </button>
         </div>
     </div>
@@ -104,14 +111,7 @@
     </div>
 
 </div>
-<!--<div CLASS="container">-->
-<!--<div class="row">-->
-<!--<div class="col-md-2 col-md-offset-5 text-center mt-40" style="background:rgba(227,78,53,1);border-radius:10px;height:47px;">-->
-<!--<span style="color:rgba(255,255,255,1);font-size:26px;line-height: 47px;">查看詳細功能</span>-->
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
-<!--結束-->
+
 <div id="footer"></div>
 <script>
     $("#footer").load("footer.html");

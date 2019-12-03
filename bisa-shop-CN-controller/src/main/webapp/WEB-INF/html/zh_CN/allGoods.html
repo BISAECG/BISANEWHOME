@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" href="Images/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon"/>
+    <link rel="bookmark" href="Images/favicon.ico" type="image/x-icon"/>
+    <base href="<%=basePath%>">
+    <meta http-equiv="Content-Type" content="text/html; "/>
+    <meta charset=utf-8>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
+    <!-- necessary -->
+    <meta name="keywords" content="所有商品">
+    <meta name="description" content="所有商品">
+    <title>所有商品</title>
+    <!-- description -->
+    <meta name="renderer" content="webkit">
+    <!-- base -->
+    <link href="../resources/css/comm/base.css" rel="stylesheet">
+    <link href="../resources/css/index/index.css" rel="stylesheet">
+    <script src="../resources/js/comm/jquery.min.js"></script>
+    <style>
+        .good{
+            background:rgba(255,255,255,1);
+            box-shadow:0px 0px 13px 0px rgba(224,224,224,1);
+            border-radius:20px;
+            margin-bottom: 20px;
+            margin-top: 40px;
+            padding: 20px 70px;
+            height: 250px;
+        }
+
+        .good img{
+            max-height: 220px;
+        }
+        .goodTitle {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333333;
+            line-height: 24px;
+        }
+
+        .goodDescribe {
+            font-size: 20px;
+            color: #666666;
+            line-height: 24px;
+            margin-bottom: 14px;
+        }
+
+        .goodPrice {
+            font-size: 20px;
+            color: #CF1518;
+            line-height: 38px;
+        }
+
+        .goodMore {
+            float: right;
+            text-decoration: none;
+            margin-bottom: 10px;
+            background: #CF1518;
+            font-size: 20px;
+            padding: 5px 10px;
+            color: #FFFFFF;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+
+<body>
+<div id="header"></div>
+<script>
+    $("#header").load("header.html");
+</script>
+<div class="con">
+    <div class="container-fluid">
+        <div class="row">
+            <img class="img-responsive center-block" src="../resources/img/index/banner8-cn.gif" alt="碧沙康健心电仪限时活动">
+        </div>
+    </div>
+    <p class="title-p">
+        所有商品
+    </p>
+    <div class="line">
+        <span class="line-top"></span>
+        <span class="line-btm"></span>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-50">
+                <div class="good">
+                    <img  class="img-responsive center-block" src="../resources/img/shop/xixinling-1.png" alt="碧沙商品">
+                </div>
+                    <p class="goodTitle">医生审核监测报告</p>
+                    <p class="goodDescribe">
+                        监测报告的基础上由专业医师进行
+                        总结建议，报告专业、准确、全面！
+                    </p>
+                    <p>
+                        <span class="goodPrice">￥100</span>
+                        <a class="goodMore">查看详情</a>
+                    </p>
+            </div>
+            <div class="col-md-4 mb-50">
+                <div class="good">
+                    <img  class="img-responsive center-block" src="../resources/img/shop/xixin.png" alt="碧沙商品">
+                </div>
+                <p class="goodTitle">医生审核监测报告</p>
+                <p class="goodDescribe">
+                    监测报告的基础上由专业医师进行
+                    总结建议，报告专业、准确、全面！
+                </p>
+                <p>
+                    <span class="goodPrice">￥100</span>
+                    <a class="goodMore">查看详情</a>
+                </p>
+            </div>
+            <div class="col-md-4 mb-50">
+                <div class="good">
+                    <img  class="img-responsive center-block" src="../resources/img/shop/solution-1.png" alt="碧沙商品">
+                </div>
+                <p class="goodTitle">医生审核监测报告</p>
+                <p class="goodDescribe">
+                    监测报告的基础上由专业医师进行
+                    总结建议，报告专业、准确、全面！
+                </p>
+                <p>
+                    <span class="goodPrice">￥100</span>
+                    <a class="goodMore">查看详情</a>
+                </p>
+            </div>
+            <div class="col-md-4 mb-50">
+                <div class="good">
+                    <img  class="img-responsive center-block" src="../resources/img/shop/ai-1.png" alt="碧沙商品">
+                </div>
+                <p class="goodTitle">医生审核监测报告</p>
+                <p class="goodDescribe">
+                    监测报告的基础上由专业医师进行
+                    总结建议，报告专业、准确、全面！
+                </p>
+                <p>
+                    <span class="goodPrice">￥100</span>
+                    <a class="goodMore">查看详情</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div id="footer"></div>
+<script>
+    $("#footer").load("footer.html");
+</script>
+
+</body>
+</html>

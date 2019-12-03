@@ -819,18 +819,59 @@ a:hover{text-decoration:none;}
 	font-size: 22px;
 }
 
+/*公司介绍部分的样式*/
+.company h2{
+	font-size:24px;
+	font-weight:bold;
+	color: #fff;
+	line-height:40px;
+}
+
+.company .companyCon{
+	font-size:16px;
+	/*color:rgba(255,255,255,1);*/
+	color: #333;
+	color:rgba(230,230,230,1);
+}
+.company p  span{
+	display: inline-block;
+	width:30px;
+	height:11px;
+	background:rgba(34,67,150,1);
+	border-radius:2px;
+}
 
 
-
-
-
-
-
-
-
-
-
-
+/*公司介绍部分的样式*/
+.indexArea .ecg .pos-a,.indexEngArea .ecg .pos-a{
+	cursor: pointer;
+	transition: all 0.6s;
+}
+.indexArea .ecg .pos-a:hover,.indexEngArea .ecg .pos-a:hover{
+	transform: scale(1.2);
+}
+@media screen and (min-width:1600px){
+	.indexArea .ecg-7,.indexArea .ecg-10{
+		top: 44%;
+	}
+	.indexArea .ecg-8,.indexArea .ecg-11{
+		top: 65%;
+	}
+	.indexArea .ecg-9,.indexArea .ecg-12{
+		top: 87%;
+	}
+}
+@media screen and (min-width:1200px) and (max-width:1500px){
+	.indexArea .ecg-7,.ecg-10{
+		top: 42%;
+	}
+	.indexArea .ecg-8,.ecg-11{
+		top: 63%;
+	}
+	.indexArea .ecg-9,.ecg-12{
+		top: 82%;
+	}
+}
 
 
 
