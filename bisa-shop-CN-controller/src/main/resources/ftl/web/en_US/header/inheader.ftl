@@ -1,9 +1,9 @@
 <div class="header">
-    <link href='../resources/ctrl/bootstrap-3.3.7-dist/css/bootstrap.min.css' rel='stylesheet'>
-    <link href='../resources/css/index/head.css' rel='stylesheet'>
-    <link href='../resources/ctrl/font-awesome-4.7.0/css/font-awesome.min.css' rel='stylesheet'>
-    <script src='../resources/js/comm/jquery.min.js'></script>
-    <script src='../resources/js/index/head.js'></script>
+    <link href='../../resources/ctrl/bootstrap-3.3.7-dist/css/bootstrap.min.css' rel='stylesheet'>
+    <link href='../../resources/css/index/head.css' rel='stylesheet'>
+    <link href='../../resources/ctrl/font-awesome-4.7.0/css/font-awesome.min.css' rel='stylesheet'>
+    <script src='../../resources/js/comm/jquery.min.js'></script>
+    <script src='../../resources/js/index/head.js'></script>
     <!--[if lt IE 9支持html5代码]-->
     <script src='https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js'></script>
     <script src='https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js'></script>
@@ -17,26 +17,16 @@
                     <span class='sep'>|</span>
                     <span style='color: #b0b0b0;'>
                         语言:</span>
-                    <a id='lang-hk' href='/index?lang=zh_HK'>
+                    <a id='lang-hk' href='?lang=zh_HK'>
                         繁体
                     </a> |
-                    <a id='lang-cn' href='/index?lang=zh_CN'>
+                    <a id='lang-cn' href='?lang=zh_CN'>
                         简体
                     </a> |
-                    <a id='lang-us' href='/index?lang=en_US'>
+                    <a id='lang-us' href='?lang=en_US'>
                         英文
                     </a>
-                    <span><img src='../resources/img/HK_About/hk.png'></span>
-                </div>
-                <div class="col-md-3 col-md-offset-3">
-                    <a class="pull-left " href="login.html">
-                        登录
-                    </a>
-                    <sapn class="pull-left"
-                          style="display: inline-block;width:1px;height: 15px;margin:8px 8px 0px 8px;background:#666666;"></sapn>
-                    <a class="pull-left " style="color:red;" href="reg.html">
-                        注册
-                    </a>
+                    <span><img src='../../resources/img/HK_About/hk.png'></span>
                 </div>
             </div>
         </div>
@@ -48,7 +38,6 @@
                     <img class='img-responsive center-block'  src='../resources/img/index/logov1.png'  alt='碧沙康健logo'>
                 </a>
             </div>
-            <span class="pull-left" style="display: inline-block;width: 2px;height: 80px;background:#F1F1F1;margin-right: 15px;"></span>
             <div class='pull-left' style='margin-left: 15px;'>
                 <p style='color: #204792;font-size:20px;font-weight:bold;' >健康从'心'开始</p>
                 <p style='font-size:18px;font-weight:400;color:rgba(14,48,115,1);'>让你足不出户测心电</p>
@@ -56,27 +45,27 @@
             </div>
             <div class='pull-right'>
                 <div class='pull-left  text-center'  style='margin: 0 20px;'>
-                    <img style='margin-bottom: 11px;margin-top: 9px;'  src='../resources/img/index/logo1.png'
+                    <img style='margin-bottom: 11px;margin-top: 9px;'  src='../../resources/img/index/logo1.png'
                          alt='CFDA认证'>
                     <p style='font-size: 12px;margin-bottom: 5px;'>国家认证</p>
                     <p style='font-size: 12px;'>医疗器械</p>
                 </div>
                 <span class='inline-block pull-left' style='height:78px;border-left: 2px solid #F1F1F1;'></span>
                 <div class='pull-left  text-center' style='margin: 0 20px;'>
-                    <img style='margin-bottom: 11px' src='../resources/img/index/logo2.png'  alt="欧盟CE认证">
+                    <img style='margin-bottom: 11px' src='../../resources/img/index/logo2.png'  alt="欧盟CE认证">
                     <p  style='margin-bottom: 5px;font-size: 12px;'>欧盟CE</p>
                     <p style='font-size: 12px;'>认证产品</p>
                 </div>
                 <span class='inline-block pull-left' style='height:78px;border-left: 2px solid #F1F1F1;'></span>
                 <div class='pull-left  text-center' style='margin: 0 20px;'>
-                    <img style='margin-bottom: 5px' src='../resources/img/index/logo3.png'  alt="知识产权专利作品">
+                    <img style='margin-bottom: 5px' src='../../resources/img/index/logo3.png'  alt="知识产权专利作品">
                     <p style='font-size: 12px;margin-bottom: 5px;'>知识产权局</p>
                     <p style='font-size: 12px;'>专利作品</p>
 
                 </div>
                 <span class='inline-block pull-left' style='height:78px;border-left: 2px solid #F1F1F1;'></span>
                 <div class='pull-left  text-center' style='margin: 0 20px;'>
-                    <img style='margin-bottom: 7px;' src='../resources/img/index/logo4.png' alt="碧沙康健健康热线">
+                    <img style='margin-bottom: 7px;' src='../../resources/img/index/logo4.png' alt="碧沙康健健康热线">
                     <p style='font-size: 12px;'>健康热线</p>
                     <p class='phone' style='font-size: 16px;font-weight: bold;'>0755-26880962</p>
                 </div>
@@ -87,36 +76,18 @@
         <div class='container'>
             <div class='row'>
                 <ul class='nav bisa-nav text-center head pull-left'>
-							 <li class='col-309DE2 pull-left ml-20'>
-		                        <a class='navlist' href='index.html'>
-		                        	首页
-		                        </a>
-                       		</li>
-							 <li class='col-309DE2 pull-left ml-20'>
-		                        <a class='navlist' href='news.html'>
-		                        	新闻资讯
-		                        </a>
-                       		</li>
-							 <li class='col-309DE2 pull-left ml-20'>
-		                        <a class='navlist' href='solution.html'>
-		                        	解决方案
-		                        </a>
-                       		</li>
-							 <li class='col-309DE2 pull-left ml-20'>
-		                        <a class='navlist' href='certificate.html'>
-		                        	产品证书
-		                        </a>
-                       		</li>
-							 <li class='col-309DE2 pull-left ml-20'>
-		                        <a class='navlist' href='down.html'>
-		                        	下载中心
-		                        </a>
-                       		</li>
-							  <li class='col-309DE2  text-center head_list pull-left ml-20'>
-                        		<a class='navlist' href='shop.html'>
-                        			本站直购
-                        		</a>
-                    		  </li>
+					<#list empList as o>
+                		<li class='col-309DE2 pull-left ml-20'>
+			               <a class='navlist' href='${o.name}.html'>
+			                 ${o.column_name_CN}
+			               </a>
+                       	</li>
+                	</#list>
+					<li class='col-309DE2  text-center head_list pull-left ml-20'>
+                        <a class='navlist' href='../shop.html'>
+                        			国际购买
+                        </a>
+                    </li>
                 	
                     <li class=' pull-left ml-20' style='background: #f40;'>
                         <a class='tb'>
@@ -140,7 +111,7 @@
                 <ul class='bar-top' style="list-style: none;">
                     <li class='bar-sortS'>
                         <a href='Instructions' class='bar-link pos-r'>
-                            <img id='bar-sort1' src='../resources/img/index/Sidebar1.png' alt="下载APP">
+                            <img id='bar-sort1' src='../../resources/img/index/Sidebar1.png' alt="下载APP">
                             <span class='pos-a' style='top: 64%;left: 10%;color: #fff;' >
                                 下载APP
                             </span>
@@ -148,7 +119,7 @@
                     </li>
                     <li class='bar-sort' >
                         <a href='#;' title='留言板还在建设中' styele='cursor:not-allowed;' class='bar-link pos-r'>
-                            <img id='bar-sort2' src='../resources/img/index/Sidebar2.png'  alt="留言板" '>
+                            <img id='bar-sort2' src='../../resources/img/index/Sidebar2.png'  alt="留言板" '>
                             <span class='pos-a' style='top: 56%;left: 20%;color: #fff;'>
                                 留言板
                             </span>
@@ -156,7 +127,7 @@
                     </li>
                     <li class='bar-sort' >
                         <a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=3299503761&site=qq&menu=yes' class='pos-r'>
-                            <img id='bar-sort4' border='0' src='../resources/img/index/Sidebar4.png'  alt="QQ客服"
+                            <img id='bar-sort4' border='0' src='../../resources/img/index/Sidebar4.png'  alt="QQ客服"
                                  title='点击这里给我发消息'/>
                             <span class='pos-a' style='top: 210%;left: 10%;color: #fff;'>
                                 QQ客服
@@ -166,7 +137,7 @@
                 </ul>
             </div>
             <a class='bar-totop bar-sort J_barToTop J_barToTopL  pos-r' href='javascript:;'>
-                <img class='original-img' src='../resources/img/index/Sidebar5.png'  alt="回顶部">
+                <img class='original-img' src='../../resources/img/index/Sidebar5.png'  alt="回顶部">
                 <span class='pos-a' style='top: 90%;left: 20%;color: #fff;'>
                     回顶部
                 </span>

@@ -17,13 +17,13 @@
                     <span class='sep'>|</span>
                     <span style='color: #b0b0b0;'>
                         语言:</span>
-                    <a id='lang-hk' href='/index?lang=zh_HK'>
+                    <a id='lang-hk' href='?lang=zh_HK'>
                         繁体
                     </a> |
-                    <a id='lang-cn' href='/index?lang=zh_CN'>
+                    <a id='lang-cn' href='?lang=zh_CN'>
                         简体
                     </a> |
-                    <a id='lang-us' href='/index?lang=en_US'>
+                    <a id='lang-us' href='?lang=en_US'>
                         英文
                     </a>
                     <span><img src='../resources/img/HK_About/hk.png'></span>
@@ -87,34 +87,17 @@
         <div class='container'>
             <div class='row'>
                 <ul class='nav bisa-nav text-center head pull-left'>
-							 <li class='col-309DE2 pull-left ml-20'>
-		                        <a class='navlist' href='index.html'>
-		                        	首页
-		                        </a>
-                       		</li>
-							 <li class='col-309DE2 pull-left ml-20'>
-		                        <a class='navlist' href='news.html'>
-		                        	新闻资讯
-		                        </a>
-                       		</li>
-							 <li class='col-309DE2 pull-left ml-20'>
-		                        <a class='navlist' href='solution.html'>
-		                        	解决方案
-		                        </a>
-                       		</li>
-							 <li class='col-309DE2 pull-left ml-20'>
-		                        <a class='navlist' href='certificate.html'>
-		                        	产品证书
-		                        </a>
-                       		</li>
-							 <li class='col-309DE2 pull-left ml-20'>
-		                        <a class='navlist' href='down.html'>
-		                        	下载中心
-		                        </a>
-                       		</li>
+                			<#list empList as o>
+                				<li class='col-309DE2 pull-left ml-20'>
+			                        <a class='navlist' href='${o.name}.html'>
+			                        ${o.column_name_CN}
+			                        </a>
+                       			</li>
+                			</#list>
+                
 							  <li class='col-309DE2  text-center head_list pull-left ml-20'>
                         		<a class='navlist' href='shop.html'>
-                        			本站直购
+                        			国际购买
                         		</a>
                     		  </li>
                 	

@@ -12,13 +12,13 @@
                             </p>
                             <li class="pt-20" style="border-top: 2px solid #323137;box-shadow:0px 1px 0px 0px rgba(40,39,45,1);">
                                 <span style="width: 8px;height: 8px;border-radius: 50%;background: #2556A7;"></span>
-                                <a class="col-8c8c8c t-nonehove hovecol-309DE2 f-12" href="About.html">
+                                <a class="col-8c8c8c t-nonehove hovecol-309DE2 f-12" href="../About.html">
                                     企业使命
                                 </a>
                             </li>
                             <li class="pt-10">
-                                <a class="col-8c8c8c t-nonehove hovecol-309DE2 f-12" href="ContactUs.html">
-                                    公司地址
+                                <a class="col-8c8c8c t-nonehove hovecol-309DE2 f-12" href="../About.html">
+                                    联络我们
                                 </a>
                             </li>
                         </ul>
@@ -32,11 +32,11 @@
                                 <span class="t-nonehove" style="color: #FFF;">健康资讯</span>
                             </p>
                             <li class="pt-20" style="border-top: 2px solid #323137;box-shadow:0px 1px 0px 0px rgba(40,39,45,1);">
-                                <a class="col-8c8c8c t-nonehove hovecol-309DE2 f-12" href="news.html">
+                                <a class="col-8c8c8c t-nonehove hovecol-309DE2 f-12" href="../news.html">
                                     心脏资讯</a></li>
-                            <li class="pt-10"><a class="col-8c8c8c t-nonehove hovecol-309DE2 f-12" href="news.html">
+                            <li class="pt-10"><a class="col-8c8c8c t-nonehove hovecol-309DE2 f-12" href="../news.html">
                                 血压资讯</a></li>
-                            <li class="pt-10"><a class="col-8c8c8c t-nonehove hovecol-309DE2 f-12" href="news.html">
+                            <li class="pt-10"><a class="col-8c8c8c t-nonehove hovecol-309DE2 f-12" href="../news.html">
                                 血氧资讯</a></li>
                         </ul>
                     </div>
@@ -48,9 +48,10 @@
                             <p>
                                 <span class="t-nonehove" style="color: #FFF;">购物指南</span>
                             </p>
-                            <li class="pt-20" style="border-top: 2px solid #323137;box-shadow:0px 1px 0px 0px rgba(40,39,45,1);"><a class="col-8c8c8c t-nonehove hovecol-309DE2 f-12" href="HowToShop.html">
+                            <li class="pt-20" style="border-top: 2px solid #323137;box-shadow:0px 1px 0px 0px rgba(40,39,45,1);"><a
+                                    class="col-8c8c8c t-nonehove hovecol-309DE2 f-12" href="../HowToShop_CN.html">
                                 发货时效</a></li>
-                            <li class="pt-10"><a class="col-8c8c8c t-nonehove hovecol-309DE2 f-12" href="HowToShop.html">
+                            <li class="pt-10"><a class="col-8c8c8c t-nonehove hovecol-309DE2 f-12" href="../HowToShop.html">
                                 售后政策</a></li>
                         </ul>
                     </div>
@@ -67,10 +68,10 @@
                                    target="_blank">
                                     快递查询API</a></li>
                             <li class="pt-10"><a class="col-8c8c8c t-nonehove hovecol-309DE2 f-12"
-                                                 href="../resources/img/pdf/certification.pdf" target="_blank">
+                                                 href="../../resources/img/pdf/certification.pdf" target="_blank">
                                 Certification</a></li>
                             <li class="pt-10"><a class="col-8c8c8c t-nonehove hovecol-309DE2 f-12"
-                                                 href="../resources/img/pdf/Electric_utility_model_certificate.pdf" target="_blank">
+                                                 href="../../resources/img/pdf/Electric_utility_model_certificate.pdf" target="_blank">
                                 心电仪实用新型证书</a></li>
                         </ul>
                     </div>
@@ -110,16 +111,16 @@
                                 <span class="t-nonehove" style="color: #FFF;">使用说明</span>
                             </p>
                             <li class="pt-20" style="border-top: 2px solid #323137;box-shadow:0px 1px 0px 0px rgba(40,39,45,1);">
-                                <a class="col-8c8c8c t-nonehove hovecol-309DE2 f-12" href="instructions.html">
+                                <a class="col-8c8c8c t-nonehove hovecol-309DE2 f-12" href="../instructions.html">
                                     悉心心电仪App</a></li>
                             <li class="pt-20">
-                                <a class="col-8c8c8c t-nonehove hovecol-309DE2 f-12"  href="newQA.html">
+                                <a class="col-8c8c8c t-nonehove hovecol-309DE2 f-12"  href="../newQA.html">
                                     健康问答
                                 </a>
                             </li>
                             <div class="pt-10">
                                 <a class="col-8c8c8c t-nonehove hovecol-309DE2 " >
-                                    <img  width="80" height="80" src="../resources/img/index/app_qr.png"  alt="碧沙康健app下载">
+                                    <img  width="80" height="80" src="../../resources/img/index/app_qr.png"  alt="碧沙康健app下载">
                                 </a></div>
                         </ul>
                     </div>

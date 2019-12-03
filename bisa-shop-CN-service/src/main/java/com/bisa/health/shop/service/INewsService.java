@@ -107,7 +107,7 @@ public interface INewsService {
      * @param language
      * @return
      */
-    public Pager<News> getPageNewsGroupNum(String vKey, String vVal);
+    public Pager<News> getPageNewsGroupNum(String vKey, String vVal,int offset);
     /**
      * 关键字和语言分页查询
      * @param language
@@ -115,7 +115,7 @@ public interface INewsService {
      * @param vVal
      * @return
      */
-    public Pager<News> getPageNews(String language, String vKey, String vVal);
+    public Pager<News> getPageNews(String language, String vKey, String vVal,int offset);
 
 
 

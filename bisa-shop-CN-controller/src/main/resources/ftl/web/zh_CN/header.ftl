@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <div class="header">
     <link href='../resources/ctrl/bootstrap-3.3.7-dist/css/bootstrap.min.css' rel='stylesheet'>
     <link href='../resources/css/index/head.css' rel='stylesheet'>
@@ -17,19 +18,19 @@
                     <span class='sep'>|</span>
                     <span style='color: #b0b0b0;'>
                         语言:</span>
-                    <a id='lang-hk' href='/index.html?lang=zh_HK'>
+                    <a id='lang-hk' href='?lang=zh_HK'>
                         繁体
                     </a> |
-                    <a id='lang-cn' href='/index.html?lang=zh_CN'>
+                    <a id='lang-cn' href='?lang=zh_CN'>
                         简体
                     </a> |
-                    <a id='lang-us' href='/index.html?lang=en_US'>
+                    <a id='lang-us' href='?lang=en_US'>
                         英文
                     </a>
                     <span><img src='../resources/img/HK_About/hk.png'></span>
                 </div>
                 <div class="col-md-3 col-md-offset-3">
-                    <a class="pull-left " href="/login">
+                    <a class="pull-left " href="login.html">
                         登录
                     </a>
                     <sapn class="pull-left"
@@ -78,7 +79,7 @@
                 <div class='pull-left  text-center' style='margin: 0 20px;'>
                     <img style='margin-bottom: 7px;' src='../resources/img/index/logo4.png' alt="碧沙康健健康热线">
                     <p style='font-size: 12px;'>健康热线</p>
-                    <p class='phone' style='font-size: 16px;font-weight: bold;'>${company_phone}</p>
+                    <p class='phone' style='font-size: 16px;font-weight: bold;'>0755-26880962</p>
                 </div>
             </div>
         </div>
@@ -87,21 +88,19 @@
         <div class='container'>
             <div class='row'>
                 <ul class='nav bisa-nav text-center head pull-left'>
-					<#list empList! as emp>
-						<#if emp_index = empList?size-1>
+                			<#list empList as o>
+                				<li class='col-309DE2 pull-left ml-20'>
+			                        <a class='navlist' href='${o.name}.html'>
+			                        ${o.column_name_CN}
+			                        </a>
+                       			</li>
+                			</#list>
+                
 							  <li class='col-309DE2  text-center head_list pull-left ml-20'>
-                        		<a class='navlist' href='${emp.name!}.html'>
-                        			${emp.column_name_CN!}
+                        		<a class='navlist' href='shop.html'>
+                        			国际购买
                         		</a>
                     		  </li>
-						<#else>
-							 <li class='col-309DE2 pull-left ml-20'>
-		                        <a class='navlist' href='${emp.name!}.html'>
-		                        	${emp.column_name_CN!}
-		                        </a>
-                       		</li>
-						</#if>
-					</#list>
                 	
                     <li class=' pull-left ml-20' style='background: #f40;'>
                         <a class='tb'>

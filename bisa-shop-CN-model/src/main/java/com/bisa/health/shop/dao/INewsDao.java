@@ -17,12 +17,6 @@ import java.util.List;
 public interface INewsDao extends IBaseDao<News>{
 	
 	
-
-    /**
-     * 获取所有的新闻
-     * @return
-     */
-    Pager<News> getListNewsByKeyWord(String keyWord, String language);
     /**
      * 更新新闻
      * @param news

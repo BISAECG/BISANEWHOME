@@ -13,16 +13,10 @@ import java.util.List;
 @Repository
 public class NewsDaoImpl extends BaseDao<News> implements INewsDao {
 	
-	@Override
-	public Pager<News> getListNewsByKeyWord(String keyWord, String language) {
-		String sql = "select * from s_news where language=? and news_title LIKE " + keyWord + "'%' or '%" + keyWord
-				+ "%' or '%'" + keyWord;
-		return super.findBySql(sql, new Object[] { language }, News.class, true);
-	}
 
 	@Override
 	public List<News> getTop4ListNews(String language) {
-		String sql = "SELECT * FROM s_news where language=? ORDER BY READ_QUANTITY DESC LIMIT 0,4";
+		String sql = "SELECT * FROM s_news where language=? AND news_roofPlacement=1 ORDER BY release_time DESC LIMIT 0,4";
 		return super.listBySql(sql, new Object[] { language }, News.class);
 	}
 
@@ -88,7 +82,7 @@ public class NewsDaoImpl extends BaseDao<News> implements INewsDao {
 		String sql = "SELECT * " + "FROM s_news " + "WHERE language=?";
 
 		if (!StringUtils.isEmpty(vKey)) {
-			sql = "SELECT * " + "FROM s_news " + "WHERE language=?  AND  " + vKey + " LIKE '" + vVal + "%'";
+			sql = "SELECT * FROM s_news WHERE language=?  AND  " + vKey + " LIKE '%" + vVal + "%'";
 
 		}
 		return super.findBySql(sql, new Object[] { language }, News.class, true);

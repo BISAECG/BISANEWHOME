@@ -16,9 +16,13 @@ import java.util.Map;
 public interface IGoodsDao extends IBaseDao<Goods>{
 	
 	public Pager<Goods> listAllGroupNumber();
+	public Pager<Goods> pageAllByLanguage(String language,String vKey,String vVal);
+	public List<Goods> listAllByLanguage(String language);
+	public List<Goods> listAllByLanguage(String language,Map<String,Object> alias);
 	public Goods loadByNumAndlanguage(String num,String language);
 	public List<Goods> listByNum(String num);
 	public List<Goods> listByCategoryNum(String categoryNum,String language);
 	public Goods loadById(int id);
 	public List<Goods> listByNum(Map<String, Object> alias); 
+	
 }
