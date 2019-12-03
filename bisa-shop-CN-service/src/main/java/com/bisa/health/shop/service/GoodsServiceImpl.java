@@ -34,6 +34,7 @@ public class GoodsServiceImpl implements IGoodsService {
 	public List<Goods> listByNum(String num) {
 		return goodsDao.listByNum(num);
 	}
+	
 
 	@Override
 	public Goods loadById(int id) {
@@ -80,6 +81,21 @@ public class GoodsServiceImpl implements IGoodsService {
 	@Override
 	public GoodsRecommend addGoodsRecommend(GoodsRecommend goodsRecommend) {
 		return goodsRecommendDao.add(goodsRecommend);
+	}
+
+	@Override
+	public Pager<Goods> pageAllByLanguage(String language, String vKey, String vVal,int offset) {
+		return goodsDao.pageAllByLanguage(language, vKey, vVal);
+	}
+
+	@Override
+	public List<Goods> listAllByLanguage(String language) {
+		return goodsDao.listAllByLanguage(language);
+	}
+
+	@Override
+	public List<Goods> listAllByLanguage(String language, Map<String, Object> alias) {
+		return goodsDao.listAllByLanguage(language, alias);
 	}
 
 

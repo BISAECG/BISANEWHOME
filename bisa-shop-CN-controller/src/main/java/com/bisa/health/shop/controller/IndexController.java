@@ -1,8 +1,12 @@
 package com.bisa.health.shop.controller;
 
 import com.bisa.health.client.entity.User;
+import com.bisa.health.common.utils.PhoneTypeUtil;
 import com.bisa.health.shop.admin.util.JsonResult;
+import com.bisa.health.shop.component.InternationalizationUtil;
+
 import org.apache.shiro.SecurityUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,6 +24,8 @@ import java.util.Locale;
 @Controller
 public class IndexController {
 
+	@Autowired
+	private InternationalizationUtil i18nUtil;
 
     /**
      * 商城首页   http://localhost:8080/health-shop/index
@@ -27,11 +33,13 @@ public class IndexController {
      */
     @RequestMapping(value = "/index", method = RequestMethod.GET)
     public String index(HttpServletRequest request,Model model) {
+    	String userAgent = request.getHeader("user-agent");
+    	String jumStr="/html/";
+    	if(PhoneTypeUtil.phoneType(userAgent)){
+    		jumStr="/h5/";
+    	}
     	
-    	Locale mlocale=null;
-    	mlocale=(Locale) request.getAttribute(SessionLocaleResolver.LOCALE_SESSION_ATTRIBUTE_NAME);
-    	model.addAttribute("lang",mlocale.toString());
-    	System.out.println(mlocale.toString());
+    	model.addAttribute("lang",jumStr+i18nUtil.lang());
         return "/index";
     }
     

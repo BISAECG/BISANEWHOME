@@ -71,6 +71,7 @@ public class NewsServiceImpl implements INewsService {
      * 这里的方法是，增加阅读量，就不删除缓存了
      */
     @Override
+    @CacheEvict(value = "NewsServiceImpl", allEntries = true)
     public News updateNews(News news) {
         return iNewsDao.updateNews(news);
     }
@@ -85,14 +86,13 @@ public class NewsServiceImpl implements INewsService {
     }
     
 	@Override
-	public Pager<News> getPageNewsGroupNum(String vKey, String vVal) {
+	public Pager<News> getPageNewsGroupNum(String vKey, String vVal,int offset) {
 		  Pager<News> pagerNews = iNewsDao.getPageNewsGroupNum(vKey,vVal);
 	      return pagerNews;
 	}
     @Override
-    @Cacheable(key = "targetClass.name+methodName+#page+#limit+#language+#keyWord")
-    public Pager<News> getPageNews(String language, String vKey, String vVal){
-
+    @Cacheable(key = "targetClass.name+methodName+#language+#vKey+#vVal+#offset")
+    public Pager<News> getPageNews(String language, String vKey, String vVal,int offset){
         //获取的是新闻表的数据，在查询过程中已经国际化
         Pager<News> pagerNews = iNewsDao.getPageNews(language, vKey, vVal);
         return pagerNews;

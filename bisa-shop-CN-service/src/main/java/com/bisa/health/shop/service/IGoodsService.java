@@ -9,6 +9,30 @@ import com.bisa.health.shop.model.GoodsRecommend;
 
 
 public interface IGoodsService {
+	
+	
+	/**
+	 * 根据语言和关键字查询
+	 * @param language
+	 * @param vKey
+	 * @param vVal
+	 * @return
+	 */
+	public Pager<Goods> pageAllByLanguage(String language,String vKey,String vVal,int offset);
+	
+	/**
+	 * 获取所有商品
+	 * @param language
+	 * @return
+	 */
+	public List<Goods> listAllByLanguage(String language);
+	
+	/**
+	 * 获取所有商品
+	 * @param language
+	 * @return
+	 */
+	public List<Goods> listAllByLanguage(String language,Map<String,Object> alias);
 	/**
 	 * 根据商品编号分组查询数据
 	 * @param offset

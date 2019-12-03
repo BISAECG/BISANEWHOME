@@ -76,7 +76,10 @@ public class Goods implements Serializable {
 	 */
 	private String category_num;
 	
-	
+	/**
+	 * 商品主图
+	 */
+	private String img_url;
 	
 	/**
 	 * 虚拟服务的TOKEN
@@ -186,6 +189,13 @@ public class Goods implements Serializable {
 	}
 	public void setService_token(String service_token) {
 		this.service_token = service_token;
+	}
+	
+	public String getImg_url() {
+		return img_url;
+	}
+	public void setImg_url(String img_url) {
+		this.img_url = img_url;
 	}
 	@Override
 	public String toString() {

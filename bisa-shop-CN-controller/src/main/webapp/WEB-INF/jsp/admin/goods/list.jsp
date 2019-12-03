@@ -133,6 +133,10 @@
 	                            </select>
 	                    </div>
 	                    <div class="div-service dis-n" >
+	                        <label class="layui-form-label layui-col-md3">商品价格</label>
+		                    <div class="layui-input-inline">
+		                        <input type="text" name="price"  lay-verify="required" placeholder="请输入商品价格"  class="layui-input">
+		                    </div>
 		                    <label class="layui-form-label layui-col-md3">虚拟服务</label>
 		                    <div class="layui-input-inline">
 		                            <select id="service_token" name="service_token" lay-verify="required">
@@ -141,9 +145,15 @@
 	                    </div>
 	                </div>
 	                 <div class="layui-form-item ">
-	                    <label class="layui-form-label layui-col-md3">商品价格</label>
+	                   <label class="layui-form-label" >商品预览图</label>
 	                    <div class="layui-input-inline">
-	                        <input type="text" name="price"  lay-verify="required" placeholder="请输入商品价格"  class="layui-input">
+	                    	<input type="text" name="img_url"  id="img_url" readonly="readonly" lay-verify="required " autocomplete="off"  class="layui-inline img_url layui-input">
+	                     
+	                    </div>
+	                    <div class="layui-input-inline">
+							<button type="button" onclick="upPreviewFile()"  class="layui-btn">
+			  					<i class="layui-icon">&#xe67c;</i>上传预览
+							</button>
 	                    </div>
 	              
 	                </div>
@@ -200,6 +210,14 @@
 		    <p id="demoText"></p>
 		  </div>
 		</div>  
+		
+		<div class="layui-upload dis-n">
+		  <button type="button" class="layui-btn" id="upPreviewFile"></button>
+		  <div class="layui-upload-list">
+		    <img class="layui-upload-img" id="demo2">
+		    <p id="demoText"></p>
+		  </div>
+		</div>  
         
     </div>
 
@@ -212,6 +230,10 @@
 	//解决layui内置上传上传元素不能点击
 	function upFile(){
 		$('#upFile').trigger("click");
+	}
+	
+	function upPreviewFile(){
+		$('#upPreviewFile').trigger("click");
 	}
         //加载layui
     layui.use(['element', 'table', 'upload','form','laypage','tree', 'util'], function () {
@@ -483,7 +505,7 @@
 			
         }
     	 
-        //执行实例
+        	//商品详情
  	        upload.render({
  		     	elem: '#upFile' //绑定元素
  		     	,url: '/admin/common/upload'
@@ -511,8 +533,29 @@
  		         	layer.closeAll('loading');
  		        }	
  		 	});
-    
-     	 
+ 	     //商品预览图详情
+ 	       upload.render({
+		     	elem: '#upPreviewFile' //绑定元素
+		     	,url: '/admin/common/upload'
+		     	,accept: 'file'
+		     	,exts: 'jpg|png'
+		        ,data:{'suffix':'jpg'}
+		     	,before: function(obj){ //obj参数包含的信息，跟 choose回调完全一致，可参见上文。
+		         	    layer.load(); //上传loading
+		         	
+		        }
+		         ,done: function(res){
+		         	layer.closeAll('loading');
+		         	if(res.code=="${SysStatusCode.SUCCESS}"){
+		         		$(".img_url").val(res.data);
+					}
+					showMessage(res.msg);
+					form.render(null,'form');
+		        }
+		         ,error: function(e){
+		         	layer.closeAll('loading');
+		        }	
+		 	});
         $("#addPage").click(function(){
         	$('.div-service').addClass('dis-n');
         	inidData({language:"${language}"});

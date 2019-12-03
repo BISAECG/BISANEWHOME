@@ -19,6 +19,8 @@ import com.bisa.health.shop.service.INewsService;
 import com.bisa.health.shop.utils.TradeNoUtils;
 
 import org.apache.commons.lang3.StringUtils;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.apache.shiro.authz.annotation.Logical;
 import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,6 +45,7 @@ import com.bisa.health.common.utils.RandomUtils;
 import com.bisa.health.shop.admin.util.JsonResult;
 import com.bisa.health.shop.component.FreemarkerComponent;
 import com.bisa.health.shop.component.InternationalizationUtil;
+import com.bisa.health.shop.component.MqttComponent;
 import com.bisa.health.shop.entity.SysErrorCode;
 import com.bisa.health.shop.entity.SysStatusCode;
 import com.bisa.health.shop.model.Goods;
@@ -70,7 +73,7 @@ public class AdminNewsController {
 	private InternationalizationUtil i18nUtil;
     
  
-
+	private final static Logger log = LogManager.getLogger(AdminNewsController.class);
    
     /**
      * 进去 bisa 新闻列表 页面
@@ -143,7 +146,7 @@ public class AdminNewsController {
           SystemContext.setOrder("desc");
           Pager<News> page=null;
           if(!StringUtils.isEmpty(vKey)){
-        	  page=newsService.getPageNewsGroupNum(vKey, vVal);
+        	  page=newsService.getPageNewsGroupNum(vKey, vVal,SystemContext.getPageOffset());
           }else{
         	  page=newsService.getPageNewsGroupNum(SystemContext.getPageOffset());
           }
@@ -229,11 +232,16 @@ public class AdminNewsController {
 	            	}
 	            	listNews.add(news);
             }
+            try{
+            	freemarkerComponent.generateNews(listNews);
+            }catch (Exception e) {
+            	log.info(e.getMessage());
+			}finally {
+				return new ResponseEntity<ResultData>(
+	   					ResultData.success(SysStatusCode.SUCCESS, i18nUtil.i18n(SysErrorCode.OptSuccess)), HttpStatus.OK);
+			}
             
-            freemarkerComponent.generateNews(listNews);
             
-             return new ResponseEntity<ResultData>(
-					ResultData.success(SysStatusCode.SUCCESS, i18nUtil.i18n(SysErrorCode.OptSuccess)), HttpStatus.OK);
     }
   
 	@RequestMapping(value = "/inlink/ajax/load", method = RequestMethod.GET, produces = "application/json; charset=utf-8")

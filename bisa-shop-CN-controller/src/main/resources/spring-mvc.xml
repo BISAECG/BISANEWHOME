@@ -43,16 +43,31 @@
 
     <!-- 静态资源映射 -->
     <mvc:resources mapping="/resources/**" location="/WEB-INF/resources/"/>
-    <mvc:resources mapping="/html/**" location="/WEB-INF/html/"/>
-	<mvc:resources mapping="/html/**" location="/WEB-INF/h5/"/>
+ 	<mvc:resources mapping="/html/**" location="/WEB-INF/html/"/>
 
-    <!-- 默认的视图解析器 在上边的解析错误时使用 (默认使用html)- -->
+  <!-- 定义HTML文件的位置 -->  
+     <bean id="htmlviewResolver"    
+        class="org.springframework.web.servlet.view.InternalResourceViewResolver">   
+        <property name="viewClass" value="com.bisa.health.shop.component.HtmlResourceView"/>  
+        <property name="order" value="0" />  
+        <property name="prefix" value="/WEB-INF/html/"/>  
+        <property name="suffix" value=".html" />    
+        <property name="contentType" value="text/html;charset=UTF-8"></property>    
+    </bean>  
+    <!-- 定义JSP文件的位置 -->  
+    <bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">  
+        <property name="order" value="1" />  
+        <property name="prefix" value="/WEB-INF/jsp/"/>  
+        <property name="suffix" value=".jsp"/>  
+    </bean>  
+
+    <!-- 默认的视图解析器 在上边的解析错误时使用 (默认使用html)- 
     <bean id="defaultViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver" p:order="1">
         <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
         <property name="contentType" value="text/html"/>
         <property name="prefix" value="/WEB-INF/jsp/"/>
         <property name="suffix" value=".jsp"/>
-    </bean>
+    </bean>-->
 
     <!--上传文件配置-->
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">

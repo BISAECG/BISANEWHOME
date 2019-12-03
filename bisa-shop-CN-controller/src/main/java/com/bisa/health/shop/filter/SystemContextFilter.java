@@ -46,7 +46,6 @@ public class SystemContextFilter implements Filter  {
 				mlocale = new Locale("en", "US");
 			}
 			req.setAttribute(SessionLocaleResolver.LOCALE_SESSION_ATTRIBUTE_NAME, mlocale);
-			req.setAttribute("lang", mlocale.toString());
 		} else {
 			mlocale = (Locale) req.getAttribute(SessionLocaleResolver.LOCALE_SESSION_ATTRIBUTE_NAME);
 			if (mlocale == null) {
@@ -61,7 +60,6 @@ public class SystemContextFilter implements Filter  {
 				req.setAttribute(SessionLocaleResolver.LOCALE_SESSION_ATTRIBUTE_NAME, mlocale);
 				
 			}
-			req.setAttribute("lang", mlocale.toString());
 		}
 		
 

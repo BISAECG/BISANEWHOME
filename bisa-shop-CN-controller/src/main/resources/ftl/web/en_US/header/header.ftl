@@ -1,4 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <div class="header">
     <link href='../resources/ctrl/bootstrap-3.3.7-dist/css/bootstrap.min.css' rel='stylesheet'>
     <link href='../resources/css/index/head.css' rel='stylesheet'>

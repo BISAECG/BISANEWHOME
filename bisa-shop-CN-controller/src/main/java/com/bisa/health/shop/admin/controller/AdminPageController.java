@@ -80,7 +80,8 @@ public class AdminPageController {
     	File[] files=file.listFiles();
     	List<String> list=new ArrayList<String>();
     	for(File f: files){
-    		list.add((f.getName().split("\\."))[0]);
+    		if(!f.isDirectory())
+    			list.add((f.getName().split("\\."))[0]);
     	}
     	model.addAttribute("list", list);
     	
