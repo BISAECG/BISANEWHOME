@@ -1,31 +1,138 @@
-.spantitle{
-    color:rgba(153,153,153,1);
+.payBox{
+    background:rgba(255,255,255,1);
+    box-shadow:0px 3px 48px 9px rgba(239,239,239,1);
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.payBox p{
+    margin: 0;
+}
+.payBox .payRight .payTitle{
+    margin-top: 60px;
+    font-size:24px;
+    color:rgba(51,51,51,1);
+    font-weight: bold;
+
+}
+
+.payBox .payRight .payPrice span:first-of-type{
     font-size:20px;
+    color:rgba(153,153,153,1);
     line-height:40px;
-    font-weight: 400;
 }
-.spanprice{
-    margin-left: 20px;
+.payBox .payRight .payPrice span:last-of-type{
+    font-size:28px;color:rgba(207,21,24,1);
+    line-height:40px;
+}
+
+.payRight .goods_num .num_name {
+    font-size: 20px;
+    color: rgba(153, 153, 153, 1);
+    line-height: 40px;
+}
+
+.payRight .goods_num .num_add {
+    margin-top: 8px;
+}
+
+.payRight .goods_num .num_add .minus {
+    border: 1px solid #999;
+    padding-bottom: 3px;
+    padding-left: 3px;
+    padding-right: 3px;
+    left: 11px;
+    top: 0;
+    width: 40px;
+    color: rgba(153, 153, 153, 1);
+}
+
+.payRight .goods_num .num_add .num_show {
+    margin-left: 50px;
+    height: 25px;
+    width: 42px;
+}
+
+.payRight .goods_num .num_add .add {
+    border: 1px solid #999;
+    padding-bottom: 3px;
+    padding-left: 3px;
+    padding-right: 3px;
+    right: -39px;
+    top: 0;
+    width: 40px;
+    color: rgba(153, 153, 153, 1);
+}
+
+
+
+.payBox .payRight .payInfo span:first-of-type{
+    font-size:20px;color:rgba(153,153,153,1);
+    line-height:40px;
+}
+.payBox .payRight .payInfo span:last-of-type{
+    font-size:20px;font-weight:400;
     color:rgba(207,21,24,1);
-    line-height:40px;
-    font-size:28px;
 }
-.payment{
+
+
+.payBox .payRight .payNum span{
+    font-size:20px;color:rgba(153,153,153,1);
+    line-height:40px;
+}
+
+.payBox .payRight .payNum input{
+    padding: 5px 10px;
+    width:209px;
+    height:27px;
+    border:1px solid rgba(218,218,218,1);
+}
+::-webkit-input-placeholder {
+    color:rgba(205,205,205,1);
+    font-size: 16px;
+}
+
+.payBox .payRight .payPostage  span:first-of-type{
+    font-size:20px;color:rgba(153,153,153,1);
+    line-height:40px;
+}
+.payBox .payRight .payPostage span:last-of-type{
+    font-size:20px;font-weight:400;
+    color:rgba(207,21,24,1);
+}
+
+.payBox .payRight .totalPrice  span:first-of-type{
+    font-size:20px;color:rgba(153,153,153,1);
+    line-height:40px;
+}
+.payBox .payRight .totalPrice span:last-of-type{
+    font-size:20px;font-weight:400;
+    color:rgba(207,21,24,1);
+}
+
+
+.payBox .payRight  .payMode  span{
+    font-size:20px;color:rgba(153,153,153,1);
+    line-height:40px;
+}
+
+.payBox .payRight .row .payment{
     width:170px;
     height:38px;
     background:rgba(255,255,255,1);
     box-shadow:0px 0px 13px 0px rgba(207,21,24,0.3);
     border-radius:5px;
-    text-align: center;
-    display: inline-block;
-    margin: 10px;
 }
-.payment a{
-    font-size:20px;
-    line-height: 38px;
-    font-weight:400;
-    color:rgba(51,51,51,1);
+
+.payBox .payRight .row .payment a{
+    line-height: 36px;
+    color: #333333;
 }
-.con .container p{
-    margin-bottom: 0px;
+.payBox .payRight .row .payment:hover{
+    background:rgba(222,40,40,1);
 }
+.payBox .payRight .row .payment:hover a{
+   color: #fff;
+}
+
+
+
