@@ -131,7 +131,7 @@
             <div class="row text-center">
                 <div class="col-md-12 text-center">
                     <p class="col-8c8c8c">
-                        Copyright©2017. ${company_name}  <span style="font-weight:bold ;">All Rights Reserved.</span>
+                        Copyright2017. ${company_name}  <span style="font-weight:bold ;">All Rights Reserved.</span>
                     </p>
                 </div>
             </div>

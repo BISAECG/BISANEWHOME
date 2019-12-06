@@ -337,10 +337,10 @@ opacity: 0;
 
 /*修改长图Img*/
 .full-ws{position:relative;}
-.full-w-p{font-size:42px;position: absolute;top: 27%;left: 35%;color: #ddd;}
-.full-w-p-1{font-size:12px;position: absolute;top: 52%;left: 33%;color: #ddd; }
-.full-w-p-2{font-size:10px;position: absolute;color: #ddd;background-color: #00A5F7;padding-left: 20px;padding-right: 25px;top:62%;left: 36%;}
-.full-w-p-3{font-size:10px;position: absolute;color: #ddd;background-color: #00A5F7;padding-left: 20px;padding-right: 25px;top: 62%;left: 34%;
+.full-w-p{font-size:42px;position: absolute;top: 27%;left: 45%;color: #fff;}
+.full-w-p-1{font-size:18px;position: absolute;top: 52%;left: 40%;color: #fff;}
+.full-w-p-2{font-size:14px;position: absolute;color: #fff;background-color: #00A5F7;padding-left: 20px;padding-right: 25px;top:63%;left: 46%;}
+.full-w-p-3{font-size:14px;position: absolute;color: #fff;background-color: #00A5F7;padding-left: 20px;padding-right: 25px;top: 65%;left: 44%;
 }
 
 /*update header*/

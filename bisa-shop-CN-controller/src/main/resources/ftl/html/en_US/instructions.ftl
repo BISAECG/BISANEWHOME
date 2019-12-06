@@ -39,7 +39,7 @@
     <div class="container mt-30 pl-0 pr-0 clear bg-f5f5f5 pt-30 pb-70 mb-60">
         <div class="col-sm-3 pl-30 pr-20">
               
-            <div class="clear bg-white pd-40-10-ipad">
+            <div class="clear bg-white pd-40-10-ipad" style="padding-top: 0px;">
                  
                 <p class="mt-10 mb-10 col-212121 f-30 line-h-40 cur-d">
                     Instructions for use
@@ -55,7 +55,7 @@
                     <a href="../resources/img/news/HK-Instructions/PECG.pdf" download="PECG.pdf">PECG instruction manual download</a>
             </div>
         </div>
-        <div id="instr1" class=" clear col-sm-9 pr-30 pl-0">
+        <div id="instr1" class=" clear col-sm-9 pr-30 pl-0" style="margin-top: 20px;">
             <div class="clear bg-white pb-60 pl-50 pr-50">
                  
                 <p class="pt-40-20-ipad f-50-40-ipad col-b0b0b0 line-h-70-50-ipad pb-20">Careful ECG App</p>
@@ -434,7 +434,7 @@
             </div>
         </div>
         <div id="instr2" style="display: none;" class=" clear col-sm-9 pr-30 pl-0">
-            <div class="clear bg-white pb-60 pl-50 pr-50">
+            <div class="clear bg-white pb-60 pl-50 pr-50"  style="margin-top: 20px;">
                 <p class="pt-40-20-ipad f-50-40-ipad col-b0b0b0 line-h-70-50-ipad pb-20">
                     Guidelines for the Use of ECG
                 </p>
@@ -625,7 +625,7 @@
         </div>
 
         <div id="instr3" style="display: none;" class=" clear col-sm-9 pr-30 pl-0">
-            <div class="clear bg-white pb-60 pl-50 pr-50">
+            <div class="clear bg-white pb-60 pl-50 pr-50"  style="margin-top: 20px;">
                 <p class="pt-40-20-ipad f-50-40-ipad col-b0b0b0 line-h-70-50-ipad pb-20">
                     Apple User Report Generation Guide
                 </p>

@@ -508,7 +508,7 @@
                             <p class="f-20 col-333 h-20 line-h-20 mt-20">
                                 1.使用 micro USB 將監測完畢的 心電記錄儀 與 電腦 連接。
                             </p>
-                            <p class="f-20 h-20 line-h-20 mt-20">
+                            <p class="f-20 h-20 line-h-20 col-333 mt-20">
                                 2. 打開 我的電腦。
                             </p>
                             <div class="clear text-center mt-40 mb-40">

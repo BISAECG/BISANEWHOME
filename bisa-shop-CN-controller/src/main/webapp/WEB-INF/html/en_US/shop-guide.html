@@ -27,8 +27,10 @@
 <div class="wrap clear">
     <div class="clear full-ws">
         <img class="full-w" src="../resources/img/news/HK_HowToShop/banner.jpg">
-        <p class="full-w-p">Shopping guide</p>
-        <p class="full-w-p-1">Pay attention to health, pay attention to the health of Bisa, give a careful care to the family.</p>
+        <p class="full-w-p" style="left: 41%;">Shopping guide</p>
+        <p class="full-w-p-1" style="left: 30%;">Pay attention to health, pay attention to the health of Bisa, give a careful care to the
+            family
+            .</p>
         <p class="full-w-p-3">SHOPPING DIRECTORY</p>
     </div>
     <div class="container pl-0 pr-0 clear bg-f5f5f5 pt-30 pb-70 mb-60">

@@ -872,8 +872,92 @@ a:hover{text-decoration:none;}
 		top: 82%;
 	}
 }
+/*公司介绍部分的样式*/
 
+/*tab切换部分样式*/
+.indexInfo .nav-tabs {
+	border-bottom: 1px solid rgba(43,43,49,1);
+}
+.indexInfo  .nav-tabs a{
+	margin-top: 25px;
+	display: inline-block;
+	width:67px;
+	height:4px;
+	background:#fff;
+	border-radius:2px;
+}
+.indexInfo .nav-tabs>li>a {
+	 border-radius:  0;
+}
+.indexInfo  .nav>li>a {
+	 padding: 0;
+}
+.indexInfo .nav>li>a:focus, .nav>li>a:hover {
+	background-color: rgba(60,232,226,1);
+}
+.indexInfo .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+	background:rgba(60,232,226,1);
+	border: none;
+}
+.indexInfo{
+	background:rgba(43,43,49,1);
+	height: 317px;
+}
+.myTabContent div p:nth-child(1),.myTabContent  a p:nth-child(1){
+	margin-top: 60px;
+	margin-left: 5px;
+	font-size:20px;
+	color:rgba(255,255,255,1);
+}
+.myTabContent div p:nth-child(2),.myTabContent a p:nth-child(2){
+	margin-left: 5px;
+	font-size:20px;
+	color:rgba(162,177,248,1);
+	margin-top: 36px;
+	margin-bottom: 17px;
+}
+.myTabContent div p:nth-child(3),.myTabContent  a p:nth-child(3){
+	margin-left: 5px;
+	font-size:16px;
+	color:rgba(255,255,255,1);
+}
 
+.carousel .carousel-control.left {
+	background-image:none;
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1)
+}
+
+.carousel .carousel-control.right {
+	left: auto;
+	right: 0;
+	background-image: none;
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1)
+}
+#myCarousel .carousel-indicators {
+	top: 115%;
+	left: 90%;
+	z-index: 15;
+	width: 60%;
+	padding-left: 0;
+	margin-left: -30%;
+	text-align: center;
+	list-style: none;
+}
+#myCarousel .carousel-indicators li{
+	width: 8px;
+	height: 8px;
+	background:rgba(255,255,255,1);
+	border-radius:50%;
+	margin: 0;
+}
+#myCarousel .carousel-indicators .active {
+
+	background:rgba(60,232,226,1);
+}
+
+/*tab切换部分样式*/
 
 
 

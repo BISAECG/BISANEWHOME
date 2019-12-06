@@ -62,12 +62,12 @@
             <div class="clear col-sm-6 pl-25">
                 <div class="clear pt-20 bor bor-t bor-col-dcdcdc">
                     <div class="clear full-w ">
-                        <div class="col-sm-3 pl-0 pr-0">
+                        <div class="col-sm-4 pl-0 pr-0">
                                 <span class="col-aaa f-22 h-25 line-h-25">
                                     企业使命
                                 </span>
                         </div>
-                        <div class="col-sm-9 pl-5 pr-0 pos-r bb">
+                        <div class="col-sm-8 pl-5 pr-0 pos-r bb">
                             <div class="clear w-100 pos-a t-10 l-15 bor bor-b bor-col-8c918c ">
                             </div>
                             <p class="col-aaa f-18 line-h-25 h-25 mt-20 ft-r">
@@ -76,12 +76,12 @@
                         </div>
                     </div>
                     <div class="clear full-w mgt">
-                        <div class="col-sm-3 pl-0 pr-0">
+                        <div class="col-sm-4 pl-0 pr-0">
                                 <span class="col-aaa f-22 h-25 line-h-25">
                                     企业目标
                                 </span>
                         </div>
-                        <div class="col-sm-9 pl-5 pr-0 pos-r">
+                        <div class="col-sm-8 pl-5 pr-0 pos-r">
                             <div class="clear w-100 pos-a t-10 l-15 bor bor-b bor-col-8c918c">
                             </div>
                             <p class="col-aaa f-18 line-h-25 h-25 mt-20 ft-r">
@@ -90,12 +90,12 @@
                         </div>
                     </div>
                     <div class="clear full-w mgt">
-                        <div class="col-sm-3 pl-0 pr-0">
+                        <div class="col-sm-4 pl-0 pr-0">
                                 <span class="col-aaa f-22 h-25 line-h-25">
                                     企业价值观
                                 </span>
                         </div>
-                        <div class="col-sm-9 pl-5 pr-0 pos-r">
+                        <div class="col-sm-8 pl-5 pr-0 pos-r">
                             <div class="clear w-100 pos-a t-10 l-15 bor bor-b bor-col-8c918c">
                             </div>
                             <p class="col-aaa f-18 line-h-25 h-25 mt-20 ft-r">
@@ -104,12 +104,12 @@
                         </div>
                     </div>
                     <div class="clear full-w mgt">
-                        <div class="col-sm-3 pl-0 pr-0">
+                        <div class="col-sm-4 pl-0 pr-0">
                                 <span class="col-aaa f-22 h-25 line-h-25">
                                     企业宗旨
                                 </span>
                         </div>
-                        <div class="col-sm-9 pl-5 pr-0 pos-r">
+                        <div class="col-sm-8 pl-5 pr-0 pos-r">
                             <div class="clear w-100 pos-a t-10 l-15 bor bor-b bor-col-8c918c">
                             </div>
                             <p class="col-aaa f-18 line-h-25 h-25 mt-20 mb-5 ft-r">
@@ -124,13 +124,13 @@
                 <img class="full-w" src="../resources/img/HK_About/About-rightv2.png" alt="关于碧沙">
             </div>
             <div class="clear col-sm-12 pl-25 pr-25 pull-left">
-                <div class="clear w-12d5p pull-left">
+                <div class="clear w-12d5p pull-left col-sm-2">
                     <span class="col-aaa f-22 h-25 line-h-25">企业承诺</span>
                 </div>
-                <div class="clear w-87d5p pull-left pos-r pl-5">
+                <div class="clear w-87d5p pull-left pos-r pl-5 col-sm-8" style="padding-left: 10px;">
                     <div class="clear w-100 pos-a t-10 l-15 bor bor-b bor-col-8c918c">
                     </div>
-                    <p class="col-aaa f-18 line-h-25 mt-20 ft-r-1">
+                    <p class="col-aaa f-18 line-h-25 mt-20 ft-r-1" style="margin-left: 18%;">
                         公司董事会和全体员工愿同战略合作伙伴、加盟商、客户一同成长，为人类的健康保驾护航，实现企业的宗旨。
                     </p>
                 </div>

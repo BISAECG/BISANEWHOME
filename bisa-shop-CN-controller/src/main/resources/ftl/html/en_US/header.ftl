@@ -85,10 +85,10 @@
 		                    <li class='col-309DE2 pull-left ml-20 headList'>
 		                        <a class='navlist pos-r ' href="javascript:void(0);">News </a>
 		                        <ul class="pos-a">
-		                            <li>
+		                            <li style="list-style: none;">
 		                                <a class='navlist' href='news.html'>Bisa News</a>
 		                            </li>
-		                            <li>
+		                            <li style="list-style: none;">
 		                                <a class="navlist" href='qa.html'>Q&A</a></li>
 		                        </ul>
 		                    </li>
@@ -121,7 +121,7 @@
         <div class='bar-l '>
             <div id='J_rightbar_l' style='margin-bottom: 15px;'>
                 <ul class='bar-top' style="list-style: none;">
-                    <li class='bar-sortS'>
+                    <li class='bar-sortS' style="list-style: none;">
                         <a href='down.html' class='bar-link pos-r'>
                             <img id='bar-sort1' src='../resources/img/index/Sidebar1.png' alt="Download app">
                             <span class='pos-a' style='top: 64%;left: 5%;color: #fff;'>

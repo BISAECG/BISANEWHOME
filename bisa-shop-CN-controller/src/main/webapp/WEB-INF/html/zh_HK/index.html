@@ -14,6 +14,7 @@
     <link href="../resources/css/comm/base.css" rel="stylesheet">
     <link href="../resources/css/index/index.css" rel="stylesheet">
     <script src="../resources/js/comm/jquery.min.js"></script>
+    <script src="../resources/ctrl/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 </head>
 <body>
 <div id="header"></div>
@@ -35,18 +36,18 @@
     <div class="container-fluid mt-20 mb-20 indexArea">
         <div class="row  pos-r ecg" >
             <img  class="center-block" width="100%" src="../resources/img/index/banner7-hk.png">
-            <img  src="../resources/img/index/banner7-1.png" width="18%" alt="检测到停搏自动通知联系人" class="pos-a  ecg-1 "
+            <img  src="../resources/img/index/banner7-1-hk.png" width="19%" alt="检测到停搏自动通知联系人" class="pos-a  ecg-1 "
                   style="left: 25%;top: 42%;">
-            <img src="../resources/img/index/banner7-2.png" width="18%" alt="双击app按钮通知联系人" class="pos-a  ecg-2"
-                 style="left: 20%;top: 63%;">
-            <img src="../resources/img/index/banner7-3.png" width="18%" alt="双击操作键通知联系人" class="pos-a  ecg-3"
-                 style="left: 25%;top: 85%;">
-            <img src="../resources/img/index/banner7-4.png" width="18%" alt="一对一电话咨询认证医师" class="pos-a  ecg-4"
-                 style="right: 26%;top: 42%;">
-            <img src="../resources/img/index/banner7-5.png" width="18%" alt="15分钟免费检测报告服务" class="pos-a  ecg-5"
-                 style="right: 20%;top: 63%;">
-            <img src="../resources/img/index/banner7-6.png" width="18%" alt="专科认证医师在线答疑" class="pos-a  ecg-6"
-                 style="right: 25%;top: 85%;">
+            <img src="../resources/img/index/banner7-2-hk.png" width="18%" alt="双击app按钮通知联系人" class="pos-a  ecg-2"
+                 style="left: 20%;top: 65%;">
+            <img src="../resources/img/index/banner7-3-hk.png" width="17%" alt="双击操作键通知联系人" class="pos-a  ecg-3"
+                 style="left: 26%;top: 86%;">
+            <img src="../resources/img/index/banner7-4-hk.png" width="17%" alt="一对一电话咨询认证医师" class="pos-a  ecg-4"
+                 style="right: 28%;top: 42%;">
+            <img src="../resources/img/index/banner7-5-hk.png" width="18%" alt="15分钟免费检测报告服务" class="pos-a  ecg-5"
+                 style="right: 22%;top: 65%;">
+            <img src="../resources/img/index/banner7-6-hk.png" width="18%" alt="专科认证医师在线答疑" class="pos-a  ecg-6"
+                 style="right: 25%;top: 86%;">
             <div class=" ecg-7"
                  style="border:2px solid #02D1E3;font-size:14px;font-weight:400;color:rgba(255,255,255,1);width: 20%;position:
                     absolute;left:3%;padding: 3px 8px;display: none;">
@@ -127,9 +128,61 @@
     <!--視屏展示部分-->
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-md-offset-1 " style="background: red;height:372px;">
+            <div class="col-md-6 " style="background: red;height:372px;">
             </div>
-            <div class="col-md-4 col-md-offset-1 mt-40 " style="background: #2B2B31;padding: 0;">
+            <div class="col-md-5 ml-40 mt-20  indexInfo">
+                <div id="myCarousel" class="carousel slide">                        <!--設置輪播器區域樣式，設置輪播器滾動樣式-->
+                    <ol class="carousel-indicators">                                <!--設置輪播器列表區域樣式，就是小圓點區域樣式-->
+
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>    <!--設置當前列表首選-->
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                        <li data-target="#myCarousel" data-slide-to="3"></li>
+                    </ol>
+
+                    <div class="carousel-inner">                                    <!--設置輪播器圖片區域-->
+                        <div class="item active tp1">                                <!--設置輪播器圖片樣式-->
+                            <a href="#" class="myTabContent">
+                                <div class="tab-pane fade in active" id="home">
+                                    <p>信息更全面</p>
+                                    <p>獲取體表3路電位信號信息更全面</p>
+                                    <p>市面上單導聯家用心電儀易出現誤診、遺漏或信道被阻塞的情況。而悉心三導聯心電儀可獲取3路人體心電信號，可以更全面地反應心臟的生理狀態信息。</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item tp2 myTabContent">
+                            <a href="#" >
+                                <p>智能診斷算法</p>
+                                <p>擁有自主設計的智能診斷算法</p>
+                                <p>悉心三導聯心電儀已通過CFDA認證，采用進口醫療級芯片和生物傳感系統設計，擁有自主設計的智能診斷算法，采集、分析的心電數據準確可信賴。</p>
+                            </a>
+                        </div>
+                        <div class="item tp3 myTabContent">
+                            <a href="#">
+                                <p>三導聯心電儀</p>
+                                <p>基於藍牙技術的無線三導聯心電儀</p>
+                                <p>悉心無線三導聯心電儀利用藍牙技術以無線方式傳送心電信號，解決了設備體積重量大、傳統導聯線幹擾用戶自由活動、用戶佩戴不便等缺點。</p>
+                            </a>
+                        </div>
+                        <div class="item tp4 myTabContent">
+                            <a href="#">
+                                <p>適合多環境使用</p>
+                                <p>可作臨床診斷工具亦可居家使用</p>
+                                <p>悉心三導聯心電儀具有醫療級精確度，兼具專業醫療器械的可靠性和可穿戴設備的易用性，可作為臨床診斷工具，亦可作為家庭監測設備長期使用。</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!--設置輪播器箭頭區域-->
+                    <!--<a href="#myCarousel" data-slide="prev" class="carousel-control left">-->
+                    <!--<span class="glyphicon glyphicon-chevron-left"></span>-->
+                    <!--</a>-->
+
+                    <!--<a href="#myCarousel" data-slide="next" class="carousel-control right">-->
+                    <!--<span class="glyphicon glyphicon-chevron-right"></span>-->
+                    <!--</a>-->
+
+                </div>
             </div>
         </div>
     </div>
@@ -191,6 +244,10 @@
 </body>
 <script>
     $(document).ready(function() {
+        // 轮播图切换时间
+        $('.carousel').carousel({
+            interval: 10000
+        })
         //新聞內容獲取
         function indexNew() {
 
@@ -252,34 +309,46 @@
         });
         function ecg() {
             $(".ecg-1").hover(function () {
-                $(".ecg-7").css("display","block");
-            },function () {
-                $(".ecg-7").css("display","none");
+                $(".ecg-1").attr('src', '../resources/img/index/banner7-1-1-hk.png');
+                $(".ecg-7").css("display", "block");
+            }, function () {
+                $(".ecg-1").attr('src', '../resources/img/index/banner7-1-hk.png');
+                $(".ecg-7").css("display", "none");
             });
             $(".ecg-2").hover(function () {
-                $(".ecg-8").css("display","block");
-            },function () {
-                $(".ecg-8").css("display","none");
+                $(".ecg-2").attr('src', '../resources/img/index/banner7-2-2-hk.png');
+                $(".ecg-8").css("display", "block");
+            }, function () {
+                $(".ecg-2").attr('src', '../resources/img/index/banner7-2-hk.png');
+                $(".ecg-8").css("display", "none");
             });
             $(".ecg-3").hover(function () {
-                $(".ecg-9").css("display","block");
-            },function () {
-                $(".ecg-9").css("display","none");
+                $(".ecg-3").attr('src', '../resources/img/index/banner7-3-3-hk.png');
+                $(".ecg-9").css("display", "block");
+            }, function () {
+                $(".ecg-3").attr('src', '../resources/img/index/banner7-3-hk.png');
+                $(".ecg-9").css("display", "none");
             });
             $(".ecg-4").hover(function () {
-                $(".ecg-10").css("display","block");
-            },function () {
-                $(".ecg-10").css("display","none");
+                $(".ecg-4").attr('src', '../resources/img/index/banner7-4-4-hk.png');
+                $(".ecg-10").css("display", "block");
+            }, function () {
+                $(".ecg-4").attr('src', '../resources/img/index/banner7-4-hk.png');
+                $(".ecg-10").css("display", "none");
             });
             $(".ecg-5").hover(function () {
-                $(".ecg-11").css("display","block");
-            },function () {
-                $(".ecg-11").css("display","none");
+                $(".ecg-5").attr('src', '../resources/img/index/banner7-5-5-hk.png');
+                $(".ecg-11").css("display", "block");
+            }, function () {
+                $(".ecg-5").attr('src', '../resources/img/index/banner7-5-hk.png');
+                $(".ecg-11").css("display", "none");
             });
             $(".ecg-6").hover(function () {
-                $(".ecg-12").css("display","block");
-            },function () {
-                $(".ecg-12").css("display","none");
+                $(".ecg-6").attr('src', '../resources/img/index/banner7-6-6-hk.png');
+                $(".ecg-12").css("display", "block");
+            }, function () {
+                $(".ecg-6").attr('src', '../resources/img/index/banner7-6-hk.png');
+                $(".ecg-12").css("display", "none");
             });
         }
         ecg();
