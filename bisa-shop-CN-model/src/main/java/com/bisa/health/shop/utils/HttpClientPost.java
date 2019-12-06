@@ -31,19 +31,11 @@ public class HttpClientPost {
 		this.parameter.put(key, value);
 	}
 
-	public void sendByPost(String url) {
-		this.sendByPost(url, DEAFULT_CHARSET);
-	}
-
-	public void sendByPost(String url, String charset) {
+	public void sendByPost(String url, String charset) throws IOException {
 		this.response.setContentType("text/html");
 		this.response.setCharacterEncoding(charset);
 		PrintWriter out = null;
-		try {
-			out = this.response.getWriter();
-		} catch (IOException e) {
-			logger.error(ExceptionUtils.getStackTrace(e));
-		}
+		out = this.response.getWriter();
 		String html = this.buildPostHTML(url, charset);
 		logger.info(html);
 		out.println(html);
@@ -51,29 +43,9 @@ public class HttpClientPost {
 		out.close();
 	}
 
-	public void sendByPostTest(String url) {
-		this.sendByPostTest(url, DEAFULT_CHARSET);
 
-	}
-
-	public void sendByPostTest(String url, String charset) {
-		//		this.response.setContentType("text/html");
-		//		this.response.setCharacterEncoding(charset);
-		//		PrintWriter out = null;
-		//		try {
-		//			out = this.response.getWriter();
-		//		} catch (IOException e) {
-		//			logger.error(ExceptionUtils.getStackTrace(e));
-		//		}
-		String html = this.buildPostHTML(url, charset);
-		logger.info(html);
-		//		out.println(html);
-		//		out.flush();
-		//		out.close();
-	}
-
-	public String buildPostHTML(String url) {
-		return this.buildPostHTML(url, DEAFULT_CHARSET);
+	public void buildPostHTML(String url) throws IOException {
+		this.sendByPost(url, DEAFULT_CHARSET);
 	}
 
 	/**
@@ -93,7 +65,7 @@ public class HttpClientPost {
 		html.append("<meta charset=\"" + charset + "\"/>");
 		html.append("</head>");
 		html.append("<body>");
-		html.append("<form name=\"submitForm\" action=\"" + url + "\" accept-charset=\"" + charset + "\" method=\"post\">");
+		html.append("<form name=\"submitForm\"  target=\"_blank\"  action=\"" + url + "\" accept-charset=\"" + charset + "\" method=\"post\">");
 		Iterator<String> it = this.parameter.keySet().iterator();
 		while (it.hasNext()) {
 			String key = it.next();

@@ -2,6 +2,7 @@ package com.bisa.health.shop.pay.utils;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
+import com.bisa.health.shop.entity.BaseRequest;
 import com.bisa.health.shop.pay.annotation.Signature;
 
 /**

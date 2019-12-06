@@ -47,6 +47,7 @@
 					<p class="payPrice">
 						<span><spring:message code="price" />:</span> <span class="redInfo" >¥${goods.price}<input type="hidden" id="goods_price" name="goods_price" value="${goods.price}" ></span>
 						<input type="hidden" name="goods_num" value="${goods.number}">
+						<input type="hidden" name="goods_id" value="${goods.id}">
 					</p>
 					<p class="payPrice">
 						<span><spring:message code="2015" />:</span><span class="redInfo">${goods_count}</span>
@@ -78,7 +79,8 @@
 						<span><spring:message code="2018" />:</span> <span id="xTotal" class="redInfo"></span><input type="hidden" id="order_price" name="order_price" value="0"></span>
 					</p>
 				     <p class="payNum">
-						<span><spring:message code="address" />:</span> <input type="text" lay-reqText="<spring:message code='address.empty' />" lay-verify="required" readonly="readonly" name="order_address" id="order_address" placeholder="<spring:message code='address.input' />">
+				     	<input type="hidden" id="address_id" name="address_id" value="0">
+						<span><spring:message code="address" />:</span> <input type="text" lay-reqText="<spring:message code='address.empty' />" lay-verify="required" readonly="readonly" autocomplete="off" name="order_address" id="order_address" placeholder="<spring:message code='address.input' />">
 					</p>
 					  <button lay-submit lay-filter="submitOrder" class="payMode f-20 col-white">
 			                	<spring:message code="submit.order" />
@@ -151,6 +153,11 @@
 			$ = layui.jquery;
 			var addIndex;
 			
+			var msg="${msg}";
+			if(msg!=null&&msg!=""){
+				layer.msg(msg);
+			}
+			
 			function address(){
 				
 				var index=layer.load();
@@ -203,6 +210,7 @@
 						layer.close(addIndex);
 						if(obj.code=="${SysStatusCode.SUCCESS}"){
 							$('#order_address').val(data.field.city+data.field.detail_address);
+							$('#address_id').val(data.field.id);
 						}
 					},error:function(){
 						layer.close(index);

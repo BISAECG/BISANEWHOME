@@ -1,8 +1,7 @@
-package com.bisa.health.shop.pay.utils;
+package com.bisa.health.shop.entity;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
-import com.bisa.health.shop.entity.BaseRequest;
 import com.bisa.health.shop.pay.annotation.Signature;
 
 @SuppressWarnings("serial")

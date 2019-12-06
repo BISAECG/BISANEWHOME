@@ -49,4 +49,9 @@ public class OrderServiceImpl implements IOrderService {
 		iOrderDao.delete(id);
 	}
 
+	@Override
+	public Order getOrderByNum(String num) {
+		return iOrderDao.getOrderByNum(num);
+	}
+
 }

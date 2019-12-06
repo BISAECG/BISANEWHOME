@@ -1,4 +1,4 @@
-package com.bisa.health.shop.pay.utils;
+package com.bisa.health.shop.entity;
 
 /**
  * 基础响应对象

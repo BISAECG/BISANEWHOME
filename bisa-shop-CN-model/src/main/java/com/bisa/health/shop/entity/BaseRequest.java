@@ -1,4 +1,4 @@
-package com.bisa.health.shop.dto;
+package com.bisa.health.shop.entity;
 
 import java.io.Serializable;
 

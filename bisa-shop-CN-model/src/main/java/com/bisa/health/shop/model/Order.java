@@ -8,7 +8,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Version;
 import javax.validation.constraints.Digits;
+import javax.validation.constraints.Max;
 
 import org.hibernate.validator.constraints.NotBlank;
 import org.hibernate.validator.constraints.Range;
@@ -37,6 +39,14 @@ public class Order implements Serializable {
 	 * 用户id
 	 */
 	private int user_id;
+	
+	
+	/**
+	 * 商品编号
+	 */
+	@Max(value=Integer.MAX_VALUE,message=SysErrorCode.RequestFormat)
+	private int goods_id;
+	
 	/**
 	 * 商品编号
 	 */
@@ -74,22 +84,27 @@ public class Order implements Serializable {
 	/**
 	 * 订单状态
 	 */
-	private int order_status; //0 未支付 1已支付
+	private int order_status; //0正常 1失效
 	/**
 	 * 订单地址ID
 	 */
 	private int address_id;
 	
 	/**
-	 * 订单地址
+	 * 收件地址
 	 */
 	@NotBlank(message=SysErrorCode.RequestFormat)
 	private String order_address;
 	
 	/**
-	 * 订单电话
+	 * 收件电话
 	 */
 	private String order_phone;
+	
+	/**
+	 * 收件人
+	 */
+	private String order_name;
 
 	/**
 	 * 是否支付
@@ -129,6 +144,10 @@ public class Order implements Serializable {
 	 */
 	private double emd_postage;
 	
+	
+	@Version
+	private int version;
+	
 	private Date c_time;
 	
     @Id
@@ -146,6 +165,13 @@ public class Order implements Serializable {
 		this.user_id = user_id;
 	}
 	
+	
+	public int getGoods_id() {
+		return goods_id;
+	}
+	public void setGoods_id(int goods_id) {
+		this.goods_id = goods_id;
+	}
 	@Column(length=32)
 	public String getGoods_num() {
 		return goods_num;
@@ -277,18 +303,31 @@ public class Order implements Serializable {
 	public void setEmd_postage(double emd_postage) {
 		this.emd_postage = emd_postage;
 	}
+	
+	public String getOrder_name() {
+		return order_name;
+	}
+	public void setOrder_name(String order_name) {
+		this.order_name = order_name;
+	}
+	public int getVersion() {
+		return version;
+	}
+	public void setVersion(int version) {
+		this.version = version;
+	}
 	@Override
 	public String toString() {
-		return "Order [id=" + id + ", user_id=" + user_id + ", goods_num=" + goods_num + ", goods_type=" + goods_type
-				+ ", goods_price=" + goods_price + ", goods_count=" + goods_count + ", order_num=" + order_num
-				+ ", order_total=" + order_total + ", order_price=" + order_price + ", order_status=" + order_status
-				+ ", address_id=" + address_id + ", order_address=" + order_address + ", order_phone=" + order_phone
-				+ ", is_pay=" + is_pay + ", is_coupon=" + is_coupon + ", coupon_num=" + coupon_num + ", coupon_price="
+		return "Order [id=" + id + ", user_id=" + user_id + ", goods_id=" + goods_id + ", goods_num=" + goods_num
+				+ ", goods_type=" + goods_type + ", goods_price=" + goods_price + ", goods_count=" + goods_count
+				+ ", order_num=" + order_num + ", order_total=" + order_total + ", order_price=" + order_price
+				+ ", order_status=" + order_status + ", address_id=" + address_id + ", order_address=" + order_address
+				+ ", order_phone=" + order_phone + ", order_name=" + order_name + ", is_pay=" + is_pay + ", pay_type="
+				+ pay_type + ", is_coupon=" + is_coupon + ", coupon_num=" + coupon_num + ", coupon_price="
 				+ coupon_price + ", ems_num=" + ems_num + ", ems_name=" + ems_name + ", emd_postage=" + emd_postage
-				+ ", c_time=" + c_time + "]";
+				+ ", version=" + version + ", c_time=" + c_time + "]";
 	}
 
-	
 	
 	
 	

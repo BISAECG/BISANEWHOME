@@ -15,7 +15,12 @@ public interface IOrderService {
      */
     public Order getOrderById(int id);
     
-     
+    /**
+     * 订单表的编号,加载订单数据
+     * @param id
+     * @return
+     */
+    public Order getOrderByNum(String num);
      /**
       * 订单分页
       * @param 

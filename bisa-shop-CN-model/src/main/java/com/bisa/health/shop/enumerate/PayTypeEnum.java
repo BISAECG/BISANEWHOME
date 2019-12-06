@@ -6,7 +6,7 @@ public enum PayTypeEnum {
 	ALIPAY(1),//支付宝
 	VISA(2),
 	MASTER(3),
-	CUP(4);//银联
+	EASY(4);//银联
 	
 	private int value;
 

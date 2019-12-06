@@ -38,4 +38,11 @@ public class OrderDaoImpl extends BaseDao<Order> implements IOrderDao {
 		String sql = "SELECT * FROM s_order";
 		return super.listBySql(sql, null, Order.class);
 	}
+
+
+	@Override
+	public Order getOrderByNum(String num) {
+		String sql = "SELECT * FROM s_order WHERE order_num=?";
+		return super.queryObjectBySql(sql, new Object[] { num }, Order.class);
+	}
 }

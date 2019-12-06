@@ -10,6 +10,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
+
 import com.bisa.health.common.entity.ResultData;
 import com.bisa.health.shop.component.InternationalizationUtil;
 import com.bisa.health.shop.entity.AppException;
@@ -79,7 +81,5 @@ public class ExceptionAdvice {
         return new ResponseEntity<ResultData>(ResultData.success(SysStatusCode.FAIL, i18nUtil.i18n(SysErrorCode.SystemError)), HttpStatus.INTERNAL_SERVER_ERROR);
     }
     
-    public static void main(String[] args) {
-		System.out.println(System.currentTimeMillis());
-	}
+    
 }

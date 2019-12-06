@@ -1,5 +1,7 @@
 package com.bisa.health.shop.pay.utils;
 
+import com.bisa.health.shop.entity.BaseResponse;
+
 /**
  * 查询响应对象
  * @author Ben.
