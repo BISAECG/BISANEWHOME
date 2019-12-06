@@ -48,7 +48,7 @@ public class VisaPayComponent {
     public HashMap<String, String> getVisaPayMap(String order_no, String price) {
         HashMap<String, String> treeMap = new HashMap<String, String>();
             //根据订单编号获取订单的基本信息
-        Order order = orderService.selectOrderByOrderNo(order_no);
+        Order order = orderService.getOrderByNum(order_no);
         String bill_to_forename = "noreal";
         String bill_to_surname = "name";
         String bill_to_email = "null@cybersource.com";
@@ -68,7 +68,7 @@ public class VisaPayComponent {
         treeMap.put("locale", "en");
         treeMap.put("reference_number", order_no);
         //treeMap.put("amount", "2");             // "商品价格"
-        treeMap.put("amount", order.getActual_payment().toString());             // "商品价格"
+        treeMap.put("amount", ""+order.getOrder_price());             // "商品价格"
         treeMap.put("currency", currency);      // 货币 单位(HKD：港币，USD：美元)
         treeMap.put("transaction_type", "sale");// 授权 authorization
 
