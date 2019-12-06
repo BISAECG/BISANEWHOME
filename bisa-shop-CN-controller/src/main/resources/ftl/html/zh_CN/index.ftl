@@ -14,6 +14,7 @@
     <link href="../resources/css/comm/base.css" rel="stylesheet">
     <link href="../resources/css/index/index.css" rel="stylesheet">
     <script src="../resources/js/comm/jquery.min.js"></script>
+    <script src="../resources/ctrl/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 </head>
 <body>
 <div id="header"></div>
@@ -35,16 +36,16 @@
     <div class="container-fluid mt-20 mb-20 indexArea">
         <div class="row  pos-r ecg">
             <img class="center-block" width="100%" src="../resources/img/index/banner7.png">
-            <img src="../resources/img/index/banner7-1.png" width="18%" alt="检测到停搏自动通知联系人" class="pos-a  ecg-1 "
-                 style="left: 25%;top: 42%;">
+            <img src="../resources/img/index/banner7-1.png" width="19%" alt="检测到停搏自动通知联系人" class="pos-a  ecg-1 "
+                 style="left: 26%;top: 42%;">
             <img src="../resources/img/index/banner7-2.png" width="18%" alt="双击app按钮通知联系人" class="pos-a  ecg-2"
                  style="left: 20%;top: 63%;">
-            <img src="../resources/img/index/banner7-3.png" width="18%" alt="双击操作键通知联系人" class="pos-a  ecg-3"
-                 style="left: 25%;top: 85%;">
-            <img src="../resources/img/index/banner7-4.png" width="18%" alt="一对一电话咨询认证医师" class="pos-a  ecg-4"
-                 style="right: 26%;top: 42%;">
+            <img src="../resources/img/index/banner7-3.png" width="17%" alt="双击操作键通知联系人" class="pos-a  ecg-3"
+                 style="left: 26%;top: 85%;">
+            <img src="../resources/img/index/banner7-4.png" width="17%" alt="一对一电话咨询认证医师" class="pos-a  ecg-4"
+                 style="right: 28%;top: 42%;">
             <img src="../resources/img/index/banner7-5.png" width="18%" alt="15分钟免费检测报告服务" class="pos-a  ecg-5"
-                 style="right: 20%;top: 63%;">
+                 style="right: 22%;top: 63%;">
             <img src="../resources/img/index/banner7-6.png" width="18%" alt="专科认证医师在线答疑" class="pos-a  ecg-6"
                  style="right: 25%;top: 85%;">
             <div class=" ecg-7"
@@ -127,14 +128,66 @@
     <!--视屏展示部分-->
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-md-offset-1 " style="background: red;height:372px;">
+            <div class="col-md-6 " style="background: red;height:372px;">
             </div>
-            <div class="col-md-4 col-md-offset-1 mt-40 " style="background: #2B2B31;padding: 0;">
+            <div class="col-md-5 ml-40 mt-20  indexInfo">
+                <div id="myCarousel" class="carousel slide">                        <!--设置轮播器区域样式，设置轮播器滚动样式-->
+                    <ol class="carousel-indicators">                                <!--设置轮播器列表区域样式，就是小圆点区域样式-->
+
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>    <!--设置当前列表首选-->
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                        <li data-target="#myCarousel" data-slide-to="3"></li>
+                    </ol>
+
+                    <div class="carousel-inner">                                    <!--设置轮播器图片区域-->
+                        <div class="item active tp1">                                <!--设置轮播器图片样式-->
+                            <a href="#" class="myTabContent">
+                                <div class="tab-pane fade in active" id="home">
+                                    <p>信息更全面</p>
+                                    <p>获取体表3路电位信号信息更全面</p>
+                                    <p>市面上单导联家用心电仪易出现误诊、遗漏或信道被阻塞的情况。而悉心三导联心电仪可获取3路人体心电信号，可以更全面地反应心脏的生理状态信息。</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item tp2 myTabContent">
+                            <a href="#" >
+                                <p>智能诊断算法</p>
+                                <p>拥有自主设计的智能诊断算法</p>
+                                <p>悉心三导联心电仪已通过CFDA认证，采用进口医疗级芯片和生物传感系统设计，拥有自主设计的智能诊断算法，采集、分析的心电数据准确可信赖。</p>
+                            </a>
+                        </div>
+                        <div class="item tp3 myTabContent">
+                            <a href="#">
+                                <p>三导联心电仪</p>
+                                <p>基于蓝牙技术的无线三导联心电仪</p>
+                                <p>悉心无线三导联心电仪利用蓝牙技术以无线方式传送心电信号，解决了设备体积重量大、传统导联线干扰用户自由活动、用户佩戴不便等缺点。</p>
+                            </a>
+                        </div>
+                        <div class="item tp4 myTabContent">
+                            <a href="#">
+                                <p>适合多环境使用</p>
+                                <p>可作临床诊断工具亦可居家使用</p>
+                                <p>悉心三导联心电仪具有医疗级精确度，兼具专业医疗器械的可靠性和可穿戴设备的易用性，可作为临床诊断工具，亦可作为家庭监测设备长期使用。</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!--设置轮播器箭头区域-->
+                    <!--<a href="#myCarousel" data-slide="prev" class="carousel-control left">-->
+                    <!--<span class="glyphicon glyphicon-chevron-left"></span>-->
+                    <!--</a>-->
+
+                    <!--<a href="#myCarousel" data-slide="next" class="carousel-control right">-->
+                    <!--<span class="glyphicon glyphicon-chevron-right"></span>-->
+                    <!--</a>-->
+
+                </div>
             </div>
         </div>
     </div>
     <!--公司介绍部分-->
-    <div class="container-fluid  mt-20">
+    <div class="container-fluid  mt-50">
         <div class="row" style="background: url('../resources/img/index/bisa.png')">
             <div class="col-md-12 text-center company">
                 <h2>碧莎科技(香港)有限公司</h2>
@@ -177,8 +230,7 @@
     <!--活动优惠-->
     <div class="container-fluid mt-20">
         <div class="row pos-r">
-            <img class="img-responsive center-block" src="../resources/img/index/banner8-cn.gif" alt="碧沙康健心电仪限时活动">
-
+            <img class="img-responsive center-block" usemap="#Map" src="../resources/img/index/banner8-cn.gif" alt="碧沙康健心电仪限时活动">
         </div>
     </div>
 </div>
@@ -190,6 +242,10 @@
 </body>
 <script>
     $(document).ready(function () {
+        // 轮播图切换时间
+        $('.carousel').carousel({
+            interval: 10000
+        })
         //新闻内容获取
         function indexNew() {
 
@@ -202,20 +258,20 @@
                     $.each(data, function (i, item) {
                         var time = getMyDate(item.release_time);
                         $(".main_div").append(
-                            '<div class="clear col-md-3 new-div">' +
-                            '<div class="row">' +
-                            '<input type="hidden"  class="zd-id" value="' + item.id + '"/>' +
-                            '<img class=" wh16-9 cur-p news-img" width="280" height="200" src="' + item.img_url + '">' +
-                            '<p class="line-h-20 h-20 f-16 col-414141 text-overflow cur-p  text-center mt-10 news-title" style="font-weight:bold;">' + item.news_title + '' +
-                            '</p>' +
-                            '<p class="f-12 col-888 mtb-10-0-ipad h-40 overflow-h line-h-20 text-line-2-1-ipad cur-p hovecol-999 news-describe">' + item.news_describe + '' +
-                            '</p>' +
-                            '<p class="f-12 col-888 mtb-10-0-ipad line-h-20 text-line-2-1-ipad cur-d">' +
-                            '<span>时间：</span><span class="col-888 news-time mr-25">' + time + '</span>' +
-                            '<span style="margin-left:30px;">阅读量：</span><span class="col-888 news-quantity">' + item.read_quantity + '</span>' +
-                            '</p>' +
-                            '</div>' +
-                            '</div>'
+                                '<div class="clear col-md-3 new-div">' +
+                                '<div class="row">' +
+                                '<input type="hidden"  class="zd-id" value="' + item.id + '"/>' +
+                                '<img class=" wh16-9 cur-p news-img" width="280" height="200" src="' + item.img_url + '">' +
+                                '<p class="line-h-20 h-20 f-16 col-414141 text-overflow cur-p  text-center mt-10 news-title" style="font-weight:bold;">' + item.news_title + '' +
+                                '</p>' +
+                                '<p class="f-12 col-888 mtb-10-0-ipad h-40 overflow-h line-h-20 text-line-2-1-ipad cur-p hovecol-999 news-describe">' + item.news_describe + '' +
+                                '</p>' +
+                                '<p class="f-12 col-888 mtb-10-0-ipad line-h-20 text-line-2-1-ipad cur-d">' +
+                                '<span>时间：</span><span class="col-888 news-time mr-25">' + time + '</span>' +
+                                '<span style="margin-left:30px;">阅读量：</span><span class="col-888 news-quantity">' + item.read_quantity + '</span>' +
+                                '</p>' +
+                                '</div>' +
+                                '</div>'
                         )
                     });
                 }
@@ -232,12 +288,12 @@
             //var oldTime = (new Date(data)).getTime(); //得到毫秒数
             var oDate = new Date(data);
             oYear = oDate.getFullYear(),
-                oMonth = oDate.getMonth() + 1,
-                oDay = oDate.getDate(),
-                oHour = oDate.getHours(),
-                oMin = oDate.getMinutes(),
-                oSen = oDate.getSeconds(),
-                oTime = oYear + '年' + getzf(oMonth) + '月' + getzf(oDay) + '日';//最后拼接时间
+                    oMonth = oDate.getMonth() + 1,
+                    oDay = oDate.getDate(),
+                    oHour = oDate.getHours(),
+                    oMin = oDate.getMinutes(),
+                    oSen = oDate.getSeconds(),
+                    oTime = oYear + '年' + getzf(oMonth) + '月' + getzf(oDay) + '日';//最后拼接时间
             return oTime;
         };
 
@@ -251,38 +307,50 @@
         //点击图片跳转
         $(".main_div").on("click", ".new-div", function () {
             var id = $(this).find(".zd-id").val();
-               window.open(id+".html",'_blank')
+            window.open(id+".html",'_blank')
         });
 
         function ecg() {
             $(".ecg-1").hover(function () {
+                $(".ecg-1").attr('src', '../resources/img/index/banner7-1-1.png');
                 $(".ecg-7").css("display", "block");
             }, function () {
+                $(".ecg-1").attr('src', '../resources/img/index/banner7-1.png');
                 $(".ecg-7").css("display", "none");
             });
             $(".ecg-2").hover(function () {
+                $(".ecg-2").attr('src', '../resources/img/index/banner7-2-2.png');
                 $(".ecg-8").css("display", "block");
             }, function () {
+                $(".ecg-2").attr('src', '../resources/img/index/banner7-2.png');
                 $(".ecg-8").css("display", "none");
             });
             $(".ecg-3").hover(function () {
+                $(".ecg-3").attr('src', '../resources/img/index/banner7-3-3.png');
                 $(".ecg-9").css("display", "block");
             }, function () {
+                $(".ecg-3").attr('src', '../resources/img/index/banner7-3.png');
                 $(".ecg-9").css("display", "none");
             });
             $(".ecg-4").hover(function () {
+                $(".ecg-4").attr('src', '../resources/img/index/banner7-4-4.png');
                 $(".ecg-10").css("display", "block");
             }, function () {
+                $(".ecg-4").attr('src', '../resources/img/index/banner7-4.png');
                 $(".ecg-10").css("display", "none");
             });
             $(".ecg-5").hover(function () {
+                $(".ecg-5").attr('src', '../resources/img/index/banner7-5-5.png');
                 $(".ecg-11").css("display", "block");
             }, function () {
+                $(".ecg-5").attr('src', '../resources/img/index/banner7-5.png');
                 $(".ecg-11").css("display", "none");
             });
             $(".ecg-6").hover(function () {
+                $(".ecg-6").attr('src', '../resources/img/index/banner7-6-6.png');
                 $(".ecg-12").css("display", "block");
             }, function () {
+                $(".ecg-6").attr('src', '../resources/img/index/banner7-6.png');
                 $(".ecg-12").css("display", "none");
             });
         }

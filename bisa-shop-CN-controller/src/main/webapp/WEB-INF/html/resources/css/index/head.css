@@ -150,11 +150,22 @@ body, td, th {
 .headList ul li a:hover {
     color: #fff;
 }
-.nav>li>a:focus, .nav>li>a:hover {
+.nav>.navList>a:focus, .nav>.navList>a:hover {
     text-decoration: none;
     background-color: #2B7AAE;
 }
-    /*头部二级菜单样式*/
+.nav>li>.tb:focus, .nav>li>.tb:hover {
+    text-decoration: none;
+    background-color: #f40;
+}
+.nav>li>.jd:focus, .nav>li>.jd:hover {
+    text-decoration: none;
+    background-color: #D71C1E;
+}
+.nav>li>a:focus, .nav>li>a:hover {
+    background-color: #2B7AAE;
+}
+/*头部二级菜单样式*/
 /*头部logo区样式*/
 a {
     text-decoration: none !important;
@@ -177,6 +188,7 @@ a {
 .bisa-nav li .navlist:hover {
     background: #2B7AAE;
 }
+
 
 #J_miniCartBtn:hover {
     cursor: pointer;
@@ -290,7 +302,7 @@ a {
 
 .footBox .container .boxTop ul {
     color: #2556A7;
-    list-style-type: square;
+    list-style: square;
 }
 
 .footBox .container .boxTop ul p span {

@@ -507,7 +507,7 @@
                             <p class="f-20 col-333 h-20 line-h-20 mt-20">
                                 1.使用 micro USB 将监测完毕的 心电记录仪 与 电脑 连接。
                             </p>
-                            <p class="f-20 h-20 line-h-20 mt-20">
+                            <p class="f-20 h-20 line-h-20 mt-20 col-333">
                                 2. 打开 我的电脑。
                             </p>
                             <div class="clear text-center mt-40 mb-40">
