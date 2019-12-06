@@ -94,11 +94,11 @@
     <div class="container mt-40 pb-40"  style="border-bottom: 1px solid #E5E5E4;">
     	<!-- 新闻置顶 -->
  
-	        <div class="row  main_div" id="zhidingtitle">
+	        <div class="row main_div" id="zhidingtitle">
 	          <c:forEach items="${list}" var="news">
 		         <div class="clear col-md-3 new-div">
 			            <div class="row">
-			            <input type="hidden"  class="zd-id" value="item.id"/>
+			            <input type="hidden"  class="zd-id" value="${news.id}"/>
 			            <img class=" wh16-9 cur-p news-img" width="280" height="200" src="${news.img_url}">
 			            <p class="line-h-20 h-20 f-16 col-414141 text-overflow cur-p  text-center mt-10 news-title" style="font-weight:bold;">${news.news_title}
 			            </p>
@@ -116,7 +116,7 @@
         <!-- 新闻置顶 end-->
     </div>
     <!--putongwenzhang-->
-    <div class="container seachlist">
+    <div class="container seachlist pt-div">
         <ul class="flow-default"  id="LAY_demo1">
         </ul>
         <div id="page" class="text-center"></div>
@@ -135,11 +135,6 @@
         layui.use(['flow','laypage'], function () {
             var flow = layui.flow,
             laypage = layui.laypage;
-            //点击图片跳转
-            $(".main_div").on("click", ".new-div", function () {
-                var id = $(this).find(".zd-id").val();
-                window.open('/news/body?id='+id,'_blank')
-            });
             
             $('#classify').click(function(event){
             	event.preventDefault();
@@ -185,11 +180,12 @@
                     	 
                     	$("#LAY_demo1").empty();
                    	    $(data.data).each(function(index,item){
+                   	    	console.log(item);
 	               		$("#LAY_demo1").append(
-	                             '<li class="news-div cur-p">'+
-	                             '<div class="row">'+
-	                             '<div class="col-md-12 pt-15 pb-20" style="border-bottom: 1px solid #E5E5E4;padding-left: 0px;">'+
-	                             '<input type="hidden" class="id" value="'+item.id+'"/>'+
+	                             '<li class="cur-p">'+
+	                             '<div class="row news-div">'+
+	                             '<input type="hidden" name="id" class="id" value="'+item.id+'"/>'+
+	                             '<div class="col-md-12 pt-15 pb-20 " style="border-bottom: 1px solid #E5E5E4;padding-left: 0px;">'+
 	                             '<div class="col-md-2" style="padding:0px;">'+
 	                             '<span class="col-888" style="background:linear-gradient(0deg,rgba(44,106,206,1) 0%,rgba(47,232,230,1) 100%);box-shadow:0px 1px 5px 0px rgba(53,143,238,1);color: #fff;">'+item.release_time+'</span>'+
 	                             '</div>'+
@@ -211,12 +207,16 @@
             	
             }
             
-           
-         
-        //点击图片跳转
+          //点击图片跳转
+        $(".main_div").on("click", ".new-div", function () {
+                var id = $(this).find(".zd-id").val();
+                window.open(id+".html",'_blank')
+        });
+     
         $(".pt-div").on("click", ".news-div", function () {
+        
             var id = $(this).find(".id").val();
-            window.open('/news/body?id='+id,'_blank')
+            window.open(id+".html",'_blank')
         });
 
         });

@@ -14,18 +14,15 @@
                     <span>您好,歡迎訪問碧沙康健!</span>
                     <span class='sep navTitle'>|</span>
                     <span>語言:</span>
-                    <a id='lang-hk' href='?lang=zh_HK'>繁體</a>
+                    <a id='lang-hk' href='/index?lang=zh_HK'>繁體</a>
                     <span class="navTitle">|</span>
-                    <a id='lang-cn' href='?lang=zh_CN'>簡體</a>
+                    <a id='lang-cn' href='/index?lang=zh_CN'>簡體</a>
                     <span class="navTitle">|</span>
-                    <a id='lang-us' href='?lang=en_US'>English</a>
+                    <a id='lang-us' href='/index?lang=en_US'>English</a>
                     <img src='../resources/img/HK_About/hk.png'>
                 </div>
                 <div class="col-md-3 col-md-offset-3 loginDiv">
-                    <a class="pull-left " href="login.html">登錄</a>
-                    <sapn class="pull-left navDivision"></sapn>
-                    <a class="pull-left navReg" href="reg.html">註冊</a>
-                    <a class="pull-left navDown" href="down.html">App下载</a>
+                  
                 </div>
             </div>
         </div>
@@ -76,48 +73,52 @@
         <div class='container'>
             <div class='row'>
                 <ul class='nav bisa-nav text-center head pull-left'>
-                    <li class='col-309DE2 pull-left ml-20'>
-                        <a class='navlist' href='index.html'>
-                            首頁
-                        </a>
-                    </li>
-                    <li class='col-309DE2 pull-left ml-20 headList'>
-                        <a class='navlist pos-r ' href="javascript:void(0);">新聞資訊 </a>
-                        <ul class="pos-a">
-                            <li>
-                                <a class='navlist' href='news.html'>新聞資訊</a>
-                            </li>
-                            <li>
-                                <a class="navlist" href='newQA.html'>健康咨詢</a></li>
-                        </ul>
-                    </li>
-                    <li class='col-309DE2 pull-left ml-20'>
-                        <a class='navlist' href='solution.html'>
-                            解決方案
-                        </a>
-                    </li>
-                    <li class='col-309DE2 pull-left ml-20'>
-                        <a class='navlist' href='certificate.html'>
-                            產品證書
-                        </a>
-                    </li>
-                    <li class='col-309DE2 pull-left ml-20'>
-                        <a class='navlist' href='down.html'>
-                            下載中心
-                        </a>
-                    </li>
+					 	 <li class='col-309DE2 pull-left ml-20'>
+                        	<a class='navlist' href='index.html'>
+                        	  首頁
+		                    </a>
+		                 </li>
+		                    <li class='col-309DE2 pull-left ml-20 headList'>
+		                        <a class='navlist pos-r ' href="javascript:void(0);">新聞資訊 </a>
+		                        <ul class="pos-a">
+		                            <li>
+		                                <a class='navlist' href='news.html'>碧沙新聞</a>
+		                            </li>
+		                            <li>
+		                                <a class="navlist" href='qa.html'>健康問答</a></li>
+		                        </ul>
+		                    </li>
+					
+					 	 <li class='col-309DE2 pull-left ml-20'>
+                        	<a class='navlist' href='certificate.html'>
+                        	  产品证书
+		                    </a>
+		                 </li>
+					
+					 	 <li class='col-309DE2 pull-left ml-20'>
+                        	<a class='navlist' href='solution.html'>
+                        	  解決方案
+		                    </a>
+		                 </li>
+					
+					 	 <li class='col-309DE2 pull-left ml-20'>
+                        	<a class='navlist' href='down.html'>
+                        	  下载中心
+		                    </a>
+		                 </li>
+					
                     <li class=' pull-left ml-20' style='background: #225185;'>
                         <a class='buy' href='shop.html'>
-                            國際購買
+                            產品購買
                         </a>
                     </li>
                     <li class=' pull-left ml-20' style='background: #f40;'>
-                        <a class='tb'>
+                        <a class='tb' target="_blank" href="https://shop194684580.taobao.com/?spm=a230r.7195193.1997079397.2.6815114b089AGi">
                             淘寶商城
                         </a>
                     </li>
                     <li class='pull-left ml-20' style='background: #D71C1E;'>
-                        <a class='jd'>
+                         <a class='jd' target="_blank" href="https://mall.jd.com/index-10103348.html">
                             京東自營
                         </a>
                     </li>
@@ -132,7 +133,7 @@
             <div id='J_rightbar_l' style='margin-bottom: 15px;'>
                 <ul class='bar-top' style="list-style: none;">
                     <li class='bar-sortS'>
-                        <a href='Instructions' class='bar-link pos-r'>
+                        <a href='down.html' class='bar-link pos-r'>
                             <img id='bar-sort1' src='../resources/img/index/Sidebar1.png' alt="下載APP">
                             <span class='pos-a' style='top: 64%;left: 10%;color: #fff;'>
                                 下載APP
@@ -140,7 +141,7 @@
                         </a>
                     </li>
                     <li class='bar-sort'>
-                        <a href='#;' title='留言板還在建設中' styele='cursor:not-allowed;' class='bar-link pos-r'>
+                        <a href='book.html'  styele='cursor:not-allowed;' class='bar-link pos-r'>
                             <img id='bar-sort2' src='../resources/img/index/Sidebar2.png' alt="留言板" '>
                             <span class='pos-a' style='top: 56%;left: 20%;color: #fff;'>
                                 留言板
@@ -167,3 +168,24 @@
         </div>
     </div>
 </div>
+<script type="text/javascript">
+	$(function(){
+		$.ajax({
+            url: '/isLogin',
+            type: "GET",
+            async: false,
+            success: function (data) {
+            	if(data.code=="0"){
+            	    $(".loginDiv").html("<a class='pull-left' href='/html/zh_CN/user.html?lang=zh_CN'>"+data.data+"</a>"+
+                      "<sapn class='pull-left navDivision'></sapn>"+
+                      "<a class='pull-left navReg'  href='/logout?lang=zh_CN'>退出</a>");
+            	}else{
+            	    $(".loginDiv").html("<a class='pull-left' href='/login?lang=zh_CN'>登录</a>"+
+                      "<sapn class='pull-left navDivision'></sapn>"+
+                      "<a class='pull-left navReg'  href='/login?lang=zh_CN'>注册</a>");
+            	}
+            	
+            }
+     });
+	});
+</script>

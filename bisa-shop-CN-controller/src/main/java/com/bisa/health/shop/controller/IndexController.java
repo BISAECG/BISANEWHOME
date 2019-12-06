@@ -1,12 +1,18 @@
 package com.bisa.health.shop.controller;
 
 import com.bisa.health.client.entity.User;
+import com.bisa.health.common.entity.ResultData;
 import com.bisa.health.common.utils.PhoneTypeUtil;
 import com.bisa.health.shop.admin.util.JsonResult;
 import com.bisa.health.shop.component.InternationalizationUtil;
+import com.bisa.health.shop.entity.SysErrorCode;
+import com.bisa.health.shop.entity.SysStatusCode;
+import com.bisa.health.shop.model.News;
 
 import org.apache.shiro.SecurityUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,6 +20,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 import javax.servlet.http.HttpServletRequest;
+
+import java.util.List;
 import java.util.Locale;
 
 /**
@@ -52,17 +60,17 @@ public class IndexController {
     	return index(request,model);
     }
     
-    @RequestMapping(value = "/isLogin")
+    @RequestMapping(value = "/isLogin",method = RequestMethod.GET,produces = "application/json; charset=utf-8")
     @ResponseBody
-    public JsonResult isLogin(HttpServletRequest request,Model model,Locale locale){
-    	 JsonResult jsonResult = new JsonResult();
+    public  ResponseEntity<ResultData> isLogin(HttpServletRequest request,Model model,Locale locale){
      	if(SecurityUtils.getSubject().isAuthenticated()){
-     		jsonResult.setObj((User)SecurityUtils.getSubject().getSession().getAttribute(User.class.getName()));
-     		jsonResult.setFlag(true);
-    		return jsonResult;
+     		return new ResponseEntity<ResultData>(
+					ResultData.success(SysStatusCode.SUCCESS, i18nUtil.i18n(SysErrorCode.OptSuccess),SecurityUtils.getSubject().getPrincipal()),
+					HttpStatus.OK);
     	}
-     	jsonResult.setFlag(false);
-    	return jsonResult;
+    	return new ResponseEntity<ResultData>(
+				ResultData.success(SysStatusCode.FAIL, i18nUtil.i18n(SysErrorCode.OptFail),SecurityUtils.getSubject().getPrincipal()),
+				HttpStatus.OK);
     }
  
 

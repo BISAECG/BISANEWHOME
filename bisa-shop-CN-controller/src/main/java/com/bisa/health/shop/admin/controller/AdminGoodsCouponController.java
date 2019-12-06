@@ -79,10 +79,6 @@ public class AdminGoodsCouponController {
 	@Autowired
 	private InternationalizationUtil i18nUtil;
 	
-	 
-    /**
-     * 进去 bisa 新闻列表 页面
-     */
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     public String list() {
         return "admin/card/coupon";
@@ -120,12 +116,13 @@ public class AdminGoodsCouponController {
 		if (goodsCoupon.getId() == 0){
 			for(int i=0;i<goodsCoupon.getVersion();i++){
 				GoodsCoupon mGoodsCoupon=new GoodsCoupon();
-				mGoodsCoupon.setCoupon_num(""+RandomUtils.RandomOfDaterRandom(8));
+				mGoodsCoupon.setCoupon_num(""+RandomUtils.RandomOfDateChar(10));
 				mGoodsCoupon.setCoupon_status(ActivateEnum.ACTIVATE.getValue());
 				mGoodsCoupon.setCoupon_disprice(goodsCoupon.getCoupon_disprice());
 				mGoodsCoupon.setCoupon_disrate(goodsCoupon.getCoupon_disrate());
 				mGoodsCoupon.setCoupon_total(goodsCoupon.getCoupon_total());
 				mGoodsCoupon.setCoupon_type(goodsCoupon.getCoupon_type());
+				mGoodsCoupon.setCreator(user.getUser_guid());
 				goodsCouponService.addGoodsCoupon(mGoodsCoupon);
 			}
 		}

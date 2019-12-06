@@ -73,6 +73,10 @@ public class GoodsCoupon implements Serializable {
 	@Digits(integer = 13, fraction = 2,message=SysErrorCode.RequestFormat)
 	private int coupon_disprice;
 	
+	/**
+	 * 创建者IDY一般就是用户ID
+	 */
+	private int creator;
 	
 	@Version
 	private int version;
@@ -122,7 +126,12 @@ public class GoodsCoupon implements Serializable {
 		this.coupon_disprice = coupon_disprice;
 	}
 	
-	
+	public int getCreator() {
+		return creator;
+	}
+	public void setCreator(int creator) {
+		this.creator = creator;
+	}
 	public int getCoupon_status() {
 		return coupon_status;
 	}
@@ -153,9 +162,10 @@ public class GoodsCoupon implements Serializable {
 	public String toString() {
 		return "GoodsCoupon [id=" + id + ", useId=" + useId + ", coupon_num=" + coupon_num + ", coupon_type="
 				+ coupon_type + ", coupon_status=" + coupon_status + ", coupon_disrate=" + coupon_disrate
-				+ ", coupon_total=" + coupon_total + ", coupon_disprice=" + coupon_disprice + ", version=" + version
-				+ ", c_time=" + c_time + "]";
+				+ ", coupon_total=" + coupon_total + ", coupon_disprice=" + coupon_disprice + ", creator=" + creator
+				+ ", version=" + version + ", c_time=" + c_time + "]";
 	}
+	
 	
 	
 	

@@ -1,0 +1,171 @@
+.container .boardTitle{
+    font-size: 28px;
+    font-weight: bold;
+    color: rgba(102, 102, 102, 1);
+    margin-top: 35px;
+    margin-bottom: 45px;
+    text-align: center;
+    margin-right: 60px;
+}
+
+.contactInfo .boardTitle {
+    font-size: 28px;
+    font-weight: bold;
+    color: rgba(102, 102, 102, 1);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.contactInfo .boardLeft {
+    background: rgba(247, 248, 250, 1);
+}
+
+.contactInfo .boardLeft .leftTitle {
+    font-size: 22px;
+    font-weight: 500;
+    color: rgba(102, 102, 102, 1);
+    margin: 28px 0px;
+}
+
+.contactInfo .boardLeft .col-md-10 {
+    padding-right: 0;
+}
+
+.contactInfo .boardLeft .col-md-10 p span {
+    font-size: 18px;
+}
+
+.boardLeft .col-md-10 p span:nth-child(1), .boardLeft .col-md-10 p span:nth-child(3) {
+    color: #999;
+}
+
+.boardLeft .col-md-10 p span:nth-child(2), .boardLeft .col-md-10 p span:nth-child(4) {
+    color: #666;
+}
+
+.boardLeft .col-md-2 {
+    padding: 0;
+    margin-top: 70px;
+}
+
+
+.contactInfo .boardRight div {
+    height: 222px;
+    border: 1px solid rgba(213, 213, 213, 1);
+    margin-left: 10px;
+}
+
+.contactInfo .boardRight div p:first-of-type {
+    font-size: 22px;
+    font-weight: 500;
+    color: rgba(102, 102, 102, 1);
+    margin: 28px 0px 28px 50px;
+}
+
+.contactInfo .boardRight div p:last-of-type {
+    font-size: 22px;
+    font-weight: 500;
+    height: 60px;
+    color: rgba(153, 153, 153, 1);
+    word-wrap:break-word;
+    margin: 20px 44px 28px 44px;
+}
+
+.contactInfo .boardRight div button {
+    border: 0;
+    width: 200px;
+    height: 35px;
+    background: rgba(0, 164, 255, 1);
+    margin-left: 124px;
+}
+
+.contactInfo .boardRight div button a {
+    font-size: 20px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+    display: inline-block;
+    width: 100%;
+}
+
+
+.message {
+    width: 100%;
+    background: rgba(153, 153, 153, 1);
+    margin-top: 0px;
+}
+
+.message .row p {
+    font-size: 24px;
+    color: rgba(255, 255, 255, 1);
+    line-height: 44px;
+    margin-bottom: 0px;
+}
+
+.messageTwo p:first-of-type {
+    font-size: 20px;
+    color: rgba(229, 72, 30, 1);
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+.messageTwo p:last-of-type span:first-of-type {
+    font-size: 20px;
+    color: rgba(229, 72, 30, 1);
+    font-weight: 400;
+}
+
+.messageTwo p:last-of-type span:last-of-type {
+    font-size: 30px;
+    font-weight: bold;
+    color: rgba(207, 21, 24, 1);
+}
+
+.messageThere {
+    margin-top: 25px;
+}
+
+.messageThere div:nth-child(1) {
+    padding-left: 0px;
+}
+
+.messageThere div label {
+    color: rgba(102, 102, 102, 1);
+    font-size: 20px;
+}
+
+.messageFour {
+    margin-top: 50px;
+}
+
+.messageFour p {
+    color: rgba(102, 102, 102, 1);
+    font-size: 20px;
+}
+
+.messageFour textarea {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 2px 38px 2px rgba(231, 229, 229, 1);
+}
+
+.messageFour button {
+    background: rgba(43, 122, 174, 1);
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+    margin-top: 20px;
+    border: 0;
+    margin-left: 485px;
+    margin-bottom: 35px;
+    text-align: center;
+}
+.messageFour button a{
+    color: #FFFFFF;
+    display: inline-block;
+    width: 100%;
+    font-size:20px;
+}
+
+
+
+

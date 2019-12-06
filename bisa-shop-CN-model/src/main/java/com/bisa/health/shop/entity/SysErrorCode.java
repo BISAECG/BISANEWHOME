@@ -50,4 +50,9 @@ public class SysErrorCode {
 	 * 发货商品不允许更改地址
 	 */
 	public final static String MODIFY_ADDRESS_UNSHIPPED="3004";
+	
+	/**
+	 * 优惠券不可用
+	 */
+	public final static String NOT_COUPON="4003";
 }

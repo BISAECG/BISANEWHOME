@@ -35,6 +35,5 @@ public interface IOrderDao extends IBaseDao<Order>{
      */
     public List<Order> listOrder();
     
-  
     
 }

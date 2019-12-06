@@ -9,6 +9,13 @@ import com.bisa.health.shop.model.GoodsCoupon;
 public interface IGoodsCouponDao extends IBaseDao<GoodsCoupon>{
 
 
+	  /**
+     * 优惠券表的号码,加载优惠券数据
+     * @param num
+     * @return
+     */
+    public GoodsCoupon getGoodsCouponByNum(String num);
+    
 	
 
     /**

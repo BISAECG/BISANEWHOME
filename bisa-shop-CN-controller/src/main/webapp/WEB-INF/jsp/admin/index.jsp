@@ -12,7 +12,7 @@
 <link rel="icon" href="favicon/favicon.ico" type="image/x-icon" />
 <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon" />
 <link rel="bookmark" href="favicon/favicon.ico" type="image/x-icon" />
-<base href="<%=basePath%>">
+
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport"
@@ -105,7 +105,7 @@
 		<%@ include file="common/header.jsp"%>
 		<!-- 主体文件 -->
 			<div class="frame-body">
-				<iframe id="mainFrame" name="mainFrame" width='100%' height='100%' onload="iframeLoad()"  src="admin/main" frameborder='0' scrolling="no"></iframe>
+				<iframe id="mainFrame" name="mainFrame" width='100%' height='100%' onload="iframeLoad()"  src="/admin/main" frameborder='0' scrolling="no"></iframe>
 			</div>
 		<!-- 底部固定区域 -->
 		<%@ include file="common/fooder.jsp"%>

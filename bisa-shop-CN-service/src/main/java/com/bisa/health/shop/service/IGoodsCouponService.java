@@ -7,6 +7,14 @@ import com.bisa.health.shop.model.GoodsCoupon;
 
 public interface IGoodsCouponService {
 	
+	
+	
+	  /**
+     * 优惠券表的号码,加载优惠券数据
+     * @param num
+     * @return
+     */
+    public GoodsCoupon getGoodsCouponByNum(String num);
 
     /**
      * 优惠券表的id,加载优惠券数据

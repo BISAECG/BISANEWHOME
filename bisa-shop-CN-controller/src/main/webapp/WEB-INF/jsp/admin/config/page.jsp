@@ -38,6 +38,14 @@
    <script type="text/html" id="temp_time">
  		{{# return javaToJsDateTime(d.update_time); }} 
 	</script>
+	
+	      <script type="text/html" id="tempType">
+        {{# if(d.type ==1){ }}
+       		<span style="color: #009688;"><spring:message code='1037' /></span>
+        {{# }else{ }}
+            <span style="color: #F581B1;"><spring:message code='1038' /></span>
+        {{#  } }}
+     </script>
 
     <style type="text/css">
         .layui-table-cell{
@@ -101,7 +109,7 @@
 	                    <div class="layui-input-inline">
 	                    	 <select name="name" lay-verify="required">
 	   							<c:forEach items="${list}" var="p">
-	   							   <option value="/${p}">/${p}</option>
+	   							   <option value="${p}">${p}</option>
 	   							</c:forEach>
 	                          </select>
 	                    </div>
@@ -227,9 +235,9 @@
             method:'GET',
             page:{layout:	['prev', 'page', 'next'],limit:10},
             cols: [
-                [ //标题栏
+                [ //标题栏1065
                     {type: 'numbers'},
-                    {field: 'id', title: 'id', width: 100,sort: true, align: 'center'},
+                    {field: 'type', title: '<spring:message code='1067' />', width: 100,sort: true, align: 'center',templet:'#tempType'},
                     {field: 'name', title: "<spring:message code='url' />", width: 200, align: 'center'},
                     {field: 'column_name_CN', title: "<spring:message code='1041' />", width: 200, align: 'center'},
                     {field: 'column_name_HK', title: "<spring:message code='1039' />", width: 200, align: 'center'},
@@ -300,6 +308,7 @@
                         type: "POST",
                         success: function (data) {
                         	layer.close(index);
+                        	layer.msg("<spring:message code='success' />");
                         }
                     });
                 });

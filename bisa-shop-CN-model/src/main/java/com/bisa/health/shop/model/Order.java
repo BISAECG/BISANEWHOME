@@ -8,8 +8,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Digits;
+
+import org.hibernate.validator.constraints.NotBlank;
+import org.hibernate.validator.constraints.Range;
 
 import com.bisa.health.entity.bind.CustomDateSerializer;
+import com.bisa.health.shop.entity.SysErrorCode;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 /**
@@ -35,6 +40,7 @@ public class Order implements Serializable {
 	/**
 	 * 商品编号
 	 */
+	@NotBlank(message=SysErrorCode.RequestFormat)
 	private String goods_num;
 	/**
 	 * 商品类型
@@ -43,10 +49,12 @@ public class Order implements Serializable {
 	/**
 	 * 商品价格
 	 */
+	@Digits(integer = 13, fraction = 2,message=SysErrorCode.RequestFormat)
 	private double goods_price;
 	/**
 	 * 商品数量
 	 */
+	@Range(min=1,max=Integer.MAX_VALUE,message=SysErrorCode.RequestFormat)
 	private int goods_count;
 	/**
 	 * 订单编号
@@ -55,11 +63,13 @@ public class Order implements Serializable {
 	/**
 	 * 订单总价
 	 */
+	@Digits(integer = 13, fraction = 2,message=SysErrorCode.RequestFormat)
 	private double order_total;
 	
 	/**
 	 * 订单实际金额
 	 */
+	@Digits(integer = 13, fraction = 2,message=SysErrorCode.RequestFormat)
 	private double order_price;
 	/**
 	 * 订单状态
@@ -73,6 +83,7 @@ public class Order implements Serializable {
 	/**
 	 * 订单地址
 	 */
+	@NotBlank(message=SysErrorCode.RequestFormat)
 	private String order_address;
 	
 	/**
@@ -84,6 +95,12 @@ public class Order implements Serializable {
 	 * 是否支付
 	 */
 	private int is_pay; //0未支付 1已支付
+	
+	/**
+	 * 是否支付
+	 */
+	private int pay_type; //0未支付 1已支付
+	
 	/**
 	 * 是否优惠
 	 */
@@ -174,7 +191,12 @@ public class Order implements Serializable {
 		this.order_status = order_status;
 	}
 	
-	
+	public int getPay_type() {
+		return pay_type;
+	}
+	public void setPay_type(int pay_type) {
+		this.pay_type = pay_type;
+	}
 	public int getAddress_id() {
 		return address_id;
 	}

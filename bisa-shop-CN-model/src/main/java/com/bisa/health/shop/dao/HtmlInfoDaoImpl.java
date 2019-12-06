@@ -43,4 +43,10 @@ public class HtmlInfoDaoImpl extends BaseDao<HtmlInfo> implements IHtmlInfoDao {
         String sql = "select * from s_html_info order  by order_id";
         return super.listBySql(sql, null, HtmlInfo.class, true);
     }
+
+	@Override
+	public List<HtmlInfo> selectHtmlInfo(int type) {
+		  String sql = "select * from s_html_info WHERE type=? order by order_id";
+	        return super.listBySql(sql, new Object[]{type}, HtmlInfo.class, true);
+	}
 }

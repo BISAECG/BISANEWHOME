@@ -183,6 +183,20 @@
 .w-60p{width: 60%;}
 .w-110{width: 110px;}
 /* 订单中心部分响应式 */
+@meaia (min-width:400px) and (max-width:767px) {
+	.f-20-16-ipad{font-size: 12px;}
+	.pd-40-10-ipad{padding: 10px;}
+	.f-50-40-ipad{font-size: 40px;}
+	.pt-40-20-ipad{padding-top: 20px;}
+	.line-h-70-50-ipad{line-height: 50px;}
+	.mlr-20-10-ipad{margin-left: 10px;margin-right: 10px;}
+	.mt-40-20-ipad{margin-top: 20px;}
+	.mb-30-20-ipad{margin-bottom: 20px;}
+	.plr-50-10-ipad{padding-left: 10px;padding-right: 10px;}
+	.plr-20-5-ipad{padding-left: 5px;padding-right: 5px;}
+	.mt-10-17-ipad{margin-top: 17px;}
+	.f-22-14-ipad{font-size: 14px;}
+}
 @media (min-width:768px) and (max-width:991px) {
 	.f-20-16-ipad{font-size: 14px;}
 	.pd-40-10-ipad{padding: 10px;}
@@ -259,6 +273,7 @@
 	.line-h-60-ipad{line-height: 35px;}
 	.f-20-14-ipad{font-size: 14px;}
 }
+
 @media (min-width:992px) and (max-width:1199px) {
 	.img-60-35-ipad{width: 40px;height: 40px;}
 	.h-60-35-ipad{height: 40px;}
@@ -488,6 +503,7 @@
 .min-h-20{min-height: 20px;}
 .min-h-160{min-height: 160px;}
 .min-h-180{min-height: 180px;}
+.min-h-190{min-height: 190px;}
 .col-b2b2b2{color: #b2b2b2;}
 .bg-b2b2b2{background-color: #b2b2b2;}
 .rgba-60{background: rgba(0,0,0,0.6)}

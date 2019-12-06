@@ -43,4 +43,10 @@ public interface IHtmlInfoDao {
      * @return
      */
     List<HtmlInfo> selectHtmlInfo();
+    
+    /**
+     * 查询所有页面信息By类型
+     * @return
+     */
+    List<HtmlInfo> selectHtmlInfo(int type);
 }

@@ -66,7 +66,7 @@
         <div class="layui-body">
             <div style="padding: 50px;">
                 <p class="f-18 pt-15 pb-15 col-8d969d">
-                    搜索文章
+                    搜索区
                 </p>
                 <div class="clear pd-15 bg-fafafa bor bor-col-e8ebf2">
                     <!-- 这里用layui的数据表格的重载 -->
@@ -77,10 +77,7 @@
                                 <div class="layui-inline">
                                     <select name="searchabout" lay-verify="required" lay-search="">
                                         <option value="">请选择您要查询的内容</option>
-                                        <option value="order_num">订单编号</option>
-                                        <option value="order_address">发货地址</option>
-                                        <option value="order_phone">联系人</option>
-                                        <option value="c_time">订单时间</option>
+                                        <option value="coupon_num">卡号</option>
                                     </select>
                                 </div>
                                 <div class="layui-inline">
@@ -98,7 +95,7 @@
                     </form>
                 </div>
                 <p class="f-18 pt-15 pb-15 mt-40 col-8d969d">
-                    	文章列表
+                                  列表区
                 </p>
                 <div class="clear pd-15 bg-fafafa bor bor-col-e8ebf2">
                     <table id="mTable" lay-filter="mTable"></table>
@@ -142,8 +139,18 @@
 	                </div>
 	                <div class="layui-form-item div-disrate">
 	                  	 <label class="layui-form-label">折扣优惠券</label>
-	                    <div class="layui-input-block">
-	                         <input   type="text" name="coupon_disrate" value="0" lay-verify="required|number" placeholder="请输入标题" autocomplete="off" class="layui-input">
+	                    <div class="layui-input-inline">
+	                    	 <select name="coupon_disrate" lay-verify="required|number">
+						        <option value="0.1">0.1</option>
+						        <option value="0.2">0.2</option>
+						        <option value="0.3">0.3</option>
+						        <option value="0.4">0.4</option>
+						        <option value="0.5">0.5</option>
+						        <option value="0.6">0.6</option>
+						        <option value="0.7">0.7</option>
+						        <option value="0.8">0.8</option>
+						        <option value="0.9">0.9</option>
+						      </select>
 	                    </div>
 	                </div>
 	                <div class="layui-form-item div-total dis-n">

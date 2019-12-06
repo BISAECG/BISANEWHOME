@@ -75,7 +75,7 @@ public class AdminPageController {
     @RequestMapping(value = "/main", method = RequestMethod.GET)
     public String UpPageContent(Integer id,Model model) {
     	
-    	String fileUrl = this.getClass().getClassLoader().getResource("/ftl/web/zh_CN").getPath();
+    	String fileUrl = this.getClass().getClassLoader().getResource("/ftl/html/zh_CN").getPath();
     	File file=new File(fileUrl);
     	File[] files=file.listFiles();
     	List<String> list=new ArrayList<String>();
@@ -216,7 +216,7 @@ public class AdminPageController {
     @RequestMapping(value = "/ajax/generate/header", method = RequestMethod.POST)
     @ResponseBody
     public ResponseEntity<ResultData> GenerateHeaderHTML(HttpServletRequest request){
-        List<HtmlInfo> list = adminHtmlInfoService.selectHtmlInfo();
+        List<HtmlInfo> list = adminHtmlInfoService.selectHtmlInfo(1);
         CompanyInfo companyInfo =  companyInfoService.loadByUnId(1);
         freemarkerComponent.generateTop(list,companyInfo);
         return new ResponseEntity<ResultData>(

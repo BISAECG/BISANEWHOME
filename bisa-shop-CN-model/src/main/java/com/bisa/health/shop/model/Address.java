@@ -4,6 +4,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import org.hibernate.validator.constraints.NotBlank;
+
+import com.bisa.health.shop.entity.SysErrorCode;
+
 import java.io.Serializable;
 
 /**
@@ -13,22 +18,28 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "s_address")
+@org.hibernate.annotations.Proxy(lazy = false)
 public class Address implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	private Integer id;
-    private Integer user_id;        // 买家id
+    private Integer user_id;        // 用户id
+	@NotBlank(message=SysErrorCode.RequestFormat)
     private String consignee;         // 收货人名字
+	@NotBlank(message=SysErrorCode.RequestFormat)
     private String phone;            // 收货人手机号码
     private String country;        // 国家
     private String province;        // 省
+	@NotBlank(message=SysErrorCode.RequestFormat)
     private String city;            // 城市
     private String county;            // 区，县
     private String town;            // 镇
+	@NotBlank(message=SysErrorCode.RequestFormat)
     private String detail_address;   // 详细地址
-
+	@NotBlank(message=SysErrorCode.RequestFormat)
     private String address_label;   // 标签(家，公司，其他)
-    private String is_default;        // 是否是默认地址 0-不是默认； 1-默认
+	@NotBlank(message=SysErrorCode.RequestFormat)
+    private String is_default;        // 是否是默认地址 on-不是默认； off-默认
 
 
     @Id

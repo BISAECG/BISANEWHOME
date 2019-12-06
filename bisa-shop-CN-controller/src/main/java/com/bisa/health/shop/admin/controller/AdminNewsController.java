@@ -194,7 +194,8 @@ public class AdminNewsController {
      * @param news 新闻表对象
      * @return
      */
-    @RequestMapping(value = "/ajax/save", method = RequestMethod.POST,produces = "application/json; charset=utf-8")
+    @SuppressWarnings("finally")
+	@RequestMapping(value = "/ajax/save", method = RequestMethod.POST,produces = "application/json; charset=utf-8")
     @ResponseBody
     public ResponseEntity<ResultData> save(@Validated News news,BindingResult br) {
     	

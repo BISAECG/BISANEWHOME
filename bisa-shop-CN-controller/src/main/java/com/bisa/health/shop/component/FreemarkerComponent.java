@@ -19,6 +19,7 @@ public class FreemarkerComponent {
 	
 	
 	private String outPath;
+	private String ftlPath;
 	private FreemarkerUtil util;
 	
 	@Autowired(required=true)
@@ -26,6 +27,7 @@ public class FreemarkerComponent {
 		super();
 		if(util==null) {
 			this.outPath = outPath;
+			this.ftlPath=ftlPath;
 			util = FreemarkerUtil.getInstance(ftlPath);
 		}
 	}
@@ -38,9 +40,9 @@ public class FreemarkerComponent {
 		Map<String,Object> root = new HashMap<String,Object>();
 		root.put("company_phone", companyInfo.getCompany_phone());
 		root.put("empList", list);
-		util.fprint(root, "/outPath/zh_CN/header.ftl", SystemContext.getRealPath()+outPath+"/zh_CN/header.html");
-		util.fprint(root, "/outPath/zh_HK/header.ftl", SystemContext.getRealPath()+outPath+"/zh_HK/header.html");
-		util.fprint(root, "/outPath/en_US/header.ftl", SystemContext.getRealPath()+outPath+"/en_US/header.html");
+		util.fprint(root, "/html/zh_CN/header.ftl", SystemContext.getRealPath()+outPath+"/zh_CN/header.html");
+		util.fprint(root, "/html/zh_HK/header.ftl", SystemContext.getRealPath()+outPath+"/zh_HK/header.html");
+		util.fprint(root, "/html/en_US/header.ftl", SystemContext.getRealPath()+outPath+"/en_US/header.html");
 		
 		
 	}
@@ -52,26 +54,23 @@ public class FreemarkerComponent {
 		root.put("company_name",companyInfo.getCompany_name_CN());
 		root.put("company_address",companyInfo.getCompany_address_CN());
 		root.put("company_phone",companyInfo.getCompany_phone());
-		util.fprint(root, "/outPath/zh_CN/footer.ftl", SystemContext.getRealPath()+outPath+"/zh_CN/footer.html");
-		util.fprint(root, "/outPath/zh_CN/infooter.ftl", SystemContext.getRealPath()+outPath+"/zh_CN/infooter.html");
+		util.fprint(root, "/html/zh_CN/footer.ftl", SystemContext.getRealPath()+outPath+"/zh_CN/footer.html");
 		//繁体
 		root = new HashMap<String,Object>();
 		root.put("company_name",companyInfo.getCompany_name_HK());
 		root.put("company_address",companyInfo.getCompany_name_HK());
 		root.put("company_phone",companyInfo.getCompany_phone());
-		util.fprint(root, "/outPath/zh_HK/infooter.ftl", SystemContext.getRealPath()+outPath+"/zh_HK/footer.html");
-		util.fprint(root, "/outPath/zh_HK/footer.ftl", SystemContext.getRealPath()+outPath+"/zh_HK/infooter.html");
+		util.fprint(root, "/html/zh_HK/footer.ftl", SystemContext.getRealPath()+outPath+"/zh_HK/footer.html");
 		//英文
 		root = new HashMap<String,Object>();
 		root.put("company_name",companyInfo.getCompany_name_US());
 		root.put("company_address",companyInfo.getCompany_address_US());
 		root.put("company_phone",companyInfo.getCompany_phone());
-		util.fprint(root, "/outPath/en_US/footer.ftl", SystemContext.getRealPath()+outPath+"/en_US/footer.html");
-		util.fprint(root, "/outPath/en_US/infooter.ftl", SystemContext.getRealPath()+outPath+"/en_US/infooter.html");
+		util.fprint(root, "/html/en_US/footer.ftl", SystemContext.getRealPath()+outPath+"/en_US/footer.html");
 	}
 	
 	public void generateBody(Map<String,Object> root,String language,String ftlName,String htmlName) {
-		util.fprint(root, "/outPath/"+language+"/"+ftlName, SystemContext.getRealPath()+outPath+"/"+language+"/"+htmlName);
+		util.fprint(root, "/html/"+language+"/"+ftlName, SystemContext.getRealPath()+outPath+"/"+language+"/"+htmlName);
 	}
 	
 	public void generateNews(List<News> list) {
@@ -84,7 +83,7 @@ public class FreemarkerComponent {
         	root.put("release_time", nn.getRelease_time());
         	root.put("read_quantity", nn.getRead_quantity());
         	root.put("news_content", nn.getNews_content());
-        	util.fprint(root, "/outPath/"+nn.getLanguage()+"/newbody.ftl", SystemContext.getRealPath()+outPath+"/"+nn.getLanguage()+"/news/"+nn.getId()+".html");
+        	util.fprint(root, "/html/"+nn.getLanguage()+"/news-body.ftl", SystemContext.getRealPath()+outPath+"/"+nn.getLanguage()+"/"+nn.getId()+".html");
         }
 		
 	}

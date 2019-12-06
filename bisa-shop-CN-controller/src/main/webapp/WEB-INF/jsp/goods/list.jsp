@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,9 +12,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
     <!-- necessary -->
-    <meta name="keywords" content="所有商品">
-    <meta name="description" content="所有商品">
-    <title>所有商品</title>
+    <title><spring:message code="2013" /></title>
+    <meta name="keywords" content="<spring:message code="2013" />,<spring:message code="admin.keyword" />">
+    <meta name="description" content="<spring:message code="admin.description" />">
     <!-- description -->
     <meta name="renderer" content="webkit">
     <!-- base -->
@@ -80,7 +81,7 @@
         </div>
     </div>
     <p class="title-p">
-        所有商品
+       <spring:message code="2014" />
     </p>
     <div class="line">
         <span class="line-top"></span>
@@ -98,8 +99,8 @@
 	                      ${item.description}
 	                    </p>
 	                    <p>
-	                        <span class="goodPrice">￥100</span>
-	                        <a class="goodMore" href="/html/${language}/goods.html?id=${item.id}">查看详情</a>
+	                        <span class="goodPrice">¥${item.price}</span>
+	                        <a class="goodMore" href="/html/${language}/goods.html?id=${item.id}"><spring:message code="view.details" /></a>
 	                    </p>
 	            </div>
 	         </c:forEach>

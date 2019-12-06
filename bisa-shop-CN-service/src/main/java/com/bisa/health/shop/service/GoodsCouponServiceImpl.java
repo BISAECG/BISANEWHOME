@@ -49,4 +49,9 @@ public class GoodsCouponServiceImpl implements IGoodsCouponService {
 		iGoodsCouponDao.delete(id);
 	}
 
+	@Override
+	public GoodsCoupon getGoodsCouponByNum(String num) {
+		return iGoodsCouponDao.getGoodsCouponByNum(num);
+	}
+
 }

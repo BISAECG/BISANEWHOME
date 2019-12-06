@@ -38,5 +38,12 @@ public class GoodsCouponDaoImpl extends BaseDao<GoodsCoupon> implements IGoodsCo
 		return super.listBySql(sql, null, GoodsCoupon.class);
 	}
 
+
+	@Override
+	public GoodsCoupon getGoodsCouponByNum(String num) {
+		String sql = "SELECT * FROM s_coupon WHERE coupon_num=? AND coupon_status=1";
+		return super.queryObjectBySql(sql, new Object[] { num }, GoodsCoupon.class);
+	}
+
 	
 }

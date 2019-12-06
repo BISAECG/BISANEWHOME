@@ -5,6 +5,14 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Pattern;
+
+import org.hibernate.validator.constraints.NotBlank;
+import org.hibernate.validator.constraints.Range;
+
+import com.bisa.health.common.utils.RegexConstants;
+import com.bisa.health.shop.entity.SysErrorCode;
+
 import java.io.Serializable;
 
 /**
@@ -25,7 +33,7 @@ public class Guestbook implements Serializable {
     private String mail;           //	50	邮箱
     private String title;          //	40	主题
 
-    private int message_type;      //		留言类型（1-商品咨询；2-服务咨询；3-售后；4-账户异常；5-无关项）由留言处理人标注
+    private int message_type;      //		留言类型（1-个人；2-企业；3-医院)
     private String message;        //		留言内容
     private String message_time;   //	50	留言时间
     private int is_Reply;			//是否回复
@@ -34,11 +42,12 @@ public class Guestbook implements Serializable {
     public int getId() {
         return id;
     }
-
+    
     public void setId(int id) {
         this.id = id;
     }
 
+    @NotBlank(message=SysErrorCode.RequestFormat)
     @Column(length = 24, nullable = false)
     public String getName() {
         return name;
@@ -47,7 +56,7 @@ public class Guestbook implements Serializable {
     public void setName(String name) {
         this.name = name;
     }
-
+    @NotBlank(message=SysErrorCode.RequestFormat)
     @Column(length = 20, nullable = false)
     public String getPhone() {
         return phone;
@@ -56,7 +65,7 @@ public class Guestbook implements Serializable {
     public void setPhone(String phone) {
         this.phone = phone;
     }
-
+    @Pattern(regexp=RegexConstants.REGEX_EMAIL,message=SysErrorCode.RequestFormat)
     @Column(length = 50, nullable = false)
     public String getMail() {
         return mail;
@@ -74,7 +83,7 @@ public class Guestbook implements Serializable {
     public void setTitle(String title) {
         this.title = title;
     }
-
+    @Range(min=1,max=10,message=SysErrorCode.RequestFormat)
     public int getMessage_type() {
         return message_type;
     }
@@ -84,6 +93,7 @@ public class Guestbook implements Serializable {
     }
 
     @Column(nullable = false)
+    @NotBlank(message=SysErrorCode.RequestFormat)
     public String getMessage() {
         return message;
     }

@@ -48,4 +48,9 @@ public class HtmlInfoServiceImpl implements IHtmlInfoService{
     public List<HtmlInfo> selectHtmlInfo() {
         return iAdminHtmlInfoDao.selectHtmlInfo();
     }
+
+	@Override
+	public List<HtmlInfo> selectHtmlInfo(int type) {
+		return iAdminHtmlInfoDao.selectHtmlInfo(type);
+	}
 }

@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="keywords" content="碧沙康健">
     <meta name="description" content="碧沙康健">
-    <title>碧沙</title>
+    <title>首页</title>
     <link href="../resources/css/comm/swiper.min.css" rel="stylesheet">
     <link href="../resources/css/comm/base.css" rel="stylesheet">
     <link href="../resources/css/index/index.css" rel="stylesheet">
@@ -196,7 +196,7 @@
             $.ajax({
                 type: "GET",
                 dataType: "json",
-                url: "/new/tops",
+                url: "/new/top4",
                 success: function (data) {
                     console.log(data);
                     $.each(data, function (i, item) {
@@ -251,7 +251,7 @@
         //点击图片跳转
         $(".main_div").on("click", ".new-div", function () {
             var id = $(this).find(".zd-id").val();
-            window.open('/news/body?id=' + id, '_blank')
+               window.open(id+".html",'_blank')
         });
 
         function ecg() {
