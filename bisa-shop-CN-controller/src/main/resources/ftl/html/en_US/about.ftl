@@ -29,9 +29,7 @@
     <div class="clear full-ws">
         <img class="full-w" src="../resources/img/HK_About/banner.jpg" alt="關于碧沙">
         <p class="full-w-p">About Bisa</p>
-        <p class="full-w-p-1" style="left: 28%;">Pay attention to health, pay attention to the health of Bisa, give a careful care to the
-            family
-            .</p>
+        <p class="full-w-p-1">Pay attention to health, pay attention to the health of Bisa, give a careful care to the family.</p>
         <p class="full-w-p-2">OBOUT BISA</p>
     </div>
     <div class="clear container pl-0 pr-0 pl-100 pr-100 pb-100 pt-60">
@@ -63,12 +61,12 @@
             <div class="clear col-sm-6 pl-25">
                 <div class="clear pt-20 bor bor-t bor-col-dcdcdc">
                     <div class="clear full-w ">
-                        <div class="col-sm-4 pl-0 pr-0">
+                        <div class="col-sm-3 pl-0 pr-0">
                                 <span class="col-aaa f-22 h-25 line-h-25">
                                     Our Mission
                                 </span>
                         </div>
-                        <div class="col-sm-8 pl-5 pr-0 pos-r bb">
+                        <div class="col-sm-9 pl-5 pr-0 pos-r bb">
                             <div class="clear w-100 pos-a t-10 l-15 bor bor-b bor-col-8c918c ">
                             </div>
                             <p class="col-aaa f-18 line-h-25 h-25 mt-20 ft-r">
@@ -77,12 +75,12 @@
                         </div>
                     </div>
                     <div class="clear full-w mgt">
-                        <div class="col-sm-4 pl-0 pr-0">
+                        <div class="col-sm-3 pl-0 pr-0">
                                 <span class="col-aaa f-22 h-25 line-h-25">
                                     Enterprise's goal
                                 </span>
                         </div>
-                        <div class="col-sm-8 pl-5 pr-0 pos-r">
+                        <div class="col-sm-9 pl-5 pr-0 pos-r">
                             <div class="clear w-100 pos-a t-10 l-15 bor bor-b bor-col-8c918c">
                             </div>
                             <p class="col-aaa f-18 line-h-25 h-25 mt-20 ft-r">
@@ -91,12 +89,12 @@
                         </div>
                     </div>
                     <div class="clear full-w mgt">
-                        <div class="col-sm-4 pl-0 pr-0">
+                        <div class="col-sm-3 pl-0 pr-0">
                                 <span class="col-aaa f-22 h-25 line-h-25">
                                     Corporate values
                                 </span>
                         </div>
-                        <div class="col-sm-8 pl-5 pr-0 pos-r">
+                        <div class="col-sm-9 pl-5 pr-0 pos-r">
                             <div class="clear w-100 pos-a t-10 l-15 bor bor-b bor-col-8c918c">
                             </div>
                             <p class="col-aaa f-18 line-h-25 h-25 mt-20 ft-r">
@@ -105,12 +103,12 @@
                         </div>
                     </div>
                     <div class="clear full-w mgt">
-                        <div class="col-sm-4 pl-0 pr-0">
+                        <div class="col-sm-3 pl-0 pr-0">
                                 <span class="col-aaa f-22 h-25 line-h-25">
                                     Corporate purposes
                                 </span>
                         </div>
-                        <div class="col-sm-8 pl-5 pr-0 pos-r">
+                        <div class="col-sm-9 pl-5 pr-0 pos-r">
                             <div class="clear w-100 pos-a t-10 l-15 bor bor-b bor-col-8c918c">
                             </div>
                             <p class="col-aaa f-18 line-h-25 h-25 mt-20 mb-5 ft-r">
@@ -125,13 +123,13 @@
                 <img class="full-w" src="../resources/img/HK_About/About-rightv2.png" alt="關于碧沙">
             </div>
             <div class="clear col-sm-12 pl-25 pr-25 pull-left">
-                <div class="clear w-12d5p pull-left pl-15" >
+                <div class="clear w-12d5p pull-left">
                     <span class="col-aaa f-22 h-25 line-h-25">Corporate commitment</span>
                 </div>
                 <div class="clear w-87d5p pull-left pos-r pl-5">
-                    <div class="clear w-100 pos-a t-10  bor bor-b bor-col-8c918c" style="left: 65px;">
+                    <div class="clear w-100 pos-a t-10 l-15 bor bor-b bor-col-8c918c">
                     </div>
-                    <p class="col-aaa f-18 line-h-25 mt-20 ft-r-1" style="margin-left: 19%;">
+                    <p class="col-aaa f-18 line-h-25 mt-20 ft-r-1">
                         The company's board of directors and all employees are willing to grow together with strategic partners, franchisees and customers to protect human health and achieve the company's purpose.
                     </p>
                 </div>

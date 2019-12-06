@@ -46,7 +46,7 @@
     <div class="container mt-40">
         <div class="row">
             <div class="col-md-4" style="background: url('../resources/img/certificate/background.png') round;">
-                <a href="../resources/img/certificate/SCZ.png" target="_blank">
+                <a href="../resources/img/index/chanpin.png" target="_blank">
                     <img src="../resources/img/index/chanpin.png"  class="center-block mt-20"  alt="医疗器械生产许可证">
                     <p class="text-center mt-5 mb-20">
                         医疗器械生产许可证

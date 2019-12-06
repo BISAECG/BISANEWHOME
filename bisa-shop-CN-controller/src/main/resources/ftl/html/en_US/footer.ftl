@@ -17,7 +17,7 @@
                             </li>
                             <li class="pt-10">
                                 <a class="col-8c8c8c t-nonehove hovecol-309DE2 f-12" href="book.html">
-                                    Contact Us
+                                    contact us
                                 </a>
                             </li>
                         </ul>
@@ -133,7 +133,7 @@
             <div class="row text-center">
                 <div class="col-md-12 text-center">
                     <p class="col-8c8c8c">
-                        Copyright2017. ${company_name} <span style="font-weight:bold ;">All Rights Reserved.</span>
+                        Copyright©2017. ${company_name} <span style="font-weight:bold ;">All Rights Reserved.</span>
                     </p>
                 </div>
             </div>

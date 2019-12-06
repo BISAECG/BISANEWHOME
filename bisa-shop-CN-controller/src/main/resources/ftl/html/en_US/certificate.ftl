@@ -31,20 +31,20 @@
 <div class="pos-r">
     <div class="container-full">
         <div class="row center-block" >
-            <img class="img-responsive center-block"  src="../resources/img/menuList/mListBgImg-us.png" alt="ECG product certificate">
+            <img class="img-responsive center-block"  src="../resources/img/menuList/mListBgImg.png" alt="ECG product certificate">
         </div>
     </div>
     <div class="container mt-40">
         <div class="row">
             <div class="col-md-4  col-md-offset-4 text-center">
-                <img src="../resources/img/certificate/chanpintitle-us.png" class="center-block ">
+                <img src="../resources/img/certificate/chanpintitle.png" class="center-block ">
             </div>
         </div>
     </div>
     <div class="container mt-40">
         <div class="row">
             <div class="col-md-4" style="background: url('../resources/img/certificate/background.png') round;">
-                <a href="../resources/img/certificate/SCZ.png" target="_blank">
+                <a href="../resources/img/index/chanpin.png" target="_blank">
                     <img src="../resources/img/index/chanpin.png"  class="center-block mt-20"  alt="Medical device production license">
                     <p class="text-center mt-5 mb-20">
                         Medical device production license
@@ -100,7 +100,7 @@
             <div class="col-md-4 " style="background: url('../resources/img/certificate/background.png') round;">
                 <a href="../resources/img/certificate/img787.png" target="_blank">
                     <img src="../resources/img/index/chanpin6.png" class="center-block mt-20 " alt=" Patent registration book">
-                    <p class="text-center   mt-5 mb-20">
+                    <p class="text-center  mt-10 mb-15">
                         Patent registration book
                     </p>
                 </a>

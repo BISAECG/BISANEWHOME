@@ -22,11 +22,6 @@
     <link href="../resources/css/index/board.css" rel="stylesheet">
     <script src="../resources/js/comm/jquery.min.js"></script>
   	<script src="/resources/ctrl/layui/layui.js"></script>
-    <style>
-        ul li{
-            list-style: square;
-        }
-    </style>
 </head>
 
 <body>
@@ -36,7 +31,7 @@
 </script>
 <div class="container-fluid">
     <div class="row">
-        <img class="img-responsive " src="../resources/img/index/board.png">
+            <img class="img-responsive " src="../resources/img/index/board.png">
     </div>
 </div>
 <div class="container">
@@ -48,13 +43,13 @@
                 <p>
                     <span>销售咨询(中国):</span>
                     <span>(86) 0755-2688 0962</span>
-
+                  
                 </p>
                 <p class="mb-20">
                     <span>销售咨询(香港):</span>
                     <span>(852) 2423 0600&nbsp;|&nbsp;(852) 2423 0791</span>
                 </p>
-                <p class="mb-20">
+                  <p class="mb-20">
                     <span>传真:</span>
                     <span>(852) 2423 0148</span>
                 </p>
@@ -72,7 +67,7 @@
             <div>
                 <p>在线客服</p>
                 <p>
-                    即时回复，为您提供快速便捷的服务体验,工作时间早9:00—晚6:00
+                  	即时回复，为您提供快速便捷的服务体验,工作时间早9:00—晚6:00
                 </p>
                 <button>
                     <a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=3299503761&site=qq&menu=yes' >在线咨询</a>
@@ -94,35 +89,35 @@
         <p>温馨提示：如您对我们的产品或其他相关问题有疑问，均可在下方留言提交您的问题，我们的销售人员会回复您。</p>
     </div>
     <form class="layui-form" action="">
-        <div class="row messageThere" >
-            <div class="form-group col-md-3" style="">
-                <label for="name" class="control-label">姓名:</label>
-                <input type="text" class="form-control" required  lay-verify="required" name="name" id="name" lay-reqText="请输入姓名" placeholder="请输入姓名">
-            </div>
-            <div class="form-group col-md-3">
-                <label for="phone" class="control-label">电话:</label>
-                <input type="text" class="form-control" required  lay-verify="required" name="phone" id="phone" lay-reqText="请输入电话" placeholder="请输入电话">
-            </div>
-            <div class="form-group col-md-3">
-                <label for="email" class="control-label">邮箱:</label>
-                <input type="email" class="form-control" required  lay-verify="required|email" name="mail" id="mail"  lay-reqText="请输入邮箱" placeholder="请输入邮箱">
-            </div>
-            <div class="form-group col-md-3">
-                <label for="message_type" class="control-label">类别:</label>
-                <select class="form-control" name="message_type" lay-reqText="请输入类别" lay-verify="required" id="category">
-                    <option value="1">个人</option>
-                    <option value="2">企业</option>
-                    <option value="3">医院</option>
-                </select>
-            </div>
-
-        </div>
-        <div class="row messageFour" >
-            <p>留言:</p>
-            <textarea class="form-control" rows="5" name="message" lay-reqText="请输入留言" lay-verify="required" placeholder="请输入留言" ></textarea>
-            <button class="layui-btn f-20" lay-submit="" lay-filter="formDemo">立即提交</button>
-        </div>
-    </form>
+	    <div class="row messageThere" >
+	            <div class="form-group col-md-3" style="">
+	                <label for="name" class="control-label">姓名:</label>
+	                <input type="text" class="form-control" required  lay-verify="required" name="name" id="name" lay-reqText="请输入姓名" placeholder="请输入姓名">
+	            </div>
+	            <div class="form-group col-md-3">
+	                <label for="phone" class="control-label">电话:</label>
+	                <input type="text" class="form-control" required  lay-verify="required" name="phone" id="phone" lay-reqText="请输入电话" placeholder="请输入电话">
+	            </div>
+	            <div class="form-group col-md-3">
+	                <label for="email" class="control-label">邮箱:</label>
+	                <input type="email" class="form-control" required  lay-verify="required|email" name="mail" id="mail"  lay-reqText="请输入邮箱" placeholder="请输入邮箱">
+	            </div>
+	            <div class="form-group col-md-3">
+	                <label for="message_type" class="control-label">类别:</label>
+	                <select class="form-control" name="message_type" lay-reqText="请输入类别" lay-verify="required" id="category">
+	                    <option value="1">个人</option>
+	                    <option value="2">企业</option>
+	                    <option value="3">医院</option>
+	                </select>
+	            </div>
+	       
+	    </div>
+	    <div class="row messageFour" >
+	        <p>留言:</p>
+	        <textarea class="form-control" rows="5" name="message" lay-reqText="请输入留言" lay-verify="required" placeholder="请输入留言" ></textarea>
+	        <button class="layui-btn f-20" lay-submit="" lay-filter="formDemo">立即提交</button>
+	    </div>
+     </form>
 </div>
 <div id="footer"></div>
 <script>
@@ -130,31 +125,31 @@
 </script>
 
 <script type="text/javascript">
-    //加载layui
-    layui.use(['element','form'], function () {
-        var layer = layui.layer,
-                element = layui.element,
-                form = layui.form,
-                $=layui.jquery;
-
-        form.on('submit(formDemo)', function(data){
-            layer.load();
-            $.ajax({
-                type : "POST",
-                dataType: "json",
-                //contentType: "application/json;charset=UTF-8",
-                url : '/ajax/book/add',
-                data : data.field,
-                success : function(data) {
-                    layer.closeAll();
-                    layer.msg(data.msg);
-
-                }
-            });
-            return false;
-
-        });
+//加载layui
+layui.use(['element','form'], function () {
+    var layer = layui.layer,
+     element = layui.element,
+     form = layui.form,
+     $=layui.jquery;
+   
+    form.on('submit(formDemo)', function(data){
+    	layer.load();
+    	$.ajax({
+			type : "POST",
+			dataType: "json",
+			//contentType: "application/json;charset=UTF-8",
+			url : '/ajax/book/add',
+			data : data.field,
+			success : function(data) {
+				layer.closeAll();
+				layer.msg(data.msg);
+				
+			}
+		});
+    	return false;
+    	
     });
+});
 </script>
 </body>
 

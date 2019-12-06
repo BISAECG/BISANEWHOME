@@ -35,7 +35,6 @@
     </style>
 </head>
 
-
 <body>
 <div id="header"></div>
 <script>
@@ -63,8 +62,8 @@
                   健康问答
                 </span>
                 </div>
-                <div class="col-md-1 col-md-offset-9" style="line-height: 45px;">
-                    <img src="../resources/img/news/HK_HowToShop/down.png" style="margin-left: 50px;">
+                <div class="col-md-1 col-md-offset-9">
+                    <i class="fa fa-angle-double-down pull-right" style="padding-top: 20px;font-size: 16px;" aria-hidden="true"></i>
                 </div>
             </div>
         </div>

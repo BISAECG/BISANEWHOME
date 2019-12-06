@@ -58,22 +58,6 @@
             -webkit-line-clamp: 3;
         }
     }
-    @media screen and (min-width:1920px){
-        .fourBox{
-            display: none;
-        }
-        .thereBox{
-            display: block;
-        }
-    }
-    @media screen and (max-width:1900px){
-        .thereBox{
-            display: none;
-        }
-        .fourBox{
-            display: block;
-        }
-    }
 </style>
 
 <body>
@@ -135,16 +119,16 @@
         <span class="line-top"></span>
         <span class="line-btm"></span>
     </div>
-    <div class="row  mb-40 mt-40" style="background:#F9FFFF;">
-        <img  class="img-responsive center-block" src="../resources/img/solution/banner4-hk.gif" alt="碧沙心電儀方案流程">
+    <div class="row  mb-40 mt-40">
+        <img  class="img-responsive center-block" src="../resources/img/solution/banner4.gif" alt="碧沙心電儀方案流程">
     </div>
     <p class="title-p">方案配置</p>
     <div class="line">
         <span class="line-top"></span>
         <span class="line-btm"></span>
     </div>
-    <div class="row  mb-40 thereBox " style="background: #F3F6FF;">
-        <div  style="border: 10px solid #E6ECFF;width: 16%;margin: 20px 20px 20px 5%;float: left;">
+    <div class="row  mb-40 " style="background: #F3F6FF;">
+        <div style="border: 10px solid #E6ECFF;width: 16%;margin: 20px 20px 20px 5%;float: left;">
             <img src="../resources/img/solution/banner6-1.png">
             <div style="margin: 5px;background: #FFF;">
                 <p style="margin-bottom:4px;font-size:18px;font-weight:bold;color:rgba(51,51,51,1);line-height:40px;">碧沙智慧心電監測分析系統</p>
@@ -196,79 +180,79 @@
             </div>
         </div>
     </div>
-    <div class="container fourBox" style="padding: 0;width: 1200px;">
-        <div class="row" style="margin: 0;">
-            <div style="border: 10px solid #E6ECFF;width: 325px;float: left;">
-                <img src="../resources/img/solution/banner6-1.png">
-                <div style="margin: 10px;background: #FFF;">
-                    <p style="margin-bottom:4px;font-size:18px;font-weight:bold;color:rgba(51,51,51,1);line-height:40px;">碧沙智慧心電監測分析系統</p>
-                    <p style="width:34px;height:8px;background:rgba(132,132,132,1);"></p>
-                    <p style="font-size:14px;font-weight:400;color:rgba(102,102,102,1);line-height:24px;padding-bottom: 24px;">
-                        碧沙智慧心電監測分析系統包括采集原始心電數據，存儲大量心電數據，在雲端進行心電大數據處理並進行自動分析，最後結合專業醫師的總結建議形成最終的心電圖報告。此系統大大提高心電圖分析的準確率和實時性。
-                    </p>
-                </div>
-            </div>
-            <div class="div2" style="border: 10px solid #E6ECFF;width: 325px;float: left;margin-left: 10px;">
-                <img src="../resources/img/solution/banner6-1.png">
-                <div style="margin: 10px;background: #FFF;">
-                    <p style="margin-bottom:4px;font-size:18px;font-weight:bold;color:rgba(51,51,51,1);line-height:40px;">五臺碧沙心電儀</p>
-                    <p style="width:34px;height:8px;background:rgba(132,132,132,1);"></p>
-                    <p style="font-size:14px;font-weight:400;color:rgba(102,102,102,1);line-height:24px;">
-                        碧沙心電儀是3導聯動態心電儀，使用簡便，壹學就會。具有超長工作時間（壹次充電可連續采集120小時ECG數據）和超大容量（可存儲878小時ECG數據）。產品已獲得醫療器械許可證、CFDA 註冊證、FCC認證、FCC藍牙QBQ認證。
-                    </p>
-                </div>
-            </div>
-            <div class="div3 dis-n cur-p" style="float: left;width: 102px;height: 407px;font-size: 20px;">
-                <img src="../resources/img/solution/banner6-6.png" >
-            </div>
-            <div class="div4" style="border: 10px solid #E6ECFF;width: 325px;float: left;margin-left: 10px;">
-                <img src="../resources/img/solution/banner6-1.png">
-                <div style="margin: 10px;background: #FFF;">
-                    <p style="margin-bottom:4px;font-size:18px;font-weight:bold;color:rgba(51,51,51,1);line-height:40px;">壹年免費數據轉換服務</p>
-                    <p style="width:34px;height:8px;background:rgba(132,132,132,1);"></p>
-                    <p style="font-size:14px;font-weight:400;color:rgba(102,102,102,1);line-height:24px;min-height: 145px;">
-                        碧沙康健提供將碧沙心電儀數據格式轉換成符合歐洲標準的EDF格式或符合美國標準的MIF格式的服務。碧沙心電儀監測的心電圖數據具有通用性。
-                    </p>
-                </div>
-            </div>
-            <div class="div5 cur-p" style="float: left;width: 102px;height: 407px;font-size: 20px;">
-                <img src="../resources/img/solution/banner6-6.png" >
-            </div>
-            <div class="div6 dis-n" style="border: 10px solid #E6ECFF;width: 325px;float: left;margin-left: 10px;">
-                <img src="../resources/img/solution/banner6-1.png">
-                <div style="margin: 10px;background: #FFF;">
-                    <p style="margin-bottom:4px;font-size:18px;font-weight:bold;color:rgba(51,51,51,1);line-height:40px;">壹臺專業電腦</p>
-                    <p style="width:34px;height:8px;background:rgba(132,132,132,1);"></p>
-                    <p style="font-size:14px;font-weight:400;color:rgba(102,102,102,1);line-height:24px;min-height: 145px;">
-                        碧沙康健提供適用於心電監測分析系統的專業電腦。專業電腦的使用環境不同於壹般商用電腦，因此對於專業電腦配置的要求更為嚴格。
-                    </p>
-                </div>
-            </div>
-            <div class="div7 cur-p" style="float: left;width: 102px;height: 407px;font-size: 20px;">
-                <img src="../resources/img/solution/banner6-6.png" >
-            </div>
-            <div class="div8 dis-n" style="border: 10px solid #E6ECFF;width: 325px;float: left;margin-left: 10px;">
-                <img src="../resources/img/solution/banner6-1.png">
-                <div style="margin: 10px;background: #FFF;">
-                    <p style="margin-bottom:4px;font-size:18px;font-weight:bold;color:rgba(51,51,51,1);line-height:40px;">壹年免費培訓</p>
-                    <p style="width:34px;height:8px;background:rgba(132,132,132,1);"></p>
-                    <p style="font-size:14px;font-weight:400;color:rgba(102,102,102,1);line-height:24px;min-height: 145px;">
-                        碧沙康健為醫療機構提供3次免費線下培訓、1年免費線上培訓，包括產品使用與保養、系統軟件使用與維護、專業電腦使用等相關培訓。
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <p class="title-p">合作夥伴</p>
     <div class="line">
         <span class="line-top"></span>
         <span class="line-btm"></span>
     </div>
-    <div class="row ">
+    <div class="row  mb-40 ">
         <img  class="img-responsive center-block" src="../resources/img/index/banner6-hk.png" alt="碧沙心電儀合作夥伴">
     </div>
 </div>
-
+<div class="container">
+    <div class="row">
+        <div style="border: 10px solid #E6ECFF;width: 325px;float: left;">
+        <img src="../resources/img/solution/banner6-1.png">
+        <div style="margin: 10px;background: #FFF;">
+        <p style="margin-bottom:4px;font-size:18px;font-weight:bold;color:rgba(51,51,51,1);line-height:40px;">碧沙智慧心電監測分析系統1</p>
+        <p style="width:34px;height:8px;background:rgba(132,132,132,1);"></p>
+        <p style="font-size:14px;font-weight:400;color:rgba(102,102,102,1);line-height:24px;">
+        碧沙智慧心電監測分析系統包括采集原始心電數據，存儲大量心電數據，在雲端進行心電大數據處理並進行自動分析，最後結合專業醫師的總結建議形成最終的心電圖報告。此系統大大提高心電圖分析的準確率和實時性。
+        </p>
+        </div>
+        </div>
+        <div class="div2" style="border: 10px solid #E6ECFF;width: 325px;float: left;margin-left: 20px;">
+            <img src="../resources/img/solution/banner6-1.png">
+            <div style="margin: 10px;background: #FFF;">
+                <p style="margin-bottom:4px;font-size:18px;font-weight:bold;color:rgba(51,51,51,1);line-height:40px;">碧沙智慧心電監測分析系統2</p>
+                <p style="width:34px;height:8px;background:rgba(132,132,132,1);"></p>
+                <p style="font-size:14px;font-weight:400;color:rgba(102,102,102,1);line-height:24px;">
+                    碧沙智慧心電監測分析系統包括采集原始心電數據，存儲大量心電數據，在雲端進行心電大數據處理並進行自動分析，最後結合專業醫師的總結建議形成最終的心電圖報告。此系統大大提高心電圖分析的準確率和實時性。
+                </p>
+            </div>
+        </div>
+        <div class="div3 dis-n" style="float: left;width: 50px;height: 403px;font-size: 20px;margin-left: 20px;background: red;">
+            <button style="margin-top: 118px;color: #333333;">碧沙智慧心電監測分析系統3</button>
+        </div>
+        <div class="div4" style="border: 10px solid #E6ECFF;width: 325px;float: left;margin-left: 20px;">
+            <img src="../resources/img/solution/banner6-1.png">
+            <div style="margin: 10px;background: #FFF;">
+                <p style="margin-bottom:4px;font-size:18px;font-weight:bold;color:rgba(51,51,51,1);line-height:40px;">碧沙智慧心電監測分析系統3</p>
+                <p style="width:34px;height:8px;background:rgba(132,132,132,1);"></p>
+                <p style="font-size:14px;font-weight:400;color:rgba(102,102,102,1);line-height:24px;">
+                    碧沙智慧心電監測分析系統包括采集原始心電數據，存儲大量心電數據，在雲端進行心電大數據處理並進行自動分析，最後結合專業醫師的總結建議形成最終的心電圖報告。此系統大大提高心電圖分析的準確率和實時性。
+                </p>
+            </div>
+        </div>
+        <div class="div5" style="float: left;width: 50px;height: 403px;font-size: 20px;margin-left: 20px;background: red;">
+            <button style="margin-top: 118px;color: #333333;">碧沙智慧心電監測分析系統4</button>
+        </div>
+        <div class="div6 dis-n" style="border: 10px solid #E6ECFF;width: 325px;float: left;margin-left: 20px;">
+            <img src="../resources/img/solution/banner6-1.png">
+            <div style="margin: 10px;background: #FFF;">
+                <p style="margin-bottom:4px;font-size:18px;font-weight:bold;color:rgba(51,51,51,1);line-height:40px;">碧沙智慧心電監測分析系統4</p>
+                <p style="width:34px;height:8px;background:rgba(132,132,132,1);"></p>
+                <p style="font-size:14px;font-weight:400;color:rgba(102,102,102,1);line-height:24px;">
+                    碧沙智慧心電監測分析系統包括采集原始心電數據，存儲大量心電數據，在雲端進行心電大數據處理並進行自動分析，最後結合專業醫師的總結建議形成最終的心電圖報告。此系統大大提高心電圖分析的準確率和實時性。
+                </p>
+            </div>
+        </div>
+        <div class="div7 " style="float: left;width: 50px;height: 403px;font-size: 20px;margin-left: 20px;background: red;">
+            <button style="margin-top: 118px;color: #333333;">碧沙智慧心電監測分析系統5</button>
+        </div>
+        <div class="div8 dis-n" style="border: 10px solid #E6ECFF;width: 325px;float: left;margin-left: 20px;">
+            <img src="../resources/img/solution/banner6-1.png">
+            <div style="margin: 10px;background: #FFF;">
+                <p style="margin-bottom:4px;font-size:18px;font-weight:bold;color:rgba(51,51,51,1);line-height:40px;">碧沙智慧心電監測分析系統5</p>
+                <p style="width:34px;height:8px;background:rgba(132,132,132,1);"></p>
+                <p style="font-size:14px;font-weight:400;color:rgba(102,102,102,1);line-height:24px;">
+                    碧沙智慧心電監測分析系統包括采集原始心電數據，存儲大量心電數據，在雲端進行心電大數據處理並進行自動分析，最後結合專業醫師的總結建議形成最終的心電圖報告。此系統大大提高心電圖分析的準確率和實時性。
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
 <div id="footer"></div>
 <script>
     $("#footer").load("footer.html");
@@ -291,15 +275,12 @@
         $('.div7').removeClass("dis-n");
     });
     $(".div7").click(function(){
-
         $('.div7').addClass("dis-n");
         $('.div6').addClass("dis-n");
-        $('.div4').addClass("dis-n");
-        $('.div3').removeClass("dis-n");
+
         $('.div5').removeClass("dis-n");
         $('.div8').removeClass("dis-n");
     });
-
 </script>
 </body>
 </html>

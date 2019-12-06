@@ -15,14 +15,14 @@
                     <span class='sep navTitle'>|</span>
                     <span>Language:</span>
                     <a id='lang-hk' href='/index?lang=zh_HK'>Traditional</a>
-                    <span class="navTitle">|</span>
+                    <span  class="navTitle">|</span>
                     <a id='lang-cn' href='/index?lang=zh_CN'>Simplified</a>
-                    <span class="navTitle">|</span>
+                    <span  class="navTitle">|</span>
                     <a id='lang-us' href='/index?lang=en_US'>English</a>
                     <img src='../resources/img/HK_About/hk.png'>
                 </div>
                 <div class="col-md-3 col-md-offset-3 loginDiv">
-
+                  
                 </div>
             </div>
         </div>
@@ -74,44 +74,49 @@
             <div class='row'>
                 <!--<%&#45;&#45;列表欄菜單&#45;&#45;%>-->
                 <ul class='nav bisa-nav text-center head pull-left'>
-                    <li class='col-309DE2 navList  pull-left ml-20'>
-                        <a class='navlist' href='index.html'>
-                            Home
-                        </a>
-                    </li>
-                    <li class='col-309DE2 navList pull-left ml-20 headList'>
-                        <a class='navlist pos-r ' href="javascript:void(0);">News </a>
-                        <ul class="pos-a">
-                            <li style="list-style: none;">
-                                <a class='navlist' href='news.html'>Bisa News</a>
-                            </li>
-                            <li style="list-style: none;">
-                                <a class="navlist" href='qa.html'>Q&A</a></li>
-                        </ul>
-                    </li>
-                    <li class='col-309DE2 navList pull-left ml-20'>
-                        <a class='navlist' href='certificate.html'>
-                            Certificate
-                        </a>
-                    </li>
-                    <li class='col-309DE2 navList pull-left ml-20'>
-                        <a class='navlist' href='solution.html'>
-                            Solution
-                        </a>
-                    </li>
-                    <li class='col-309DE2 navList pull-left ml-20'>
-                        <a class='navlist' href='down.html'>
-                            Download
-                        </a>
-                    </li>
+
+					 	 <li class='col-309DE2 pull-left ml-20'>
+                        	<a class='navlist' href='index.html'>
+                        	  Home
+		                    </a>
+		                 </li>
+		                    <li class='col-309DE2 pull-left ml-20 headList'>
+		                        <a class='navlist pos-r ' href="javascript:void(0);">News </a>
+		                        <ul class="pos-a">
+		                            <li>
+		                                <a class='navlist' href='news.html'>Bisa News</a>
+		                            </li>
+		                            <li>
+		                                <a class="navlist" href='qa.html'>Q&A</a></li>
+		                        </ul>
+		                    </li>
+					
+					 	 <li class='col-309DE2 pull-left ml-20'>
+                        	<a class='navlist' href='certificate.html'>
+                        	  Certificate
+		                    </a>
+		                 </li>
+					
+					 	 <li class='col-309DE2 pull-left ml-20'>
+                        	<a class='navlist' href='solution.html'>
+                        	  Solution
+		                    </a>
+		                 </li>
+					
+					 	 <li class='col-309DE2 pull-left ml-20'>
+                        	<a class='navlist' href='down.html'>
+                        	  Download
+		                    </a>
+		                 </li>
+					
+                  
                     <li class=' pull-left ml-20' style='background: #225185;'>
                         <a class='buy' href='shop.html'>
                             Product
                         </a>
                     </li>
                     <li class=' pull-left ml-20' style='background: #f40;'>
-                        <a class='tb' target="_blank"
-                           href="https://shop194684580.taobao.com/?spm=a230r.7195193.1997079397.2.6815114b089AGi">
+                        <a class='tb' target="_blank" href="https://shop194684580.taobao.com/?spm=a230r.7195193.1997079397.2.6815114b089AGi">
                             Taobao
                         </a>
                     </li>
@@ -130,7 +135,7 @@
         <div class='bar-l '>
             <div id='J_rightbar_l' style='margin-bottom: 15px;'>
                 <ul class='bar-top' style="list-style: none;">
-                    <li class='bar-sortS' style="list-style: none;">
+                    <li class='bar-sortS'>
                         <a href='down.html' class='bar-link pos-r'>
                             <img id='bar-sort1' src='../resources/img/index/Sidebar1.png' alt="Download app">
                             <span class='pos-a' style='top: 64%;left: 5%;color: #fff;'>
@@ -139,8 +144,7 @@
                         </a>
                     </li>
                     <li class='bar-sort'>
-                        <a href='book.html' title='Message board is still under construction' styele='cursor:not-allowed;'
-                           class='bar-link pos-r'>
+                        <a href='book.html' title='Message board is still under construction' styele='cursor:not-allowed;' class='bar-link pos-r'>
                             <img id='bar-sort2' src='../resources/img/index/Sidebar2.png' alt="Leave message">
                             <span class='pos-a' style='top: 56%;left:10%;color: #fff;'>
                                 Message
@@ -168,23 +172,23 @@
     </div>
 </div>
 <script type="text/javascript">
-    $(function () {
-        $.ajax({
+	$(function(){
+		$.ajax({
             url: '/isLogin',
             type: "GET",
             async: false,
             success: function (data) {
-                if (data.code == "0") {
-                    $(".loginDiv").html("<a class='pull-left' href='/html/zh_CN/user.html?lang=zh_CN'>" + data.data + "</a>" +
-                        "<sapn class='pull-left navDivision'></sapn>" +
-                        "<a class='pull-left navReg'  href='/logout?lang=zh_CN'>退出</a>");
-                } else {
-                    $(".loginDiv").html("<a class='pull-left' href='/login?lang=zh_CN'>登录</a>" +
-                        "<sapn class='pull-left navDivision'></sapn>" +
-                        "<a class='pull-left navReg'  href='/login?lang=zh_CN'>注册</a>");
-                }
-
+            	if(data.code=="0"){
+            	    $(".loginDiv").html("<a class='pull-left' href='/html/zh_CN/user.html?lang=zh_CN'>"+data.data+"</a>"+
+                      "<sapn class='pull-left navDivision'></sapn>"+
+                      "<a class='pull-left navReg'  href='/logout?lang=zh_CN'>退出</a>");
+            	}else{
+            	    $(".loginDiv").html("<a class='pull-left' href='/login?lang=zh_CN'>登录</a>"+
+                      "<sapn class='pull-left navDivision'></sapn>"+
+                      "<a class='pull-left navReg'  href='/login?lang=zh_CN'>注册</a>");
+            	}
+            	
             }
-        });
-    });
+     });
+	});
 </script>

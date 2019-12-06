@@ -14,7 +14,6 @@
     <link href="../resources/css/comm/base.css" rel="stylesheet">
     <link href="../resources/css/index/index.css" rel="stylesheet">
     <script src="../resources/js/comm/jquery.min.js"></script>
-    <script src="../resources/ctrl/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 </head>
 <body>
 <div id="header"></div>
@@ -37,49 +36,46 @@
     <div class="container-fluid mt-20 mb-20 indexEngArea">
         <div class="row  pos-r ecg" >
             <img  class="center-block" width="100%" src="../resources/img/index/banner7-us.png">
-            <img  src="../resources/img/index/banner7-1-us.png" width="26%"
+            <img  src="../resources/img/index/banner7-1-us.png" width="25%"
                   alt="Automatically notify the contact when cardiac arrest is detected" class="pos-a  ecg-1 "
-                  style="left: 18%;top: 43%;">
-            <img src="../resources/img/index/banner7-2-us.png" width="21%" alt="Double-click the APP button to notify the contact"
-                 class="pos-a  ecg-2"
-                 style="left: 17%;top: 64%;">
+                  style="left: 18%;top: 44%;">
+            <img src="../resources/img/index/banner7-2-us.png" width="25%" alt="Double-click the APP button to notify the contact" class="pos-a  ecg-2"
+                 style="left: 13%;top: 63%;">
             <img src="../resources/img/index/banner7-3-us.png" width="25%" alt="Double-click the operating button to notify the contact" class="pos-a  ecg-3"
                  style="left: 18%;top: 85%;">
-            <img src="../resources/img/index/banner7-4-us.png" width="26%" alt="15-minute free monitoring report service"
-                 class="pos-a  ecg-4"
-                 style="right: 18%;top: 43%;">
-            <img src="../resources/img/index/banner7-5-us.png" width="23%" alt="15-minute free monitoring report service"
-                 class="pos-a  ecg-5"
-                 style="right: 17%;top: 64%;">
+            <img src="../resources/img/index/banner7-4-us.png" width="25%" alt="15-minute free monitoring report service" class="pos-a  ecg-4"
+                 style="right: 19%;top: 43%;">
+            <img src="../resources/img/index/banner7-5-us.png" width="25%" alt="15-minute free monitoring report service" class="pos-a  ecg-5"
+                 style="right: 15%;top: 63%;">
             <img src="../resources/img/index/banner7-6-us.png" width="25%" alt="Specialist certified physician online Q&A" class="pos-a  ecg-6"
-                 style="right: 18%;top: 85%;">
+                 style="right: 18%;top: 86%;">
             <div class=" ecg-7"
-                 style="border:2px solid #02D1E3;font-size:12px;color:rgba(255,255,255,1);width: 30%;position:
+                 style="border:2px solid #02D1E3;font-size:12px;font-weight:400;color:rgba(255,255,255,1);width: 30%;position:
                     absolute;left: 1%;top: 54%;padding: 3px 8px;display: none;">
                 The emergency help function button is available on the BisaKangjian APP. When the user is sick, the button can be double-clicked. The ECG equipment will automatically emit a “beep” alarm and automatically send a text message to 3 emergency contacts to reduce time for effective rescue.
             </div>
             <div class=" ecg-8"
-                 style="border:2px solid #02D1E3;font-size:12px;color:rgba(255,255,255,1);width: 30%;position:
+                 style="border:2px solid #02D1E3;font-size:12px;font-weight:400;color:rgba(255,255,255,1);width: 30%;position:
                     absolute;left:4%;top:76%;padding: 3px 8px;display: none;">
                 The emergency help function button is available on the BisaKangjian APP. When the user is sick, the button can be double-clicked. The ECG equipment will automatically emit a “beep” alarm and automatically send a text message to 3 emergency contacts to reduce time for effective rescue.
             </div>
             <div class=" ecg-9"
-                 style="border:2px solid #02D1E3;font-size:12px;color:rgba(255,255,255,1);width: 30%;position:
+                 style="border:2px solid #02D1E3;font-size:12px;font-weight:400;color:rgba(255,255,255,1);width: 30%;position:
                     absolute;left: 1%;top: 79%;padding: 3px 8px;display: none;">
                 After viewing the ECG monitoring report, the user can click on the “Online Inquiry” service on the APP, and the specialist certified physician who cooperates with BisaKangjian will answer questions online with the user during the service time.
             </div>
             <div class=" ecg-10"
-                 style="border:2px solid #02D1E3;font-size:12px;color:rgba(255,255,255,1);width: 30%;position:
+                 style="border:2px solid #02D1E3;font-size:12px;font-weight:400;color:rgba(255,255,255,1);width: 30%;position:
                     absolute;right: 1%;top: 54%;padding: 3px 8px;display: none;">
                 After viewing the ECG monitoring report, the user can click on the “Online Inquiry” service on the APP, and the specialist certified physician who cooperates with BisaKangjian will answer questions online with the user during the service time.
             </div>
             <div class=" ecg-11"
-                 style="border:2px solid #02D1E3;font-size:12px;color:rgba(255,255,255,1);width: 30%;position:
+                 style="border:2px solid #02D1E3;font-size:12px;font-weight:400;color:rgba(255,255,255,1);width: 30%;position:
                     absolute;right: 4%;top: 76%;padding: 3px 8px;display: none;">
                 The user can use the free monitoring service for 15 minutes every day. After the monitoring, the Bisaintelligent ECG monitoring and analysis system will perform heart rate variability analysis (HRV) based on the ECG data to form an AI intelligent monitoring report.
             </div>
             <div class=" ecg-12"
-                 style="border:2px solid #02D1E3;font-size:12px;color:rgba(255,255,255,1);width: 35%;position:
+                 style="border:2px solid #02D1E3;font-size:12px;font-weight:400;color:rgba(255,255,255,1);width: 35%;position:
                     absolute;right: 3%;top: 78%;padding: 3px 8px;display: none;">
                 Users can use the 24-hour dynamic monitoring service, and the Bisha Wisdom ECG monitoring and analysis system intelligently analyzes the monitoring data to form a report. There are two types of reports: AI intelligent monitoring report and manual audit monitoring report. Users can choose the reporting mode independently.
             </div>
@@ -133,62 +129,9 @@
     <!--視屏展示部分-->
     <div class="container">
         <div class="row">
-            <div class="col-md-6 " style="background: red;height:372px;">
+            <div class="col-md-6 col-md-offset-1 " style="background: red;height:372px;">
             </div>
-            <div class="col-md-5 ml-40 mt-20  indexInfo">
-                <div id="myCarousel" class="carousel slide">                        <!--設置輪播器區域樣式，設置輪播器滾動樣式-->
-                    <ol class="carousel-indicators">                                <!--設置輪播器列表區域樣式，就是小圓點區域樣式-->
-
-                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>    <!--設置當前列表首選-->
-                        <li data-target="#myCarousel" data-slide-to="1"></li>
-                        <li data-target="#myCarousel" data-slide-to="2"></li>
-                        <li data-target="#myCarousel" data-slide-to="3"></li>
-                    </ol>
-
-                    <div class="carousel-inner">                                    <!--設置輪播器圖片區域-->
-                        <div class="item active tp1">                                <!--設置輪播器圖片樣式-->
-                            <a href="#" class="myTabContent">
-                                <div class="tab-pane fade in active" id="home">
-                                    <p style="margin-top: 20px;">More comprehensive information</p>
-                                    <p style="margin-top: 15px;">More comprehensive information of body surface 3-channel potential signal
-                                        acquisition</p>
-                                    <p>On the market, single lead home ECG is easy to be misdiagnosed, missed or blocked. Three channels of human ECG can be obtained by careful three lead electrocardiograph, which can reflect the physiological state of the heart more comprehensively.</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="item tp2 myTabContent">
-                            <a href="#" >
-                                <p  style="margin-top: 20px;">Intelligent diagnosis algorithm</p>
-                                <p style="margin-top: 15px;">Intelligent diagnosis algorithm with independent design</p>
-                                <p>The careful three lead electrocardiograph has been certified by CFDA. It is designed with imported medical chips and biosensor system. It has self-designed intelligent diagnosis algorithm. The ECG data collected and analyzed are accurate and reliable.</p>
-                            </a>
-                        </div>
-                        <div class="item tp3 myTabContent">
-                            <a href="#">
-                                <p  style="margin-top: 20px;">Three lead electrocardiograph</p>
-                                <p style="margin-top: 15px;">Wireless three lead Electrocardiograph Based on Bluetooth Technology</p>
-                                <p>Careful wireless three lead ECG instrument uses Bluetooth technology to transmit ECG signals wirelessly, which solves the problems of large volume and weight of equipment, interference of traditional lead wire with users' free activities, inconvenience of users' wearing, etc.</p>
-                            </a>
-                        </div>
-                        <div class="item tp4 myTabContent">
-                            <a href="#">
-                                <p  style="margin-top: 20px;">Suitable for multiple environments</p>
-                                <p style="margin-top: 15px;">It can be used as a clinical diagnostic tool or at home</p>
-                                <p>Careful three lead electrocardiograph has medical grade accuracy, the reliability of professional medical devices and the ease of use of wearable equipment. It can be used as a clinical diagnostic tool, as well as a long-term household monitoring equipment.</p>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!--設置輪播器箭頭區域-->
-                    <!--<a href="#myCarousel" data-slide="prev" class="carousel-control left">-->
-                    <!--<span class="glyphicon glyphicon-chevron-left"></span>-->
-                    <!--</a>-->
-
-                    <!--<a href="#myCarousel" data-slide="next" class="carousel-control right">-->
-                    <!--<span class="glyphicon glyphicon-chevron-right"></span>-->
-                    <!--</a>-->
-
-                </div>
+            <div class="col-md-4 col-md-offset-1 mt-40 " style="background: #2B2B31;padding: 0;">
             </div>
         </div>
     </div>
@@ -196,7 +139,7 @@
     <div class="container-fluid  mt-20">
         <div class="row" style="background: url('../resources/img/index/bisa.png')">
             <div class="col-md-12 text-center company">
-                <h2>BisaTechnology (Hong Kong) Co., Ltd.</h2>
+                <h2>碧莎科技(香港)有限公司</h2>
                 <p>  <img class="img-responsive center-block" src="../resources/img/index/bisa1-us.png" alt="碧莎科技(香港)有限公司"></p>
                 <p class="companyCon col-md-8 col-md-offset-2">
                     Bisa Technology Co., Ltd. is a high-tech enterprise dedicated to the research and development, manufacturing and sales of big data and medical devices. Hong Kong treasure in 2006
@@ -251,10 +194,6 @@
 </body>
 <script>
     $(document).ready(function() {
-        // 轮播图切换时间
-        $('.carousel').carousel({
-            interval: 10000
-        })
         //新聞內容獲取
         function indexNew() {
 
@@ -317,46 +256,34 @@
         });
         function ecg() {
             $(".ecg-1").hover(function () {
-                $(".ecg-1").attr('src', '../resources/img/index/banner7-1-1-us.png');
-                $(".ecg-7").css("display", "block");
-            }, function () {
-                $(".ecg-1").attr('src', '../resources/img/index/banner7-1-us.png');
-                $(".ecg-7").css("display", "none");
+                $(".ecg-7").css("display","block");
+            },function () {
+                $(".ecg-7").css("display","none");
             });
             $(".ecg-2").hover(function () {
-                $(".ecg-2").attr('src', '../resources/img/index/banner7-2-2-us.png');
-                $(".ecg-8").css("display", "block");
-            }, function () {
-                $(".ecg-2").attr('src', '../resources/img/index/banner7-2-us.png');
-                $(".ecg-8").css("display", "none");
+                $(".ecg-8").css("display","block");
+            },function () {
+                $(".ecg-8").css("display","none");
             });
             $(".ecg-3").hover(function () {
-                $(".ecg-3").attr('src', '../resources/img/index/banner7-3-3-us.png');
-                $(".ecg-9").css("display", "block");
-            }, function () {
-                $(".ecg-3").attr('src', '../resources/img/index/banner7-3-us.png');
-                $(".ecg-9").css("display", "none");
+                $(".ecg-9").css("display","block");
+            },function () {
+                $(".ecg-9").css("display","none");
             });
             $(".ecg-4").hover(function () {
-                $(".ecg-4").attr('src', '../resources/img/index/banner7-4-4-us.png');
-                $(".ecg-10").css("display", "block");
-            }, function () {
-                $(".ecg-4").attr('src', '../resources/img/index/banner7-4-us.png');
-                $(".ecg-10").css("display", "none");
+                $(".ecg-10").css("display","block");
+            },function () {
+                $(".ecg-10").css("display","none");
             });
             $(".ecg-5").hover(function () {
-                $(".ecg-5").attr('src', '../resources/img/index/banner7-5-5-us.png');
-                $(".ecg-11").css("display", "block");
-            }, function () {
-                $(".ecg-5").attr('src', '../resources/img/index/banner7-5-us.png');
-                $(".ecg-11").css("display", "none");
+                $(".ecg-11").css("display","block");
+            },function () {
+                $(".ecg-11").css("display","none");
             });
             $(".ecg-6").hover(function () {
-                $(".ecg-6").attr('src', '../resources/img/index/banner7-6-6-us.png');
-                $(".ecg-12").css("display", "block");
-            }, function () {
-                $(".ecg-6").attr('src', '../resources/img/index/banner7-6-us.png');
-                $(".ecg-12").css("display", "none");
+                $(".ecg-12").css("display","block");
+            },function () {
+                $(".ecg-12").css("display","none");
             });
         }
         ecg();
