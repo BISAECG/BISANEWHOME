@@ -44,7 +44,11 @@
 </script>
 <div class="wrap clear" id="title-list">
     <div class="container-full pos-r center-block">
+<<<<<<< HEAD
         <img class="img-responsive center-block" src="/resources/img/news/HK_HowToShop/banner.png" >
+=======
+        <img class="img-responsive center-block" src="../resources/img/news/HK_HowToShop/banner.png" >
+>>>>>>> parent of e788834... pc端修改样式
         <p class="f-40" style="color: #FFFFFF;position: absolute;left:45%;top: 15%; ">
             健康资讯
         </p>
