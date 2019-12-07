@@ -1,9 +1,9 @@
 <div class="header">
-    <link href='../resources/ctrl/bootstrap-3.3.7-dist/css/bootstrap.min.css' rel='stylesheet'>
-    <link href='../resources/css/index/head.css' rel='stylesheet'>
-    <link href='../resources/ctrl/font-awesome-4.7.0/css/font-awesome.min.css' rel='stylesheet'>
-    <script src='../resources/js/comm/jquery.min.js'></script>
-    <script src='../resources/js/index/head.js'></script>
+    <link href='/resources/ctrl/bootstrap-3.3.7-dist/css/bootstrap.min.css' rel='stylesheet'>
+    <link href='/resources/css/index/head.css' rel='stylesheet'>
+    <link href='/resources/ctrl/font-awesome-4.7.0/css/font-awesome.min.css' rel='stylesheet'>
+    <script src='/resources/js/comm/jquery.min.js'></script>
+    <script src='/resources/js/index/head.js'></script>
     <!--[if lt IE 9支持html5代码]-->
     <script src='https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js'></script>
     <script src='https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js'></script>
@@ -19,7 +19,7 @@
                     <a id='lang-cn' href='/index?lang=zh_CN'>简体</a>
                     <span class="navTitle">|</span>
                     <a id='lang-us' href='/index?lang=en_US'>English</a>
-                    <img src='../resources/img/HK_About/hk.png'>
+                    <img src='/resources/img/HK_About/hk.png'>
                 </div>
                 <div class="col-md-3 col-md-offset-3 loginDiv">
              
@@ -31,7 +31,7 @@
         <div class='row pos-r navLogo'>
             <div class='col-md-2 pos-a'>
                 <a href='index.html'>
-                    <img class='img-responsive center-block' src='../resources/img/index/logov1.png' alt='碧沙康健logo'>
+                    <img class='img-responsive center-block' src='/resources/img/index/logov1.png' alt='碧沙康健logo'>
                 </a>
             </div>
             <span class="pull-left logoTop"></span>
@@ -42,26 +42,26 @@
             </div>
             <div class='pull-right navRight'>
                 <div class='pull-left  text-center'>
-                    <img style='margin-bottom: 11px;margin-top: 9px;' src='../resources/img/index/logo1.png' alt='CFDA认证'>
+                    <img style='margin-bottom: 11px;margin-top: 9px;' src='/resources/img/index/logo1.png' alt='CFDA认证'>
                     <p style='font-size: 12px;margin-bottom: 5px;'>国家认证</p>
                     <p style='font-size: 12px;'>医疗器械</p>
                 </div>
                 <span class='inline-block pull-left' style='height:78px;border-left: 2px solid #F1F1F1;'></span>
                 <div class='pull-left  text-center' style='margin: 0 20px;'>
-                    <img style='margin-bottom: 11px' src='../resources/img/index/logo2.png' alt="欧盟CE认证">
+                    <img style='margin-bottom: 11px' src='/resources/img/index/logo2.png' alt="欧盟CE认证">
                     <p style='margin-bottom: 5px;font-size: 12px;'>欧盟CE</p>
                     <p style='font-size: 12px;'>认证产品</p>
                 </div>
                 <span class='inline-block pull-left' style='height:78px;border-left: 2px solid #F1F1F1;'></span>
                 <div class='pull-left  text-center' style='margin: 0 20px;'>
-                    <img style='margin-bottom: 5px' src='../resources/img/index/logo3.png' alt="知识产权专利作品">
+                    <img style='margin-bottom: 5px' src='/resources/img/index/logo3.png' alt="知识产权专利作品">
                     <p style='font-size: 12px;margin-bottom: 5px;'>知识产权局</p>
                     <p style='font-size: 12px;'>专利作品</p>
 
                 </div>
                 <span class='inline-block pull-left' style='height:78px;border-left: 2px solid #F1F1F1;'></span>
                 <div class='pull-left  text-center' style='margin: 0 20px;'>
-                    <img style='margin-bottom: 7px;' src='../resources/img/index/logo4.png' alt="碧沙康健健康热线">
+                    <img style='margin-bottom: 7px;' src='/resources/img/index/logo4.png' alt="碧沙康健健康热线">
                     <p style='font-size: 12px;padding-bottom: 2px;'>健康热线</p>
                     <p class='phone' style='font-size: 20px;font-weight: bold;'>${company_phone}</p>
                 </div>
@@ -121,7 +121,7 @@
                 <ul class='bar-top' style="list-style: none;">
                     <li class='bar-sortS'>
                         <a href='down.html' class='bar-link pos-r'>
-                            <img id='bar-sort1' src='../resources/img/index/Sidebar1.png' alt="下载APP">
+                            <img id='bar-sort1' src='/resources/img/index/Sidebar1.png' alt="下载APP">
                             <span class='pos-a' style='top: 64%;left: 10%;color: #fff;'>
                                 下载APP
                             </span>
@@ -129,7 +129,7 @@
                     </li>
                     <li class='bar-sort'>
                         <a href='book.html' title='留言板还在建设中' styele='cursor:not-allowed;' class='bar-link pos-r'>
-                            <img id='bar-sort2' src='../resources/img/index/Sidebar2.png' alt="留言板" '>
+                            <img id='bar-sort2' src='/resources/img/index/Sidebar2.png' alt="留言板" '>
                             <span class='pos-a' style='top: 56%;left: 20%;color: #fff;'>
                                 留言板
                             </span>
@@ -137,7 +137,7 @@
                     </li>
                     <li class='bar-sort'>
                         <a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=3299503761&site=qq&menu=yes' class='pos-r'>
-                            <img id='bar-sort4' border='0' src='../resources/img/index/Sidebar4.png' alt="QQ客服"
+                            <img id='bar-sort4' border='0' src='/resources/img/index/Sidebar4.png' alt="QQ客服"
                                  title='点击这里给我发消息'/>
                             <span class='pos-a' style='top: 210%;left: 10%;color: #fff;'>
                                 QQ客服
@@ -147,7 +147,7 @@
                 </ul>
             </div>
             <a class='bar-totop bar-sort J_barToTop J_barToTopL  pos-r' href='javascript:;'>
-                <img class='original-img' src='../resources/img/index/Sidebar5.png' alt="回顶部">
+                <img class='original-img' src='/resources/img/index/Sidebar5.png' alt="回顶部">
                 <span class='pos-a' style='top: 90%;left: 20%;color: #fff;'>
                     回顶部
                 </span>

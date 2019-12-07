@@ -18,11 +18,11 @@
     <!-- description -->
     <meta name="renderer" content="webkit">
     <!-- base -->
-    <link href="../resources/ctrl/layui/css/layui.css" rel="stylesheet">
-    <link href="../resources/css/comm/base.css" rel="stylesheet">
-    <link href="../resources/css/about/HK_About.css" rel="stylesheet">
-    <link href="../resources/ctrl/layui/css/layui.css" rel="stylesheet">
-    <script src="../resources/js/comm/jquery.min.js"></script>
+    <link href="/resources/ctrl/layui/css/layui.css" rel="stylesheet">
+    <link href="/resources/css/comm/base.css" rel="stylesheet">
+    <link href="/resources/css/about/HK_About.css" rel="stylesheet">
+    <link href="/resources/ctrl/layui/css/layui.css" rel="stylesheet">
+    <script src="/resources/js/comm/jquery.min.js"></script>
     <style>
         .title-color {
             background-color: rgba(1, 144, 255, 0.3);
@@ -37,7 +37,7 @@
 </script>
 <div class="wrap clear">
     <div class="clear full-w">
-        <img class="full-w" src="../resources/img/news/HK_HowToShop/banner.jpg" alt="">
+        <img class="full-w" src="/resources/img/news/HK_HowToShop/banner.jpg" alt="">
     </div>
     <div class="container mt-30 pl-0 pr-0 clear bg-f5f5f5 pt-30 pb-70 mb-60">
         <div class="col-sm-3 pl-30 pr-20">
@@ -59,7 +59,7 @@
                 </p>
                 <p id="p4"
                    class="col-757575 f-20-16-ipad line-h-25 mt-40 mb-20 cur-p hovecol-309DE2 col-active instructions-list2">
-                    <a href="../resources/img/news/HK-Instructions/PECG.pdf" download="PECG.pdf">
+                    <a href="/resources/img/news/HK-Instructions/PECG.pdf" download="PECG.pdf">
                         PECG使用說明書下載</a>
             </div>
         </div>
@@ -81,7 +81,7 @@
                             </p>
                             <p class=" h-20 line-h-20 mt-30">
                                 <a download="bisahealth.apk"
-                                   href="../resources/img/news/HK-Instructions/bishahealth.apk">點擊下載</a>
+                                   href="/resources/img/news/HK-Instructions/bishahealth.apk">點擊下載</a>
                             </p>
                             <p class="f-20 col-333 h-20 line-h-20 mt-30">
                                 二維碼下載：
@@ -90,7 +90,7 @@
                                 請使用手機截圖後在微信或瀏覽器掃描截圖二維碼進入碧沙康健APP下載地址。
                             </p>
                             <div class="clear text-center mt-40 mb-40">
-                                <img class="img-180" src="../resources/img/news/HK-Instructions/qr_code.png" alt="碧沙康健app下載">
+                                <img class="img-180" src="/resources/img/news/HK-Instructions/qr_code.png" alt="碧沙康健app下載">
                             </div>
                         </div>
                     </div>
@@ -112,13 +112,13 @@
                                 （4）點擊進入就註冊成功了。
                             </p>
                             <div class="clear text-center mt-25">
-                                <img src="../resources/img/news/HK-Instructions/in_register_tipsv1.png">
+                                <img src="/resources/img/news/HK-Instructions/in_register_tipsv1.png">
                             </div>
                             <p class="f-20 col-333 line-h-30 mt-25">
                                 （5）首次登錄需設置密碼，以後可選擇手機號和密碼登錄。
                             </p>
                             <div class="clear text-center mt-25">
-                                <img src="../resources/img/news/HK-Instructions/in_register_tipsv2.png">
+                                <img src="/resources/img/news/HK-Instructions/in_register_tipsv2.png">
                             </div>
                         </div>
                     </div>
@@ -141,7 +141,7 @@
                                 （3）點擊右上角 + 號進入 綁定設備 界面 拷貝
                             </p>
                             <div class="clear text-center mt-25">
-                                <img src="../resources/img/news/HK-Instructions/in_bound_tipsv1.png">
+                                <img src="/resources/img/news/HK-Instructions/in_bound_tipsv1.png">
                             </div>
                             <p class="f-20 col-333 line-h-30 mt-15 pl-30">
                                 （4）點擊 開始匹配 按鈕等待搜索附近的悉心產品
@@ -150,13 +150,13 @@
                                 （5）選中藍牙搜索展示的產品設備號後點擊確認添加設備
                             </p>
                             <div class="clear text-center mt-25">
-                                <img src="../resources/img/news/HK-Instructions/in_bound_tipsv2.png">
+                                <img src="/resources/img/news/HK-Instructions/in_bound_tipsv2.png">
                             </div>
                             <p class="f-20 col-333 line-h-30 mt-25 pl-30">
                                 （6）綁定成功，您可正常使用碧沙康健APP監測心電了
                             </p>
                             <div class="clear text-center mt-25">
-                                <img src="../resources/img/news/HK-Instructions/in_bound_tipsv4.png">
+                                <img src="/resources/img/news/HK-Instructions/in_bound_tipsv4.png">
                             </div>
                             <p class="f-20 col-333 line-h-30 mt-30">
                                 2.解綁產品流程：
@@ -168,7 +168,7 @@
                                 （2）點擊左上角 垃圾桶 按鈕開啟刪除模式
                             </p>
                             <div class="clear text-center mt-25">
-                                <img src="../resources/img/news/HK-Instructions/in_bound_tipsv5.png">
+                                <img src="/resources/img/news/HK-Instructions/in_bound_tipsv5.png">
                             </div>
                             <p class="f-20 col-333 line-h-30 mt-25 pl-30">
                                 （3）勾選需要解綁的設備
@@ -177,7 +177,7 @@
                                 （4）點擊右下角 刪除 按鈕確認刪除
                             </p>
                             <div class="clear text-center mt-25 mb-35">
-                                <img src="../resources/img/news/HK-Instructions/in_bound_tipsv6.png">
+                                <img src="/resources/img/news/HK-Instructions/in_bound_tipsv6.png">
                             </div>
                         </div>
                     </div>
@@ -200,31 +200,31 @@
                                 （3）登錄碧沙康健APP進入 全部設備 界面
                             </p>
                             <div class="clear text-center mt-25">
-                                <img src="../resources/img/news/HK-Instructions/in_report_tipsv1.png">
+                                <img src="/resources/img/news/HK-Instructions/in_report_tipsv1.png">
                             </div>
                             <p class="f-20 col-333 line-h-30 mt-25">
                                 （4）點擊列表中已綁定的心電儀產品進入 心電監測 界面。
                             </p>
                             <div class="clear text-center mt-25">
-                                <img src="../resources/img/news/HK-Instructions/in_report_tipsv2.png">
+                                <img src="/resources/img/news/HK-Instructions/in_report_tipsv2.png">
                             </div>
                             <p class="f-20 col-333 line-h-30 mt-25">
                                 （5）點擊左下角 生成報告 按鈕選擇需要生成的報告類型（收費報告需提前充值）
                             </p>
                             <div class="clear text-center mt-25">
-                                <img src="../resources/img/news/HK-Instructions/in_report_tipsv3.png">
+                                <img src="/resources/img/news/HK-Instructions/in_report_tipsv3.png">
                             </div>
                             <p class="f-20 col-333 line-h-30 mt-25">
                                 （6）點擊 開始監測 按鈕後根據所選報告監測時長持續佩戴心電儀
                             </p>
                             <div class="clear text-center mt-25">
-                                <img src="../resources/img/news/HK-Instructions/in_report_tipsv4.png">
+                                <img src="/resources/img/news/HK-Instructions/in_report_tipsv4.png">
                             </div>
                             <p class="f-20 col-333 line-h-30 mt-25">
                                 （7）報告將在監測結束後生成並推送給您，您也可以點擊右下角 立即生成 按鈕立即生成與查看報告。
                             </p>
                             <div class="clear text-center mt-25">
-                                <img src="../resources/img/news/HK-Instructions/shuomingimg_7.png">
+                                <img src="/resources/img/news/HK-Instructions/shuomingimg_7.png">
                             </div>
                             <p class="f-20 col-333 line-h-30 mt-25">
                                 （8）您也可以在 心電監測 界面右下角點擊 查看報告 按鈕查看歷史報告
@@ -243,28 +243,28 @@
                                 （3）登錄碧沙康健APP進入 全部設備 界面
                             </p>
                             <div class="clear text-center mt-25">
-                                <img src="../resources/img/news/HK-Instructions/chargeInstructions_1.png">
+                                <img src="/resources/img/news/HK-Instructions/chargeInstructions_1.png">
                             </div>
                             <p class="f-20 col-333 line-h-30 mt-25">
                                 （4）點擊列表中已綁定的該心電儀產品進入 心電監測界面
                             </p>
                             <div class="clear text-center mt-25">
-                                <img src="../resources/img/news/HK-Instructions/chargeInstructions_2.png">
+                                <img src="/resources/img/news/HK-Instructions/chargeInstructions_2.png">
                             </div>
                             <p class="f-20 col-333 line-h-30 mt-25">
                                 （5）使用OTG數據線將手機與心電儀設備連接並等待 註意事項提示，確認後進入 選擇數據 界面，如未彈出 註意事項提示 請在連接後點擊左下角 生成報告 按鈕選擇生成24小時收費報告並 開啟監測。
                             </p>
                             <div class="clear text-center mt-25">
-                                <img src="../resources/img/news/HK-Instructions/chargeInstructions_3.png">
+                                <img src="/resources/img/news/HK-Instructions/chargeInstructions_3.png">
                             </div>
                             <div class="clear text-center mt-25">
-                                <img src="../resources/img/news/HK-Instructions/in_report_tipsv3.png">
+                                <img src="/resources/img/news/HK-Instructions/in_report_tipsv3.png">
                             </div>
                             <p class="f-20 col-333 line-h-30 mt-25">
                                 （6）在 選擇數據 界面勾選需要生成報告的心電數據（心電數據根據日期和時間排列，只能勾選壹個時間段）。
                             </p>
                             <div class="clear text-center mt-25">
-                                <img src="../resources/img/news/HK-Instructions/chargeInstructions_4.png">
+                                <img src="/resources/img/news/HK-Instructions/chargeInstructions_4.png">
                             </div>
                             <p class="f-20 col-333 line-h-30 mt-25">
                                 （7）點擊右下角 生成報告 按鈕上傳數據，所有操作完畢。（收費報告需要壹定時間進行人工審核，完成後將自動推送給您，請耐心等候）。
@@ -277,25 +277,25 @@
                                 （1）登錄碧沙康健APP進入 全部設備 界面
                             </p>
                             <div class="clear text-center mt-25">
-                                <img src="../resources/img/news/HK-Instructions/chargeInstructions_1.png">
+                                <img src="/resources/img/news/HK-Instructions/chargeInstructions_1.png">
                             </div>
                             <p class="f-20 col-333 line-h-30 mt-25">
                                 （2）點擊列表中已綁定的心電儀產品進入 心電監控 界面
                             </p>
                             <div class="clear text-center mt-25">
-                                <img src="../resources/img/news/HK-Instructions/history2.png" >
+                                <img src="/resources/img/news/HK-Instructions/history2.png" >
                             </div>
                             <p class="f-20 col-333 line-h-30 mt-25">
                                 （3）點擊右下角 查看報告 按鈕進入日歷界面
                             </p>
                             <div class="clear text-center mt-25">
-                                <img src="../resources/img/news/HK-Instructions/history_3.png">
+                                <img src="/resources/img/news/HK-Instructions/history_3.png">
                             </div>
                             <p class="f-20 col-333 line-h-30 mt-25">
                                 （4）您可以通過選中日期來篩選想要查看的歷史報告，點擊下方對應的報告類型即可查看報告詳情。
                             </p>
                             <div class="clear text-center mt-25">
-                                <img src="../resources/img/news/HK-Instructions/history4.png" >
+                                <img src="/resources/img/news/HK-Instructions/history4.png" >
                             </div>
                         </div>
                     </div>
@@ -320,7 +320,7 @@
                                 取出壹臺處於關閉狀態的動態心電記錄儀，將電極片與動態心電記錄儀四角對齊扣合並揭去電極片保護膜。
                             </p>
                             <div class="clear text-center mt-40 mb-40">
-                                <img class="img-180" src="../resources/img/news/HK-Instructions/diyihang.png">
+                                <img class="img-180" src="/resources/img/news/HK-Instructions/diyihang.png">
                             </div>
                         </div>
                     </div>
@@ -334,7 +334,7 @@
                                 建議剃掉在電極片安放位置（紅色橢圓區域）的體毛，徹底清潔電極片安裝位置的皮膚上的油脂和汙垢，保持動態心電記錄儀的操作鍵朝上的方向，將壹次性使用心電電極貼片緊密貼合皮膚，把電極片貼在圖中橢圓圈指定的位置，靠近心窩部兩側。
                             </p>
                             <div class="clear text-center mt-40 mb-40">
-                                <img class="img-180" src="../resources/img/news/HK-Instructions/dierhang_cn.png" >
+                                <img class="img-180" src="/resources/img/news/HK-Instructions/dierhang_cn.png" >
                             </div>
                         </div>
                     </div>
@@ -348,7 +348,7 @@
                                 啟動動態心電記錄儀, 長按操作鍵直至指示燈顯示為綠色，數秒後指示燈開始閃爍, 采集數據開始。
                             </p>
                             <div class="clear text-center mt-40 mb-40">
-                                <img class="img-180" src="../resources/img/news/HK-Instructions/disanhang_cn.png" >
+                                <img class="img-180" src="/resources/img/news/HK-Instructions/disanhang_cn.png" >
                             </div>
                         </div>
                     </div>
@@ -373,7 +373,7 @@
                                 采集數據結束後, 用手按著動態心電記錄儀, 如下圖所示，從電極片的A處開始, 然後由外向內慢慢揭下壹次性使用心電電極片，放下動態心電記錄儀，然後拔開電極片，將電極片棄置垃圾桶。取下時切勿用力撕扯電極片，以免損傷皮膚。
                             </p>
                             <div class="clear text-center mt-40 mb-40">
-                                <img class="img-180" src="../resources/img/news/HK-Instructions/diwuhang.png">
+                                <img class="img-180" src="/resources/img/news/HK-Instructions/diwuhang.png">
                             </div>
                         </div>
                     </div>
@@ -387,8 +387,8 @@
                                 將動態心電記錄儀通過OTG數據線連接手機或者通過USB數據線連接電腦，上傳動態心電記錄儀數據請參考本公司官網最新說明書。
                             </p>
                             <div class="clear text-center mt-40 mb-40">
-                                <img class="img-180" src="../resources/img/news/HK-Instructions/diliuhang.png">
-                                <img class="img-180" src="../resources/img/news/HK-Instructions/diliuhang_2.png">
+                                <img class="img-180" src="/resources/img/news/HK-Instructions/diliuhang.png">
+                                <img class="img-180" src="/resources/img/news/HK-Instructions/diliuhang_2.png">
                             </div>
                         </div>
                     </div>
@@ -430,13 +430,13 @@
                                 以下表格為三個狀態的詳細說明：
                             </p>
                             <div class="clear text-center mt-40 mb-40">
-                                <img class="img-360" src="../resources/img/news/HK-Instructions/zhuangtai_cn.png" >
+                                <img class="img-360" src="/resources/img/news/HK-Instructions/zhuangtai_cn.png" >
                             </div>
                             <p class="col-333">
                                 三個狀態切換方式如下圖所示：
                             </p>
                             <div class="clear text-center mt-40 mb-40">
-                                <img class="img-360" src="../resources/img/news/HK-Instructions/qiehuan_cn.png" >
+                                <img class="img-360" src="/resources/img/news/HK-Instructions/qiehuan_cn.png" >
                             </div>
                             <p class="col-333">
                                 註意事項 :
@@ -465,7 +465,7 @@
                                 符號:
                             </p>
                             <div>
-                                <img class="img-360" src="../resources/img/news/HK-Instructions/fuhao_cn.png" >
+                                <img class="img-360" src="/resources/img/news/HK-Instructions/fuhao_cn.png" >
                             </div>
                         </div>
                     </div>
@@ -512,37 +512,37 @@
                                 2. 打開 我的電腦。
                             </p>
                             <div class="clear text-center mt-40 mb-40">
-                                <img src="../resources/img/news/HK-Instructions/apple1.png">
+                                <img src="/resources/img/news/HK-Instructions/apple1.png">
                             </div>
                             <p class="f-20 col-333 h-20 line-h-20 mt-20">
                                 3.打開 HC3A250 盤（如找不到HC3A250盤，可能是記錄儀與電腦連接失敗，請再次拔插嘗試連接）。
                             </p>
                             <div class="clear text-center mt-40 mb-40">
-                                <img src="../resources/img/news/HK-Instructions/apple2.png">
+                                <img src="/resources/img/news/HK-Instructions/apple2.png">
                             </div>
                             <p class="f-20 col-333 h-20 line-h-20 mt-20">
                                 4.進入 USDATA 文件夾。
                             </p>
                             <div class="clear text-center mt-40 mb-40">
-                                <img src="../resources/img/news/HK-Instructions/apple3.png">
+                                <img src="/resources/img/news/HK-Instructions/apple3.png">
                             </div>
                             <p class="f-20 col-333 h-20 line-h-20 mt-20">
                                 5.根據文件名中的日期時間（紅線標記部分）找出需要上傳的ECD文件。
                             </p>
                             <div class="clear text-center mt-40 mb-40">
-                                <img src="../resources/img/news/HK-Instructions/apple15.png">
+                                <img src="/resources/img/news/HK-Instructions/apple15.png">
                             </div>
                             <p class="f-20 col-333 h-20 line-h-20 mt-20">
                                 6.右鍵 ECD文件 ，在菜單中點擊複制（紅線標記部分）。
                             </p>
                             <div class="clear text-center mt-40 mb-40">
-                                <img src="../resources/img/news/HK-Instructions/apple5.png">
+                                <img src="/resources/img/news/HK-Instructions/apple5.png">
                             </div>
                             <p class="f-20 col-333 h-20 line-h-20 mt-20">
                                 7.回到 桌面 右鍵桌面，在菜單中點擊粘貼（紅線標記部分）。
                             </p>
                             <div class="clear text-center mt-40 mb-40">
-                                <img src="../resources/img/news/HK-Instructions/apple6.png">
+                                <img src="/resources/img/news/HK-Instructions/apple6.png">
                             </div>
                             <p class="f-20 col-333 h-20 line-h-20 mt-20">
                                 8.使用浏覽器進入
@@ -554,13 +554,13 @@
                                 9.使用賬號密碼登錄（忘記密碼可使用免密登錄）。
                             </p>
                             <div class="clear text-center mt-40 mb-40">
-                                <img src="../resources/img/news/HK-Instructions/apple7.png">
+                                <img src="/resources/img/news/HK-Instructions/apple7.png">
                             </div>
                             <p class="f-20 col-333 h-20 line-h-20 mt-20">
                                 10.在左側菜單中點擊 報告管理 。
                             </p>
                             <div class="clear text-center mt-40 mb-40">
-                                <img src="../resources/img/news/HK-Instructions/apple8.png">
+                                <img src="/resources/img/news/HK-Instructions/apple8.png">
                             </div>
                             <p class="f-20 col-333 h-20 line-h-20 mt-20">
                                 11.點擊 新建報告 按鈕打開創建報告界面。
@@ -569,22 +569,22 @@
                                 12.點擊 上傳ECD 按鈕（紅框標記部分）打開文件選擇框。
                             </p>
                             <div class="clear text-center mt-40 mb-40">
-                                <img src="../resources/img/news/HK-Instructions/apple9.png">
+                                <img src="/resources/img/news/HK-Instructions/apple9.png">
                             </div>
                             <p class="f-20 col-333 h-20 line-h-20 mt-20">
                                 13.點擊左側 桌面（紅框標記部分） 後找出並選中之前粘貼的ECD文件，點擊右下角 打開 按鈕。
                             </p>
                             <div class="clear text-center mt-40 mb-40">
-                                <img src="../resources/img/news/HK-Instructions/apple10.png">
+                                <img src="/resources/img/news/HK-Instructions/apple10.png">
                             </div>
                             <p class="f-20 col-333 h-20 line-h-20 mt-20">
                                 14.載入文件後請點擊 預覽 按鈕，拖動下方圓形按鈕查看並確保ECD文件中數據是為有效數據（請參照 正常波形圖 與 雜亂波形圖），查看完畢請關閉 預覽 窗口。
                             </p>
                             <div class="clear text-center mt-40 mb-40">
-                                <img src="../resources/img/news/HK-Instructions/apple16.png">
+                                <img src="/resources/img/news/HK-Instructions/apple16.png">
                             </div>
                             <div class="clear text-center mt-40 mb-40">
-                                <img src="../resources/img/news/HK-Instructions/apple17.png">
+                                <img src="/resources/img/news/HK-Instructions/apple17.png">
                             </div>
                             <p class="f-20 col-333 h-20 line-h-20 mt-20">
                                 15.填寫 姓名、年齡、性別等必選項 ，選填其他內容。
@@ -593,19 +593,19 @@
                                 16.點擊 創建報告 按鈕（紅框標記部分），用戶完成所有上傳操作。
                             </p>
                             <div class="clear text-center mt-40 mb-40">
-                                <img src="../resources/img/news/HK-Instructions/apple11.png">
+                                <img src="/resources/img/news/HK-Instructions/apple11.png">
                             </div>
                             <p class="f-20 col-333 h-20 line-h-20 mt-20">
                                 17.等待報告生成與查看報告生成狀態（48小時內生成，請留意報告狀態）。
                             </p>
                             <div class="clear text-center mt-40 mb-40">
-                                <img src="../resources/img/news/HK-Instructions/apple12.png">
+                                <img src="/resources/img/news/HK-Instructions/apple12.png">
                             </div>
                             <p class="f-20 col-333 h-20 line-h-20 mt-20">
                                 18.報告狀態處于 待查看 時，用戶可查看、下載報告。
                             </p>
                             <div class="clear text-center mt-40 mb-40">
-                                <img src="../resources/img/news/HK-Instructions/apple13.png">
+                                <img src="/resources/img/news/HK-Instructions/apple13.png">
                             </div>
                         </div>
                     </div>
@@ -619,10 +619,10 @@
     $("#footer").load("footer.html");
 </script>
 </body>
-<!--<script src="../resources/js/comm/jquery.validate.min.js"></script>-->
-<!--<script src="../resources/js/comm/jquery.validate.messages_zh.js"></script>-->
-<script src="../resources/ctrl/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-<script src="../resources/ctrl/layui/layui.js"></script>
-<script src="../resources/js/about/HK-Instructions.js"></script>
+<!--<script src="/resources/js/comm/jquery.validate.min.js"></script>-->
+<!--<script src="/resources/js/comm/jquery.validate.messages_zh.js"></script>-->
+<script src="/resources/ctrl/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script src="/resources/ctrl/layui/layui.js"></script>
+<script src="/resources/js/about/HK-Instructions.js"></script>
 
 </html>

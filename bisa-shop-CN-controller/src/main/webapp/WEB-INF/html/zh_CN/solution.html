@@ -15,10 +15,10 @@
     <!-- description -->
     <meta name="renderer" content="webkit">
     <!-- base -->
-    <link href="../resources/css/comm/base.css" rel="stylesheet">
-    <link href="../resources/css/about/HK_About.css" rel="stylesheet">
-    <link href="../resources/css/index/index.css" rel="stylesheet">
-    <script src="../resources/js/comm/jquery.min.js"></script>
+    <link href="/resources/css/comm/base.css" rel="stylesheet">
+    <link href="/resources/css/about/HK_About.css" rel="stylesheet">
+    <link href="/resources/css/index/index.css" rel="stylesheet">
+    <script src="/resources/js/comm/jquery.min.js"></script>
 </head>
 <style>
     .taobao1{
@@ -81,7 +81,7 @@
                 </p>
             </div>
             <div class="col-md-4 col-md-offset-2" >
-                <img class="img-responsive center-block mt-60" src="../resources/img/solution/banner.png">
+                <img class="img-responsive center-block mt-60" src="/resources/img/solution/banner.png">
             </div>
         </div>
     </div>
@@ -93,7 +93,7 @@
         <span class="line-btm"></span>
     </div>
     <div class="row mb-40" style="background:rgba(246,246,246,1);">
-        <img style="padding: 20px"  class="img-responsive center-block" src="../resources/img/solution/banner2.png" alt="碧沙心电仪四大优势">
+        <img style="padding: 20px"  class="img-responsive center-block" src="/resources/img/solution/banner2.png" alt="碧沙心电仪四大优势">
     </div>
     <p class="title-p">四大优势</p>
     <div class="line">
@@ -101,7 +101,7 @@
         <span class="line-btm"></span>
     </div>
     <div class="row mb-40 pos-r">
-        <img class="img-responsive center-block" src="../resources/img/solution/banner3.png" alt="碧沙心电仪四大优势">
+        <img class="img-responsive center-block" src="/resources/img/solution/banner3.png" alt="碧沙心电仪四大优势">
         <div style="left: 12%;top: 56%;width:15%;" class="Advantage">
                   碧沙心电仪使用简单，无需导联线，方便佩戴。除剧烈运动外，患者正常的日常活动不会影响心电监测。患者可自助使用或摘除心电仪， 医师可以根据患者制定长时段监测方案。
         </div>
@@ -121,7 +121,7 @@
         <span class="line-btm"></span>
     </div>
     <div class="row  mb-40 mt-40">
-        <img  class="img-responsive center-block" src="../resources/img/solution/banner4.gif" alt="碧沙心电仪方案流程">
+        <img  class="img-responsive center-block" src="/resources/img/solution/banner4.gif" alt="碧沙心电仪方案流程">
     </div>
     <p class="title-p">方案配置</p>
     <div class="line">
@@ -130,7 +130,7 @@
     </div>
     <div class="row  mb-40 " style="background: #F3F6FF;">
         <div style="border: 10px solid #E6ECFF;width: 16%;margin: 20px 20px 20px 5%;float: left;">
-            <img src="../resources/img/solution/banner6-1.png">
+            <img src="/resources/img/solution/banner6-1.png">
             <div style="margin: 5px;background: #FFF;">
                 <p style="margin-bottom:4px;font-size:18px;font-weight:bold;color:rgba(51,51,51,1);line-height:40px;">碧沙智慧心电监测分析系统</p>
                 <p style="width:34px;height:8px;background:rgba(132,132,132,1);"></p>
@@ -141,7 +141,7 @@
             </div>
         </div>
         <div style="border: 10px solid #E6ECFF;width: 16%;margin: 20px;float: left;">
-            <img src="../resources/img/solution/banner6-2.png">
+            <img src="/resources/img/solution/banner6-2.png">
             <div style="margin: 5px;background: #FFF;">
                 <p style="margin-bottom:4px;font-size:18px;font-weight:bold;color:rgba(51,51,51,1);line-height:40px;">五台碧沙心电仪
                 </p>
@@ -154,7 +154,7 @@
             </div>
         </div>
         <div style="border: 10px solid #E6ECFF;width: 16%;margin: 20px;float: left;">
-            <img src="../resources/img/solution/banner6-3.png">
+            <img src="/resources/img/solution/banner6-3.png">
             <div style="margin: 5px;background: #FFF;">
                 <p style="margin-bottom:4px;font-size:18px;font-weight:bold;color:rgba(51,51,51,1);line-height:40px;">一年免费数据转换服务</p>
                 <p style="width:34px;height:8px;background:rgba(132,132,132,1);"></p>
@@ -166,7 +166,7 @@
             </div>
         </div>
         <div style="border: 10px solid #E6ECFF;width: 16%;margin: 20px;float: left;">
-            <img src="../resources/img/solution/banner6-4.png">
+            <img src="/resources/img/solution/banner6-4.png">
             <div style="margin: 5px;background: #FFF;">
                 <p style="margin-bottom:4px;font-size:18px;font-weight:bold;color:rgba(51,51,51,1);line-height:40px;">一台专业电脑</p>
                 <p style="width:34px;height:8px;background:rgba(132,132,132,1);"></p>
@@ -178,7 +178,7 @@
             </div>
         </div>
         <div style="border: 10px solid #E6ECFF;width: 16%;margin: 20px;float: left;">
-            <img src="../resources/img/solution/banner6-5.png">
+            <img src="/resources/img/solution/banner6-5.png">
             <div style="margin: 5px;background: #FFF;">
                 <p style="margin-bottom:4px;font-size:18px;font-weight:bold;color:rgba(51,51,51,1);line-height:40px;">一年免费培训</p>
                 <p style="width:34px;height:8px;background:rgba(132,132,132,1);"></p>
@@ -196,7 +196,7 @@
         <span class="line-btm"></span>
     </div>
     <div class="row  mb-40 ">
-        <img  class="img-responsive center-block" src="../resources/img/index/banner6.png" alt="碧沙心电仪合作伙伴">
+        <img  class="img-responsive center-block" src="/resources/img/index/banner6.png" alt="碧沙心电仪合作伙伴">
     </div>
 </div>
 <div id="footer"></div>

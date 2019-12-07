@@ -16,9 +16,9 @@
     <!-- description -->
     <meta name="renderer" content="webkit">
     <!-- base -->
-    <link href="../resources/css/comm/base.css" rel="stylesheet">
-    <link href="../resources/css/about/HK_About.css" rel="stylesheet">
-    <script src="../resources/js/comm/jquery.min.js"></script>
+    <link href="/resources/css/comm/base.css" rel="stylesheet">
+    <link href="/resources/css/about/HK_About.css" rel="stylesheet">
+    <script src="/resources/js/comm/jquery.min.js"></script>
     <style>
         .title-color{
             background-color:rgba(1,144,255,0.3);
@@ -42,7 +42,7 @@
 </script>
 <div class="wrap clear  mb-60">
     <div class="container-full pos-r">
-        <img src="../resources/img/news/HK_HowToShop/banner.png"  alt="碧沙康健資訊問A">
+        <img src="/resources/img/news/HK_HowToShop/banner.png"  alt="碧沙康健資訊問A">
         <p class="f-40" style="color: #FFFFFF;position: absolute;left:42%;top: 15%; ">
             Health Q&A
         </p>
@@ -52,7 +52,7 @@
         </p>
         <p class="f-30"  style="color: #FFFFFF;position: absolute;left:34%;top: 50%;">Give your family a heart-to-heart care</p>
         <img style="position: absolute;left:48%;top: 75%;"
-             src="../resources/img/news/HK_HowToShop/downlogo.png"  alt="碧沙康健資訊問A">
+             src="/resources/img/news/HK_HowToShop/downlogo.png"  alt="碧沙康健資訊問A">
     </div>
     <div class="full-w mb-20"  style="background: #F1F1F1;">
         <div class="container">
@@ -77,7 +77,7 @@
                     </div>
                     <div class="col-md-11">
                         <span style="font-size: 18px;font-weight: bold;color:#50BCFF;">ECG waveform disorder</span>
-                        <img src="../resources/img/index/QA.png"  alt="碧沙康健健康問A">
+                        <img src="/resources/img/index/QA.png"  alt="碧沙康健健康問A">
                     </div>
                 </div>
                 <div class="col-md-12" style="background: #F1F1F1;">
@@ -105,7 +105,7 @@
                     </div>
                     <div class="col-md-11">
                         <span style="font-size: 18px;font-weight: bold;color:#50BCFF;">ECG data file name does not show correct date and time (time is use as part of the file name)</span>
-                        <img src="../resources/img/index/QA.png">
+                        <img src="/resources/img/index/QA.png">
                     </div>
                 </div>
                 <div class="col-md-12" style="background: #F1F1F1;">
@@ -137,7 +137,7 @@
                         <span style="font-size: 18px;font-weight: bold;color:#50BCFF;">
                            The computer does not detect the flash drive on the PECG after connection
                         </span>
-                        <img src="../resources/img/index/QA.png">
+                        <img src="/resources/img/index/QA.png">
                     </div>
                 </div>
                 <div class="col-md-12" style="background: #F1F1F1;">
@@ -167,7 +167,7 @@
                         <span style="font-size: 18px;font-weight: bold;color:#50BCFF;">
                             PECG device cannot connect with computer
                         </span>
-                        <img src="../resources/img/index/QA.png">
+                        <img src="/resources/img/index/QA.png">
                     </div>
                 </div>
                 <div class="col-md-12" style="background: #F1F1F1;">
@@ -198,7 +198,7 @@
                     <div class="col-md-11">
                         <span style="font-size: 18px;font-weight: bold;color:#50BCFF;">
                             TICK sound from PECG</span>
-                        <img src="../resources/img/index/QA.png">
+                        <img src="/resources/img/index/QA.png">
                     </div>
                 </div>
                 <div class="col-md-12" style="background: #F1F1F1;">
@@ -227,7 +227,7 @@
                     <div class="col-md-11">
                         <span style="font-size: 18px;font-weight: bold;color:#50BCFF;">
                             Not able to use OTG USB to upload data cable?</span>
-                        <img src="../resources/img/index/QA.png">
+                        <img src="/resources/img/index/QA.png">
                     </div>
                 </div>
                 <div class="col-md-12" style="background: #F1F1F1;">
@@ -258,7 +258,7 @@
                     <div class="col-md-11">
                         <span style="font-size: 18px;font-weight: bold;color:#50BCFF;">
                             Mobile phone cannot connect with PECG device via micro OTG USB cable.</span>
-                        <img src="../resources/img/index/QA.png">
+                        <img src="/resources/img/index/QA.png">
                     </div>
                 </div>
                 <div class="col-md-12" style="background: #F1F1F1;">
@@ -287,7 +287,7 @@
                     <div class="col-md-11">
                         <span style="font-size: 18px;font-weight: bold;color:#50BCFF;">
                             Slight red mark appeared, or skin irritation after taking out electrode</span>
-                        <img src="../resources/img/index/QA.png">
+                        <img src="/resources/img/index/QA.png">
                     </div>
                 </div>
                 <div class="col-md-12" style="background: #F1F1F1;">
@@ -318,7 +318,7 @@
                     <div class="col-md-11">
                         <span style="font-size: 18px;font-weight: bold;color:#50BCFF;">
                             Smartphone is unable to connect with PECG with Bluetooth</span>
-                        <img src="../resources/img/index/QA.png">
+                        <img src="/resources/img/index/QA.png">
                     </div>
                 </div>
                 <div class="col-md-12" style="background: #F1F1F1;">
@@ -347,7 +347,7 @@
                     <div class="col-md-11">
                         <span style="font-size: 18px;font-weight: bold;color:#50BCFF;">
                             Smartphone and PECG are mismatching via Bluetooth</span>
-                        <img src="../resources/img/index/QA.png">
+                        <img src="/resources/img/index/QA.png">
                     </div>
                 </div>
                 <div class="col-md-12" style="background: #F1F1F1;">
@@ -378,7 +378,7 @@
                     <div class="col-md-11">
                         <span style="font-size: 18px;font-weight: bold;color:#50BCFF;">
                             Cannot install the PECG APP to Smartphone</span>
-                        <img src="../resources/img/index/QA.png">
+                        <img src="/resources/img/index/QA.png">
                     </div>
                 </div>
                 <div class="col-md-12" style="background: #F1F1F1;">
@@ -407,7 +407,7 @@
                     <div class="col-md-11">
                         <span style="font-size: 18px;font-weight: bold;color:#50BCFF;">
                             Can PECG operate with other electronic device at the same time?</span>
-                        <img src="../resources/img/index/QA.png">
+                        <img src="/resources/img/index/QA.png">
                     </div>
                 </div>
                 <div class="col-md-12" style="background: #F1F1F1;">
@@ -438,7 +438,7 @@
                     <div class="col-md-11">
                         <span style="font-size: 18px;font-weight: bold;color:#50BCFF;">
                             Emergency contact person does not receive the SMS or email after pressing panic button in PECG device</span>
-                        <img src="../resources/img/index/QA.png">
+                        <img src="/resources/img/index/QA.png">
                     </div>
                 </div>
                 <div class="col-md-12" style="background: #F1F1F1;">
@@ -467,7 +467,7 @@
                     <div class="col-md-11">
                         <span style="font-size: 18px;font-weight: bold;color:#50BCFF;">
                            Do not receive verification code after registration</span>
-                        <img src="../resources/img/index/QA.png">
+                        <img src="/resources/img/index/QA.png">
                     </div>
                 </div>
                 <div class="col-md-12" style="background: #F1F1F1;">
@@ -501,7 +501,7 @@
                         <span style="font-size: 18px;font-weight: bold;color:#50BCFF;">
                         Emergency contact person does not receive the SMS or email after pressing panic button in PECG device
                         </span>
-                        <img src="../resources/img/index/QA.png">
+                        <img src="/resources/img/index/QA.png">
                     </div>
                 </div>
                 <div class="col-md-12" style="background: #F1F1F1;">
@@ -530,7 +530,7 @@
                     <div class="col-md-11">
                         <span style="font-size: 18px;font-weight: bold;color:#50BCFF;">
                            Can PECG operate under high humidity environment?</span>
-                        <img src="../resources/img/index/QA.png">
+                        <img src="/resources/img/index/QA.png">
                     </div>
                 </div>
                 <div class="col-md-12" style="background: #F1F1F1;">
@@ -561,7 +561,7 @@
                     <div class="col-md-11">
                         <span style="font-size: 18px;font-weight: bold;color:#50BCFF;">
                             Can be PECG used when user have chest injury?</span>
-                        <img src="../resources/img/index/QA.png">
+                        <img src="/resources/img/index/QA.png">
                     </div>
                 </div>
                 <div class="col-md-12" style="background: #F1F1F1;">
@@ -590,7 +590,7 @@
                     <div class="col-md-11">
                         <span style="font-size: 18px;font-weight: bold;color:#50BCFF;">
                            Can PECG operate with pacemaker together?</span>
-                        <img src="../resources/img/index/QA.png">
+                        <img src="/resources/img/index/QA.png">
                     </div>
                 </div>
                 <div class="col-md-12" style="background: #F1F1F1;">

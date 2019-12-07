@@ -1,4 +1,4 @@
-let langAarray={'zh_CN':'简体','zh_HK':'繁體','en_US':'English'};
+var langAarray={'zh_CN':'简体','zh_HK':'繁體','en_US':'English'};
 var selectLang=document.getElementById("language");
 if(selectLang!=null){
 	for(let i in langAarray){		
@@ -38,5 +38,4 @@ function javaToJsDateTime(cTime){
     month = month < 10 ? "0"+month:month;
     day = day < 10 ? "0"+day:day;
     return  year+'-'+month+'-'+day+' '+hour+":"+minute+":"+second;
-   
 }

@@ -19,19 +19,19 @@
 <meta name="renderer" content="webkit">
 <title></title>
 <!-- base -->
-<link rel="stylesheet" href="../resources/ctrl/layui/css/layui.css">
-<link href="../resources/ctrl/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="../resources/css/comm/base.css" rel="stylesheet">
-<link href="../resources/css/user/user_center.css" rel="stylesheet">
+<link rel="stylesheet" href="/resources/ctrl/layui/css/layui.css">
+<link href="/resources/ctrl/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="/resources/css/comm/base.css" rel="stylesheet">
+<link href="/resources/css/user/user_center.css" rel="stylesheet">
 <!--[if lt IE 9]>
       <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-<script src="../resources/js/comm/jquery.min.js"></script>
-<script src="../resources/ctrl/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-<script src="../resources/ctrl/layer/layer.js"></script>
-<script src="../resources/js/comm/base.js"></script>
-<script src="../resources/js/comm/menu.js"></script>
+<script src="/resources/js/comm/jquery.min.js"></script>
+<script src="/resources/ctrl/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script src="/resources/ctrl/layer/layer.js"></script>
+<script src="/resources/js/comm/base.js"></script>
+<script src="/resources/js/comm/menu.js"></script>
 
 </head>
 
@@ -45,7 +45,7 @@
 					<div class="clear pull-left w-120">
 						<img
 							class="img-120 overflow-h full-radius bor bor-3px bor-col-fff box-sha-imgsha user-avator"
-							src="../resources/img/default_header/userico_avatar.png" alt="">
+							src="/resources/img/default_header/userico_avatar.png" alt="">
 						<p class="text-center cur-p line-h-40 f-20 col-309DE2 set-heads">
 						</p>
 					</div>
@@ -68,7 +68,7 @@
 				<div class="clear col-sm-6 pl-0 pr-0 pt-40 pb-40">
 					<div class="clear col-sm-5 pl-0 pr-0 text-center">
 						<img class="img-110 overflow-h full-radius"
-							src="../resources/img/user/User/center-tipsv1.png" alt="">
+							src="/resources/img/user/User/center-tipsv1.png" alt="">
 					</div>
 					<div class="clear col-sm-7 pl-0 pr-0 pt-20 pb-20">
 						<p class="line-h-35 f-22 col-757575">
@@ -84,7 +84,7 @@
 				<div class="clear col-sm-6 pl-0 pr-0 pt-40 pb-40">
 					<div class="clear col-sm-5 pl-0 pr-0 text-center">
 						<img class="img-110 overflow-h full-radius"
-							src="../resources/img/user/User/center-tipsv2.png" alt="">
+							src="/resources/img/user/User/center-tipsv2.png" alt="">
 					</div>
 					<div class="clear col-sm-7 pl-0 pr-0 pt-20 pb-20">
 						<p class="line-h-35 f-22 col-757575">
@@ -100,7 +100,7 @@
 				<div class="clear col-sm-6 pl-0 pr-0 pt-40 pb-40">
 					<div class="clear col-sm-5 pl-0 pr-0 text-center">
 						<img class="img-110 overflow-h full-radius"
-							src="../resources/img/user/User/center-tipsv3.png" alt="">
+							src="/resources/img/user/User/center-tipsv3.png" alt="">
 					</div>
 					<div class="clear col-sm-7 pl-0 pr-0 pt-20 pb-20">
 						<p class="line-h-35 f-22 col-757575">
@@ -118,7 +118,7 @@
 				<div class="clear col-sm-6 pl-0 pr-0 pt-40 pb-40">
 					<div class="clear col-sm-5 pl-0 pr-0 text-center">
 						<img class="img-110 overflow-h full-radius"
-							src="../resources/img/user/User/center-tipsv4.png" alt="">
+							src="/resources/img/user/User/center-tipsv4.png" alt="">
 					</div>
 					<div class="clear col-sm-7 pl-0 pr-0 pt-20 pb-20">
 						<p class="line-h-35 f-22 col-757575">

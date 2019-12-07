@@ -14,9 +14,9 @@
     <title>${html_title}</title>
     <!-- description -->
     <meta name="renderer" content="webkit">
-    <link href="../resources/css/comm/base.css" rel="stylesheet">
-    <link href="../resources/css/news/HK_News.css" rel="stylesheet">
-    <script src="../resources/js/comm/jquery.min.js"></script>
+    <link href="/resources/css/comm/base.css" rel="stylesheet">
+    <link href="/resources/css/news/HK_News.css" rel="stylesheet">
+    <script src="/resources/js/comm/jquery.min.js"></script>
 </head>
 <body>
 <div id="header"></div>
@@ -26,7 +26,7 @@
 
 <div class="wrap clear">
     <div class="clear full-ws">
-        <img class="full-w" src="../resources/img/news/HK_HowToShop/banner.jpg">
+        <img class="full-w" src="/resources/img/news/HK_HowToShop/banner.jpg">
         <p class="full-w-p">Shopping guide</p>
         <p class="full-w-p-1">Pay attention to health, pay attention to the health of Bisa, give a careful care to the family.</p>
         <p class="full-w-p-3">SHOPPING DIRECTORY</p>
@@ -86,8 +86,8 @@
 <script>
     $("#footer").load("footer.html");
 </script>
-<script src="../resources/js/comm/bootstrap.js"></script>
-<script src="../resources/ctrl/layui/layui.js"></script>
-<script src="../resources/js/guide/guide.js"></script>
+<script src="/resources/js/comm/bootstrap.js"></script>
+<script src="/resources/ctrl/layui/layui.js"></script>
+<script src="/resources/js/guide/guide.js"></script>
 </body>
 </html>

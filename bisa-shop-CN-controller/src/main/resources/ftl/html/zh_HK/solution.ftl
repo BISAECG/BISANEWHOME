@@ -16,10 +16,10 @@
     <!-- description -->
     <meta name="renderer" content="webkit">
     <!-- base -->
-    <link href="../resources/css/comm/base.css" rel="stylesheet">
-    <link href="../resources/css/about/HK_About.css" rel="stylesheet">
-    <link href="../resources/css/index/index.css" rel="stylesheet">
-    <script src="../resources/js/comm/jquery.min.js"></script>
+    <link href="/resources/css/comm/base.css" rel="stylesheet">
+    <link href="/resources/css/about/HK_About.css" rel="stylesheet">
+    <link href="/resources/css/index/index.css" rel="stylesheet">
+    <script src="/resources/js/comm/jquery.min.js"></script>
 </head>
 <style>
     .taobao1{
@@ -80,7 +80,7 @@
                 </p>
             </div>
             <div class="col-md-4 col-md-offset-2" >
-                <img class="img-responsive center-block mt-60" src="../resources/img/solution/banner.png">
+                <img class="img-responsive center-block mt-60" src="/resources/img/solution/banner.png">
             </div>
         </div>
     </div>
@@ -92,7 +92,7 @@
         <span class="line-btm"></span>
     </div>
     <div class="row mb-40" style="background:rgba(246,246,246,1);">
-        <img style="padding: 20px"  class="img-responsive center-block" src="../resources/img/solution/banner2-hk.png" alt="碧沙心电仪四大优势">
+        <img style="padding: 20px"  class="img-responsive center-block" src="/resources/img/solution/banner2-hk.png" alt="碧沙心电仪四大优势">
     </div>
     <p class="title-p">四大優勢</p>
     <div class="line">
@@ -100,7 +100,7 @@
         <span class="line-btm"></span>
     </div>
     <div class="row mb-40 pos-r">
-        <img class="img-responsive center-block" src="../resources/img/solution/banner3-hk.png" alt="碧沙心電儀四大優勢">
+        <img class="img-responsive center-block" src="/resources/img/solution/banner3-hk.png" alt="碧沙心電儀四大優勢">
         <div style="left: 12%;top: 56%;width:15%;" class="Advantage">
             碧沙心電儀使用簡單，無需導聯線，方便佩戴。除劇烈運動外，患者正常的日常活動不會影響心電監測。患者可自助使用或摘除心電儀，醫師可以根據患者制定長時段監測方案。
         </div>
@@ -120,7 +120,7 @@
         <span class="line-btm"></span>
     </div>
     <div class="row  mb-40 mt-40">
-        <img  class="img-responsive center-block" src="../resources/img/solution/banner4.gif" alt="碧沙心電儀方案流程">
+        <img  class="img-responsive center-block" src="/resources/img/solution/banner4.gif" alt="碧沙心電儀方案流程">
     </div>
     <p class="title-p">方案配置</p>
     <div class="line">
@@ -129,7 +129,7 @@
     </div>
     <div class="row  mb-40 " style="background: #F3F6FF;">
         <div style="border: 10px solid #E6ECFF;width: 16%;margin: 20px 20px 20px 5%;float: left;">
-            <img src="../resources/img/solution/banner6-1.png">
+            <img src="/resources/img/solution/banner6-1.png">
             <div style="margin: 5px;background: #FFF;">
                 <p style="margin-bottom:4px;font-size:18px;font-weight:bold;color:rgba(51,51,51,1);line-height:40px;">碧沙智慧心電監測分析系統</p>
                 <p style="width:34px;height:8px;background:rgba(132,132,132,1);"></p>
@@ -139,7 +139,7 @@
             </div>
         </div>
         <div style="border: 10px solid #E6ECFF;width: 16%;margin: 20px;float: left;">
-            <img src="../resources/img/solution/banner6-2.png">
+            <img src="/resources/img/solution/banner6-2.png">
             <div style="margin: 5px;background: #FFF;">
                 <p style="margin-bottom:4px;font-size:18px;font-weight:bold;color:rgba(51,51,51,1);line-height:40px;">五臺碧沙心電儀
                 </p>
@@ -150,7 +150,7 @@
             </div>
         </div>
         <div style="border: 10px solid #E6ECFF;width: 16%;margin: 20px;float: left;">
-            <img src="../resources/img/solution/banner6-3.png">
+            <img src="/resources/img/solution/banner6-3.png">
             <div style="margin: 5px;background: #FFF;">
                 <p style="margin-bottom:4px;font-size:18px;font-weight:bold;color:rgba(51,51,51,1);line-height:40px;">壹年免費數據轉換服務</p>
                 <p style="width:34px;height:8px;background:rgba(132,132,132,1);"></p>
@@ -160,7 +160,7 @@
             </div>
         </div>
         <div style="border: 10px solid #E6ECFF;width: 16%;margin: 20px;float: left;">
-            <img src="../resources/img/solution/banner6-4.png">
+            <img src="/resources/img/solution/banner6-4.png">
             <div style="margin: 5px;background: #FFF;">
                 <p style="margin-bottom:4px;font-size:18px;font-weight:bold;color:rgba(51,51,51,1);line-height:40px;">壹臺專業電腦</p>
                 <p style="width:34px;height:8px;background:rgba(132,132,132,1);"></p>
@@ -170,7 +170,7 @@
             </div>
         </div>
         <div style="border: 10px solid #E6ECFF;width: 16%;margin: 20px;float: left;">
-            <img src="../resources/img/solution/banner6-5.png">
+            <img src="/resources/img/solution/banner6-5.png">
             <div style="margin: 5px;background: #FFF;">
                 <p style="margin-bottom:4px;font-size:18px;font-weight:bold;color:rgba(51,51,51,1);line-height:40px;">壹年免費培訓</p>
                 <p style="width:34px;height:8px;background:rgba(132,132,132,1);"></p>
@@ -187,13 +187,13 @@
         <span class="line-btm"></span>
     </div>
     <div class="row  mb-40 ">
-        <img  class="img-responsive center-block" src="../resources/img/index/banner6-hk.png" alt="碧沙心電儀合作夥伴">
+        <img  class="img-responsive center-block" src="/resources/img/index/banner6-hk.png" alt="碧沙心電儀合作夥伴">
     </div>
 </div>
 <div class="container">
     <div class="row">
         <div style="border: 10px solid #E6ECFF;width: 325px;float: left;">
-        <img src="../resources/img/solution/banner6-1.png">
+        <img src="/resources/img/solution/banner6-1.png">
         <div style="margin: 10px;background: #FFF;">
         <p style="margin-bottom:4px;font-size:18px;font-weight:bold;color:rgba(51,51,51,1);line-height:40px;">碧沙智慧心電監測分析系統1</p>
         <p style="width:34px;height:8px;background:rgba(132,132,132,1);"></p>
@@ -203,7 +203,7 @@
         </div>
         </div>
         <div class="div2" style="border: 10px solid #E6ECFF;width: 325px;float: left;margin-left: 20px;">
-            <img src="../resources/img/solution/banner6-1.png">
+            <img src="/resources/img/solution/banner6-1.png">
             <div style="margin: 10px;background: #FFF;">
                 <p style="margin-bottom:4px;font-size:18px;font-weight:bold;color:rgba(51,51,51,1);line-height:40px;">碧沙智慧心電監測分析系統2</p>
                 <p style="width:34px;height:8px;background:rgba(132,132,132,1);"></p>
@@ -216,7 +216,7 @@
             <button style="margin-top: 118px;color: #333333;">碧沙智慧心電監測分析系統3</button>
         </div>
         <div class="div4" style="border: 10px solid #E6ECFF;width: 325px;float: left;margin-left: 20px;">
-            <img src="../resources/img/solution/banner6-1.png">
+            <img src="/resources/img/solution/banner6-1.png">
             <div style="margin: 10px;background: #FFF;">
                 <p style="margin-bottom:4px;font-size:18px;font-weight:bold;color:rgba(51,51,51,1);line-height:40px;">碧沙智慧心電監測分析系統3</p>
                 <p style="width:34px;height:8px;background:rgba(132,132,132,1);"></p>
@@ -229,7 +229,7 @@
             <button style="margin-top: 118px;color: #333333;">碧沙智慧心電監測分析系統4</button>
         </div>
         <div class="div6 dis-n" style="border: 10px solid #E6ECFF;width: 325px;float: left;margin-left: 20px;">
-            <img src="../resources/img/solution/banner6-1.png">
+            <img src="/resources/img/solution/banner6-1.png">
             <div style="margin: 10px;background: #FFF;">
                 <p style="margin-bottom:4px;font-size:18px;font-weight:bold;color:rgba(51,51,51,1);line-height:40px;">碧沙智慧心電監測分析系統4</p>
                 <p style="width:34px;height:8px;background:rgba(132,132,132,1);"></p>
@@ -242,7 +242,7 @@
             <button style="margin-top: 118px;color: #333333;">碧沙智慧心電監測分析系統5</button>
         </div>
         <div class="div8 dis-n" style="border: 10px solid #E6ECFF;width: 325px;float: left;margin-left: 20px;">
-            <img src="../resources/img/solution/banner6-1.png">
+            <img src="/resources/img/solution/banner6-1.png">
             <div style="margin: 10px;background: #FFF;">
                 <p style="margin-bottom:4px;font-size:18px;font-weight:bold;color:rgba(51,51,51,1);line-height:40px;">碧沙智慧心電監測分析系統5</p>
                 <p style="width:34px;height:8px;background:rgba(132,132,132,1);"></p>

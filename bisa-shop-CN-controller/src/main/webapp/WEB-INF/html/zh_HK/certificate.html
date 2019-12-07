@@ -16,9 +16,9 @@
     <meta name="renderer" content="webkit">
 
     <!-- base -->
-    <link href="../resources/css/comm/base.css" rel="stylesheet">
-    <link href="../resources/css/index/index.css" rel="stylesheet">
-    <script src="../resources/js/comm/jquery.min.js"></script>
+    <link href="/resources/css/comm/base.css" rel="stylesheet">
+    <link href="/resources/css/index/index.css" rel="stylesheet">
+    <script src="/resources/js/comm/jquery.min.js"></script>
     <style>
         p{
             color: #FFFFFF;
@@ -33,39 +33,39 @@
 <div class="pos-r">
     <div class="container-full">
         <div class="row center-block" >
-            <img class="img-responsive center-block"  src="../resources/img/menuList/mListBgImg.png" alt="心电仪产品证书">
+            <img class="img-responsive center-block"  src="/resources/img/menuList/mListBgImg.png" alt="心电仪产品证书">
         </div>
     </div>
     <div class="container mt-40">
         <div class="row">
             <div class="col-md-4  col-md-offset-4 text-center">
-                <img src="../resources/img/certificate/chanpintitle.png" class="center-block ">
+                <img src="/resources/img/certificate/chanpintitle.png" class="center-block ">
             </div>
         </div>
     </div>
     <div class="container mt-40">
         <div class="row">
-            <div class="col-md-4" style="background: url('../resources/img/certificate/background.png') round;">
-                <a href="../resources/img/index/chanpin.png" target="_blank">
-                    <img src="../resources/img/index/chanpin.png"  class="center-block mt-20"  alt="医疗器械生产许可证">
+            <div class="col-md-4" style="background: url('/resources/img/certificate/background.png') round;">
+                <a href="/resources/img/index/chanpin.png" target="_blank">
+                    <img src="/resources/img/index/chanpin.png"  class="center-block mt-20"  alt="医疗器械生产许可证">
                     <p class="text-center mt-5 mb-20">
                         医疗器械生产许可证
                     </p>
                 </a>
             </div>
             <div class="col-md-4"
-                 style="background: url('../resources/img/certificate/background.png') round;">
+                 style="background: url('/resources/img/certificate/background.png') round;">
 
-                <a href="../resources/img/certificate/zcz.png" target="_blank">
-                    <img src="../resources/img/index/chanpin1.png" class="center-block mt-20" alt="CFDA注册证">
+                <a href="/resources/img/certificate/zcz.png" target="_blank">
+                    <img src="/resources/img/index/chanpin1.png" class="center-block mt-20" alt="CFDA注册证">
                     <p class="text-center  mt-5 mb-20">
                         CFDA注册证
                     </p>
                 </a>
             </div>
-            <div class="col-md-4" style="background: url('../resources/img/certificate/background.png') round;">
-                <a href="../resources/img/certificate/CE@2x.png" target="_blank">
-                    <img src="../resources/img/index/chanpin2.png" class="center-block mt-20" alt="FCC认证">
+            <div class="col-md-4" style="background: url('/resources/img/certificate/background.png') round;">
+                <a href="/resources/img/certificate/CE@2x.png" target="_blank">
+                    <img src="/resources/img/index/chanpin2.png" class="center-block mt-20" alt="FCC认证">
                     <p class="text-center  mt-5 mb-20">
                         FCC认证
                     </p>
@@ -73,25 +73,25 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4" style="background: url('../resources/img/certificate/background.png') round;">
-                <a href="../resources/img/certificate/FCC@2x.png" target="_blank">
-                    <img src="../resources/img/index/chanpin3.png" class="center-block mt-20 " alt="蓝牙">
+            <div class="col-md-4" style="background: url('/resources/img/certificate/background.png') round;">
+                <a href="/resources/img/certificate/FCC@2x.png" target="_blank">
+                    <img src="/resources/img/index/chanpin3.png" class="center-block mt-20 " alt="蓝牙">
                     <p class="text-center  mt-5 mb-20">
                         蓝牙
                     </p>
                 </a>
             </div>
-            <div class="col-md-4" style="background: url('../resources/img/certificate/background.png') round;">
-                <a href="../resources/img/certificate/QBQ@2x.png" target="_blank">
-                    <img src="../resources/img/index/chanpin4.png" class="center-block mt-20 " alt="FCC蓝牙QBQ认证">
+            <div class="col-md-4" style="background: url('/resources/img/certificate/background.png') round;">
+                <a href="/resources/img/certificate/QBQ@2x.png" target="_blank">
+                    <img src="/resources/img/index/chanpin4.png" class="center-block mt-20 " alt="FCC蓝牙QBQ认证">
                     <p class="text-center  mt-5 mb-20">
                         FCC蓝牙QBQ认证
                     </p>
                 </a>
             </div>
-            <div class="col-md-4" style="background: url('../resources/img/certificate/background.png') round;">
-                <a href="../resources/img/certificate/img888.png" target="_blank">
-                    <img src="../resources/img/index/chanpin5.png" class="center-block mt-20 " alt="实用新型专利证书">
+            <div class="col-md-4" style="background: url('/resources/img/certificate/background.png') round;">
+                <a href="/resources/img/certificate/img888.png" target="_blank">
+                    <img src="/resources/img/index/chanpin5.png" class="center-block mt-20 " alt="实用新型专利证书">
                     <p class="text-center  mt-5 mb-20">
                         实用新型专利证书
                     </p>
@@ -99,9 +99,9 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4 " style="background: url('../resources/img/certificate/background.png') round;">
-                <a href="../resources/img/certificate/img787.png" target="_blank">
-                    <img src="../resources/img/index/chanpin6.png" class="center-block mt-20 " alt="专利登记薄">
+            <div class="col-md-4 " style="background: url('/resources/img/certificate/background.png') round;">
+                <a href="/resources/img/certificate/img787.png" target="_blank">
+                    <img src="/resources/img/index/chanpin6.png" class="center-block mt-20 " alt="专利登记薄">
                     <p class="text-center  mt-5 mb-20">
                         专利登记薄
                     </p>

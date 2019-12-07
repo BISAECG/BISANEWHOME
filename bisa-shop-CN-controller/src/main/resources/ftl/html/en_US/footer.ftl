@@ -67,10 +67,10 @@
                                    target="_blank">
                                     Express search API</a></li>
                             <li class="pt-10"><a class="col-8c8c8c t-nonehove hovecol-309DE2 f-12"
-                                                 href="../resources/img/pdf/certification.pdf" target="_blank">
+                                                 href="/resources/img/pdf/certification.pdf" target="_blank">
                                 Certification</a></li>
                             <li class="pt-10"><a class="col-8c8c8c t-nonehove hovecol-309DE2 f-12"
-                                                 href="../resources/img/pdf/Electric_utility_model_certificate.pdf" target="_blank">
+                                                 href="/resources/img/pdf/Electric_utility_model_certificate.pdf" target="_blank">
                                 ECG utility model certificate</a></li>
                         </ul>
                     </div>
@@ -115,7 +115,7 @@
                             </li>
                             <div class="pt-10">
                                 <a class="col-8c8c8c t-nonehove hovecol-309DE2 " >
-                                    <img  width="80" height="80" src="../resources/img/index/app_qr.png"  alt="Bisha Health APP download">
+                                    <img  width="80" height="80" src="/resources/img/index/app_qr.png"  alt="Bisha Health APP download">
                                 </a></div>
                         </ul>
                     </div>

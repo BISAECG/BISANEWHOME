@@ -16,9 +16,9 @@
     <!-- description -->
     <meta name="renderer" content="webkit">
     <!-- base -->
-    <link href="../resources/css/comm/base.css" rel="stylesheet">
-    <link href="../resources/css/about/HK_About.css" rel="stylesheet">
-    <script src="../resources/js/comm/jquery.min.js"></script>
+    <link href="/resources/css/comm/base.css" rel="stylesheet">
+    <link href="/resources/css/about/HK_About.css" rel="stylesheet">
+    <script src="/resources/js/comm/jquery.min.js"></script>
 </head>
 
 <body>
@@ -28,7 +28,7 @@
 </script>
 <div class="wrap">
     <div class="clear full-ws">
-        <img class="full-w" src="../resources/img/HK_About/banner.jpg" alt="关于碧沙">
+        <img class="full-w" src="/resources/img/HK_About/banner.jpg" alt="关于碧沙">
         <p class="full-w-p">关于碧沙</p>
         <p class="full-w-p-1">关注健康 关注碧沙健康 给家一个悉心的呵护</p>
         <p class="full-w-p-2">OBOUT BISA</p>
@@ -52,7 +52,7 @@
                 </div>
             </div>
             <div class="clear col-sm-6 pl-25 pr-25">
-                <img class="full-w" src="../resources/img/HK_About/About-rightv1.png" alt="关于碧沙">
+                <img class="full-w" src="/resources/img/HK_About/About-rightv1.png" alt="关于碧沙">
             </div>
         </div>
         <p class="f-34 col-252525 pl-50 mt-20 mb-20 h-40 line-h-40">
@@ -121,7 +121,7 @@
                 </div>
             </div>
             <div class="clear col-sm-6 pl-25 pr-25">
-                <img class="full-w" src="../resources/img/HK_About/About-rightv2.png" alt="关于碧沙">
+                <img class="full-w" src="/resources/img/HK_About/About-rightv2.png" alt="关于碧沙">
             </div>
             <div class="clear col-sm-12 pl-25 pr-25 pull-left">
                 <div class="clear w-12d5p pull-left">
@@ -144,5 +144,5 @@
 </script>
 
 </body>
-<script src="../resources/js/comm/bootstrap.js"></script>
+<script src="/resources/js/comm/bootstrap.js"></script>
 </html>

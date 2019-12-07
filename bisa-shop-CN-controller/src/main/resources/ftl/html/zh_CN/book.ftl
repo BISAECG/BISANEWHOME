@@ -16,10 +16,10 @@
     <meta name="renderer" content="webkit">
     <!-- base -->
     <link href="/resources/ctrl/layui/css/layui.css" rel="stylesheet">
-    <link href="../resources/css/comm/base.css" rel="stylesheet">
-    <link href="../resources/css/index/index.css" rel="stylesheet">
-    <link href="../resources/css/index/board.css" rel="stylesheet">
-    <script src="../resources/js/comm/jquery.min.js"></script>
+    <link href="/resources/css/comm/base.css" rel="stylesheet">
+    <link href="/resources/css/index/index.css" rel="stylesheet">
+    <link href="/resources/css/index/board.css" rel="stylesheet">
+    <script src="/resources/js/comm/jquery.min.js"></script>
   	<script src="/resources/ctrl/layui/layui.js"></script>
 </head>
 
@@ -30,7 +30,7 @@
 </script>
 <div class="container-fluid">
     <div class="row">
-            <img class="img-responsive " src="../resources/img/index/board.png">
+            <img class="img-responsive " src="/resources/img/index/board.png">
     </div>
 </div>
 <div class="container">
@@ -59,7 +59,7 @@
                 </p>
             </div>
             <div class="col-md-2 ">
-                <img class="img-responsive center-block" src="../resources/img/index/board-1.png">
+                <img class="img-responsive center-block" src="/resources/img/index/board-1.png">
             </div>
         </div>
         <div class="col-md-5 boardRight">

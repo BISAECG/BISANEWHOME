@@ -16,10 +16,10 @@
     <!-- description -->
     <meta name="renderer" content="webkit">
     <!-- base -->
-    <link href="../resources/css/comm/base.css" rel="stylesheet">
-    <link href="../resources/css/about/HK_About.css" rel="stylesheet">
-    <link href="../resources/css/about/download.css" rel="stylesheet" >
-    <script src="../resources/js/comm/jquery.min.js"></script>
+    <link href="/resources/css/comm/base.css" rel="stylesheet">
+    <link href="/resources/css/about/HK_About.css" rel="stylesheet">
+    <link href="/resources/css/about/download.css" rel="stylesheet" >
+    <script src="/resources/js/comm/jquery.min.js"></script>
     <style>
 
     </style>
@@ -30,18 +30,18 @@
 <script>
     $("#header").load("header.html");
 </script>
-<div class="con"  style="background: url('../resources/img/download/banner.png');height: 889px;padding-top: 100px;">
+<div class="con"  style="background: url('/resources/img/download/banner.png');height: 889px;padding-top: 100px;">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="col-md-5 col-md-offset-1">
-                    <img class="img-responsive center-block" src="../resources/img/download/banner-left.png" alt="Bisha Health APP download">
+                    <img class="img-responsive center-block" src="/resources/img/download/banner-left.png" alt="Bisha Health APP download">
                 </div>
                 <div class=" col-md-6">
                     <p class="download-title"> Bisa Kangjian APP</p>
                     <p class="download-descrip"> Monitor ECG without leaving your home</p>
                     <p style="font-size:20px;color:rgba(254,254,254,1);">Keep you indoors for ECG measurements</p>
-                    <img width="212" src="../resources/img/download/banner-right.png">
+                    <img width="212" src="/resources/img/download/banner-right.png">
                     <p class="pt-15">
 
                         <div class="download-ios  pull-left text-center" style=" width:200px;height:35px;">

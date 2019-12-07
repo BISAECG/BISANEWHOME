@@ -91,7 +91,7 @@ public class EasylinkPayComponnent {
         	throw new WebException(SysErrorCode.PayError);
         }
         PayResponse payResponse =gson.fromJson(resp, PayResponse.class);
-        if(payResponse == null && !"00".equals(payResponse.getRespCode())){
+        if(payResponse == null || !"00".equals(payResponse.getRespCode())){
         	logger.info(payResponse.getRespCode() + ":" + payResponse.getRespMsg()+"["+order.getOrder_num()+"]");
         	throw new WebException(SysErrorCode.PayError);
         }

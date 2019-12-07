@@ -16,9 +16,9 @@
     <!-- description -->
     <meta name="renderer" content="webkit">
     <!-- base -->
-    <link href="../resources/css/comm/base.css" rel="stylesheet">
-    <link href="../resources/css/about/HK_About.css" rel="stylesheet">
-    <script src="../resources/js/comm/jquery.min.js"></script>
+    <link href="/resources/css/comm/base.css" rel="stylesheet">
+    <link href="/resources/css/about/HK_About.css" rel="stylesheet">
+    <script src="/resources/js/comm/jquery.min.js"></script>
     <style>
         .title-color{
             background-color:rgba(1,144,255,0.3);
@@ -42,7 +42,7 @@
 </script>
 <div class="wrap clear  mb-60">
     <div class="container-full pos-r">
-        <img src="../resources/img/news/HK_HowToShop/banner.png"  alt="碧沙康健資訊問答">
+        <img src="/resources/img/news/HK_HowToShop/banner.png"  alt="碧沙康健資訊問答">
         <p class="f-40" style="color: #FFFFFF;position: absolute;left:45%;top: 15%; ">
             健康資訊
         </p>
@@ -52,7 +52,7 @@
         </p>
         <p class="f-30"  style="color: #FFFFFF;position: absolute;left:42%;top: 50%;">給家人壹個悉心的呵護</p>
         <img style="position: absolute;left:48%;top: 75%;"
-             src="../resources/img/news/HK_HowToShop/downlogo.png"  alt="碧沙康健資訊問答">
+             src="/resources/img/news/HK_HowToShop/downlogo.png"  alt="碧沙康健資訊問答">
     </div>
     <div class="full-w mb-20"  style="background: #F1F1F1;">
         <div class="container">
@@ -77,7 +77,7 @@
                     </div>
                     <div class="col-md-11">
                         <span style="font-size: 18px;font-weight: bold;color:#50BCFF;">心電圖波形紊亂</span>
-                        <img src="../resources/img/index/QA.png"  alt="碧沙康健健康問答">
+                        <img src="/resources/img/index/QA.png"  alt="碧沙康健健康問答">
                     </div>
                 </div>
                 <div class="col-md-12" style="background: #F1F1F1;">
@@ -105,7 +105,7 @@
                     </div>
                     <div class="col-md-11">
                         <span style="font-size: 18px;font-weight: bold;color:#50BCFF;">心電圖文件名中的時間錯誤</span>
-                        <img src="../resources/img/index/QA.png">
+                        <img src="/resources/img/index/QA.png">
                     </div>
                 </div>
                 <div class="col-md-12" style="background: #F1F1F1;">
@@ -136,7 +136,7 @@
                     <div class="col-md-11">
                         <span style="font-size: 18px;font-weight: bold;color:#50BCFF;">
                             心電儀與計算機連接上，但不會出現盤符</span>
-                        <img src="../resources/img/index/QA.png">
+                        <img src="/resources/img/index/QA.png">
                     </div>
                 </div>
                 <div class="col-md-12" style="background: #F1F1F1;">
@@ -165,7 +165,7 @@
                     <div class="col-md-11">
                         <span style="font-size: 18px;font-weight: bold;color:#50BCFF;">
                             心電儀與計算機連接不上</span>
-                        <img src="../resources/img/index/QA.png">
+                        <img src="/resources/img/index/QA.png">
                     </div>
                 </div>
                 <div class="col-md-12" style="background: #F1F1F1;">
@@ -196,7 +196,7 @@
                     <div class="col-md-11">
                         <span style="font-size: 18px;font-weight: bold;color:#50BCFF;">
                             心電儀發出‘嘀’聲</span>
-                        <img src="../resources/img/index/QA.png">
+                        <img src="/resources/img/index/QA.png">
                     </div>
                 </div>
                 <div class="col-md-12" style="background: #F1F1F1;">
@@ -225,7 +225,7 @@
                     <div class="col-md-11">
                         <span style="font-size: 18px;font-weight: bold;color:#50BCFF;">
                             是否蘋果手機(iphone)支持OTGUSB在線載數據</span>
-                        <img src="../resources/img/index/QA.png">
+                        <img src="/resources/img/index/QA.png">
                     </div>
                 </div>
                 <div class="col-md-12" style="background: #F1F1F1;">
@@ -256,7 +256,7 @@
                     <div class="col-md-11">
                         <span style="font-size: 18px;font-weight: bold;color:#50BCFF;">
                             手機不能用microOTGUSB和PECG聯機</span>
-                        <img src="../resources/img/index/QA.png">
+                        <img src="/resources/img/index/QA.png">
                     </div>
                 </div>
                 <div class="col-md-12" style="background: #F1F1F1;">
@@ -285,7 +285,7 @@
                     <div class="col-md-11">
                         <span style="font-size: 18px;font-weight: bold;color:#50BCFF;">
                             除下電極片身上有紅圏印或過敏</span>
-                        <img src="../resources/img/index/QA.png">
+                        <img src="/resources/img/index/QA.png">
                     </div>
                 </div>
                 <div class="col-md-12" style="background: #F1F1F1;">
@@ -316,7 +316,7 @@
                     <div class="col-md-11">
                         <span style="font-size: 18px;font-weight: bold;color:#50BCFF;">
                             手機不能用藍牙和PECG配對</span>
-                        <img src="../resources/img/index/QA.png">
+                        <img src="/resources/img/index/QA.png">
                     </div>
                 </div>
                 <div class="col-md-12" style="background: #F1F1F1;">
@@ -345,7 +345,7 @@
                     <div class="col-md-11">
                         <span style="font-size: 18px;font-weight: bold;color:#50BCFF;">
                             手機藍牙和連接不上PECG</span>
-                        <img src="../resources/img/index/QA.png">
+                        <img src="/resources/img/index/QA.png">
                     </div>
                 </div>
                 <div class="col-md-12" style="background: #F1F1F1;">
@@ -376,7 +376,7 @@
                     <div class="col-md-11">
                         <span style="font-size: 18px;font-weight: bold;color:#50BCFF;">
                             手機安裝不到悉心健康app不成功</span>
-                        <img src="../resources/img/index/QA.png">
+                        <img src="/resources/img/index/QA.png">
                     </div>
                 </div>
                 <div class="col-md-12" style="background: #F1F1F1;">
@@ -405,7 +405,7 @@
                     <div class="col-md-11">
                         <span style="font-size: 18px;font-weight: bold;color:#50BCFF;">
                             PECG可否和其他電子產品壹起使用</span>
-                        <img src="../resources/img/index/QA.png">
+                        <img src="/resources/img/index/QA.png">
                     </div>
                 </div>
                 <div class="col-md-12" style="background: #F1F1F1;">
@@ -436,7 +436,7 @@
                     <div class="col-md-11">
                         <span style="font-size: 18px;font-weight: bold;color:#50BCFF;">
                             悉心健康app註冊時收不到驗證碼</span>
-                        <img src="../resources/img/index/QA.png">
+                        <img src="/resources/img/index/QA.png">
                     </div>
                 </div>
                 <div class="col-md-12" style="background: #F1F1F1;">
@@ -465,7 +465,7 @@
                     <div class="col-md-11">
                         <span style="font-size: 18px;font-weight: bold;color:#50BCFF;">
                             當按下PECG發出緊急求救, 緊急聯絡人收不到手機短信或電郵</span>
-                        <img src="../resources/img/index/QA.png">
+                        <img src="/resources/img/index/QA.png">
                     </div>
                 </div>
                 <div class="col-md-12" style="background: #F1F1F1;">
@@ -496,7 +496,7 @@
                     <div class="col-md-11">
                         <span style="font-size: 18px;font-weight: bold;color:#50BCFF;">
                             當按下PECG發出緊急求救, 緊急聯絡人收不到手機或電郵</span>
-                        <img src="../resources/img/index/QA.png">
+                        <img src="/resources/img/index/QA.png">
                     </div>
                 </div>
                 <div class="col-md-12" style="background: #F1F1F1;">
@@ -526,7 +526,7 @@
                     <div class="col-md-11">
                         <span style="font-size: 18px;font-weight: bold;color:#50BCFF;">
                             心電儀可在高潮濕環境下工作嗎?</span>
-                        <img src="../resources/img/index/QA.png">
+                        <img src="/resources/img/index/QA.png">
                     </div>
                 </div>
                 <div class="col-md-12" style="background: #F1F1F1;">
@@ -557,7 +557,7 @@
                     <div class="col-md-11">
                         <span style="font-size: 18px;font-weight: bold;color:#50BCFF;">
                             胸部受傷可以用心電儀嗎?</span>
-                        <img src="../resources/img/index/QA.png">
+                        <img src="/resources/img/index/QA.png">
                     </div>
                 </div>
                 <div class="col-md-12" style="background: #F1F1F1;">
@@ -586,7 +586,7 @@
                     <div class="col-md-11">
                         <span style="font-size: 18px;font-weight: bold;color:#50BCFF;">
                             PECG可否可和心臓起搏器壹起使用</span>
-                        <img src="../resources/img/index/QA.png">
+                        <img src="/resources/img/index/QA.png">
                     </div>
                 </div>
                 <div class="col-md-12" style="background: #F1F1F1;">

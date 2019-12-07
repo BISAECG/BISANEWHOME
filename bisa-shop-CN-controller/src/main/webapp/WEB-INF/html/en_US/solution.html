@@ -16,10 +16,10 @@
     <!-- description -->
     <meta name="renderer" content="webkit">
     <!-- base -->
-    <link href="../resources/css/comm/base.css" rel="stylesheet">
-    <link href="../resources/css/about/HK_About.css" rel="stylesheet">
-    <link href="../resources/css/index/index.css" rel="stylesheet">
-    <script src="../resources/js/comm/jquery.min.js"></script>
+    <link href="/resources/css/comm/base.css" rel="stylesheet">
+    <link href="/resources/css/about/HK_About.css" rel="stylesheet">
+    <link href="/resources/css/index/index.css" rel="stylesheet">
+    <script src="/resources/js/comm/jquery.min.js"></script>
 </head>
 <style>
     .taobao1{
@@ -85,7 +85,7 @@
                 </p>
             </div>
             <div class="col-md-4 col-md-offset-2" >
-                <img class="img-responsive center-block" src="../resources/img/solution/banner.png" style="margin-top: 100px;">
+                <img class="img-responsive center-block" src="/resources/img/solution/banner.png" style="margin-top: 100px;">
             </div>
         </div>
     </div>
@@ -97,7 +97,7 @@
         <span class="line-btm"></span>
     </div>
     <div class="row mb-40" style="background:rgba(246,246,246,1);;">
-        <img style="padding: 20px"  class="img-responsive center-block" src="../resources/img/solution/banner2.png" alt="Traditional way">
+        <img style="padding: 20px"  class="img-responsive center-block" src="/resources/img/solution/banner2.png" alt="Traditional way">
     </div>
     <p class="title-p">Four advantages</p>
     <div class="line">
@@ -105,7 +105,7 @@
         <span class="line-btm"></span>
     </div>
     <div class="row mb-40 pos-r">
-        <img class="img-responsive center-block" src="../resources/img/solution/banner3-us.png" alt="Four advantages">
+        <img class="img-responsive center-block" src="/resources/img/solution/banner3-us.png" alt="Four advantages">
         <div style="position: absolute;left: 12%;top: 56%;width:15%;" class="Advantage Advantage1 cur-p">
             The BisaECG equipment is easy to use and requires no lead wires for easy wearing. With exception of to strenuous exercise, normal daily activities of the patient will not affect ECG monitoring. The patient can self-use or remove the ECG equipment, so the physician can develop a long-term monitoring program based on the patient.
         </div>
@@ -137,7 +137,7 @@
         <span class="line-btm"></span>
     </div>
     <div class="row  mb-40 mt-40">
-        <img  class="img-responsive center-block" src="../resources/img/solution/banner4-us.gif" alt="Solution configuration">
+        <img  class="img-responsive center-block" src="/resources/img/solution/banner4-us.gif" alt="Solution configuration">
     </div>
     <p class="title-p">Solution configuration</p>
     <div class="line">
@@ -146,7 +146,7 @@
     </div>
     <div class="row  mb-40 " style="background: #F3F6FF;">
         <div style="border: 10px solid #E6ECFF;width: 16%;margin: 20px 20px 20px 5%;float: left;">
-            <img src="../resources/img/solution/banner6-1.png">
+            <img src="/resources/img/solution/banner6-1.png">
             <div style="margin: 5px;background: #FFF;">
                 <p style="margin-bottom:4px;font-size:16px;font-weight:bold;color:rgba(51,51,51,1);line-height:20px;">
                     Bisa Intelligent ECG Monitoring And Analysis System
@@ -158,7 +158,7 @@
             </div>
         </div>
         <div style="border: 10px solid #E6ECFF;width: 16%;margin: 20px;float: left;">
-            <img src="../resources/img/solution/banner6-2.png">
+            <img src="/resources/img/solution/banner6-2.png">
             <div style="margin: 5px;background: #FFF;">
                 <p style="margin-bottom:4px;font-size:16px;font-weight:bold;color:rgba(51,51,51,1);line-height:40px;">
                     Five Bisa Electrocar Diographs
@@ -170,7 +170,7 @@
             </div>
         </div>
         <div style="border: 10px solid #E6ECFF;width: 16%;margin: 20px;float: left;">
-            <img src="../resources/img/solution/banner6-3.png">
+            <img src="/resources/img/solution/banner6-3.png">
             <div style="margin: 5px;background: #FFF;">
                 <p style="margin-bottom:4px;font-size:16px;font-weight:bold;color:rgba(51,51,51,1);line-height:40px;">One Year Free Data Conversion</p>
                 <p style="width:34px;height:8px;background:rgba(132,132,132,1);"></p>
@@ -180,7 +180,7 @@
             </div>
         </div>
         <div style="border: 10px solid #E6ECFF;width: 16%;margin: 20px;float: left;">
-            <img src="../resources/img/solution/banner6-4.png">
+            <img src="/resources/img/solution/banner6-4.png">
             <div style="margin: 5px;background: #FFF;">
                 <p style="margin-bottom:4px;font-size:16px;font-weight:bold;color:rgba(51,51,51,1);line-height:40px;">A Professional Computer</p>
                 <p style="width:34px;height:8px;background:rgba(132,132,132,1);"></p>
@@ -190,7 +190,7 @@
             </div>
         </div>
         <div style="border: 10px solid #E6ECFF;width: 16%;margin: 20px;float: left;">
-            <img src="../resources/img/solution/banner6-5.png">
+            <img src="/resources/img/solution/banner6-5.png">
             <div style="margin: 5px;background: #FFF;">
                 <p style="margin-bottom:4px;font-size:16px;font-weight:bold;color:rgba(51,51,51,1);line-height:40px;">One Year Free Training</p>
                 <p style="width:34px;height:8px;background:rgba(132,132,132,1);"></p>
@@ -206,7 +206,7 @@
         <span class="line-btm"></span>
     </div>
     <div class="row  mb-40 ">
-        <img  class="img-responsive center-block" src="../resources/img/index/banner6-us.png" alt="Partner">
+        <img  class="img-responsive center-block" src="/resources/img/index/banner6-us.png" alt="Partner">
     </div>
 </div>
 <div id="footer"></div>

@@ -19,10 +19,10 @@
     <!-- description -->
     <meta name="renderer" content="webkit">
     <!-- base -->
-    <link href="../resources/css/comm/base.css" rel="stylesheet">
-    <link href="../resources/css/index/index.css" rel="stylesheet">
-    <link href="../resources/css/shop/shop.css" rel="stylesheet">
-    <script src="../resources/js/comm/jquery.min.js"></script>
+    <link href="/resources/css/comm/base.css" rel="stylesheet">
+    <link href="/resources/css/index/index.css" rel="stylesheet">
+    <link href="/resources/css/shop/shop.css" rel="stylesheet">
+    <script src="/resources/js/comm/jquery.min.js"></script>
     <style>
         .spantitle{
             color:rgba(153,153,153,1);

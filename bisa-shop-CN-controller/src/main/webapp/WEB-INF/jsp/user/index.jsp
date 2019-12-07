@@ -19,19 +19,19 @@
 <meta name="renderer" content="webkit">
 <title></title>
 <!-- base -->
-<link rel="stylesheet" href="../resources/ctrl/layui/css/layui.css">
-<link href="../resources/ctrl/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="../resources/css/comm/base.css" rel="stylesheet">
-<link href="../resources/css/user/user_center.css" rel="stylesheet">
+<link rel="stylesheet" href="/resources/ctrl/layui/css/layui.css">
+<link href="/resources/ctrl/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="/resources/css/comm/base.css" rel="stylesheet">
+<link href="/resources/css/user/user_center.css" rel="stylesheet">
 <!--[if lt IE 9]>
       <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-<script src="../resources/js/comm/jquery.min.js"></script>
-<script src="../resources/ctrl/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-<script src="../resources/ctrl/layer/layer.js"></script>
-<script src="../resources/js/comm/base.js"></script>
-<script src="../resources/js/comm/menu.js"></script>
+<script src="/resources/js/comm/jquery.min.js"></script>
+<script src="/resources/ctrl/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script src="/resources/ctrl/layer/layer.js"></script>
+<script src="/resources/js/comm/base.js"></script>
+<script src="/resources/js/comm/menu.js"></script>
 
 </head>
 
@@ -52,7 +52,7 @@
 
 		<div class="clear full-ws">
 			<img class="full-w"
-				src="../resources/img/user/User/userCenter-banner.jpg" alt="">
+				src="/resources/img/user/User/userCenter-banner.jpg" alt="">
 			<p class="full-w-p">用户中心</p>
 			<p class="full-w-p-1"></p>
 			<p class="full-w-p-2"></p>
@@ -119,14 +119,14 @@
 					class="pt-10 pb-10 line-h-25 pos-r f-20 pl-20 pr-20 col-333 full-w radius-5 cur-d">
 					<spring:message code="name580" />
 					<img class="pos-a t-10 r-20 img-20 close-mod cur-p" id="img_close"
-						src="../resources/img/user/User/close.png" alt="">
+						src="/resources/img/user/User/close.png" alt="">
 				</div>
 				<div class="clear bor bor-t bor-col-f2 pd-20">
 					<div
 						class="clear col-sm-9 h-364 bg-fcfcfc box-sha-inset-big pos-r pl-0 pr-0 overflow-h">
 						<div class="clear " style="width: 643px; height: 364px;">
 							<img id="show-main-img" class="max-w-100p"
-								src="../resources/img/user/User/user-head-portrait.jpg">
+								src="/resources/img/user/User/user-head-portrait.jpg">
 						</div>
 					</div>
 					<div class="clear col-sm-3">

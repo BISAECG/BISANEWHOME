@@ -18,9 +18,9 @@
     <!-- description -->
     <meta name="renderer" content="webkit">
     <!-- base -->
-    <link href="../resources/css/comm/base.css" rel="stylesheet">
-    <link href="../resources/css/index/index.css" rel="stylesheet">
-    <script src="../resources/js/comm/jquery.min.js"></script>
+    <link href="/resources/css/comm/base.css" rel="stylesheet">
+    <link href="/resources/css/index/index.css" rel="stylesheet">
+    <script src="/resources/js/comm/jquery.min.js"></script>
     <style>
         .good{
             background:rgba(255,255,255,1);
@@ -77,7 +77,7 @@
 <div class="con">
     <div class="container-fluid">
         <div class="row">
-            <img class="img-responsive center-block" src="../resources/img/index/banner8-cn.gif" alt="碧沙康健心电仪限时活动">
+            <img class="img-responsive center-block" src="/resources/img/index/banner8-cn.gif" alt="碧沙康健心电仪限时活动">
         </div>
     </div>
     <p class="title-p">

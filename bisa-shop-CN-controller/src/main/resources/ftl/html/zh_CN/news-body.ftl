@@ -14,14 +14,14 @@
     <meta name="description" content="${news_description}">
     <!-- description -->
     <meta name="renderer" content="webkit">
-    <link href="../resources/ctrl/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../resources/css/index/head.css" rel="stylesheet">
-    <link href="../resources/ctrl/layui/css/layui.css" rel="stylesheet" >
-    <link href="../resources/ctrl/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="../resources/css/comm/base.css" rel="stylesheet">
-    <link href="../resources/css/news/HK_News.css" rel="stylesheet">
-    <script src="../resources/js/comm/jquery.min.js"></script>
-    <script src="../resources/js/index/head.js"></script>
+    <link href="/resources/ctrl/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/resources/css/index/head.css" rel="stylesheet">
+    <link href="/resources/ctrl/layui/css/layui.css" rel="stylesheet" >
+    <link href="/resources/ctrl/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/resources/css/comm/base.css" rel="stylesheet">
+    <link href="/resources/css/news/HK_News.css" rel="stylesheet">
+    <script src="/resources/js/comm/jquery.min.js"></script>
+    <script src="/resources/js/index/head.js"></script>
     <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
 </head>

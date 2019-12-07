@@ -15,11 +15,11 @@
     <title>${html_title}</title>
     <meta name="renderer" content="webkit">
     <!-- base -->
-    <link href="../resources/ctrl/layui/css/layui.css" rel="stylesheet">
-    <link href="../resources/css/comm/base.css" rel="stylesheet">
-    <link href="../resources/css/about/HK_About.css" rel="stylesheet">
-    <link href="../resources/ctrl/layui/css/layui.css" rel="stylesheet">
-    <script src="../resources/js/comm/jquery.min.js"></script>
+    <link href="/resources/ctrl/layui/css/layui.css" rel="stylesheet">
+    <link href="/resources/css/comm/base.css" rel="stylesheet">
+    <link href="/resources/css/about/HK_About.css" rel="stylesheet">
+    <link href="/resources/ctrl/layui/css/layui.css" rel="stylesheet">
+    <script src="/resources/js/comm/jquery.min.js"></script>
     <style>
         .title-color {
             background-color: rgba(1, 144, 255, 0.3);
@@ -34,7 +34,7 @@
 </script>
 <div class="wrap clear">
     <div class="clear full-w">
-        <img class="full-w" src="../resources/img/news/HK_HowToShop/banner.jpg" alt="">
+        <img class="full-w" src="/resources/img/news/HK_HowToShop/banner.jpg" alt="">
     </div>
     <div class="container mt-30 pl-0 pr-0 clear bg-f5f5f5 pt-30 pb-70 mb-60">
         <div class="col-sm-3 pl-30 pr-20">
@@ -52,7 +52,7 @@
                 <p id="p3" class="col-757575 f-20-16-ipad line-h-25 mt-40 mb-20 cur-p hovecol-309DE2 col-active instructions-list2">
                     Apple User Report Generation Guide</p>
                 <p id="p4" class="col-757575 f-20-16-ipad line-h-25 mt-40 mb-20 cur-p hovecol-309DE2 col-active instructions-list2">
-                    <a href="../resources/img/news/HK-Instructions/PECG.pdf" download="PECG.pdf">PECG instruction manual download</a>
+                    <a href="/resources/img/news/HK-Instructions/PECG.pdf" download="PECG.pdf">PECG instruction manual download</a>
             </div>
         </div>
         <div id="instr1" class=" clear col-sm-9 pr-30 pl-0">
@@ -82,7 +82,7 @@
                              
                             <p class=" h-20 line-h-20 mt-30">
 
-                                <a download="bisahealth.apk" href="../resources/img/news/HK-Instructions/bishahealth.apk">Click to download</a>
+                                <a download="bisahealth.apk" href="/resources/img/news/HK-Instructions/bishahealth.apk">Click to download</a>
                                  
                             </p>
                              
@@ -98,7 +98,7 @@
                              
                             <div class="clear text-center mt-40 mb-40">
 
-                                <img class="img-180" src="../resources/img/news/HK-Instructions/qr_code.png" alt="bisa health app download">
+                                <img class="img-180" src="/resources/img/news/HK-Instructions/qr_code.png" alt="bisa health app download">
                                  
                             </div>
                                 
@@ -136,7 +136,7 @@
                              
                             <div class="clear text-center mt-25">
 
-                                <img src="../resources/img/news/HK-Instructions/in_register_tipsv1.png">
+                                <img src="/resources/img/news/HK-Instructions/in_register_tipsv1.png">
                                  
                             </div>
                              
@@ -147,7 +147,7 @@
                              
                             <div class="clear text-center mt-25">
 
-                                <img src="../resources/img/news/HK-Instructions/in_register_tipsv2.png">
+                                <img src="/resources/img/news/HK-Instructions/in_register_tipsv2.png">
                                  
                             </div>
                                 
@@ -186,7 +186,7 @@
                              
                             <div class="clear text-center mt-25">
 
-                                <img src="../resources/img/news/HK-Instructions/in_bound_tipsv1.png">
+                                <img src="/resources/img/news/HK-Instructions/in_bound_tipsv1.png">
                                  
                             </div>
                              
@@ -202,7 +202,7 @@
                              
                             <div class="clear text-center mt-25">
 
-                                <img src="../resources/img/news/HK-Instructions/in_bound_tipsv2.png">
+                                <img src="/resources/img/news/HK-Instructions/in_bound_tipsv2.png">
                                  
                             </div>
                              
@@ -213,7 +213,7 @@
                              
                             <div class="clear text-center mt-25">
 
-                                <img src="../resources/img/news/HK-Instructions/in_bound_tipsv4.png">
+                                <img src="/resources/img/news/HK-Instructions/in_bound_tipsv4.png">
                                  
                             </div>
                              
@@ -234,7 +234,7 @@
                              
                             <div class="clear text-center mt-25">
 
-                                <img src="../resources/img/news/HK-Instructions/in_bound_tipsv5.png">
+                                <img src="/resources/img/news/HK-Instructions/in_bound_tipsv5.png">
                                  
                             </div>
                              
@@ -250,7 +250,7 @@
                              
                             <div class="clear text-center mt-25 mb-35">
 
-                                <img src="../resources/img/news/HK-Instructions/in_bound_tipsv6.png">
+                                <img src="/resources/img/news/HK-Instructions/in_bound_tipsv6.png">
                                  
                             </div>
                                 
@@ -289,7 +289,7 @@
                              
                             <div class="clear text-center mt-25">
 
-                                <img src="../resources/img/news/HK-Instructions/in_report_tipsv1.png">
+                                <img src="/resources/img/news/HK-Instructions/in_report_tipsv1.png">
                                  
                             </div>
                              
@@ -300,7 +300,7 @@
                              
                             <div class="clear text-center mt-25">
 
-                                <img src="../resources/img/news/HK-Instructions/in_report_tipsv2.png">
+                                <img src="/resources/img/news/HK-Instructions/in_report_tipsv2.png">
                                  
                             </div>
                              
@@ -310,7 +310,7 @@
                             </p>
                             <div class="clear text-center mt-25">
 
-                                <img src="../resources/img/news/HK-Instructions/in_report_tipsv3.png">
+                                <img src="/resources/img/news/HK-Instructions/in_report_tipsv3.png">
                                  
                             </div>
                              
@@ -321,7 +321,7 @@
                              
                             <div class="clear text-center mt-25">
 
-                                <img src="../resources/img/news/HK-Instructions/in_report_tipsv4.png">
+                                <img src="/resources/img/news/HK-Instructions/in_report_tipsv4.png">
                                  
                             </div>
                              
@@ -332,7 +332,7 @@
                              
                             <div class="clear text-center mt-25">
 
-                                <img src="../resources/img/news/HK-Instructions/shuomingimg_7.png">
+                                <img src="/resources/img/news/HK-Instructions/shuomingimg_7.png">
                                  
                             </div>
                              
@@ -363,7 +363,7 @@
                              
                             <div class="clear text-center mt-25">
 
-                                <img src="../resources/img/news/HK-Instructions/chargeInstructions_1.png">
+                                <img src="/resources/img/news/HK-Instructions/chargeInstructions_1.png">
                                  
                             </div>
                              
@@ -374,7 +374,7 @@
                              
                             <div class="clear text-center mt-25">
 
-                                <img src="../resources/img/news/HK-Instructions/chargeInstructions_2.png">
+                                <img src="/resources/img/news/HK-Instructions/chargeInstructions_2.png">
                                  
                             </div>
                              
@@ -385,17 +385,17 @@
                              
                             <div class="clear text-center mt-25">
 
-                                <img src="../resources/img/news/HK-Instructions/chargeInstructions_3.png">
+                                <img src="/resources/img/news/HK-Instructions/chargeInstructions_3.png">
                                  
                             </div>
                             <div class="clear text-center mt-25">
-                                <img src="../resources/img/news/HK-Instructions/in_report_tipsv3.png">
+                                <img src="/resources/img/news/HK-Instructions/in_report_tipsv3.png">
                             </div>
                             <p class="f-20 col-333 line-h-30 mt-25">
                                 (6) Select the ECG data needed to generate reports in the selected data interface (ECG data are arranged according to date and time, only one time period can be selected).
                             </p>
                             <div class="clear text-center mt-25">
-                                <img src="../resources/img/news/HK-Instructions/chargeInstructions_4.png">
+                                <img src="/resources/img/news/HK-Instructions/chargeInstructions_4.png">
                             </div>
                             <p class="f-20 col-333 line-h-30 mt-25">
                                 (7) Click the report button in the lower right corner to upload data, and all operations are completed. (Fee report needs a certain time for manual review, and will be automatically pushed to you after completion, please wait patiently).
@@ -408,25 +408,25 @@
                                 (1) Log on to Bisa Health APP and enter all device interfaces
                             </p>
                             <div class="clear text-center mt-25">
-                                <img src="../resources/img/news/HK-Instructions/chargeInstructions_1.png">
+                                <img src="/resources/img/news/HK-Instructions/chargeInstructions_1.png">
                             </div>
                             <p class="f-20 col-333 line-h-30 mt-25">
                                 (2) Click on the binding ECG products in the list to enter the ECG monitoring interface.
                             </p>
                             <div class="clear text-center mt-25">
-                                <img src="../resources/img/news/HK-Instructions/history2.png">
+                                <img src="/resources/img/news/HK-Instructions/history2.png">
                             </div>
                             <p class="f-20 col-333 line-h-30 mt-25">
                                 (3) Click on the bottom right corner to view the report button to enter the calendar interface
                             </p>
                             <div class="clear text-center mt-25">
-                                <img src="../resources/img/news/HK-Instructions/history_3.png">
+                                <img src="/resources/img/news/HK-Instructions/history_3.png">
                             </div>
                             <p class="f-20 col-333 line-h-30 mt-25">
                                 (4) You can select the date to select the historical report you want to view. Click on the corresponding report type below to see the details of the report.
                             </p>
                             <div class="clear text-center mt-25">
-                                <img src="../resources/img/news/HK-Instructions/history4.png">
+                                <img src="/resources/img/news/HK-Instructions/history4.png">
                             </div>
                         </div>
                     </div>
@@ -451,7 +451,7 @@
                                 A closed dynamic ECG recorder was taken out, and the protective film of the electrode sheet was removed by aligning the electrode sheet with the four corners of the dynamic ECG recorder.
                             </p>
                             <div class="clear text-center mt-40 mb-40">
-                                <img class="img-180" src="../resources/img/news/HK-Instructions/diyihang.png">
+                                <img class="img-180" src="/resources/img/news/HK-Instructions/diyihang.png">
                             </div>
                         </div>
                     </div>
@@ -465,7 +465,7 @@
                                 It is suggested to shave the body hair at the location of the electrodes (red ellipse area), thoroughly clean the grease and dirt on the skin where the electrodes are installed, keep the operation keys of the dynamic ECG recorder facing upward, tightly adhere the electrodes to the skin by one-time use, and stick the electrodes to the position specified by the ellipse circle in the picture. Sit close to both sides of the heart socket.
                             </p>
                             <div class="clear text-center mt-40 mb-40">
-                                <img class="img-180" src="../resources/img/news/HK-Instructions/dierhang_cn.png">
+                                <img class="img-180" src="/resources/img/news/HK-Instructions/dierhang_cn.png">
                             </div>
                         </div>
                     </div>
@@ -479,7 +479,7 @@
                                 Start the dynamic ECG recorder, press the operation key for a long time until the indicator is green. After a few seconds, the indicator begins to flicker and the data acquisition begins.
                             </p>
                             <div class="clear text-center mt-40 mb-40">
-                                <img class="img-180" src="../resources/img/news/HK-Instructions/disanhang_cn.png">
+                                <img class="img-180" src="/resources/img/news/HK-Instructions/disanhang_cn.png">
                             </div>
                         </div>
                     </div>
@@ -504,7 +504,7 @@
                                 After collecting the data, hold the dynamic ECG recorder with your hand. As shown in the figure below, start at point A of the electrodes, then slowly uncover the next time using the electrodes from outside to inside, put down the dynamic ECG recorder, then pull out the electrodes and discard the electrodes in the garbage bin. Do not tear the electrodes forcefully when taking them off, so as not to damage the skin.
                             </p>
                             <div class="clear text-center mt-40 mb-40">
-                                <img class="img-180" src="../resources/img/news/HK-Instructions/diwuhang.png">
+                                <img class="img-180" src="/resources/img/news/HK-Instructions/diwuhang.png">
                             </div>
                         </div>
                     </div>
@@ -518,8 +518,8 @@
                                 Connect the dynamic ECG recorder to the mobile phone through OTG data line or to the computer through USB data line. Refer to the latest instructions of our company's official website for the data of the dynamic ECG recorder.
                             </p>
                             <div class="clear text-center mt-40 mb-40">
-                                <img class="img-180" src="../resources/img/news/HK-Instructions/diliuhang.png">
-                                <img class="img-180" src="../resources/img/news/HK-Instructions/diliuhang_2.png">
+                                <img class="img-180" src="/resources/img/news/HK-Instructions/diliuhang.png">
+                                <img class="img-180" src="/resources/img/news/HK-Instructions/diliuhang_2.png">
                             </div>
                         </div>
                     </div>
@@ -561,13 +561,13 @@
                                 The following table is a detailed description of three states:
                             </p>
                             <div class="clear text-center mt-40 mb-40">
-                                <img class="img-360" src="../resources/img/news/HK-Instructions/zhuangtai_cn.png">
+                                <img class="img-360" src="/resources/img/news/HK-Instructions/zhuangtai_cn.png">
                             </div>
                             <p class="col-333">
                                 The three state switching modes are shown in the following figure:
                             </p>
                             <div class="clear text-center mt-40 mb-40">
-                                <img class="img-360" src="../resources/img/news/HK-Instructions/qiehuan_cn.png">
+                                <img class="img-360" src="/resources/img/news/HK-Instructions/qiehuan_cn.png">
                             </div>
                             <p class="col-333">
                                 Notes:
@@ -596,7 +596,7 @@
                                 Symbol:
                             </p>
                             <div>
-                                <img class="img-360" src="../resources/img/news/HK-Instructions/fuhao_cn.png">
+                                <img class="img-360" src="/resources/img/news/HK-Instructions/fuhao_cn.png">
                             </div>
                         </div>
                     </div>
@@ -644,37 +644,37 @@
                                 2. Switch on computer
                             </p>
                             <div class="clear text-center mt-40 mb-40">
-                                <img src="../resources/img/news/HK-Instructions/apple1.png">
+                                <img src="/resources/img/news/HK-Instructions/apple1.png">
                             </div>
                             <p class="f-20 col-333 h-20 line-h-20 mt-20">
                                 3. “HC3A250” device appears on your computer (if you cannot find this device, it may be a failure connection.  You may reconnect it.)
                             </p>
                             <div class="clear text-center mt-40 mb-40">
-                                <img src="../resources/img/news/HK-Instructions/apple2.png">
+                                <img src="/resources/img/news/HK-Instructions/apple2.png">
                             </div>
                             <p class="f-20 col-333 h-20 line-h-20 mt-20">
                                 4. Choose “USDATA” file
                             </p>
                             <div class="clear text-center mt-40 mb-40">
-                                <img src="../resources/img/news/HK-Instructions/apple3.png">
+                                <img src="/resources/img/news/HK-Instructions/apple3.png">
                             </div>
                             <p class="f-20 col-333 h-20 line-h-20 mt-20">
                                 5. Select your desired file with right date and time(with marked underline in Red)
                             </p>
                             <div class="clear text-center mt-40 mb-40">
-                                <img src="../resources/img/news/HK-Instructions/apple15.png">
+                                <img src="/resources/img/news/HK-Instructions/apple15.png">
                             </div>
                             <p class="f-20 col-333 h-20 line-h-20 mt-20">
                                 6. Right click your mouse with functional button, to select “COPY” this file(with marked underline in Red)
                             </p>
                             <div class="clear text-center mt-40 mb-40">
-                                <img src="../resources/img/news/HK-Instructions/apple5.png">
+                                <img src="/resources/img/news/HK-Instructions/apple5.png">
                             </div>
                             <p class="f-20 col-333 h-20 line-h-20 mt-20">
                                 7. Back to desktop and right click your mouse, select “Paste” from your menu (with marked underline in Red)
                             </p>
                             <div class="clear text-center mt-40 mb-40">
-                                <img src="../resources/img/news/HK-Instructions/apple6.png">
+                                <img src="/resources/img/news/HK-Instructions/apple6.png">
                             </div>
                             <p class="f-20 col-333 h-40 line-h-20 mt-20">
                                 8. Using browser and entering this website
@@ -685,13 +685,13 @@
                                 9. Log in with your password
                             </p>
                             <div class="clear text-center mt-40 mb-40">
-                                <img src="../resources/img/news/HK-Instructions/apple7.png">
+                                <img src="/resources/img/news/HK-Instructions/apple7.png">
                             </div>
                             <p class="f-20 col-333 h-20 line-h-20 mt-20">
                                 10. After get in the control centre, go to left hand side and select “ Report Management”
                             </p>
                             <div class="clear text-center mt-40 mb-40">
-                                <img src="../resources/img/news/HK-Instructions/apple8.png">
+                                <img src="/resources/img/news/HK-Instructions/apple8.png">
                             </div>
                             <p class="f-20 col-333 h-20 line-h-20 mt-20">
                                 11. Click “Create New Report” button
@@ -700,22 +700,22 @@
                                 12. Click “ECD” upload button, go back to desktop and select your right file. (shown below in red panel)
                             </p>
                             <div class="clear text-center mt-40 mb-40">
-                                <img src="../resources/img/news/HK-Instructions/apple9.png">
+                                <img src="/resources/img/news/HK-Instructions/apple9.png">
                             </div>
                             <p class="f-20 col-333 h-20 line-h-20 mt-20">
                                 13. Find your right file at desktop (shown below in red panel), right click with your mouse and open the file.
                             </p>
                             <div class="clear text-center mt-40 mb-40">
-                                <img src="../resources/img/news/HK-Instructions/apple10.png">
+                                <img src="/resources/img/news/HK-Instructions/apple10.png">
                             </div>
                             <p class="f-18 col-333 h-80 line-h-20 mt-20">
                                 14. After the file selected, please press “preview” button(shown below in red panel) in order check your data file whether it is valid or not.  Additionally, There are two diagrams which is shown you the “VALID DATA”(shown below at left hand side and top of diagram) and “INVALID DATA” (shown below at right hand side and top of diagram).  Close this program after process was completed.
                             </p>
                             <div class="clear text-center mt-40 mb-40">
-                                <img src="../resources/img/news/HK-Instructions/apple16.png">
+                                <img src="/resources/img/news/HK-Instructions/apple16.png">
                             </div>
                             <div class="clear text-center mt-40 mb-40">
-                                <img src="../resources/img/news/HK-Instructions/apple17.png">
+                                <img src="/resources/img/news/HK-Instructions/apple17.png">
                             </div>
                             <p class="f-20 col-333 h-20 line-h-20 mt-20">
                                 15. It must input your name, age, gender and other alternative content
@@ -724,19 +724,19 @@
                                 16. Click “Create Report” (shown below in red panel), user completes upload process
                             </p>
                             <div class="clear text-center mt-40 mb-40">
-                                <img src="../resources/img/news/HK-Instructions/apple11.png">
+                                <img src="/resources/img/news/HK-Instructions/apple11.png">
                             </div>
                             <p class="f-20 col-333 h-20 line-h-20 mt-20">
                                 17. Report will be generated within 48 hours, please review the progress of report.(under proceeding or ready to read.
                             </p>
                             <div class="clear text-center mt-40 mb-40">
-                                <img src="../resources/img/news/HK-Instructions/apple12.png">
+                                <img src="/resources/img/news/HK-Instructions/apple12.png">
                             </div>
                             <p class="f-20 col-333 h-20 line-h-20 mt-20">
                                 18. User could choose either “review report” or “download report”
                             </p>
                             <div class="clear text-center mt-40 mb-40">
-                                <img src="../resources/img/news/HK-Instructions/apple13.png">
+                                <img src="/resources/img/news/HK-Instructions/apple13.png">
                             </div>
                         </div>
                     </div>
@@ -751,9 +751,9 @@
     $("#footer").load("footer.html");
 </script>
 </body>
-<!--<script src="../resources/js/comm/jquery.validate.min.js"></script>-->
-<!--<script src="../resources/js/comm/jquery.validate.messages_zh.js"></script>-->
-<script src="../resources/ctrl/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-<script src="../resources/ctrl/layui/layui.js"></script>
-<script src="../resources/js/about/HK-Instructions.js"></script>
+<!--<script src="/resources/js/comm/jquery.validate.min.js"></script>-->
+<!--<script src="/resources/js/comm/jquery.validate.messages_zh.js"></script>-->
+<script src="/resources/ctrl/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script src="/resources/ctrl/layui/layui.js"></script>
+<script src="/resources/js/about/HK-Instructions.js"></script>
 </html>

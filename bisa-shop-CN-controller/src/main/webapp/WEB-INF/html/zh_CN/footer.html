@@ -66,10 +66,10 @@
                                    target="_blank">
                                     快递查询API</a></li>
                             <li class="pt-10"><a class="col-8c8c8c t-nonehove hovecol-309DE2 f-12"
-                                                 href="../resources/img/pdf/certification.pdf" target="_blank">
+                                                 href="/resources/img/pdf/certification.pdf" target="_blank">
                                 Certification</a></li>
                             <li class="pt-10"><a class="col-8c8c8c t-nonehove hovecol-309DE2 f-12"
-                                                 href="../resources/img/pdf/Electric_utility_model_certificate.pdf" target="_blank">
+                                                 href="/resources/img/pdf/Electric_utility_model_certificate.pdf" target="_blank">
                                 心电仪实用新型证书</a></li>
                         </ul>
                     </div>
@@ -113,7 +113,7 @@
                                     悉心心电仪App</a></li>
                             <div class="pt-10">
                                 <a class="col-8c8c8c t-nonehove hovecol-309DE2 " >
-                                    <img  width="80" height="80" src="../resources/img/index/app_qr.png"  alt="碧沙康健app下载">
+                                    <img  width="80" height="80" src="/resources/img/index/app_qr.png"  alt="碧沙康健app下载">
                                 </a></div>
                         </ul>
                     </div>

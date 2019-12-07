@@ -17,10 +17,10 @@
     <!-- description -->
     <meta name="renderer" content="webkit">
     <!-- base -->
-    <link href="../resources/ctrl/layui/css/layui.css" rel="stylesheet" >
-    <link href="../resources/css/comm/base.css" rel="stylesheet">
-    <link href="../resources/css/news/HK_News.css" rel="stylesheet">
-    <script src="../resources/js/comm/jquery.min.js"></script>
+    <link href="/resources/ctrl/layui/css/layui.css" rel="stylesheet" >
+    <link href="/resources/css/comm/base.css" rel="stylesheet">
+    <link href="/resources/css/news/HK_News.css" rel="stylesheet">
+    <script src="/resources/js/comm/jquery.min.js"></script>
     <style>
         .title-color{
             background-color:rgba(1,144,255,0.3);
@@ -44,7 +44,7 @@
 </script>
 <div class="wrap clear" id="title-list">
     <div class="container-full pos-r center-block">
-        <img class="img-responsive center-block" src="../resources/img/news/HK_HowToShop/banner.png" >
+        <img class="img-responsive center-block" src="/resources/img/news/HK_HowToShop/banner.png" >
         <p class="f-40" style="color: #FFFFFF;position: absolute;left:45%;top: 15%; ">
             健康资讯
         </p>
@@ -54,7 +54,7 @@
         </p>
         <p class="f-30"  style="color: #FFFFFF;position: absolute;left:42%;top: 50%;">给家人一个悉心的呵护</p>
         <img style="position: absolute;left:48%;top: 75%;"
-             src="../resources/img/news/HK_HowToShop/downlogo.png">
+             src="/resources/img/news/HK_HowToShop/downlogo.png">
     </div>
     <div class="container pt-20 pb-20">
         <div class="row">
@@ -128,7 +128,7 @@
     $("#footer").load("footer.html");
 </script>
 </body>
-<script src="../resources/ctrl/layui/layui.js"></script>
+<script src="/resources/ctrl/layui/layui.js"></script>
 <script>
   
       

@@ -23,12 +23,12 @@
 <meta name="renderer" content="webkit">
 <!-- base -->
 <link href="/resources/ctrl/layui/css/layui.css" rel="stylesheet">
-<link href="../resources/css/comm/base.css" rel="stylesheet">
-<link href="../resources/css/index/index.css" rel="stylesheet">
-<link href="../resources/css/shop/payment.css" rel="stylesheet">
-<script src="../resources/js/comm/jquery.min.js"></script>
-<script src="../resources/ctrl/layui/layui.js"></script>
-<script src="../resources/js/utils.js"></script>
+<link href="/resources/css/comm/base.css" rel="stylesheet">
+<link href="/resources/css/index/index.css" rel="stylesheet">
+<link href="/resources/css/shop/payment.css" rel="stylesheet">
+<script src="/resources/js/comm/jquery.min.js"></script>
+<script src="/resources/ctrl/layui/layui.js"></script>
+<script src="/resources/js/utils.js"></script>
 </head>
 <body>
 	<div id="header"></div>
