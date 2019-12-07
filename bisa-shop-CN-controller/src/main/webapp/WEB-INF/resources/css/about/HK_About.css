@@ -15,6 +15,9 @@
 @media (min-width:1300px) {
 	.container {width: 1240px}
 }
+ul li{
+	list-style: square;
+}
 /* 头部 */
 .min-h-120{min-height: 120px;}
 .hovecol-black:hover{color: black !important;}

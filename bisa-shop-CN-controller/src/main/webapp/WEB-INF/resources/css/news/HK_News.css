@@ -151,7 +151,7 @@
 .add_car_p9_span1{background: #00A5F7;}
 .add_car_p9_span2{background: #309de273;}
 .add_car_p10{margin-top: 5px;position: relative;color: #696969;width: 350px;}
-.add_car_p10_i{width: 20px;height: 20px;display: block;position: absolute;top:2px;background-image:url(/resources/../../img/news/HK_HowToShop/ioc_back.png);}
+.add_car_p10_i{width: 20px;height: 20px;display: block;position: absolute;top:2px;background-image:url(../resources/../../img/news/HK_HowToShop/ioc_back.png);}
 .add_car_p10_span{margin-left: 25px;}
 
 .mycar{margin-left:67px;font-weight: bold;font-size: 16px;}
