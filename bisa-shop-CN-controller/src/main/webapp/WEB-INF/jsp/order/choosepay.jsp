@@ -34,44 +34,6 @@
 <script>
     $("#header").load("header.html");
 </script>
-<<<<<<< HEAD
-<div class="container choose">
-    <div class="row">
-        <div class="col-md-11  col-md-offset-1  text-center chooseTitle">
-            <p>请选择支付方式</p>
-        </div>
-    </div>
-    <div class="row chooseBox">
-        <p>支付平台</p>
-        <input type="hidden"  id="language" name="language" value="${language}" />
-        <input type="hidden" id="orderNum" name="orderNum" value="${orderNum}" />
-        <input type="hidden"  id="payType" name="payType" value="-1" />
-        <input type="hidden"  id="timestamp" name="timestamp" value="${timestamp}" />
-        <div class="layui-form-item">
-            <form  class="layui-form" action="${easyUrl}"  target="_blank"  method="post" class="layui-form">
-                <c:forEach items="${easy}" var="item" varStatus="go">
-                <input type="hidden" name="${item.key}" value="${item.value}"/>
-                </c:forEach>
-                <c:forEach items="${visa}" var="item" varStatus="go">
-                <input type="hidden" name="${item.key}" value="${item.value}"/>
-                </c:forEach>
-                <button lay-submit="" lay-filter="wechat">
-                    <img class="img-responsive center-block" src="/resources/img/shop/pay_weixin.png">
-                </button>
-                <button lay-submit="" lay-filter="alipay">
-                    <img class="img-responsive center-block" src="/resources/img/shop/pay_zfb.png">
-                </button>
-                <button  lay-submit="" lay-filter="easy">
-                    <img class="img-responsive center-block" src="/resources/img/shop/pay_union.png">
-                </button>
-                <button lay-submit lay-filter="visa">
-                    <img class="img-responsive center-block" src="/resources/img/shop/pay_visa.png">
-                </button>
-                <button lay-submit lay-filter="master">
-                    <img class="img-responsive center-block" src="/resources/img/shop/pay_master.png">
-                </button>
-            </form>
-=======
 <div class="con">
     <div class="container">
         <div class="row chooseInfo">
@@ -134,7 +96,6 @@
                     </button>
                 </form>
             </div>
->>>>>>> 07778bdf68211963bda9b122d60f29db97773a79
         </div>
     </div>
 </div>
