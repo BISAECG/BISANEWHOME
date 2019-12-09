@@ -237,9 +237,16 @@
     </div>
     <!--活動優惠-->
     <div class="container-fluid mt-20">
-        <div class="row pos-r">
-            <img  class="img-responsive center-block" src="/resources/img/index/banner8-us.gif" alt="Bisha Kangjian Electrocardiograph
-            Limited Time Activity">
+        <div class="row pos-r " >
+            <img class="img-responsive center-block" src="/resources/img/index/banner8-us.gif" alt="碧沙康健心电仪限时活动">
+            <div class="text-center pos-a" style=" top: 67%;right: 42%;">
+                <a target="_blank" href="https://shop194684580.taobao.com/?spm=a230r.7195193.1997079397.2.6815114b089AGi"
+                   style=" font-size: 22px;border-radius: 5px;width: 120px;height: 36px;display: inline-block;color: #fff;line-height: 36px;background: #f40;">
+                    TaoBao</a>
+                <a target="_blank"  href="https://mall.jd.com/index-10103348.html"
+                   style=" font-size: 22px;border-radius: 5px;width: 120px;height: 36px;display: inline-block;color: #fff;line-height: 36px;background: #D71C1E;margin-left:20px;">
+                    JingDong</a>
+            </div>
         </div>
     </div>
 </div>
