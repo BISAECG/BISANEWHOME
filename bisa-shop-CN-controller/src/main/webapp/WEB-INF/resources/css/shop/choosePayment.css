@@ -1,97 +1,40 @@
-.chooseTitle{
-margin-top: 38px;
+.chooseTitle {
+    margin-top: 38px;
     margin-bottom: 38px;
 }
-.chooseTitle p{
-    font-size:28px;font-weight:bold;
-    color:rgba(102,102,102,1);
+
+.chooseTitle p {
+    font-size: 28px;
+    font-weight: bold;
+    color: rgba(102, 102, 102, 1);
 }
 
-
-/*.choose{*/
-    /*margin-bottom: 150px;*/
-/*}*/
-
-/*.chooseLeft{*/
-    /*background:rgba(255,255,255,1);*/
-    /*box-shadow:0px 0px 13px 0px rgba(207,21,24,0.3);*/
-    /*width:320px;*/
-    /*height:489px;*/
-/*}*/
-/*.chooseLeft a{*/
-
-/*}*/
-
-/*.chooseRight .boxTop div,.chooseRight .boxBottom div{*/
-    /*width:320px;*/
-    /*height:220px;*/
-    /*background:rgba(255,255,255,1);*/
-    /*box-shadow:0px 0px 13px 0px rgba(207,21,24,0.3);*/
-    /*margin-left: 44px;*/
-/*}*/
-/*.chooseRight .boxTop .col-md-6 a,.chooseRight .boxBottom .col-md-6 a,.chooseLeft a{*/
-    /*line-height: 220px;font-size:20px;color:rgba(51,51,51,1);display: inline-block;width: 100%;height: 100%;*/
-/*}*/
-/*.chooseLeft a{*/
-    /*line-height: 489px;*/
-/*}*/
-/*.chooseRight .boxTop .col-md-6 img,.chooseRight .boxBottom .col-md-6 img,.chooseLeft img{*/
-
-    /*display: inline-block;margin-right: 5px;margin-bottom: 2px;*/
-/*}*/
-
-
-.chooseBox{
-    background:rgba(255,255,255,1);
-    border:2px solid rgba(213,213,213,1);
+.chooseBox {
+    background: rgba(255, 255, 255, 1);
+    border: 2px solid rgba(213, 213, 213, 1);
     height: 400px;
+    margin-bottom: 200px;
 }
-.chooseBox>p{
-    font-size:18px;
-    color:rgba(102,102,102,1);
+
+.chooseBox p {
+    font-size: 18px;
+    color: rgba(102, 102, 102, 1);
     margin-top: 22px;
     margin-left: 27px;
 }
-.chooseBox .radio{
-    display: inline-block;
 
-}
-.chooseBox div form img{
+.chooseBox div {
+    margin-left: 84px;
     display: inline-block;
+}
 
-}
-/*.chooseBox div form label .radioLeft{*/
-    /*margin-top: 14px;*/
-    /*width:16px;*/
-    /*height:16px;*/
-    /*background:rgba(209,209,209,1);*/
-    /*border-radius:50%;*/
-    /*display: inline-block;*/
-/*}*/
-.chooseBox div form label{
-    margin-top: 20px;
-}
-.chooseBox div form label .radioLeft input{
-    margin-top: 14px;
-    margin-left: -30px;
-    width:16px;
-    height:16px;
-    background:rgba(255,255,255,1);
-    border-radius:50%;
-}
-.chooseBox div form label .radioRight{
-    font-size:20px;
-    color:rgba(51,51,51,1);
-    line-height: 40px;
-    text-align: center;
-    width: 166px;
-    height: 40px;
-    background:rgba(255,255,255,1);
-    box-shadow:0px 0px 13px 0px rgba(155,155,155,0.3);
-    border-radius:5px;
+.chooseBox div button {
+    background: #fff;
+    border: 0;
+    display: inline-block;
     margin-right: 30px;
+    margin-bottom: 20px;
 }
-
 
 
 
