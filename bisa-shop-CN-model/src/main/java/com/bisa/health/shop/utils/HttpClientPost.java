@@ -61,11 +61,11 @@ public class HttpClientPost {
 		html.append("<!DOCTYPE HTML>");
 		html.append("<html>");
 		html.append("<head>");
-		html.append("<title>plase wait...</title>");
+		html.append("<title>Paying...</title>");
 		html.append("<meta charset=\"" + charset + "\"/>");
 		html.append("</head>");
 		html.append("<body>");
-		html.append("<form name=\"submitForm\"  target=\"_blank\"  action=\"" + url + "\" accept-charset=\"" + charset + "\" method=\"post\">");
+		html.append("<form name=\"submitForm\" action=\"" + url + "\" accept-charset=\"" + charset + "\" method=\"post\">");
 		Iterator<String> it = this.parameter.keySet().iterator();
 		while (it.hasNext()) {
 			String key = it.next();

@@ -132,18 +132,22 @@
 	                            	<option value="${GoodsTypeEnum.VIRTUAL.getValue()}">虚拟</option>
 	                            </select>
 	                    </div>
-	                    <div class="div-service dis-n" >
+	                   
 	                        <label class="layui-form-label layui-col-md3">商品价格</label>
 		                    <div class="layui-input-inline">
 		                        <input type="text" name="price"  lay-verify="required" placeholder="请输入商品价格"  class="layui-input">
 		                    </div>
+		           
+	                </div>
+	                
+	               <div class="layui-form-item div-service dis-n">
 		                    <label class="layui-form-label layui-col-md3">虚拟服务</label>
 		                    <div class="layui-input-inline">
 		                            <select id="service_token" name="service_token" lay-verify="required">
 		                            </select>
 		                    </div>
-	                    </div>
 	                </div>
+	                
 	                 <div class="layui-form-item ">
 	                   <label class="layui-form-label" >商品预览图</label>
 	                    <div class="layui-input-inline">

@@ -114,7 +114,7 @@ public class AdminBookController {
 
 	@RequestMapping(value = "/ajax/list", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
 	@ResponseBody
-	public ResponseEntity<Pager<Guestbook>> lsitAjaxGoods(@RequestParam String vKey,@RequestParam String vVal) {
+	public ResponseEntity<Pager<Guestbook>> lsitAjaxGoods(@RequestParam(required=false) String vKey,@RequestParam(required=false) String vVal) {
 		Pager<Guestbook> list = guestbookService.getPageGuestbook(SystemContext.getPageOffset(),vKey, vVal);
 		return new ResponseEntity<Pager<Guestbook>>(list, HttpStatus.OK);
 	}

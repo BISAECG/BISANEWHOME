@@ -3,6 +3,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ page import="com.bisa.health.shop.entity.SysStatusCode" %>
+<%@ page import="com.bisa.health.shop.enumerate.CardUnitEnum" %>
+<%@ page import="com.bisa.health.shop.enumerate.ActivateEnum" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="zh-CN">
 <head>
@@ -13,11 +15,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <!-- necessary -->
-    <meta name="keywords" content="1,2,3">
-    <meta name="description" content="">
+    <title><spring:message code="admin.domain"/></title>
+    <meta name="keywords" content="<spring:message code="admin.domain"/>">
+    <meta name="description" content="<spring:message code="admin.description"/>">
     <!-- description -->
     <meta name="renderer" content="webkit">
-    <title>碧沙康健_新闻列表</title>
     <!-- base -->
     <link href="/resources/ctrl/layui/css/layui.css" rel="stylesheet">
     <link href="/resources/css/comm/base.css" rel="stylesheet">
@@ -26,34 +28,36 @@
       <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+  
+     <style type="text/css">
+    	.layui-form-label{
+    		width:110px !important;
+    	}
+      
+    </style>
     <script type="text/html" id="barDemo">
-		<div class="layui-btn-group">
-			<a class="layui-btn layui-btn-normal layui-btn-sm" lay-event="zh_CN"><spring:message code='language.cn' /></a>
-        	<a class="layui-btn layui-btn-normal layui-btn-sm" lay-event="zh_HK"><spring:message code='language.hk' /></a>
-			<a class="layui-btn layui-btn-normal layui-btn-sm" lay-event="en_US"><spring:message code='language.us' /></a>
-		</div>
-  		<a class="layui-btn layui-btn-sm" lay-event="generate">生成</a>
-       <a class="layui-btn layui-btn-sm layui-btn-warm" lay-event="detail">预览</a>
-        <a class="layui-btn layui-btn-sm layui-btn-danger" lay-event="delarticle">删除</a>
+		<a class="layui-btn layui-btn-normal layui-btn-sm" lay-event="disable"><spring:message code='disable' /></a>
+		<a class="layui-btn layui-btn-normal layui-btn-sm" lay-event="activation"><spring:message code='activation' /></a>
+    </script>
+       <script type="text/html" id="cardStatus">
+        {{# if(d.status=="${ActivateEnum.ACTIVATE.getValue()}"){ }}
+       		<span style="color: #F581B1;">正常</span>
+        {{#  }else{ }}
+ 			<span style="color: #F581B1;">已用</span>
+		{{#  } }}
     </script>
     
-      <script type="text/html" id="news_roofPlacement">
-        {{# if(d.type == 0){ }}
-       		<span style="color: #009688;">不置顶</span>
-        {{# }else{ }}
-            <span style="color: #F581B1;">置顶</span>
-        {{#  } }}
-     </script>
-    <style type="text/css">
-	.layui-table-cell{
-		height: 100%;
-    	max-width: 100%;
-	}
-	.laytable-cell-1-11{
-		height: 100%;
-    	max-width: 100%;
-	}
-	</style>
+    </script>
+       <script type="text/html" id="cardUnit">
+        {{# if(d.card_unit=="${CardUnitEnum.COUNT.getValue()}"){ }}
+       		<span style="color: #F581B1;">次</span>
+        {{#  }else{ }}
+ 			<span style="color: #F581B1;">天</span>
+		{{#  } }}
+    </script>
+ 
+ 
+ 
 </head>
 
 <body class="layui-layout-body">
@@ -64,19 +68,19 @@
         <div class="layui-body">
             <div style="padding: 50px;">
                 <p class="f-18 pt-15 pb-15 col-8d969d">
-                    搜索文章
+                    搜索区
                 </p>
                 <div class="clear pd-15 bg-fafafa bor bor-col-e8ebf2">
                     <!-- 这里用layui的数据表格的重载 -->
-                    <form class="layui-form" action="">
+                    <form class="layui-form" lay-filter="form-opt">
                         <div class="layui-form-item mb-0" pane="">
                             <label class="layui-form-label f-14">搜索：</label>
                             <div class="layui-input-block">
                                 <div class="layui-inline">
                                     <select name="searchabout" lay-verify="required" lay-search="">
                                         <option value="">请选择您要查询的内容</option>
-                                        <option value="news_title">新闻标题</option>
-                                        <option value="release_time">发布时间</option>
+                                        <option value="card_num">卡号</option>
+                                        <option value="user_id">使用者(手机/邮箱/用户名)</option>
                                     </select>
                                 </div>
                                 <div class="layui-inline">
@@ -85,204 +89,405 @@
                                     </div>
                                 </div>
                                 <div class="layui-inline">
-                                    <button type="submit" class="layui-btn layui-btn-sm" lay-submit="" lay-filter="search1">搜索</button>
+                                    <button type="submit" class="layui-btn layui-btn-sm" lay-submit lay-filter="search">搜索</button>
                                     <button type="button" class="layui-btn layui-btn-sm btn-refresh">刷新</button>
-                                    <button type="button" class="layui-btn layui-btn-sm btn-generate">一键生成所有文章</button>
-                                    <a href="/admin/news/add" class=" layui-btn layui-btn-primary layui-btn-sm">新增新闻</a>
+                                      <button type="button" class="layui-btn layui-btn-sm layui-btn-primary btn-add">新增优惠券</button>
                                 </div>
                             </div>
                         </div>
                     </form>
                 </div>
                 <p class="f-18 pt-15 pb-15 mt-40 col-8d969d">
-                    	文章列表
+                                  列表区
                 </p>
                 <div class="clear pd-15 bg-fafafa bor bor-col-e8ebf2">
-                    <table id="commentlist" lay-filter="test"></table>
+                    <table id="mTable" lay-filter="mTable"></table>
                 </div>
             </div>
         </div>
         
-        <!-- (查看新闻基本信息)============================== 的弹出层的基本内容，供js调用======================= -->
-	    <div class="detailcontent dis-n">
-	        <div class="clear pd-20 f-16">
-	            <div class="clear mb-20 h-40 line-h-40 text-center">
-	                <div class="clear dis-ib">
-	                    <img src="/resources/img/admin/logo.png" class="h-35 mt-3 pull-left">
-	                    <span class="f-28 ml-10 f-w family-s pull-left h-40 line-h-40">新闻基本信息</span>
+      <%--Send Dialog--%>
+        <div class="send-box dis-n">
+        	<div class="site-text site-block">
+	          	 <form class="layui-form"  id="send-form" lay-filter="send-form">
+	                <input name="id" type="hidden" value="0" />
+	             
+	                <div class="layui-form-item ">
+	                    <label class="layui-form-label">分配用户</label>
+					    <div class="layui-input-inline">
+					      <input type="text" name="username" id="username" lay-verify="required" autocomplete="off" placeholder="请输入手机/邮箱/用户名"  class="layui-input">
+					    </div>
+	                    <div class="layui-input-inline">
+	                       <button type="button" id="selectUser" class="layui-btn">验证用户</button>
+	                    </div>
 	                </div>
-	            </div>
-	            <fieldset class="layui-elem-field">
-	                <legend>新闻基本信息</legend>
-	                <div class="layui-field-box">
-	                    <div class="layui-form-item mb-0">
-	                        <label class="layui-form-label pl-0 pr-0">封面图:</label>
-	                        <div class="layui-input-block line-h-35 f-16">
-	                        	<img alt="" src="" class="imgUrl">
-	                        </div>
-	                    </div>
-	                    <div class="layui-form-item mb-0">
-	                        <label class="layui-form-label pl-0 pr-0">作者:</label>
-	                        <div class="layui-input-block author line-h-35 f-16">
-	                        </div>
-	                    </div>
-	                    <div class="layui-form-item mb-0">
-	                        <label class="layui-form-label pl-0 pr-0">标题:</label>
-	                        <div class="layui-input-block newsTitle line-h-35 f-16">
-	                        </div>
-	                    </div>
-	                    <div class="layui-form-item mb-0">
-	                        <label class="layui-form-label pl-0 pr-0">副标题:</label>
-	                        <div class="layui-input-block newsSubhead line-h-35 f-16">
-	                        </div>
-	                    </div>
-	                    <div class="layui-form-item mb-0">
-	                        <label class="layui-form-label pl-0 pr-0">阅读量:</label>
-	                        <div class="layui-input-block readQuantity line-h-35 f-16">
-	                        </div>
-	                    </div>
-	                    <div class="layui-form-item mb-0">
-	                        <label class="layui-form-label pl-0 pr-0">新闻id:</label>
-	                        <div class="layui-input-block newsId line-h-35 f-16">
-	                        </div>
-	                    </div>
-	                    <div class="layui-form-item mb-0">
-	                        <label class="layui-form-label pl-0 pr-0">发布时间:</label>
-	                        <div class="layui-input-block releaseTime line-h-35 f-16">
-	                        </div>
-	                    </div>
-                        <div class="layui-form-item mb-0">
-                            <label class="layui-form-label pl-0 pr-0">是否置顶:</label>
-                            <div class="layui-input-block roofPlacement line-h-35 f-16">
-                            </div>
-                        </div>
+	                 <div class="layui-form-item ">
+	                    <label class="layui-form-label">确认用户</label>
+					    <div class="layui-input-inline">
+					      <input type="text" name="mUsername" id="mUsername"  lay-verify="required" readonly="readonly" autocomplete="off"   class="layui-input">
+					    </div>
 	                </div>
-	            </fieldset>
-	        </div>
-	    </div>
+	                
+	                 <div class="layui-form-item">
+	                    <label class="layui-form-label">同时激活</label>
+					    <div class="layui-input-inline">
+					     <input type="checkbox" name="is_activation" lay-skin="switch" lay-text="ON|OFF">
+					    </div>
+					  </div>
+	             
+	               
+	                <div class="layui-form-item">
+	                    <div class="text-center pd-20">
+	                        <button class="layui-btn" lay-submit lay-filter="activation" ><spring:message code='submit' /></button>
+	                        <button type="reset" class="layui-btn layui-btn-primary"><spring:message code='reset' /></button>
+	                    </div>
+	                </div>
+	            </form>
+			</div>
+        </div><!-- end 弹框 -->
+        
+        <%--详情Dialog--%>
+        <div class="mainDialog dis-n">
+        	<div class="site-text site-block">
+	            <form class="layui-form"  id="mainForm" lay-filter="form" >
+	                <input name="id" type="hidden"   value="0" />
+	                 <div class="layui-form-item ">
+	                    <label class="layui-form-label layui-col-md3">虚拟服务</label>
+	                    <div class="layui-input-block">
+	                       <select id="service_token" lay-filter="service_token" name="service_token" lay-verify="required">
+	                       </select>
+	                    </div>
+	                     <div class="dis-n">
+	                       <select id="dis_token" disabled="disabled" name="dis_token" lay-verify="required">
+	                       </select>
+	                    </div>
+	                 </div>
+	                 
+	                 <div class="layui-form-item ">
+	                    <label class="layui-form-label">卡数</label>
+	                    <div class="layui-input-inline">
+	                    	<input type="text"  id="card_count" name="card_count"  lay-verify="required|number"  placeholder="请输入标题" autocomplete="off" class="layui-input">
+	                    </div>
+	                
+	                    <label class="layui-form-label layui-col-md3">单位</label>
+	                    <div class="layui-input-inline">
+	                       <select id="card_unit" class="card_unit"	 name="card_unit" disabled="disabled" lay-verify="required">
+	                       		<option value="${CardUnitEnum.COUNT.getValue()}">次</option>
+	                       		<option value="${CardUnitEnum.TIME.getValue()}">天</option>
+	                       </select>
+	                    </div>
+	                 
+	                 </div>
+	                  <div class="layui-form-item">
+	              		<label class="layui-form-label">新增数量</label>
+	                    <div class="layui-input-inline">
+	                    	<input type="text"  id="version" name="version"  lay-verify="required|number"  placeholder="请输入标题" autocomplete="off" class="layui-input">
+	                    </div>
+	                     <label class="layui-form-label">状态</label>
+	                    <div class="layui-input-inline">
+	                             <select id="status" name="status" lay-verify="required">
+	                            	<option value="${ActivateEnum.ACTIVATE.getValue()}">正常</option>
+	                            	<option value="${ActivateEnum.INACTIVATED.getValue()}">停用</option>
+	                            </select>
+	                    </div>
+	             
+	                </div>
+	               
+	                 <div class="layui-form-item">
+	                    <div class="text-center pd-20">
+	                        <button class="layui-btn" lay-submit lay-filter="create" ><spring:message code='submit' /></button>
+	                        <button type="reset" class="layui-btn layui-btn-primary"><spring:message code='reset' /></button>
+	                    </div>
+	                </div>
+	            </form>
+			</div>
+        </div><!-- end 弹框 -->
         
     </div>
-  <script src="/resources/ctrl/layui/layui.js"></script>
+    <script src="/resources/ctrl/layui/layui.js"></script>
 	<script src="/resources/js/utils.js"></script>
     <script type="text/javascript">
         //刷新  页面按钮
   
-
-        /*layui方面js*/
-        layui.use(['form', 'table', 'element','layer'], function () {
-        	
-            var form = layui.form,
-                layer = layui.layer,
-                element = layui.element,
-                table = layui.table,
-              	$=layui.jquery;
-            
-            //一键生成所有静态网页
-            
-            
-            $(".btn-refresh").click(function () {
-            	tableIns.reload({page:{curr:1},where:{vKey: ""}});
-            });
-           
-            $(".btn-generate").click(function () {
-            	layer.load();
-                $.ajax({
-                    type: "GET",
-                    dataType: "json",
-                    async:false,
-                    url: "/admin/news/ajax/generate/html",
-                    success: function (data) {
-                        //显示新闻数据，填充页面元素
-                    	  layer.closeAll('loading');
-                    	  showMessage(data.msg);
-                    }
-                });
-            });
-
-            //监听提交
-            form.on('submit(search1)', function (data) {
-            	console.log(data);
-                var incontent = data.field.incontent;
-                var searchabout = data.field.searchabout;
-
-            	tableIns.reload({page:{curr:1},where: {
-                    	vKey: searchabout,
-                    	vVal: incontent
-                }});
-                return false;
-            });
-            //=================执行渲染==================
-             var tableIns =table.render({
-                elem: '#commentlist', //指定原始表格元素选择器（推荐id选择器）
-                id: 'commentlist',
-                url: '/admin/news/ajax/list',
-                limit: 10,
-                page:{layout:	['prev', 'page', 'next'],limit:10},
-                cols: [
-                    [ //标题栏
-                        {type: 'numbers'},
-                        {field: 'author', title: '作者', width: '5%', align: 'center'},
-                        {field: 'news_title', title: '新闻标题', width: '10%', align: 'center'},
-                        {field: 'language', title: '新闻语言', width: '10%', align: 'center'},
-                        {field: 'read_quantity', title: '阅读量', width: '5%', sort: true, align: 'center'},
-                        {field: 'html_keyWord', title: '新闻关键词', width: '10%', align: 'center'},
-                        {field: 'html_description', title: '新闻meat描述', width: '10%', align: 'center'},
-                        {field: 'html_title', title: '新闻meat标题', width: '10%', align: 'center'},
-                        {field: 'news_roofPlacement', title: '是否置顶', width: '5%', sort: true, align: 'center',templet:'#news_roofPlacement'},
-                        {field: 'release_time', title: '发布时间', width: '10%', sort: true, align: 'center'},
-                        {fixed: 'right', title: '操作', width: '35%', align: 'center', toolbar: '#barDemo'}
-                    ]
-                ],
-                done: function (res, curr, count) {
-                }
+     //加载layui
+    layui.use(['element', 'table', 'upload','form'], function () {
+        var layer = layui.layer,
+         element = layui.element,
+         table = layui.table,
+         upload = layui.upload,
+         form = layui.form,
+         $=layui.jquery;
      
-            });
-            //===============监听工具条===================
-            table.on('tool(test)', function (obj) { //注：tool是工具条事件名，test是table原始容器的属性 lay-filter="对应的值"
-                var data = obj.data; //获得当前行数据
-                var layEvent = obj.event; //获得 lay-event 对应的值
-                var tr = obj.tr; //获得当前行 tr 的DOM对象
-                if (layEvent === 'detail') { //预览
-                    window.open(shopUrl + "/news/body?id=" + data.id);
-                } else if (layEvent === 'delarticle') { //删除
-                    layer.confirm("<spring:message code='submit.delete' />", function (index) {
-                    	$.post("/admin/news/ajax/delect/"+ data.id, function(result){
-                    		showMessage(result.msg);
-                    		  //执行重载
-                    		tableIns.reload({page:{curr:1}});
-                    	 });
-                    });
-                }else if(layEvent ==='generate'){
-                	layer.load();
-                    $.ajax({
-                        type: "GET",
-                        dataType: "json",
-                        async:false,
-                        url: "/admin/news/ajax/generate/html/"+data.news_num,
-                        success: function (data) {
-                            //显示新闻数据，填充页面元素
-                        	  layer.closeAll('loading');
-                        	  showMessage(data.msg);
-                        }
-                    });
-                }else{
-                	console.log(data);
-                	window.location = "/admin/news/add?id="+data.id+"&news_num="+data.news_num+"&language="+layEvent;
-                }
-               
-            });
-            
-            
-            /*异常信息*/
-            function showMessage(msg) {
-            	if(msg!=''){
-            		layer.msg(msg);
-            	}
-            	
+       	form.on("submit(create)", function(data){
+       		
+       		data.field.card_unit=$('#card_unit').val();
+       		layer.load();
+      		$.ajax({
+				type : "POST",
+				dataType: "json",
+				//contentType: "application/json;charset=UTF-8",
+				url : '/admin/card/ajax/add',
+				data : data.field,
+				success : function(data) {
+					layer.closeAll();
+					if(data.code=="${SysStatusCode.SUCCESS}"){
+						tableIns.reload({page:{curr:1},where: {
+			             	vKey: "",
+			             	vVal: ""
+			         	}});
+						showMessage(data.msg);
+					}
+					
+				}
+			}); 
+	
+       		return false;
+       	});
+       
+
+	form.on('submit(search)', function(data){
+       		
+ 			var incontent = data.field.incontent;
+            var searchabout = data.field.searchabout;
+ 			
+ 			if(searchabout=="user_id"){
+ 	  			$.ajax({
+ 					type : "GET",
+ 					dataType: "json",
+ 					async: false,
+ 					data:{username:incontent},
+ 					//contentType: "application/json;charset=UTF-8",
+ 					url : '/admin/user/ajax/load',
+ 					success : function(obj) {
+ 						if(obj.code=="${SysStatusCode.SUCCESS}"){
+ 							tableIns.reload({page:{curr:1},where: {
+ 		 	                	vKey: searchabout,
+ 		 	                	vVal: obj.data.user_guid
+ 		 	            	}});
+ 						}
+ 					}
+ 				});
+ 	  		
+ 			}else{
+
+ 	        	tableIns.reload({page:{curr:1},where: {
+ 	                	vKey: searchabout,
+ 	                	vVal: incontent
+ 	            }});
+ 			}
+ 			 return false;
+
+      	});
+       	
+  		form.on('select(service_token)',function(data){
+  			var unit=$("#dis_token option[value='"+data.value+"']").text();
+  		  	$(".card_unit option").each(function (i,ele) {
+  		  		if(ele.value==unit){
+  		  		 $(this).attr("selected", true);
+  		  		}else{
+  		  		 $(this).attr("selected", false);
+  		  		}
+          	});
+  			form.render('select','form');
+  		})
+  		
+  		$('.btn-refresh').click(function(){
+  			tableIns.reload({page:{curr:1},where: {
+             	vKey: "",
+             	vVal: ""
+         	}});
+  		});
+  		
+  		$('#selectUser').click(function(){
+  			var username=$('#username').val();
+  			$.ajax({
+				type : "GET",
+				dataType: "json",
+				async: false,
+				data:{username:username},
+				//contentType: "application/json;charset=UTF-8",
+				url : '/admin/user/ajax/load',
+				success : function(obj) {
+					if(obj.code=="${SysStatusCode.SUCCESS}"){
+						$('#mUsername').val(obj.data);
+					}
+				}
+			});
+  			
+  		});
+  		
+  		
+  		$('.btn-add').click(function(){
+  			
+  			$("#service_token").empty();
+  			$("#dis_token").empty();
+			$.ajax({
+				type : "GET",
+				dataType: "json",
+				async: false,
+				//contentType: "application/json;charset=UTF-8",
+				url : '/admin/service/ajax/list',
+				success : function(obj) {
+					if(obj.code=="${SysStatusCode.SUCCESS}"){
+						for(var i = 0; i < obj.data.length; i++) {
+							//添加option元素
+							if(i==0){
+								$("#card_unit").find("option[value='"+obj.data[i].serviceType+"']").attr("selected",true);
+							}
+							$("#dis_token").append("<option value='" + obj.data[i].stoken + "'>" + obj.data[i].serviceType + "</option>");
+							$("#service_token").append("<option value='" + obj.data[i].stoken + "'>" + obj.data[i].name + "</option>");
+						}
+					}
+				}
+			});
+  			
+  			openDialog('form',$('.mainDialog'),{id:0});
+  		});
+   
+        //=================执行渲染==================
+        var tableIns =table.render({
+            elem: '#mTable', //指定原始表格元素选择器（推荐id选择器）
+            url: '/admin/card/ajax/list',
+            method:'GET',
+            page:{layout:	['prev', 'page', 'next'],limit:10},
+            cols: [
+                [ //标题栏
+                        {field: 'id', title: 'ID', width: '5%', align: 'center'},
+                        {field: 'card_num', title: '卡号', width: '20%', align: 'center'},
+                        {field: 'card_pwd', title: '卡密',width: '10%', align: 'center' },
+                        {field: 'status', title: '状态',width: '8%',  sort:true,align: 'center',templet:'#cardStatus'},
+                        {field: 'card_desc', title: '卡描述',width: '8%',  align: 'center'},
+                        {field: 'card_count', title: '卡计数', width: '10%', align: 'center'},
+                        {field: 'card_unit', title: '卡单位', width: '10%', align: 'center',templet:'#cardUnit'},
+                        {field: 'c_time', title: '创建时间', width: '12%',sort:true, align: 'center'},
+                        {fixed: 'right', title: "<spring:message code='opt' />", width: '20%', align: 'center', toolbar: '#barDemo'}                  
+                ]
+            ],
+            done: function (res, curr, count) {
+
             }
         });
+        
+        
+        
+        // ===============监听工具条===================
+        table.on('tool(mTable)', function (obj) { //注：tool是工具条事件名，test是table原始容器的属性 lay-filter="对应的值"
+        	var data = obj.data; // 获得当前行数据
+            var layEvent = obj.event; // 获得 lay-event 对应的值
+            var tr = obj.tr; // 获得当前行 tr 的DOM对象
+            var where=null;
+           if(layEvent == 'disable'){
+        	   if(data.status!="${ActivateEnum.ACTIVATE.getValue()}"){
+        		   return false;
+        	   }
+        	   
+            		layer.confirm('是否禁用此卡券？',{
+          			  btn: ["<spring:message code='submit' />"] //按钮
+          			  ,title:"警告"
+          			}, function(index){
+          				var loadIndex=layer.load();
+          				$.ajax({
+          					type : "POST",
+          					dataType: "json",
+          					data:{id:data.id,status:"${ActivateEnum.INACTIVATED.getValue()}"},
+          					//contentType: "application/json;charset=UTF-8",
+          					url : '/admin/card/ajax/disable',
+          					success : function(data) {
+          						layer.close(loadIndex);
+          						tableIns.reload({page:{curr:1},where: {
+          			             	vKey: "",
+          			             	vVal: ""
+          			         	}});
+          						 showMessage(data.msg);
+          					},error:function(){
+          						layer.close(loadIndex);
+          					}
+          				});
+          			});
+            
+        	   
+        	   
+            }else if(layEvent == 'activation'){
+            	
+            	if(data.status!="${ActivateEnum.ACTIVATE.getValue()}"){
+            		 showMessage("<spring:message code='4003' />");
+            	}else{
+            		$('#send-form')[0].reset();
+            		layer.open({
+                        title: "<spring:message code='add' />"//弹框标题
+                        , content:$('.send-box')//也可以是一个html
+                        , area: ['700', '400']
+        		         ,closeBtn: 1
+        		         ,shadeClose:true
+        		         ,type: 1
+        		      	,shade: 0 
+        		     	,success:function(layero,index){
+        		     		
+        		     	  	form.on('submit(activation)', function(obj){
+        		           		layer.load();
+        		           		obj.field.card_num=data.card_num;
+        		           		obj.field.card_pwd=data.card_pwd;
+        		           	    $.ajax({
+        		    				type : "POST",
+        		    				dataType: "json",
+        		    				//contentType: "application/json;charset=UTF-8",
+        		    				url : '/admin/card/ajax/activation',
+        		    				data : obj.field,
+        		    				success : function(data) {
+        		    					layer.closeAll();
+        		    					if(data.code=="${SysStatusCode.SUCCESS}"){
+        		    						tableIns.reload({page:{curr:1},where: {
+        	          			             	vKey: "",
+        	          			             	vVal: ""
+        	          			         	}});
+        		    						showMessage(data.msg);
+        		    					}
+        		    					
+        		    				}
+        		    			});
+        		    	
+        		           		return false;
+        		           	});
+        		     		
+                		}
+                    });
+            	}
+            	
+            	
+            }
+            
+          
+        });
+        
 
-  
+        function openDialog(formName,formHtml,data){
+          	 layer.open({
+                   title: "<spring:message code='add' />"//弹框标题
+                   , content:$(formHtml)//也可以是一个html
+                   , area: ['700', '600']
+   		         ,closeBtn: 1
+   		         ,shadeClose:true
+   		         ,type: 1
+   		      	,shade: 0 
+   		     	,success:function(layero,index){
+	   		       	form.val(formName,data);
+	   		 	    form.render(null,formName);
+           		}
+               });
+       
+          }
+    	 
+        
+        /*异常信息*/
+        function showMessage(msg) {
+        	if(msg!=''){
+        		layer.msg(msg);
+        	}
+        	
+        }
+    });
+
+    
     </script>
 </body>
 </html>

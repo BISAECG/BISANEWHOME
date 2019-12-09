@@ -20,11 +20,7 @@
 			<artifactId>health-integraion-client</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-		<dependency>
-			<groupId>com.bisa.health.common.service</groupId>
-			<artifactId>health-common-service</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
+	
 		<!-- 公共登录模块jar包 -->
 		<dependency>
 			<groupId>com.bisa.health.shiro.web</groupId>

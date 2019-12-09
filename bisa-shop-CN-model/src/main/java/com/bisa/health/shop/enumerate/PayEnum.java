@@ -2,7 +2,7 @@ package com.bisa.health.shop.enumerate;
 
 
 public enum PayEnum {
-	PAY(1),NOT_PAY(0);
+	PAY(1),NOT_PAY(0),CURR_PAY(2);
 	private int value;
 
 	private PayEnum(int value) {

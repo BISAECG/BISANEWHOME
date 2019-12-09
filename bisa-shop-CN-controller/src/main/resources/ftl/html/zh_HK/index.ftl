@@ -254,7 +254,7 @@
             $.ajax({
                 type: "GET",
                 dataType: "json",
-                url: "/new/tops",
+                url: "/news/tops",
                 success: function (data) {
                     console.log(data);
                     $.each(data, function(i, item) {

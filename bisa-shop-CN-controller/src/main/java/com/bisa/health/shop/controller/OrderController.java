@@ -108,8 +108,9 @@ public class OrderController {
 		}
 		
 		double disprice = 0;
+		GoodsCoupon goodsCoupon=null;
 		if(!StringUtils.isEmpty(order.getCoupon_num())){//优惠券
-			GoodsCoupon goodsCoupon=goodsCouponService.getGoodsCouponByNum(order.getCoupon_num());
+			goodsCoupon=goodsCouponService.getGoodsCouponByNum(order.getCoupon_num());
 			if (goodsCoupon.getCoupon_type() == CouponTypeEnum.TOTAL.getValue()) {
 				if (order_total >= goodsCoupon.getCoupon_total()) {
 					disprice = goodsCoupon.getCoupon_disprice();
@@ -122,7 +123,7 @@ public class OrderController {
 			
 		}
 		
-		double order_price=order_total-disprice-emd_postage;
+		double order_price=order_total-disprice+emd_postage;
 		if(order_price!=order.getOrder_price()){//优惠价
 			throw new WebException(SysErrorCode.SystemError);
 		}
@@ -142,7 +143,11 @@ public class OrderController {
 		order.setOrder_status(OrderStatusEnum.UNSHIPPED.getValue());
 		order.setOrder_num(RandomUtils.RandomOfMillisecond());
 		order.setUser_id(user.getUser_guid());
-		orderService.addOrder(order);
+		if(orderService.addOrder(order)!=null&&goodsCoupon!=null){//更新优惠券状态
+			goodsCoupon.setCoupon_status(ActivateEnum.INACTIVATED.getValue());
+			goodsCoupon.setVersion(goodsCoupon.getVersion()+1);
+			goodsCouponService.updateGoodsCoupon(goodsCoupon);
+		}
 		mModel.addAttribute("orderNum", order.getOrder_num());
 		mModel.addAttribute("timestamp", System.currentTimeMillis());
 		return "redirect:/html/"+language+"/pay";

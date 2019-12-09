@@ -13,11 +13,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <!-- necessary -->
-    <meta name="keywords" content="1,2,3">
-    <meta name="description" content="">
+    <title><spring:message code="admin.domain"/></title>
+    <meta name="keywords" content="<spring:message code="admin.domain"/>">
+    <meta name="description" content="<spring:message code="admin.description"/>">
     <!-- description -->
     <meta name="renderer" content="webkit">
-    <title>碧沙康健_新闻列表</title>
     <!-- base -->
     <link href="/resources/ctrl/layui/css/layui.css" rel="stylesheet">
     <link href="/resources/css/comm/base.css" rel="stylesheet">

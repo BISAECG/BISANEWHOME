@@ -17,11 +17,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <!-- necessary -->
-    <meta name="keywords" content="1,2,3">
-    <meta name="description" content="">
+    <title><spring:message code="admin.domain"/></title>
+    <meta name="keywords" content="<spring:message code="admin.domain"/>">
+    <meta name="description" content="<spring:message code="admin.description"/>">
     <!-- description -->
     <meta name="renderer" content="webkit">
-    <title>碧沙康健_新闻列表</title>
     <!-- base -->
     <link href="/resources/ctrl/layui/css/layui.css" rel="stylesheet">
     <link href="/resources/css/comm/base.css" rel="stylesheet">
@@ -75,10 +75,13 @@
                                 <div class="layui-inline">
                                     <select name="searchabout" lay-verify="required" lay-search="">
                                         <option value="">请选择您要查询的内容</option>
+                                        <option value="user_id">手机/邮箱/用户名</option>
                                         <option value="order_num">订单编号</option>
                                         <option value="order_address">发货地址</option>
                                         <option value="order_phone">联系人</option>
                                         <option value="c_time">订单时间</option>
+                                        <option value="user_id">用户</option>
+                                        
                                     </select>
                                 </div>
                                 <div class="layui-inline">
@@ -345,12 +348,35 @@
   			 var incontent = data.field.incontent;
              var searchabout = data.field.searchabout;
 
-         	tableIns.reload({page:{curr:1},where: {
-                 	vKey: searchabout,
-                 	vVal: incontent
-             }});
+             if(searchabout=="user_id"){
+  	  			$.ajax({
+  					type : "GET",
+  					dataType: "json",
+  					async: false,
+  					data:{username:incontent},
+  					//contentType: "application/json;charset=UTF-8",
+  					url : '/admin/user/ajax/load/',
+  					success : function(obj) {
+  						if(obj.code=="${SysStatusCode.SUCCESS}"){
+  							tableIns.reload({page:{curr:1},where: {
+  		 	                	vKey: searchabout,
+  		 	                	vVal: obj.data.user_guid
+  		 	            	}});
+  						}
+  					}
+  				});
+  	  		
+  			}else{
+
+  	        	tableIns.reload({page:{curr:1},where: {
+  	                	vKey: searchabout,
+  	                	vVal: incontent
+  	            }});
+  			}
              return false;
        	});
+  		
+  		
        	
   		$('.btn-refresh').click(function(){
   			tableIns.reload({page:{curr:1},where: {

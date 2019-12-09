@@ -92,7 +92,7 @@
     <div class="row messageTwo" >
         <p>溫馨提示：如您對我們的產品或其他相關問題有疑問，均可在下方留言提交您的問題，我們的銷售人員會回復您。</p>
     </div>
-    <form class="layui-form" action="">
+    <form class="layui-form" id="messageForm" action="">
         <div class="row messageThere" >
             <div class="form-group col-md-3" style="">
                 <label for="name" class="control-label">姓名:</label>
@@ -145,6 +145,9 @@
                 url : '/ajax/book/add',
                 data : data.field,
                 success : function(data) {
+                    layer.closeAll();
+                    layer.msg(data.msg);
+                    $('#messageForm')[0].reset();
                     layer.closeAll();
                     layer.msg(data.msg);
 

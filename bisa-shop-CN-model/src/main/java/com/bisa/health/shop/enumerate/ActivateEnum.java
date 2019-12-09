@@ -10,6 +10,7 @@ public enum ActivateEnum {
 	 * 激活
 	 */
 	ACTIVATE(1);
+	
 	private int value;
 
 	private ActivateEnum(int value) {

@@ -247,8 +247,8 @@
 				var z=parseFloat(goods_count.val());
 				order_total.val((a*z));
 				xPrice.html("¥"+(a*z));
-				xTotal.html("¥"+(a*z-xCoupan-c))
-				order_price.val(a*z-xCoupan-c);
+				xTotal.html("¥"+(a*z-xCoupan+c))
+				order_price.val(a*z-xCoupan+c);
 			}
 			//优惠券
 			$("#coupon_num").blur(function(){

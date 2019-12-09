@@ -37,6 +37,12 @@ public class Pay implements Serializable {
 	 * 商品编号
 	 */
 	private String goods_num;
+	
+	/**
+	 * 订单编号
+	 */
+	private String order_num;
+	
 	/**
 	 * 支付类型
 	 */
@@ -79,6 +85,14 @@ public class Pay implements Serializable {
 	public void setPay_type(int pay_type) {
 		this.pay_type = pay_type;
 	}
+	
+	
+	public String getOrder_num() {
+		return order_num;
+	}
+	public void setOrder_num(String order_num) {
+		this.order_num = order_num;
+	}
 	@JsonSerialize(using = CustomDateSerializer.class)
 	@Column(name="c_time",columnDefinition="timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP")
 	public Date getC_time() {
@@ -90,8 +104,9 @@ public class Pay implements Serializable {
 	@Override
 	public String toString() {
 		return "Pay [id=" + id + ", user_id=" + user_id + ", pay_price=" + pay_price + ", goods_num=" + goods_num
-				+ ", pay_type=" + pay_type + ", c_time=" + c_time + "]";
+				+ ", order_num=" + order_num + ", pay_type=" + pay_type + ", c_time=" + c_time + "]";
 	}
+
 	
 	
 }

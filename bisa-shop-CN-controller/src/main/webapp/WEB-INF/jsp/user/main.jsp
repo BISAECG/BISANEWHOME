@@ -13,11 +13,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="initial-scale=0.35,user-scalable=yes">
 <!-- necessary -->
-<meta name="keywords" content="1,2,3">
-<meta name="description" content="">
+    <title><spring:message code="admin.domain"/></title>
+    <meta name="keywords" content="<spring:message code="admin.domain"/>">
+    <meta name="description" content="<spring:message code="admin.description"/>">
 <!-- description -->
 <meta name="renderer" content="webkit">
-<title></title>
 <!-- base -->
 <link rel="stylesheet" href="/resources/ctrl/layui/css/layui.css">
 <link href="/resources/ctrl/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">

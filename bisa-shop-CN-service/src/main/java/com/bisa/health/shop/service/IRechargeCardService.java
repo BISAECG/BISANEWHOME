@@ -15,6 +15,22 @@ public interface IRechargeCardService {
      */
     public RechargeCard getRechargeCardById(int id);
     
+    /**
+     * 根据卡号和密码查询
+     * @param card_num
+     * @param card_pwd
+     * @return
+     */
+    public RechargeCard getRechargeCardByNumAndPwd(String card_num,String card_pwd);
+    
+    
+    /**
+     * 根据订单号查询
+     * @param order_num
+     * @return
+     */
+    public RechargeCard getRechargeCardByOrderNum(String order_num);
+    
      
      /**
       * 充值卡分页

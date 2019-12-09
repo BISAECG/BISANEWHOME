@@ -23,6 +23,22 @@ public class RechargeCardServiceImpl implements IRechargeCardService {
 		return iRechargeCardDao.getRechargeCardById(id);
 	}
 
+	
+	
+	@Override
+	public RechargeCard getRechargeCardByNumAndPwd(String card_num, String card_pwd) {
+		return iRechargeCardDao.getRechargeCardByNumAndPwd(card_num, card_pwd);
+	}
+
+
+
+	@Override
+	public RechargeCard getRechargeCardByOrderNum(String order_num) {
+		return iRechargeCardDao.getRechargeCardByOrderNum(order_num);
+	}
+
+
+
 	@Override
 	public Pager<RechargeCard> getPageRechargeCard(int offset,String vKey, String vVal) {
 		return iRechargeCardDao.getPageRechargeCard(vKey, vVal);

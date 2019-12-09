@@ -38,4 +38,19 @@ public class RechargeCardDaoImpl extends BaseDao<RechargeCard> implements IRecha
 		String sql = "SELECT * FROM s_recharge_card";
 		return super.listBySql(sql, null, RechargeCard.class);
 	}
+
+	
+
+	@Override
+	public RechargeCard getRechargeCardByOrderNum(String order_num) {
+		String sql = "SELECT * FROM s_recharge_card WHERE order_num=?";
+		return super.queryObjectBySql(sql, new Object[] { order_num }, RechargeCard.class);
+	}
+
+
+	@Override
+	public RechargeCard getRechargeCardByNumAndPwd(String card_num, String card_pwd) {
+		String sql = "SELECT * FROM s_recharge_card WHERE card_num=? AND card_pwd=?";
+		return super.queryObjectBySql(sql, new Object[] { card_num,card_pwd }, RechargeCard.class);
+	}
 }

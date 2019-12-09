@@ -90,24 +90,10 @@ public class AdminPayController {
 				ResultData.success(SysStatusCode.SUCCESS, i18nUtil.i18n(SysErrorCode.OptSuccess)), HttpStatus.OK);
 	}
 
-	@RequestMapping(value = "/ajax/add", method = RequestMethod.POST, produces = "application/json; charset=utf-8")
-	@ResponseBody
-	public ResponseEntity<ResultData> addAjaxGoods(@Validated Pay order, BindingResult br, Model model) {
-		if (br.hasErrors()) {
-			return new ResponseEntity<ResultData>(
-					ResultData.success(SysStatusCode.FAIL, i18nUtil.i18n(SysErrorCode.RequestFormat)), HttpStatus.OK);
-		}
-		if (order.getId() == 0)
-			payService.addPay(order);
-		else
-			payService.updatePay(order);
-		return new ResponseEntity<ResultData>(
-				ResultData.success(SysStatusCode.SUCCESS, i18nUtil.i18n(SysErrorCode.OptSuccess)), HttpStatus.OK);
-	}
 
 	@RequestMapping(value = "/ajax/list", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
 	@ResponseBody
-	public ResponseEntity<Pager<Pay>> lsitAjaxGoods(@RequestParam String vKey,@RequestParam String vVal) {
+	public ResponseEntity<Pager<Pay>> lsitAjaxGoods(@RequestParam(required=false) String vKey,@RequestParam(required=false) String vVal) {
 		Pager<Pay> list = payService.getPagePay(SystemContext.getPageOffset(),vKey, vVal);
 		return new ResponseEntity<Pager<Pay>>(list, HttpStatus.OK);
 	}

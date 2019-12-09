@@ -15,11 +15,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <!-- necessary -->
-    <meta name="keywords" content="1,2,3">
-    <meta name="description" content="">
+    <title><spring:message code="admin.domain"/></title>
+    <meta name="keywords" content="<spring:message code="admin.domain"/>">
+    <meta name="description" content="<spring:message code="admin.description"/>">
     <!-- description -->
     <meta name="renderer" content="webkit">
-    <title>碧沙康健_新闻列表</title>
     <!-- base -->
     <link href="/resources/ctrl/layui/css/layui.css" rel="stylesheet">
     <link href="/resources/css/comm/base.css" rel="stylesheet">
@@ -28,6 +28,7 @@
       <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+  
      <style type="text/css">
     	.layui-form-label{
     		width:110px !important;
@@ -36,6 +37,7 @@
     </style>
     <script type="text/html" id="barDemo">
 		<a class="layui-btn layui-btn-normal layui-btn-sm" lay-event="disable"><spring:message code='disable' /></a>
+		<a class="layui-btn layui-btn-normal layui-btn-sm" lay-event="send"><spring:message code='4004' /></a>
     </script>
        <script type="text/html" id="couponStatus">
         {{# if(d.coupon_status=="${ActivateEnum.ACTIVATE.getValue()}"){ }}
@@ -103,6 +105,41 @@
             </div>
         </div>
         
+      <%--Send Dialog--%>
+        <div class="send-box dis-n">
+        	<div class="site-text site-block">
+	          	 <form class="layui-form"  id="send-form" lay-filter="send-form">
+	                <input name="id" type="hidden" value="0" />
+	             
+	                <div class="layui-form-item ">
+	                    <label class="layui-form-label">区号</label>
+					    <div class="layui-input-inline">
+					      <input type="hidden" name="number" id="number" value="" >
+					      <select id="selectpicker" name="selectpicker" lay-verify="required" lay-filter="selectpicker">
+					      </select>
+					    </div>
+	                    <label class="layui-form-label">接收人电话</label>
+	                    <div class="layui-input-inline">
+	                        <input type="text" name="phone" autocomplete="off" placeholder="请输入接收人电话"  class="layui-input">
+	                    </div>
+	                </div>
+	                 <div class="layui-form-item ">
+	                    <label class="layui-form-label">接收人邮箱</label>
+	                    <div class="layui-input-block">
+	                        <input type="text" name="email" autocomplete="off"  placeholder="请输入接收人邮箱"  class="layui-input">
+	                    </div>
+	                </div>
+	               
+	                <div class="layui-form-item">
+	                    <div class="text-center pd-20">
+	                        <button class="layui-btn" lay-submit lay-filter="send_submit" ><spring:message code='submit' /></button>
+	                        <button type="reset" class="layui-btn layui-btn-primary"><spring:message code='reset' /></button>
+	                    </div>
+	                </div>
+	            </form>
+			</div>
+        </div><!-- end 弹框 -->
+        
         <%--详情Dialog--%>
         <div class="mainDialog dis-n">
         	<div class="site-text site-block">
@@ -166,7 +203,7 @@
 	               
 	                 <div class="layui-form-item">
 	                    <div class="text-center pd-20">
-	                        <button class="layui-btn" lay-submit lay-filter="create" ><spring:message code='submit' /></button>
+	                        <button class="layui-btn" lay-submit lay-filter="sendCoupon" ><spring:message code='submit' /></button>
 	                        <button type="reset" class="layui-btn layui-btn-primary"><spring:message code='reset' /></button>
 	                    </div>
 	                </div>
@@ -175,7 +212,7 @@
         </div><!-- end 弹框 -->
         
     </div>
-  <script src="/resources/ctrl/layui/layui.js"></script>
+    <script src="/resources/ctrl/layui/layui.js"></script>
 	<script src="/resources/js/utils.js"></script>
     <script type="text/javascript">
         //刷新  页面按钮
@@ -204,6 +241,26 @@
 			             	vKey: "",
 			             	vVal: ""
 			         	}});
+						showMessage(data.msg);
+					}
+					
+				}
+			});
+	
+       		return false;
+       	});
+       
+     	form.on('submit(send_submit)', function(data){
+       		layer.load();
+       		$.ajax({
+				type : "POST",
+				dataType: "json",
+				//contentType: "application/json;charset=UTF-8",
+				url : '/admin/coupon/ajax/send',
+				data : data.field,
+				success : function(data) {
+					layer.closeAll();
+					if(data.code=="${SysStatusCode.SUCCESS}"){
 						showMessage(data.msg);
 					}
 					
@@ -275,6 +332,9 @@
             var tr = obj.tr; // 获得当前行 tr 的DOM对象
             var where=null;
            if(layEvent == 'disable'){
+        	   if(data.coupon_status!="${ActivateEnum.ACTIVATE.getValue()}"){
+          		 return false;
+          		}
         		swithType(data.coupon_type);
             		layer.confirm('是否禁用此优惠券？',{
           			  btn: ["<spring:message code='submit' />"] //按钮
@@ -302,6 +362,26 @@
             
         	   
         	   
+            }else if(layEvent == 'send'){
+            	
+            	if(data.coupon_status!="${ActivateEnum.ACTIVATE.getValue()}"){
+            		 showMessage("<spring:message code='4003' />");
+            	}else{
+            		layer.open({
+                        title: "<spring:message code='add' />"//弹框标题
+                        , content:$('.send-box')//也可以是一个html
+                        , area: ['700', '400']
+        		         ,closeBtn: 1
+        		         ,shadeClose:true
+        		         ,type: 1
+        		      	,shade: 0 
+        		     	,success:function(layero,index){
+        		     		$('#number').val(data.coupon_num);
+                		}
+                    });
+            	}
+            	
+            	
             }
             
           

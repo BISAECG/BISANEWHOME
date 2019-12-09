@@ -9,11 +9,15 @@ import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.NotBlank;
 import org.hibernate.validator.constraints.Range;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import com.bisa.health.common.utils.RegexConstants;
+import com.bisa.health.entity.bind.CustomDateSerializer;
 import com.bisa.health.shop.entity.SysErrorCode;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * 留言model
@@ -35,7 +39,7 @@ public class Guestbook implements Serializable {
 
     private int message_type;      //		留言类型（1-个人；2-企业；3-医院)
     private String message;        //		留言内容
-    private String message_time;   //	50	留言时间
+    private Date c_time;   //	50	留言时间
     private int is_Reply;			//是否回复
     @Id
     @GeneratedValue
@@ -92,7 +96,7 @@ public class Guestbook implements Serializable {
         this.message_type = message_type;
     }
 
-    @Column(nullable = false)
+    @Column(columnDefinition="text")
     @NotBlank(message=SysErrorCode.RequestFormat)
     public String getMessage() {
         return message;
@@ -102,30 +106,32 @@ public class Guestbook implements Serializable {
         this.message = message;
     }
 
-    @Column(length = 50)
-    public String getMessage_time() {
-        return message_time;
-    }
-
-    public void setMessage_time(String message_time) {
-        this.message_time = message_time;
-    }
-
-
     public int getIs_Reply() {
 		return is_Reply;
 	}
-
-	public void setIs_Reply(int is_Reply) {
+    
+    public void setIs_Reply(int is_Reply) {
 		this.is_Reply = is_Reply;
 	}
 
+	@JsonSerialize(using = CustomDateSerializer.class)
+	@Column(name="c_time",columnDefinition=" timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP")
+	public Date getC_time() {
+		return c_time;
+	}
 
-    @Override
+	public void setC_time(Date c_time) {
+		this.c_time = c_time;
+	}
+
+	@Override
 	public String toString() {
 		return "Guestbook [id=" + id + ", name=" + name + ", phone=" + phone + ", mail=" + mail + ", title=" + title
-				+ ", message_type=" + message_type + ", message=" + message + ", message_time=" + message_time
-				+ ", is_Reply=" + is_Reply + "]";
+				+ ", message_type=" + message_type + ", message=" + message + ", c_time=" + c_time + ", is_Reply="
+				+ is_Reply + "]";
 	}
+
+	
+	
 
 }

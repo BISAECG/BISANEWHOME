@@ -3,38 +3,32 @@ package com.bisa.health.shop.admin.controller;
 import com.bisa.health.basic.entity.Pager;
 import com.bisa.health.basic.entity.SystemContext;
 import com.bisa.health.client.entity.User;
-import com.bisa.health.common.app.service.ISmsService;
 import com.bisa.health.common.email.utils.SendMailUtils;
 import com.bisa.health.common.entity.ResultData;
+import com.bisa.health.common.sms.utils.SmsUtils;
 import com.bisa.health.common.utils.RandomUtils;
+import com.bisa.health.common.utils.RegexConstants;
 import com.bisa.health.shiro.web.bind.CurrentUser;
-import com.bisa.health.shop.admin.util.JsonResult;
-import com.bisa.health.shop.component.FreemarkerComponent;
 import com.bisa.health.shop.component.InternationalizationUtil;
 import com.bisa.health.shop.component.MqttComponent;
 import com.bisa.health.shop.entity.SysErrorCode;
 import com.bisa.health.shop.entity.SysStatusCode;
 import com.bisa.health.shop.enumerate.ActivateEnum;
+import com.bisa.health.shop.enumerate.CouponEnum;
 import com.bisa.health.shop.enumerate.CouponTypeEnum;
-import com.bisa.health.shop.enumerate.LangEnum;
-import com.bisa.health.shop.model.CompanyInfo;
-import com.bisa.health.shop.model.HtmlInfo;
 import com.bisa.health.shop.model.GoodsCoupon;
-import com.bisa.health.shop.service.ICompanyInfoService;
 import com.bisa.health.shop.service.IGoodsCouponService;
-import com.bisa.health.shop.service.IHtmlInfoService;
-import com.bisa.health.shop.service.IGoodsCouponService;
-import com.bisa.health.shop.service.IGoodsCouponService;
-import com.bisa.health.shop.utils.TradeNoUtils;
 
-import org.apache.commons.httpclient.util.LangUtils;
+import java.util.ArrayList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.shiro.authz.annotation.Logical;
 import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -42,22 +36,10 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.websocket.server.PathParam;
-
-import java.io.File;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 
 /**
  * 优惠券管理
@@ -131,13 +113,64 @@ public class AdminGoodsCouponController {
 				ResultData.success(SysStatusCode.SUCCESS, i18nUtil.i18n(SysErrorCode.OptSuccess)), HttpStatus.OK);
 	}
 
+	@RequestMapping(value = "/ajax/send", method = RequestMethod.POST, produces = "application/json; charset=utf-8")
+	@ResponseBody
+	public ResponseEntity<ResultData> sendCoupon(@RequestParam String selectpicker,@RequestParam String number,String phone,String email) {
+		
+		GoodsCoupon goodsCoupon=goodsCouponService.getGoodsCouponByNum(number);
+		if(goodsCoupon==null||goodsCoupon.getCoupon_status()!=ActivateEnum.ACTIVATE.getValue()){
+			return new ResponseEntity<ResultData>(
+					ResultData.success(SysStatusCode.FAIL, i18nUtil.i18n(SysErrorCode.OptFail)),
+					HttpStatus.OK);
+		}
+		 String couponStr="";
+		if(goodsCoupon.getCoupon_type()==CouponTypeEnum.DISRATE.getValue()){
+			couponStr=String.format(i18nUtil.i18n("coupon.a"), ""+(goodsCoupon.getCoupon_disrate()*10));
+		}else if(goodsCoupon.getCoupon_type()==CouponTypeEnum.TOTAL.getValue()){
+			couponStr=String.format(i18nUtil.i18n("coupon.b"), ""+goodsCoupon.getCoupon_total(),""+goodsCoupon.getCoupon_disprice());
+		}
+		
+		boolean result=true;
+		if(!StringUtils.isEmpty(email)){
+			 Pattern p = Pattern.compile(RegexConstants.REGEX_EMAIL);
+		     Matcher m = p.matcher(email);
+		     if(m.matches()){
+		    	
+		    	 String content=String.format(i18nUtil.i18n("coupon.c"), couponStr,goodsCoupon.getCoupon_num());
+		    	 result=SendMailUtils.getInstance().sendEmailFreeContent(i18nUtil.i18n("admin.domain"), email,content);
+		     }  	
+		        
+		}
+		
+		if(!StringUtils.isEmpty(phone)){
+			 Pattern p = Pattern.compile(RegexConstants.REGEX_NUMBER);
+		     Matcher m = p.matcher(phone);
+		     if(m.matches()){
+		    	 ArrayList<String> params=new ArrayList<String>();
+		    	 params.add(couponStr);
+		    	 params.add(goodsCoupon.getCoupon_num());
+		    	 result&=SmsUtils.sendNotifiCoupon(selectpicker, phone, params);
+		     }  	
+		}
+		if(result){
+			return new ResponseEntity<ResultData>(
+					ResultData.success(SysStatusCode.SUCCESS, i18nUtil.i18n(SysErrorCode.OptSuccess)),
+					HttpStatus.OK);
+		}else{
+			return new ResponseEntity<ResultData>(
+					ResultData.success(SysStatusCode.FAIL, i18nUtil.i18n(SysErrorCode.OptFailTry)),
+					HttpStatus.OK);
+		}
+		
+	}
+	
+	
 	@RequestMapping(value = "/ajax/list", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
 	@ResponseBody
 	public ResponseEntity<Pager<GoodsCoupon>> lsitAjaxGoods(@RequestParam(required=false) String vKey,@RequestParam(required=false) String vVal) {
 		Pager<GoodsCoupon> list = goodsCouponService.getPageGoodsCoupon(SystemContext.getPageOffset(),vKey, vVal);
 		return new ResponseEntity<Pager<GoodsCoupon>>(list, HttpStatus.OK);
 	}
-	
 	@RequestMapping(value = "/ajax/number", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
 	@ResponseBody
 	public ResponseEntity<ResultData> ajaxNumber() {

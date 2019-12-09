@@ -139,7 +139,7 @@ public class GoodsCoupon implements Serializable {
 		this.coupon_status = coupon_status;
 	}
 	@JsonSerialize(using = CustomDateSerializer.class)
-	@Column(name="c_time",columnDefinition="timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP")
+	@Column(name="c_time",columnDefinition=" timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP")
 	public Date getC_time() {
 		return c_time;
 	}

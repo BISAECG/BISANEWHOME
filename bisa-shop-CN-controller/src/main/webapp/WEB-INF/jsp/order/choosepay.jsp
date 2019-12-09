@@ -14,25 +14,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
     <!-- necessary -->
-	  <title><spring:message code="admin.domain" /></title>
-	 <meta name="keywords" content="<spring:message code="admin.keyword" />">
-	 <meta name="description" content="<spring:message code="admin.description" />">
-<!-- description -->
+    <title><spring:message code="admin.domain" /></title>
+    <meta name="keywords" content="<spring:message code="admin.keyword" />">
+    <meta name="description" content="<spring:message code="admin.description" />">
+    <!-- description -->
     <!-- description -->
     <meta name="renderer" content="webkit">
     <!-- base -->
-<<<<<<< HEAD
-   	<link href="/resources/ctrl/layui/css/layui.css" rel="stylesheet">
-=======
->>>>>>> BUG1
+    <link href="/resources/ctrl/layui/css/layui.css" rel="stylesheet">
     <link href="/resources/css/comm/base.css" rel="stylesheet">
     <link href="/resources/css/index/index.css" rel="stylesheet">
     <link href="/resources/css/shop/choosePayment.css" rel="stylesheet">
     <script src="/resources/js/comm/jquery.min.js"></script>
-<<<<<<< HEAD
     <script src="/resources/ctrl/layui/layui.js"></script>
-=======
->>>>>>> BUG1
 </head>
 
 <body>
@@ -46,111 +40,62 @@
             <p>请选择支付方式</p>
         </div>
     </div>
-    <div class="row">
-<<<<<<< HEAD
-    <form action="/html/${language}/pay" method="post" class="layui-form">
-    	 	<input type="hidden"  id="language" name="language" value="${language}" />
-                 <input type="hidden" id="orderNum" name="orderNum" value="${orderNum}" />
-                  <input type="hidden"  id="payType" name="payType" value="-1" />
-                   <input type="hidden"  id="timestamp" name="timestamp" value="${timestamp}" />
-
-        <div class="col-md-8 chooseRight text-center">
-            <div class="row boxTop ">
-                <div class="col-md-6">
-                    <a lay-submit  lay-filter="wechat" >
-                    <img class="img-responsive center-block" src="/resources/img/shop/wx.png">
-                        	微信支付
-                    </a>
-                </div>
-                <div class="col-md-6">
-                    <a lay-submit  lay-filter="alipay">
-                    <img class="img-responsive center-block" src="/resources/img/shop/zfb.png">
-                        	支付宝支付
-=======
-        <div class="col-md-3 col-md-offset-1 chooseLeft text-center">
-            <a href="payWaiting.html">
-                <img class="img-responsive center-block" src="/resources/img/shop/yl.png">
-                银联支付
-            </a>
+    <div class="row chooseBox">
+        <p>支付平台</p>
+        <input type="hidden"  id="language" name="language" value="${language}" />
+        <input type="hidden" id="orderNum" name="orderNum" value="${orderNum}" />
+        <input type="hidden"  id="payType" name="payType" value="-1" />
+        <input type="hidden"  id="timestamp" name="timestamp" value="${timestamp}" />
+        <div class="layui-form-item">
+            <form  class="layui-form" action="${easyUrl}"  target="_blank"  method="post" class="layui-form">
+                <c:forEach items="${easy}" var="item" varStatus="go">
+                <input type="hidden" name="${item.key}" value="${item.value}"/>
+                </c:forEach>
+                <c:forEach items="${visa}" var="item" varStatus="go">
+                <input type="hidden" name="${item.key}" value="${item.value}"/>
+                </c:forEach>
+                <button lay-submit="" lay-filter="wechat">
+                    <img class="img-responsive center-block" src="/resources/img/shop/pay_weixin.png">
+                </button>
+                <button lay-submit="" lay-filter="alipay">
+                    <img class="img-responsive center-block" src="/resources/img/shop/pay_zfb.png">
+                </button>
+                <button  lay-submit="" lay-filter="easy">
+                    <img class="img-responsive center-block" src="/resources/img/shop/pay_union.png">
+                </button>
+                <button lay-submit lay-filter="visa">
+                    <img class="img-responsive center-block" src="/resources/img/shop/pay_visa.png">
+                </button>
+                <button lay-submit lay-filter="master">
+                    <img class="img-responsive center-block" src="/resources/img/shop/pay_master.png">
+                </button>
+            </form>
         </div>
-        <div class="col-md-8 chooseRight text-center">
-            <div class="row boxTop ">
-                <div class="col-md-6">
-                    <a href="payWaiting.html">
-                    <img class="img-responsive center-block" src="/resources/img/shop/wx.png">
-                        微信支付
-                    </a>
-                </div>
-                <div class="col-md-6">
-                    <a href="payWaiting.html">
-                    <img class="img-responsive center-block" src="/resources/img/shop/zfb.png">
-                        支付宝支付
->>>>>>> BUG1
-                    </a>
-                </div>
-            </div>
-            <div class="row boxBottom mt-50">
-                <div class="col-md-6">
-<<<<<<< HEAD
-                    <button lay-submit  lay-filter="visa">
-=======
-                    <a>
->>>>>>> BUG1
-                        <img class="img-responsive center-block" src="/resources/img/shop/visa.png">
-                        VISA支付
-                    </button>
-                </div>
-                <div class="col-md-6">
-<<<<<<< HEAD
-                    <button lay-submit  lay-filter="master">
-=======
-                    <a>
->>>>>>> BUG1
-                        <img class="img-responsive center-block" src="/resources/img/shop/mate.png">
-                        Master支付
-                    </button>
-                </div>
-            </div>
-            <div class="row boxTop ">
-                <div class="col-md-6">
-                    <button  class="layui-btn" id="easy" lay-submit  lay-filter="easy"  >
-		                <img class="img-responsive center-block" src="/resources/img/shop/yl.png">
-		                	银联支付
-		            </button>
-                </div>
-            </div>
-        </div>
-      </form>
     </div>
 </div>
 <div id="footer"></div>
 <script>
     $("#footer").load("footer.html");
 </script>
-<<<<<<< HEAD
 <script type="text/javascript">
-	layui.use([ 'element', 'form' ],function() {
-		var layer = layui.layer, 
-		element = layui.element, 
-		form = layui.form;
-		
+    layui.use([ 'element', 'form' ],function() {
+        var layer = layui.layer,
+            element = layui.element,
+            form = layui.form;
 
-		form.on('submit(easy)', function(data){
-			$('#payType').val("${PayTypeEnum.EASY.getValue()}");
-			return true;
-		});
-		form.on('submit(visa)', function(data){
-			return true;
-		});
-		form.on('submit(master)', function(data){
-			return true;
-		});
-		
-		
-	});
+        form.on('submit(easy)', function(data){
+            $('#payType').val("${PayTypeEnum.EASY.getValue()}");
+            return true;
+        });
+        form.on('submit(visa)', function(data){
+            return true;
+        });
+        form.on('submit(master)', function(data){
+            return true;
+        });
+
+
+    });
 </script>
-=======
-<script src="/resources/js/shop/shop.js"></script>
->>>>>>> BUG1
 </body>
 </html>

@@ -10,8 +10,13 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Version;
+import javax.validation.constraints.Max;
+
+import org.hibernate.validator.constraints.NotBlank;
+import org.hibernate.validator.constraints.Range;
 
 import com.bisa.health.entity.bind.CustomDateSerializer;
+import com.bisa.health.shop.entity.SysErrorCode;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 
@@ -34,6 +39,11 @@ public class RechargeCard implements Serializable{
 	private int id;
 	
 	/**
+	 * 卡最终使用者ID
+	 */
+	private int user_id;
+	
+	/**
 	 * 卡号
 	 */
 	private String card_num;
@@ -48,16 +58,18 @@ public class RechargeCard implements Serializable{
 	 */
 	private String order_num;
 	/**
-	 * 创建者IDY一般就是用户ID
+	 * 卡属于哪个用户的ID
 	 */
 	private int creator;
 	/**
 	 * 是否使用0未用1使用
 	 */
+	@Range(min=0,max=1,message=SysErrorCode.RequestFormat)
 	private int status;
 	/**
 	 * 对应服务的TOKEN
 	 */
+	@NotBlank(message=SysErrorCode.RequestFormat)
 	private String service_token;
 	/**
 	 * 卡描述
@@ -70,10 +82,12 @@ public class RechargeCard implements Serializable{
 	/**
 	 * 卡次数
 	 */
+	@Max(value=Integer.MAX_VALUE,message=SysErrorCode.RequestFormat)
 	private int card_count;
 	/**
 	 * 卡单位 TIME 对应天数 COUNT次数
 	 */
+	@NotBlank(message=SysErrorCode.RequestFormat)
 	private String card_unit;
 	
 	
@@ -161,13 +175,20 @@ public class RechargeCard implements Serializable{
 	public void setCard_unit(String card_unit) {
 		this.card_unit = card_unit;
 	}
+	public int getUser_id() {
+		return user_id;
+	}
+	public void setUser_id(int user_id) {
+		this.user_id = user_id;
+	}
 	@Override
 	public String toString() {
-		return "RechargeCard [id=" + id + ", card_num=" + card_num + ", card_pwd=" + card_pwd + ", version=" + version
-				+ ", order_num=" + order_num + ", creator=" + creator + ", status=" + status + ", service_token="
-				+ service_token + ", card_desc=" + card_desc + ", c_time=" + c_time + ", card_count=" + card_count
-				+ ", card_unit=" + card_unit + "]";
+		return "RechargeCard [id=" + id + ", user_id=" + user_id + ", card_num=" + card_num + ", card_pwd=" + card_pwd
+				+ ", version=" + version + ", order_num=" + order_num + ", creator=" + creator + ", status=" + status
+				+ ", service_token=" + service_token + ", card_desc=" + card_desc + ", c_time=" + c_time
+				+ ", card_count=" + card_count + ", card_unit=" + card_unit + "]";
 	}
+	
 
 	
 	

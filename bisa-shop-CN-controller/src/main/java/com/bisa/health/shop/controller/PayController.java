@@ -34,6 +34,10 @@ import com.bisa.health.shop.service.IOrderService;
 
 @Controller
 public class PayController {
+	
+	
+    @Value("${visa_pay_url}")
+    private String visa_pay_url;
 
 	@Autowired
 	private InternationalizationUtil i18nUtil;
@@ -54,10 +58,19 @@ public class PayController {
 	private final static Logger log = LogManager.getLogger(AdminNewsController.class);
 
 	@RequestMapping(value = "html/{language}/pay", method = RequestMethod.GET)
-	public String index(Model model, @PathVariable String language, @RequestParam String orderNum,
+	public String index(HttpServletRequest request,Model model, @PathVariable String language, @RequestParam String orderNum,
 			@RequestParam long timestamp) {
-
 		Order order = orderService.getOrderByNum(orderNum);
+		if(order==null||order.getIs_pay()==PayEnum.PAY.getValue()){
+			throw new WebException("订单不存在或订单已经支付");
+		}
+		PayResponse payResponse=easyLink.easylickPay(request, order);
+		model.addAttribute("easy", payResponse.getFormData());
+		model.addAttribute("easyUrl", payResponse.getUrl());
+	    Map<String, String> visaPayMap = visaPay.getVisaPayMap(order);
+		model.addAttribute("visa", visaPayMap);
+		model.addAttribute("visaUrl", visa_pay_url);
+		
 		model.addAttribute("language", language);
 		model.addAttribute("orderNum", orderNum);
 		model.addAttribute("timestamp", timestamp);
@@ -71,8 +84,13 @@ public class PayController {
 		if(order==null||order.getIs_pay()==PayEnum.PAY.getValue()){
 			throw new WebException("订单不存在或订单已经支付");
 		}
+
+		orderService.updateOrder(order);
 		if(payType==PayTypeEnum.EASY.getValue()){
 			PayResponse payResponse=easyLink.easylickPay(request, order);
+			order.setPay_type(PayEnum.CURR_PAY.getValue());//为防止重复支付
+			order.setVersion(order.getVersion()+1);
+			orderService.updateOrder(order);
 			try {
 				easyLink.autoBuildPost(request, response, payResponse);
 			} catch (IOException e) {
@@ -80,9 +98,34 @@ public class PayController {
 				log.info(e.getMessage()+"["+order.getOrder_num()+"]");
 				throw new WebException(SysErrorCode.PayError);
 			}
+			
+		}else if(payType==PayTypeEnum.VISA.getValue()){
+			
 		}
 		
 	}
+	
+	
+	
+    /**
+     * 订单重复支付的提示信息
+     */
+    @RequestMapping(value = "/user/pay/error", method = RequestMethod.POST)
+    @ResponseBody
+    public void payError(Model model, HttpServletRequest request) {
+    	
+    	Map<String, String[]> paramMap = request.getParameterMap();
+        HashMap<String, String> signMap = new HashMap<String, String>();
+        for (String key : paramMap.keySet()) {
+            String[] value = paramMap.get(key);
+            signMap.put(key, value[0]);
+        }
+    	
+           String payment_id = easyLink.payCompleted(request);
+           
+         
+    }
+	
 	
     /**
      * 银联支付成功后的同步方法
