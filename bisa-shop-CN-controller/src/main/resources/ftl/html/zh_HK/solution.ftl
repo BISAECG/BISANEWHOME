@@ -41,6 +41,12 @@
         font-size: 22px;
         margin-left: 50px;
     }
+    .taobao1:focus, .taobao1:hover {
+        color: #fff;
+    }
+    .jingdong1:focus, .jingdong1:hover {
+        color: #fff;
+    }
     .Advantage{
         color:rgba(255,255,255,1);
         font-weight:400;

@@ -129,7 +129,7 @@
                     </li>
                     <li class='bar-sort'>
                         <a href='book.html' title='留言板还在建设中' styele='cursor:not-allowed;' class='bar-link pos-r'>
-                            <img id='bar-sort2' src='/resources/img/index/Sidebar2.png' alt="留言板" '>
+                            <img id='bar-sort2' src='/resources/img/index/Sidebar2.png' alt="留言板">
                             <span class='pos-a' style='top: 56%;left: 20%;color: #fff;'>
                                 留言板
                             </span>

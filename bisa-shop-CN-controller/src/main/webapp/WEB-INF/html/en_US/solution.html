@@ -41,6 +41,12 @@
         font-size: 22px;
         margin-left: 50px;
     }
+    .taobao1:focus, .taobao1:hover {
+        color: #fff;
+    }
+    .jingdong1:focus, .jingdong1:hover {
+        color: #fff;
+    }
     .Advantage{
         color:rgba(255,255,255,1);
         font-weight:400;
@@ -96,7 +102,7 @@
                 </p>
                 <p>
                     <a target="_blank" href=https://item.taobao.com/item.htm?spm=a230r.7195193.1997079397.10.7e1d114bDxBwby&id=605194973158&abbucket=9"  class="text-center taobao1">TaoBao</a>
-                    <a target="_blank" href="https://item.jd.com/58928187146.html" class="text-center jingdong1" style="">JingDong</a>
+                    <a target="_blank" href="https://item.jd.com/58928187146.html" class="text-center jingdong1" >JingDong</a>
                 </p>
             </div>
             <div class="col-md-4 col-md-offset-2" >
