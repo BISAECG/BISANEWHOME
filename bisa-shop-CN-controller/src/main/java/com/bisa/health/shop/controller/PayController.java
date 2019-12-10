@@ -26,8 +26,10 @@ import com.bisa.health.shop.component.VisaPayComponent;
 import com.bisa.health.shop.entity.PayResponse;
 import com.bisa.health.shop.entity.SysErrorCode;
 import com.bisa.health.shop.entity.WebException;
+import com.bisa.health.shop.enumerate.ActivateEnum;
 import com.bisa.health.shop.enumerate.PayEnum;
 import com.bisa.health.shop.enumerate.PayTypeEnum;
+import com.bisa.health.shop.model.Goods;
 import com.bisa.health.shop.model.Order;
 import com.bisa.health.shop.service.IGoodsService;
 import com.bisa.health.shop.service.IOrderService;
@@ -61,9 +63,14 @@ public class PayController {
 	public String index(HttpServletRequest request,Model model, @PathVariable String language, @RequestParam String orderNum,
 			@RequestParam long timestamp) {
 		Order order = orderService.getOrderByNum(orderNum);
-		if(order==null||order.getIs_pay()==PayEnum.PAY.getValue()){
+		if(order==null||order.getOrder_status()==ActivateEnum.INACTIVATED.getValue()||order.getIs_pay()==PayEnum.PAY.getValue()){
 			throw new WebException("订单不存在或订单已经支付");
 		}
+		
+		Goods goods=goodService.loadByNumAndlanguage(order.getGoods_num(), language);
+		model.addAttribute("goods", goods);
+		model.addAttribute("order", order);
+		
 		PayResponse payResponse=easyLink.easylickPay(request, order);
 		model.addAttribute("easy", payResponse.getFormData());
 		model.addAttribute("easyUrl", payResponse.getUrl());
@@ -77,33 +84,6 @@ public class PayController {
 		return "order/choosepay";
 	}
 
-	@RequestMapping(value = "html/{language}/pay", method = RequestMethod.POST)
-	public void index(HttpServletRequest request,HttpServletResponse response, Model model, @PathVariable String language,
-			@RequestParam String orderNum, @RequestParam long timestamp,@RequestParam int payType) {
-		Order order = orderService.getOrderByNum(orderNum);
-		if(order==null||order.getIs_pay()==PayEnum.PAY.getValue()){
-			throw new WebException("订单不存在或订单已经支付");
-		}
-
-		orderService.updateOrder(order);
-		if(payType==PayTypeEnum.EASY.getValue()){
-			PayResponse payResponse=easyLink.easylickPay(request, order);
-			order.setPay_type(PayEnum.CURR_PAY.getValue());//为防止重复支付
-			order.setVersion(order.getVersion()+1);
-			orderService.updateOrder(order);
-			try {
-				easyLink.autoBuildPost(request, response, payResponse);
-			} catch (IOException e) {
-				e.printStackTrace();
-				log.info(e.getMessage()+"["+order.getOrder_num()+"]");
-				throw new WebException(SysErrorCode.PayError);
-			}
-			
-		}else if(payType==PayTypeEnum.VISA.getValue()){
-			
-		}
-		
-	}
 	
 	
 	

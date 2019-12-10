@@ -42,7 +42,8 @@
         <a class="layui-btn layui-btn-sm layui-btn-danger" lay-event="ems"><spring:message code='3005' /></a>
     </script>
   
-    <script type="text/html" id="orderStatus">
+  
+     <script type="text/html" id="orderStatus">
         {{# if(d.order_status=="${OrderStatusEnum.UNSHIPPED.getValue()}"){ }}
        		<span style="color: #F581B1;">未发货</span>
         {{# }else if(d.order_status=="${OrderStatusEnum.DELIVERRY.getValue()}"){ }}
@@ -51,6 +52,13 @@
             <span style="color: #F581B1;">退货</span>
         {{#  }else{ }}
  			<span style="color: #F581B1;">换货</span>
+		{{#  } }}
+    </script>
+    <script type="text/html" id="orderIsPay">
+        {{# if(d.is_pay=="${PayEnum.PAY.getValue()}"){ }}
+       		<span style="color: #009688;">已支付</span>
+        {{#  }else{ }}
+ 			<span style="color: #F581B1;">未支付</span>
 		{{#  } }}
     </script>
  
@@ -64,7 +72,7 @@
         <div class="layui-body">
             <div style="padding: 50px;">
                 <p class="f-18 pt-15 pb-15 col-8d969d">
-                    搜索文章
+                    搜索
                 </p>
                 <div class="clear pd-15 bg-fafafa bor bor-col-e8ebf2">
                     <!-- 这里用layui的数据表格的重载 -->
@@ -98,7 +106,7 @@
                     </form>
                 </div>
                 <p class="f-18 pt-15 pb-15 mt-40 col-8d969d">
-                    	文章列表
+                    	列表
                 </p>
                 <div class="clear pd-15 bg-fafafa bor bor-col-e8ebf2">
                     <table id="mTable" lay-filter="mTable"></table>
@@ -397,7 +405,7 @@
                         {field: 'id', title: 'ID', width: '5%', align: 'center'},
                         {field: 'order_num', title: '订单号码', width: '10%', align: 'center'},
                         {field: 'order_status', title: '订单状态',width: '10%', sort:true, align: 'center' ,templet:'#orderStatus'},
-                        {field: 'is_pay', title: '支付状态',width: '8%',  sort:true,align: 'center'},
+                        {field: 'is_pay', title: '支付状态',width: '8%',  sort:true,align: 'center',templet:'#orderIsPay'},
                         {field: 'coupon_price', title: '优惠价格',width: '8%',  align: 'center'},
                         {field: 'goods_price', title: '单价', width: '10%', align: 'center'},
                         {field: 'goods_count', title: '商品数量', width: '10%', align: 'center'},

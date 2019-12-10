@@ -44,21 +44,21 @@
                 <p>订单提交成功！去付款咯～</p>
                 <p>
                     <sapn class="col-666">订单号:</sapn>
-                    <sapn class="col-red">465413213213213</sapn>
+                    <sapn class="col-red">${order.order_num}</sapn>
                 </p>
                 <p>
                     <sapn class="col-666">商品名称:</sapn>
-                    <sapn class="col-333">心电仪</sapn>
+                    <sapn class="col-333">${goods.name}</sapn>
                 </p>
                 <p>
                     <span class="col-666">订单金额:</span>
                     <sapn class="col-333">$</sapn>
-                    <span class="col-333">555</span>
+                    <span class="col-333">${order.order_price}</span>
 
                 </p>
                 <p>
                     <span class="col-666">收货信息:</span>
-                    <span class="col-333">深圳市宝安区11111号</span>
+                    <span class="col-333">${order.order_address}</span>
                 </p>
             </div>
         </div>
@@ -72,29 +72,33 @@
             <input type="hidden"  id="payType" name="payType" value="-1" />
             <input type="hidden"  id="timestamp" name="timestamp" value="${timestamp}" />
             <div class="layui-form-item">
-                <form  class="layui-form" action="${easyUrl}"  target="_blank"  method="post" class="layui-form">
+            
                     <c:forEach items="${easy}" var="item" varStatus="go">
                         <input type="hidden" name="${item.key}" value="${item.value}"/>
                     </c:forEach>
                     <c:forEach items="${visa}" var="item" varStatus="go">
                         <input type="hidden" name="${item.key}" value="${item.value}"/>
                     </c:forEach>
-                    <button lay-submit="" lay-filter="wechat">
+                    <button lay-submit lay-filter="wechat">
                         <img class="img-responsive center-block" src="/resources/img/shop/pay_weixin.png">
                     </button>
-                    <button lay-submit="" lay-filter="alipay">
+                    <button lay-submit lay-filter="alipay">
                         <img class="img-responsive center-block" src="/resources/img/shop/pay_zfb.png">
                     </button>
-                    <button  lay-submit="" lay-filter="easy">
-                        <img class="img-responsive center-block" src="/resources/img/shop/pay_union.png">
-                    </button>
-                    <button lay-submit lay-filter="visa">
-                        <img class="img-responsive center-block" src="/resources/img/shop/pay_visa.png">
-                    </button>
-                    <button lay-submit lay-filter="master">
-                        <img class="img-responsive center-block" src="/resources/img/shop/pay_master.png">
-                    </button>
-                </form>
+                    <form  class="layui-form" action="${easyUrl}"  target="_blank"  method="post" class="layui-form">
+	                    <button  lay-submit lay-filter="easy">
+	                        <img class="img-responsive center-block" src="/resources/img/shop/pay_union.png">
+	                    </button>
+                    </form>
+                    <form  class="layui-form" action="${easyUrl}"  target="_blank"  method="post" class="layui-form">
+	                    <button lay-submit lay-filter="visa">
+	                        <img class="img-responsive center-block" src="/resources/img/shop/pay_visa.png">
+	                    </button>
+	                    <button lay-submit lay-filter="master">
+	                        <img class="img-responsive center-block" src="/resources/img/shop/pay_master.png">
+	                    </button>
+                    </form>
+               
             </div>
         </div>
     </div>
@@ -111,13 +115,15 @@
             form = layui.form;
 
         form.on('submit(easy)', function(data){
-            $('#payType').val("${PayTypeEnum.EASY.getValue()}");
+        	layer.load();
             return true;
         });
         form.on('submit(visa)', function(data){
+        	layer.load();
             return true;
         });
         form.on('submit(master)', function(data){
+        	layer.load();
             return true;
         });
 

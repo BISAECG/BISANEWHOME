@@ -33,6 +33,15 @@ public interface IOrderDao extends IBaseDao<Order>{
       */
      public Pager<Order> getPageOrder(String vKey, String vVal);
 
+     /**
+      * 
+      * @param offset
+      * @param userId 
+      * @param vKey
+      * @param vVal
+      * @return
+      */
+      public Pager<Order> getPageOrder(int offset,int userId,String vKey, String vVal);
     
     
     /**

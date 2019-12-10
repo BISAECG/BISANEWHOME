@@ -172,7 +172,7 @@
 				$.ajax({
 					type : "GET",
 					dataType: "json",
-					url : '/html/order/address',
+					url : '/order/ajax/address',
 					async:false,
 					success : function(data) {
 						layer.close(index);
@@ -203,7 +203,7 @@
 					type : "POST",
 					dataType: "json",
 					//contentType: "application/json;charset=UTF-8",
-					url : '/html/order/address',
+					url : '/order/ajax/address',
 					data : data.field,
 					success : function(obj) {
 						layer.close(index);
@@ -262,7 +262,7 @@
 					type : "GET",
 					dataType: "json",
 					//contentType: "application/json;charset=UTF-8",
-					url : '/html/order/coupan',
+					url : '/order/ajax/coupan',
 					data : {coupon_num:coupon_num,order_total:order_total},
 					success : function(obj) {
 						layer.close(index);

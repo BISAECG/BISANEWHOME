@@ -260,7 +260,7 @@
             $.ajax({
                 type: "GET",
                 dataType: "json",
-                url: "/news/top4",
+                url: "/news/ajax/top4",
                 success: function (data) {
                     console.log(data);
                     $.each(data, function (i, item) {

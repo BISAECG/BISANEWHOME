@@ -56,7 +56,7 @@
         <div class="layui-body">
             <div style="padding: 50px;">
                 <p class="f-18 pt-15 pb-15 col-8d969d">
-                    搜索文章
+                    搜索
                 </p>
                 <div class="clear pd-15 bg-fafafa bor bor-col-e8ebf2">
                     <!-- 这里用layui的数据表格的重载 -->
@@ -67,9 +67,9 @@
                                 <div class="layui-inline">
                                     <select name="searchabout" id="searchabout" lay-verify="required" lay-search="">
                                         <option value="">请选择您要查询的内容</option>
-                                        <option value="user_id">手机/邮箱/用户名</option>
-                                        <option value="goods_num">商品ID</option>
-                                        <option value="order_num">订单编号</option>
+                                        <option value="mail">留言邮箱</option>
+                                        <option value="phone">留言手机</option>
+                                        <option value="name">留言名字</option>
                                     </select>
                                 </div>
                                 <div class="layui-inline">
@@ -86,7 +86,7 @@
                     </form>
                 </div>
                 <p class="f-18 pt-15 pb-15 mt-40 col-8d969d">
-                    	文章列表
+                    	列表
                 </p>
                 <div class="clear pd-15 bg-fafafa bor bor-col-e8ebf2">
                     <table id="mTable" lay-filter="mTable"></table>

@@ -152,6 +152,31 @@ public class OrderController {
 		mModel.addAttribute("timestamp", System.currentTimeMillis());
 		return "redirect:/html/"+language+"/pay";
 	}
+	
+	/**
+	 * 重新支付
+	 * @param request
+	 * @param mModel
+	 * @param user
+	 * @param language
+	 * @param order_num
+	 * @return
+	 */
+	@RequestMapping(value = "/html/{language}/order_reset", method = RequestMethod.GET)
+	public String index(HttpServletRequest request, RedirectAttributes  mModel,@CurrentUser User user, @PathVariable String language,@RequestParam String order_num) {
+		Order order=orderService.getOrderByNum(order_num);
+		if(order==null){
+			throw new WebException(SysErrorCode.SystemError);
+		}
+		
+		order.setOrder_num(RandomUtils.RandomOfMillisecond());
+		order.setUser_id(user.getUser_guid());
+		order.setVersion(order.getVersion()+1);
+		orderService.updateOrder(order);
+		mModel.addAttribute("orderNum", order.getOrder_num());
+		mModel.addAttribute("timestamp", System.currentTimeMillis());
+		return "redirect:/html/"+language+"/pay";
+	}
 
 	
 	@RequestMapping(value = "/html/{language}/order", method = RequestMethod.GET)
@@ -165,23 +190,8 @@ public class OrderController {
 		return "order/details";
 	}
 
-	@RequestMapping(value = "/html/order/address", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
-	@ResponseBody
-	public ResponseEntity<ResultData> address(@CurrentUser User user) {
-		List<Address> list = addressService.listAddress(user.getUser_guid());
-		if (list.size() > 0) {
-			return new ResponseEntity<ResultData>(
-					ResultData.success(SysStatusCode.SUCCESS, i18nUtil.i18n(SysErrorCode.OptSuccess), list.get(0)),
-					HttpStatus.OK);
-		}
 
-		return new ResponseEntity<ResultData>(
-				ResultData.success(SysStatusCode.FAIL, i18nUtil.i18n(SysErrorCode.OptFail), list.get(0)),
-				HttpStatus.OK);
-
-	}
-
-	@RequestMapping(value = "/html/order/coupan", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
+	@RequestMapping(value = "/order/ajax/coupan", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
 	@ResponseBody
 	public ResponseEntity<ResultData> coupan(@RequestParam(required=true) String coupon_num, @RequestParam(required=true) double order_total) {
 
@@ -210,7 +220,25 @@ public class OrderController {
 				ResultData.success(SysStatusCode.FAIL, i18nUtil.i18n(SysErrorCode.NOT_COUPON), disprice),
 				HttpStatus.OK);
 	}
-	@RequestMapping(value = "/html/order/address", method = RequestMethod.POST, produces = "application/json; charset=utf-8")
+	
+
+	@RequestMapping(value = "/order/ajax/address", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
+	@ResponseBody
+	public ResponseEntity<ResultData> address(@CurrentUser User user) {
+		List<Address> list = addressService.listAddress(user.getUser_guid());
+		if (list.size() > 0) {
+			return new ResponseEntity<ResultData>(
+					ResultData.success(SysStatusCode.SUCCESS, i18nUtil.i18n(SysErrorCode.OptSuccess), list.get(0)),
+					HttpStatus.OK);
+		}
+
+		return new ResponseEntity<ResultData>(
+				ResultData.success(SysStatusCode.FAIL, i18nUtil.i18n(SysErrorCode.OptFail), list.get(0)),
+				HttpStatus.OK);
+
+	}
+	
+	@RequestMapping(value = "/order/ajax/address", method = RequestMethod.POST, produces = "application/json; charset=utf-8")
 	@ResponseBody
 	public ResponseEntity<ResultData> addAjaxAddress(@CurrentUser User user, @Validated Address address,
 			BindingResult br, Model model) {
@@ -232,4 +260,6 @@ public class OrderController {
 		return new ResponseEntity<ResultData>(
 				ResultData.success(SysStatusCode.SUCCESS, i18nUtil.i18n(SysErrorCode.OptSuccess)), HttpStatus.OK);
 	}
+	
+	
 }
