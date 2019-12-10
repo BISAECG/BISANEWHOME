@@ -66,19 +66,12 @@
     <div class="container choose">
         <div class="row chooseBox">
             <p>请选择支付方式</p>
-            <p>支付平台</p>
             <input type="hidden"  id="language" name="language" value="${language}" />
             <input type="hidden" id="orderNum" name="orderNum" value="${orderNum}" />
             <input type="hidden"  id="payType" name="payType" value="-1" />
             <input type="hidden"  id="timestamp" name="timestamp" value="${timestamp}" />
             <div class="layui-form-item">
             
-                    <c:forEach items="${easy}" var="item" varStatus="go">
-                        <input type="hidden" name="${item.key}" value="${item.value}"/>
-                    </c:forEach>
-                    <c:forEach items="${visa}" var="item" varStatus="go">
-                        <input type="hidden" name="${item.key}" value="${item.value}"/>
-                    </c:forEach>
                     <button lay-submit lay-filter="wechat">
                         <img class="img-responsive center-block" src="/resources/img/shop/pay_weixin.png">
                     </button>
@@ -86,11 +79,17 @@
                         <img class="img-responsive center-block" src="/resources/img/shop/pay_zfb.png">
                     </button>
                     <form  class="layui-form" action="${easyUrl}"  target="_blank"  method="post" class="layui-form">
+	                     <c:forEach items="${easy}" var="item" varStatus="go">
+                        	<input type="hidden" name="${item.key}" value="${item.value}"/>
+                    	</c:forEach>
 	                    <button  lay-submit lay-filter="easy">
 	                        <img class="img-responsive center-block" src="/resources/img/shop/pay_union.png">
 	                    </button>
                     </form>
                     <form  class="layui-form" action="${easyUrl}"  target="_blank"  method="post" class="layui-form">
+	                    <c:forEach items="${visa}" var="item" varStatus="go">
+                        	<input type="hidden" name="${item.key}" value="${item.value}"/>
+                    	</c:forEach>
 	                    <button lay-submit lay-filter="visa">
 	                        <img class="img-responsive center-block" src="/resources/img/shop/pay_visa.png">
 	                    </button>
