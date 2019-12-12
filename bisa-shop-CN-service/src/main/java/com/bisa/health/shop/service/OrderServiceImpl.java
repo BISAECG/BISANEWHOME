@@ -54,4 +54,9 @@ public class OrderServiceImpl implements IOrderService {
 		return iOrderDao.getOrderByNum(num);
 	}
 
+	@Override
+	public Pager<Order> getPageOrder(int offset, int userId, String vKey, String vVal) {
+		return iOrderDao.getPageOrder(offset, userId, vKey, vVal);
+	}
+
 }

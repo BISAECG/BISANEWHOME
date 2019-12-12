@@ -28,7 +28,7 @@ public class BookController {
 	@Autowired
 	private IGuestbookService guestbookService;
 
-	@RequestMapping(value = "/ajax/book/add", method = RequestMethod.POST, produces = "application/json; charset=utf-8")
+	@RequestMapping(value = "/book/ajax/add", method = RequestMethod.POST, produces = "application/json; charset=utf-8")
 	@ResponseBody
 	public ResponseEntity<ResultData> addAjaxGoods(@Validated Guestbook guestBook, BindingResult br, Model model) {
 		if (br.hasErrors()) {

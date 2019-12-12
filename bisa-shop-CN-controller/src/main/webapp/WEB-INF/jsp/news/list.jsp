@@ -161,7 +161,7 @@
             ajaxList(where,true);
             function ajaxList(where,isInit){
             	 $.ajax({
-                     url: '/news/page',
+                     url: '/news/ajax/page',
                      type: "GET",
                      data:where,
                      success: function (data) {

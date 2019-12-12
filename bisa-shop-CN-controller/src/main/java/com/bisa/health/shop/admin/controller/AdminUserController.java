@@ -40,7 +40,7 @@ public class AdminUserController {
 		User user = remoteService.loadUser(username);
 		if (user!=null) {
 			return new ResponseEntity<ResultData>(
-					ResultData.success(SysStatusCode.SUCCESS, i18nUtil.i18n(SysErrorCode.OptSuccess), user),
+					ResultData.success(SysStatusCode.SUCCESS, i18nUtil.i18n(SysErrorCode.OptSuccess), username),
 					HttpStatus.OK);
 		}
 		return new ResponseEntity<ResultData>(

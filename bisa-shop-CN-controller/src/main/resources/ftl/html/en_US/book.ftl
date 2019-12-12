@@ -143,7 +143,7 @@
                 type : "POST",
                 dataType: "json",
                 //contentType: "application/json;charset=UTF-8",
-                url : '/ajax/book/add',
+                url : '/book/ajax/add',
                 data : data.field,
                 success : function(data) {
                     $('#messageForm')[0].reset();
