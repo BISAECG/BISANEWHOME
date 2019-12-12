@@ -40,6 +40,11 @@
             font-weight: bold;
             color: #333333;
             line-height: 24px;
+            overflow: hidden;
+            display:-webkit-box;
+            -webkit-box-orient:vertical;
+            -webkit-line-clamp:1;
+            text-overflow:ellipsis;
         }
 
         .goodDescribe {
@@ -47,6 +52,11 @@
             color: #666666;
             line-height: 24px;
             margin-bottom: 14px;
+            overflow: hidden;
+            display:-webkit-box;
+            -webkit-box-orient:vertical;
+            -webkit-line-clamp:1;
+            text-overflow:ellipsis;
         }
 
         .goodPrice {
@@ -64,6 +74,10 @@
             padding: 5px 10px;
             color: #FFFFFF;
             border-radius: 5px;
+        }
+        .con a:focus,.con a:hover {
+            color: #fff;
+            text-decoration: underline;
         }
     </style>
 </head>

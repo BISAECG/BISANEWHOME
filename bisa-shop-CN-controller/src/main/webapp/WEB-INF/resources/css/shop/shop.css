@@ -16,8 +16,17 @@
     font-size: 24px;
     color: rgba(51, 51, 51, 1);
     margin-bottom: 25px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
-
+.boxRight .shopContent{
+    font-size:16px;
+    color:rgba(207,21,24,1);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
 .boxRight .shopPrice span:first-of-type {
     font-size: 20px;
     color: rgba(153, 153, 153, 1);
