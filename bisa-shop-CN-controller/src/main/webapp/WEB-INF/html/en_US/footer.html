@@ -115,7 +115,7 @@
                             </li>
                             <div class="pt-10">
                                 <a class="col-8c8c8c t-nonehove hovecol-309DE2 " >
-                                    <img  width="80" height="80" src="/resources/img/index/app_qr.png"  alt="Bisha Health APP download">
+                                    <img  width="80" height="80" src="/resources/img/index/app_qr.png"  alt="Bisa Health APP download">
                                 </a></div>
                         </ul>
                     </div>

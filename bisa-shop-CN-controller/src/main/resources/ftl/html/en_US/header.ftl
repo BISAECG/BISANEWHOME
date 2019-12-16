@@ -62,7 +62,7 @@
                 </div>
                 <span class='inline-block pull-left' style='height:78px;border-left: 2px solid #F1F1F1;'></span>
                 <div class='pull-left  text-center' style='margin: 0 20px;'>
-                    <img style='margin-bottom: 7px;' src='/resources/img/index/logo4.png' alt="Bisha Kangjian Health Hotline">
+                    <img style='margin-bottom: 7px;' src='/resources/img/index/logo4.png' alt="Bisa Health Health Hotline">
                     <p style='font-size: 12px;padding-bottom: 2px;'>Health Hotline</p>
                     <p class='phone' style='font-size: 20px;font-weight: bold;'>${company_phone}</p>
                 </div>

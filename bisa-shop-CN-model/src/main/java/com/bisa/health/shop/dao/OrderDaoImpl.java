@@ -57,4 +57,11 @@ public class OrderDaoImpl extends BaseDao<Order> implements IOrderDao {
 		}
 		return super.findBySql(sql,new Object[]{userId}, Order.class, true);
 	}
+
+
+	@Override
+	public Order loadByPyaID(String pay_id) {
+		String sql = "SELECT * FROM s_order WHERE pay_id=?";
+		return super.queryObjectBySql(sql, new Object[] { pay_id }, Order.class);
+	}
 }

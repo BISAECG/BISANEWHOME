@@ -59,4 +59,9 @@ public class OrderServiceImpl implements IOrderService {
 		return iOrderDao.getPageOrder(offset, userId, vKey, vVal);
 	}
 
+	@Override
+	public Order loadByPyaID(String pay_id) {
+		return iOrderDao.loadByPyaID(pay_id);
+	}
+
 }

@@ -30,11 +30,15 @@ import com.bisa.health.shop.component.InternationalizationUtil;
 import com.bisa.health.shop.entity.SysErrorCode;
 import com.bisa.health.shop.entity.SysStatusCode;
 import com.bisa.health.shop.enumerate.ActivateEnum;
+import com.bisa.health.shop.enumerate.CouponEnum;
+import com.bisa.health.shop.enumerate.OrderStatusEnum;
 import com.bisa.health.shop.model.Address;
 import com.bisa.health.shop.model.Goods;
+import com.bisa.health.shop.model.GoodsCoupon;
 import com.bisa.health.shop.model.GoodsRecommend;
 import com.bisa.health.shop.model.Order;
 import com.bisa.health.shop.model.RechargeCard;
+import com.bisa.health.shop.service.IGoodsCouponService;
 import com.bisa.health.shop.service.IGoodsService;
 import com.bisa.health.shop.service.IOrderService;
 import com.bisa.health.shop.service.IRechargeCardService;
@@ -59,6 +63,9 @@ public class UserController {
 	
 	@Autowired
 	private IOrderService orderService;
+	
+	@Autowired
+	private IGoodsCouponService goodsCouponService;
 
 	
     @RequestMapping(value = "/html/{language}/user", method = RequestMethod.GET)
@@ -89,11 +96,40 @@ public class UserController {
 		return new ResponseEntity<Pager<Order>>(list, HttpStatus.OK);
 	}
 	
+	@RequestMapping(value = "/user/order/ajax/ok/{mId}", method = RequestMethod.POST, produces = "application/json; charset=utf-8")
+	@ResponseBody
+	public ResponseEntity<ResultData> okAjaxOrder(@PathVariable int mId) {
+		Order order=orderService.getOrderById(mId);
+		order.setOrder_status(OrderStatusEnum.RECEIVED.getValue());
+		order.setVersion(order.getVersion()+1);
+		orderService.updateOrder(order);
+		return new ResponseEntity<ResultData>(
+				ResultData.success(SysStatusCode.SUCCESS, i18nUtil.i18n(SysErrorCode.OptSuccess)), HttpStatus.OK);
+	}
+	
+	@RequestMapping(value = "/user/order/ajax/cancel/{mId}", method = RequestMethod.POST, produces = "application/json; charset=utf-8")
+	@ResponseBody
+	public ResponseEntity<ResultData> cancelAjaxOrder(@PathVariable int mId) {
+		Order order=orderService.getOrderById(mId);
+		if(order.getOrder_status()==OrderStatusEnum.UNSHIPPED.getValue()&&order.getIs_coupon()==CouponEnum.COUPON.getValue()&&!StringUtils.isEmpty(order.getCoupon_num())){
+			GoodsCoupon goodsConpon=goodsCouponService.getGoodsCouponByNum(order.getCoupon_num(),ActivateEnum.INACTIVATED.getValue());
+			goodsConpon.setCoupon_status(ActivateEnum.ACTIVATE.getValue());
+			goodsConpon.setVersion(goodsConpon.getVersion()+1);
+			goodsCouponService.updateGoodsCoupon(goodsConpon);
+		}
+		
+		order.setStatus(ActivateEnum.INACTIVATED.getValue());
+		order.setVersion(order.getVersion()+1);
+		orderService.updateOrder(order);
+		return new ResponseEntity<ResultData>(
+				ResultData.success(SysStatusCode.SUCCESS, i18nUtil.i18n(SysErrorCode.OptSuccess)), HttpStatus.OK);
+	}
 
 	@RequestMapping(value = "/user/order/ajax/del/{mId}", method = RequestMethod.DELETE, produces = "application/json; charset=utf-8")
 	@ResponseBody
 	public ResponseEntity<ResultData> delAjaxOrder(@PathVariable int mId) {
 		orderService.deleteOrder(mId);
+		
 		return new ResponseEntity<ResultData>(
 				ResultData.success(SysStatusCode.SUCCESS, i18nUtil.i18n(SysErrorCode.OptSuccess)), HttpStatus.OK);
 	}

@@ -2,9 +2,9 @@
 <html>
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" href="Images/favicon.ico" type="image/x-icon" />
-    <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon" />
-    <link rel="bookmark" href="Images/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="bookmark" href="/favicon/favicon.ico" type="image/x-icon" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="initial-scale=0.2,user-scalable=yes">
@@ -78,7 +78,7 @@
                     2. Within 15 days from the date of signing of the user, non-human damage performance failure occurs. After the inspection and confirmation by the after-sales service center, the user exchanges the business. When the goods are exchanged, the user must present a valid purchase certificate.
                 </p>
                 <p class="pt-10 f-20 col-696969 pl-50 line-h-30 pb-10 pr-50">
-                    3. Fifteen days after the date of signing the user and within one year, if there is a non-human damage performance failure, please contact Shenzhen Bisha Technology Co., Ltd. directly to get the after-sales service more quickly. Service number: 0755-26880962 .
+                    3. Fifteen days after the date of signing the user and within one year, if there is a non-human damage performance failure, please contact Shenzhen Bisa Technology Co., Ltd. directly to get the after-sales service more quickly. Service number: 0755-26880962 .
                 </p>
             </div>
         </div>

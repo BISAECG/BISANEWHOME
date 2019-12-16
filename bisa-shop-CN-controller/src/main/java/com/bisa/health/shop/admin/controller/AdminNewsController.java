@@ -221,14 +221,14 @@ public class AdminNewsController {
             List<NewsInLink>  inLinkList = newsService.listLink();
             String inLinkStr="";
             for(NewsInLink m :inLinkList){
-	            	if(news.getLanguage().toLowerCase()==LangEnum.zh_CN.getName().toLowerCase()){
-	            		inLinkStr= " <a  style=\"color: #3f3b3c;text-decoration:none;\" href=\""+m.getInner_chain_url()+"\">"+m.getInner_chain_text_CN()+"</a>";
+	            	if(news.getLanguage().toLowerCase().equals(LangEnum.zh_CN.getName().toLowerCase())){
+	            		inLinkStr= " <a  style=\"color: #3592D0;text-decoration:none;\" href=\""+m.getInner_chain_url()+"\">"+m.getInner_chain_text_CN()+"</a>";
 	            		news.setNews_content(news.getNews_content().replaceAll(m.getInner_chain_text_CN(),inLinkStr));
-	            	}else if(news.getLanguage().toLowerCase()==LangEnum.zh_HK.getName().toLowerCase()){
-	            		inLinkStr= " <a  style=\"color: #3f3b3c;text-decoration:none;\" href=\""+m.getInner_chain_url()+"\">"+m.getInner_chain_text_HK()+"</a>";
+	            	}else if(news.getLanguage().toLowerCase().equals(LangEnum.zh_HK.getName().toLowerCase())){
+	            		inLinkStr= " <a  style=\"color: #3592D0;text-decoration:none;\" href=\""+m.getInner_chain_url()+"\">"+m.getInner_chain_text_HK()+"</a>";
 	            		news.setNews_content(news.getNews_content().replaceAll(m.getInner_chain_text_HK(),inLinkStr));
 	            	}else{
-	            		inLinkStr= " <a  style=\"color: #3f3b3c;text-decoration:none;\" href=\""+m.getInner_chain_url()+"\">"+m.getInner_chain_text_EN()+"</a>";
+	            		inLinkStr= " <a  style=\"color: #3592D0;text-decoration:none;\" href=\""+m.getInner_chain_url()+"\">"+m.getInner_chain_text_EN()+"</a>";
 	            		news.setNews_content(news.getNews_content().replaceAll(m.getInner_chain_text_EN(),inLinkStr));
 	            	}
 	            	listNews.add(news);
@@ -320,14 +320,14 @@ public class AdminNewsController {
          String inLinkStr="";
          for(NewsInLink m :inLinkList){
 	            for(News n:list){
-	            	if(n.getLanguage().toLowerCase()==LangEnum.zh_CN.getName().toLowerCase()){
-	            		inLinkStr= " <a  style=\"color: #3f3b3c;text-decoration:none;\" href=\""+m.getInner_chain_url()+"\">"+m.getInner_chain_text_CN()+"</a>";
+	            	if(n.getLanguage().toLowerCase().equals(LangEnum.zh_CN.getName().toLowerCase())){
+	            		inLinkStr= " <a  style=\"color: #3592D0;text-decoration:none;\" href=\""+m.getInner_chain_url()+"\">"+m.getInner_chain_text_CN()+"</a>";
 	            		n.setNews_content(n.getNews_content().replaceAll(m.getInner_chain_text_CN(),inLinkStr));
-	            	}else if(n.getLanguage().toLowerCase()==LangEnum.zh_HK.getName().toLowerCase()){
-	            		inLinkStr= " <a  style=\"color: #3f3b3c;text-decoration:none;\" href=\""+m.getInner_chain_url()+"\">"+m.getInner_chain_text_HK()+"</a>";
+	            	}else if(n.getLanguage().toLowerCase().equals(LangEnum.zh_HK.getName().toLowerCase())){
+	            		inLinkStr= " <a  style=\"color: #3592D0;text-decoration:none;\" href=\""+m.getInner_chain_url()+"\">"+m.getInner_chain_text_HK()+"</a>";
 	            		n.setNews_content(n.getNews_content().replaceAll(m.getInner_chain_text_HK(),inLinkStr));
 	            	}else{
-	            		inLinkStr= " <a  style=\"color: #3f3b3c;text-decoration:none;\" href=\""+m.getInner_chain_url()+"\">"+m.getInner_chain_text_EN()+"</a>";
+	            		inLinkStr= " <a  style=\"color: #3592D0;text-decoration:none;\" href=\""+m.getInner_chain_url()+"\">"+m.getInner_chain_text_EN()+"</a>";
 	            		n.setNews_content(n.getNews_content().replaceAll(m.getInner_chain_text_EN(),inLinkStr));
 	            	}
 	            	listNews.add(n);
@@ -352,14 +352,14 @@ public class AdminNewsController {
          String inLinkStr="";
          for(NewsInLink m :inLinkList){
 	            for(News n:list){
-	            	if(n.getLanguage().toLowerCase()==LangEnum.zh_CN.getName().toLowerCase()){
-	            		inLinkStr= " <a  style=\"color: #3f3b3c;text-decoration:none;\" href=\""+m.getInner_chain_url()+"\">"+m.getInner_chain_text_CN()+"</a>";
+	            	if(n.getLanguage().toLowerCase().equals(LangEnum.zh_CN.getName().toLowerCase())){
+	            		inLinkStr= " <a  style=\"color: #3592D0;text-decoration:none;\" href=\""+m.getInner_chain_url()+"\">"+m.getInner_chain_text_CN()+"</a>";
 	            		n.setNews_content(n.getNews_content().replaceAll(m.getInner_chain_text_CN(),inLinkStr));
-	            	}else if(n.getLanguage().toLowerCase()==LangEnum.zh_HK.getName().toLowerCase()){
-	            		inLinkStr= " <a  style=\"color: #3f3b3c;text-decoration:none;\" href=\""+m.getInner_chain_url()+"\">"+m.getInner_chain_text_HK()+"</a>";
+	            	}else if(n.getLanguage().toLowerCase().equals(LangEnum.zh_HK.getName().toLowerCase())){
+	            		inLinkStr= " <a  style=\"color: #3592D0;text-decoration:none;\" href=\""+m.getInner_chain_url()+"\">"+m.getInner_chain_text_HK()+"</a>";
 	            		n.setNews_content(n.getNews_content().replaceAll(m.getInner_chain_text_HK(),inLinkStr));
 	            	}else{
-	            		inLinkStr= " <a  style=\"color: #3f3b3c;text-decoration:none;\" href=\""+m.getInner_chain_url()+"\">"+m.getInner_chain_text_EN()+"</a>";
+	            		inLinkStr= " <a  style=\"color: #3592D0;text-decoration:none;\" href=\""+m.getInner_chain_url()+"\">"+m.getInner_chain_text_EN()+"</a>";
 	            		n.setNews_content(n.getNews_content().replaceAll(m.getInner_chain_text_EN(),inLinkStr));
 	            	}
 	            	listNews.add(n);

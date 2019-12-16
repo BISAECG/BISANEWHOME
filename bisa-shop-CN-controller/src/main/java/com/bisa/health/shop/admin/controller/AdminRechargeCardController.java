@@ -35,7 +35,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 @RequestMapping(value = "/admin/card")
-@RequiresRoles(value = { "ROLE_ADMIN", "ROLE_CUSTOMER", "ROLE_STORE" }, logical = Logical.OR)
+@RequiresRoles(value = { "ROLE_ADMIN", "ROLE_CUSTOMER" }, logical = Logical.OR)
 public class AdminRechargeCardController {
 
 	@Autowired

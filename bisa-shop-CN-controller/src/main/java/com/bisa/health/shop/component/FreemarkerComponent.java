@@ -83,6 +83,7 @@ public class FreemarkerComponent {
         	root.put("release_time", nn.getRelease_time());
         	root.put("read_quantity", nn.getRead_quantity());
         	root.put("news_content", nn.getNews_content());
+        	System.out.println(SystemContext.getRealPath()+outPath+"/"+nn.getLanguage()+"/"+nn.getId()+".html");
         	util.fprint(root, "/html/"+nn.getLanguage()+"/news-body.ftl", SystemContext.getRealPath()+outPath+"/"+nn.getLanguage()+"/"+nn.getId()+".html");
         }
 		

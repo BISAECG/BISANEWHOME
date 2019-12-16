@@ -2,9 +2,9 @@
 <html lang="CN" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" href="Images/favicon.ico" type="image/x-icon"/>
-    <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon"/>
-    <link rel="bookmark" href="Images/favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon"/>
+    <link rel="bookmark" href="/favicon/favicon.ico" type="image/x-icon"/>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; "/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -69,14 +69,14 @@
                     <div class="layui-colla-item">
                             
                         <h2 class="layui-colla-title f-18 title-color">
-                            1. How to download the Bisha Kangjian APP?
+                            1. How to download the Bisa Health APP?
                                 
                         </h2>
                             
                         <div class="layui-colla-content layui-show">
                              
                             <p class="f-20 col-333 h-20 line-h-20 mt-30">
-                                Bisha Kangjian APP official website download address:
+                                Bisa Health APP official website download address:
                                  
                             </p>
                              
@@ -92,7 +92,7 @@
                             </p>
                              
                             <p class="f-20 col-aaa h-20 line-h-20 mt-20">
-                                Please use the mobile phone screenshot to scan the screenshot QR code on WeChat or browser to enter the download address of Bisha Kangjian APP.
+                                Please use the mobile phone screenshot to scan the screenshot QR code on WeChat or browser to enter the download address of Bisa Health APP.
                                  
                             </p>
                              
@@ -108,14 +108,14 @@
                     <div class="layui-colla-item">
                             
                         <h2 class="layui-colla-title f-18 title-color">
-                             2. How to register for the Bisha Kangjian account?
+                             2. How to register for the Bisa Health account?
                                 
                         </h2>
                             
                         <div class="layui-colla-content">
                              
                             <p class="f-20 col-333 line-h-30 mt-30">
-                                (1) Open the Bisha Kangjian APP to fill in your mobile phone number on the account login interface, receive and fill in the SMS verification code, and click the Enter button.
+                                (1) Open the Bisa Health APP to fill in your mobile phone number on the account login interface, receive and fill in the SMS verification code, and click the Enter button.
                                  
                             </p>
                              
@@ -175,7 +175,7 @@
                             </p>
                              
                             <p class="f-20 col-333 line-h-30 mt-15 pl-30">
-                                (2) Login to the Bisha Kangjian APP to enter all devices Interface Copy
+                                (2) Login to the Bisa Health APP to enter all devices Interface Copy
                                  
                             </p>
                              
@@ -207,7 +207,7 @@
                             </div>
                              
                             <p class="f-20 col-333 line-h-30 mt-25 pl-30">
-                                (6) The binding is successful, you can use the Bisha Kangjian APP to monitor the ECG.
+                                (6) The binding is successful, you can use the Bisa Health APP to monitor the ECG.
                                  
                             </p>
                              
@@ -223,7 +223,7 @@
                             </p>
                              
                             <p class="f-20 col-333 line-h-30 mt-15 pl-30">
-                                (1) Login to Bisha Kangjian APP to enter all devices interface
+                                (1) Login to Bisa Health APP to enter all devices interface
                                  
                             </p>
                              
@@ -283,7 +283,7 @@
                             </p>
                              
                             <p class="f-20 col-333 line-h-30 mt-15">
-                                (3) Login to Bisha Kangjian APP to enter all devices interface
+                                (3) Login to Bisa Health APP to enter all devices interface
                                  
                             </p>
                              
@@ -357,7 +357,7 @@
                             </p>
                              
                             <p class="f-20 col-333 line-h-30 mt-25">
-                                (3) Login to Bisha Kangjian APP to enter all devices interface
+                                (3) Login to Bisa Health APP to enter all devices interface
                                  
                             </p>
                              

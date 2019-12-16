@@ -1,12 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ page import="com.bisa.health.shop.enumerate.LangEnum" %>
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="icon" href="Images/favicon.ico" type="image/x-icon"/>
-    <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon"/>
-    <link rel="bookmark" href="Images/favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon"/>
+    <link rel="bookmark" href="/favicon/favicon.ico" type="image/x-icon"/>
     <meta http-equiv="Content-Type" content="text/html; "/>
     <meta charset=utf-8>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -82,14 +83,24 @@
     <%--</div>--%>
     <div class="container-fluid">
         <div class="row pos-r " >
-            <img class="img-responsive center-block" src="/resources/img/index/banner8-cn.gif" alt="碧沙康健心电仪限时活动">
+        	
+        	  <c:if test="${language==LangEnum.zh_CN.name}">
+        	   <img class="img-responsive center-block" src="/resources/img/index/banner8-cn.gif" alt="碧沙康健心电仪限时活动">
+			  </c:if>
+			  <c:if test="${language==LangEnum.en_US.name}">
+        	   <img class="img-responsive center-block" src="/resources/img/index/banner8-us.gif" alt="碧沙康健心电仪限时活动">
+			  </c:if>
+			   <c:if test="${language==LangEnum.zh_HK.name}">
+        	   <img class="img-responsive center-block" src="/resources/img/index/banner8-hk.gif" alt="碧沙康健心电仪限时活动">
+			  </c:if>
+           
             <div class="text-center pos-a" style=" top: 67%;right: 42%;">
                 <a target="_blank" href="https://shop194684580.taobao.com/?spm=a230r.7195193.1997079397.2.6815114b089AGi"
                    style=" font-size: 22px;border-radius: 5px;width: 120px;height: 36px;display: inline-block;color: #fff;line-height: 36px;background: #f40;">
-                    淘宝</a>
+                    <spring:message code="jd" /></a>
                 <a target="_blank"  href="https://mall.jd.com/index-10103348.html"
                    style=" font-size: 22px;border-radius: 5px;width: 120px;height: 36px;display: inline-block;color: #fff;line-height: 36px;background: #D71C1E;margin-left:20px;">
-                    京东</a>
+                    <spring:message code="tb" /></a>
             </div>
         </div>
     </div>
@@ -105,14 +116,14 @@
 	        <c:forEach items="${list}" var="item">
 	            <div class="col-md-4 mb-50">
 	                <div class="good">
-	                    <img  class="img-responsive center-block" src=" ${item.img_url}" alt="${item.name}">
+	                    <img  class="img-responsive center-block" src="${item.img_url}" alt="${item.name}">
 	                </div>
 	                    <p class="goodTitle">${item.name}</p>
 	                    <p class="goodDescribe">
 	                      ${item.description}
 	                    </p>
 	                    <p>
-	                        <span class="goodPrice">¥${item.price}</span>
+	                        <span class="goodPrice"><spring:message code="pay.unit"/>${item.price}</span>
 	                        <a class="goodMore" href="/html/${language}/goods.html?id=${item.id}"><spring:message code="view.details" /></a>
 	                    </p>
 	            </div>
