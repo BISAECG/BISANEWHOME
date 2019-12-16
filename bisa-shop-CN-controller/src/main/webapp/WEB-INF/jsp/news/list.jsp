@@ -67,8 +67,7 @@
                     <div class="pos-r" style="border:1px solid rgba(43,132,198,1);height: 36px;width: 180px;">
                         <input id="seachtext" type="text" style="width:160px;border:0;height:35px;position:
                         absolute;left: 20px;top: 0%;border-bottom:1px solid rgba(43,132,198,1); ">
-                        <i class="fa fa-search pos-a" style="left: 2%;top: 27%;font-size: 16px;" aria-hidden="true"></i>
-                        <%--<i class="fa fa-search pos-a" style="left: 2%;top: 27%;font-size: 16px;" aria-hidden="true"></i>--%>
+                     
                         <img class="img-responsive " src="/resources/img/news/HK_HowToShop/searh1.png"  style="margin-top: 7px;">
                     </div>
                     <input id="seach" type="button"
@@ -77,16 +76,15 @@
             </div>
         </div>
     </div>
-    <div class="full-w mb-20"  style="background: #F1F1F1;">
+    <div class="full-w mb-20" >
         <div class="container">
-            <div class="row">
+            <div class="row"  style="background: #F1F1F1;">
                 <div class="col-md-2 pt-10 pb-10">
                 <span style="font-size: 18px;font-weight: bold;">
                     <spring:message code='5001'/>
                 </span>
                 </div>
-                <div class="col-md-1 col-md-offset-9">
-                    <i class="fa fa-angle-double-down pull-right" style="padding-top: 20px;font-size: 16px;" aria-hidden="true"></i>
+           
                 <div class="col-md-1 col-md-offset-9" style="line-height: 45px;">
                     <img src="/resources/img/news/HK_HowToShop/down.png" style="margin-left: 50px;">
                 </div>
