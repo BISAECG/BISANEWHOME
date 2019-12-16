@@ -300,8 +300,9 @@ public class ImageKit {
 		FileInputStream fis = new FileInputStream(new File("C:\\Users\\Administrator\\Pictures\\C1.jpg"));
 		FileOutputStream fos = new FileOutputStream(new File("C:\\Users\\Administrator\\Desktop\\IMG\\C1.jpg"));
 		// _resize(fis,fos,319,1080,1440);
-
-		_resize(fis, fos, 369, 332, 1080, 1440);
+		int[] wh=ImageKit.getSizeInfo(fis);
+		System.out.println(wh[0]+"|"+wh[1]);
+	//	_resize(fis, fos, 369, 332, 1080, 1440);
 
 	}
 
