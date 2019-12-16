@@ -184,7 +184,7 @@
 		     	,url: '/admin/common/upload'
 		     	,accept: 'file'
 		     	,exts: 'jpg|png'
-		        ,data:{'suffix':'jpg'}
+		        ,data:{'suffix':'jpg','width':300,'height':154}
 		     	,before: function(obj){ //obj参数包含的信息，跟 choose回调完全一致，可参见上文。
 		         	    layer.load(); //上传loading
 		        }
