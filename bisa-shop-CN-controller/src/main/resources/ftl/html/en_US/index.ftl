@@ -261,7 +261,55 @@
 </body>
 <script>
     $(document).ready(function() {
-       
+        function ecg() {
+            $(".ecg-1").hover(function () {
+                $(".ecg-1").attr('src', '/resources/img/index/banner7-1-1-us.png');
+                $(".ecg-7").css("display", "block");
+            }, function () {
+                $(".ecg-1").attr('src', '/resources/img/index/banner7-1-us.png');
+                $(".ecg-7").css("display", "none");
+            });
+            $(".ecg-2").hover(function () {
+                $(".ecg-2").attr('src', '/resources/img/index/banner7-2-2-us.png');
+                $(".ecg-8").css("display", "block");
+            }, function () {
+                $(".ecg-2").attr('src', '/resources/img/index/banner7-2-us.png');
+                $(".ecg-8").css("display", "none");
+            });
+            $(".ecg-3").hover(function () {
+                $(".ecg-3").attr('src', '/resources/img/index/banner7-3-3-us.png');
+                $(".ecg-9").css("display", "block");
+            }, function () {
+                $(".ecg-3").attr('src', '/resources/img/index/banner7-3-us.png');
+                $(".ecg-9").css("display", "none");
+            });
+            $(".ecg-4").hover(function () {
+                $(".ecg-4").attr('src', '/resources/img/index/banner7-4-4-us.png');
+                $(".ecg-10").css("display", "block");
+            }, function () {
+                $(".ecg-4").attr('src', '/resources/img/index/banner7-4-us.png');
+                $(".ecg-10").css("display", "none");
+            });
+            $(".ecg-5").hover(function () {
+                $(".ecg-5").attr('src', '/resources/img/index/banner7-5-5-us.png');
+                $(".ecg-11").css("display", "block");
+            }, function () {
+                $(".ecg-5").attr('src', '/resources/img/index/banner7-5-us.png');
+                $(".ecg-11").css("display", "none");
+            });
+            $(".ecg-6").hover(function () {
+                $(".ecg-6").attr('src', '/resources/img/index/banner7-6-6-us.png');
+                $(".ecg-12").css("display", "block");
+            }, function () {
+                $(".ecg-6").attr('src', '/resources/img/index/banner7-6-us.png');
+                $(".ecg-12").css("display", "none");
+            });
+        }
+        ecg();
+        // 轮播图切换时间
+        $('.carousel').carousel({
+            interval: 10000
+        })
         //新聞內容獲取
         function indexNew() {
 
@@ -321,51 +369,7 @@
             var id = $(this).find(".zd-id").val();
             window.open(id+".html",'_blank')
         });
-        function ecg() {
-            $(".ecg-1").hover(function () {
-                $(".ecg-1").attr('src', '/resources/img/index/banner7-1-1-us.png');
-                $(".ecg-7").css("display", "block");
-            }, function () {
-                $(".ecg-1").attr('src', '/resources/img/index/banner7-1-us.png');
-                $(".ecg-7").css("display", "none");
-            });
-            $(".ecg-2").hover(function () {
-                $(".ecg-2").attr('src', '/resources/img/index/banner7-2-2-us.png');
-                $(".ecg-8").css("display", "block");
-            }, function () {
-                $(".ecg-2").attr('src', '/resources/img/index/banner7-2-us.png');
-                $(".ecg-8").css("display", "none");
-            });
-            $(".ecg-3").hover(function () {
-                $(".ecg-3").attr('src', '/resources/img/index/banner7-3-3-us.png');
-                $(".ecg-9").css("display", "block");
-            }, function () {
-                $(".ecg-3").attr('src', '/resources/img/index/banner7-3-us.png');
-                $(".ecg-9").css("display", "none");
-            });
-            $(".ecg-4").hover(function () {
-                $(".ecg-4").attr('src', '/resources/img/index/banner7-4-4-us.png');
-                $(".ecg-10").css("display", "block");
-            }, function () {
-                $(".ecg-4").attr('src', '/resources/img/index/banner7-4-us.png');
-                $(".ecg-10").css("display", "none");
-            });
-            $(".ecg-5").hover(function () {
-                $(".ecg-5").attr('src', '/resources/img/index/banner7-5-5-us.png');
-                $(".ecg-11").css("display", "block");
-            }, function () {
-                $(".ecg-5").attr('src', '/resources/img/index/banner7-5-us.png');
-                $(".ecg-11").css("display", "none");
-            });
-            $(".ecg-6").hover(function () {
-                $(".ecg-6").attr('src', '/resources/img/index/banner7-6-6-us.png');
-                $(".ecg-12").css("display", "block");
-            }, function () {
-                $(".ecg-6").attr('src', '/resources/img/index/banner7-6-us.png');
-                $(".ecg-12").css("display", "none");
-            });
-        }
-        ecg();
+
     });
 
 </script>
