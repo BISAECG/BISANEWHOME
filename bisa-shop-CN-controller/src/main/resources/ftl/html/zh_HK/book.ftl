@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="icon" href="Images/favicon.ico" type="image/x-icon"/>
-    <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon"/>
-    <link rel="bookmark" href="Images/favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon"/>
+    <link rel="bookmark" href="/favicon/favicon.ico" type="image/x-icon"/>
     <meta http-equiv="Content-Type" content="text/html;"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -116,11 +116,26 @@
             </div>
 
         </div>
+     
         <div class="row messageFour" >
             <p>留言:</p>
             <textarea class="form-control" rows="5" name="message" lay-reqText="請輸入留言" lay-verify="required" placeholder="請輸入留言" ></textarea>
-            <button class="layui-btn f-20" lay-submit="" lay-filter="formDemo">立即提交</button>
         </div>
+        
+        <div class="row pt-10">
+        	  <div class="layui-input-inline">
+      			<img alt="" id="imgCode" src="/common/kaptcha"> 
+    		  </div> 
+    		  <div class="layui-input-inline">
+                   <input type="code" id="code" name="code" required lay-verify="required" lay-reqText="请輸入驗證碼" placeholder="请輸入驗證碼" autocomplete="off" class="layui-input">
+    		  </div> 
+    		   
+    	</div>
+    	<div class="row text-center pt-10 pb-10">
+    		 <div class="layui-input-inline">
+                    <button class="layui-btn f-20" lay-submit="" lay-filter="formDemo">立即提交</button>
+    		  </div>
+    	</div>
     </form>
 </div>
 <div id="footer"></div>
@@ -129,24 +144,28 @@
 </script>
 
 <script type="text/javascript">
-    //加載layui
+    //加载layui
     layui.use(['element','form'], function () {
         var layer = layui.layer,
                 element = layui.element,
                 form = layui.form,
                 $=layui.jquery;
+        
+        $('#imgCode').click(function(){
+        	var timestamp = Date.parse(new Date());
+        	$("#imgCode").attr('src','/common/kaptcha?version='+timestamp);
+        });
 
         form.on('submit(formDemo)', function(data){
             layer.load();
+            var code=$('#code').val();
             $.ajax({
                 type : "POST",
                 dataType: "json",
                 //contentType: "application/json;charset=UTF-8",
-                url : '/book/ajax/add',
+                url : '/book/ajax/add/'+code,
                 data : data.field,
                 success : function(data) {
-                    layer.closeAll();
-                    layer.msg(data.msg);
                     $('#messageForm')[0].reset();
                     layer.closeAll();
                     layer.msg(data.msg);

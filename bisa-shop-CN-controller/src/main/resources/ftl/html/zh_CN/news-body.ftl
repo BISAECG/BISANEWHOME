@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="icon" href="Images/favicon.ico" type="image/x-icon" />
-    <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon" />
-    <link rel="bookmark" href="Images/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="bookmark" href="/favicon/favicon.ico" type="image/x-icon" />
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html;" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -41,7 +41,7 @@
                     <span class="col-898989">日期：${release_time}</span>
                     <span class="col-898989 mr-10 cur-new-time"> </span>
                     <span class="col-898989 ml-10">阅读：${read_quantity}</span>
-                    <span class="col-898989 cur-new-quantity"> </span>
+                    <span class="col-898989 cur-new-total"> </span>
                 </p>
             </div>
         </div>

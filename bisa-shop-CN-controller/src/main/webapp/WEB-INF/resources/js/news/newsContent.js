@@ -90,7 +90,7 @@ function showNewData(newDatas) {
     $(".news-title").text(curNews.news_title);
     //时间需要格式化
     $(".cur-new-time").text(jsonDateFormat(curNews.release_time));
-    $(".cur-new-quantity").text(curNews.read_quantity);
+    $(".cur-new-total").text(curNews.read_quantity);
     $(".news-content").html(curNews.news_content);
 
     //加载上一篇下一篇数据
@@ -144,7 +144,7 @@ function showNewDetail(detailElement, news_subhead, news_title, read_quantity
     detailElement.find(".news-img").attr("src", img_url);//图片
     detailElement.find(".news-img").attr("alt", news_title);//标题
     detailElement.find(".news-time").text(jsonDateFormat(release_time));  //时间
-    detailElement.find(".news-quantity").text(read_quantity); //阅读量
+    detailElement.find(".news-total").text(read_quantity); //阅读量
     detailElement.find(".news-subhead").text(news_subhead);
     detailElement.find(".news-title").text(news_title);
     detailElement.find("$(meat[name=keywords])").attr("content","news_keyWord");//关键词

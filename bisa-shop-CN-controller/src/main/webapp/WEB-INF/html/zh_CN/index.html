@@ -3,9 +3,9 @@
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="initial-scale=1.0,user-scalable=no">
-    <link rel="icon" href="Images/favicon.ico" type="image/x-icon"/>
-    <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon"/>
-    <link rel="bookmark" href="Images/favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon"/>
+    <link rel="bookmark" href="/favicon/favicon.ico" type="image/x-icon"/>
     <meta charset="UTF-8">
     <meta name="keywords" content="碧沙康健">
     <meta name="description" content="碧沙康健">
@@ -128,10 +128,13 @@
     <!--视屏展示部分-->
     <div class="container">
         <div class="row">
-            <div class="col-md-6 " style="background: red;height:372px;">
+            <div class="col-md-6 " style="height:372px;padding:0;">
+              <video  width="100%" id="audio" controls="controls"  style="margin-top: 1%;" >
+	    	  	  <source src="https://bisa-hk-comm-data.oss-cn-hongkong.aliyuncs.com/video/PECG_zh_CN.mp4" type="video/mp4" />
+	    	  </video>
             </div>
             <div class="col-md-5 ml-40 mt-20  indexInfo">
-                <div id="myCarousel" class="carousel slide">                        <!--设置轮播器区域样式，设置轮播器滚动样式-->
+                <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="10000">                        <!--设置轮播器区域样式，设置轮播器滚动样式-->
                     <ol class="carousel-indicators">                                <!--设置轮播器列表区域样式，就是小圆点区域样式-->
 
                         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>    <!--设置当前列表首选-->
@@ -250,21 +253,16 @@
 </body>
 <script>
     $(document).ready(function () {
-        // 轮播图切换时间
-        $('.carousel').carousel({
-            interval: 10000
-        })
         //新闻内容获取
         function indexNew() {
 
             $.ajax({
                 type: "GET",
                 dataType: "json",
-                url: "/new/top4",
+                url: "/news/ajax/top4",
                 success: function (data) {
-                    console.log(data);
+                   
                     $.each(data, function (i, item) {
-                        var time = getMyDate(item.release_time);
                         $(".main_div").append(
                                 '<div class="clear col-md-3 new-div">' +
                                 '<div class="row">' +
@@ -275,8 +273,8 @@
                                 '<p class="f-12 col-888 mtb-10-0-ipad h-40 overflow-h line-h-20 text-line-2-1-ipad cur-p hovecol-999 news-describe">' + item.news_describe + '' +
                                 '</p>' +
                                 '<p class="f-12 col-888 mtb-10-0-ipad line-h-20 text-line-2-1-ipad cur-d">' +
-                                '<span>时间：</span><span class="col-888 news-time mr-25">' + time + '</span>' +
-                                '<span style="margin-left:30px;">阅读量：</span><span class="col-888 news-quantity">' + item.read_quantity + '</span>' +
+                                '<span>时间：</span><span class="col-888 news-time mr-25">' + item.release_time + '</span>' +
+                                '<span style="margin-left:30px;">阅读量：</span><span class="col-888 news-total">' + item.read_quantity + '</span>' +
                                 '</p>' +
                                 '</div>' +
                                 '</div>'

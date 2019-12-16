@@ -5,9 +5,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="icon" href="Images/favicon.ico" type="image/x-icon" />
-    <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon" />
-    <link rel="bookmark" href="Images/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="bookmark" href="/favicon/favicon.ico" type="image/x-icon" />
     <meta http-equiv="Content-Type" content="text/html;" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -45,7 +45,7 @@
 	            <p class="shopContent">${goods.description}</p>
 	            <p class="shopPrice">
 	                <span ><spring:message code="price"/>:</span>
-	                <span>¥${goods.price}</span>
+	                <span><spring:message code="pay.unit"/>${goods.price}</span>
 	            </p>
 	            <div class="row">
 					<div class="goods_num  col-md-12">

@@ -18,6 +18,14 @@ public interface IOrderDao extends IBaseDao<Order>{
      */
     public Order getOrderById(int id);
     
+    
+    /**
+     * 订单表的id,加载订单数据
+     * @param id
+     * @return
+     */
+    public Order loadByPyaID(String pay_id);
+    
     /**
      * 订单表的编号,加载订单数据
      * @param id

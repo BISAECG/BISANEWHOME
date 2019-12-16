@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="icon" href="Images/favicon.ico" type="image/x-icon" />
-    <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon" />
-    <link rel="bookmark" href="Images/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="bookmark" href="/favicon/favicon.ico" type="image/x-icon" />
     
     <meta http-equiv="Content-Type" content="text/html;" />
     <meta charset="utf-8">
@@ -35,10 +35,10 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="col-md-5 col-md-offset-1">
-                    <img class="img-responsive center-block" src="/resources/img/download/banner-left.png" alt="Bisha Health APP download">
+                    <img class="img-responsive center-block" src="/resources/img/download/banner-left.png" alt="Bisa Health APP download">
                 </div>
                 <div class=" col-md-6">
-                    <p class="download-title"> Bisa Kangjian APP</p>
+                    <p class="download-title"> Bisa Health APP</p>
                     <p class="download-descrip"> Monitor ECG without leaving your home</p>
                     <p style="font-size:20px;color:rgba(254,254,254,1);">Keep you indoors for ECG measurements</p>
                     <img width="212" src="/resources/img/download/banner-right.png">

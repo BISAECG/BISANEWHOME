@@ -52,7 +52,7 @@ import javax.servlet.http.HttpServletResponse;
 
 @Controller
 @RequestMapping(value = "/admin")
-@RequiresRoles(value = { "ROLE_ADMIN", "ROLE_CUSTOMER", "ROLE_STORE" }, logical = Logical.OR)
+@RequiresRoles(value = { "ROLE_ADMIN" }, logical = Logical.OR)
 public class AdminIndexController {
 
 	@Autowired

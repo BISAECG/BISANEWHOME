@@ -236,7 +236,7 @@ opacity: 0;
 /*强调色—危险*/
 .col-danger,.col-danger a,a.col-danger{color:#dd514c}
 .col-danger a:hover,a.col-danger:hover{color:#dd514c}
-/*强调色—警告*/
+/*强调色—<spring:message code="warning"/>*/
 .col-warning,.col-warning a,a.col-warning{color:#f37b1d}
 .col-warning a:hover,a.col-warning:hover{color:#f37b1d}
 /*强调色—错误*/

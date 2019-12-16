@@ -6,15 +6,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="icon" href="Images/favicon.ico" type="image/x-icon" />
-<link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon" />
-<link rel="bookmark" href="Images/favicon.ico" type="image/x-icon" />
+<link rel="icon" href="/favicon/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
+<link rel="bookmark" href="/favicon/favicon.ico" type="image/x-icon" />
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="initial-scale=0.35,user-scalable=yes">
 <!-- necessary -->
     <title><spring:message code="admin.domain"/></title>
-    <meta name="keywords" content="<spring:message code="admin.domain"/>">
+    <meta name="keywords" content="<spring:message code="admin.keyword"/>">
     <meta name="description" content="<spring:message code="admin.description"/>">
 <!-- description -->
 <meta name="renderer" content="webkit">
@@ -39,19 +39,11 @@
 		$("#header").load("header.html");
 	</script>
 	<div class="wrap clear">
-		<div class="container pl-0 pr-0">
-			<div class="clear">
-				<p class="pt-10 pb-10 pl-15 pr-15 line-h-20 cur-d ">
-					<a class="col-666 t-nonehove hovecol-309DE2" href="/index"></a> > <span
-						class="col-252525 t-nonehove"></span>
-				</p>
-			</div>
-		</div>
 
 		<div class="clear full-ws">
 			<img class="full-w"
 				src="/resources/img/user/User/userCenter-banner.jpg" alt="">
-			<p class="full-w-p">用户中心</p>
+			<p class="full-w-p"><spring:message code='7004' /></p>
 			<p class="full-w-p-1"></p>
 			<p class="full-w-p-2"></p>
 		</div>
@@ -60,10 +52,10 @@
 			<div class="col-sm-3 pl-30 pr-20">
 				<div class="clear bg-white pd-40-10-ipad">
 					<p class="mt-10 mb-10 col-212121 f-30 line-h-40 cur-d">
-						用户中心
+						<spring:message code='7004' />
 					</p>
 					<a class="col-757575 f-20-16-ipad line-h-25 mt-40 mb-20 cur-p hovecol-309DE2 user-munu user-order" href="/html/${language}/user_order" target="mainFrame">
-						我的订单
+						<spring:message code='7005' />
 					</a>
 			<%-- 		<p
 						class="col-757575 f-20-16-ipad line-h-25 mt-20 mb-20 cur-p hovecol-309DE2 user-munu user-active"
@@ -71,7 +63,7 @@
 						我的地址
 					</p> --%>
 					<p class="mt-10 mb-10 col-212121 f-30 line-h-40 cur-d">
-						服务中心
+						<spring:message code='7006' />
 					</p>
 				<%-- 	<p
 						class="col-757575 f-20-16-ipad line-h-25 mt-20 mb-20 cur-p hovecol-309DE2 user-munu user-center"
@@ -81,7 +73,7 @@
 					
 					<a
 						class="col-757575 f-20-16-ipad line-h-25 mt-20 mb-20 cur-p hovecol-309DE2 user-munu user-address" href="/html/${language}/user_card" target="mainFrame">
-						服务卡
+						<spring:message code='7007' />
 					</a>
 				
 					<%--  <p class="col-757575 f-20-16-ipad line-h-25 mt-20 mb-20 cur-p hovecol-309DE2 user-munu user-saleApply">

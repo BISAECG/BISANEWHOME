@@ -37,6 +37,7 @@ import com.bisa.health.shop.entity.SysErrorCode;
 import com.bisa.health.shop.entity.SysStatusCode;
 import com.bisa.health.shop.entity.WebException;
 import com.bisa.health.shop.enumerate.ActivateEnum;
+import com.bisa.health.shop.enumerate.CouponEnum;
 import com.bisa.health.shop.enumerate.CouponTypeEnum;
 import com.bisa.health.shop.enumerate.GoodsTypeEnum;
 import com.bisa.health.shop.enumerate.ONOFFEnum;
@@ -110,7 +111,7 @@ public class OrderController {
 		double disprice = 0;
 		GoodsCoupon goodsCoupon=null;
 		if(!StringUtils.isEmpty(order.getCoupon_num())){//优惠券
-			goodsCoupon=goodsCouponService.getGoodsCouponByNum(order.getCoupon_num());
+			goodsCoupon=goodsCouponService.getGoodsCouponByNum(order.getCoupon_num(),ActivateEnum.ACTIVATE.getValue());
 			if (goodsCoupon.getCoupon_type() == CouponTypeEnum.TOTAL.getValue()) {
 				if (order_total >= goodsCoupon.getCoupon_total()) {
 					disprice = goodsCoupon.getCoupon_disprice();
@@ -120,7 +121,7 @@ public class OrderController {
 			} else if (goodsCoupon.getCoupon_type() == CouponTypeEnum.DISPRICE.getValue()) {
 
 			}
-			
+			order.setIs_coupon(CouponEnum.COUPON.getValue());
 		}
 		
 		double order_price=order_total-disprice+emd_postage;
@@ -138,11 +139,12 @@ public class OrderController {
 		}
 		order.setOrder_name(address.getConsignee());
 		order.setOrder_phone(address.getPhone());
-		order.setIs_coupon(ActivateEnum.ACTIVATE.getValue());
+		order.setOrder_area(address.getArea());
 		order.setIs_pay(PayEnum.NOT_PAY.getValue());
 		order.setOrder_status(OrderStatusEnum.UNSHIPPED.getValue());
 		order.setOrder_num(RandomUtils.RandomOfMillisecond());
 		order.setUser_id(user.getUser_guid());
+		order.setStatus(ActivateEnum.ACTIVATE.getValue());
 		if(orderService.addOrder(order)!=null&&goodsCoupon!=null){//更新优惠券状态
 			goodsCoupon.setCoupon_status(ActivateEnum.INACTIVATED.getValue());
 			goodsCoupon.setVersion(goodsCoupon.getVersion()+1);
@@ -197,7 +199,7 @@ public class OrderController {
 
 		double disprice = 0;
 
-		GoodsCoupon goodsCoupon = goodsCouponService.getGoodsCouponByNum(coupon_num);
+		GoodsCoupon goodsCoupon = goodsCouponService.getGoodsCouponByNum(coupon_num,ActivateEnum.ACTIVATE.getValue());
 		if (goodsCoupon != null) {
 			if (goodsCoupon.getCoupon_type() == CouponTypeEnum.TOTAL.getValue()) {
 				if (order_total >= goodsCoupon.getCoupon_total()) {
@@ -233,7 +235,7 @@ public class OrderController {
 		}
 
 		return new ResponseEntity<ResultData>(
-				ResultData.success(SysStatusCode.FAIL, i18nUtil.i18n(SysErrorCode.OptFail), list.get(0)),
+				ResultData.success(SysStatusCode.FAIL, i18nUtil.i18n(SysErrorCode.OptFail)),
 				HttpStatus.OK);
 
 	}
@@ -258,7 +260,7 @@ public class OrderController {
 			addressService.update(address);
 
 		return new ResponseEntity<ResultData>(
-				ResultData.success(SysStatusCode.SUCCESS, i18nUtil.i18n(SysErrorCode.OptSuccess)), HttpStatus.OK);
+				ResultData.success(SysStatusCode.SUCCESS, i18nUtil.i18n(SysErrorCode.OptSuccess),address), HttpStatus.OK);
 	}
 	
 	

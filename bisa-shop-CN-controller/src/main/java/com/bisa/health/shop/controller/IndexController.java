@@ -39,7 +39,7 @@ public class IndexController {
      * 商城首页   http://localhost:8080/health-shop/index
      * @return
      */
-    @RequestMapping(value = "/index", method = RequestMethod.GET)
+    @RequestMapping(value = {"/index","/"}, method = RequestMethod.GET)
     public String index(HttpServletRequest request,Model model) {
     	String userAgent = request.getHeader("user-agent");
     	String jumStr="/html/";

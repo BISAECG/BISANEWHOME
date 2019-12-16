@@ -9,9 +9,9 @@ import org.springframework.amqp.rabbit.core.ChannelAwareMessageListener;
 
 import com.rabbitmq.client.Channel;
 
-public class DeathCommReceiverService implements ChannelAwareMessageListener{
+public class DeathReceiverService implements ChannelAwareMessageListener{
 	
-	private static Logger logger = LogManager.getFormatterLogger(DeathCommReceiverService.class);
+	private static Logger logger = LogManager.getFormatterLogger(DeathReceiverService.class);
 
 	@Override
 	public void onMessage(Message message, Channel channel) throws Exception {
