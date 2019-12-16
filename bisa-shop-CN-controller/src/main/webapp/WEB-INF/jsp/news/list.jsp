@@ -81,9 +81,7 @@
         <div class="container"  style="background: #F1F1F1;">
             <div class="row">
                 <div class="col-md-2 pt-10 pb-10">
-                <span style="font-size: 18px;font-weight: bold;">
-                    新闻资讯
-                </span>
+                <span style="font-size: 18px;font-weight: bold;">新闻资讯</span>
                 </div>
                 <div class="col-md-1 col-md-offset-9" style="line-height: 45px;">
                     <img src="/resources/img/news/HK_HowToShop/down.png" style="margin-left: 50px;">

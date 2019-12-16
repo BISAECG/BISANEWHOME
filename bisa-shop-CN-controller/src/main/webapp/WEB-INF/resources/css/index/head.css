@@ -3,7 +3,7 @@ body, td, th {
 }
 
 /*头部导航栏样式*/
-.navbar {
+.navbar{
     min-height: 30px !important;
     background: #F1F1F1;
 }

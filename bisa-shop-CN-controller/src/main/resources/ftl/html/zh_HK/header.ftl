@@ -6,7 +6,7 @@
     <script src='/resources/js/index/head.js'></script>
     <!--[if lt IE 9]>
     　　<script src="https://cdn.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-     <script src = "http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+        <script src = "http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <nav class='navbar'>
         <div class='container'>
