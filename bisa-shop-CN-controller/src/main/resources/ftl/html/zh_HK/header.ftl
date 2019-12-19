@@ -94,11 +94,13 @@
 						 </#if>
 					
 					</#list>
-                    <li class=' pull-left ml-20' style='background: #225185;'>
+					
+					<!-- 国内到淘宝和JD购买 -->
+<!--                     <li class=' pull-left ml-20' style='background: #225185;'>
                         <a class='buy' href='shop.html'>
                             產品購買
                         </a>
-                    </li>
+                    </li> -->
                     <li class=' pull-left ml-20' style='background: #f40;'>
                         <a class='tb' target="_blank" href="https://shop194684580.taobao.com/?spm=a230r.7195193.1997079397.2.6815114b089AGi">
                             淘寶商城

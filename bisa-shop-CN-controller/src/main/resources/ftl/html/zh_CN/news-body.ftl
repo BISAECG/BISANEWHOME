@@ -35,7 +35,7 @@
         <div class="col-md-12">
             <div class="clear container pt-40 pl-0 pr-0 pb-40">
                 <p class="col-3f3b3c f-24 text-center line-h-30 text-overflow news-title">
-                sdsd45
+                ${title}
                 </p>
                 <p class="col-898989 f-16 text-center line-h-25 mt-5 mb-5">
                     <span class="col-898989">日期：${release_time}</span>

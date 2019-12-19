@@ -51,7 +51,7 @@ import java.util.Map;
  */
 @Controller
 @RequestMapping(value = "/admin/page")
-@RequiresRoles(value = {"ROLE_ADMIN"}, logical = Logical.OR)
+@RequiresRoles(value = {"ROLE_ADMIN", "ROLE_CUSTOMER"},  logical = Logical.OR)
 public class AdminPageController {
 
     @Autowired

@@ -518,7 +518,7 @@
  		     	,url: '/admin/common/upload'
  		     	,accept: 'file'
  		     	,exts: 'jpg|png'
- 		        ,data:{'suffix':'jpg','width':369,'height':332}
+ 		        ,data:{'suffix':'jpg'}
  		     	,before: function(obj){ //obj参数包含的信息，跟 choose回调完全一致，可参见上文。
  		         	    layer.load(); //上传loading
  		         	    
@@ -546,7 +546,7 @@
 		     	,url: '/admin/common/upload'
 		     	,accept: 'file'
 		     	,exts: 'jpg|png'
-		        ,data:{'suffix':'jpg'}
+		        ,data:{'suffix':'jpg','width':369,'height':332}
 		     	,before: function(obj){ //obj参数包含的信息，跟 choose回调完全一致，可参见上文。
 		         	    layer.load(); //上传loading
 		         	
