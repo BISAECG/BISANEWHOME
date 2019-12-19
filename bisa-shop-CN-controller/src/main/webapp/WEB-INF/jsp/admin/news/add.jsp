@@ -109,17 +109,17 @@
                             </div>
                         </div>
                         <div class="layui-form-item">
-                            <label class="layui-form-label "><spring:message code='1068' />：</label>
+                            <label class="layui-form-label "><spring:message code='1070' />：</label>
                             <div class="layui-input-block">
-                                <input type="text" name="html_keyWord" id="html_keyWord" lay-verify="required" placeholder="<spring:message code='1069' />"
+                                <input type="text" name="html_keyWord" id="html_keyWord" lay-verify="required" placeholder="<spring:message code='1071' />"
                                        autocomplete="off"
                                        class="layui-input">
                             </div>
                         </div>
                         <div class="layui-form-item">
-                            <label class="layui-form-label "><spring:message code='1070' />：</label>
+                            <label class="layui-form-label "><spring:message code='1068' />：</label>
                             <div class="layui-input-block">
-                                <input type="text" name="html_title" id="html_title" lay-verify="required" placeholder="<spring:message code='1071' />"
+                                <input type="text" name="html_title" id="html_title" lay-verify="required" placeholder="<spring:message code='1069' />"
                                        autocomplete="off"
                                        class="layui-input">
                             </div>

@@ -44,7 +44,8 @@ public class IndexController {
     	String userAgent = request.getHeader("user-agent");
     	String jumStr="/html/";
     	if(PhoneTypeUtil.phoneType(userAgent)){
-    		jumStr="/h5/";
+    		//jumStr="/h5/";
+    		jumStr="/html/";
     	}
     	
     	model.addAttribute("lang",jumStr+i18nUtil.lang());

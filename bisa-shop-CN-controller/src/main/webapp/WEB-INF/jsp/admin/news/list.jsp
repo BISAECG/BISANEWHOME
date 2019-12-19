@@ -162,7 +162,7 @@
                         {field: 'html_title', title: '<spring:message code="1068" />', width: '10%', align: 'center'},
                         {field: 'news_roofPlacement', title: '<spring:message code="5019" />', width: '5%', sort: true, align: 'center',templet:'#news_roofPlacement'},
                         {field: 'release_time', title: '<spring:message code="time" />', width: '10%', sort: true, align: 'center'},
-                        {fixed: 'right', title: '<spring:message code="opt" />', width: '35%', align: 'center', toolbar: '#barDemo'}
+                        {fixed: 'right', title: '<spring:message code="opt" />', width: 'auto', align: 'center', toolbar: '#barDemo'}
                     ]
                 ],
                 done: function (res, curr, count) {
@@ -174,8 +174,8 @@
                 var data = obj.data; //获得当前行数据
                 var layEvent = obj.event; //获得 lay-event 对应的值
                 var tr = obj.tr; //获得当前行 tr 的DOM对象
-                if (layEvent === 'detail') { //预览
-                    window.open(shopUrl + "/news/body?id=" + data.id);
+                if (layEvent == 'detail') { //预览
+                    window.open("/html/"+data.language+"/" + data.id+".html");
                 } else if (layEvent === 'delarticle') { //删除
                     layer.confirm("<spring:message code='submit.delete' />", {
             			  btn: ["<spring:message code='submit' />"] //按钮
@@ -201,7 +201,6 @@
                         }
                     });
                 }else{
-                	console.log(data);
                 	window.location = "/admin/news/add?id="+data.id+"&news_num="+data.news_num+"&language="+layEvent;
                 }
                
