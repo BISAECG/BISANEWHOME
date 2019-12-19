@@ -90,7 +90,7 @@
                                 請使用手機截圖後在微信或瀏覽器掃描截圖二維碼進入碧沙康健APP下載地址。
                             </p>
                             <div class="clear text-center mt-40 mb-40">
-                                <img class="img-180" src="/resources/img/news/HK-Instructions/qr_code.png" alt="碧沙康健app下載">
+                                <img class="img-180" src="/resources/img/download/banner-left.png" alt="碧沙康健app下載">
                             </div>
                         </div>
                     </div>

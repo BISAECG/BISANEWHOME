@@ -59,7 +59,8 @@
                 <p id="p4"
                    class="col-757575 f-20-16-ipad line-h-25 mt-40 mb-20 cur-p hovecol-309DE2 col-active instructions-list2">
                     <a href="/resources/img/news/HK-Instructions/PECG.pdf" download="PECG.pdf">
-                        PECG使用说明书下载</a>
+                        PECG使用说明书下载
+                    </a>
             </div>
         </div>
         <div id="instr1" class=" clear col-sm-9 pr-30 pl-0">
@@ -89,7 +90,7 @@
                                 请使用手机截图后在微信或浏览器扫描截图二维码进入碧沙康健APP下载地址。
                             </p>
                             <div class="clear text-center mt-40 mb-40">
-                                <img class="img-180" src="/resources/img/news/HK-Instructions/qr_code.png" alt="碧沙康健app下载">
+                                <img class="img-180" src="/resources/img/download/banner-left.png" alt="碧沙康健app下载">
                             </div>
                         </div>
                     </div>
@@ -121,7 +122,7 @@
                             </div>
                         </div>
                     </div>
-                    <!--<%&#45;&#45;第三列&#45;&#45;%>-->
+                    <!--第三列-->
                     <div class="layui-colla-item">
                         <h2 class="layui-colla-title f-18 title-color">
                             3.如何在APP中绑定和解绑心电仪器等产品？
@@ -180,7 +181,7 @@
                             </div>
                         </div>
                     </div>
-                    <!--<%&#45;&#45;第四列&#45;&#45;%>-->
+                    <!--第四列-->
                     <div class="layui-colla-item">
                         <h2 class="layui-colla-title f-18 title-color">
                             4.如何使用APP监测心电与生成查看报告？
@@ -268,7 +269,7 @@
                             <p class="f-20 col-333 line-h-30 mt-25">
                                 （7）点击右下角 生成报告 按钮上传数据，所有操作完毕。（收费报告需要一定时间进行人工审核，完成后将自动推送给您，请耐心等候）。
                             </p>
-                            <!--<%&#45;&#45;所有历史报告查看&#45;&#45;%>-->
+                            <!--所有历史报告查看-->
                             <p class="f-20 col-333 line-h-30 mt-30 f-w">
                                 所有历史报告查看：
                             </p>
@@ -309,7 +310,7 @@
                 <div class="clear bor bor-b bor-col-f5f5f5">
                 </div>
                 <div class="layui-collapse mt-40" lay-accordion="">
-                    <!--<%&#45;&#45; 第一行&#45;&#45;%>-->
+                    <!--第一行-->
                     <div class="layui-colla-item">
                         <h2 class="layui-colla-title f-18 title-color">
                             1)	安装一次性使用心电电极片
@@ -323,7 +324,7 @@
                             </div>
                         </div>
                     </div>
-                    <!--<%&#45;&#45; 第2行&#45;&#45;%>-->
+                    <!--第2行-->
                     <div class="layui-colla-item">
                         <h2 class="layui-colla-title f-18 title-color">
                             2)	贴戴动态心电记录仪
@@ -337,7 +338,7 @@
                             </div>
                         </div>
                     </div>
-                    <!--<%&#45;&#45; 第3行&#45;&#45;%>-->
+                    <!--第3行-->
                     <div class="layui-colla-item">
                         <h2 class="layui-colla-title f-18 title-color">
                             3) 开始采集数据
@@ -351,7 +352,7 @@
                             </div>
                         </div>
                     </div>
-                    <!--<%&#45;&#45; 第4行&#45;&#45;%>-->
+                    <!--第4行-->
                     <div class="layui-colla-item">
                         <h2 class="layui-colla-title f-18 title-color">
                             4) 结束采集数据
@@ -362,7 +363,7 @@
                             </p>
                         </div>
                     </div>
-                    <!--<%&#45;&#45; 第5行&#45;&#45;%>-->
+                    <!--第5行-->
                     <div class="layui-colla-item">
                         <h2 class="layui-colla-title f-18 title-color">
                             5) 取下动态心电记录仪
@@ -376,7 +377,7 @@
                             </div>
                         </div>
                     </div>
-                    <!--<%&#45;&#45; 第6行&#45;&#45;%>-->
+                    <!--第6行-->
                     <div class="layui-colla-item">
                         <h2 class="layui-colla-title f-18 title-color">
                             6)	上传数据
@@ -391,7 +392,7 @@
                             </div>
                         </div>
                     </div>
-                    <!--<%&#45;&#45; 第7行&#45;&#45;%>-->
+                    <!--第7行-->
                     <div class="layui-colla-item">
                         <h2 class="layui-colla-title f-18 title-color">
                             7)	紧急求助操作
@@ -402,7 +403,7 @@
                             </p>
                         </div>
                     </div>
-                    <!--<%&#45;&#45; 第8行&#45;&#45;%>-->
+                    <!--第8行-->
                     <div class="layui-colla-item">
                         <h2 class="layui-colla-title f-18 title-color">
                             8)	停搏提醒
@@ -416,7 +417,7 @@
                             </p>
                         </div>
                     </div>
-                    <!--<%&#45;&#45;動態心電記錄儀狀態說明&#45;&#45;%>-->
+                    <!--動態心電記錄儀狀態說明-->
                     <div class="layui-colla-item">
                         <h2 class="layui-colla-title f-18 title-color">
                             动态心电记录仪状态说明
@@ -454,7 +455,7 @@
                             </p>
                         </div>
                     </div>
-                    <!--<%&#45;&#45;常見的問題和解決方法&#45;&#45;%>-->
+                    <!--常見的問題和解決方法-->
                     <div class="layui-colla-item">
                         <h2 class="layui-colla-title f-18 title-color">
                             常见的问题和解决方法
@@ -468,7 +469,7 @@
                             </div>
                         </div>
                     </div>
-                    <!--<%&#45;&#45;免責聲明&#45;&#45;%>-->
+                    <!--免責聲明-->
                     <div class="layui-colla-item">
                         <h2 class="layui-colla-title f-18 title-color">
                             免责声明
