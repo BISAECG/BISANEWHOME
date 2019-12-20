@@ -8,7 +8,7 @@
                     <div class="pull-left  text-left" id="7000B">
                         <ul >
                             <p class="f-14" >
-                                <span class="t-nonehove" >关于碧沙</span>
+                                <span class="t-nonehove">关于碧沙</span>
                             </p>
                             <li class="pt-20">
                                 <a class="col-8c8c8c t-nonehove hovecol-309DE2 f-12" href="about.html">
@@ -45,7 +45,7 @@
                     <div class="pull-left  text-left" id="5000B">
                         <ul >
                             <p>
-                                <span class="t-nonehove"  >购物指南</span>
+                                <span class="t-nonehove">购物指南</span>
                             </p>
                             <li class="pt-20" ><a class="col-8c8c8c t-nonehove hovecol-309DE2 f-12" href="shop-guide.html">
                                 发货时效</a></li>
@@ -59,7 +59,7 @@
                     <div class="pull-left text-left">
                         <ul >
                             <p>
-                                <span class="t-nonehove"   >友情链接</span>
+                                <span class="t-nonehove">友情链接</span>
                             </p>
                             <li class="pt-20">
                                 <a class="col-8c8c8c t-nonehove hovecol-309DE2 f-12" href="http://www.kuaidi.com/"
@@ -79,7 +79,7 @@
                     <div class="pull-left   text-left">
                         <ul >
                             <p>
-                                <span class="t-nonehove"  >联系我们</span>
+                                <span class="t-nonehove">联系我们</span>
 
                             </p>
                             <li class=" pb-10  pt-20  f-12" >
@@ -140,19 +140,20 @@
     </div>
 </div>
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-147231948-1"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-147231948-2"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'UA-147231948-1');
+    gtag('config', 'UA-147231948-2');
 </script>
+
 <script>
     var _hmt = _hmt || [];
     (function() {
         var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?b4b5d317176d4627ed7048d109c75943";
+        hm.src = "https://hm.baidu.com/hm.js?e8cf258ad09a741dc6fbc92f2b6a29f8";
         var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(hm, s);
     })();
