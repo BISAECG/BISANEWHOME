@@ -138,6 +138,14 @@
                                 <input type="radio" name="news_roofPlacement" value="0" title="<spring:message code='5021' />" checked>
                             </div>
                         </div>
+                        
+                         <div class="layui-form-item">
+                            <label class="layui-form-label "><spring:message code='type' />：</label>
+                            <div class="layui-input-block">
+                                <input type="radio" name="is_pc" value="1" title="PHONE">
+                                <input type="radio" name="is_pc" value="0" title="PC" checked>
+                            </div>
+                        </div>
                     </div>
                     
                     <p class="f-18 pt-15 pb-15 col-8d969d mt-10 mb-10">

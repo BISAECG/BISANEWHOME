@@ -63,7 +63,7 @@
                 </p>
                 <p class="mb-30">                 
                     <span>Workday</span>
-                    <span style="color: #E5481E;">9:00 AM—5:30 PM</span>
+                    <span style="color: #E5481E;">9:00 AM—6:00 PM</span>
                 </p>
             </div>
             <div class="col-md-2 ">
@@ -130,7 +130,7 @@
       			<img alt="" id="imgCode" src="/common/kaptcha"> 
     		  </div> 
     		  <div class="layui-input-inline">
-                   <input type="code" id="code" name="code" required lay-verify="required" lay-reqText="PIN cannot be empty " placeholder="Please enter PIN" autocomplete="off" class="layui-input">
+                   <input type="code" id="code" name="code" required lay-verify="required" lay-reqText="PIN cannot be empty" placeholder="Please enter PIN" autocomplete="off" class="layui-input">
     		  </div> 
     		   
     	</div>

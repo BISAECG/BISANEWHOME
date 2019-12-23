@@ -94,8 +94,8 @@
 						 </#if>
 					
 					</#list>
-     					<!-- 国内到淘宝和JD购买 -->             
-<!--                     <li class=' pull-left ml-20' style='background: #225185;'>
+     					<!-- 国内到淘宝和JD购买              
+                     <li class=' pull-left ml-20' style='background: #225185;'>
                         <a class='buy' href='shop.html'>
                             產品购买
                         </a>
