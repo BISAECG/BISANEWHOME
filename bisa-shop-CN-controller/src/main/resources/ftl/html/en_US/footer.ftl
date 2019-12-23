@@ -141,23 +141,24 @@
     </div>
 </div>
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-147231948-1"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-147231948-2"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'UA-147231948-1');
+    gtag('config', 'UA-147231948-2');
 </script>
 <script>
     var _hmt = _hmt || [];
     (function() {
         var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?b4b5d317176d4627ed7048d109c75943";
+        hm.src = "https://hm.baidu.com/hm.js?e8cf258ad09a741dc6fbc92f2b6a29f8";
         var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(hm, s);
     })();
 </script>
+
 
 
 

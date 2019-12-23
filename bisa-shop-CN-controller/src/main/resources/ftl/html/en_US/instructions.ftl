@@ -70,36 +70,23 @@
                             
                         <h2 class="layui-colla-title f-18 title-color">
                             1. How to download the Bisa Health APP?
-                                
                         </h2>
                             
-                        <div class="layui-colla-content layui-show">
-                             
+                        <div class="layui-colla-content layui-show"> 
                             <p class="f-20 col-333 h-20 line-h-20 mt-30">
-                                Bisa Health APP official website download address:
-                                 
-                            </p>
-                             
+                                Bisa Health APP official website download address:  
+                            </p> 
                             <p class=" h-20 line-h-20 mt-30">
-
-                                <a download="bisahealth.apk" href="/resources/img/news/HK-Instructions/bishahealth.apk">Click to download</a>
-                                 
-                            </p>
-                             
+                                <a download="bisahealth.apk" href="/resources/img/news/HK-Instructions/bishahealth.apk">Click to download</a> 
+                            </p> 
                             <p class="f-20 col-333 h-20 line-h-20 mt-30">
-                                QR code download:
-                                 
+                                QR code download:  
                             </p>
-                             
                             <p class="f-20 col-aaa h-20 line-h-20 mt-20">
-                                Please use the mobile phone screenshot to scan the screenshot QR code on WeChat or browser to enter the download address of Bisa Health APP.
-                                 
+                                Please use the mobile phone screenshot to scan the screenshot QR code on WeChat or browser to enter the download address of Bisa Health APP.  
                             </p>
-                             
                             <div class="clear text-center mt-40 mb-40">
-
-                                <img class="img-180" src="/resources/img/news/HK-Instructions/qr_code.png" alt="bisa health app download">
-                                 
+                                <img class="img-180" src="/resources/img/download/banner-left.png" alt="bisa health app download"> 
                             </div>
                                 
                         </div>
@@ -109,40 +96,31 @@
                             
                         <h2 class="layui-colla-title f-18 title-color">
                              2. How to register for the Bisa Health account?
-                                
                         </h2>
                             
                         <div class="layui-colla-content">
-                             
                             <p class="f-20 col-333 line-h-30 mt-30">
                                 (1) Open the Bisa Health APP to fill in your mobile phone number on the account login interface, receive and fill in the SMS verification code, and click the Enter button.
-                                 
                             </p>
                              
                             <p class="f-20 col-333 line-h-30 mt-15">
                                 (2) Open the APP
-                                 
                             </p>
                              
                             <p class="f-20 col-333 line-h-30 mt-15">
-                                (3) Fill in your mobile phone number directly in the quick login interface, receive and fill in the SMS verification code.
-                                 
+                                (3) Fill in your mobile phone number directly in the quick login interface, receive and fill in the SMS verification code.  
                             </p>
                              
                             <p class="f-20 col-333 line-h-30 mt-15">
                                 (4) Click to enter and the registration is successful.
-                                 
                             </p>
                              
                             <div class="clear text-center mt-25">
-
                                 <img src="/resources/img/news/HK-Instructions/in_register_tipsv1.png">
-                                 
                             </div>
                              
                             <p class="f-20 col-333 line-h-30 mt-25">
-                                (5) You need to set a password for the first login, and you can log in with your mobile phone number and password.
-                                 
+                                (5) You need to set a password for the first login, and you can log in with your mobile phone number and password.  
                             </p>
                              
                             <div class="clear text-center mt-25">
@@ -154,7 +132,7 @@
                         </div>
 
                     </div>
-                    <!--<%&#45;&#45;第三列&#45;&#45;%>-->
+                    <!--第三列-->
                     <div class="layui-colla-item">
                             
                         <h2 class="layui-colla-title f-18 title-color">
@@ -212,9 +190,7 @@
                             </p>
                              
                             <div class="clear text-center mt-25">
-
                                 <img src="/resources/img/news/HK-Instructions/in_bound_tipsv4.png">
-                                 
                             </div>
                              
                             <p class="f-20 col-333 line-h-30 mt-30">
@@ -224,28 +200,22 @@
                              
                             <p class="f-20 col-333 line-h-30 mt-15 pl-30">
                                 (1) Login to Bisa Health APP to enter all devices interface
-                                 
                             </p>
                              
                             <p class="f-20 col-333 line-h-30 mt-15 pl-30">
                                 (2) Click the trash can button in the upper left corner to open the delete mode.
-                                 
                             </p>
                              
                             <div class="clear text-center mt-25">
-
-                                <img src="/resources/img/news/HK-Instructions/in_bound_tipsv5.png">
-                                 
+                                <img src="/resources/img/news/HK-Instructions/in_bound_tipsv5.png"> 
                             </div>
                              
                             <p class="f-20 col-333 line-h-30 mt-25 pl-30">
-                                (3) Check the equipment that needs to be untied
-                                 
+                                (3) Check the equipment that needs to be untied  
                             </p>
                              
                             <p class="f-20 col-333 line-h-30 mt-25 pl-30">
                                 (4) Click the delete button in the lower right corner to confirm the deletion.
-                                 
                             </p>
                              
                             <div class="clear text-center mt-25 mb-35">
@@ -257,7 +227,7 @@
                         </div>
 
                     </div>
-                    <!--<%&#45;&#45;第四列&#45;&#45;%>-->
+                    <!--第四列-->
                     <div class="layui-colla-item">
                             
                         <h2 class="layui-colla-title f-18 title-color">
@@ -379,8 +349,7 @@
                             </div>
                              
                             <p class="f-20 col-333 line-h-30 mt-25">
-                                (5) Use the OTG data cable to connect the mobile phone to the ECG device and wait for the precautions. After confirming, enter the selection data interface. If no prompts pop up, please click the Generate Report button in the lower left corner after connecting to select to generate the 24-hour charge report. And start monitoring.
-                                 
+                                (5) Use the OTG data cable to connect the mobile phone to the ECG device and wait for the precautions. After confirming, enter the selection data interface. If no prompts pop up, please click the Generate Report button in the lower left corner after connecting to select to generate the 24-hour charge report. And start monitoring.  
                             </p>
                              
                             <div class="clear text-center mt-25">
@@ -400,7 +369,7 @@
                             <p class="f-20 col-333 line-h-30 mt-25">
                                 (7) Click the report button in the lower right corner to upload data, and all operations are completed. (Fee report needs a certain time for manual review, and will be automatically pushed to you after completion, please wait patiently).
                             </p>
-                            <!--<%&#45;&#45;所有曆史報告查看&#45;&#45;%>-->
+                            <!--所有曆史報告查看-->
                             <p class="f-20 col-333 line-h-30 mt-30 f-w">
                                 View all historical reports:
                             </p>
@@ -441,7 +410,7 @@
                 <div class="clear bor bor-b bor-col-f5f5f5">
                 </div>
                 <div class="layui-collapse mt-40" lay-accordion="">
-                    <!--<%&#45;&#45; 第一行&#45;&#45;%>-->
+                    <!--第一行-->
                     <div class="layui-colla-item">
                         <h2 class="layui-colla-title f-18 title-color">
                             1) Installation of disposable ECG electrodes
@@ -455,7 +424,7 @@
                             </div>
                         </div>
                     </div>
-                    <!--<%&#45;&#45; 第2行&#45;&#45;%>-->
+                    <!--第2行-->
                     <div class="layui-colla-item">
                         <h2 class="layui-colla-title f-18 title-color">
                             2) wearing dynamic ECG recorder
@@ -469,7 +438,7 @@
                             </div>
                         </div>
                     </div>
-                    <!--<%&#45;&#45; 第3行&#45;&#45;%>-->
+                    <!--第3行-->
                     <div class="layui-colla-item">
                         <h2 class="layui-colla-title f-18 title-color">
                             3) Start collecting data
@@ -483,7 +452,7 @@
                             </div>
                         </div>
                     </div>
-                    <!--<%&#45;&#45; 第4行&#45;&#45;%>-->
+                    <!--第4行-->
                     <div class="layui-colla-item">
                         <h2 class="layui-colla-title f-18 title-color">
                             4) Ending Data Acquisition
@@ -494,7 +463,7 @@
                             </p>
                         </div>
                     </div>
-                    <!--<%&#45;&#45; 第5行&#45;&#45;%>-->
+                    <!--第5行-->
                     <div class="layui-colla-item">
                         <h2 class="layui-colla-title f-18 title-color">
                             5) Remove the dynamic ECG recorder
@@ -508,7 +477,7 @@
                             </div>
                         </div>
                     </div>
-                    <!--<%&#45;&#45; 第6行&#45;&#45;%>-->
+                    <!--第6行-->
                     <div class="layui-colla-item">
                         <h2 class="layui-colla-title f-18 title-color">
                             6) Upload data
@@ -523,7 +492,7 @@
                             </div>
                         </div>
                     </div>
-                    <!--<%&#45;&#45; 第7行&#45;&#45;%>-->
+                    <!--第7行-->
                     <div class="layui-colla-item">
                         <h2 class="layui-colla-title f-18 title-color">
                             7) Emergency help-seeking operation
@@ -534,7 +503,7 @@
                             </p>
                         </div>
                     </div>
-                    <!--<%&#45;&#45; 第8行&#45;&#45;%>-->
+                    <!--第8行-->
                     <div class="layui-colla-item">
                         <h2 class="layui-colla-title f-18 title-color">
                             8) Cardiac reminder
@@ -548,7 +517,7 @@
                             </p>
                         </div>
                     </div>
-                    <!--<%&#45;&#45;動態心電記錄儀狀態說明&#45;&#45;%>-->
+                    <!--動態心電記錄儀狀態說明-->
                     <div class="layui-colla-item">
                         <h2 class="layui-colla-title f-18 title-color">
                             State description of dynamic ECG recorder
@@ -586,7 +555,7 @@
                             </p>
                         </div>
                     </div>
-                    <!--<%&#45;&#45;常見的問題和解決方法&#45;&#45;%>-->
+                    <!--常見的問題和解決方法-->
                     <div class="layui-colla-item">
                         <h2 class="layui-colla-title f-18 title-color">
                             Common problems and Solutions
@@ -600,7 +569,7 @@
                             </div>
                         </div>
                     </div>
-                    <!--<%&#45;&#45;免責聲明&#45;&#45;%>-->
+                    <!--免責聲明-->
                     <div class="layui-colla-item">
                         <h2 class="layui-colla-title f-18 title-color">
                             Disclaimer

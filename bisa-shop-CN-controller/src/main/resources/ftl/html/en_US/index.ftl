@@ -306,6 +306,10 @@
             });
         }
         ecg();
+        // 轮播图切换时间
+        $('.carousel').carousel({
+            interval: 10000
+        })
         //新聞內容獲取
         function indexNew() {
 

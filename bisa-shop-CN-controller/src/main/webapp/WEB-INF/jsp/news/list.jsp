@@ -76,9 +76,9 @@
             </div>
         </div>
     </div>
-    <div class="full-w mb-20" >
+    <div class="full-w mb-20"  style="background: #F1F1F1;">
         <div class="container">
-            <div class="row"  style="background: #F1F1F1;">
+            <div class="row" >
                 <div class="col-md-2 pt-10 pb-10">
                 <span style="font-size: 18px;font-weight: bold;">
                     <spring:message code='5001'/>
