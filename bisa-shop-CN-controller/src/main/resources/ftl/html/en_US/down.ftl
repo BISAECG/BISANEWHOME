@@ -45,7 +45,7 @@
                     <p class="pt-15">
 
                         <div class="download-ios  pull-left text-center" style=" width:200px;height:35px;">
-                            <span><i class="fa fa-apple" aria-hidden="true"></i>Ios  download</span>
+                            <span><i class="fa fa-apple" aria-hidden="true"></i>IOS  download</span>
                         </div>
                         <div class="download-android pull-left col-md-offset-1 text-center" style=" width:240px;height:35px;">
                             <span><i class="fa fa-android" aria-hidden="true"></i>Android  download</span>

@@ -26,7 +26,7 @@
 <script>
     $("#header").load("header.html");
 </script>
-<div class="con"   style="background: url('/resources/img/download/banner.png');height: 889px;padding-top: 100px;">
+<div class="con" style="background: url('/resources/img/download/banner.png');height: 889px;padding-top: 100px;">
     <div class="container">
         <div class="row">
             <div class="col-md-12">

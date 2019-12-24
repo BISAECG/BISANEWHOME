@@ -89,11 +89,15 @@
                     <div class="col-md-11">
                         <p>
                             <span style="color: #333333;font-weight: bold;">Possible causes:</span>
-                            <span  class="col-333">poor adhesion of the electrode sheet to the skin, dropping of the electrode sheet due to sweat, repeated use of the electrode sheet</span>
+                            <span  class="col-333">
+                                poor adhesion of the electrode sheet to the skin, dropping of the electrode sheet due to sweat, repeated use of the electrode sheet
+                            </span>
                         </p>
                         <p>
                             <span style="color: #333333;font-weight: bold;">Remedy:</span>
-                            <span  class="col-333">Make sure the chest skin is dry and clean before changing a new electrode sheet </span>
+                            <span  class="col-333">
+                                Make sure the chest skin is dry and clean before changing a new electrode sheet
+                            </span>
                         </p>
                     </div>
                 </div>
@@ -104,7 +108,9 @@
                         <span style="font-size: 22px;font-weight: bold;">Q:</span>
                     </div>
                     <div class="col-md-11">
-                        <span style="font-size: 18px;font-weight: bold;color:#50BCFF;">ECG data file name does not show correct date and time (time is use as part of the file name)</span>
+                        <span style="font-size: 18px;font-weight: bold;color:#50BCFF;">
+                            ECG data file name does not show correct date and time (time is use as part of the file name)
+                        </span>
                         <img src="/resources/img/index/QA.png">
                     </div>
                 </div>

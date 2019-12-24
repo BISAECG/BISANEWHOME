@@ -38,7 +38,7 @@
             <span class="pull-left logoTop"></span>
             <div class='pull-left logoTitle' >
                 <p>健康  从  “心”  开始</p>
-                <p >让你足不出户测心电</p>
+                <p>让你足不出户测心电</p>
                 <p>Keep you indoors for ECG measurements</p>
             </div>
             <div class='pull-right navRight'>

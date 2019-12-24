@@ -97,8 +97,7 @@
                 <p class="" style="margin-bottom: 20px;color:rgba(255,255,255,1);font-size:24px;font-weight:400;margin-top: 5%;">Hospital intelligent ECG monitoring technology solution</p>
                 <p style="display: inline-block;width:32px;height:6px;background:rgba(108,99,255,1);margin-bottom: 36px;"></p>
                 <p style="color:rgba(243,242,242,1);font-size:16px; line-height: 24px;">
-                    The traditional 12-lead Holter used in the current medical
-                    institution’s dynamic ECG monitoring is expensive and inconvenient for the patient to wear, whose monitoring is susceptible to interference, labor analysis is large, and equipment wear and tear are large, and which can only store 24 hours of data. BisaKangjian has launched an intelligent ECG monitoring technology solution to achieve long-term monitoring, AI intelligent analysis, online diagnosis and emergency assistance and other applications to help the rapid development of AI medical technology.
+                    The traditional 12-lead Holter used in the current medical institution dynamic ECG monitoring is expensive and inconvenient for the patient to wear, whose monitoring is susceptible to interference, labor analysis is large, and equipment wear and tear are large, and which can only store 24 hours of data. BisaHealth has launched an intelligent ECG monitoring technology solution to achieve long-term monitoring, AI intelligent analysis, online diagnosis and emergency assistance and other applications to help the rapid development of AI medical technology.
                 </p>
                 <p>
                     <a target="_blank" href=https://item.taobao.com/item.htm?spm=a230r.7195193.1997079397.10.7e1d114bDxBwby&id=605194973158&abbucket=9"  class="text-center taobao1">TaoBao</a>
@@ -141,10 +140,10 @@
             The traditional 12-lead Holter is expensive, and the price of a single Holter is about RMB 100,000 to 200,000 Yuan. The equipment wear and tear arising from storage and lease to the patient are very costly. The Bisa ECG equipment is affordable and greatly reduces the cost of hospital equipment.
         </div>
         <div style="position: absolute;left: 52%;top: 56%;width:15%;" class="Advantage Advantage3 cur-p">
-            The ECG big data processing and automatic analysis are carried out in the cloud by utilizing the Bisaintelligent ECG monitoring and analysis system,. Bisa system automated the analysis, which does not require manual analysis, reducing the labor workload of physicians. It can improve the efficiency of the physician’s work as well as improve the accuracy of the diagnosis.
+            The ECG big data processing and automatic analysis are carried out in the cloud by utilizing the Bisa intelligent ECG monitoring and analysis system,. Bisa system automated the analysis, which does not require manual analysis, reducing the labor workload of physicians. It can improve the efficiency of the physician’s work as well as improve the accuracy of the diagnosis.
         </div>
         <div style="left: 52%;top: 72%;background: #A943EB;" class="Advantage Advantage7 Advantages">
-            The ECG big data processing and automatic analysis are carried out in the cloud by utilizing the Bisaintelligent ECG monitoring and analysis system,. Bisa system automated the analysis, which does not require manual analysis, reducing the labor workload of physicians. It can improve the efficiency of the physician’s work as well as improve the accuracy of the diagnosis.
+            The ECG big data processing and automatic analysis are carried out in the cloud by utilizing the Bisa intelligent ECG monitoring and analysis system,. Bisa system automated the analysis, which does not require manual analysis, reducing the labor workload of physicians. It can improve the efficiency of the physician’s work as well as improve the accuracy of the diagnosis.
         </div>
         <div style="position: absolute;left: 72%;top: 56%;width:15%;" class="Advantage Advantage4 cur-p">
             Bisa provides a one-year free training service for medical institutions, and can carry out 3 on-site technical personality training. The training includes training on product use and maintenance, system software use and maintenance, and professional computer use etc.
@@ -183,7 +182,7 @@
             <img src="/resources/img/solution/banner6-2.png">
             <div style="margin: 5px;background: #FFF;">
                 <p style="margin-bottom:4px;font-size:16px;font-weight:bold;color:rgba(51,51,51,1);line-height:40px;">
-                    Five Bisa Electrocar Diographs
+                    Five Bisa PECG
                 </p>
                 <p style="width:34px;height:8px;background:rgba(132,132,132,1);"></p>
                 <p style="font-size:14px;font-weight:400;color:rgba(102,102,102,1);line-height:24px;max-height: 370px;min-height: 260px;">

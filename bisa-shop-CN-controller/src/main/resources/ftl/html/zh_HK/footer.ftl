@@ -122,7 +122,7 @@
             </div>
             <div class="row text-center mt-20">
                 <div class="col-md-12 text-center">
-                    <!--<%&#45;&#45;備案信息&#45;&#45;%>-->
+                    <!--備案信息-->
                     <p style="color: #666666;">
                         本網站內所示之圖片只供參考
                     </p>
@@ -148,7 +148,6 @@
 
     gtag('config', 'UA-147231948-2');
 </script>
-
 <script>
     var _hmt = _hmt || [];
     (function() {

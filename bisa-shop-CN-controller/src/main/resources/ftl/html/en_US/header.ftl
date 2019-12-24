@@ -52,7 +52,7 @@
                 <div class='pull-left  text-center' style='margin: 0 20px;'>
                     <img style='margin-bottom: 11px' src='/resources/img/index/logo2.png' alt="EU CE certification">
                     <p style='margin-bottom: 5px;font-size: 12px;'>EU CE</p>
-                    <p style='font-size: 12px;'>ertified products</p>
+                    <p style='font-size: 12px;'>Certified products</p>
                 </div>
                 <span class='inline-block pull-left' style='height:78px;border-left: 2px solid #F1F1F1;'></span>
                 <div class='pull-left  text-center' style='margin: 0 20px;'>

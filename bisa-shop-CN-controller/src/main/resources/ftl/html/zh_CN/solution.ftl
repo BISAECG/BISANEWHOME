@@ -92,10 +92,10 @@
             <div class="col-md-6 mt-40"  style="">
                 <p class="" style="margin-bottom: 20px;color:rgba(255,255,255,1);font-size:24px;font-weight:400;margin-top: 5%;">医院智慧心电监测技术解决方案</p>
                 <p style="display: inline-block;width:32px;height:6px;background:rgba(108,99,255,1);margin-bottom: 36px;"></p>
-                <p
-                        style="color:rgba(243,242,242,1);font-size:16px;line-height: 24px;">针对目前医疗机构动态心电监测使用的传统12导联Holter存在的产品价格昂贵、患者佩戴不便、监测易受干扰、仅能存储24
-                    小时数据、人工分析劳动量大、器材损耗大等问题，碧沙康健推出了智慧心电监测技术解决方案，实现长时段监测、AI智能分析、网上诊疗和紧急求助等应用，助力AI医用技术的快速发展。</p>
-                <p >
+                <p style="color:rgba(243,242,242,1);font-size:16px;line-height: 24px;">
+                    针对目前医疗机构动态心电监测使用的传统12导联Holter存在的产品价格昂贵、患者佩戴不便、监测易受干扰、仅能存储24 小时数据、人工分析劳动量大、器材损耗大等问题，碧沙康健推出了智慧心电监测技术解决方案，实现长时段监测、AI智能分析、网上诊疗和紧急求助等应用，助力AI医用技术的快速发展。
+                </p>
+                <p>
                     <a target="_blank" href=https://item.taobao.com/item.htm?spm=a230r.7195193.1997079397.10.7e1d114bDxBwby&id=605194973158&abbucket=9" class="text-center taobao1">淘宝商城</a>
                     <a target="_blank" href="https://item.jd.com/58928187146.html"  class="text-center jingdong1">京东自营</a>
                 </p>
@@ -298,7 +298,6 @@
                 $('.div7').removeClass("dis-n");
             });
             $(".div7").click(function(){
-
                 $('.div7').addClass("dis-n");
                 $('.div6').addClass("dis-n");
                 $('.div4').addClass("dis-n");
