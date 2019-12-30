@@ -10,15 +10,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
     <!-- necessary -->
-    <meta name="keywords" content="${html_description}">
-    <meta name="description" content="${html_keyWord}">
+    <meta name="keywords" content="${html_keyWord}">
+    <meta name="description" content="${html_keyWordhtml_description}">
     <title>${html_title}</title>
     <meta name="renderer" content="webkit">
     <!-- base -->
     <link href="/resources/ctrl/layui/css/layui.css" rel="stylesheet">
     <link href="/resources/css/comm/base.css" rel="stylesheet">
     <link href="/resources/css/about/HK_About.css" rel="stylesheet">
-    <link href="/resources/ctrl/layui/css/layui.css" rel="stylesheet">
     <script src="/resources/js/comm/jquery.min.js"></script>
     <style>
         .title-color {
@@ -66,27 +65,146 @@
                  
                 <div class="layui-collapse mt-40" lay-accordion="">
 
+                    <div class="layui-colla-item  layui-show">
+                            
+                        <h2 class="layui-colla-title f-18 title-color">
+                             1. Bisahealth service activation process
+                                
+                        </h2>
+                            
+                        <div class="layui-colla-content  layui-show">
+                             
+                            <p class="f-20 col-333 line-h-30 mt-30">
+                                （1）Successfully purchased reporting services.
+                                 
+                            </p>
+                             
+                            <p class="f-20 col-333 line-h-30 mt-15">
+                                （2）Login <a href="https://hk2-server.bisahealth.com/login?backUrl=https://www.bisahealth.com/calllogin" style="color: blue;">http://bisahealth.com/</a>
+                                 
+                            </p>
+                                                                                       
+                            <div class="clear text-center mt-25">
+
+                                <img src="/resources/img/news/HK-Instructions/ActivationService1.png">
+                                 
+                            </div>
+                             
+                            <p class="f-20 col-333 line-h-30 mt-15">
+                                （3）Click the "user name" in the upper right corner of the mall to enter the user center.
+                                 
+                            </p>
+                                                          
+                            <div class="clear text-center mt-25">
+
+                                <img src="/resources/img/news/HK-Instructions/ActivationService2.png">
+                                 
+                            </div>
+                             
+                            <p class="f-20 col-333 line-h-30 mt-15">
+                                （4）Click "Service Card" on the left.
+                                 
+                            </p>
+                                                          
+                            <div class="clear text-center mt-25">
+
+                                <img src="/resources/img/news/HK-Instructions/ActivationService3.png">
+                                 
+                            </div>
+
+                            <p class="f-20 col-333 line-h-30 mt-25">
+                                （5）Review the services you have purchased and click "Activate".
+                                 
+                            </p>
+                             
+                            <div class="clear text-center mt-25">
+
+                                <img src="/resources/img/news/HK-Instructions/ActivationService4.png">
+                                 
+                            </div>
+
+                            <p class="f-20 col-333 line-h-30 mt-25">
+                                （6）If you activate the service for this account, click "Confirm" directly to complete all operations.
+                                 
+                            </p>
+                             
+                            <div class="clear text-center mt-25">
+
+                                <img src="/resources/img/news/HK-Instructions/ActivationService5.png">
+                                 
+                            </div>
+
+                            <p class="f-20 col-333 line-h-30 mt-25">
+                                （7）To activate for someone else ’s account, click on “Recharge other account” first.
+                                 
+                            </p>
+                             
+                            <div class="clear text-center mt-25">
+
+                                <img src="/resources/img/news/HK-Instructions/ActivationService6.png">
+                                 
+                            </div>
+
+                            <p class="f-20 col-333 line-h-30 mt-25">
+                                （8）Fill in other people's accounts and click "Check User". If the same account appears in "Confirm User" below, it means that the check is passed.
+                                 
+                            </p>
+                             
+                            <div class="clear text-center mt-25">
+
+                                <img src="/resources/img/news/HK-Instructions/ActivationService7.png">
+                                 
+                            </div>
+                             
+                            <p class="f-20 col-333 line-h-30 mt-25">
+                                （9）Click "OK" to finish activating all operations for others.
+                                 
+                            </p>
+                             
+                            <div class="clear text-center mt-25">
+
+                                <img src="/resources/img/news/HK-Instructions/ActivationService8.png">
+                                 
+                            </div>
+                                 
+                        </div>
+
+                    </div>
+
                     <div class="layui-colla-item">
                             
                         <h2 class="layui-colla-title f-18 title-color">
-                            1. How to download the Bisa Health APP?
+                            2. How to download the Bisa Health APP?
+                                
                         </h2>
                             
-                        <div class="layui-colla-content layui-show"> 
+                        <div class="layui-colla-content">
+                             
                             <p class="f-20 col-333 h-20 line-h-20 mt-30">
-                                Bisa Health APP official website download address:  
-                            </p> 
+                                Bisa Health APP official website download address:
+                                 
+                            </p>
+                             
                             <p class=" h-20 line-h-20 mt-30">
-                                <a download="bisahealth.apk" href="/resources/img/news/HK-Instructions/bishahealth.apk">Click to download</a> 
-                            </p> 
+
+                                <a download="bisahealth.apk" href="/resources/img/news/HK-Instructions/bishahealth.apk">Click to download</a>
+                                 
+                            </p>
+                             
                             <p class="f-20 col-333 h-20 line-h-20 mt-30">
-                                QR code download:  
+                                QR code download:
+                                 
                             </p>
+                             
                             <p class="f-20 col-aaa h-20 line-h-20 mt-20">
-                                Please use the mobile phone screenshot to scan the screenshot QR code on WeChat or browser to enter the download address of Bisa Health APP.  
+                                Please use the mobile phone screenshot to scan the screenshot QR code on WeChat or browser to enter the download address of Bisa Health APP.
+                                 
                             </p>
+                             
                             <div class="clear text-center mt-40 mb-40">
-                                <img class="img-180" src="/resources/img/download/banner-left.png" alt="bisa health app download"> 
+
+                                <img class="img-180" src="/resources/img/news/HK-Instructions/qr_code.png" alt="bisa health app download">
+                                 
                             </div>
                                 
                         </div>
@@ -95,32 +213,41 @@
                     <div class="layui-colla-item">
                             
                         <h2 class="layui-colla-title f-18 title-color">
-                             2. How to register for the Bisa Health account?
+                             3. How to register for the Bisa Health account?
+                                
                         </h2>
                             
                         <div class="layui-colla-content">
+                             
                             <p class="f-20 col-333 line-h-30 mt-30">
                                 (1) Open the Bisa Health APP to fill in your mobile phone number on the account login interface, receive and fill in the SMS verification code, and click the Enter button.
+                                 
                             </p>
                              
                             <p class="f-20 col-333 line-h-30 mt-15">
                                 (2) Open the APP
+                                 
                             </p>
                              
                             <p class="f-20 col-333 line-h-30 mt-15">
-                                (3) Fill in your mobile phone number directly in the quick login interface, receive and fill in the SMS verification code.  
+                                (3) Fill in your mobile phone number directly in the quick login interface, receive and fill in the SMS verification code.
+                                 
                             </p>
                              
                             <p class="f-20 col-333 line-h-30 mt-15">
                                 (4) Click to enter and the registration is successful.
+                                 
                             </p>
                              
                             <div class="clear text-center mt-25">
+
                                 <img src="/resources/img/news/HK-Instructions/in_register_tipsv1.png">
+                                 
                             </div>
                              
                             <p class="f-20 col-333 line-h-30 mt-25">
-                                (5) You need to set a password for the first login, and you can log in with your mobile phone number and password.  
+                                (5) You need to set a password for the first login, and you can log in with your mobile phone number and password.
+                                 
                             </p>
                              
                             <div class="clear text-center mt-25">
@@ -132,11 +259,11 @@
                         </div>
 
                     </div>
-                    <!--第三列-->
+                    <!--<%&#45;&#45;第三列&#45;&#45;%>-->
                     <div class="layui-colla-item">
                             
                         <h2 class="layui-colla-title f-18 title-color">
-                             3. How to bind and unbind products such as ECG instruments in the APP?
+                             4. How to bind and unbind products such as ECG instruments in the APP?
                                 
                         </h2>
                             
@@ -190,7 +317,9 @@
                             </p>
                              
                             <div class="clear text-center mt-25">
+
                                 <img src="/resources/img/news/HK-Instructions/in_bound_tipsv4.png">
+                                 
                             </div>
                              
                             <p class="f-20 col-333 line-h-30 mt-30">
@@ -200,22 +329,28 @@
                              
                             <p class="f-20 col-333 line-h-30 mt-15 pl-30">
                                 (1) Login to Bisa Health APP to enter all devices interface
+                                 
                             </p>
                              
                             <p class="f-20 col-333 line-h-30 mt-15 pl-30">
                                 (2) Click the trash can button in the upper left corner to open the delete mode.
+                                 
                             </p>
                              
                             <div class="clear text-center mt-25">
-                                <img src="/resources/img/news/HK-Instructions/in_bound_tipsv5.png"> 
+
+                                <img src="/resources/img/news/HK-Instructions/in_bound_tipsv5.png">
+                                 
                             </div>
                              
                             <p class="f-20 col-333 line-h-30 mt-25 pl-30">
-                                (3) Check the equipment that needs to be untied  
+                                (3) Check the equipment that needs to be untied
+                                 
                             </p>
                              
                             <p class="f-20 col-333 line-h-30 mt-25 pl-30">
                                 (4) Click the delete button in the lower right corner to confirm the deletion.
+                                 
                             </p>
                              
                             <div class="clear text-center mt-25 mb-35">
@@ -227,11 +362,11 @@
                         </div>
 
                     </div>
-                    <!--第四列-->
+                    <!--<%&#45;&#45;第四列&#45;&#45;%>-->
                     <div class="layui-colla-item">
                             
                         <h2 class="layui-colla-title f-18 title-color">
-                             4. How to use APP to monitor ECG and generate viewing reports?
+                             5. How to use APP to monitor ECG and generate viewing reports?
                                 
                         </h2>
                             
@@ -349,7 +484,8 @@
                             </div>
                              
                             <p class="f-20 col-333 line-h-30 mt-25">
-                                (5) Use the OTG data cable to connect the mobile phone to the ECG device and wait for the precautions. After confirming, enter the selection data interface. If no prompts pop up, please click the Generate Report button in the lower left corner after connecting to select to generate the 24-hour charge report. And start monitoring.  
+                                (5) Use the OTG data cable to connect the mobile phone to the ECG device and wait for the precautions. After confirming, enter the selection data interface. If no prompts pop up, please click the Generate Report button in the lower left corner after connecting to select to generate the 24-hour charge report. And start monitoring.
+                                 
                             </p>
                              
                             <div class="clear text-center mt-25">
@@ -369,7 +505,7 @@
                             <p class="f-20 col-333 line-h-30 mt-25">
                                 (7) Click the report button in the lower right corner to upload data, and all operations are completed. (Fee report needs a certain time for manual review, and will be automatically pushed to you after completion, please wait patiently).
                             </p>
-                            <!--所有曆史報告查看-->
+                            <!--<%&#45;&#45;所有曆史報告查看&#45;&#45;%>-->
                             <p class="f-20 col-333 line-h-30 mt-30 f-w">
                                 View all historical reports:
                             </p>

@@ -11,8 +11,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <!-- necessary -->
-    <meta name="keywords" content="${html_description}">
-    <meta name="description" content="${html_keyWord}">
+    <meta name="keywords" content="${html_keyWord}">
+    <meta name="description" content="${html_keyWordhtml_description}">
     <title>${html_title}</title>
     <!-- description -->
     <meta name="renderer" content="webkit">
@@ -20,7 +20,6 @@
     <link href="/resources/ctrl/layui/css/layui.css" rel="stylesheet">
     <link href="/resources/css/comm/base.css" rel="stylesheet">
     <link href="/resources/css/about/HK_About.css" rel="stylesheet">
-    <link href="/resources/ctrl/layui/css/layui.css" rel="stylesheet">
     <script src="/resources/js/comm/jquery.min.js"></script>
     <style>
         .title-color {
@@ -71,11 +70,71 @@
                 <div class="clear bor bor-b bor-col-f5f5f5">
                 </div>
                 <div class="layui-collapse mt-40" lay-accordion="">
-                    <div class="layui-colla-item">
+                    <!--第一列-->
+                    <div class="layui-colla-item ">
                         <h2 class="layui-colla-title f-18 title-color">
-                            1.如何下载碧沙康健APP？
+                            1.碧沙康健服务激活流程
                         </h2>
                         <div class="layui-colla-content layui-show">
+                            <p class="f-20 col-333 line-h-30 mt-30">
+                                （1）成功购买报告服务。
+                            </p>
+                            <p class="f-20 col-333 line-h-30 mt-15">
+                                （2）登陆 <a href="https://hk2-server.bisahealth.com/login?backUrl=https://www.bisahealth.com/calllogin" style="color: blue;">http://bisahealth.com/</a>
+                            </p>
+                            <div class="clear text-center mt-25">
+                                <img src="/resources/img/news/HK-Instructions/ActivationService1.png">
+                            </div>
+                            <p class="f-20 col-333 line-h-30 mt-15">
+                                （3）点击商城右上角“用户名”进入用户中心。
+                            </p>
+                            <div class="clear text-center mt-25">
+                                <img src="/resources/img/news/HK-Instructions/ActivationService2.png">
+                            </div>
+                            <p class="f-20 col-333 line-h-30 mt-15">
+                                （4）点击左侧“服务卡”。
+                            </p>
+                            <div class="clear text-center mt-25">
+                                <img src="/resources/img/news/HK-Instructions/ActivationService3.png">
+                            </div>
+                            <p class="f-20 col-333 line-h-30 mt-25">
+                                （5）查看已购买的服务并点击“激活”。
+                            </p>
+                            <div class="clear text-center mt-25">
+                                <img src="/resources/img/news/HK-Instructions/ActivationService4.png">
+                            </div>
+                            <p class="f-20 col-333 line-h-30 mt-25">
+                                （6）若为本账户激活服务则直接点击“确认”，完成所有操作。
+                            </p>
+                            <div class="clear text-center mt-25">
+                                <img src="/resources/img/news/HK-Instructions/ActivationService5.png">
+                            </div>
+                            <p class="f-20 col-333 line-h-30 mt-25">
+                                （7）若为他人账户激活先点击开启“充值其他账户”。
+                            </p>
+                            <div class="clear text-center mt-25">
+                                <img src="/resources/img/news/HK-Instructions/ActivationService6.png">
+                            </div>
+                            <p class="f-20 col-333 line-h-30 mt-25">
+                                （8）填写他人账户并点击“检查用户”，若下方“确认用户”出现同样账户则表示通过检查。
+                            </p>
+                            <div class="clear text-center mt-25">
+                                <img src="/resources/img/news/HK-Instructions/ActivationService7.png">
+                            </div>
+                            <p class="f-20 col-333 line-h-30 mt-25">
+                                （9）点击“确认”完成为他人激活全部操作。
+                            </p>
+                            <div class="clear text-center mt-25">
+                                <img src="/resources/img/news/HK-Instructions/ActivationService8.png">
+                            </div>
+                        </div>
+                    </div>
+                    <!--第二列-->
+                    <div class="layui-colla-item">
+                        <h2 class="layui-colla-title f-18 title-color">
+                            2.如何下载碧沙康健APP？
+                        </h2>
+                        <div class="layui-colla-content ">
                             <p class="f-20 col-333 h-20 line-h-20 mt-30">
                                 碧沙康健APP官网下载地址：
                             </p>
@@ -94,9 +153,10 @@
                             </div>
                         </div>
                     </div>
+                    <!--第三列-->
                     <div class="layui-colla-item">
                         <h2 class="layui-colla-title f-18 title-color">
-                            2.如何注册碧沙康健帐号？
+                            3.如何注册碧沙康健帐号？
                         </h2>
                         <div class="layui-colla-content">
                             <p class="f-20 col-333 line-h-30 mt-30">
@@ -122,10 +182,10 @@
                             </div>
                         </div>
                     </div>
-                    <!--第三列-->
+                    <!--第四列-->
                     <div class="layui-colla-item">
                         <h2 class="layui-colla-title f-18 title-color">
-                            3.如何在APP中绑定和解绑心电仪器等产品？
+                            4.如何在APP中绑定和解绑心电仪器等产品？
                         </h2>
                         <div class="layui-colla-content">
                             <p class="f-20 col-333 line-h-30 mt-30">
@@ -181,124 +241,124 @@
                             </div>
                         </div>
                     </div>
-                    <!--第四列-->
+                    <!--第五列-->
                     <div class="layui-colla-item">
-                        <h2 class="layui-colla-title f-18 title-color">
-                            4.如何使用APP监测心电与生成查看报告？
-                        </h2>
-                        <div class="layui-colla-content">
-                            <p class="f-20 col-333 line-h-30 mt-30 f-w">
-                                15分钟免费报告生成与查看：
-                            </p>
-                            <p class="f-20 col-333 line-h-30 mt-30">
-                                （1）确保手机蓝牙与心电仪电源已开启
-                            </p>
-                            <p class="f-20 col-333 line-h-30 mt-15">
-                                （2）正确佩戴心电仪
-                            </p>
-                            <p class="f-20 col-333 line-h-30 mt-15">
-                                （3）登录碧沙康健APP进入 全部设备 界面
-                            </p>
-                            <div class="clear text-center mt-25">
-                                <img src="/resources/img/news/HK-Instructions/in_report_tipsv1.png">
-                            </div>
-                            <p class="f-20 col-333 line-h-30 mt-25">
-                                （4）点击列表中已绑定的心电仪产品进入 心电监测 界面。
-                            </p>
-                            <div class="clear text-center mt-25">
-                                <img src="/resources/img/news/HK-Instructions/in_report_tipsv2.png">
-                            </div>
-                            <p class="f-20 col-333 line-h-30 mt-25">
-                                （5）点击左下角 生成报告 按钮选择需要生成的报告类型（收费报告需提前充值）
-                            </p>
-                            <div class="clear text-center mt-25">
-                                <img src="/resources/img/news/HK-Instructions/in_report_tipsv3.png">
-                            </div>
-                            <p class="f-20 col-333 line-h-30 mt-25">
-                                （6）点击 开始监测 按钮后根据所选报告监测时长持续佩戴心电仪
-                            </p>
-                            <div class="clear text-center mt-25">
-                                <img src="/resources/img/news/HK-Instructions/in_report_tipsv4.png">
-                            </div>
-                            <p class="f-20 col-333 line-h-30 mt-25">
-                                （7）报告将在监测结束后生成并推送给您，您也可以点击右下角 立即生成 按钮立即生成与查看报告。
-                            </p>
-                            <div class="clear text-center mt-25">
-                                <img src="/resources/img/news/HK-Instructions/shuomingimg_7.png">
-                            </div>
-                            <p class="f-20 col-333 line-h-30 mt-25">
-                                （8）您也可以在 心电监测 界面右下角点击 查看报告 按钮查看历史报告
-                            </p>
+                    <h2 class="layui-colla-title f-18 title-color">
+                        5.如何使用APP监测心电与生成查看报告？
+                    </h2>
+                    <div class="layui-colla-content">
+                        <p class="f-20 col-333 line-h-30 mt-30 f-w">
+                            15分钟免费报告生成与查看：
+                        </p>
+                        <p class="f-20 col-333 line-h-30 mt-30">
+                            （1）确保手机蓝牙与心电仪电源已开启
+                        </p>
+                        <p class="f-20 col-333 line-h-30 mt-15">
+                            （2）正确佩戴心电仪
+                        </p>
+                        <p class="f-20 col-333 line-h-30 mt-15">
+                            （3）登录碧沙康健APP进入 全部设备 界面
+                        </p>
+                        <div class="clear text-center mt-25">
+                            <img src="/resources/img/news/HK-Instructions/in_report_tipsv1.png">
+                        </div>
+                        <p class="f-20 col-333 line-h-30 mt-25">
+                            （4）点击列表中已绑定的心电仪产品进入 心电监测 界面。
+                        </p>
+                        <div class="clear text-center mt-25">
+                            <img src="/resources/img/news/HK-Instructions/in_report_tipsv2.png">
+                        </div>
+                        <p class="f-20 col-333 line-h-30 mt-25">
+                            （5）点击左下角 生成报告 按钮选择需要生成的报告类型（收费报告需提前充值）
+                        </p>
+                        <div class="clear text-center mt-25">
+                            <img src="/resources/img/news/HK-Instructions/in_report_tipsv3.png">
+                        </div>
+                        <p class="f-20 col-333 line-h-30 mt-25">
+                            （6）点击 开始监测 按钮后根据所选报告监测时长持续佩戴心电仪
+                        </p>
+                        <div class="clear text-center mt-25">
+                            <img src="/resources/img/news/HK-Instructions/in_report_tipsv4.png">
+                        </div>
+                        <p class="f-20 col-333 line-h-30 mt-25">
+                            （7）报告将在监测结束后生成并推送给您，您也可以点击右下角 立即生成 按钮立即生成与查看报告。
+                        </p>
+                        <div class="clear text-center mt-25">
+                            <img src="/resources/img/news/HK-Instructions/shuomingimg_7.png">
+                        </div>
+                        <p class="f-20 col-333 line-h-30 mt-25">
+                            （8）您也可以在 心电监测 界面右下角点击 查看报告 按钮查看历史报告
+                        </p>
 
-                            <p class="f-20 col-333 line-h-30 mt-50 f-w">
-                                24小时收费报告生成与查看（收费报告需提前充值）
-                            </p>
-                            <p class="f-20 col-333 line-h-30 mt-25">
-                                （1）确保手机蓝牙与心电仪电源已开启
-                            </p>
-                            <p class="f-20 col-333 line-h-30 mt-25">
-                                （2）保持正确佩戴持续最长不超过24小时（采集数据不足24小时也可以生成报告，建议佩戴前确保心电仪电量充沛）
-                            </p>
-                            <p class="f-20 col-333 line-h-30 mt-25">
-                                （3）登录碧沙康健APP进入 全部设备 界面
-                            </p>
-                            <div class="clear text-center mt-25">
-                                <img src="/resources/img/news/HK-Instructions/chargeInstructions_1.png">
-                            </div>
-                            <p class="f-20 col-333 line-h-30 mt-25">
-                                （4）点击列表中已绑定的该心电仪产品进入 心电监测界面
-                            </p>
-                            <div class="clear text-center mt-25">
-                                <img src="/resources/img/news/HK-Instructions/chargeInstructions_2.png">
-                            </div>
-                            <p class="f-20 col-333 line-h-30 mt-25">
-                                （5）使用OTG数据线将手机与心电仪设备连接并等待 注意事项提示，确认后进入 选择数据 界面，如未弹出 注意事项提示 请在连接后点击左下角 生成报告 按钮选择生成24小时收费报告并 开启监测。
-                            </p>
-                            <div class="clear text-center mt-25">
-                                <img src="/resources/img/news/HK-Instructions/chargeInstructions_3.png">
-                            </div>
-                            <div class="clear text-center mt-25">
-                                <img src="/resources/img/news/HK-Instructions/in_report_tipsv3.png">
-                            </div>
-                            <p class="f-20 col-333 line-h-30 mt-25">
-                                （6）在 选择数据 界面勾选需要生成报告的心电数据（心电数据根据日期和时间排列，只能勾选一个时间段）。
-                            </p>
-                            <div class="clear text-center mt-25">
-                                <img src="/resources/img/news/HK-Instructions/chargeInstructions_4.png">
-                            </div>
-                            <p class="f-20 col-333 line-h-30 mt-25">
-                                （7）点击右下角 生成报告 按钮上传数据，所有操作完毕。（收费报告需要一定时间进行人工审核，完成后将自动推送给您，请耐心等候）。
-                            </p>
-                            <!--所有历史报告查看-->
-                            <p class="f-20 col-333 line-h-30 mt-30 f-w">
-                                所有历史报告查看：
-                            </p>
-                            <p class="f-20 col-333 line-h-30 mt-25">
-                                （1）登录碧沙康健APP进入 全部设备 界面
-                            </p>
-                            <div class="clear text-center mt-25">
-                                <img src="/resources/img/news/HK-Instructions/chargeInstructions_1.png">
-                            </div>
-                            <p class="f-20 col-333 line-h-30 mt-25">
-                                （2）点击列表中已绑定的心电仪产品进入 心电监控 界面
-                            </p>
-                            <div class="clear text-center mt-25">
-                                <img src="/resources/img/news/HK-Instructions/history2.png" >
-                            </div>
-                            <p class="f-20 col-333 line-h-30 mt-25">
-                                （3）点击右下角 查看报告 按钮进入日历界面
-                            </p>
-                            <div class="clear text-center mt-25">
-                                <img src="/resources/img/news/HK-Instructions/history_3.png">
-                            </div>
-                            <p class="f-20 col-333 line-h-30 mt-25">
-                                （4）您可以通过选中日期来筛选想要查看的历史报告，点击下方对应的报告类型即可查看报告详情。
-                            </p>
-                            <div class="clear text-center mt-25">
-                                <img src="/resources/img/news/HK-Instructions/history4.png" >
-                            </div>
+                        <p class="f-20 col-333 line-h-30 mt-50 f-w">
+                            24小时收费报告生成与查看（收费报告需提前充值）
+                        </p>
+                        <p class="f-20 col-333 line-h-30 mt-25">
+                            （1）确保手机蓝牙与心电仪电源已开启
+                        </p>
+                        <p class="f-20 col-333 line-h-30 mt-25">
+                            （2）保持正确佩戴持续最长不超过24小时（采集数据不足24小时也可以生成报告，建议佩戴前确保心电仪电量充沛）
+                        </p>
+                        <p class="f-20 col-333 line-h-30 mt-25">
+                            （3）登录碧沙康健APP进入 全部设备 界面
+                        </p>
+                        <div class="clear text-center mt-25">
+                            <img src="/resources/img/news/HK-Instructions/chargeInstructions_1.png">
+                        </div>
+                        <p class="f-20 col-333 line-h-30 mt-25">
+                            （4）点击列表中已绑定的该心电仪产品进入 心电监测界面
+                        </p>
+                        <div class="clear text-center mt-25">
+                            <img src="/resources/img/news/HK-Instructions/chargeInstructions_2.png">
+                        </div>
+                        <p class="f-20 col-333 line-h-30 mt-25">
+                            （5）使用OTG数据线将手机与心电仪设备连接并等待 注意事项提示，确认后进入 选择数据 界面，如未弹出 注意事项提示 请在连接后点击左下角 生成报告 按钮选择生成24小时收费报告并 开启监测。
+                        </p>
+                        <div class="clear text-center mt-25">
+                            <img src="/resources/img/news/HK-Instructions/chargeInstructions_3.png">
+                        </div>
+                        <div class="clear text-center mt-25">
+                            <img src="/resources/img/news/HK-Instructions/in_report_tipsv3.png">
+                        </div>
+                        <p class="f-20 col-333 line-h-30 mt-25">
+                            （6）在 选择数据 界面勾选需要生成报告的心电数据（心电数据根据日期和时间排列，只能勾选一个时间段）。
+                        </p>
+                        <div class="clear text-center mt-25">
+                            <img src="/resources/img/news/HK-Instructions/chargeInstructions_4.png">
+                        </div>
+                        <p class="f-20 col-333 line-h-30 mt-25">
+                            （7）点击右下角 生成报告 按钮上传数据，所有操作完毕。（收费报告需要一定时间进行人工审核，完成后将自动推送给您，请耐心等候）。
+                        </p>
+                        <!--所有历史报告查看-->
+                        <p class="f-20 col-333 line-h-30 mt-30 f-w">
+                            所有历史报告查看：
+                        </p>
+                        <p class="f-20 col-333 line-h-30 mt-25">
+                            （1）登录碧沙康健APP进入 全部设备 界面
+                        </p>
+                        <div class="clear text-center mt-25">
+                            <img src="/resources/img/news/HK-Instructions/chargeInstructions_1.png">
+                        </div>
+                        <p class="f-20 col-333 line-h-30 mt-25">
+                            （2）点击列表中已绑定的心电仪产品进入 心电监控 界面
+                        </p>
+                        <div class="clear text-center mt-25">
+                            <img src="/resources/img/news/HK-Instructions/history2.png" >
+                        </div>
+                        <p class="f-20 col-333 line-h-30 mt-25">
+                            （3）点击右下角 查看报告 按钮进入日历界面
+                        </p>
+                        <div class="clear text-center mt-25">
+                            <img src="/resources/img/news/HK-Instructions/history_3.png">
+                        </div>
+                        <p class="f-20 col-333 line-h-30 mt-25">
+                            （4）您可以通过选中日期来筛选想要查看的历史报告，点击下方对应的报告类型即可查看报告详情。
+                        </p>
+                        <div class="clear text-center mt-25">
+                            <img src="/resources/img/news/HK-Instructions/history4.png" >
                         </div>
                     </div>
+                </div>
                 </div>
             </div>
         </div>
