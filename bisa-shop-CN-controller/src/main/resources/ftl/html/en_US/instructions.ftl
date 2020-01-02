@@ -179,18 +179,7 @@
                         </h2>
                             
                         <div class="layui-colla-content">
-                             
-                            <p class="f-20 col-333 h-20 line-h-20 mt-30">
-                                Bisa Health APP official website download address:
-                                 
-                            </p>
-                             
-                            <p class=" h-20 line-h-20 mt-30">
 
-                                <a download="bisahealth.apk" href="/resources/img/news/HK-Instructions/bishahealth.apk">Click to download</a>
-                                 
-                            </p>
-                             
                             <p class="f-20 col-333 h-20 line-h-20 mt-30">
                                 QR code download:
                                  
@@ -203,7 +192,7 @@
                              
                             <div class="clear text-center mt-40 mb-40">
 
-                                <img class="img-180" src="/resources/img/news/HK-Instructions/qr_code.png" alt="bisa health app download">
+                                <img class="img-180" src="/resources/img/news/HK-Instructions/banner-right.png" alt="bisa health app download">
                                  
                             </div>
                                 

@@ -136,20 +136,13 @@
                         </h2>
                         <div class="layui-colla-content ">
                             <p class="f-20 col-333 h-20 line-h-20 mt-30">
-                                碧沙康健APP官网下载地址：
-                            </p>
-                            <p class=" h-20 line-h-20 mt-30">
-                                <a download="bisahealth.apk"
-                                   href="/resources/img/news/HK-Instructions/bishahealth.apk">点击下载</a>
-                            </p>
-                            <p class="f-20 col-333 h-20 line-h-20 mt-30">
                                 二维码下载：
                             </p>
                             <p class="f-20 col-aaa h-20 line-h-20 mt-20">
                                 请使用手机截图后在微信或浏览器扫描截图二维码进入碧沙康健APP下载地址。
                             </p>
                             <div class="clear text-center mt-40 mb-40">
-                                <img class="img-180" src="/resources/img/download/banner-left.png" alt="碧沙康健app下载">
+                                <img class="img-180" src="/resources/img/download/banner-right.png" alt="碧沙康健app下载">
                             </div>
                         </div>
                     </div>
