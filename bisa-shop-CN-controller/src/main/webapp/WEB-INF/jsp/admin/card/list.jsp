@@ -410,7 +410,7 @@
             }else if(layEvent == 'activation'){
             	
             	if(data.status!="${ActivateEnum.ACTIVATE.getValue()}"){
-            		 showMessage("<spring:message code='4003' />");
+            		 showMessage("<spring:message code='4026' />");
             	}else{
             		$('#send-form')[0].reset();
             		layer.open({

@@ -62,7 +62,7 @@ public class RechargeCard implements Serializable{
 	 */
 	private int creator;
 	/**
-	 * 是否使用0未用1使用
+	 * 是否使用 1未用 0使用
 	 */
 	@Range(min=0,max=1,message=SysErrorCode.RequestFormat)
 	private int status;

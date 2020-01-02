@@ -4,6 +4,7 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ page import="com.bisa.health.shop.entity.SysStatusCode" %>
 <%@ page import="com.bisa.health.shop.enumerate.ActivateEnum" %>
+<%@ page import="com.bisa.health.shop.enumerate.CardUnitEnum" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="zh-CN">
 <head>
@@ -39,10 +40,10 @@
     </script>
   
        <script type="text/html" id="cardStatus">
-        {{# if(d.status=="${ActivateEnum.ACTIVATE.getValue()}"){ }}
-       		<span style="color: #F581B1;"><spring:message code="used"/></span>
+        {{# if(d.status==${ActivateEnum.ACTIVATE.getValue()}){ }}
+       		<span style="color: #F581B1;"><spring:message code="unused"/></span>
         {{#  }else{ }}
- 			<span style="color: #F581B1;"><spring:message code="unused"/></span>
+ 			<span style="color: #F581B1;"><spring:message code="used"/></span>
 		{{#  } }}
     </script>
     
@@ -253,7 +254,7 @@
             page:{layout:	['prev', 'page', 'next'],limit:10},
             cols: [
                 [ //标题栏
-                    {field: 'card_num', title: '<spring:message code="number" />', width: '25%', align: 'center'},
+                    {field: 'card_num', title: '<spring:message code="id" />', width: '25%', align: 'center'},
                     {field: 'card_pwd', title: '<spring:message code="password" />',width: '15%', align: 'center' },
                     {field: 'status', title: '<spring:message code="status" />',width: '8%',  sort:true,align: 'center',templet:'#cardStatus'},
                     {field: 'card_desc', title: '<spring:message code="desc" />',width: '10%',  align: 'center'},
@@ -297,7 +298,7 @@
         	   
             }else if(layEvent == 'activation'){
             	if(data.status!="${ActivateEnum.ACTIVATE.getValue()}"){
-           		 	showMessage("<spring:message code='4003' />");
+           		 	showMessage("<spring:message code='4026' />");
 	           	}else{
 	           		$('#send-form')[0].reset();
 	           		$('#otherUser').addClass('dis-n');
@@ -336,8 +337,8 @@
 	       	          			             	vKey: "",
 	       	          			             	vVal: ""
 	       	          			         	}});
-	       		    						showMessage(data.msg);
 	       		    					}
+	       		    					showMessage(data.msg);
 	       		    					
 	       		    				}
 	       		    			});

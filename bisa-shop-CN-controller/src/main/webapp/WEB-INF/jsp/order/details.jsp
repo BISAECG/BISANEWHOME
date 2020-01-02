@@ -53,6 +53,7 @@
 						<span><spring:message code="price" />:</span> <span class="redInfo" ><spring:message code="pay.unit"/>${goods.price}<input type="hidden" id="goods_price" name="goods_price" value="${goods.price}" ></span>
 						<input type="hidden" name="goods_num" value="${goods.number}">
 						<input type="hidden" name="goods_id" value="${goods.id}">
+						<input type="hidden" name="goods_pattern" value="${goods.pattern}">
 					</p>
 					<p class="payPrice">
 						<span><spring:message code="2015" />:</span><span class="redInfo">${goods_count}</span>

@@ -53,7 +53,7 @@ public class GoodsCoupon implements Serializable {
 	@Range(min = 0, max = 10,message=SysErrorCode.RequestFormat)
 	private int coupon_type;
 	/**
-	 * 状态
+	 * 状态 1未启用  0已用
 	 */
 	@Range(min = 0, max = 10,message=SysErrorCode.RequestFormat)
 	private int coupon_status;

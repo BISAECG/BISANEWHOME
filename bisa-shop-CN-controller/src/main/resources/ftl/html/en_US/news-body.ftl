@@ -9,9 +9,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <!-- necessary -->
-      <title>${news_title}</title>
-    <meta name="keywords" content="${news_keyWord}">
-    <meta name="description" content="${news_description}">
+    <meta name="keywords" content="${html_keyWord}">
+    <meta name="description" content="${html_description}">
+    <title>${html_title}</title>
     <!-- description -->
     <meta name="renderer" content="webkit">
     <link href="/resources/ctrl/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
