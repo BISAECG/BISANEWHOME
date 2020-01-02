@@ -16,7 +16,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.bisa.health.shop.component.InternationalizationUtil;
 import com.bisa.health.shop.model.Goods;
+import com.bisa.health.shop.model.GoodsCategory;
 import com.bisa.health.shop.model.GoodsRecommend;
+import com.bisa.health.shop.service.IGoodsCategoryService;
 import com.bisa.health.shop.service.IGoodsService;
 
 
@@ -30,6 +32,9 @@ public class GoodsController {
 	@Autowired
 	private IGoodsService goodService;
 	
+	@Autowired
+	private IGoodsCategoryService goodsCaService;
+	
     @RequestMapping(value = "/html/{language}/shop", method = RequestMethod.GET)
     public String index(HttpServletRequest request,Model model,@PathVariable String language) {
     	List<Goods> list=goodService.listAllByLanguage(language);
@@ -41,6 +46,7 @@ public class GoodsController {
     @RequestMapping(value = "/html/{language}/goods", method = RequestMethod.GET)
     public String index(HttpServletRequest request,Model model,@PathVariable String language,@RequestParam int id) {
     	Goods goods=goodService.loadById(id);
+    	GoodsCategory goodsCa=goodsCaService.loadByNumber(goods.getCategory_num(), language);
     	List<GoodsRecommend> listRecommend=goodService.listRecommendByNum(goods.getNumber());
     	List<String> listNums=new ArrayList<String>();
     	for(GoodsRecommend g :listRecommend){
@@ -55,7 +61,8 @@ public class GoodsController {
     	
     	model.addAttribute("language",language);
     	model.addAttribute("goods",goods);
-    
+    	model.addAttribute("classify",goodsCa);
+    	
         return "goods/goods";
     }
 }

@@ -7,8 +7,8 @@
     <!--<%&#45;&#45;移動設備網頁縮放比例&#45;&#45;%>-->
     <meta name="viewport" content="initial-scale=0.3,user-scalable=yes">
     <!-- necessary -->
-    <meta name="keywords" content="${html_description}">
-    <meta name="description" content="${html_keyWord}">
+    <meta name="keywords" content="${html_keyWord}">
+    <meta name="description" content="${html_description}">
     <title>${html_title}</title>
     <!-- description -->
     <meta name="renderer" content="webkit">

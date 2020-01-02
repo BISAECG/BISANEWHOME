@@ -10,8 +10,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <!-- necessary -->
-    <meta name="keywords" content="${html_description}">
-    <meta name="description" content="${html_keyWord}">
+    <meta name="keywords" content="${html_keyWord}">
+    <meta name="description" content="${html_description}">
     <title>${html_title}</title>
     <!-- description -->
     <meta name="renderer" content="webkit">

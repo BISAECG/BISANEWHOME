@@ -7,8 +7,8 @@
     <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon"/>
     <link rel="bookmark" href="/favicon/favicon.ico" type="image/x-icon"/>
     <meta charset="UTF-8">
-    <meta name="keywords" content="${html_description}">
-    <meta name="description" content="${html_keyWord}">
+    <meta name="keywords" content="${html_keyWord}">
+    <meta name="description" content="${html_description}">
     <title>${html_title}</title>
     <link href="/resources/css/comm/swiper.min.css" rel="stylesheet">
     <link href="/resources/css/comm/base.css" rel="stylesheet">

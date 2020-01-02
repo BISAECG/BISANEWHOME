@@ -54,7 +54,7 @@
 					<p class="mt-10 mb-10 col-212121 f-30 line-h-40 cur-d">
 						<spring:message code='7004' />
 					</p>
-					<a class="col-757575 f-20-16-ipad line-h-25 mt-40 mb-20 cur-p hovecol-309DE2 user-munu user-order" href="/html/${language}/user_order" target="mainFrame">
+					<a class="col-757575 f-20-16-ipad line-h-25 mt-40 mb-20 cur-p hovecol-309DE2" href="/html/${language}/user_order" target="mainFrame">
 						<spring:message code='7005' />
 					</a>
 			<%-- 		<p
@@ -71,11 +71,18 @@
 						我的服务
 					</p> --%>
 					
+					<p>
 					<a
-						class="col-757575 f-20-16-ipad line-h-25 mt-20 mb-20 cur-p hovecol-309DE2 user-munu user-address" href="/html/${language}/user_card" target="mainFrame">
+						class="col-757575 f-20-16-ipad line-h-25 mt-20 mb-20 cur-p hovecol-309DE2" href="/html/${language}/user_service" target="mainFrame">
+						<spring:message code='user.recharge' />
+					</a>
+					</p>
+					<p>
+					<a
+						class="col-757575 f-20-16-ipad line-h-25 mt-20 mb-20 cur-p hovecol-309DE2 " href="/html/${language}/user_card" target="mainFrame">
 						<spring:message code='7007' />
 					</a>
-				
+					</p>
 					<%--  <p class="col-757575 f-20-16-ipad line-h-25 mt-20 mb-20 cur-p hovecol-309DE2 user-munu user-saleApply">
 					售后服务
                 </p> --%>
@@ -83,7 +90,7 @@
 			</div>
 			<!-- 左边导航条 END -->
 			<div class="clear col-sm-9 pr-30 pl-0">
-				<iframe id="mainFrame" name="mainFrame" width='100%' height='800px' src="/html/${language}/user_order" frameborder='0'scrolling="no"></iframe>
+				<iframe id="mainFrame" name="mainFrame" width='100%' height='800px' src="${c}" frameborder='0'scrolling="no"></iframe>
 			</div>
 		</div>
 	</div>

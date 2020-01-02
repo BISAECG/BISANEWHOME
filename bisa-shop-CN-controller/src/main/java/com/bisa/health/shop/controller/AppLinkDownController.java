@@ -17,9 +17,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.bisa.health.common.utils.PhoneTypeUtil;
+import com.bisa.health.shop.component.InternationalizationUtil;
 import com.bisa.health.shop.model.AppUpdate;
 import com.bisa.health.shop.service.IAppUpdateService;
-import com.bisa.health.shop.utils.PhoneTypeUtil;
 
 /**
  * 下载app的控制器
@@ -33,15 +34,36 @@ public class AppLinkDownController {
     private String apk_name;
     @Value("${apk.path}")
     private String apk_path;
+    
+	@Value("${h5.domain}")
+	private String h5Domain;
+	
+	@Autowired
+	private InternationalizationUtil i18nUtil;
 
     private Logger logger = LogManager.getLogger(AppLinkDownController.class);
     
 	 @Autowired
 	 private IAppUpdateService appUpdateService;
     
+	 
+	 /**
+	  * 这个接口弥补胡新二维码印错
+	  * @param request
+	  * @param model
+	  * @return
+	  */
     @RequestMapping(value = "/app/share/home", method = RequestMethod.GET)
-    public String shareIndex(){
-    	return "app/share/index";
+    public String shareIndex(HttpServletRequest request,Model model){
+    	
+    	String userAgent = request.getHeader("user-agent");
+    	String jumStr="/html/";
+    	if(PhoneTypeUtil.phoneType(userAgent)){
+    		return "redirect:"+h5Domain;
+    	}
+    	model.addAttribute("lang",jumStr+i18nUtil.lang());
+        return "/index";
+    	
     }
 
     /**

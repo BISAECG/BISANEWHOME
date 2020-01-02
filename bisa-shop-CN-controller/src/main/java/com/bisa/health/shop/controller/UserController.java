@@ -69,8 +69,12 @@ public class UserController {
 
 	
     @RequestMapping(value = "/html/{language}/user", method = RequestMethod.GET)
-    public String index(HttpServletRequest request,Model model,@PathVariable String language) {
+    public String index(HttpServletRequest request,Model model,@PathVariable String language,String c) {
+    	if(StringUtils.isEmpty(c)){
+    		c="/html/{language}/user_order";
+    	}
     	model.addAttribute("language",language);
+    	model.addAttribute("c",c);
         return "user/index";
     }
     
@@ -85,6 +89,43 @@ public class UserController {
     @RequestMapping(value = "/html/{language}/user_card", method = RequestMethod.GET)
     public String uesrCard(HttpServletRequest request,Model model,@PathVariable String language) {
         return "user/card";
+    }
+    
+    @RequestMapping(value = "/html/{language}/user_service", method = RequestMethod.GET)
+    public String uesrService(HttpServletRequest request,Model model,@PathVariable String language) {
+        return "user/service";
+    }
+    
+    @RequestMapping(value = "/user/card/recharge", method = RequestMethod.POST,produces = "application/json; charset=utf-8")
+    public ResponseEntity<ResultData>  uesrAjaxService(HttpServletRequest request,@CurrentUser User user,@RequestParam String card_num,@RequestParam String card_pwd,@RequestParam(defaultValue="off") String status,@RequestParam String code) {
+    	String mCode=(String) request.getSession().getAttribute("BISAHEALTH");
+    	if (mCode==null||!code.toLowerCase().equals(mCode.toLowerCase())) {
+			return new ResponseEntity<ResultData>(
+					ResultData.success(SysStatusCode.FAIL, i18nUtil.i18n("pin.error")), HttpStatus.OK);
+		}
+    	RechargeCard card=rechargeCardService.getRechargeCardByNumAndPwd(card_num, card_pwd);
+    	if(card==null||card.getStatus()!=ActivateEnum.ACTIVATE.getValue()){
+    		return new ResponseEntity<ResultData>(
+					ResultData.success(SysStatusCode.FAIL, i18nUtil.i18n(SysErrorCode.RequestFormat)), HttpStatus.OK);
+    	}
+    	
+    	if(status.toLowerCase().equals("on")){
+    		if(remoteService.addService(card.getService_token(), user.getUsername(), card.getCard_unit(), card.getCard_count())){
+    			card.setStatus(ActivateEnum.INACTIVATED.getValue());
+	    		card.setUser_id(user.getUser_guid());
+	    		card.setCreator(user.getUser_guid());
+	    		card.setVersion(card.getVersion()+1);
+	    		rechargeCardService.updateRechargeCard(card);
+    		}
+    	}else{
+    		
+    		card.setCreator(user.getUser_guid());
+    		card.setVersion(card.getVersion()+1);
+    		rechargeCardService.updateRechargeCard(card);
+    	}
+    	
+    	return new ResponseEntity<ResultData>(
+				ResultData.success(SysStatusCode.SUCCESS, i18nUtil.i18n(SysErrorCode.OptSuccess)), HttpStatus.OK);
     }
     
     @RequestMapping(value = "/user/order/ajax/list", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
@@ -175,7 +216,7 @@ public class UserController {
 
 		
 		RechargeCard rechargeCard = rechargeCardService.getRechargeCardByNumAndPwd(card_num, card_pwd);
-		if (rechargeCard == null||rechargeCard.getStatus()==ActivateEnum.INACTIVATED.getValue()) {
+		if (rechargeCard == null||rechargeCard.getStatus()!=ActivateEnum.ACTIVATE.getValue()) {
 			return new ResponseEntity<ResultData>(
 					ResultData.success(SysStatusCode.FAIL, i18nUtil.i18n(SysErrorCode.OptFail)), HttpStatus.OK);
 		}

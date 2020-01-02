@@ -11,7 +11,7 @@
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
     <!-- necessary -->
     <meta name="keywords" content="${html_keyWord}">
-    <meta name="description" content="${html_keyWordhtml_description}">
+    <meta name="description" content="${html_description}">
     <title>${html_title}</title>
     <meta name="renderer" content="webkit">
     <!-- base -->

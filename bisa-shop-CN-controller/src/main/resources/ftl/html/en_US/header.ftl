@@ -96,12 +96,12 @@
 						 </#if>
 					
 					</#list>
-					<!-- 国内到淘宝和JD购买                
+					<!-- 国内到淘宝和JD购买-->                   
                      <li class=' pull-left ml-20' style='background: #225185;'>
                         <a class='buy' href='shop.html'>
                             Product
                         </a>
-                    </li>-->   
+                    </li>
                     <li class=' pull-left ml-20' style='background: #f40;'>
                         <a class='tb' target="_blank" href="https://shop194684580.taobao.com/?spm=a230r.7195193.1997079397.2.6815114b089AGi">
                             Taobao
@@ -166,13 +166,13 @@
             async: false,
             success: function (data) {
             	if(data.code=="0"){
-            	    $(".loginDiv").html("<a class='pull-left' href='/html/zh_CN/user.html?lang=zh_CN'>"+data.data+"</a>"+
+            	    $(".loginDiv").html("<a class='pull-left' href='/html/en_US/user.html'>"+data.data+"</a>"+
                       "<sapn class='pull-left navDivision'></sapn>"+
-                      "<a class='pull-left navReg'  href='/logout?lang=zh_CN'>退出</a>");
+                      "<a class='pull-left navReg'  href='/logout?lang=en_US'>Exit</a>");
             	}else{
-            	    $(".loginDiv").html("<a class='pull-left' href='/login?lang=zh_CN'>登录</a>"+
+            	    $(".loginDiv").html("<a class='pull-left' href='/login?lang=en_US'>Login</a>"+
                       "<sapn class='pull-left navDivision'></sapn>"+
-                      "<a class='pull-left navReg'  href='/login?lang=zh_CN'>注册</a>");
+                      "<a class='pull-left navReg'  href='/login?lang=en_US'>Register</a>");
             	}
             	
             }

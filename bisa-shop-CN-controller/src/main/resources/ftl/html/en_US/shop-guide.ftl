@@ -9,8 +9,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="initial-scale=0.2,user-scalable=yes">
     <!-- necessary -->
-    <meta name="keywords" content="${html_description}">
-    <meta name="description" content="${html_keyWord}">
+    <meta name="keywords" content="${html_keyWord}">
+    <meta name="description" content="${html_description}">
     <title>${html_title}</title>
     <!-- description -->
     <meta name="renderer" content="webkit">
