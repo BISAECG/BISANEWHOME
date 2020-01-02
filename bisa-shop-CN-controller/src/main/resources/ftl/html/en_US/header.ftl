@@ -52,7 +52,7 @@
                 <div class='pull-left  text-center' style='margin: 0 20px;'>
                     <img style='margin-bottom: 11px' src='/resources/img/index/logo2.png' alt="EU CE certification">
                     <p style='margin-bottom: 5px;font-size: 12px;'>EU CE</p>
-                    <p style='font-size: 12px;'>ertified products</p>
+                    <p style='font-size: 12px;'>Certified products</p>
                 </div>
                 <span class='inline-block pull-left' style='height:78px;border-left: 2px solid #F1F1F1;'></span>
                 <div class='pull-left  text-center' style='margin: 0 20px;'>
@@ -65,7 +65,7 @@
                 <div class='pull-left  text-center' style='margin: 0 20px;'>
                     <img style='margin-bottom: 7px;' src='/resources/img/index/logo4.png' alt="Bisa Health Health Hotline">
                     <p style='font-size: 12px;padding-bottom: 2px;'>Health Hotline</p>
-                    <p class='phone' style='font-size: 20px;font-weight: bold;'>${company_phone}</p>
+                    <p class='phone' style='font-size: 18px;font-weight: bold;'>${company_phone}</p>
                 </div>
             </div>
         </div>

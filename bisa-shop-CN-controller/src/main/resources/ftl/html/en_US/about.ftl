@@ -29,9 +29,7 @@
     <div class="clear full-ws">
         <img class="full-w" src="/resources/img/HK_About/banner.jpg" alt="關于碧沙">
         <p class="full-w-p">About Bisa</p>
-        <p class="full-w-p-1" style="left: 28%;">Pay attention to health, pay attention to the health of Bisa, give a careful care to the
-            family
-            .</p>
+        <p class="full-w-p-1" style="left: 28%;">Pay attention to health, pay attention to the health of Bisa, give a careful care to the family .</p>
         <p class="full-w-p-2">OBOUT BISA</p>
     </div>
     <div class="clear container pl-0 pr-0 pl-100 pr-100 pb-100 pt-60">
@@ -45,10 +43,7 @@
             <div class="clear col-sm-6 pl-25 pr-25">
                 <div class="clear pt-20 bor bor-t bor-col-dcdcdc">
                     <p class="col-8c918c f-18 text-ind line-h-30">
-                        BisaTechnology Co., Ltd. is a high-tech enterprise dedicated to the research, development, manufacture and sales of big data and medical devices. Founded in 2006 by Hong Kong BIS Group, BisaTechnology Co., Ltd. was dedicated to the research and development of petroleum, oilfield automation equipment and IoT-related active RFID products. Since 2014, the company has focused on the research and development of big data medical devices. In 2016, the company successfully developed the micro three-lead dynamic ECG equipment and successfully cooperated with a famous university big data center in Hong Kong to design and implement the communication protocol between ECG equipment and cloud computing platform. In 2017, the company successfully transformed to a private high-tech enterprise integrating research and development, production and sales of medical devices.
-                    </p>
-                    <p class="col-8c918c f-18 text-ind line-h-30">
-                        At present, the company is vigorously investing in the development of new products, and strives to make breakthroughs in big data analysis algorithms and the development of medical instrument products with world-class levels. Strive to become one of the most powerful companies in the industry in the short term.
+                        BISA Technologies is a hi-tech company dedicated to the R&D, manufacturing & sales of big-data medical equipment, established by BIS Group in 2006. In 2014, the company is dedicated to develop the mini 3-lead dynamic ECG device, and obtained CFDA in 2019. In 2018, the company successfully transformed itself into a private hi-tech enterprise and obtained the medical device certification from China in 2019. At present, the company has invested heavily in new product development, making great efforts to achieve breakthroughs in big-data algorithms & development of world-class medical instruments.
                     </p>
                 </div>
             </div>

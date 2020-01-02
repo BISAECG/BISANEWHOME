@@ -41,7 +41,7 @@
 </div>
 <div class="container">
     <div class="row contactInfo">
-        <p class="boardTitle">Purchase consultaiton</p>
+        <p class="boardTitle">Purchase consultation</p>
         <div class="col-md-7 boardLeft">
             <div class="col-md-10">
                 <p class="leftTitle">Contact sales</p>
@@ -51,7 +51,7 @@
 
                 </p>
                 <p class="mb-20">
-                    <span>Sales consulting(Hongkong):</span>
+                    <span>Sales consulting(Hong Kong):</span>
                     <span>(852) 2423 0600&nbsp;|&nbsp;(852) 2423 0791</span>
                 </p>
                 <p class="mb-20">

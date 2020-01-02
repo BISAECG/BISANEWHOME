@@ -28,7 +28,7 @@
 
         </div>
     </div>
-    <p class="title-p">Why choose BisaDynamic ECG Recorder?</p>
+    <p class="title-p">Why choose Bisa PECG Recorder?</p>
     <div class="line">
         <span class="line-top" ></span>
         <span class="line-btm" ></span>
@@ -56,27 +56,27 @@
             <div class=" ecg-7"
                  style="border:2px solid #02D1E3;font-size:12px;color:rgba(255,255,255,1);width: 30%;position:
                     absolute;left: 1%;top: 54%;padding: 3px 8px;display: none;">
-                The emergency help function button is available on the BisaKangjian APP. When the user is sick, the button can be double-clicked. The ECG equipment will automatically emit a “beep” alarm and automatically send a text message to 3 emergency contacts to reduce time for effective rescue.
+                The emergency help function button is available on the BisaHealth APP. When the user is sick, the button can be double-clicked. The ECG equipment will automatically emit a "beep" alarm and automatically send a text message to 3 emergency contacts to reduce time for effective rescue.
             </div>
             <div class=" ecg-8"
                  style="border:2px solid #02D1E3;font-size:12px;color:rgba(255,255,255,1);width: 30%;position:
                     absolute;left:4%;top:76%;padding: 3px 8px;display: none;">
-                The emergency help function button is available on the BisaKangjian APP. When the user is sick, the button can be double-clicked. The ECG equipment will automatically emit a “beep” alarm and automatically send a text message to 3 emergency contacts to reduce time for effective rescue.
+                The emergency help function button is available on the BisaHealth APP. When the user is sick, the button can be double-clicked. The ECG equipment will automatically emit a "beep" alarm and automatically send a text message to 3 emergency contacts to reduce time for effective rescue.
             </div>
             <div class=" ecg-9"
                  style="border:2px solid #02D1E3;font-size:12px;color:rgba(255,255,255,1);width: 30%;position:
                     absolute;left: 1%;top: 79%;padding: 3px 8px;display: none;">
-                After viewing the ECG monitoring report, the user can click on the “Online Inquiry” service on the APP, and the specialist certified physician who cooperates with BisaKangjian will answer questions online with the user during the service time.
+                After viewing the ECG monitoring report, the user can click on the "Online Inquiry" service on the APP, and the specialist certified physician who cooperates with BisaHealth will answer questions online with the user during the service time.
             </div>
             <div class=" ecg-10"
                  style="border:2px solid #02D1E3;font-size:12px;color:rgba(255,255,255,1);width: 30%;position:
                     absolute;right: 1%;top: 54%;padding: 3px 8px;display: none;">
-                After viewing the ECG monitoring report, the user can click on the “Online Inquiry” service on the APP, and the specialist certified physician who cooperates with BisaKangjian will answer questions online with the user during the service time.
+                After viewing the ECG monitoring report, the user can click on the "Online Inquiry" service on the APP, and the specialist certified physician who cooperates with BisaHealth will answer questions online with the user during the service time.
             </div>
             <div class=" ecg-11"
                  style="border:2px solid #02D1E3;font-size:12px;color:rgba(255,255,255,1);width: 30%;position:
                     absolute;right: 4%;top: 76%;padding: 3px 8px;display: none;">
-                The user can use the free monitoring service for 15 minutes every day. After the monitoring, the Bisaintelligent ECG monitoring and analysis system will perform heart rate variability analysis (HRV) based on the ECG data to form an AI intelligent monitoring report.
+                The user can use the free monitoring service for 15 minutes every day. After the monitoring, the BisaHealth ECG monitoring and analysis system will perform heart rate variability analysis (HRV) based on the ECG data to form an AI intelligent monitoring report.
             </div>
             <div class=" ecg-12"
                  style="border:2px solid #02D1E3;font-size:12px;color:rgba(255,255,255,1);width: 35%;position:
@@ -125,7 +125,7 @@
             </div>
         </div>
     </div>
-    <p class="title-p">Bisavideo show</p>
+    <p class="title-p">Bisa video show</p>
     <div class="line">
         <span class="line-top"></span>
         <span class="line-btm"></span>
@@ -153,9 +153,8 @@
                             <a href="#" class="myTabContent">
                                 <div class="tab-pane fade in active" id="home">
                                     <p style="margin-top: 20px;">More comprehensive information</p>
-                                    <p style="margin-top: 15px;">More comprehensive information of body surface 3-channel potential signal
-                                        acquisition</p>
-                                    <p>On the market, single lead home ECG is easy to be misdiagnosed, missed or blocked. Three channels of human ECG can be obtained by careful three lead electrocardiograph, which can reflect the physiological state of the heart more comprehensively.</p>
+                                    <p style="margin-top: 15px;">More comprehensive information of body surface 3-channel potential signal acquisition</p>
+                                    <p>On the market, single lead home ECG is easy to be misdiagnosed, missed or blocked. Three channels of human ECG can be obtained by Bisa PECG three lead electrocardiograph, which can reflect the physiological state of the heart more comprehensively.</p>
                                 </div>
                             </a>
                         </div>
@@ -163,21 +162,21 @@
                             <a href="#" >
                                 <p  style="margin-top: 20px;">Intelligent diagnosis algorithm</p>
                                 <p style="margin-top: 15px;">Intelligent diagnosis algorithm with independent design</p>
-                                <p>The careful three lead electrocardiograph has been certified by CFDA. It is designed with imported medical chips and biosensor system. It has self-designed intelligent diagnosis algorithm. The ECG data collected and analyzed are accurate and reliable.</p>
+                                <p>The  Bisa PECG three lead electrocardiograph has been certified by CFDA. It is designed with imported medical chips and biosensor system. It has self-designed intelligent diagnosis algorithm. The ECG data collected and analyzed are accurate and reliable.</p>
                             </a>
                         </div>
                         <div class="item tp3 myTabContent">
                             <a href="#">
                                 <p  style="margin-top: 20px;">Three lead electrocardiograph</p>
                                 <p style="margin-top: 15px;">Wireless three lead Electrocardiograph Based on Bluetooth Technology</p>
-                                <p>Careful wireless three lead ECG instrument uses Bluetooth technology to transmit ECG signals wirelessly, which solves the problems of large volume and weight of equipment, interference of traditional lead wire with users' free activities, inconvenience of users' wearing, etc.</p>
+                                <p>Bisa PECG wireless three lead ECG instrument uses Bluetooth technology to transmit ECG signals wirelessly, which solves the problems of large volume and weight of equipment, interference of traditional lead wire with users' free activities, inconvenience of users' wearing, etc.</p>
                             </a>
                         </div>
                         <div class="item tp4 myTabContent">
                             <a href="#">
                                 <p  style="margin-top: 20px;">Suitable for multiple environments</p>
                                 <p style="margin-top: 15px;">It can be used as a clinical diagnostic tool or at home</p>
-                                <p>Careful three lead electrocardiograph has medical grade accuracy, the reliability of professional medical devices and the ease of use of wearable equipment. It can be used as a clinical diagnostic tool, as well as a long-term household monitoring equipment.</p>
+                                <p>Bisa PECG three lead electrocardiograph has medical grade accuracy, the reliability of professional medical devices and the ease of use of wearable equipment. It can be used as a clinical diagnostic tool, as well as a long-term household monitoring equipment.</p>
                             </a>
                         </div>
                     </div>
@@ -199,14 +198,10 @@
     <div class="container-fluid  mt-20">
         <div class="row" style="background: url('/resources/img/index/bisa.png')">
             <div class="col-md-12 text-center company">
-                <h2>BisaTechnology (Hong Kong) Co., Ltd.</h2>
+                <h2>Bisa Technology (Hong Kong) Limited</h2>
                 <p>  <img class="img-responsive center-block" src="/resources/img/index/bisa1-us.png" alt="碧莎科技(香港)有限公司"></p>
                 <p class="companyCon col-md-8 col-md-offset-2">
-                    Bisa Technology Co., Ltd. is a high-tech enterprise dedicated to the research and development, manufacturing and sales of big data and medical devices. Hong Kong treasure in 2006
-                    Established by bis group. The company was committed to the research and development of active RFID products related to oil, oilfield automation equipment and the Internet of things. From
-                    From 2014, the company began to focus on the research and development of big data medical devices. In 2016, the micro 3-lead dynamic electrocardiograph was successfully developed in Hong Kong
-                    A famous university big data center successfully designed and implemented the communication protocol between ECG and cloud computing platform. Successful transformation and integration of healthcare in 2017
-                    The R &amp; D, production and sales of the instrument is a private high-tech enterprise.
+                    BISA Technologies is a hi-tech company dedicated to the R&D, manufacturing & sales of big-data medical equipment, established by BIS Group in 2006. In 2014, the company is dedicated to develop the mini 3-lead dynamic ECG device, and obtained CFDA in 2019. In 2018, the company successfully transformed itself into a private hi-tech enterprise and obtained the medical device certification from China in 2019. At present, the company has invested heavily in new product development, making great efforts to achieve breakthroughs in big-data algorithms & development of world-class medical instruments.
                 </p>
                 <p class="col-md-12"><span></span></p>
             </div>
@@ -306,10 +301,6 @@
             });
         }
         ecg();
-        // 轮播图切换时间
-        $('.carousel').carousel({
-            interval: 10000
-        })
         //新聞內容獲取
         function indexNew() {
 

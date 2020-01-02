@@ -21,7 +21,6 @@
     <link href="/resources/ctrl/layui/css/layui.css" rel="stylesheet">
     <link href="/resources/css/comm/base.css" rel="stylesheet">
     <link href="/resources/css/about/HK_About.css" rel="stylesheet">
-    <link href="/resources/ctrl/layui/css/layui.css" rel="stylesheet">
     <script src="/resources/js/comm/jquery.min.js"></script>
     <style>
         .title-color {
@@ -71,11 +70,69 @@
                 <div class="clear bor bor-b bor-col-f5f5f5">
                 </div>
                 <div class="layui-collapse mt-40" lay-accordion="">
-                    <div class="layui-colla-item">
+                    <div class="layui-colla-item ">
                         <h2 class="layui-colla-title f-18 title-color">
-                            1.如何下載碧沙康健APP？
+                            1.碧沙康健服務激活流程
                         </h2>
                         <div class="layui-colla-content layui-show">
+                            <p class="f-20 col-333 line-h-30 mt-30">
+                                （1）成功購買報告服務。
+                            </p>
+                            <p class="f-20 col-333 line-h-30 mt-15">
+                                （2）登陸<a href="https://hk2-server.bisahealth.com/login?backUrl=https://www.bisahealth.com/calllogin" style="color: blue;">http://bisahealth.com/</a>
+                            </p>
+                            <div class="clear text-center mt-25">
+                                <img src="/resources/img/news/HK-Instructions/ActivationService1.png">
+                            </div>
+                            <p class="f-20 col-333 line-h-30 mt-15">
+                                （3）點擊商城右上角“用戶名”進入用戶中心。
+                            </p>
+                            <div class="clear text-center mt-25">
+                                <img src="/resources/img/news/HK-Instructions/ActivationService2.png">
+                            </div>
+                            <p class="f-20 col-333 line-h-30 mt-15">
+                                （4）點擊左側“服務卡”。
+                            </p>
+                            <div class="clear text-center mt-25">
+                                <img src="/resources/img/news/HK-Instructions/ActivationService3.png">
+                            </div>
+                            <p class="f-20 col-333 line-h-30 mt-25">
+                                （5）查看已購買的服務並點擊“激活”。
+                            </p>
+                            <div class="clear text-center mt-25">
+                                <img src="/resources/img/news/HK-Instructions/ActivationService4.png">
+                            </div>
+                            <p class="f-20 col-333 line-h-30 mt-25">
+                                （6）若為本賬戶激活服務則直接點擊“確認”，完成所有操作。
+                            </p>
+                            <div class="clear text-center mt-25">
+                                <img src="/resources/img/news/HK-Instructions/ActivationService5.png">
+                            </div>
+                            <p class="f-20 col-333 line-h-30 mt-25">
+                                （7）若為他人賬戶激活先點擊開啟“充值其他賬戶”。
+                            </p>
+                            <div class="clear text-center mt-25">
+                                <img src="/resources/img/news/HK-Instructions/ActivationService6.png">
+                            </div>
+                            <p class="f-20 col-333 line-h-30 mt-25">
+                                （8）填寫他人賬戶並點擊“檢查用戶”，若下方“確認用戶”出現同樣賬戶則表示通過檢查。
+                            </p>
+                            <div class="clear text-center mt-25">
+                                <img src="/resources/img/news/HK-Instructions/ActivationService7.png">
+                            </div>
+                            <p class="f-20 col-333 line-h-30 mt-25">
+                                （9）點擊“確認”完成為他人激活全部操作。
+                            </p>
+                            <div class="clear text-center mt-25">
+                                <img src="/resources/img/news/HK-Instructions/ActivationService8.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-colla-item">
+                        <h2 class="layui-colla-title f-18 title-color">
+                            2.如何下載碧沙康健APP？
+                        </h2>
+                        <div class="layui-colla-content">
                             <p class="f-20 col-333 h-20 line-h-20 mt-30">
                                 碧沙康健APP官網下載地址：
                             </p>
@@ -96,7 +153,7 @@
                     </div>
                     <div class="layui-colla-item">
                         <h2 class="layui-colla-title f-18 title-color">
-                            2.如何註冊碧沙康健帳號？
+                            3.如何註冊碧沙康健帳號？
                         </h2>
                         <div class="layui-colla-content">
                             <p class="f-20 col-333 line-h-30 mt-30">
@@ -125,7 +182,7 @@
                     <!--<%&#45;&#45;第三列&#45;&#45;%>-->
                     <div class="layui-colla-item">
                         <h2 class="layui-colla-title f-18 title-color">
-                            3.如何在APP中綁定和解綁心電儀器等產品？
+                            4.如何在APP中綁定和解綁心電儀器等產品？
                         </h2>
                         <div class="layui-colla-content">
                             <p class="f-20 col-333 line-h-30 mt-30">
@@ -184,7 +241,7 @@
                     <!--<%&#45;&#45;第四列&#45;&#45;%>-->
                     <div class="layui-colla-item">
                         <h2 class="layui-colla-title f-18 title-color">
-                            4.如何使用APP監測心電與生成查看報告？
+                            5.如何使用APP監測心電與生成查看報告？
                         </h2>
                         <div class="layui-colla-content">
                             <p class="f-20 col-333 line-h-30 mt-30 f-w">

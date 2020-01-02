@@ -44,6 +44,7 @@
             overflow: hidden;
             display:-webkit-box;
             -webkit-box-orient:vertical;
+            flex-direction: column;
             -webkit-line-clamp:1;
             text-overflow:ellipsis;
         }
@@ -54,10 +55,14 @@
             line-height: 24px;
             margin-bottom: 14px;
             overflow: hidden;
-            display:-webkit-box;
-            -webkit-box-orient:vertical;
-            -webkit-line-clamp:1;
             text-overflow:ellipsis;
+            white-space: nowrap;
+            /*overflow: hidden;*/
+            /*display:-webkit-box;*/
+            /*flex-direction: column;*/
+            /*-webkit-box-orient:vertical;*/
+            /*-webkit-line-clamp:1;*/
+            /*text-overflow:ellipsis;*/
         }
 
         .goodPrice {
