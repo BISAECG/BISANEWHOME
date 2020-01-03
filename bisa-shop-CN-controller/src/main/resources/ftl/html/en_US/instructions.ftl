@@ -80,7 +80,7 @@
                             </p>
                              
                             <p class="f-20 col-333 line-h-30 mt-15">
-                                （2）Login <a href="https://hk2-server.bisahealth.com/login?backUrl=https://www.bisahealth.com/calllogin" style="color: blue;">http://bisahealth.com/</a>
+                                （2）Visit <a href="https://hk2-server.bisahealth.com/login?backUrl=https://www.bisahealth.com/calllogin"  target="_blank" style="color: blue;">http://bisahealth.com/</a>
                                  
                             </p>
                                                                                        
@@ -146,7 +146,7 @@
                             </div>
 
                             <p class="f-20 col-333 line-h-30 mt-25">
-                                （8）Fill in other people's accounts and click "Check User". If the same account appears in "Confirm User" below, it means that the check is passed.
+                                （8）Fill in other people's accounts and click "Check User". If the same account appears in "Confirm User" below, it means the check is passed.
                                  
                             </p>
                              
@@ -199,10 +199,107 @@
                         </div>
 
                     </div>
+
                     <div class="layui-colla-item">
                             
                         <h2 class="layui-colla-title f-18 title-color">
-                             3. How to register for the Bisa Health account?
+                             3. How to activate the service card purchased by Taobao Jingdong?
+                                
+                        </h2>
+                            
+                        <div class="layui-colla-content  layui-show">
+                             
+                            <p class="f-20 col-333 line-h-30 mt-30">
+                                （1） Successfully purchased reporting services on Taobao Jingdong.
+                                 
+                            </p>
+                                                          
+                            <p class="f-20 col-333 line-h-30 mt-30">
+                                （2） Copy the card number and password sent to you by the customer service.
+                                 
+                            </p>
+
+                            <p class="f-20 col-333 line-h-30 mt-15">
+                                （3）Visit <a href="https://hk2-server.bisahealth.com/login?backUrl=https://www.bisahealth.com/calllogin"  target="_blank" style="color: blue;">http://bisahealth.com/</a>
+                                 
+                            </p>
+                                                                                       
+                            <div class="clear text-center mt-25">
+
+                                <img src="/resources/img/news/HK-Instructions/ActivationService1.png">
+                                 
+                            </div>
+                             
+                            <p class="f-20 col-333 line-h-30 mt-15">
+                                （4）Click the "user name" in the upper right corner of the mall to enter the user center.
+                                 
+                            </p>
+                                                          
+                            <div class="clear text-center mt-25">
+
+                                <img src="/resources/img/news/HK-Instructions/ActivationService2.png">
+                                 
+                            </div>
+                             
+                            <p class="f-20 col-333 line-h-30 mt-15">
+                                （5）Click on the user deposit on the left.
+                                 
+                            </p>
+                                                          
+                            <div class="clear text-center mt-25">
+
+                                <img src="/resources/img/news/HK-Instructions/Recharge1.png">
+                                 
+                            </div>
+
+                            <p class="f-20 col-333 line-h-30 mt-25">
+                                （6） Fill in the card number, password and verification code in the menu bar that appears on the right.
+                                 
+                            </p>
+                             
+                            <div class="clear text-center mt-25">
+
+                                <img src="/resources/img/news/HK-Instructions/Recharge2.png">
+                                 
+                            </div>
+
+                            <p class="f-20 col-333 line-h-30 mt-25">
+                                （7）You can choose whether to activate at the same time , after you choose to activate the card will
+                                activate the service on the current account at the same time to recharge , if you choose not to activate the user can recharge themselves to themselves or others in the account recharge.
+                                 
+                            </p>
+                             
+                            <div class="clear text-center mt-25">
+
+                                <img src="/resources/img/news/HK-Instructions/Recharge3.png">
+                                 
+                            </div>
+                             
+                            <div class="clear text-center mt-25">
+
+                                <img src="/resources/img/news/HK-Instructions/Recharge4.png">
+                                 
+                            </div>
+
+                            <p class="f-20 col-333 line-h-30 mt-25">
+                                （8）Finally click OK.
+                                 
+                            </p>
+                             
+                            <div class="clear text-center mt-25">
+
+                                <img src="/resources/img/news/HK-Instructions/Recharge5.png">
+                                 
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="layui-colla-item">
+                            
+                        <h2 class="layui-colla-title f-18 title-color">
+                             4. How to register for the Bisa Health account?
                                 
                         </h2>
                             
@@ -248,11 +345,11 @@
                         </div>
 
                     </div>
-                    <!--<%&#45;&#45;第三列&#45;&#45;%>-->
+
                     <div class="layui-colla-item">
                             
                         <h2 class="layui-colla-title f-18 title-color">
-                             4. How to bind and unbind products such as ECG instruments in the APP?
+                             5. How to bind and unbind products such as ECG instruments in the APP?
                                 
                         </h2>
                             
@@ -351,11 +448,11 @@
                         </div>
 
                     </div>
-                    <!--<%&#45;&#45;第四列&#45;&#45;%>-->
+
                     <div class="layui-colla-item">
                             
                         <h2 class="layui-colla-title f-18 title-color">
-                             5. How to use APP to monitor ECG and generate viewing reports?
+                             6. How to use APP to monitor ECG and generate viewing reports?
                                 
                         </h2>
                             

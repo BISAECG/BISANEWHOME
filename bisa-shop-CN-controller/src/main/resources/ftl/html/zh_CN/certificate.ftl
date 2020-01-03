@@ -6,7 +6,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <!--<%&#45;&#45;移动设备网页缩放比例&#45;&#45;%>-->
+    <!--移动设备网页缩放比例-->
     <meta name="viewport" content="initial-scale=0.3,user-scalable=yes">
     <!-- necessary -->
     <meta name="keywords" content="${html_keyWord}">

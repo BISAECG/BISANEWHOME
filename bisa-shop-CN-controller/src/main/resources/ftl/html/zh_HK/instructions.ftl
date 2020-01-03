@@ -146,7 +146,59 @@
                     </div>
                     <div class="layui-colla-item">
                         <h2 class="layui-colla-title f-18 title-color">
-                            3.如何註冊碧沙康健帳號？
+                            3.如何激活淘寶京東購買的服務卡？
+                        </h2>
+                        <div class="layui-colla-content">
+                            <p class="f-20 col-333 line-h-30 mt-30">
+                                （1）在淘寶京東上成功購買報告服務。
+                            </p>
+                            <p class="f-20 col-333 line-h-30 mt-15">
+                                （2）復制客服發給你的卡號和密碼。
+                            </p>
+                            <p class="f-20 col-333 line-h-30 mt-15">
+                                （3）登陸<a href="https://hk2-server.bisahealth.com/login?backUrl=https://www.bisahealth.com/calllogin" style="color: blue;">http://bisahealth.com/</a>
+                            </p>
+                            <div class="clear text-center mt-25">
+                                <img src="/resources/img/news/HK-Instructions/ActivationService1.png">
+                            </div>
+                            <p class="f-20 col-333 line-h-30 mt-15">
+                                （4）點擊商城右上角“用戶名”進入用戶中心。
+                            </p>
+                            <div class="clear text-center mt-25">
+                                <img src="/resources/img/news/HK-Instructions/ActivationService2.png">
+                            </div>
+                            <p class="f-20 col-333 line-h-30 mt-25">
+                                （5）點擊左側的用戶充值
+                            </p>
+                            <div class="clear text-center mt-25">
+                                <img src="/resources/img/news/HK-Instructions/Recharge1.png">
+                            </div>
+                            <p class="f-20 col-333 line-h-30 mt-25">
+                                （6）在右側出現的菜單欄填寫卡號和密碼以及驗證碼
+                            </p>
+                            <div class="clear text-center mt-25">
+                                <img src="/resources/img/news/HK-Instructions/Recharge2.png">
+                            </div>
+                            <p class="f-20 col-333 line-h-30 mt-25">
+                                （7）可以選擇是否同時激活,如果選擇激活後在充值的同時服務卡會激活到當前賬號上,如果選擇不激活可以自行到用戶充值裏給自己或者他人的賬戶充值
+                            </p>
+                            <div class="clear text-center mt-25">
+                                <img src="/resources/img/news/HK-Instructions/Recharge3.png">
+                            </div>
+                            <div class="clear text-center mt-25">
+                                <img src="/resources/img/news/HK-Instructions/Recharge4.png">
+                            </div>
+                            <p class="f-20 col-333 line-h-30 mt-25">
+                                （8）最後點擊確定即可
+                            </p>
+                            <div class="clear text-center mt-25">
+                                <img src="/resources/img/news/HK-Instructions/Recharge5.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-colla-item">
+                        <h2 class="layui-colla-title f-18 title-color">
+                            4.如何註冊碧沙康健帳號？
                         </h2>
                         <div class="layui-colla-content">
                             <p class="f-20 col-333 line-h-30 mt-30">
@@ -172,10 +224,9 @@
                             </div>
                         </div>
                     </div>
-                    <!--<%&#45;&#45;第三列&#45;&#45;%>-->
                     <div class="layui-colla-item">
                         <h2 class="layui-colla-title f-18 title-color">
-                            4.如何在APP中綁定和解綁心電儀器等產品？
+                            5.如何在APP中綁定和解綁心電儀器等產品？
                         </h2>
                         <div class="layui-colla-content">
                             <p class="f-20 col-333 line-h-30 mt-30">
@@ -231,10 +282,9 @@
                             </div>
                         </div>
                     </div>
-                    <!--<%&#45;&#45;第四列&#45;&#45;%>-->
                     <div class="layui-colla-item">
                         <h2 class="layui-colla-title f-18 title-color">
-                            5.如何使用APP監測心電與生成查看報告？
+                            6.如何使用APP監測心電與生成查看報告？
                         </h2>
                         <div class="layui-colla-content">
                             <p class="f-20 col-333 line-h-30 mt-30 f-w">
@@ -319,7 +369,7 @@
                             <p class="f-20 col-333 line-h-30 mt-25">
                                 （7）點擊右下角 生成報告 按鈕上傳數據，所有操作完畢。（收費報告需要壹定時間進行人工審核，完成後將自動推送給您，請耐心等候）。
                             </p>
-                            <!--<%&#45;&#45;所有歷史報告查看&#45;&#45;%>-->
+                            <!--所有歷史報告查看-->
                             <p class="f-20 col-333 line-h-30 mt-30 f-w">
                                 所有歷史報告查看：
                             </p>
@@ -595,7 +645,7 @@
                                 <img src="/resources/img/news/HK-Instructions/apple6.png">
                             </div>
                             <p class="f-20 col-333 h-20 line-h-20 mt-20">
-                                8.使用浏覽器進入
+                                8.使用瀏覽器進入
                                 <a style="color: deepskyblue" href="https://hk-server.bisahealth.com/login">https://hk-server.bisahealth
                                     .com/login
                                 </a>
@@ -652,7 +702,7 @@
                                 <img src="/resources/img/news/HK-Instructions/apple12.png">
                             </div>
                             <p class="f-20 col-333 h-20 line-h-20 mt-20">
-                                18.報告狀態處于 待查看 時，用戶可查看、下載報告。
+                                18.報告狀態處於 待查看 時，用戶可查看、下載報告。
                             </p>
                             <div class="clear text-center mt-40 mb-40">
                                 <img src="/resources/img/news/HK-Instructions/apple13.png">

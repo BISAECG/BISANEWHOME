@@ -80,7 +80,7 @@
                                 （1）成功购买报告服务。
                             </p>
                             <p class="f-20 col-333 line-h-30 mt-15">
-                                （2）登陆 <a href="https://hk2-server.bisahealth.com/login?backUrl=https://www.bisahealth.com/calllogin" style="color: blue;">http://bisahealth.com/</a>
+                                （2）登陆 <a href="https://hk2-server.bisahealth.com/login?backUrl=https://www.bisahealth.com/calllogin" target="_blank" style="color: blue;">http://bisahealth.com/</a>
                             </p>
                             <div class="clear text-center mt-25">
                                 <img src="/resources/img/news/HK-Instructions/ActivationService1.png">
@@ -146,10 +146,62 @@
                             </div>
                         </div>
                     </div>
-                    <!--第三列-->
                     <div class="layui-colla-item">
                         <h2 class="layui-colla-title f-18 title-color">
-                            3.如何注册碧沙康健帐号？
+                            3.如何激活淘宝京东购买的服务卡？
+                        </h2>
+                        <div class="layui-colla-content">
+                            <p class="f-20 col-333 line-h-30 mt-30">
+                                （1）在淘宝京东上成功购买报告服务。
+                            </p>
+                            <p class="f-20 col-333 line-h-30 mt-15">
+                                （2）复制客服发给你的卡号和密码。
+                            </p>
+                            <p class="f-20 col-333 line-h-30 mt-15">
+                                （3）登陸<a href="https://hk2-server.bisahealth.com/login?backUrl=https://www.bisahealth.com/calllogin"  target="_blank"
+                                        style="color: blue;">http://bisahealth.com/</a>
+                            </p>
+                            <div class="clear text-center mt-25">
+                                <img src="/resources/img/news/HK-Instructions/ActivationService1.png">
+                            </div>
+                            <p class="f-20 col-333 line-h-30 mt-15">
+                                （4）点击商城右上角“用户名”进入用户中心。
+                            </p>
+                            <div class="clear text-center mt-25">
+                                <img src="/resources/img/news/HK-Instructions/ActivationService2.png">
+                            </div>
+                            <p class="f-20 col-333 line-h-30 mt-25">
+                                （5）点击左侧的用户充值
+                            </p>
+                            <div class="clear text-center mt-25">
+                                <img src="/resources/img/news/HK-Instructions/Recharge1.png">
+                            </div>
+                            <p class="f-20 col-333 line-h-30 mt-25">
+                                （6）在右侧出现的菜单栏填写卡号和密码以及验证码
+                            </p>
+                            <div class="clear text-center mt-25">
+                                <img src="/resources/img/news/HK-Instructions/Recharge2.png">
+                            </div>
+                            <p class="f-20 col-333 line-h-30 mt-25">
+                                （7）可以选择是否同时激活,如果选择激活后在充值的同时服务卡会激活到当前账号上,如果选择不激活可以自行到用户充值里给自己或者他人的账户充值
+                            </p>
+                            <div class="clear text-center mt-25">
+                                <img src="/resources/img/news/HK-Instructions/Recharge3.png">
+                            </div>
+                            <div class="clear text-center mt-25">
+                                <img src="/resources/img/news/HK-Instructions/Recharge4.png">
+                            </div>
+                            <p class="f-20 col-333 line-h-30 mt-25">
+                                （8）最后点击确定即可
+                            </p>
+                            <div class="clear text-center mt-25">
+                                <img src="/resources/img/news/HK-Instructions/Recharge5.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-colla-item">
+                        <h2 class="layui-colla-title f-18 title-color">
+                            4.如何注册碧沙康健帐号？
                         </h2>
                         <div class="layui-colla-content">
                             <p class="f-20 col-333 line-h-30 mt-30">
@@ -175,10 +227,9 @@
                             </div>
                         </div>
                     </div>
-                    <!--第四列-->
                     <div class="layui-colla-item">
                         <h2 class="layui-colla-title f-18 title-color">
-                            4.如何在APP中绑定和解绑心电仪器等产品？
+                            5.如何在APP中绑定和解绑心电仪器等产品？
                         </h2>
                         <div class="layui-colla-content">
                             <p class="f-20 col-333 line-h-30 mt-30">
@@ -234,10 +285,9 @@
                             </div>
                         </div>
                     </div>
-                    <!--第五列-->
                     <div class="layui-colla-item">
                     <h2 class="layui-colla-title f-18 title-color">
-                        5.如何使用APP监测心电与生成查看报告？
+                        6.如何使用APP监测心电与生成查看报告？
                     </h2>
                     <div class="layui-colla-content">
                         <p class="f-20 col-333 line-h-30 mt-30 f-w">
