@@ -76,7 +76,8 @@
                 </p>
                 <div class="clear pd-15 bg-fafafa bor bor-col-e8ebf2">
                     <!-- 这里用layui的数据表格的重载 -->
-                    <form class="layui-form" lay-filter="form-opt">
+
+                    <form class="layui-form" lay-filter="form-opt" >
                         <div class="layui-form-item mb-0" pane="">
                             <label class="layui-form-label f-14"><spring:message code="seach"/>：</label>
                             <div class="layui-input-block">
@@ -107,6 +108,11 @@
                 <p class="f-18 pt-15 pb-15 mt-40 col-8d969d">
                     	<spring:message code="list"/>
                 </p>
+				<script type="text/html" id="toolbarDemo">
+					<div class="layui-btn-container">
+						<button class="layui-btn layui-btn-sm" lay-event="getCheckData">打印</button>
+					</div>
+				</script>
                 <div class="clear pd-15 bg-fafafa bor bor-col-e8ebf2">
                     <table id="mTable" lay-filter="mTable"></table>
                 </div>
@@ -282,7 +288,13 @@
 	            </form>
 			</div>
         </div><!-- end 弹框 -->
-        
+		<!-- 打印相关的弹出层，供js调用 -->
+		<!--startprint-->
+		<div class="clear ">
+			<div id="print_content">
+			</div>
+		</div>
+		<!--endprint-->
     </div>
   <script src="/resources/ctrl/layui/layui.js"></script>
 	<script src="/resources/js/utils.js"></script>
@@ -321,11 +333,10 @@
 					layer.closeAll();
 				}
 			});
-	
        		return false;
        	});
        	
-	form.on('submit(ems_submit)', function(data){
+		form.on('submit(ems_submit)', function(data){
 			layer.load();
 	 		$.ajax({
 				type : "POST",
@@ -351,10 +362,8 @@
        	});
 	
   		form.on('submit(search)', function(data){
-       		
   			 var incontent = data.field.incontent;
              var searchabout = data.field.searchabout;
-
              if(searchabout=="user_id"){
   	  			$.ajax({
   					type : "GET",
@@ -395,12 +404,15 @@
    
         //=================执行渲染==================
         var tableIns =table.render({
+			id:'mTable',
             elem: '#mTable', //指定原始表格元素选择器（推荐id选择器）
+            toolbar: '#toolbarDemo' ,
             url: '/admin/order/ajax/list',
             method:'GET',
             page:{layout:	['prev', 'page', 'next'],limit:10},
             cols: [
                 [ //标题栏
+                    	{type: 'checkbox', fixed: 'left'},
                         {field: 'id', title: 'ID', width: '5%', align: 'center'},
                         {field: 'order_num', title: '<spring:message code="3008"/>', width: '10%', align: 'center'},
                         {field: 'order_status', title: '<spring:message code="status"/>',width: '10%', sort:true, align: 'center' ,templet:'#orderStatus'},
@@ -468,8 +480,7 @@
             
           
         });
-        
-        
+
         function openEms(data){
     		layer.open({
                   title: "<spring:message code='modify' />"//弹框标题
@@ -502,14 +513,435 @@
                });
        
           }
-    	 
-        
+
         /*异常信息*/
         function showMessage(msg) {
-        	if(msg!=''){
-        		layer.msg(msg);
-        	}
-        	
+            if(msg!=''){
+                layer.msg(msg);
+            }
+
+        }
+
+        //工具栏事件
+        table.on('toolbar(mTable)', function(obj){
+            var checkStatus = table.checkStatus(obj.config.id);
+            switch(obj.event){
+                case 'getCheckData':
+                    var data = checkStatus.data;
+                    // var data = JSON.stringify(data);
+                    console.log(JSON.stringify(data));
+                    layer.open({
+                        type: 1
+                        ,content:
+							'<div style="text-align: left;margin-left:100px;">'
+							+'<p>' + '<span>' +'id:' +'</span>' + JSON.stringify(data[0].id) + '</span>' +'</p>'
+                            +'<p>' + '<span>' +'订单号:' +'</span>' + JSON.stringify(data[0].order_num) +'</p>'
+                            +'<p>' +'<span>' +'收件人姓名:' +'</span>' + JSON.stringify(data[0].order_name) +'</p>'
+                            +'<p>' +'<span>' +'收件人地址:' +'</span>' + JSON.stringify(data[0].order_address) +'</p>'
+                            +'</div>'
+						,title :'打印发票'
+						,area: ['500px', '300px']
+						,offset: 'auto'
+                        ,btn: ['打印']
+                        ,yes: function(index, layero) {
+                            //按钮【按钮一】的回调
+                            // console.log(JSON.stringify(data));
+                            // console.log( JSON.stringify(data[0].order_address));
+                            // printorderlist();
+                            // function printorderlist() {
+                            //     var html_page = JSON.stringify(data[0].order_address);
+                            //     console.log(html_page);
+                            //     $("#print_content").html(html_page);
+                            //     $("#print_content").print();
+                            // window.print();
+                            // }
+							console.log(data[0] )
+                            console.log(JSON.stringify(data[0].order_num))
+                            console.log(data[0].goods_num )
+                            // console.log()
+                            // console.log()
+							var html_page = "";
+                            var html_page_tipsv1 = "";
+                            html_page_tipsv1 += "<\/br>";
+                            html_page_tipsv1 += "<div class=\"clear pd-15\" style=\"page-break-after: always;font-size: 12px;width: 90%;margin-left: 50px\">";
+                            html_page_tipsv1 += "<p style=\"font-size: 15px\" >";
+                            html_page_tipsv1 += "INVOICE (發票)";
+                            html_page_tipsv1 += "<img src='/resources/img/index/log1.jpg' width='100px' height='50px' style=';padding-left: 30%;'>";
+                            html_page_tipsv1 += "<\/p>";
+                            html_page_tipsv1 += "<div class=\"clear full-w mt-15 f-12\" style=\"font-size: 12px;width: 100%\">";
+                            html_page_tipsv1 += "    <div class=\"clear  line-h-20 col-black\" style='width: 100%'>";
+                            html_page_tipsv1 += "        <span  style=\"color: #807C7D;font-weight: 600\">INVOICE NUMBER (發票號碼)<\/span>";
+                            html_page_tipsv1 += "        <span  style=\"color: #807C7D;font-weight: 600;padding-left: 100px\">DATE OF ISSUE 發票日期<\/span>";
+                            html_page_tipsv1 += "    <\/div>";
+                            html_page_tipsv1 += "    <div class=\"clear  line-h-20 col-black\" style='width: 100%'>";
+                            // 发票号码
+                            html_page_tipsv1 += "        <span  >INV" + data[0].order_address + "<\/span>";
+                            // 发票打印时间
+                            html_page_tipsv1 += "        <span  style=\"padding-left: 145px\">" + data[0].c_time + "(yyyy-mm-dd)<\/span>";
+                            html_page_tipsv1 += "    <\/div>";
+                            html_page_tipsv1 += "    <div class=\"clear  line-h-20 col-black\" style='width: 100%'>";
+                            html_page_tipsv1 += "        <span  style=\"color: #807C7D;font-weight: 600\">ORDER NUMBER (訂單號)<\/span>";
+                            html_page_tipsv1 += "    <\/div>";
+                            html_page_tipsv1 += "    <div class=\"clear  line-h-20 col-black\" style='width: 100%'>";
+                            // 订单号
+                            html_page_tipsv1 += "        <span  >PO" + data[0].order_num + "<\/span>";
+                            html_page_tipsv1 += "    <\/div>";
+                            html_page_tipsv1 += "    <div class=\"clear  line-h-20 col-black\" style='width: 100%'>";
+                            html_page_tipsv1 += "        <span  style=\"color: #807C7D;font-weight: 600\">DELIVERY NOTE NUMBER (送貨單號碼)<\/span>";
+                            html_page_tipsv1 += "    <\/div>";
+                            html_page_tipsv1 += "    <div class=\"clear  line-h-20 col-black\" style='width: 100%'>";
+                            //送货单号码
+                            html_page_tipsv1 += "        <span  >DN" + data[0].ems_num + "<\/span>";
+                            html_page_tipsv1 += "    <\/div><\/br>";
+                            html_page_tipsv1 += "    <div class=\"clear  line-h-20 col-black\" style='width: 100%'>";
+                            html_page_tipsv1 += "        <span  style=\"color: #807C7D;font-weight: 600\">BILLED TO (發票地址)<\/span>";
+                            html_page_tipsv1 += "    <\/div>";
+                            html_page_tipsv1 += "    <div class=\"clear  line-h-20 col-black\" style='width: 100%'>";
+                            html_page_tipsv1 += "        <span  style=\"color: #807C7D;font-weight: 600\">Client Name(姓名)<\/span>";
+                            //收货人姓名
+                            html_page_tipsv1 += "        <span  style=\"padding-left: 164px\">" + data[0].order_name + "<\/span>";
+                            html_page_tipsv1 += "    <\/div>";
+                            //收货人地址
+                            html_page_tipsv1 += SplitAddress(data[0].order_address)
+                            html_page_tipsv1 += "<\/div></br>";
+                            /*定义第一段需要拼接的html结束*/
+                            /*定义第二段需要拼接的html内容*/
+                            var html_page_tipsv2 = "";
+                            html_page_tipsv2 += "<div class=\"clear full-w  \">";
+                            html_page_tipsv2 += "   <table  cellspacing=\"0\" cellpadding=\"0\" style=\"font-size: 10px;\" >";
+                            html_page_tipsv2 += "   <tr  >";
+                            html_page_tipsv2 += "   <td  align=\"center\"  style=\"color: #807C7D;border-bottom:1px solid #807C7D\" ><span style=\"margin-right: 15px\" >No.<\/span><\/td>";
+                            html_page_tipsv2 += "   <td align=\"center\" style=\"color: #807C7D;border-bottom:1px solid #807C7D\" ><span style=\"margin-left: 15px;\">DESCRIPTION<\/span><\/br ><span style=\"margin-left: 15px;\">商品名<\/span><\/td>";
+                            html_page_tipsv2 += "   <td align=\"center\"  style=\"color: #807C7D;border-bottom:1px solid #807C7D;\"><span style=\"margin-left: 35px;\" >UNIT PRICE<\/span><\/br ><span style=\"margin-left: 35px;\">原單價(HKD)<\/span><\/td>";
+                            html_page_tipsv2 += "   <td align=\"center\"  style=\"color: #807C7D;border-bottom:1px solid #807C7D; \"><span style=\"margin-left: 40px\" >QTY<\/span><\/br ><span style=\"margin-left: 40px;\">數量<\/span><\/td>";
+                            html_page_tipsv2 += "   <td align=\"center\"  style=\"color: #807C7D;border-bottom:1px solid #807C7D;\"><span style=\"margin-left: 35px\" >UNIT PRICE<\/span><\/br ><span style=\"margin-left: 35px;\">優惠單價(HKD)<\/span><\/td>";
+                            html_page_tipsv2 += "   <td align=\"center\"  style=\"color: #807C7D;border-bottom:1px solid #807C7D;\"><span style=\"margin-left: 35px\">AMOUNT<\/span><\/br ><span style=\"margin-left: 35px;\">實付金額(HKD)<\/span><\/td>";
+                            html_page_tipsv2 += "    <\/tr>";
+                            /*定义第二段内部需要拼接的html内容*/
+                            html_page_tipsv2 += "   <tr>";
+                            html_page_tipsv2 +=
+								"   <td align=\"center\"><span class=\" col-black\" style=\"height:30px;color: #807C7D;margin-right: 15px\">" +data[0].id + "<\/span><\/td>";
+                            //定义商品名称
+                            var goods_pattern = "";
+                            if (data[0].goods_pattern  == 'HC3A250'){
+                                goods_pattern = "悉心心電儀"
+                            } else if (data[0].goods_pattern == 'ECGRPT-DR01A'){
+                                goods_pattern = "醫生審核監測報告";
+                            } else if (data[0].goods_pattern  == 'XIXIN-ECGBELL'){
+                                goods_pattern = "悉心鈴雙重警報服務";
+                            } else if (data[0].goods_pattern  == '24SC'){
+                                goods_pattern = "人工报告";
+                            } else if (data[0].goods_pattern  == 'BISA-ECGUARD') {
+                                goods_pattern = "遠程心電監測解決方案";
+                            } else {
+                                goods_pattern = "数据错误";
+                            }
+                            //定义商品名称
+                            html_page_tipsv2 += "   <td  style=\"border-bottom:0.5px solid #807C7D;height:30px\"><span class=\"col-black\" style=\"margin-left: 15px;\">" + goods_pattern + "<\/span><\/td>";
+                            html_page_tipsv2 += "   <td  align=\"center\" style=\"border-bottom:0.5px solid #807C7D;height:30px\"><span class=\"f-12 col-black\"  style=\"margin-left: 35px;\">" + data[0].goods_price + "</span><\/td>";
+                            html_page_tipsv2 += "   <td  align=\"center\" style=\"border-bottom:0.5px solid #807C7D;height:30px\"><span class=\"f-12 col-black\"  style=\"margin-left: 40px\">" + data[0].goods_count + "</span><\/td>";
+                            html_page_tipsv2 += "   <td  align=\"center\" style=\"border-bottom:0.5px solid #807C7D;height:30px\"><span class=\"f-12 col-black\" style=\"margin-left: 35px\">" + data[0].coupon_price + "</span><\/td>";
+                            html_page_tipsv2 += "   <td  align=\"center\" style=\"border-bottom:0.5px solid #807C7D;height:30px\"><span class=\"f-12 col-black\" style=\"margin-left: 35px\">" + data[0].order_price + "</span><\/td>";
+                            html_page_tipsv2 += "    <\/tr>";
+                            /*定义第二段需要拼接的html内容结束*/
+                            html_page_tipsv2 += "   <tr>";
+                            html_page_tipsv2 += "   <td align=\"center\" colspan=\"2\" ><span class=\" col-black\">FREIGHT(運費): <\/span><span style=\"font-size: 10px\"> HK$<\/span>" + data[0].coupon_price + "<\/td>";
+                            html_page_tipsv2 += "   <td align=\"right\" colspan=\"4\"><span class=\" col-black\">TOTAL AMOUNT(實付總金額): <\/span><span style=\"font-size: 10px\">HK$<\/span>" + data[0].order_total + "<\/td>";
+                            html_page_tipsv2 += "    <\/tr>";
+                            html_page_tipsv2 += "    <\/table>";
+                            html_page_tipsv2 += "<\/div><\/br><\/br><\/br>";
+                            /*定义第二段需要拼接的html内容结束*/
+                            /*定义第三段需要拼接的html*/
+                            // 定义支付方式
+                            var pay_type = "";
+                            if (data[0].pay_type == 0) {
+                                pay_type = "微信"
+                            } else if (data[0].pay_type == 1) {
+                                pay_type = "支付宝";
+                            } else if (data[0].pay_type == 2) {
+                                pay_type = "VISA";
+                            } else if (data[0].pay_type == 3) {
+                                pay_type = "万事达卡";
+                            } else if (data[0].pay_type == 4) {
+                                pay_type = "银联";
+                            } else {
+                                pay_type = "数据错误";
+                            }
+                            // 定义支付方式
+                            var html_page_tipsv3 = "";
+                            html_page_tipsv3 += "    <div class=\"clear  line-h-20 col-black\" style='width: 100%'>";
+                            html_page_tipsv3 += "        <span  style=\"color: #807C7D;font-weight: 600\">TERMS(付款方式)<\/span>";
+                            html_page_tipsv3 += "    <\/div>";
+                            html_page_tipsv3 += "    <div class=\"clear  line-h-20 col-black\" style='width: 100%'>";
+                            html_page_tipsv3 += "        <span  >" + pay_type + "<\/span>";
+                            html_page_tipsv3 += "    <\/div></br>";
+                            html_page_tipsv3 += "<div style=\"font-size: 12px;\">";
+                            html_page_tipsv3 += "<span  style=\"color:blue;font-weight: 600\">THANK YOU FOR BUYING BISA HEALTHY PRODUCTS. THIS ORDER IS SUBJECT TO ALL TERMS AND CONDITIONS DISPLAYED AT：https://www.bisahealth.com<\/span><\/br>";
+                            html_page_tipsv3 += "(感謝您購買碧沙健康的產品，本訂單受以下顯示的所有條款和條件之制約：https://www.bisahealth.com)";
+                            html_page_tipsv3 += "<\/div>";
+                            html_page_tipsv3 += "<\/div>";
+                            /*定义第三段需要拼接的html结束*/
+                            html_page = html_page + html_page_tipsv1 + html_page_tipsv2 + html_page_tipsv3;
+                            $("#print_content").html(html_page);
+                            $("#print_content").removeClass("dis-n");
+                            bdhtml=window.document.body.innerHTML;
+                            sprnstr="<!--startprint-->";
+                            eprnstr="<!--endprint-->";
+                            prnhtml=bdhtml.substr(bdhtml.indexOf(sprnstr));
+                            prnhtml=prnhtml.substring(0,prnhtml.indexOf(eprnstr));
+                            window.document.body.innerHTML=prnhtml;
+                            window.print();
+                            layer.close(index);
+                        }
+                                // for (i = 0; i < page_length; i++) {
+                                //     /*定义第一段需要拼接的html*/
+
+                                // }
+                                /*把拼接好的html内容插入页面进行打印*/
+                                // $("#print_content").html(html_page);
+                                // $("#print_content").print();
+                            // };
+                            /*打印结束关闭loading层*/
+                            // layer.close(index);
+
+                        // ,btn2: function(index, layero){
+                        //     //按钮【按钮二】的回调
+						//
+                        //     //return false 开启该代码可禁止点击该按钮关闭
+                        // }
+                        ,cancel: function(){
+                            //右上角关闭回调
+
+                            //return false 开启该代码可禁止点击该按钮关闭
+                        }
+                    });
+
+                    break;
+                case 'getCheckLength':
+                    var data = checkStatus.data;
+                    layer.msg('选中了：'+ data.length + ' 个');
+                    break;
+                case 'isAll':
+                    layer.msg(checkStatus.isAll ? '全选': '未全选')
+                    break;
+            };
+        });
+
+
+        var $ = layui.$,
+            active1 = {
+                getinvoiceData: function () {
+                    /*获取选中的id*/
+                    var checkStatus = table.checkStatus('mTable');
+                    var data = checkStatus.data;
+
+                    /*判断data的数量是否为0*/
+                    if (data.length == 0) {
+                        layer.alert('请先选择需要打印发票的订单。', {
+                            icon: 6,
+                            title: '打印发票提示'
+                        })
+                    } else {
+                        var jsonprintid = [];
+                        var manifest_box_content = "";
+                        for (var i = 0; i < data.length; i++) {
+                            jsonprintid.push(data[i].id);
+                            /*把订单添加到相应位置*/
+                            manifest_box_content += "<p class=\"clear h-40 line-h-40 col-red\">";
+                            manifest_box_content += data[i].order_no;
+                            manifest_box_content += "<\/p>";
+                        }
+                        $(".manifest_box").html(manifest_box_content);
+                        layer.open({
+                            type: 1,
+                            title: "打印发票",
+                            area: ['560px', '500px'], //宽高
+                            btn: ['打印', '取消'],
+                            btn1: function (index, layero) {
+                                /*开启加载loading层*/
+                                var index = layer.load(1);
+                                var orderlist_data = null;
+                                /*在这里进行ajax调用返回json数据*/
+                                $.ajax({
+                                    url: 'admin/order/getPrintOrderList',
+                                    data: {
+                                        jsonprintid: jsonprintid
+                                    },
+                                    type: "POST",
+                                    async: false,
+                                    success: function (data) {
+                                        orderlist_data = data;
+                                    }
+                                });
+                                /*在此处进行打印内容的拼接操作*/
+                                printorderlist();
+                                function printorderlist() {
+                                    var page = orderlist_data;
+                                    var page_length = orderlist_data.length;
+                                    var html_page = "";
+                                    for (i = 0; i < page_length; i++) {
+                                        /*定义第一段需要拼接的html*/
+                                        var html_page_tipsv1 = "";
+                                        html_page_tipsv1 += "<\/br>";
+                                        html_page_tipsv1 += "<div class=\"clear pd-15\" style=\"page-break-after: always;font-size: 12px;width: 90%;margin-left: 50px\">";
+                                        html_page_tipsv1 += "<p style=\"font-size: 15px\" >";
+                                        html_page_tipsv1 += "INVOICE (發票)";
+                                        html_page_tipsv1 += "<img src='../../resources/img/index/log1.jpg' width='100px' height='50px' style=';padding-left: 30%;'>";
+                                        html_page_tipsv1 += "<\/p>";
+                                        html_page_tipsv1 += "<div class=\"clear full-w mt-15 f-12\" style=\"font-size: 12px;width: 100%\">";
+                                        html_page_tipsv1 += "    <div class=\"clear  line-h-20 col-black\" style='width: 100%'>";
+                                        html_page_tipsv1 += "        <span  style=\"color: #807C7D;font-weight: 600\">INVOICE NUMBER (發票號碼)<\/span>";
+                                        html_page_tipsv1 += "        <span  style=\"color: #807C7D;font-weight: 600;padding-left: 100px\">DATE OF ISSUE 發票日期<\/span>";
+                                        html_page_tipsv1 += "    <\/div>";
+                                        html_page_tipsv1 += "    <div class=\"clear  line-h-20 col-black\" style='width: 100%'>";
+                                        // 发票号码
+                                        html_page_tipsv1 += "        <span  >INV" + data[i].发票号码 + "<\/span>";
+                                        // 发票打印时间
+                                        html_page_tipsv1 += "        <span  style=\"padding-left: 145px\">" + data[i].c_time + "(dd-mm-yyyy)<\/span>";
+                                        html_page_tipsv1 += "    <\/div>";
+                                        html_page_tipsv1 += "    <div class=\"clear  line-h-20 col-black\" style='width: 100%'>";
+                                        html_page_tipsv1 += "        <span  style=\"color: #807C7D;font-weight: 600\">ORDER NUMBER (訂單號)<\/span>";
+                                        html_page_tipsv1 += "    <\/div>";
+                                        html_page_tipsv1 += "    <div class=\"clear  line-h-20 col-black\" style='width: 100%'>";
+                                        // 订单号
+                                        html_page_tipsv1 += "        <span  >PO" + data[i].order_num + "<\/span>";
+                                        html_page_tipsv1 += "    <\/div>";
+                                        html_page_tipsv1 += "    <div class=\"clear  line-h-20 col-black\" style='width: 100%'>";
+                                        html_page_tipsv1 += "        <span  style=\"color: #807C7D;font-weight: 600\">DELIVERY NOTE NUMBER (送貨單號碼)<\/span>";
+                                        html_page_tipsv1 += "    <\/div>";
+                                        html_page_tipsv1 += "    <div class=\"clear  line-h-20 col-black\" style='width: 100%'>";
+                                        //送货单号码
+                                        html_page_tipsv1 += "        <span  >DN" + data[i].ems_num + "<\/span>";
+                                        html_page_tipsv1 += "    <\/div><\/br>";
+                                        html_page_tipsv1 += "    <div class=\"clear  line-h-20 col-black\" style='width: 100%'>";
+                                        html_page_tipsv1 += "        <span  style=\"color: #807C7D;font-weight: 600\">BILLED TO (發票地址)<\/span>";
+                                        html_page_tipsv1 += "    <\/div>";
+                                        html_page_tipsv1 += "    <div class=\"clear  line-h-20 col-black\" style='width: 100%'>";
+                                        html_page_tipsv1 += "        <span  style=\"color: #807C7D;font-weight: 600\">Client Name(姓名)<\/span>";
+                                        //收货人姓名
+                                        html_page_tipsv1 += "        <span  style=\"padding-left: 164px\">" + data[i].order_name + "<\/span>";
+                                        html_page_tipsv1 += "    <\/div>";
+                                        //收货人地址
+                                        html_page_tipsv1 += SplitAddress(data[i].order_address)
+                                        html_page_tipsv1 += "<\/div></br>";
+                                        /*定义第一段需要拼接的html结束*/
+                                        /*定义第二段需要拼接的html内容*/
+                                        var html_page_tipsv2 = "";
+                                        html_page_tipsv2 += "<div class=\"clear full-w  \">";
+                                        html_page_tipsv2 += "   <table  cellspacing=\"0\" cellpadding=\"0\" style=\"font-size: 10px;\" >";
+                                        html_page_tipsv2 += "   <tr  >";
+                                        html_page_tipsv2 += "   <td  align=\"center\"  style=\"color: #807C7D;border-bottom:1px solid #807C7D\" ><span style=\"margin-right: 15px\" >No.<\/span><\/td>";
+                                        html_page_tipsv2 += "   <td align=\"center\" style=\"color: #807C7D;border-bottom:1px solid #807C7D\" ><span style=\"margin-left: 15px;\">DESCRIPTION<\/span><\/br ><span style=\"margin-left: 15px;\">商品名<\/span><\/td>";
+                                        html_page_tipsv2 += "   <td align=\"center\"  style=\"color: #807C7D;border-bottom:1px solid #807C7D;\"><span style=\"margin-left: 35px;\" >UNIT PRICE<\/span><\/br ><span style=\"margin-left: 35px;\">原單價(HKD)<\/span><\/td>";
+                                        html_page_tipsv2 += "   <td align=\"center\"  style=\"color: #807C7D;border-bottom:1px solid #807C7D; \"><span style=\"margin-left: 40px\" >QTY<\/span><\/br ><span style=\"margin-left: 40px;\">數量<\/span><\/td>";
+                                        html_page_tipsv2 += "   <td align=\"center\"  style=\"color: #807C7D;border-bottom:1px solid #807C7D;\"><span style=\"margin-left: 35px\" >UNIT PRICE<\/span><\/br ><span style=\"margin-left: 35px;\">優惠單價(HKD)<\/span><\/td>";
+                                        html_page_tipsv2 += "   <td align=\"center\"  style=\"color: #807C7D;border-bottom:1px solid #807C7D;\"><span style=\"margin-left: 35px\">AMOUNT<\/span><\/br ><span style=\"margin-left: 35px;\">實付金額(HKD)<\/span><\/td>";
+                                        html_page_tipsv2 += "    <\/tr>";
+                                        /*定义第二段内部需要拼接的html内容*/
+                                        html_page_tipsv2 += "   <tr>";
+                                        html_page_tipsv2 += "   <td align=\"center\"><span class=\" col-black\" style=\"height:30px;color: #807C7D;margin-right: 15px\">" + (i + 1) + "<\/span><\/td>";
+                                        //定义商品名称
+                                        var goods_pattern = "";
+                                        if (data[i].goods_pattern == "HC3A250") {
+                                            pay_type = "悉心心電儀"
+                                        } else if (data[i].goods_pattern == "ECGRPT-DR01A") {
+                                            goods_pattern = "醫生審核監測報告";
+                                        } else if (data[i].goods_pattern == "XIXIN-ECGBELL") {
+                                            goods_pattern = "悉心鈴雙重警報服務";
+                                        } else if (data[i].goods_pattern == "BISA-ECGUARD") {
+                                            goods_pattern = "遠程心電監測解決方案";
+                                        } else {
+                                            goods_pattern = "数据错误";
+                                        }
+                                        //定义商品名称
+                                        html_page_tipsv2 += "   <td  style=\"border-bottom:0.5px solid #807C7D;height:30px\"><span class=\"col-black\" style=\"margin-left: 15px;\">" + goods_pattern + "<\/span><\/td>";
+                                        html_page_tipsv2 += "   <td  align=\"center\" style=\"border-bottom:0.5px solid #807C7D;height:30px\"><span class=\"f-12 col-black\"  style=\"margin-left: 35px;\">" + data[i].goods_price + "</span><\/td>";
+                                        html_page_tipsv2 += "   <td  align=\"center\" style=\"border-bottom:0.5px solid #807C7D;height:30px\"><span class=\"f-12 col-black\"  style=\"margin-left: 40px\">" + data[i].goods_count + "</span><\/td>";
+                                        html_page_tipsv2 += "   <td  align=\"center\" style=\"border-bottom:0.5px solid #807C7D;height:30px\"><span class=\"f-12 col-black\" style=\"margin-left: 35px\">" + data[i].coupon_price + "</span><\/td>";
+                                        html_page_tipsv2 += "   <td  align=\"center\" style=\"border-bottom:0.5px solid #807C7D;height:30px\"><span class=\"f-12 col-black\" style=\"margin-left: 35px\">" + data[i].order_price + "</span><\/td>";
+                                        html_page_tipsv2 += "    <\/tr>";
+                                        /*定义第二段需要拼接的html内容结束*/
+                                        html_page_tipsv2 += "   <tr>";
+                                        html_page_tipsv2 += "   <td align=\"center\" colspan=\"2\" ><span class=\" col-black\">FREIGHT(運費): <\/span><span style=\"font-size: 10px\"> HK$<\/span>" + data[i].coupon_price + "<\/td>";
+                                        html_page_tipsv2 += "   <td align=\"right\" colspan=\"4\"><span class=\" col-black\">TOTAL AMOUNT(實付總金額): <\/span><span style=\"font-size: 10px\">HK$<\/span>" + data[i].order_total + "<\/td>";
+                                        html_page_tipsv2 += "    <\/tr>";
+                                        html_page_tipsv2 += "    <\/table>";
+                                        html_page_tipsv2 += "<\/div><\/br><\/br><\/br>";
+                                        /*定义第二段需要拼接的html内容结束*/
+                                        /*定义第三段需要拼接的html*/
+                                        // 定义支付方式
+                                        var pay_type = "";
+                                        if (data[i].pay_type == 0) {
+                                            pay_type = "微信"
+                                        } else if (data[i].pay_type == 1) {
+                                            pay_type = "支付宝";
+                                        } else if (data[i].pay_type == 2) {
+                                            pay_type = "VISA";
+                                        } else if (data[i].pay_type == 3) {
+                                            pay_type = "万事达卡";
+                                        } else if (data[i].pay_type == 4) {
+                                            pay_type = "银联";
+                                        } else {
+                                            pay_type = "数据错误";
+                                        }
+                                        // 定义支付方式
+                                        var html_page_tipsv3 = "";
+                                        html_page_tipsv3 += "    <div class=\"clear  line-h-20 col-black\" style='width: 100%'>";
+                                        html_page_tipsv3 += "        <span  style=\"color: #807C7D;font-weight: 600\">TERMS(付款方式)<\/span>";
+                                        html_page_tipsv3 += "    <\/div>";
+                                        html_page_tipsv3 += "    <div class=\"clear  line-h-20 col-black\" style='width: 100%'>";
+                                        html_page_tipsv3 += "        <span  >" + pay_type + "<\/span>";
+                                        html_page_tipsv3 += "    <\/div></br>";
+                                        html_page_tipsv3 += "<div style=\"font-size: 12px;\">";
+                                        html_page_tipsv3 += "<span  style=\"color:blue;font-weight: 600\">THANK YOU FOR BUYING BISA HEALTHY PRODUCTS. THIS ORDER IS SUBJECT TO ALL TERMS AND CONDITIONS DISPLAYED AT：https://www.bisahealth.com<\/span><\/br>";
+                                        html_page_tipsv3 += "(感謝您購買碧沙健康的產品，本訂單受以下顯示的所有條款和條件之制約：https://www.bisahealth.com)";
+                                        html_page_tipsv3 += "<\/div>";
+                                        html_page_tipsv3 += "<\/div>";
+                                        /*定义第三段需要拼接的html结束*/
+                                        html_page = html_page + html_page_tipsv1 + html_page_tipsv2 + html_page_tipsv3;
+                                    }
+                                    /*把拼接好的html内容插入页面进行打印*/
+                                    $("#print_content").html(html_page);
+                                    $("#print_content").print();
+                                };
+                                /*打印结束关闭loading层*/
+                                layer.close(index);
+                            },
+                            content: $('.sureprint'),
+                        });
+                    }
+                }
+            };
+
+        //拆分地址
+        function SplitAddress(data) {
+            var addres = data.trim().split(" ");
+            if (data != null || data != "") {
+                var html_page_tipsv1 = "";
+                var html_page_tipsv2 = "";
+                html_page_tipsv1 += "    <div class=\"clear  line-h-20 col-black\" style='width: 100%'>";
+                html_page_tipsv1 += "        <span  style=\"color: #807C7D;font-weight: 600\">Client Address(地址)<\/span>";
+                html_page_tipsv1 += "        <span  style=\"padding-left: 152px\">"
+                html_page_tipsv2 += "    <div class=\"clear  line-h-20 col-black\" style='width: 100%;padding-left: 275px'>";
+                html_page_tipsv2 += "        <span >";
+                for (var i = 0; i < addres.length; i++) {
+                    if (i < 3) {
+                        if (addres[i] != null || addres[i] != "") {
+                            html_page_tipsv1 += addres[i] + " ";
+                        }
+                    } else {
+                        if (addres[i] != null || addres[i] != "") {
+
+                            html_page_tipsv2 += addres[i] + " ";
+                        }
+                    }
+                }
+                html_page_tipsv1 += "   <\/span> <\/div>";
+                html_page_tipsv2 += " <\/span>   <\/div>";
+                return html_page_tipsv1 + html_page_tipsv2;
+            } else {
+                return "";
+            }
         }
     });
 
