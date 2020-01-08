@@ -15,7 +15,7 @@
                     <span>您好,欢迎访问碧沙康健!</span>
                     <span class='sep navTitle'>|</span>
                     <span>语言:</span>
-                    <a id='lang-hk' href='/index?lang=zh_HK'>繁体</a>
+                    <a id='lang-hk' href='/index?lang=zh_HK'>繁體</a>
                     <span class="navTitle">|</span>
                     <a id='lang-cn' href='/index?lang=zh_CN'>简体</a>
                     <span class="navTitle">|</span>

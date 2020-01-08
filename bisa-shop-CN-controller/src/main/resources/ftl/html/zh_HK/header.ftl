@@ -17,7 +17,7 @@
                     <span>語言:</span>
                     <a id='lang-hk' href='/index?lang=zh_HK'>繁體</a>
                     <span class="navTitle">|</span>
-                    <a id='lang-cn' href='/index?lang=zh_CN'>簡體</a>
+                    <a id='lang-cn' href='/index?lang=zh_CN'>简体</a>
                     <span class="navTitle">|</span>
                     <a id='lang-us' href='/index?lang=en_US'>English</a>
                     <img src='/resources/img/HK_About/hk.png'>

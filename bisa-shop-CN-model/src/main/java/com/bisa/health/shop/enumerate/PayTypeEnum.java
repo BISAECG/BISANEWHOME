@@ -4,8 +4,8 @@ package com.bisa.health.shop.enumerate;
 public enum PayTypeEnum {
 	WECHAT(0),//微信
 	ALIPAY(1),//支付宝
-	VISA(2),
-	MASTER(3),
+	VISA(2),//VISA
+	MASTER(3),//万事达卡
 	EASY(4);//银联
 	
 	private int value;

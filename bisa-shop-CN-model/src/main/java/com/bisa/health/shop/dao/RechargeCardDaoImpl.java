@@ -57,8 +57,8 @@ public class RechargeCardDaoImpl extends BaseDao<RechargeCard> implements IRecha
 
 	@Override
 	public Pager<RechargeCard> getPageRechargeCard(int offset, int userId, String vKey, String vVal) {
+		
 		String sql = "SELECT * " + "FROM s_recharge_card WHERE creator=?";
-
 		if (!StringUtils.isEmpty(vKey)) {
 			sql = "SELECT * FROM s_recharge_card WHERE  creator=? AND " + vKey + " LIKE '" + vVal + "%'";
 

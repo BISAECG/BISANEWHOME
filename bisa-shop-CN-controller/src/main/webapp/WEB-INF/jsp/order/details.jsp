@@ -54,6 +54,7 @@
 						<input type="hidden" name="goods_num" value="${goods.number}">
 						<input type="hidden" name="goods_id" value="${goods.id}">
 						<input type="hidden" name="goods_pattern" value="${goods.pattern}">
+						<input type="hidden" name="goods_type" value="${goods.type}">
 					</p>
 					<p class="payPrice">
 						<span><spring:message code="2015" />:</span><span class="redInfo">${goods_count}</span>

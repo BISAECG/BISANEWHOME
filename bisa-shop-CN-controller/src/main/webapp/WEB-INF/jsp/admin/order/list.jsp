@@ -127,7 +127,7 @@
 	                    </div>
 	                     <label class="layui-form-label"><spring:message code='2025'/></label>
 	                    <div class="layui-input-inline">
-	                             <select id="goods_type" name="type" lay-verify="required">
+	                             <select id="goods_type" name="goods_type" lay-verify="required">
 	                            	<option value="${GoodsTypeEnum.REAL.getValue()}"><spring:message code='2009'/></option>
 	                            	<option value="${GoodsTypeEnum.VIRTUAL.getValue()}"><spring:message code='2010'/></option>
 	                            </select>
@@ -402,6 +402,7 @@
             cols: [
                 [ //标题栏
                         {field: 'id', title: 'ID', width: '5%', align: 'center'},
+                        {field: 'goods_pattern', title: '<spring:message code="id"/>',width: '10%',  align: 'center'},
                         {field: 'order_num', title: '<spring:message code="3008"/>', width: '10%', align: 'center'},
                         {field: 'order_status', title: '<spring:message code="status"/>',width: '10%', sort:true, align: 'center' ,templet:'#orderStatus'},
                         {field: 'is_pay', title: '<spring:message code="paid.statut"/>',width: '8%',  sort:true,align: 'center',templet:'#orderIsPay'},

@@ -46,23 +46,11 @@ public class AppLinkDownController {
 	 @Autowired
 	 private IAppUpdateService appUpdateService;
     
-	 
-	 /**
-	  * 这个接口弥补胡新二维码印错
-	  * @param request
-	  * @param model
-	  * @return
-	  */
+
     @RequestMapping(value = "/app/share/home", method = RequestMethod.GET)
     public String shareIndex(HttpServletRequest request,Model model){
     	
-    	String userAgent = request.getHeader("user-agent");
-    	String jumStr="/html/";
-    	if(PhoneTypeUtil.phoneType(userAgent)){
-    		return "redirect:"+h5Domain;
-    	}
-    	model.addAttribute("lang",jumStr+i18nUtil.lang());
-        return "/index";
+    	return "app/share/index";
     	
     }
 

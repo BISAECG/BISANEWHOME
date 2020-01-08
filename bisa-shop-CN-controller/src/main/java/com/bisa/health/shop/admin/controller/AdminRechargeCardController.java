@@ -18,6 +18,7 @@ import com.bisa.health.shop.service.IRechargeCardService;
 import com.bisa.health.shop.service.IRechargeCardService;
 
 import org.apache.commons.lang3.StringUtils;
+import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authz.annotation.Logical;
 import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -116,7 +117,12 @@ public class AdminRechargeCardController {
 	@ResponseBody
 	public ResponseEntity<Pager<RechargeCard>> lsitAjaxGoods(@CurrentUser User user,@RequestParam(required = false) String vKey,
 			@RequestParam(required = false) String vVal) {
-		Pager<RechargeCard> list = rechargeCardService.getPageRechargeCard(SystemContext.getPageOffset(),user.getUser_guid(),vKey, vVal);
+		Pager<RechargeCard> list = null;
+		if (SecurityUtils.getSubject().hasRole("ROLE_ADMIN")) {
+			list = rechargeCardService.getPageRechargeCard(SystemContext.getPageOffset(),vKey, vVal);
+		}else{
+			list = rechargeCardService.getPageRechargeCard(SystemContext.getPageOffset(),user.getUser_guid(),vKey, vVal);
+		}
 		return new ResponseEntity<Pager<RechargeCard>>(list, HttpStatus.OK);
 	}
 
