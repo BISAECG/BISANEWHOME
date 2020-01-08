@@ -55,6 +55,15 @@ public class AdminOrderController {
     public String list() {
         return "admin/order/list";
     }
+    /**
+     * 进去 bisa 新闻列表 页面
+     */
+    @RequestMapping(value = "/print", method = RequestMethod.GET)
+    public String print(@RequestParam String order_num,Model model) {
+    	Order mOrder = orderService.getOrderByNum(order_num);
+    	model.addAttribute("order", mOrder);
+        return "admin/order/print";
+    }
     
     
 	@RequestMapping(value = "/ajax/load", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
