@@ -327,6 +327,13 @@ a {
 #bar-sort2:hover{
 	content:url("/resources/img/index/Sidebar2-hover.png");
 }
+#bar-sort3{
+    content:url("/resources/img/index/Sidebar3.png");
+}
+
+#bar-sort3:hover{
+    content:url("/resources/img/index/Sidebar3-hover.png");
+}
 #bar-sort4{
 	content:url("/resources/img/index/Sidebar4.png");
 }

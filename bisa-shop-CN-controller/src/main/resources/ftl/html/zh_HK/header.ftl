@@ -122,17 +122,25 @@
             <div id='J_rightbar_l' style='margin-bottom: 15px;'>
                 <ul class='bar-top' style="list-style: none;">
                     <li class='bar-sortS'  style="list-style: none;">
+                        <a href='instructions.html' class='bar-link pos-r'>
+                            <img id='bar-sort3' src='/resources/img/index/Sidebar3.png' alt="碧沙心电仪使用说明">
+                            <span class='pos-a text-center' style='top: 64%;left: 14%;color: #fff;'>
+                                使用說明
+                            </span>
+                        </a>
+                    </li>
+                    <li class='bar-sortS'  style="list-style: none;">
                         <a href='down.html' class='bar-link pos-r'>
                             <img id='bar-sort1' src='/resources/img/index/Sidebar1.png' alt="下載APP">
-                            <span class='pos-a' style='top: 64%;left: 10%;color: #fff;'>
+                            <span class='pos-a' style='top: 64%;left: 14%;color: #fff;'>
                                 下載APP
                             </span>
                         </a>
                     </li>
                     <li class='bar-sort'>
-                        <a href='book.html'  styele='cursor:not-allowed;' class='bar-link pos-r'>
+                        <a href='book.html' title='留言板還在建設中' styele='cursor:not-allowed;' class='bar-link pos-r'>
                             <img id='bar-sort2' src='/resources/img/index/Sidebar2.png' alt="留言板">
-                            <span class='pos-a' style='top: 56%;left: 20%;color: #fff;'>
+                            <span class='pos-a' style='top: 56%;left: 24%;color: #fff;'>
                                 留言板
                             </span>
                         </a>
@@ -141,7 +149,7 @@
                         <a target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=3299503761&site=qq&menu=yes' class='pos-r'>
                             <img id='bar-sort4' border='0' src='/resources/img/index/Sidebar4.png' alt="QQ客服"
                                  title='點擊這裏給我發消息'/>
-                            <span class='pos-a' style='top: 210%;left: 10%;color: #fff;'>
+                            <span class='pos-a' style='top: 224%;left: 16%;color: #fff;'>
                                 QQ客服
                             </span>
                         </a>

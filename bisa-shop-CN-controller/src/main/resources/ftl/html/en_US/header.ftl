@@ -122,6 +122,14 @@
         <div class='bar-l '>
             <div id='J_rightbar_l' style='margin-bottom: 15px;'>
                 <ul class='bar-top' style="list-style: none;">
+                    <li class='bar-sortS'  style="list-style: none;">
+                        <a href='instructions.html' class='bar-link pos-r'>
+                            <img id='bar-sort3' src='/resources/img/index/Sidebar3.png' alt="Instructions for using Bisha ECG">
+                            <span class='pos-a text-center' style='top: 64%;left: 19%;color: #fff;'>
+                                Tutorial
+                            </span>
+                        </a>
+                    </li>
                     <li class='bar-sortS' style="list-style: none;">
                         <a href='down.html' class='bar-link pos-r'>
                             <img id='bar-sort1' src='/resources/img/index/Sidebar1.png' alt="Download app">
