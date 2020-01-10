@@ -58,8 +58,15 @@
                 <p id="p4"
                    class="col-757575 f-20-16-ipad line-h-25 mt-40 mb-20 cur-p hovecol-309DE2 col-active instructions-list2">
                     <a href="/resources/img/news/HK-Instructions/PECG.pdf" download="PECG.pdf">
-                        PECG使用说明书下载
+                        产品说明书
                     </a>
+                </p>
+                <p id="p5"
+                class="col-757575 f-20-16-ipad line-h-25 mt-40 mb-20 cur-p hovecol-309DE2 col-active instructions-list2">
+                 <a href="/resources/img/news/HK-Instructions/ecg.pdf" download="EcgGuideForUse.pdf">
+                        心电仪使用指南说明书
+                 </a>
+                </p>      
             </div>
         </div>
         <div id="instr1" class=" clear col-sm-9 pr-30 pl-0">
@@ -136,6 +143,9 @@
                             2.如何下载碧沙康健APP？
                         </h2>
                         <div class="layui-colla-content ">
+                            <p class="f-20 col-333 h-20 line-h-20 mt-30">
+                                
+                            </p>
                             <p class="f-20 col-333 h-20 line-h-20 mt-30">
                                 二维码下载：
                             </p>
@@ -421,6 +431,12 @@
                         </h2>
                         <div class="layui-colla-content layui-show">
                             <p class="col-333">
+                                <span>心电仪使用指南说明书下载</span>
+                            </p>
+                            <p class="col-333">
+                             <a href="/resources/img/news/HK-Instructions/ecg.pdf" style="font-size: 20px;color: blue;margin-left: 30px;" download="Ecg.pdf">点击下载</a>
+                            </p>
+                            <p class="col-333">
                                 取出一台处于关闭状态的动态心电记录仪，将电极片与动态心电记录仪四角对齐扣合并揭去电极片保护膜。
                             </p>
                             <div class="clear text-center mt-40 mb-40">
@@ -610,7 +626,7 @@
                         </h2>
                         <div class="layui-colla-content layui-show">
                             <p class="f-20 col-333 h-20 line-h-20 mt-20">
-                                1.使用 micro USB 将监测完毕的 心电记录仪 与 电脑 连接。
+                                1.使用 micro USB 将监测完毕的 心电记录仪 与 电脑 连接。
                             </p>
                             <p class="f-20 h-20 line-h-20 mt-20 col-333">
                                 2. 打开 我的电脑。
