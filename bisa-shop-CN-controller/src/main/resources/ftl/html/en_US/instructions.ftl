@@ -80,7 +80,8 @@
                             </p>
                              
                             <p class="f-20 col-333 line-h-30 mt-15">
-                                （2）Visit <a href="https://hk2-server.bisahealth.com/login?backUrl=https://www.bisahealth.com/calllogin"  target="_blank" style="color: blue;">http://bisahealth.com/</a>
+                                （2）Visit <a href="https://hk2-server.bisahealth.com/login?backUrl=https://www.bisahealth.com/calllogin"
+                                            target="_blank" style="color: blue;">https://bisahealth.com/</a>
                                  
                             </p>
                                                                                        
@@ -220,7 +221,8 @@
                             </p>
 
                             <p class="f-20 col-333 line-h-30 mt-15">
-                                （3）Visit <a href="https://hk2-server.bisahealth.com/login?backUrl=https://www.bisahealth.com/calllogin"  target="_blank" style="color: blue;">http://bisahealth.com/</a>
+                                （3）Visit <a href="https://hk2-server.bisahealth.com/login?backUrl=https://www.bisahealth.com/calllogin"
+                                            target="_blank" style="color: blue;">https://bisahealth.com/</a>
                                  
                             </p>
                                                                                        

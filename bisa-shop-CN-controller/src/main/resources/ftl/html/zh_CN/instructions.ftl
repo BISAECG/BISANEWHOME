@@ -80,7 +80,8 @@
                                 （1）成功购买报告服务。
                             </p>
                             <p class="f-20 col-333 line-h-30 mt-15">
-                                （2）登陆 <a href="https://hk2-server.bisahealth.com/login?backUrl=https://www.bisahealth.com/calllogin" target="_blank" style="color: blue;">http://bisahealth.com/</a>
+                                （2）登陆 <a href="https://hk2-server.bisahealth.com/login?backUrl=https://www.bisahealth.com/calllogin"
+                                         target="_blank" style="color: blue;">https://bisahealth.com/</a>
                             </p>
                             <div class="clear text-center mt-25">
                                 <img src="/resources/img/news/HK-Instructions/ActivationService1.png">
@@ -159,7 +160,7 @@
                             </p>
                             <p class="f-20 col-333 line-h-30 mt-15">
                                 （3）登陸<a href="https://hk2-server.bisahealth.com/login?backUrl=https://www.bisahealth.com/calllogin"  target="_blank"
-                                        style="color: blue;">http://bisahealth.com/</a>
+                                        style="color: blue;">https://bisahealth.com/</a>
                             </p>
                             <div class="clear text-center mt-25">
                                 <img src="/resources/img/news/HK-Instructions/ActivationService1.png">

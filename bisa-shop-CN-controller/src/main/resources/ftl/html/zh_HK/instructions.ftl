@@ -79,7 +79,8 @@
                                 （1）成功購買報告服務。
                             </p>
                             <p class="f-20 col-333 line-h-30 mt-15">
-                                （2）登陸<a href="https://hk2-server.bisahealth.com/login?backUrl=https://www.bisahealth.com/calllogin" style="color: blue;">http://bisahealth.com/</a>
+                                （2）登陸<a href="https://hk2-server.bisahealth.com/login?backUrl=https://www.bisahealth.com/calllogin"
+                                        style="color: blue;">https://bisahealth.com/</a>
                             </p>
                             <div class="clear text-center mt-25">
                                 <img src="/resources/img/news/HK-Instructions/ActivationService1.png">
@@ -156,7 +157,8 @@
                                 （2）復制客服發給你的卡號和密碼。
                             </p>
                             <p class="f-20 col-333 line-h-30 mt-15">
-                                （3）登陸<a href="https://hk2-server.bisahealth.com/login?backUrl=https://www.bisahealth.com/calllogin" style="color: blue;">http://bisahealth.com/</a>
+                                （3）登陸<a href="https://hk2-server.bisahealth.com/login?backUrl=https://www.bisahealth.com/calllogin"
+                                        style="color: blue;">https://bisahealth.com/</a>
                             </p>
                             <div class="clear text-center mt-25">
                                 <img src="/resources/img/news/HK-Instructions/ActivationService1.png">
