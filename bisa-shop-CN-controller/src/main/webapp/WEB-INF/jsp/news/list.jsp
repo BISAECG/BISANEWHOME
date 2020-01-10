@@ -100,7 +100,8 @@
 			            <div class="row">
 			            <input type="hidden"  class="zd-id" value="${news.id}"/>
 			            <img class=" wh16-9 cur-p news-img" width="280" height="200" src="${news.img_url}">
-			            <p class="line-h-20 h-20 f-16 col-414141 text-overflow cur-p  text-center mt-10 news-title" style="font-weight:bold;">${news.news_title}
+			            <p class="line-h-20 h-20 f-16 col-414141 text-overflow cur-p  text-center mt-10 news-title"
+                           style="font-weight:500;">${news.news_title}
 			            </p>
 			            <p class="f-12 col-888 mtb-10-0-ipad h-40 overflow-h line-h-20 text-line-2-1-ipad cur-p hovecol-999 news-describe">${news.news_describe}
 			            </p>
