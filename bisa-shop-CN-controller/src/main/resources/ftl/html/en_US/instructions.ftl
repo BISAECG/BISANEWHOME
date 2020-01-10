@@ -51,7 +51,14 @@
                 <p id="p3" class="col-757575 f-20-16-ipad line-h-25 mt-40 mb-20 cur-p hovecol-309DE2 col-active instructions-list2">
                     Apple User Report Generation Guide</p>
                 <p id="p4" class="col-757575 f-20-16-ipad line-h-25 mt-40 mb-20 cur-p hovecol-309DE2 col-active instructions-list2">
-                    <a href="/resources/img/news/HK-Instructions/PECG.pdf" download="PECG.pdf">PECG instruction manual download</a>
+                    <a href="/resources/img/news/HK-Instructions/PECG.pdf" download="PECG.pdf">Product manual</a>
+                 </p>
+                <p id="p5"
+                class="col-757575 f-20-16-ipad line-h-25 mt-40 mb-20 cur-p hovecol-309DE2 col-active instructions-list2">
+                 <a href="/resources/img/news/HK-Instructions/ecg.pdf" download="EcgGuideForUse.pdf">
+                    Instructions for use of electrocardiograph
+                 </a>
+                </p>  
             </div>
         </div>
         <div id="instr1" class=" clear col-sm-9 pr-30 pl-0" style="margin-top: 20px;">
@@ -640,6 +647,12 @@
                             1) Installation of disposable ECG electrodes
                         </h2>
                         <div class="layui-colla-content layui-show">
+                            <p class="col-333">
+                                <span>Instructions for use of electrocardiograph</span>
+                            </p>
+                            <p class="col-333">
+                             <a href="/resources/img/news/HK-Instructions/ecg.pdf" style="font-size: 20px;color: blue;margin-left: 30px;" download="Ecg.pdf">Click to download</a>
+                            </p>
                             <p class="col-333">
                                 A closed dynamic ECG recorder was taken out, and the protective film of the electrode sheet was removed by aligning the electrode sheet with the four corners of the dynamic ECG recorder.
                             </p>
