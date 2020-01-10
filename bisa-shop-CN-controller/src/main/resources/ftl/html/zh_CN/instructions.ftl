@@ -431,7 +431,7 @@
                         </h2>
                         <div class="layui-colla-content layui-show">
                             <p class="col-333">
-                                <span>心电仪使用指南说明书下载</span>
+                                <span>心电仪使用指南说明书</span>
                             </p>
                             <p class="col-333">
                              <a href="/resources/img/news/HK-Instructions/ecg.pdf" style="font-size: 20px;color: blue;margin-left: 30px;" download="Ecg.pdf">点击下载</a>
