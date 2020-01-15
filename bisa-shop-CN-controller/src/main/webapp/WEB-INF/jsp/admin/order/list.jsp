@@ -549,39 +549,6 @@
                     break;
             };
         });
-
-
-
-        //拆分地址
-        function SplitAddress(data) {
-            var addres = data.trim().split(" ");
-            if (data != null || data != "") {
-                var html_page_tipsv1 = "";
-                var html_page_tipsv2 = "";
-                html_page_tipsv1 += "    <div class=\"clear  line-h-20 col-black\" style='width: 100%'>";
-                html_page_tipsv1 += "        <span  style=\"color: #807C7D;font-weight: 600\">Client Address(地址)<\/span>";
-                html_page_tipsv1 += "        <span  style=\"padding-left: 152px\">"
-                html_page_tipsv2 += "    <div class=\"clear  line-h-20 col-black\" style='width: 100%;padding-left: 275px'>";
-                html_page_tipsv2 += "        <span >";
-                for (var i = 0; i < addres.length; i++) {
-                    if (i < 3) {
-                        if (addres[i] != null || addres[i] != "") {
-                            html_page_tipsv1 += addres[i] + " ";
-                        }
-                    } else {
-                        if (addres[i] != null || addres[i] != "") {
-
-                            html_page_tipsv2 += addres[i] + " ";
-                        }
-                    }
-                }
-                html_page_tipsv1 += "   <\/span> <\/div>";
-                html_page_tipsv2 += " <\/span>   <\/div>";
-                return html_page_tipsv1 + html_page_tipsv2;
-            } else {
-                return "";
-            }
-        }
     });
 
 

@@ -35,146 +35,149 @@
     <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style type="text/css">
-
         @page { margin: 30px 0 0 0 ; }
+        .col-807c7d{color: #807C7D;font-weight: 600;}
+        .bold{font-weight: bold;}
+        .border{color:#807C7D; border-bottom: 1px solid #807C7D;width: 15%;}
+        .borderTwo{border-bottom: 0.5px solid #807C7D; height: 30px}
+        #opt-print{width: 150px;height: 40px;color: #fff;background: deepskyblue;border: 0;text-align:
+                center;top: 8%;right: 5%;}
     </style>
-
-
 </head>
 
 <body class="layui-layout-body">
 <div id="print_content" class="pos-r">
-    <div class="clear pd-15" style="page-break-after: always; font-size: 12px; width: 90%; margin-left: 50px">
-        <p class="text-center mb-30">碧沙康健_订单详情</p>
-        <span style="font-size: 15px">INVOICE (發票)</span>
-        <img src="/resources/img/index/log1.jpg" width="100" height="50" style="margin-left: 30%;">
+    <div class="clear" style="page-break-after: always; font-size: 12px;padding: 30px 50px 50px 50px;">
+        <div align="left" style="margin-top: 10px">
+            <img   src="/resources/img/index/log1.jpg" width="100" height="50" >
+        </div>
+        <div class="clear full-w  f-12" style="font-size: 14px; width: 100%;margin-top: 30px;">
 
-        <div class="clear full-w mt-15 f-12" style="font-size: 12px; width: 100%">
-            <div class="clear  line-h-20 col-black" style="width: 100%">
-                <span style="color: #807C7D; font-weight: 600">INVOICENUMBER (發票號碼)</span>
-                <span style="color: #807C7D; font-weight: 600; padding-left: 100px">DATEOF ISSUE 發票日期</span>
+            <div class="dis-ib  pull-left"  style="width: 30%;">
+                <div class="clear  line-h-20 col-black">
+                    <span class="bold">BILLED TO(付款人)</span>
+                </div>
+                <div class="clear  line-h-20 col-black  dis-ib mt-40">
+                    <span  class="bold">CLIENT NAME(姓名)</span>
+                    <br>
+                    <span  class="col-807c7d">${order.order_name}</span>
+                </div>
+                <br>
+                <div class="clear  line-h-20 col-black  dis-ib mt-20">
+                    <span  class="bold">CLIENT ADDRESS(地址)</span>
+                    <br>
+                    <span  class="col-807c7d">${order.order_address}</span>
+                </div>
+
             </div>
-            <div class="clear  line-h-20 col-black" style="width: 100%">
-                <span>INV</span>
-                <span style="padding-left: 180px">${order.c_time}(yyyy-mm-dd)</span>
+            <div class="dis-ib  pull-left" style="width: 30%;">
+                <div class="clear  line-h-20 col-black text-left dis-ib">
+                    <span class="bold">DATE OF ISSUE(發票日期)</span>
+                    <br>
+                    <span id="c_time"  class="col-807c7d"></span>
+                    <span class="col-807c7d">(yyyy-mm-dd)</span>
+                </div>
+                <br>
+                <div class="clear  line-h-20 col-black  dis-ib mt-20">
+                    <span  class="bold" >PAYMENT TERMS(付款方式)</span>
+                    <br>
+                    <span  class="col-807c7d"  id="pay_type"></span>
+                </div>
             </div>
-            <div class="clear  line-h-20 col-black" style="width: 100%">
-                <span style="color: #807C7D; font-weight: 600">ORDER NUMBER(訂單號)</span>
-            </div>
-            <div class="clear  line-h-20 col-black" style="width: 100%">
-                <span>PO${order.order_num}</span>
-            </div>
-            <div class="clear  line-h-20 col-black" style="width: 100%">
-					<span style="color: #807C7D; font-weight: 600">DELIVERY NOTENUMBER (送貨單號碼)</span>
-            </div>
-            <div class="clear  line-h-20 col-black" style="width: 100%">
-                <span>DN${order.ems_num}</span>
-            </div>
-            <br>
-            <div class="clear  line-h-20 col-black" style="width: 100%">
-					<span style="color: #807C7D; font-weight: 600">BILLED TO(發票地址)</span>
-            </div>
-            <div class="clear  line-h-20 col-black" style="width: 100%">
-					<span style="color: #807C7D; font-weight: 600">Client
-						Name(姓名)</span> <span style="padding-left: 164px">${order.order_name}</span>
-            </div>
-            <div class="clear  line-h-20 col-black" style="width: 100%">
-					<span style="color: #807C7D; font-weight: 600">Client
-						Address(地址)</span> <span style="padding-left: 152px">${order.order_address} </span>
-            </div>
-            <div class="clear  line-h-20 col-black"
-                 style="width: 100%; padding-left: 275px">
-                <span> </span>
+            <div class="dis-b  pull-left pl-30" style="width: 40%;">
+                <div class="clear  line-h-20 col-black text-left dis-ib">
+                    <span class="bold">INVOICE NO(發票號碼)</span>
+                    <br>
+                    <span class="col-807c7d">INV</span>
+                    <span class="col-807c7d" id="pay_id"></span>
+                </div>
+
+                <div class="clear  line-h-20 col-black text-left  dis-ib mt-20">
+                    <span class="bold"> ORDER NO(訂單號)</span>
+                    <br>
+                    <span  class="col-807c7d">PO</span>
+                    <span  class="col-807c7d">${order.order_num}</span>
+                </div>
+                <div class="clear  line-h-20 col-black dis-ib mt-20">
+                    <span class="bold">DELIVERY NO(送貨單號碼)</span>
+                    <br>
+                    <span  class="col-807c7d">DN</span>
+                    <span  class="col-807c7d">${order.ems_num}</span>
+                </div>
             </div>
         </div>
-        <br>
-        <div class="clear full-w  ">
-            <table cellspacing="0" cellpadding="0" style="font-size: 10px;">
+        <div class="clear full-w mt-40">
+            <table cellspacing="0" cellpadding="0" class="f-10">
                 <tbody>
                 <tr>
-                    <td align="center"
-                        style="color: #807C7D; border-bottom: 1px solid #807C7D"><span
-                            style="margin-right: 15px">No.</span></td>
-                    <td align="center"
-                        style="color: #807C7D; border-bottom: 1px solid #807C7D"><span
-                            style="margin-left: 15px;">DESCRIPTION</span><br>
-                        <span style="margin-left: 15px;">商品名</span></td>
-                    <td align="center"
-                        style="color: #807C7D; border-bottom: 1px solid #807C7D;"><span
-                            style="margin-left: 35px;">UNIT PRICE</span><br>
-                        <span style="margin-left: 35px;">原單價(HKD)</span></td>
-                    <td align="center"
-                        style="color: #807C7D; border-bottom: 1px solid #807C7D;"><span
-                            style="margin-left: 40px">QTY</span><br>
-                        <span style="margin-left: 40px;">數量</span></td>
-                    <td align="center"
-                        style="color: #807C7D; border-bottom: 1px solid #807C7D;"><span
-                            style="margin-left: 35px">UNIT PRICE</span><br>
-                        <span style="margin-left: 35px;">優惠价格(HKD)</span></td>
-                    <td align="center"
-                        style="color: #807C7D; border-bottom: 1px solid #807C7D;"><span
-                            style="margin-left: 35px">AMOUNT</span><br>
-                        <span style="margin-left: 35px;">實付金額(HKD)</span></td>
+                    <td align="center" class="border">
+                        <span>No.</span></td>
+                    <td align="center" class="border">
+                        <span>DESCRIPTION</span><br>
+                        <span>商品名</span></td>
+                    <td align="center" class="border">
+                        <span>UNIT PRICE</span><br>
+                        <span>原單價(HKD)</span></td>
+                    <td align="center" class="border">
+                        <span>QTY</span><br>
+                        <span>數量</span></td>
+                    <td align="center" class="border">
+                        <span>UNIT PRICE</span><br>
+                        <span>優惠价格(HKD)</span></td>
+                    <td align="center" class="border">
+                        <span>AMOUNT</span><br>
+                        <span>實付金額(HKD)</span></td>
                 </tr>
                 <tr>
-                    <td align="center">
-                        <span class=" col-black" style="height: 30px; color: #807C7D; margin-right: 15px">1</span>
+                    <td align="center"  class="borderTwo">
+                        <span class="f-12 col-black" style="height: 30px; color: #807C7D;">1</span>
                     </td>
-                    <td style="border-bottom: 0.5px solid #807C7D; height: 30px">
-                        <span class="col-black" style="margin-left: 15px;" id="goods_pattern"></span>
+                    <td align="center"  class="borderTwo">
+                        <span class="f-12 col-black" id="goods_pattern"></span>
                     </td>
-                    <td align="center" style="border-bottom: 0.5px solid #807C7D; height: 30px">
-                        <span class="f-12 col-black" style="margin-left: 35px;">${order.goods_price}</span>
+                    <td align="center"  class="borderTwo">
+                        <span class="f-12 col-black" id="goods_price"></span>
                     </td>
-                    <td align="center" style="border-bottom: 0.5px solid #807C7D; height: 30px">
-                        <span class="f-12 col-black" style="margin-left: 40px">${order.goods_count}</span>
+                    <td align="center"  class="borderTwo">
+                        <span class="f-12 col-black">${order.goods_count}</span>
                     </td>
-                    <td align="center" style="border-bottom: 0.5px solid #807C7D; height: 30px">
-                        <span class="f-12 col-black" style="margin-left: 35px">${order.coupon_price}</span>
+                    <td align="center"  class="borderTwo">
+                        <span class="f-12 col-black" id="coupon_price"></span>
                     </td>
-                    <td align="center" style="border-bottom: 0.5px solid #807C7D; height: 30px">
-                        <span class="f-12 col-black" style="margin-left: 35px">${order.order_price}</span>
+                    <td align="center"  class="borderTwo">
+                        <span class="f-12 col-black" id="order_price"></span>
                     </td>
                 </tr>
                 <tr>
-                    <td align="center" colspan="2">
+                    <td  colspan="2" >
                         <span class=" col-black">FREIGHT(運費):</span>
-                        <span style="font-size: 10px"> HK$</span>
-                        ${order.coupon_price}
+                        <span class="f-10"> HK$</span>
+                        <sapn id="emd_postage"></sapn>
                     </td>
                     <td align="right" colspan="4">
-                        <span class=" col-black">TOTALAMOUNT(實付總金額): </span>
-                        <span style="font-size: 10px">HK$</span>
-                        ${order.order_total}
+                        <span class=" col-black">TOTAL AMOUNT(實付總金額): </span>
+                        <span class="f-10">HK$</span>
+                        <sapn class="pr-20" id="order_total"></sapn>
                     </td>
                 </tr>
                 </tbody>
             </table>
         </div>
-        <br>
-        <br>
-        <br>
-        <div class="clear  line-h-20 col-black" style="width: 100%">
-            <span style="color: #807C7D; font-weight: 600">TERMS(付款方式)</span>
-        </div>
-        <div class="clear  line-h-20 col-black" style="width: 100%">
-            <span id="pay_type"> ${order.order_total}</span>
-        </div>
-        <br>
-        <div style="font-size: 12px;">
-				<span style="color: blue; font-weight: 600">THANK YOU FOR
-					BUYING BISA HEALTHY PRODUCTS. THIS ORDER IS SUBJECT TO ALL TERMS
-					AND CONDITIONS DISPLAYED AT：https://www.bisahealth.com</span><br>(感謝您購買碧沙健康的產品，本訂單受以下顯示的所有條款和條件之制約：https://www.bisahealth.com)
+        <div class="f-12 mt-20">
+            <span style="color: blue; font-weight: 600">THANK YOU FOR BUYING BISA HEALTHY PRODUCTS. THIS ORDER IS SUBJECT TO ALL TERMS
+					AND CONDITIONS DISPLAYED AT：https://www.bisahealth.com</span>
+            <br>(感謝您購買碧沙健康的產品，本訂單受以下顯示的所有條款和條件之制約：https://www.bisahealth.com)
         </div>
     </div>
-    <button id="opt-print" class="pos-a cur-p" style="width: 150px;height: 40px;color: #fff;background: deepskyblue;border: 0;text-align:
-    center;top: 10%;right: 5%;">打印</button>
+    <button id="opt-print" class="pos-a cur-p">打印</button>
 </div>
 
 </body>
 <script>
     $(document).ready(function(){
+        console.log('${order}')
         function print(){
+            //定义支付类型
             var pay_type = ${order.pay_type};
             if (pay_type == 0) {
                 pay_type = "微信";
@@ -189,8 +192,13 @@
             } else {
                 pay_type = "数据错误";
             }
+            //定义日期格式
+            var c_time ='${order.c_time}';
+            c_time = c_time.substr(0, 10);
+            $('#c_time').text(c_time);
             $('#pay_type').text(pay_type);
-            var goods_pattern = "${order.goods_pattern}";
+            //定义商品名称
+            var goods_pattern = '${order.goods_pattern}';
             if (goods_pattern  == 'HC3A250'){
                 goods_pattern = "悉心心電儀"
             } else if (goods_pattern == 'ECGRPT-DR01A'){
@@ -207,6 +215,52 @@
             $('#goods_pattern').text(goods_pattern);
         }
         print();
+        //小数点后面补0函数
+        function formatnumber(value, num){
+            var _value = value.toString();
+            var _dot = _value.indexOf(".");
+            var _valueLen  = _value.length;
+            if (num == 0) {
+                if (_dot != -1) {
+                    _value = _value.substring(0, _dot);
+                }
+            } else {//如果没有小数点
+                if (_dot == -1) {
+                    _value = _value + ".";
+                    for (var i = 1; i <= num; i++) {
+                        _value = _value + "0";
+                    }
+                } else {//有小数点，超出位数自动截取，否则补0
+                    _value = _value.substring(0, _dot + num + 1);
+                    for (var i = _valueLen; i <= _dot + num; i++) {
+                        _value = _value + "0";
+                    }
+                }
+            }
+            return _value;
+        }
+        //数据补0后插入到页面中
+        function MakeUpName(){
+            var order_total =formatnumber(${order.order_total},2);
+            $('#order_total').text(order_total);
+
+            var coupon_price =formatnumber(${order.coupon_price},2);
+            $('#coupon_price').text(coupon_price);
+
+            var order_price =formatnumber(${order.order_price},2);
+            $('#order_price').text(order_price);
+
+            var goods_price =formatnumber(${order.goods_price},2);
+            $('#goods_price').text(goods_price);
+
+            var emd_postage =formatnumber(${order.emd_postage},2);
+            $('#emd_postage').text(emd_postage);
+
+            var pay_id ='${order.pay_id}'
+            $('#pay_id').text(pay_id.slice(0,18));
+        }
+        MakeUpName();
+        //按钮点击隐藏
         $('#opt-print').click(function () {
             var _self = $(this);
             _self.hide();
