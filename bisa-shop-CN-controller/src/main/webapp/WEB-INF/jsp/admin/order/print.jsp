@@ -175,7 +175,6 @@
 </body>
 <script>
     $(document).ready(function(){
-        console.log('${order}')
         function print(){
             //定义支付类型
             var pay_type = ${order.pay_type};
