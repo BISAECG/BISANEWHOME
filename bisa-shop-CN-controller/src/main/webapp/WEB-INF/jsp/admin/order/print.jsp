@@ -91,13 +91,14 @@
                     <span class="col-807c7d">INV</span>
                     <span class="col-807c7d" id="pay_id"></span>
                 </div>
-
+                <br>
                 <div class="clear  line-h-20 col-black text-left  dis-ib mt-20">
                     <span class="bold"> ORDER NO(訂單號)</span>
                     <br>
                     <span  class="col-807c7d">PO</span>
                     <span  class="col-807c7d">${order.order_num}</span>
                 </div>
+                <br>
                 <div class="clear  line-h-20 col-black dis-ib mt-20">
                     <span class="bold">DELIVERY NO(送貨單號碼)</span>
                     <br>
